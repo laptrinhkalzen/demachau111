@@ -32,7 +32,11 @@ class SlideRepository extends AbstractRepository
         ];
     }
 
-    public function getSlide() {
+    public function getSlide1() {
         return $this->model->where('status', 1)->where('position', 1)->orderBy('ordering', 'asc')->get();
+    }
+
+    public function getSlide2() {
+        return $this->model->where('status', 1)->where('position', 2)->orderBy('ordering', 'asc')->get();
     }
 }

@@ -577,7 +577,7 @@
                                     <div class="swiper-container gallery-top-home">
                                         <!--Thêm slide-->
                                         <div class="swiper-wrapper">
-                                            @foreach ($slide as $key=>$product)
+                                            @foreach ($slide1 as $key=>$product)
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
@@ -591,7 +591,7 @@
                                     </div>
                                     <div class="swiper-container gallery-thumbs-home  ">
                                         <div class="swiper-wrapper">
-                                            @foreach ($slide as $key=>$product)
+                                            @foreach ($slide1 as $key=>$product)
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
@@ -811,21 +811,10 @@
                                 <div class="container">
                                     <div class="row mb-3 no-gutters ">
                                         <div class="col-md-3 col-12 mb-2 mb-md-0">
-                                            <a href="google.com" class="h5 font-weight-bold ">SÀN GỖ CÔNG NGHIỆP</a>
+                                            <a href="google.com" class="h5 font-weight-bold ">Nội thất loại 1</a>
                                         </div>
                                         <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                             <div class="menu-op align-self-center mr-lg-3">
-                                                <!--menu mobile-->
-                                                <div class="d-flex flex-wrap d-lg-none">
-                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region active" data-region-id="1486">Sàn Gỗ công nghiệp bán chạy</a>
-                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1456">Malaysia</a>
-                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1427">Việt Nam</a>
-                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1457">Sàn Đức</a>
-                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1454">Hàn quốc</a>
-                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1424">Sàn gỗ EcoFloor</a>
-                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1455">Thái Lan</a>
-                                                </div>
-                                                <!--menu mobile end-->
                                                 <!--menu pc-->
                                                 <div class="swiper-container d-none d-lg-block">
                                                     <!-- Additional required wrapper -->
@@ -833,45 +822,26 @@
                                                         <!-- Slides -->
                                                         <div class="swiper-slide">
                                                             <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1486">Sàn Gỗ công nghiệp<br>bán chạy </a>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1486">Option 1</a>
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1456">Malaysia</a>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1456">Option 2</a>
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1427">Việt Nam</a>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1427">Option 3</a>
                                                             </div>
                                                         </div>
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1457">Sàn Đức</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1454">Hàn quốc</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1424">Sàn gỗ EcoFloor</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1455">Thái Lan</a>
-                                                            </div>
-                                                        </div>
+        
                                                     </div>
                                                 </div>
                                                 <!--menu pc end-->
                                             </div>
                                             <div class=" align-self-center  ">
-                                                <a href="google.com.html" class="link-view-more url-old-link">Xem tất cả</a>
+                                                <a href="javascript:void(0)" class="link-view-more url-old-link">Xem tất cả</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1056,33 +1026,17 @@
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
+                                    @foreach($slide2 as $key => $product)
                                     <div class="swiper-slide">
                                         <div class="image">
-                                            <img src="https://cms.janhome.vn//uploads/2020/09/04/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-khuyen-mai-thang-8-2020-san-go-cot-xanh-sieu-chi.webp?v=1.0.0" class="img-fluid" alt="" />
-                                            <a href="san-go-viet-nam-sieu-chiu-nuoc.html" class="text text-uppercase">
+                                            <img src="{!!$product->getImage()!!}" class="img-fluid" alt="" />
+                                            <a href="javascript:void(0)" class="text text-uppercase">
                                                 <small></small>
                                                 <h4 class="font-weight-bold"></h4>
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="image">
-                                            <img src="../noithathunggia/uploads/2020/08/10/banner-janhome-km1e209.jpg?v=1.0.0" class="img-fluid" alt="" />
-                                            <a href="san-go-xuong-ca-janhome.html" class="text text-uppercase">
-                                                <small></small>
-                                                <h4 class="font-weight-bold"></h4>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="image">
-                                            <img src="../noithathunggia/uploads/2020/08/10/banner-janhome-km5e209.jpg?v=1.0.0" class="img-fluid" alt="" />
-                                            <a href="san-go-floorart.html" class="text text-uppercase">
-                                                <small>CTKM3</small>
-                                                <h4 class="font-weight-bold"></h4>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
