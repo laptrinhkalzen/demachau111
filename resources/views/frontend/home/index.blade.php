@@ -1029,7 +1029,7 @@
                                     @foreach($slide2 as $key => $product)
                                     <div class="swiper-slide">
                                         <div class="image">
-                                            <img src="{!!$product->getImage()!!}" class="img-fluid" style="object-fit: cover;" />
+                                            <img src="{!!$product->getImage()!!}" class="img-fluid" style="height:170px;object-fit: cover;" />
                                             <a href="javascript:void(0)" class="text text-uppercase">
                                                 <small></small>
                                                 <h4 class="font-weight-bold"></h4>
