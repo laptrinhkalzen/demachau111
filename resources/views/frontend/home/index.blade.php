@@ -2724,7 +2724,7 @@ style="background: url(../noithathunggia/uploads/2020/06/03/bn-pk-fix.jpg) no-re
 <div>
 Chúng tôi hỗ trợ bạn 24/7.
 Hãy liên lạc với chúng tôi theo số
-1800 0022
+{!!$share_config->hotline!!}
 </div>
 </div>
 </div>
@@ -2736,7 +2736,7 @@ Hãy liên lạc với chúng tôi theo số
 Video
 </div>
 <div class="ml-auto">
-<a href="video-janhome.html" class="link-view-more">
+<a href="javascript:void(0)" class="link-view-more">
 Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 </a>
 </div>
@@ -2749,126 +2749,18 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="swiper-slide">
 <div class="item">
 <div class="video-img">
-    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-moc-treo-binh-hoa-handmade.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="https://cms.janhome.vn//uploads/thumb/2017/06/5-phut-moi-ngay-voi-janhome-trang-tri.jpg" />
+    <a href="javascript:void(0)">
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100"/>
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
     </a>
 </div>
 <h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: Trang trí phòng với Móc treo bình hoa handmade">5 phút mỗi ngày với JANHOME: Trang trí phòng với Móc treo bình hoa handmade</a>
+<a rel="nofollow" href="javascript:void(0)">Content Video</a>
 </h5>
 <div class="time">
-    16/06/2017 04:31;
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="item">
-<div class="video-img">
-    <a href="-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-day-den-tu-tao.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2020/06/27/video-2-3-4.jpg" />
-        <div class="play-yt">
-            <img src="images/youtube3860.svg?v=1" class="">
-        </div>
-    </a>
-</div>
-<h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: Trang trí phòng với Dây Đèn tự tạo">5 phút mỗi ngày với JANHOME: Trang trí phòng với Dây Đèn tự tạo</a>
-</h5>
-<div class="time">
-    15/06/2017 02:00;
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="item">
-<div class="video-img">
-    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-gia-treo-anh-va-hop-cay-day-thung-handmade.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/06/maxresdefault-1.jpg" />
-        <div class="play-yt">
-            <img src="images/youtube3860.svg?v=1" class="">
-        </div>
-    </a>
-</div>
-<h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: Trang trí phòng với Giá treo ảnh và Hộp cây dây thừng">5 phút mỗi ngày với JANHOME: Trang trí phòng với Giá treo ảnh và Hộp cây dây thừng</a>
-</h5>
-<div class="time">
-    15/06/2017 01:56;
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="item">
-<div class="video-img">
-    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-gia-treo-tuong-bang-que-kem.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/06/1-1-1.jpg" />
-        <div class="play-yt">
-            <img src="images/youtube3860.svg?v=1" class="">
-        </div>
-    </a>
-</div>
-<h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: Trang trí phòng với Giá treo tường bằng que kem">5 phút mỗi ngày với JANHOME: Trang trí phòng với Giá treo tường bằng que kem</a>
-</h5>
-<div class="time">
-    15/06/2017 01:50;
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="item">
-<div class="video-img">
-    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-can-phong-voi-hop-dung-do-tai-che.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/05/maxresdefault-3.jpg" />
-        <div class="play-yt">
-            <img src="images/youtube3860.svg?v=1" class="">
-        </div>
-    </a>
-</div>
-<h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: Trang trí căn phòng với Hộp đựng đồ tái chế">5 phút mỗi ngày với JANHOME: Trang trí căn phòng với Hộp đựng đồ tái chế</a>
-</h5>
-<div class="time">
-    04/05/2017 07:29;
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="item">
-<div class="video-img">
-    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-ngu-voi-da-thuy-tinh.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/05/maxresdefault-2.jpg" />
-        <div class="play-yt">
-            <img src="images/youtube3860.svg?v=1" class="">
-        </div>
-    </a>
-</div>
-<h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: trang trí phòng ngủ với đá thủy tinh">5 phút mỗi ngày với JANHOME: trang trí phòng ngủ với đá thủy tinh</a>
-</h5>
-<div class="time">
-    04/05/2017 07:09;
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="item">
-<div class="video-img">
-    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-den-nen-hoa-sen.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/05/maxresdefault-4.jpg" />
-        <div class="play-yt">
-            <img src="images/youtube3860.svg?v=1" class="">
-        </div>
-    </a>
-</div>
-<h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME trang trí phòng với đèn nến hoa sen">5 phút mỗi ngày với JANHOME trang trí phòng với đèn nến hoa sen</a>
-</h5>
-<div class="time">
-    04/05/2017 06:54;
+    Release date
 </div>
 </div>
 </div>
@@ -2883,7 +2775,7 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <a href="tu-van.html" class="h5 font-weight-bold">TƯ VẤN</a>
 </div>
 <div class="col-6 text-right">
-<a href="tu-van.html" class="link-view-more">Xem thêm <i class="fas fa-chevron-right ml-1 small"></i></a>
+<a href="javascript:void(0)" class="link-view-more">Xem thêm <i class="fas fa-chevron-right ml-1 small"></i></a>
 </div>
 </div>
 <div class="cust-bg-use">
@@ -2999,7 +2891,7 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 <div class="container">
 <div class="row justify-content-center ">
 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">
-<h4 class="title-menu">JANHOME</h4>
+<h4 class="title-menu">Nội thất Hưng Gia</h4>
 <ul class="footer-menu ">
 <li><a href="javascript:void(0)">Giới thiệu công ty</a></li>
 <li><a href="javascript:void(0)">Tuyển dụng</a></li>
@@ -3050,13 +2942,9 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 <div class="col-12 border-bottom p-3 mb-3" style="border-color: #7F7D7D!important;">
 </div>
 <div class="col-lg-8 col-md-8 col-sm-12 col-12  pull-left">
-<div class="font-weight-bold mb-2">Công ty Cổ Phần Xuất Nhập Khẩu Tháng Giêng</div>
+<div class="font-weight-bold mb-2">Công ty nội thất Hưng Gia</div>
 <div class="mb-2">
-Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.
-</div>
-<div class="font-weight-bold mb-2">Trụ sở tại miền Nam</div>
-<div class="mb-2">
-QQ18 Ba Vì, Cư xá Bắc Hải, Phường 15, Quận 10, Hồ Chí Minh
+Địa chỉ
 </div>
 <div class="mb-4">
 <div class="d-lg-inline-block mb-2 mb-lg-0">
