@@ -171,8 +171,8 @@
                                         <li class="nav-item mr-md-3  align-self-md-center d-flex d-sm-none d-lg-flex"
                                             style="white-space: nowrap;">
                                             <div>
-                                                <a rel="nofollow" href="tel: 18000022">
-                                                    <div><span class="font-weight-bold h6 ">1800.0022</span></div>
+                                                <a rel="nofollow" href="tel: {!!$share_config->hotline!!}">
+                                                    <div><span class="font-weight-bold h6 ">{!!$share_config->hotline!!}</span></div>
                                                     <div class="small">(Miễn phí) </div>
                                                 </a>
                                             </div>
@@ -646,7 +646,7 @@
                                 <div class="item">
                                     <a href="javascript:void(0)">
                                         <img src="../noithathunggia/uploads/2020/04/28/coupon%20(1)e209.png?v=1.0.0" class="img-fluid mr-2">
-                                        Sàn gỗ thanh lý
+                                        Hàng thanh lý
                                     </a>
                                 </div>
                             </div>
@@ -654,7 +654,7 @@
                                 <div class="item">
                                     <a href="javascript:void(0)">
                                         <img src="../noithathunggia/uploads/2020/04/28/shopping-bag%20(2)e209.png?v=1.0.0" class="img-fluid mr-2">
-                                        Hàng Châu Âu
+                                        Hàng cao cấp
                                     </a>
                                 </div>
                             </div>
@@ -805,11 +805,11 @@
                                                             <?php echo('')?>
                                                             @endif
                                                         </div>
-                                                        @foreach($product->attributes as $key =>$attributes)
+                                                        <!-- @foreach($product->attributes as $key =>$attributes)
                                                         <div class="size small mb-1">
                                                             Kích thước: {!!$attributes->title!!} mm
                                                         </div>
-                                                        @endforeach
+                                                        @endforeach -->
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 4,0/5<i class="fas fa-star ml-1"></i>
@@ -3091,7 +3091,7 @@ QQ18 Ba Vì, Cư xá Bắc Hải, Phường 15, Quận 10, Hồ Chí Minh
 </div>
 <div class="mb-4">
 <div class="d-lg-inline-block mb-2 mb-lg-0">
-<a rel="nofollow" href="tel:18000022"><i class="fas fa-phone-alt mr-2"></i>Hotline: 1800 0022</a>
+<a rel="nofollow" href="tel:18000022"><i class="fas fa-phone-alt mr-2"></i>Hotline: {!!$share_config->hotline!!}</a>
 </div>
 <div class="d-lg-inline-block ml-lg-5">
 <a rel="nofollow" href="mail:info@janco.com.vn"><i class="fas fa-envelope mr-2"></i>Email: info@janco.com.vn</a>
