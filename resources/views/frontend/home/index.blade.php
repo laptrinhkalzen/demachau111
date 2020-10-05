@@ -258,7 +258,7 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="san-go-cong-nghiep.html" class="link" title="Sàn gỗ công nghiệp">
-                                                        <img src="../cms.janhome.vn/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn gỗ công nghiệp" />Sàn gỗ công nghiệp
                                                     </a>
                                                     <div class="subcate">
@@ -269,7 +269,7 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="san-go-tu-nhien.html" class="link" title="Sàn gỗ tự nhiên">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/gotunhiene209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/gotunhiene209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn gỗ tự nhiên" />Sàn gỗ tự nhiên
                                                     </a>
                                                     <div class="subcate">
@@ -280,7 +280,7 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="san-nhua.html" class="link" title="Sàn nhựa vinyl">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn nhựa vinyl" />Sàn nhựa vinyl
                                                     </a>
                                                     <div class="subcate">
@@ -291,7 +291,7 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="san-go-ngoai-troi.html" class="link" title="Sàn gỗ ngoài trời">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn gỗ ngoài trời" />Sàn gỗ ngoài trời
                                                     </a>
                                                     <div class="subcate">
@@ -302,7 +302,7 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="phu-kien.html" class="link" title="Phụ kiện">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/cleane209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/cleane209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Phụ kiện" />Phụ kiện
                                                     </a>
                                                     <div class="subcate">
@@ -313,7 +313,7 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="san-go-thanh-ly.html" class="link" title="Sàn gỗ thanh lý">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn gỗ thanh lý" />Sàn gỗ thanh lý
                                                     </a>
                                                     <div class="subcate">
@@ -324,7 +324,7 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="trang-tri-noi-that.html" class="link" title="Trang trí nội thất">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/bede209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/bede209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Trang trí nội thất" />Trang trí nội thất
                                                     </a>
                                                     <div class="subcate">
@@ -335,7 +335,7 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="trang-tri-ngoai-that.html" class="link" title="Trang trí ngoại thất">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/homee209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/homee209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Trang trí ngoại thất" />Trang trí ngoại thất
                                                     </a>
                                                     <div class="subcate">
@@ -346,7 +346,7 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="do-gia-dung.html" class="link" title="Đồ gia dụng">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/cleane209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/cleane209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Đồ gia dụng" />Đồ gia dụng
                                                     </a>
                                                     <div class="subcate">
@@ -357,7 +357,7 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="san-tre.html" class="link" title="Sàn tre">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn tre" />Sàn tre
                                                     </a>
                                                     <div class="subcate">
@@ -374,7 +374,7 @@
                                             <ul class="row menu-cate-mobile  d-md-none no-gutters">
                                                 <div class="col-3 px-1">
                                                     <a href="san-go-cong-nghiep.html" class="btn btn-cate">
-                                                        <img src="../cms.janhome.vn/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
                                                             Sàn gỗ công nghiệp
@@ -383,7 +383,7 @@
                                                 </div>
                                                 <div class="col-3 px-1">
                                                     <a href="san-go-tu-nhien.html" class="btn btn-cate">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/gotunhiene209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/gotunhiene209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
                                                             Sàn gỗ tự nhiên
@@ -392,7 +392,7 @@
                                                 </div>
                                                 <div class="col-3 px-1">
                                                     <a href="san-nhua.html" class="btn btn-cate">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
                                                             Sàn nhựa vinyl
@@ -401,7 +401,7 @@
                                                 </div>
                                                 <div class="col-3 px-1">
                                                     <a href="san-go-ngoai-troi.html" class="btn btn-cate">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
                                                             Sàn gỗ ngoài trời
@@ -410,7 +410,7 @@
                                                 </div>
                                                 <div class="col-3 px-1">
                                                     <a href="phu-kien.html" class="btn btn-cate">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/cleane209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/cleane209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
                                                             Phụ kiện
@@ -419,7 +419,7 @@
                                                 </div>
                                                 <div class="col-3 px-1">
                                                     <a href="san-go-thanh-ly.html" class="btn btn-cate">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
                                                             Sàn gỗ thanh lý
@@ -428,7 +428,7 @@
                                                 </div>
                                                 <div class="col-3 px-1">
                                                     <a href="trang-tri-noi-that.html" class="btn btn-cate">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/bede209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/bede209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
                                                             Trang trí nội thất
@@ -437,7 +437,7 @@
                                                 </div>
                                                 <div class="col-3 px-1">
                                                     <a href="trang-tri-ngoai-that.html" class="btn btn-cate">
-                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/homee209.png?v=1.0.0"
+                                                        <img src="../noithathunggia/uploads/2020/05/21/homee209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
                                                             Trang trí ngoại thất
@@ -646,10 +646,10 @@
                                 </ul>
                                 <!--Thêm class d-none d-md-block-->
                                 <a href="javascript:void(0)" title="" class="d-none d-md-block">
-                                    <img src="../cms.janhome.vn/uploads/2020/07/22/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-san-nhua-hem-khoa-florton-spce209.jpg?v=1.0.0" class="img-fluid mb-2 w-100" />
+                                    <img src="../noithathunggia/uploads/2020/07/22/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-san-nhua-hem-khoa-florton-spce209.jpg?v=1.0.0" class="img-fluid mb-2 w-100" />
                                 </a>
                                 <a href="javascript:void(0)" title="" class="d-none d-md-block">
-                                    <img src="../cms.janhome.vn/uploads/2020/07/24/bannere209.png?v=1.0.0" class="img-fluid mb-2 w-100" />
+                                    <img src="../noithathunggia/uploads/2020/07/24/bannere209.png?v=1.0.0" class="img-fluid mb-2 w-100" />
                                 </a>
                                 <!--Thêm class d-none d-md-block-->
                             </div>
@@ -658,7 +658,7 @@
                             <div class="col">
                                 <div class="item">
                                     <a href="javascript:void(0)">
-                                        <img src="../cms.janhome.vn/uploads/2020/04/28/giovanggiasoce209.png?v=1.0.0" class="img-fluid mr-2">
+                                        <img src="../noithathunggia/uploads/2020/04/28/giovanggiasoce209.png?v=1.0.0" class="img-fluid mr-2">
                                         Giờ vàng giá sốc
                                     </a>
                                 </div>
@@ -666,7 +666,7 @@
                             <div class="col">
                                 <div class="item">
                                     <a href="javascript:void(0)">
-                                        <img src="../cms.janhome.vn/uploads/2020/04/28/coupon%20(1)e209.png?v=1.0.0" class="img-fluid mr-2">
+                                        <img src="../noithathunggia/uploads/2020/04/28/coupon%20(1)e209.png?v=1.0.0" class="img-fluid mr-2">
                                         Sàn gỗ thanh lý
                                     </a>
                                 </div>
@@ -674,7 +674,7 @@
                             <div class="col">
                                 <div class="item">
                                     <a href="javascript:void(0)">
-                                        <img src="../cms.janhome.vn/uploads/2020/04/28/shopping-bag%20(2)e209.png?v=1.0.0" class="img-fluid mr-2">
+                                        <img src="../noithathunggia/uploads/2020/04/28/shopping-bag%20(2)e209.png?v=1.0.0" class="img-fluid mr-2">
                                         Hàng Châu Âu
                                     </a>
                                 </div>
@@ -682,7 +682,7 @@
                             <div class="col">
                                 <div class="item">
                                     <a href="javascript:void(0)">
-                                        <img src="../cms.janhome.vn/uploads/2020/04/28/mobile-storee209.png?v=1.0.0" class="img-fluid mr-2">
+                                        <img src="../noithathunggia/uploads/2020/04/28/mobile-storee209.png?v=1.0.0" class="img-fluid mr-2">
                                         Bán chạy nhất
                                     </a>
                                 </div>
@@ -690,7 +690,7 @@
                             <div class="col">
                                 <div class="item">
                                     <a href="javascript:void(0)">
-                                        <img src="../cms.janhome.vn/uploads/2020/04/24/gifte209.png?v=1.0.0" class="img-fluid mr-2">
+                                        <img src="../noithathunggia/uploads/2020/04/24/gifte209.png?v=1.0.0" class="img-fluid mr-2">
                                         Vòng quay may mắn
                                     </a>
                                 </div>
@@ -703,7 +703,7 @@
                         <div class="row">
                             <div class="col-xl-8 col-md-8 col-sm-12 col-12">
                                 <a href="javascript:void(0)" title="">
-                                    <img src="../cms.janhome.vn/uploads/2020/08/10/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-san-go-sieu-chiu-nuoc-janhome-ecofle209.jpg?v=1.0.0" class="lazy w-100 mb-3 mb-md-0" />
+                                    <img src="../noithathunggia/uploads/2020/08/10/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-san-go-sieu-chiu-nuoc-janhome-ecofle209.jpg?v=1.0.0" class="lazy w-100 mb-3 mb-md-0" />
                                 </a>
                             </div>
                             <div class="col-xl-4 col-md-4 col-sm-12 col-12">
@@ -1119,7 +1119,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="image">
-                                            <img src="../cms.janhome.vn/uploads/2020/08/10/banner-janhome-km1e209.jpg?v=1.0.0" class="img-fluid" alt="" />
+                                            <img src="../noithathunggia/uploads/2020/08/10/banner-janhome-km1e209.jpg?v=1.0.0" class="img-fluid" alt="" />
                                             <a href="san-go-xuong-ca-janhome.html" class="text text-uppercase">
                                                 <small></small>
                                                 <h4 class="font-weight-bold"></h4>
@@ -1128,7 +1128,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="image">
-                                            <img src="../cms.janhome.vn/uploads/2020/08/10/banner-janhome-km5e209.jpg?v=1.0.0" class="img-fluid" alt="" />
+                                            <img src="../noithathunggia/uploads/2020/08/10/banner-janhome-km5e209.jpg?v=1.0.0" class="img-fluid" alt="" />
                                             <a href="san-go-floorart.html" class="text text-uppercase">
                                                 <small>CTKM3</small>
                                                 <h4 class="font-weight-bold"></h4>
@@ -2770,7 +2770,7 @@
 </section>
 <section class="container mb-4">
 <div class="banner-in py-5"
-style="background: url(../cms.janhome.vn/uploads/2020/06/03/bn-pk-fix.jpg) no-repeat center;background-size: cover;">
+style="background: url(../noithathunggia/uploads/2020/06/03/bn-pk-fix.jpg) no-repeat center;background-size: cover;">
 <div class="row justify-content-center">
 <div class="col-xl-6 col-md-8 col-sm-8 col-12">
 <div>
@@ -2820,7 +2820,7 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="item">
 <div class="video-img">
     <a href="-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-day-den-tu-tao.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2020/06/27/video-2-3-4.jpg" />
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2020/06/27/video-2-3-4.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
@@ -2838,7 +2838,7 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="item">
 <div class="video-img">
     <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-gia-treo-anh-va-hop-cay-day-thung-handmade.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2017/06/maxresdefault-1.jpg" />
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/06/maxresdefault-1.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
@@ -2856,7 +2856,7 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="item">
 <div class="video-img">
     <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-gia-treo-tuong-bang-que-kem.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2017/06/1-1-1.jpg" />
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/06/1-1-1.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
@@ -2874,7 +2874,7 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="item">
 <div class="video-img">
     <a href="5-phut-moi-ngay-voi-janhome-trang-tri-can-phong-voi-hop-dung-do-tai-che.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2017/05/maxresdefault-3.jpg" />
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/05/maxresdefault-3.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
@@ -2892,7 +2892,7 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="item">
 <div class="video-img">
     <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-ngu-voi-da-thuy-tinh.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2017/05/maxresdefault-2.jpg" />
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/05/maxresdefault-2.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
@@ -2910,7 +2910,7 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="item">
 <div class="video-img">
     <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-den-nen-hoa-sen.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2017/05/maxresdefault-4.jpg" />
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/05/maxresdefault-4.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
@@ -3008,7 +3008,7 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="col-xl-4 col-md-4 col-sm-4 col-12">
 <div class="d-flex py-3 justify-content-center">
 <div class="image align-self-center">
-<img src="{!!asset('/cms.janhome.vn/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/shipment-international 2.png?v=1.0.0" class="img-fluid lazy" />
+<img src="{!!asset('/noithathunggia/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/shipment-international 2.png?v=1.0.0" class="img-fluid lazy" />
 </div>
 <div class="px-3 align-self-center">
 <label>Xuất xứ</label>
@@ -3459,12 +3459,12 @@ logged_out_greeting="Janhome xin chào ! Chúng tôi có thể giúp gì cho b�
 </div>
 <div class="banner-fixed-left">
 <a rel="nofollow" href="javascript:void(0)">
-<img src="{!!asset('cms.janhome.vn/uploads/2020/08/25/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-banner-san-go-han-quoc-floorarte209.jpg?v=1.0.0" class="img-fluid w-100')!!}" />
+<img src="{!!asset('noithathunggia/uploads/2020/08/25/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-banner-san-go-han-quoc-floorarte209.jpg?v=1.0.0" class="img-fluid w-100')!!}" />
 </a>
 </div>
 <div class="banner-fixed-right">
 <a rel="nofollow" href="javascript:void(0)">
-<img src="{!!asset('cms.janhome.vn/uploads/2020/06/03/banner-doc-1-fixe209.jpg?v=1.0.0')!!}" class="img-fluid w-100" />
+<img src="{!!asset('noithathunggia/uploads/2020/06/03/banner-doc-1-fixe209.jpg?v=1.0.0')!!}" class="img-fluid w-100" />
 </a>
 </div>
 <div class="btn-fixed">
