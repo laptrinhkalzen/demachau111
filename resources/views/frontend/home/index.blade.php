@@ -680,11 +680,13 @@
                 <div class="bg-f6f8f8 pt-3">
                     <section class="container">
                         <div class="row">
+                            @foreach ($banner_mid as $key=>$banner)
                             <div class="col-xl-8 col-md-8 col-sm-12 col-12">
                                 <a href="javascript:void(0)" title="">
-                                    <img src="../noithathunggia/uploads/2020/08/10/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-san-go-sieu-chiu-nuoc-janhome-ecofle209.jpg?v=1.0.0" class="lazy w-100 mb-3 mb-md-0" />
+                                    <img src="{!!$product->getImage()!!}" class="lazy w-100 mb-3 mb-md-0" />
                                 </a>
                             </div>
+                            @endforeach
                             <div class="col-xl-4 col-md-4 col-sm-12 col-12">
                                 <div class="nd-fast-search h-100 w-100">
                                     <div class="txt-1-fastsot">Tìm kiếm nhanh</div>
@@ -1215,7 +1217,7 @@
                                                             <div class="tag-1">
                                                             </div>
                                                             <div class="image">
-                                                                <a href="san-go-giang-huong-900-x-120mm.html"><img src="{{$product->getImage()}}" data-src="https://cms.janhome.vn//uploads/thumb/2017/08/san-go-tu-nhien-giang-huong-900-120mm.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ Giáng Hương 900 x 120mm" /></a>
+                                                                <a href="san-go-giang-huong-900-x-120mm.html"><img src="{{$product->getImage()}}" class="lazy img-fluid" /></a>
                                                                 <div class="tag-2">
                                                                     <img src="#" class="img-fluid tag-2-thumb" />
                                                                 </div>
@@ -1506,7 +1508,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="san-nhua-hem-khoa-florton-spc-fs4803.html"><img src="{{$product->getImage()}}" data-src="https://cms.janhome.vn//uploads/thumb/2020/03/san-nhua-hem-khoa-florton-spc-fs4803-1.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn nhựa hèm khóa Florton SPC FS4803" /></a>
+                                                            <a href="san-nhua-hem-khoa-florton-spc-fs4803.html"><img src="{{$product->getImage()}}" class="lazy img-fluid"/></a>
                                                             <div class="tag-2">
                                                                 <img src="" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1617,7 +1619,7 @@
                                     @endif
                                     <div class="item">
                                         <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" >
-                                            <img src="{{$news->getImage()}}" data-src="https://cms.janhome.vn//uploads/2020/08/17/4-dieu-ban-can-biet-truoc-khi-lua-chon-san-go-cong-nghiep-cho-gia-dinh.jpg?v=1.0.0" alt="4 điều bạn nhất định phải biết trước khi chọn mua sàn gỗ công nghiệp cho gia đình" class="img-fluid lazy" width="100%" height="auto" />
+                                            <img src="{{$news->getImage()}}" class="img-fluid lazy" width="100%" height="auto" />
                                         </a>
                                         <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" title="4 điều bạn nhất định phải biết trước khi chọn mua sàn gỗ công nghiệp cho gia đình" class="">
                                             <h6 class="title h5 mt-3 ">
@@ -1649,13 +1651,13 @@
                                                 <div class="col-xl-3 col-md-4 col-sm-3 col-3">
                                                     <div class="image">
                                                         <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" >
-                                                            <img src="{{$news->getImage()}}" data-src="https://cms.janhome.vn//uploads/thumb/2020/08/03/khuyen-mai-thang-8-2020-janhome.jpg?v=1.0.0" class="img-fluid lazy" alt="Khuyến mãi tháng 8 nhiều bất ngờ tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho." />
+                                                            <img src="{{$news->getImage()}}" class="img-fluid lazy" />
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-9 col-md-8 col-sm-9 col-9 pl-0">
                                                     <h6 class="title">
-                                                    <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" title="Khuyến mãi tháng 8 nhiều bất ngờ tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho.">{!!$news->title!!}</a>
+                                                    <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" >{!!$news->title!!}</a>
                                                     </h6>
                                                     <div class="time">
                                                         03/08/2020 05:29
@@ -1678,7 +1680,7 @@
                         <div class="col-xl-4 col-md-4 col-sm-4 col-12">
                             <div class="d-flex py-3 justify-content-center">
                                 <div class="image align-self-center">
-                                    <img src="{!!asset('/noithathunggia/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/shipment-international 2.png?v=1.0.0" class="img-fluid lazy" />
+                                    <img src="{!!asset('/noithathunggia/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" class="img-fluid lazy" />
                                 </div>
                                 <div class="px-3 align-self-center">
                                     <label>Xuất xứ</label>
@@ -1691,7 +1693,7 @@
                         <div class="col-xl-4 col-md-4 col-sm-4 col-12">
                             <div class="d-flex py-3 justify-content-center">
                                 <div class="image align-self-center">
-                                    <img src="{!!asset('noithathunggia/uploads/2020/04/28/Group.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/Group.png?v=1.0.0" class="img-fluid lazy" />
+                                    <img src="{!!asset('noithathunggia/uploads/2020/04/28/Group.png?v=1.0.0')!!}"  class="img-fluid lazy" />
                                 </div>
                                 <div class="px-3 align-self-center">
                                     <label>Hỗ trợ 24/7</label>
@@ -1704,7 +1706,7 @@
                         <div class="col-xl-4 col-md-4 col-sm-4 col-12">
                             <div class="d-flex py-3 justify-content-center">
                                 <div class="image align-self-center">
-                                    <img src="{!!asset('noithathunggia/uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0" class="img-fluid lazy" />
+                                    <img src="{!!asset('noithathunggia/uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}"  class="img-fluid lazy" />
                                 </div>
                                 <div class="px-3 align-self-center">
                                     <label>Loại hình dịch vụ</label>
@@ -2112,8 +2114,8 @@
                         attribution=setup_tool
                         page_id="1608844646076677"
                         theme_color="#ef822a"
-                        logged_in_greeting="Janhome xin chào ! Chúng tôi có thể giúp gì cho bạn?"
-                        logged_out_greeting="Janhome xin chào ! Chúng tôi có thể giúp gì cho bạn?">
+                        logged_in_greeting="Nội thất Hưng Gia xin chào ! Chúng tôi có thể giúp gì cho bạn?"
+                        logged_out_greeting="Nội thất Hưng Gia xin chào ! Chúng tôi có thể giúp gì cho bạn?">
                     </div>
                     <a rel="nofollow" target="_blank" href="https://zalo.me/0902480222" class="zalo">
                         <i class="fa" aria-hidden="true">
@@ -2123,16 +2125,20 @@
                     </a>
                 </div>
             </div>
+            @foreach ($banner_left as $key=>$banner)
             <div class="banner-fixed-left">
                 <a rel="nofollow" href="javascript:void(0)">
                     <img src="{!!asset('noithathunggia/uploads/2020/08/25/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-banner-san-go-han-quoc-floorarte209.jpg?v=1.0.0" class="img-fluid w-100')!!}" />
                 </a>
             </div>
+            @endforeach
+            @foreach ($banner_right as $key=>$banner)
             <div class="banner-fixed-right">
                 <a rel="nofollow" href="javascript:void(0)">
                     <img src="{!!asset('noithathunggia/uploads/2020/06/03/banner-doc-1-fixe209.jpg?v=1.0.0')!!}" class="img-fluid w-100" />
                 </a>
             </div>
+            @endforeach
             <div class="btn-fixed">
                 <div class="text-center mb-3">
                     <a rel="nofollow" href="javascript:;" onclick=" topFunction() " class="">
@@ -2147,9 +2153,9 @@
                 <div id="caption"></div>
             </div>
             <div style="display:none" itemscope itemtype="https://schema.org/WebSite">
-                <meta itemprop="url" content="janhome.vn" />
+                <meta itemprop="url" content="noithathunggia.vn" />
                 <form itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
-                    <meta itemprop="target" content="janhome.vn/Product/Get?keyword={search_term_string}" />
+                    <meta itemprop="target" content="noithathunggia.vn/Product/Get?keyword={search_term_string}" />
                     <input itemprop="query-input" type="text" name="search_term_string" required />
                     <input type="submit" />
                 </form>
@@ -2158,7 +2164,7 @@
             {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "url": "janhome.vn",
+            "url": "noithathunggia.vn",
             "logo": "/2020/04/28/logo.png"
             }
             </script>
@@ -2166,11 +2172,8 @@
             {
             "@context": "https://schema.org",
             "@type": "Store",
-            "image": [
-            "https://cms.janhome.vn//uploads/2020/06/05/san-go-cong-nghiep.jpg"
-            ],
-            "@id": "janhome.vn",
-            "name": "Janhome",
+            "@id": "noithathunggia.vn",
+            "name": "noithathunggia",
             "address": {
             "@type": "PostalAddress",
             "streetAddress": "Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội",
@@ -2188,7 +2191,7 @@
             },
             "author": "admin"
             },
-            "url": "janhome.vn",
+            "url": "noithathunggia.vn",
             "telephone": "1800.0022",
             "servesCuisine": "VietNam",
             "priceRange": "$$$",

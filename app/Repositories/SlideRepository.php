@@ -39,4 +39,21 @@ class SlideRepository extends AbstractRepository
     public function getSlide2() {
         return $this->model->where('status', 1)->where('position', 2)->orderBy('ordering', 'asc')->get();
     }
+
+    public function getBannerMid() {
+        return $this->model->where('status', 1)->where('position', 3)->orderBy('ordering', 'asc')->take(1)->get();
+    }
+
+    public function getBannerLeft() {
+        return $this->model->where('status', 1)->where('position', 4)->orderBy('ordering', 'asc')->take(1)->get();
+    }
+
+    public function getBannerRight() {
+        return $this->model->where('status', 1)->where('position', 5)->orderBy('ordering', 'asc')->take(1)->get();
+    }
+
+    public function getBannerEnd() {
+        return $this->model->where('status', 1)->where('position', 6)->orderBy('ordering', 'asc')->take(1)->get();
+    }
+
 }

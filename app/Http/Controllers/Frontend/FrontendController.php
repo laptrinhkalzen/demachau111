@@ -30,6 +30,10 @@ class FrontendController extends Controller {
         }
         $slide1 = $this->slideRepo->getSlide1();
         $slide2 = $this->slideRepo->getSlide2();
+        $banner_mid = $this->slideRepo->getBannerMid();
+        $banner_left = $this->slideRepo->getBannerLeft();
+        $banner_right = $this->slideRepo->getBannerRight();
+        $banner_end = $this->slideRepo->getBannerEnd();
         $product_new = $this->productRepo->readNewProduct($limit = 10);
         $hot_products_slide = $this->productRepo->readHlProduct($limit = 4);
         $product_hl = $this->productRepo->readHlProduct($limit = 6);
@@ -39,9 +43,9 @@ class FrontendController extends Controller {
         $plastic = $this->productRepo->getIndustryProduct($limit = 8);
         $news_arr = $this->newsRepo->getAllNews($limit = 7);
         if (config('global.device') != 'pc') {
-            return view('mobile/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature', 'sale', 'plastic', 'news_arr','slide1','slide2'));
+            return view('mobile/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature', 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end'));
         } else {
-            return view('frontend/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature' , 'sale', 'plastic', 'news_arr','slide1','slide2'));
+            return view('frontend/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature' , 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end'));
         }
     }
     
