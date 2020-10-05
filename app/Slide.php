@@ -15,5 +15,8 @@ class Slide extends Model
     public function updated_at() {
         return date("d/m/Y", strtotime($this->updated_at));
     }
-
+    public function getImage() {
+        $image_arr = explode(',', $this->image);
+        return $image_arr[0];
+    }
 }

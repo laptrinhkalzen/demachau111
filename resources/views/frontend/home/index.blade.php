@@ -181,8 +181,8 @@
                                             style="white-space: nowrap;">
                                             <div>
                                                 <a href="javascript:void(0)">
-                                                    <div><span class="font-weight-bold h6">Blog Janhome</span></div>
-                                                    <div class="small">& Tin khuyến mại</div>
+                                                    <div><span class="font-weight-bold h6">Tin tức</span></div>
+                                                    <div class="small">& Khuyến mại</div>
                                                 </a>
                                             </div>
                                         </li>
@@ -193,17 +193,6 @@
                                                     aria-expanded="false">
                                                     <img src="images/vietname209.svg?v=1.0.0" class="img-fluid " />
                                                 </a>
-                                                <div class="dropdown-menu dropdown-menu-right"
-                                                    aria-labelledby="dropdownMenuLink">
-                                                    <a rel="nofollow" class="dropdown-item select-language" href="javascript:void(0)" data-lang="vi-VN">
-                                                        <img src="images/vietname209.svg?v=1.0.0" class="img-fluid mr-1" />
-                                                        <span>Tiếng Việt</span>
-                                                    </a>
-                                                    <a rel="nofollow" class="dropdown-item select-language" href="javascript:void(0)" data-lang="en-US">
-                                                        <img src="images/226-united-statese209.svg?v=1.0.0" class="img-fluid mr-1" />
-                                                        <span>English</span>
-                                                    </a>
-                                                </div>
                                             </div>
                                         </li>
                                     </ul>
@@ -588,6 +577,7 @@
                                     <div class="swiper-container gallery-top-home">
                                         <!--Thêm slide-->
                                         <div class="swiper-wrapper">
+                                            @foreach ($slide as $key=>$product)
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
@@ -595,6 +585,7 @@
                                                     </a>
                                                 </div>
                                             </div>
+                                            @endforeach
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
@@ -624,28 +615,28 @@
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
-                                                        Khuyến mại đặc biệt sàn gỗ Malaysia WoodMan
+                                                        Slide 1
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
-                                                        Tấm ốp Nano TimberMan giảm 25%
+                                                        Slide 2
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
-                                                        Ốp tường TimberMan TBM01P
+                                                        Slide 3
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
-                                                        Miễn phí 100% công lắp đặt
+                                                        Slide 4
                                                     </div>
                                                 </div>
                                             </div>
@@ -655,20 +646,20 @@
                             </div>
                             <div class="col-lg-3 col-md-8 col-sm-12 col-12 mt-md-3 mt-lg-0 ml-auto px-md-0 px-lg-3">
                                 <ul class="list-group list-news-right mb-2 mt-3 mt-md-0">
-                                    <li class="list-group-item active">Trải nghiệM cùng JANHOME</li>
+                                    <li class="list-group-item active">Trải nghiệm cùng Nội thất Hưng Gia</li>
                                     <li class="list-group-item">
-                                        <a href="javascript:void(0)" title="Khuyến mãi tháng 8">
-                                            Khuyến mãi tháng 8
+                                        <a href="javascript:void(0)">
+                                            Khuyến mãi tháng này
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="javascript:void(0)" title="Trải nghiệm không gian phòng khách cùng Janhome">
-                                            Trải nghiệm không gian phòng khách cùng Janhome
+                                        <a href="javascript:void(0)">
+                                            Trải nghiệm không gian phòng khách cùng Nội thất Hưng Gia
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="javascript:void(0)" title=" Tư vấn chuyên sâu không gian phòng ngủ từ Janhome">
-                                            Tư vấn chuyên sâu không gian phòng ngủ từ Janhome
+                                        <a href="javascript:void(0)">
+                                            Tư vấn chuyên sâu không gian phòng ngủ từ Nội thất Hưng Gia
                                         </a>
                                     </li>
                                 </ul>

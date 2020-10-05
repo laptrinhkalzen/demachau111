@@ -10,13 +10,15 @@ use Repositories\KeywordRepository;
 use App\Repositories\ProductRepository;
 use Repositories\NewsRepository;
 use App\Repositories\ProductAttributeRepository;
+use App\Repositories\SlideRepository;
 
 class FrontendController extends Controller {
 
-    public function __construct(ProductRepository $productRepo, NewsRepository $newsRepo, ProductAttributeRepository $productAttributeRepo) {
+    public function __construct(ProductRepository $productRepo, NewsRepository $newsRepo, ProductAttributeRepository $productAttributeRepo, SlideRepository $slideRepo) {
         $this->productRepo = $productRepo;
         $this->newsRepo = $newsRepo;
         $this->productAttributeRepo = $productAttributeRepo;
+        $this->slideRepo = $slideRepo;
     }
     public function index() {
         //cart
@@ -26,7 +28,7 @@ class FrontendController extends Controller {
                 $total += ($val['price'] * $val['quantity']);
             }
         }
-
+        $slide = $this->slideRepo->getSlide();
         $product_new = $this->productRepo->readNewProduct($limit = 10);
         $hot_products_slide = $this->productRepo->readHlProduct($limit = 4);
         $product_hl = $this->productRepo->readHlProduct($limit = 6);
@@ -36,9 +38,9 @@ class FrontendController extends Controller {
         $plastic = $this->productRepo->getIndustryProduct($limit = 8);
         $news_arr = $this->newsRepo->getAllNews($limit = 7);
         if (config('global.device') != 'pc') {
-            return view('mobile/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature', 'sale', 'plastic', 'news_arr'));
+            return view('mobile/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature', 'sale', 'plastic', 'news_arr','slide'));
         } else {
-            return view('frontend/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature' , 'sale', 'plastic', 'news_arr'));
+            return view('frontend/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature' , 'sale', 'plastic', 'news_arr','slide'));
         }
     }
     
