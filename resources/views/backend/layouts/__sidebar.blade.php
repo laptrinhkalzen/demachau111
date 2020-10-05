@@ -108,10 +108,10 @@
                     <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Giao diện</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Layouts">
                         <li class="nav-item"><a href="{{route('admin.slide.index')}}" class="nav-link">Slide</a></li>
-                        <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
+<!--                         <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
                         <li class="nav-item"><a href="{{route('admin.service.index')}}" class="nav-link">Dịch vụ</a></li>
                         <li class="nav-item"><a href="{{route('admin.block.index')}}" class="nav-link">Khối</a></li>
-                        <li class="nav-item"><a href="{{route('admin.template_setting.index')}}" class="nav-link">Tùy chỉnh giao diện</a></li>
+                        <li class="nav-item"><a href="{{route('admin.template_setting.index')}}" class="nav-link">Tùy chỉnh giao diện</a></li> -->
                     </ul>
                 </li>
                 <!--                 <li class="nav-item nav-item-submenu">
