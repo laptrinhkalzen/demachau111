@@ -3,8 +3,7 @@
     <!-- Mirrored from janhome.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Sep 2020 03:37:37 GMT -->
     <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="revisit-after" content="1 days" />
+
         <link rel="shortcut icon" href="{!!asset('cms.janhome.vn/uploads/2020/07/13/janhome.png')!!}" />
         <meta charset="utf-8">
         <meta name="viewport" content="width = device-width, initial-scale = 1">
@@ -42,7 +41,7 @@
                 <meta property="og:title" content="Hệ thống bán lẻ sàn gỗ, sàn nhựa, vật liệu hoàn thiện tại kho JANHOME" />
                 <meta property="og:description" content="JANHOME là hệ thống bán lẻ sàn gỗ, sàn nhựa, giấy dán tường, vật liệu nội ngoại thất hoàn thiện có uy tín hơn 15 năm tại Việt Nam có hệ thống toàn quốc." />
                 <meta property="og:image" content="{!!asset('cms.janhome.vn/uploads/thumb/2020/06/05/san-go-cong-nghiep.jpg')!!}" />
-                <title>Hệ thống bán lẻ sàn gỗ, sàn nhựa, vật liệu hoàn thiện tại kho JANHOME</title><meta name="description" content="JANHOME là hệ thống bán lẻ sàn gỗ, sàn nhựa, giấy dán tường, vật liệu nội ngoại thất hoàn thiện có uy tín hơn 15 năm tại Việt Nam có hệ thống toàn quốc."><meta name="keywords" content="sàn gỗ, san go, san go ngoai troi, nhà phân phối sàn gỗ">
+                <title>Nội thất Hưng Gia</title>
             </head>
             <body>
                 <section class="header">
@@ -339,8 +338,8 @@
                                         <li class="nav-item mr-md-3  align-self-md-center d-flex d-sm-none d-lg-flex"
                                             style="white-space: nowrap;">
                                             <div>
-                                                <a rel="nofollow" href="tel: 18000022">
-                                                    <div><span class="font-weight-bold h6 ">1800.0022</span></div>
+                                                <a rel="nofollow" href="tel: 0936.618.992">
+                                                    <div><span class="font-weight-bold h6 ">0936.618.992</span></div>
                                                     <div class="small">(Miễn phí) </div>
                                                 </a>
                                             </div>
@@ -349,8 +348,8 @@
                                             style="white-space: nowrap;">
                                             <div>
                                                 <a href="javascript:void(0)">
-                                                    <div><span class="font-weight-bold h6">Blog Janhome</span></div>
-                                                    <div class="small">& Tin khuyến mại</div>
+                                                    <div><span class="font-weight-bold h6">Tin tức</span></div>
+                                                    <div class="small">& Khuyến mại</div>
                                                 </a>
                                             </div>
                                         </li>

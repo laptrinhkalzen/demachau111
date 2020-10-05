@@ -47,7 +47,7 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 <div class="container">
 <div class="row justify-content-center ">
 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">
-<h4 class="title-menu">JANHOME</h4>
+<h4 class="title-menu">Nội thất Hưng Gia</h4>
 <ul class="footer-menu ">
 <li><a href="javascript:void(0)">Giới thiệu công ty</a></li>
 <li><a href="javascript:void(0)">Tuyển dụng</a></li>
