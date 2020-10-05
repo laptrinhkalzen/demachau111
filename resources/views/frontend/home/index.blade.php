@@ -581,32 +581,11 @@
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
-                                                        <img src="../cms.janhome.vn/uploads/2020/09/03/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-khuyen-mai-thang-9-2020-san-go-woodmane209.jpg?v=1.0.0" class="d-block w-100" alt="janhome.vn">
+                                                        <img src="{!!$product->getImage()!!}" class="d-block w-100" alt="noithathunggia.vn">
                                                     </a>
                                                 </div>
                                             </div>
                                             @endforeach
-                                            <div class="swiper-slide">
-                                                <div class="image image-fixed">
-                                                    <a href="javascript:void(0)">
-                                                        <img data-src="https://cms.janhome.vn//uploads/2020/09/03/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-khuyen-mai-thang-9-2020-tam-op-nano-timberman.jpg?v=1.0.0" class="d-block w-100 swiper-lazy" alt="janhome.vn">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="image image-fixed">
-                                                    <a href="javascript:void(0)">
-                                                        <img data-src="https://cms.janhome.vn//uploads/2020/09/03/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-khuyen-mai-thang-9-2020-go-nhua-timberman-tbm01p.jpg?v=1.0.0" class="d-block w-100 swiper-lazy" alt="janhome.vn">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="image image-fixed">
-                                                    <a href="javascript:void(0)">
-                                                        <img data-src="https://cms.janhome.vn//uploads/2020/07/28/he-thong-ban-le-hoan-thien-tai-kho-janhome-khuyen-mai-san-go-duc.png?v=1.0.0" class="d-block w-100 swiper-lazy" alt="janhome.vn">
-                                                    </a>
-                                                </div>
-                                            </div>
                                         </div>
                                         <div class="swiper-pagination"></div>
                                     </div>
