@@ -577,11 +577,11 @@
                                     <div class="swiper-container gallery-top-home">
                                         <!--Thêm slide-->
                                         <div class="swiper-wrapper">
-                                            @foreach ($slide as $key=>$product)
+                                            @foreach ($slide as $key=>$slide)
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
-                                                        <img src="{!!$product->getImage()!!}" style="height:340px; object-fit: cover"class="d-block w-100" alt="noithathunggia.vn">
+                                                        <img src="{!!$slide->getImage()!!}" style="height:340px; object-fit: cover"class="d-block w-100" alt="noithathunggia.vn">
                                                     </a>
                                                 </div>
                                             </div>
@@ -591,13 +591,15 @@
                                     </div>
                                     <div class="swiper-container gallery-thumbs-home  ">
                                         <div class="swiper-wrapper">
+                                            @foreach ($slide as $key=>$slide)
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
-                                                        Slide 1
+                                                        {!!$product->getImage()!!}
                                                     </div>
                                                 </div>
                                             </div>
+                                            @endforeach
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
