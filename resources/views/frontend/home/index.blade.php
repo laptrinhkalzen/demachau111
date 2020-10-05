@@ -729,10 +729,10 @@
                                 <div class="px-3">
                                     <div class="row mb-3 no-gutters ">
                                         <div class="col-8">
-                                            <a href="javascript:void(0)" class="h5 font-weight-bold ">Sản phẩm bán chạy 2020</a>
+                                            <a href="javascript:void(0)" class="h5 font-weight-bold ">Sản phẩm thêm mới</a>
                                         </div>
                                         <div class="col-4 text-right">
-                                            <a href="danh-muc/san-pham-ban-chay-2020.html" class="link-view-more">
+                                            <a href="javascript:void(0)" class="link-view-more">
                                                 Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
                                             </a>
                                         </div>
