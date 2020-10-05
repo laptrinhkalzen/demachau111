@@ -595,7 +595,7 @@
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
-                                                        
+                                                        {!!$slide->title!!}
                                                     </div>
                                                 </div>
                                             </div>
