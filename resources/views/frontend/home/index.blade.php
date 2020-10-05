@@ -577,11 +577,11 @@
                                     <div class="swiper-container gallery-top-home">
                                         <!--Thêm slide-->
                                         <div class="swiper-wrapper">
-                                            @foreach ($slide as $key=>$slide)
+                                            @foreach ($slide as $key=>$product)
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
-                                                        <img src="{!!$slide->getImage()!!}" style="height:340px; object-fit: cover"class="d-block w-100" alt="noithathunggia.vn">
+                                                        <img src="{!!$product->getImage()!!}" style="height:340px; object-fit: cover"class="d-block w-100" alt="noithathunggia.vn">
                                                     </a>
                                                 </div>
                                             </div>
@@ -595,7 +595,7 @@
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
-                                                        {!!$slide->title!!}
+                                                        {!!$product->title!!}
                                                     </div>
                                                 </div>
                                             </div>
