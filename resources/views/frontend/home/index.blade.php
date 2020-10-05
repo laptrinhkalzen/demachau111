@@ -600,27 +600,6 @@
                                                 </div>
                                             </div>
                                             @endforeach
-                                            <div class="swiper-slide">
-                                                <div class="box-text">
-                                                    <div class="text">
-                                                        Slide 2
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="box-text">
-                                                    <div class="text">
-                                                        Slide 3
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="box-text">
-                                                    <div class="text">
-                                                        Slide 4
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
