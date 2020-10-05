@@ -16,11 +16,149 @@
             </head>
             <body>
                 <section class="header">
+                    <div class="list-location-top">
+                        <div class="container position-relative px-md-4">
+                            <div class="swiper-container ">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Hà Nội
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Bắc Giang">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Bắc Giang
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Bắc Ninh">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Bắc Ninh
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Cao Bằng">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Cao Bằng
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Đà Nẵng">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Đà Nẵng
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Đắk Lắk">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Đắk Lắk
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Điện Biên">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Điện Biên
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Gia Lai">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Gia Lai
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Tĩnh">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Hà Tĩnh
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hải Dương">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Hải Dương
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hải Phòng">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Hải Phòng
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hồ Chí Minh">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Hồ Chí Minh
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hòa Bình">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Hòa Bình
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hưng Yên">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Hưng Yên
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Nghệ An">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Nghệ An
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Nha Trang">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Nha Trang
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Phú Thọ">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Phú Thọ
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Quảng Bình">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Quảng Bình
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Quảng Ninh">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Quảng Ninh
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Sơn La">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Sơn La
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Thái Bình">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Thái Bình
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Thái Nguyên">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Thái Nguyên
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Thanh hoá">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Thanh hoá
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Tuyên Quang">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Tuyên Quang
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Vĩnh Phúc">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Vĩnh Phúc
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="swiper-button-next text-right"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
                     <div class=" nav-center">
                         <div class="container">
                             <nav class="navbar navbar-expand-md py-md-2 px-0">
                                 <a class="navbar-brand d-none d-md-block" href="{{route('home.index')}}" title="">
-                                    <img src="{!!$share_config->image!!}" alt="Nội thất Hưng Gia.vn"
+                                    <img src="{!!$share_config->image!!}" alt="janhome.vn"
                                     class="img-fluid" />
                                 </a>
                                 <a class="navbar-brand d-md-none" href="index.html" title="">
@@ -34,8 +172,50 @@
                                             <img src="images/searche209.svg?v=1.0.0" class="img-fluid" />
                                             </button>
                                         </div>
+                                        <div class="suggest-text suggest-text-1">
+                                            <div class="h6 px-3">
+                                                Gợi ý cho bạn
+                                            </div>
+                                            <div class="color-007DFF  px-3">
+                                                <div class="py-1">
+                                                    <a href="san-go-cong-nghiep.html">Sàn gỗ công nghiệp</a>
+                                                </div>
+                                                <div class="py-1">
+                                                    <a href="san-nhua.html">Sàn nhựa vinyl</a>
+                                                </div>
+                                                <div class="py-1">
+                                                    <a href="san-go-gia-re.html">Sàn gỗ công nghiệp giá rẻ</a>
+                                                </div>
+                                                <div class="py-1">
+                                                    <a href="san-go-ngoai-troi.html">Sàn gỗ ngoài trời</a>
+                                                </div>
+                                                <div class="py-1">
+                                                    <a href="san-go-thanh-ly.html">Sàn gỗ thanh lý</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="suggest-text suggest-text-2">
+                                            <div class="h6 px-3">
+                                                Sản phẩm gợi ý
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <!--22-4 Thêm btn giỏ hàng-->
+                                <div class="nav-item align-self-md-center mb-0 cart d-md-none">
+                                    <button class="btn p-0 dropdown-cart-trigger-mobile" @*onclick="$('.cart-mobile').toggle(100, 'swing');" *@>
+                                    <div class="icon ">
+                                        <img src="images/cart-icone209.svg?v=1.0.0" class="img-fluid mr-2 icon-nav" />
+                                        <div id="cart-count-mobile" class="amount">
+                                        </div>
+                                    </div>
+                                    </button>
+                                </div>
+                                <!--22-4 Sửa onclick-->
+                                <button class="navbar-toggler px-1" type="button" data-toggle="collapse"
+                                onclick="$('.cate-mobile').toggle(100, 'swing');">
+                                <i class="fas fa-bars"></i>
+                                </button>
                                 <div class="collapse navbar-collapse w-100 align-self-center">
                                     <ul class=" navbar-nav ml-auto mt-4 mt-md-0 w-100 justify-content-xl-around">
                                         <li class="nav-item mr-md-3 align-self-center  d-none d-md-block  ">
@@ -139,7 +319,7 @@
                                             style="white-space: nowrap;">
                                             <div>
                                                 <a href="javascript:void(0)">
-                                                    <div><span class="font-weight-bold h6">Blog Nội thất Hưng Gia</span></div>
+                                                    <div><span class="font-weight-bold h6">Blog Janhome</span></div>
                                                     <div class="small">& Tin khuyến mại</div>
                                                 </a>
                                             </div>
@@ -227,16 +407,202 @@
                                                 </li>
                                                 <li class="list-group-item">
                                                     <a href="san-go-cong-nghiep.html" class="link" title="Sàn gỗ công nghiệp">
-                                                        <img src="../noithathunggia/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
+                                                        <img src="../cms.janhome.vn/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn gỗ công nghiệp" />Sàn gỗ công nghiệp
                                                     </a>
                                                     <div class="subcate">
                                                         <ul class="ul-tree-lv-1">
-                                                            
+                                                            <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-malaysia.html" data-url="/san-go-malaysia">Sàn gỗ Malaysia</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-janmi.html" data-url="/san-go-janmi">Sàn gỗ Janmi</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-woodman.html" data-url="/san-go-woodman">Sàn gỗ Woodman</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-masfloor.html" data-url="/san-go-masfloor">Sàn gỗ Masfloor</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-viet-nam.html" data-url="/san-go-viet-nam">Sàn gỗ Việt Nam</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-xuong-ca.html" data-url="/san-go-xuong-ca">Sàn Gỗ xương Cá</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-cot-xanh.html" data-url="/san-go-cot-xanh">Sàn gỗ cốt xanh</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-viet-nam-sieu-chiu-nuoc.html" data-url="/san-go-viet-nam-sieu-chiu-nuoc">Sàn gỗ Việt Nam Siêu chịu...</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-kendax.html" data-url="/san-go-kendax">Sàn gỗ Kendax</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-florton.html" data-url="/san-go-florton">Sàn gỗ Florton</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-newsky.html" data-url="/san-go-newsky">Sàn gỗ Newsky</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-janwood.html" data-url="/san-go-janwood">Sàn gỗ Janwood</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-gia-re.html" data-url="/san-go-gia-re">Sàn gỗ công nghiệp giá rẻ</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-ecofloor.html" data-url="/san-go-ecofloor">Sàn gỗ EcoFloor</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-wilson.html" data-url="/san-go-wilson">Sàn gỗ Wilson</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-harotex.html" data-url="/san-go-harotex">Sàn gỗ Harotex</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-kosmos.html" data-url="/san-go-kosmos">Sàn gỗ Kosmos</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-eurohome.html" data-url="/san-go-eurohome">Sàn gỗ Eurohome</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-glomax.html" data-url="/san-go-glomax">Sàn gỗ Glomax</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-galamax.html" data-url="/san-go-galamax">Sàn gỗ Galamax</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-kronomax.html" data-url="/san-go-kronomax">Sàn gỗ Kronomax</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-royal-floor.html" data-url="/san-go-royal-floor">Sàn gỗ Royal Floor</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-han-quoc.html" data-url="/san-go-han-quoc">Sàn gỗ Hàn Quốc</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-han-quoc-san-go-dongwha.html" data-url="/san-go-han-quoc-san-go-dongwha">Sàn Gỗ DongWha</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-floorart.html" data-url="/san-go-floorart">Sàn gỗ FloorArt</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-thai-lan.html" data-url="/san-go-thai-lan">Sàn gỗ Thái Lan</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-thairoyal.html" data-url="/san-go-thairoyal">Sàn gỗ ThaiRoyal</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-thaigreen.html" data-url="/san-go-thaigreen">Sàn gỗ ThaiGreen</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-thaixin.html" data-url="/san-go-thaixin">Sàn gỗ Thaixin</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-an-do.html" data-url="/san-go-an-do">Sàn gỗ Ấn Độ</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-trung-quoc.html" data-url="/san-go-trung-quoc">Sàn gỗ Trung Quốc</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-chau-au.html" data-url="/san-go-chau-au">Sàn gỗ Châu Âu</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-duc.html" data-url="/san-go-duc">Sàn gỗ Đức</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-phap.html" data-url="/san-go-phap">Sàn gỗ Pháp</a><ul class="ul-tree-lv-3"></ul></li></ul></li>
                                                         </ul>
                                                     </div>
                                                 </li>
+                                                <li class="list-group-item">
+                                                    <a href="san-go-tu-nhien.html" class="link" title="Sàn gỗ tự nhiên">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/gotunhiene209.png?v=1.0.0"
+                                                        class="img-fluid mr-2" alt="Sàn gỗ tự nhiên" />Sàn gỗ tự nhiên
+                                                    </a>
+                                                    <div class="subcate">
+                                                        <ul class="ul-tree-lv-1">
+                                                            <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-chiu-liu.html" data-url="/san-go-chiu-liu">Sàn gỗ Chiu Liu</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-cam-xe.html" data-url="/san-go-cam-xe">Sàn gỗ Căm xe</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-go-do.html" data-url="/san-go-go-do">Sàn gỗ gõ đỏ</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-giang-huong.html" data-url="/san-go-giang-huong">Sàn gỗ Giáng Hương</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-soi.html" data-url="/san-go-soi">Sàn gỗ Sồi</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-teak.html" data-url="/san-go-teak">Sàn gỗ Teak</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-oc-cho.html" data-url="/san-go-oc-cho">Sàn gỗ Óc chó</a><ul class="ul-tree-lv-2"></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="san-nhua.html" class="link" title="Sàn nhựa vinyl">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
+                                                        class="img-fluid mr-2" alt="Sàn nhựa vinyl" />Sàn nhựa vinyl
+                                                    </a>
+                                                    <div class="subcate">
+                                                        <ul class="ul-tree-lv-1">
+                                                            <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-hem-khoa.html" data-url="/san-nhua-hem-khoa">Sàn nhựa hèm khóa</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-florton-spc.html" data-url="/san-nhua-florton-spc">Sàn nhựa hèm khóa Florton SPC</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-hem-khoa-mines.html" data-url="/san-nhua-hem-khoa-mines">Sàn nhựa hèm khóa mines</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-7mm-mega.html" data-url="/san-nhua-7mm-mega">Sàn nhựa 7mm MEGA</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-bpc.html" data-url="/san-nhua-bpc">Sàn nhựa BPC</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-gia-re.html" data-url="/san-nhua-gia-re">Sàn nhựa giá rẻ</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-ecofloor.html" data-url="/san-nhua-ecofloor">Sàn nhựa Ecofloor Vinyl</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-gia-re-mines.html" data-url="/san-nhua-gia-re-mines">Sàn nhựa giá rẻ Mines</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-railflex.html" data-url="/san-nhua-railflex">Sàn nhựa Railflex</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-dan-keo-railflex.html" data-url="/san-nhua-dan-keo-railflex">Sàn nhựa dán keo Railflex</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-hem-khoa-railflex-4-2mm.html" data-url="/san-nhua-hem-khoa-railflex-4-2mm">Sàn nhựa hèm khóa Railflex 4.2mm</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-chong-tinh-dien.html" data-url="/san-nhua-chong-tinh-dien">Sàn nhựa chống tĩnh điện</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-hem-khoa-railflex-5mm.html" data-url="/san-nhua-hem-khoa-railflex-5mm">Sàn nhựa hèm khóa RailFlex 5mm</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-vinyl-railflex-dang-cuon.html" data-url="/san-nhua-vinyl-railflex-dang-cuon">Sàn nhựa vinyl Railflex dạng cuộn</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-the-thao-railflex.html" data-url="/san-nhua-the-thao-railflex">Sàn nhựa thể thao Railflex</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-ibt.html" data-url="/san-nhua-ibt">Sàn nhựa IBT</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-ecost.html" data-url="/san-nhua-ecost">Sàn nhựa ECO'ST</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-ecost-tu-dan.html" data-url="/san-nhua-ecost-tu-dan">Sàn nhựa ECO’ST tự dán</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-ecost-dan-keo.html" data-url="/san-nhua-ecost-dan-keo">Sàn nhựa ECO’ST dán keo</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-ecost-hem-khoa.html" data-url="/san-nhua-ecost-hem-khoa">Sàn nhựa ECO’ST hèm khóa</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-thanh-ly.html" data-url="/san-nhua-thanh-ly">Sàn nhựa thanh lý</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-dongwha-han-quoc-khuyen-mai.html" data-url="/san-nhua-dongwha-han-quoc-khuyen-mai">Sàn nhựa dongwha hàn quốc khuyến...</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-van-go.html" data-url="/san-nhua-van-go">Sàn nhựa vân gỗ</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-van-da.html" data-url="/san-nhua-van-da">Sàn nhựa vân đá</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-van-tham.html" data-url="/san-nhua-van-tham">Sàn nhựa vân thảm</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-tu-dan.html" data-url="/san-nhua-tu-dan">Sàn nhựa tự dán</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-van-da-san-nhua.html" data-url="/san-nhua-van-da-san-nhua">Sàn nhựa vân da</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-aimaru.html" data-url="/san-nhua-aimaru">Sàn nhựa AIMARU</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-galaxy.html" data-url="/san-nhua-galaxy">Sàn nhựa Galaxy</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-nhua-galaxy-plus.html" data-url="/san-nhua-galaxy-plus">Sàn nhựa GALAXY Plus</a><ul class="ul-tree-lv-3"></ul></li></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="san-go-ngoai-troi.html" class="link" title="Sàn gỗ ngoài trời">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0"
+                                                        class="img-fluid mr-2" alt="Sàn gỗ ngoài trời" />Sàn gỗ ngoài trời
+                                                    </a>
+                                                    <div class="subcate">
+                                                        <ul class="ul-tree-lv-1">
+                                                            <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-timberman.html" data-url="/san-go-timberman">Sàn gỗ TimberMan</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-timberman-nhap-khau.html" data-url="/san-go-timberman-nhap-khau">Sàn gỗ Timberman Nhập khẩu</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-timberman-trong-nuoc.html" data-url="/san-go-timberman-trong-nuoc">Sàn gỗ Timberman Trong nước</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-ban-cong.html" data-url="/san-go-ban-cong">Sàn gỗ ban công</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-be-boi.html" data-url="/san-go-be-boi">Sàn gỗ bể bơi</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-san-vuon.html" data-url="/san-go-san-vuon">Sàn gỗ sân vườn</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-tu-nhien-ngoai-troi-timberman.html" data-url="/san-go-tu-nhien-ngoai-troi-timberman">Sàn gỗ tự nhiên ngoài trời...</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-san-thuong.html" data-url="/san-go-san-thuong">Sàn gỗ sân thượng</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-ngoai-troi-biowood.html" data-url="/san-go-ngoai-troi-biowood">Sàn gỗ ngoài trời Biowood</a><ul class="ul-tree-lv-2"></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="phu-kien.html" class="link" title="Phụ kiện">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/cleane209.png?v=1.0.0"
+                                                        class="img-fluid mr-2" alt="Phụ kiện" />Phụ kiện
+                                                    </a>
+                                                    <div class="subcate">
+                                                        <ul class="ul-tree-lv-1">
+                                                            <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="keo-dan.html" data-url="/keo-dan">Keo dán</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="keo-dan-san-nhua.html" data-url="/keo-dan-san-nhua">Keo dán sàn nhựa giá rẻ</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="phao-nhua-janmi.html" data-url="/phao-nhua-janmi">Phào nhựa JANMI</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="phao-go-tu-nhien.html" data-url="/phao-go-tu-nhien">Phào gỗ tự nhiên</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="xop-foam-san-go.html" data-url="/xop-foam-san-go">Xốp, Foam sàn gỗ</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="phu-kien-phao-nhua-chan-tuong.html" data-url="/phu-kien-phao-nhua-chan-tuong">Phào nhựa chân tường</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="op-bang-phao-nhua-op-tran-trong-nha.html" data-url="/op-bang-phao-nhua-op-tran-trong-nha">Phụ kiện ốp trần trong nhà</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="phao-nep-thanh-ly.html" data-url="/phao-nep-thanh-ly">Phào nẹp thanh lý</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="tam-hdf.html" data-url="/tam-hdf">Tấm HDF</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="phu-kien-op-tuong-op-tran.html" data-url="/phu-kien-op-tuong-op-tran">Phụ kiện ốp tường - ốp...</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="phu-kien-tam-op-nano-timberman.html" data-url="/phu-kien-tam-op-nano-timberman">Phụ kiện tấm Ốp Nano TimberMan</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="phao-nep-kim-loai.html" data-url="/phao-nep-kim-loai">Phào nẹp kim loại</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="nep-nhua.html" data-url="/nep-nhua">Nẹp nhựa</a><ul class="ul-tree-lv-2"></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="san-go-thanh-ly.html" class="link" title="Sàn gỗ thanh lý">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0"
+                                                        class="img-fluid mr-2" alt="Sàn gỗ thanh lý" />Sàn gỗ thanh lý
+                                                    </a>
+                                                    <div class="subcate">
+                                                        <ul class="ul-tree-lv-1">
+                                                            <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-thanh-ly-tong-hop.html" data-url="/san-go-thanh-ly-tong-hop">Sàn Gỗ Thanh lý Tổng Hợp</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-viet-nam-thanh-ly-san-go-thanh-ly.html" data-url="/san-go-viet-nam-thanh-ly-san-go-thanh-ly">Sàn gỗ Việt Nam thanh lý</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-viet-nam-thanh-ly-8mm.html" data-url="/san-go-viet-nam-thanh-ly-8mm">Sàn gỗ Việt Nam thanh lý...</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-viet-nam-thanh-ly-12mm.html" data-url="/san-go-viet-nam-thanh-ly-12mm">Sàn gỗ Việt Nam thanh lý...</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-thanh-ly-8mm.html" data-url="/san-go-thanh-ly-8mm">Sàn gỗ thanh lý 8mm</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-nhua-thanh-ly-san-go-thanh-ly.html" data-url="/san-nhua-thanh-ly-san-go-thanh-ly">Sàn nhựa thanh lý</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-victory.html" data-url="/san-go-victory">Sàn gỗ Victory</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-prince.html" data-url="/san-go-prince">Sàn gỗ Prince</a><ul class="ul-tree-lv-2"></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="trang-tri-noi-that.html" class="link" title="Trang trí nội thất">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/bede209.png?v=1.0.0"
+                                                        class="img-fluid mr-2" alt="Trang trí nội thất" />Trang trí nội thất
+                                                    </a>
+                                                    <div class="subcate">
+                                                        <ul class="ul-tree-lv-1">
+                                                            <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="op-tuong-trong-nha.html" data-url="/op-tuong-trong-nha">Ốp tường trong nhà</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="tam-op-nano.html" data-url="/tam-op-nano">Tấm ốp Nano TimberMan</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="tam-op-tuong-pvc.html" data-url="/tam-op-tuong-pvc">Tấm ốp tường PVC</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="tam-op-tran-tuong.html" data-url="/tam-op-tran-tuong">Tấm ốp trần tường</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="op-tuong-van-da.html" data-url="/op-tuong-van-da">Ốp tường vân đá</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="op-bang-go-cn.html" data-url="/op-bang-go-cn">Ốp tường gỗ công nghiệp</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="op-bang-go-tu-nhien.html" data-url="/op-bang-go-tu-nhien">Ốp tường gỗ tự nhiên</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="op-tuong-bang-tam-3d.html" data-url="/op-tuong-bang-tam-3d">Tấm ốp tường 3D</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="tam-nhua-op-tuong.html" data-url="/tam-nhua-op-tuong">Tấm nhựa ốp tường</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="op-tuong-biowood.html" data-url="/op-tuong-biowood">Ốp tường Biowood</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="giay-dan-tuong.html" data-url="/giay-dan-tuong">Giấy dán tường</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="giay-dan-tuong-trung-quoc.html" data-url="/giay-dan-tuong-trung-quoc">Giấy dán tường Trung Quốc</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="giay-dan-tuong-han-quoc.html" data-url="/giay-dan-tuong-han-quoc">Giấy dán tường Hàn Quốc</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="giay-dan-tuong-nhat-ban.html" data-url="/giay-dan-tuong-nhat-ban">Giấy dán tường Nhật Bản</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="giay-dan-tuong-thanh-ly.html" data-url="/giay-dan-tuong-thanh-ly">Giấy dán tường thanh lý</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="op-tran-trong-nha.html" data-url="/op-tran-trong-nha">Ốp trần trong nhà</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="tam-op-tran-pvc.html" data-url="/tam-op-tran-pvc">Tấm ốp trần PVC TimberMan</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="op-bang-tam-tran-tha-pvc.html" data-url="/op-bang-tam-tran-tha-pvc">Ốp trần bằng tấm trần thả...</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="op-bang-go-cn-op-tran-trong-nha.html" data-url="/op-bang-go-cn-op-tran-trong-nha">Ốp trần bằng gỗ công nghiệp</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="op-bang-go-tu-nhien-op-tran-trong-nha.html" data-url="/op-bang-go-tu-nhien-op-tran-trong-nha">Ốp trần bằng gỗ tự nhiên</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="op-tran-gia-re.html" data-url="/op-tran-gia-re">Ốp trần giá rẻ</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="rem-cua.html" data-url="/rem-cua">Rèm cửa</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="rem-go-wood-blinds-origine-bass.html" data-url="/rem-go-wood-blinds-origine-bass">Rèm gỗ Wood Blinds Origine Bass</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="rem-la-doc-vertical.html" data-url="/rem-la-doc-vertical">Rèm lá dọc Vertical</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="rem-cau-vong-combi.html" data-url="/rem-cau-vong-combi">Rèm cầu vồng - Combi</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="rem-cuon-1-lop-roll-screen.html" data-url="/rem-cuon-1-lop-roll-screen">Rèm cuốn 1 lớp Roll Screen</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="bac-cau-thang-go-cong-nghiep.html" data-url="/bac-cau-thang-go-cong-nghiep">Bậc cầu thang gỗ công nghiệp</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="tham-trai-san.html" data-url="/tham-trai-san">Thảm trải sàn</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="tham-tho-nhi-ky.html" data-url="/tham-tho-nhi-ky">Thảm Thổ Nhĩ Kỳ</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="tham-bi.html" data-url="/tham-bi">Thảm Bỉ</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="tranh-gach-3d.html" data-url="/tranh-gach-3d">Tranh Gạch 3D</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="gach-vi-tinh-3d.html" data-url="/gach-vi-tinh-3d">Gạch Vi Tinh 3D</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="gach-3d-cham-khac-noi.html" data-url="/gach-3d-cham-khac-noi">Gạch 3D Chạm Khắc Nổi</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="gach-3d-phu-men-uv.html" data-url="/gach-3d-phu-men-uv">Gạch 3D Phủ Men UV</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="gach-kinh-5d.html" data-url="/gach-kinh-5d">Gạch Kính 5D</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="tranh-kinh-3d.html" data-url="/tranh-kinh-3d">Tranh Kính 3D</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-go-noi-that.html" data-url="/san-go-noi-that">Sàn gỗ Nội Thất</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-phong-ngu.html" data-url="/san-go-phong-ngu">Sàn gỗ phòng ngủ</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="san-go-phong-khach.html" data-url="/san-go-phong-khach">Sàn gỗ phòng khách</a><ul class="ul-tree-lv-3"></ul></li></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="trang-tri-ngoai-that.html" class="link" title="Trang trí ngoại thất">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/homee209.png?v=1.0.0"
+                                                        class="img-fluid mr-2" alt="Trang trí ngoại thất" />Trang trí ngoại thất
+                                                    </a>
+                                                    <div class="subcate">
+                                                        <ul class="ul-tree-lv-1">
+                                                            <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="vi-gach-da.html" data-url="/vi-gach-da">Vỉ gạch đá</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="thanh-che-nang.html" data-url="/thanh-che-nang">Thanh che nắng</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="go-nhua-ngoai-troi.html" data-url="/go-nhua-ngoai-troi">Gỗ nhựa ngoài trời</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="go-nhua-ngoai-troi-timberman.html" data-url="/go-nhua-ngoai-troi-timberman">Gỗ nhựa ngoài trời TimberMan</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="gach-go.html" data-url="/gach-go">Gạch Gỗ</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="gian-hoa-ngoai-troi.html" data-url="/gian-hoa-ngoai-troi">Giàn hoa ngoài trời</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="hang-rao-ngoai-troi.html" data-url="/hang-rao-ngoai-troi">Hàng rào ngoài trời</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="lan-can-ban-cong.html" data-url="/lan-can-ban-cong">Lan can - ban công</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="ban-ghe-ngoai-troi.html" data-url="/ban-ghe-ngoai-troi">Bàn ghế ngoài trời</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="go-nhua-ngoai-troi-chau-hoa-go.html" data-url="/go-nhua-ngoai-troi-chau-hoa-go">Chậu hoa gỗ</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="lam-go-trang-tri.html" data-url="/lam-go-trang-tri">Lam gỗ trang trí che nắng</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="thung-rac-ngoai-troi-timberman.html" data-url="/thung-rac-ngoai-troi-timberman">Thùng rác ngoài trời TimberMan</a><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="op-cot-biowood.html" data-url="/op-cot-biowood">Ốp cột Biowood</a><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="op-tuong-ngoai-troi.html" data-url="/op-tuong-ngoai-troi">Ốp tường ngoài trời</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="tieu-canh-vuon-cay.html" data-url="/tieu-canh-vuon-cay">Tiểu cảnh vườn cây</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="trang-tri-ban-cong.html" data-url="/trang-tri-ban-cong">Trang trí ban công</a><ul class="ul-tree-lv-2"></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="do-gia-dung.html" class="link" title="Đồ gia dụng">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/cleane209.png?v=1.0.0"
+                                                        class="img-fluid mr-2" alt="Đồ gia dụng" />Đồ gia dụng
+                                                    </a>
+                                                    <div class="subcate">
+                                                        <ul class="ul-tree-lv-1">
+                                                            <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="may-loc-nuoc.html" data-url="/may-loc-nuoc">Máy lọc nước</a><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="cham-soc-bao-duong.html" data-url="/cham-soc-bao-duong">Chăm sóc bảo dưỡng</a><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="nuoc-lau-san-layer-clean.html" data-url="/nuoc-lau-san-layer-clean">Nước lau sàn Layer Clean</a><ul class="ul-tree-lv-3"></ul></li></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="san-tre.html" class="link" title="Sàn tre">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
+                                                        class="img-fluid mr-2" alt="Sàn tre" />Sàn tre
+                                                    </a>
+                                                    <div class="subcate">
+                                                        <ul class="ul-tree-lv-1">
+                                                            <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-tre-ali.html" data-url="/san-tre-ali">Sàn tre ali</a><ul class="ul-tree-lv-2"></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <!--Nút xem thêm-->
+                                                <li class="list-group-item" style="cursor: pointer;">
+                                                    <i class="fas fa-plus mr-3"></i>Xem thêm
+                                                </li>
                                             </ul>
+                                            <ul class="row menu-cate-mobile  d-md-none no-gutters">
+                                                <div class="col-3 px-1">
+                                                    <a href="san-go-cong-nghiep.html" class="btn btn-cate">
+                                                        <img src="../cms.janhome.vn/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
+                                                        class="img-fluid mb-2" />
+                                                        <div>
+                                                            Sàn gỗ công nghiệp
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-3 px-1">
+                                                    <a href="san-go-tu-nhien.html" class="btn btn-cate">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/gotunhiene209.png?v=1.0.0"
+                                                        class="img-fluid mb-2" />
+                                                        <div>
+                                                            Sàn gỗ tự nhiên
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-3 px-1">
+                                                    <a href="san-nhua.html" class="btn btn-cate">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
+                                                        class="img-fluid mb-2" />
+                                                        <div>
+                                                            Sàn nhựa vinyl
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-3 px-1">
+                                                    <a href="san-go-ngoai-troi.html" class="btn btn-cate">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0"
+                                                        class="img-fluid mb-2" />
+                                                        <div>
+                                                            Sàn gỗ ngoài trời
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-3 px-1">
+                                                    <a href="phu-kien.html" class="btn btn-cate">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/cleane209.png?v=1.0.0"
+                                                        class="img-fluid mb-2" />
+                                                        <div>
+                                                            Phụ kiện
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-3 px-1">
+                                                    <a href="san-go-thanh-ly.html" class="btn btn-cate">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0"
+                                                        class="img-fluid mb-2" />
+                                                        <div>
+                                                            Sàn gỗ thanh lý
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-3 px-1">
+                                                    <a href="trang-tri-noi-that.html" class="btn btn-cate">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/bede209.png?v=1.0.0"
+                                                        class="img-fluid mb-2" />
+                                                        <div>
+                                                            Trang trí nội thất
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-3 px-1">
+                                                    <a href="trang-tri-ngoai-that.html" class="btn btn-cate">
+                                                        <img src="../cms.janhome.vn/uploads/2020/05/21/homee209.png?v=1.0.0"
+                                                        class="img-fluid mb-2" />
+                                                        <div>
+                                                            Trang trí ngoại thất
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="spvx " style="">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h6 class=" py-2 px-3 mb-0">Sản phẩm bạn đã xem</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row no-gutters h-100 _binding_last_seen_product">
                                         </div>
                                     </div>
                                 </div>
@@ -244,7 +610,112 @@
                         </section>
                     </section>
                 </section>
-
+                <!--22-4 Giỏ hàng mobile-->
+                <div class="cart-mobile dropdown-cart-mobile">
+                    <!--Sum-->
+                    <div class="_binding_dropdown_cart">
+                    </div>
+                    <div class="d-flex px-3">
+                        <div class="text-uppercase">
+                            Tổng tiền:
+                        </div>
+                        <div class="h6 font-weight-bold ml-auto color-EE7D22 small-total-cart">
+                            21.000đ
+                        </div>
+                    </div>
+                    <div class="bottom-dropdown d-flex  ">
+                        <div class="small mr-3">
+                            Bạn còn <span class="dropdown-quantity-cart"></span> sản phẩm trong giỏ hàng
+                        </div>
+                        <div class="h6 ml-auto">
+                            <a rel="nofollow" href="gio-hang.html" id="link-target-cart-mobile" class="btn-link link-view-more text-uppercase">XEM GIỎ HÀNG</a><br />
+                            <a rel="nofollow" href="javascript:void(0)" id="link-clear-cart" class="btn-link link-view-more text-uppercase">Clear Cart Teserd</a><br />
+                        </div>
+                    </div>
+                </div>
+                <!--22-4 danh mục mobile popup-->
+                <section class="cate-mobile ">
+                    <div class="bg-fff p-3 m-auto">
+                        <div class="tree-menu-mobile">
+                            <ul>
+                                <li>
+                                    <span class="span-tree-node tree-lv-0" data-url="/san-go-cong-nghiep">Sàn gỗ công nghiệp</span>
+                                    <ul>
+                                        <li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-malaysia" data-sp=1>Sàn gỗ Malaysia</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-janmi" data-sp=1>Sàn gỗ Janmi</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-janmi-8mm-ac4" data-sp=1>Sàn gỗ Janmi 8mm Ac4</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-janmi-12mm-ban-to" data-sp=1>Sàn gỗ Janmi 12mm bản to</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-janmi-12mm-ban-nho" data-sp=1>Sàn gỗ janmi 12mm bản nhỏ</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-woodman" data-sp=1>Sàn gỗ Woodman</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-woodman-8mm" data-sp=1>Sàn gỗ woodman 8mm</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-woodman-12mm-ban-to" data-sp=1>Sàn gỗ Woodman 12mm bản to</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-woodman-12mm-ban-nho" data-sp=1>Sàn gỗ Woodman 12mm bản nhỏ</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-masfloor" data-sp=1>Sàn gỗ Masfloor</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-trung-quoc" data-sp=1>Sàn gỗ Trung Quốc</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-viet-nam" data-sp=1>Sàn gỗ Việt Nam</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-florton" data-sp=1>Sàn gỗ Florton</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-florton-8mm" data-sp=1>Sàn gỗ Florton 8MM</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-florton-12mm" data-sp=1>Sàn gỗ Florton 12mm</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-newsky" data-sp=1>Sàn gỗ Newsky</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-newsky-d-class" data-sp=1>Sàn gỗ NewSky D-Class</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-newsky-ea-class" data-sp=1>Sàn gỗ Newsky EA-Class</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-newsky-u-class" data-sp=1>Sàn gỗ Newsky U-Class</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-newsky-k-class" data-sp=1>Sàn gỗ Newsky K-Class</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-newsky-s-class" data-sp=1>Sàn gỗ Newsky S-Class</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-newsky-wpu-class" data-sp=1>Sàn gỗ Newsky WPu-Class</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-janwood" data-sp=1>Sàn gỗ Janwood</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-xuong-ca" data-sp=1>Sàn Gỗ xương Cá</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-xuong-ca-janhome" data-sp=1>Sàn gỗ xương cá Janhome</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-xuong-ca-jawa" data-sp=1>Sàn gỗ xương cá Jawa</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-cot-xanh" data-sp=1>Sàn gỗ cốt xanh</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-cot-xanh-aqua-janhome-chiu-nuoc" data-sp=1>Sàn gỗ cốt xanh Janhome chịu...</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-viet-nam-sieu-chiu-nuoc" data-sp=1>Sàn gỗ Việt Nam Siêu chịu...</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-janhome-sieu-chiu-nuoc" data-sp=1>Sàn gỗ JanHome Floor Aqua siêu...</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-xuong-ca-janhome-san-go-viet-nam-sieu-chiu-nuoc" data-sp=1>Sàn gỗ xương cá JanHome</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-kendax" data-sp=1>Sàn gỗ Kendax</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-kendax-8mm" data-sp=1>Sàn gỗ Kendax 8mm</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-kendax-12mm" data-sp=1>Sàn gỗ Kendax 12mm</span><ul class="ul-tree-lv-4"></ul></li></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-gia-re" data-sp=1>Sàn gỗ công nghiệp giá rẻ</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-harotex" data-sp=1>Sàn gỗ Harotex</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-ecofloor" data-sp=1>Sàn gỗ EcoFloor</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-ecofloor-8mm" data-sp=1>Sàn gỗ Ecofloor 8mm</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-ecofloor-12mm" data-sp=1>Sàn gỗ Ecofloor 12mm</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-ecofloor-van-tu-nhien" data-sp=1>Sàn gỗ ECOFLOOR vân tự nhiên</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-wilson" data-sp=1>Sàn gỗ Wilson</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-wilson-floor-8mm-ban-nho" data-sp=1>Sàn gỗ Wilson Floor 8mm bản...</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-wilson-8mm-ban-to" data-sp=1>Sàn gỗ Wilson 8mm bản to</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-wilson-mat-san" data-sp=1>Sàn gỗ Wilson mặt sần</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-wilson-mat-bong" data-sp=1>Sàn gỗ Wilson mặt bóng</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-kosmos" data-sp=1>Sàn gỗ Kosmos</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-glomax" data-sp=1>Sàn gỗ Glomax</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-galamax" data-sp=1>Sàn gỗ Galamax</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-kronomax" data-sp=1>Sàn gỗ Kronomax</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-royal-floor" data-sp=1>Sàn gỗ Royal Floor</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-eurohome" data-sp=1>Sàn gỗ Eurohome</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-han-quoc" data-sp=1>Sàn gỗ Hàn Quốc</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-han-quoc-san-go-dongwha" data-sp=1>Sàn Gỗ DongWha</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-floorart" data-sp=1>Sàn gỗ FloorArt</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-floorart-8mm" data-sp=1>Sàn gỗ FloorArt 8mm</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-floorart-12mm" data-sp=1>Sàn gỗ FloorArt 12mm</span><ul class="ul-tree-lv-4"></ul></li></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-thai-lan" data-sp=1>Sàn gỗ Thái Lan</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-thaigreen" data-sp=1>Sàn gỗ ThaiGreen</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-thaigreen-8mm" data-sp=1>Sàn gỗ ThaiGreen 8mm</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-thaigreen-12mm" data-sp=1>Sàn gỗ ThaiGreen 12mm</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-thaixin" data-sp=1>Sàn gỗ Thaixin</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-thaixin-8mm" data-sp=1>Sàn gỗ Thaixin 8mm</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-thaixin-12mm-ban-to" data-sp=1>Sàn gỗ Thaixin 12mm bản to</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-thairoyal" data-sp=1>Sàn gỗ ThaiRoyal</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-an-do" data-sp=1>Sàn gỗ Ấn Độ</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-chau-au" data-sp=1>Sàn gỗ Châu Âu</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-duc" data-sp=1>Sàn gỗ Đức</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-kronotex" data-sp=1>Sàn Gỗ Kronotex</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-classen" data-sp=1>Sàn gỗ Classen</span><ul class="ul-tree-lv-4"><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-classen-7mm" data-sp=1>Sàn gỗ Classen 7mm</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-classen-8mm-ban-nho" data-sp=1>Sàn gỗ Classen 8mm bản nhỏ</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-classen-8mm-ban-to" data-sp=1>Sàn gỗ Classen 8mm bản to</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-classen-8mm-ban-to-khe-v" data-sp=1>Sàn gỗ Classen 8mm bản to...</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-classen-12mm-ban-nho" data-sp=1>Sàn gỗ Classen 12mm bản nhỏ</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-classen-san-go-classen-12mm-ban-to" data-sp=1>Sàn gỗ Classen 12mm bản to</span><ul class="ul-tree-lv-5"></ul></li></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-wineo" data-sp=1>Sàn gỗ wineo</span><ul class="ul-tree-lv-4"><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-wineo-500-ban-to-8mm" data-sp=1>Sàn gỗ WINEO 500 bản to...</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-wineo-500-ban-to-v2-8mm" data-sp=1>Sàn gỗ WINEO 500 bản to...</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-wineo-500-ban-vua-v4-8mm" data-sp=1>Sàn gỗ WINEO 500 bản vừa...</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-wineo-500-ban-dai-v4-10mm" data-sp=1>Sàn gỗ WINEO 500 bản dài...</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-wineo-aqua-stop-rockngo" data-sp=1>Sàn gỗ Wineo Aqua-Stop ROCK'N'GO</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/san-go-wineo-aqua-stop-xlv4" data-sp=1>Sàn gỗ Wineo AquaStop</span><ul class="ul-tree-lv-5"></ul></li></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-hornitex" data-sp=1>Sàn gỗ Hornitex</span><ul class="ul-tree-lv-4"><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/hornitex-8mm" data-sp=1>Hornitex 8mm</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/hornitex-10mm" data-sp=1>Hornitex 10mm</span><ul class="ul-tree-lv-5"></ul></li><li class="li-tree-lv-4"><span class="span-tree-node tree-lv-4" data-url="/hornitex-12mm" data-sp=1>Hornitex 12mm</span><ul class="ul-tree-lv-5"></ul></li></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-phap" data-sp=1>Sàn gỗ Pháp</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/san-go-alsafloor" data-sp=1>Sàn gỗ Alsafloor</span><ul class="ul-tree-lv-4"></ul></li></ul></li></ul></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="span-tree-node tree-lv-0" data-url="/san-nhua">Sàn nhựa vinyl</span>
+                                    <ul>
+                                        <li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-galaxy" data-sp=1>Sàn nhựa Galaxy</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-galaxy-plus" data-sp=1>Sàn nhựa GALAXY Plus</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-railflex" data-sp=1>Sàn nhựa Railflex</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-dan-keo-railflex" data-sp=1>Sàn nhựa dán keo Railflex</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-hem-khoa-railflex-4-2mm" data-sp=1>Sàn nhựa hèm khóa Railflex 4.2mm</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-chong-tinh-dien" data-sp=1>Sàn nhựa chống tĩnh điện</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-hem-khoa-railflex-5mm" data-sp=1>Sàn nhựa hèm khóa RailFlex 5mm</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-vinyl-railflex-dang-cuon" data-sp=1>Sàn nhựa vinyl Railflex dạng cuộn</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-the-thao-railflex" data-sp=1>Sàn nhựa thể thao Railflex</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-ibt" data-sp=1>Sàn nhựa IBT</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-ecost" data-sp=1>Sàn nhựa ECO'ST</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-ecost-tu-dan" data-sp=1>Sàn nhựa ECO’ST tự dán</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-ecost-dan-keo" data-sp=1>Sàn nhựa ECO’ST dán keo</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-ecost-hem-khoa" data-sp=1>Sàn nhựa ECO’ST hèm khóa</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-thanh-ly" data-sp=1>Sàn nhựa thanh lý</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-dongwha-han-quoc-khuyen-mai" data-sp=1>Sàn nhựa dongwha hàn quốc khuyến...</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-van-go" data-sp=1>Sàn nhựa vân gỗ</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-van-da" data-sp=1>Sàn nhựa vân đá</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-van-tham" data-sp=1>Sàn nhựa vân thảm</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-tu-dan" data-sp=1>Sàn nhựa tự dán</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-van-da-san-nhua" data-sp=1>Sàn nhựa vân da</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-aimaru" data-sp=1>Sàn nhựa AIMARU</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-gia-re" data-sp=1>Sàn nhựa giá rẻ</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-ecofloor" data-sp=1>Sàn nhựa Ecofloor Vinyl</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-gia-re-mines" data-sp=1>Sàn nhựa giá rẻ Mines</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-hem-khoa" data-sp=1>Sàn nhựa hèm khóa</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-hem-khoa-mines" data-sp=1>Sàn nhựa hèm khóa mines</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-7mm-mega" data-sp=1>Sàn nhựa 7mm MEGA</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-bpc" data-sp=1>Sàn nhựa BPC</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-nhua-florton-spc" data-sp=1>Sàn nhựa hèm khóa Florton SPC</span><ul class="ul-tree-lv-3"></ul></li></ul></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="span-tree-node tree-lv-0" data-url="/san-go-tu-nhien">Sàn gỗ tự nhiên</span>
+                                    <ul>
+                                        <li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-cam-xe" data-sp=1>Sàn gỗ Căm xe</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-chiu-liu" data-sp=1>Sàn gỗ Chiu Liu</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-go-do" data-sp=1>Sàn gỗ gõ đỏ</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-giang-huong" data-sp=1>Sàn gỗ Giáng Hương</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-soi" data-sp=1>Sàn gỗ Sồi</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-teak" data-sp=1>Sàn gỗ Teak</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-oc-cho" data-sp=1>Sàn gỗ Óc chó</span><ul class="ul-tree-lv-2"></ul></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="span-tree-node tree-lv-0" data-url="/phu-kien">Phụ kiện</span>
+                                    <ul>
+                                        <li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/phao-go-tu-nhien" data-sp=1>Phào gỗ tự nhiên</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/xop-foam-san-go" data-sp=1>Xốp, Foam sàn gỗ</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/phu-kien-phao-nhua-chan-tuong" data-sp=1>Phào nhựa chân tường</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/phao-nep-thanh-ly" data-sp=1>Phào nẹp thanh lý</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/phu-kien-op-tuong-op-tran" data-sp=1>Phụ kiện ốp tường - ốp...</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/phu-kien-tam-op-nano-timberman" data-sp=1>Phụ kiện tấm Ốp Nano TimberMan</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/op-bang-phao-nhua-op-tran-trong-nha" data-sp=1>Phụ kiện ốp trần trong nhà</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/tam-hdf" data-sp=1>Tấm HDF</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/phao-nhua-janmi" data-sp=1>Phào nhựa JANMI</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/phao-nep-kim-loai" data-sp=1>Phào nẹp kim loại</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/nep-nhua" data-sp=1>Nẹp nhựa</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/keo-dan" data-sp=1>Keo dán</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/keo-dan-san-nhua" data-sp=1>Keo dán sàn nhựa giá rẻ</span><ul class="ul-tree-lv-3"></ul></li></ul></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="span-tree-node tree-lv-0" data-url="/san-go-ngoai-troi">Sàn gỗ ngoài trời</span>
+                                    <ul>
+                                        <li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-ban-cong" data-sp=1>Sàn gỗ ban công</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-be-boi" data-sp=1>Sàn gỗ bể bơi</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-san-vuon" data-sp=1>Sàn gỗ sân vườn</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-timberman" data-sp=1>Sàn gỗ TimberMan</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-timberman-nhap-khau" data-sp=1>Sàn gỗ Timberman Nhập khẩu</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-timberman-trong-nuoc" data-sp=1>Sàn gỗ Timberman Trong nước</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-ngoai-troi-biowood" data-sp=1>Sàn gỗ ngoài trời Biowood</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-tu-nhien-ngoai-troi-timberman" data-sp=1>Sàn gỗ tự nhiên ngoài trời...</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-san-thuong" data-sp=1>Sàn gỗ sân thượng</span><ul class="ul-tree-lv-2"></ul></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="span-tree-node tree-lv-0" data-url="/san-go-thanh-ly">Sàn gỗ thanh lý</span>
+                                    <ul>
+                                        <li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-victory" data-sp=1>Sàn gỗ Victory</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-prince" data-sp=1>Sàn gỗ Prince</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-thanh-ly-tong-hop" data-sp=1>Sàn Gỗ Thanh lý Tổng Hợp</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-viet-nam-thanh-ly-san-go-thanh-ly" data-sp=1>Sàn gỗ Việt Nam thanh lý</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-viet-nam-thanh-ly-8mm" data-sp=1>Sàn gỗ Việt Nam thanh lý...</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-viet-nam-thanh-ly-12mm" data-sp=1>Sàn gỗ Việt Nam thanh lý...</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-thanh-ly-8mm" data-sp=1>Sàn gỗ thanh lý 8mm</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-nhua-thanh-ly-san-go-thanh-ly" data-sp=1>Sàn nhựa thanh lý</span><ul class="ul-tree-lv-2"></ul></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="span-tree-node tree-lv-0" data-url="/trang-tri-noi-that">Trang trí nội thất</span>
+                                    <ul>
+                                        <li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/giay-dan-tuong" data-sp=1>Giấy dán tường</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/giay-dan-tuong-thanh-ly" data-sp=1>Giấy dán tường thanh lý</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/giay-dan-tuong-trung-quoc" data-sp=1>Giấy dán tường Trung Quốc</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-luca" data-sp=1>Giấy dán tường Luca</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-dio" data-sp=1>Giấy dán tường DIO</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-champagne" data-sp=1>Giấy dán tường Champagne</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-piedra" data-sp=1>Giấy dán tường Piedra</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/giay-dan-tuong-han-quoc" data-sp=1>Giấy dán tường Hàn Quốc</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-andante" data-sp=1>Giấy dán tường Andante</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-mida" data-sp=1>Giấy dán tường Mida</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-edroom" data-sp=1>Giấy dán tường Eroom</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-darae" data-sp=1>Giấy dán tường Darae</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-zinnia" data-sp=1>Giấy dán tường Zinnia</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-hera" data-sp=1>Giấy dán tường Hera</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-besti" data-sp=1>Giấy dán tường Besti</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-gracia-ii" data-sp=1>Giấy dán tường Gracia II</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-montana" data-sp=1>Giấy dán tường Montana</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-feliz" data-sp=1>Giấy dán tường Feliz</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-q-pid" data-sp=1>Giấy dán tường Q.PID</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-regina" data-sp=1>Giấy dán tường Regina</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-living" data-sp=1>Giấy dán tường Living</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-symphony" data-sp=1>Giấy dán tường Symphony</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-natural" data-sp=1>Giấy dán tường Natural</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-giay-dan-tuong-phoenix" data-sp=1>Giấy dán tường Phoenix</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-classico" data-sp=1>Giấy dán tường Classico</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-place" data-sp=1>Giấy dán tường Place</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-rhapsody" data-sp=1>Giấy dán tường RHAPSODY</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/giay-dan-tuong-nhat-ban" data-sp=1>Giấy dán tường Nhật Bản</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/giay-dan-tuong-pinebull-s" data-sp=1>Giấy dán tường Pinebull S</span><ul class="ul-tree-lv-4"></ul></li></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/op-tran-trong-nha" data-sp=1>Ốp trần trong nhà</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/op-bang-tam-tran-tha-pvc" data-sp=1>Ốp trần bằng tấm trần thả...</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/op-bang-go-cn-op-tran-trong-nha" data-sp=1>Ốp trần bằng gỗ công nghiệp</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/op-bang-go-tu-nhien-op-tran-trong-nha" data-sp=1>Ốp trần bằng gỗ tự nhiên</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/op-tran-gia-re" data-sp=1>Ốp trần giá rẻ</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/tam-op-tran-pvc" data-sp=1>Tấm ốp trần PVC TimberMan</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/op-tran-bang-tam-pvc-timberman" data-sp=1>Ốp trần bằng tấm PVC Timberman</span><ul class="ul-tree-lv-4"></ul></li></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/rem-cua" data-sp=1>Rèm cửa</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/rem-go-wood-blinds-origine-bass" data-sp=1>Rèm gỗ Wood Blinds Origine Bass</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/rem-la-doc-vertical" data-sp=1>Rèm lá dọc Vertical</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/rem-cau-vong-combi" data-sp=1>Rèm cầu vồng - Combi</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/rem-cuon-1-lop-roll-screen" data-sp=1>Rèm cuốn 1 lớp Roll Screen</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/op-tuong-trong-nha" data-sp=1>Ốp tường trong nhà</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/op-bang-go-cn" data-sp=1>Ốp tường gỗ công nghiệp</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/op-bang-tam-florton" data-sp=1>Ốp tường bằng tấm Florton</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/op-bang-go-tu-nhien" data-sp=1>Ốp tường gỗ tự nhiên</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/op-tuong-bang-tam-3d" data-sp=1>Tấm ốp tường 3D</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/op-tuong-biowood" data-sp=1>Ốp tường Biowood</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/tam-op-tran-tuong" data-sp=1>Tấm ốp trần tường</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/op-tuong-van-da" data-sp=1>Ốp tường vân đá</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/tam-op-nano" data-sp=1>Tấm ốp Nano TimberMan</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/tam-op-tuong-pvc" data-sp=1>Tấm ốp tường PVC</span><ul class="ul-tree-lv-3"><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/op-bang-tam-pvc-3-song-6-song" data-sp=1>Tấm ốp trần tường PVC Timberman</span><ul class="ul-tree-lv-4"></ul></li><li class="li-tree-lv-3"><span class="span-tree-node tree-lv-3" data-url="/op-tuong-pvc-gia-da" data-sp=1>Ốp tường PVC giả đá</span><ul class="ul-tree-lv-4"></ul></li></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/tam-nhua-op-tuong" data-sp=1>Tấm nhựa ốp tường</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/tham-trai-san" data-sp=1>Thảm trải sàn</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/tham-tho-nhi-ky" data-sp=1>Thảm Thổ Nhĩ Kỳ</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/tham-bi" data-sp=1>Thảm Bỉ</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/tranh-gach-3d" data-sp=1>Tranh Gạch 3D</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/gach-vi-tinh-3d" data-sp=1>Gạch Vi Tinh 3D</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/gach-3d-cham-khac-noi" data-sp=1>Gạch 3D Chạm Khắc Nổi</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/gach-3d-phu-men-uv" data-sp=1>Gạch 3D Phủ Men UV</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/gach-kinh-5d" data-sp=1>Gạch Kính 5D</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/tranh-kinh-3d" data-sp=1>Tranh Kính 3D</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/bac-cau-thang-go-cong-nghiep" data-sp=1>Bậc cầu thang gỗ công nghiệp</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-go-noi-that" data-sp=1>Sàn gỗ Nội Thất</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-phong-ngu" data-sp=1>Sàn gỗ phòng ngủ</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/san-go-phong-khach" data-sp=1>Sàn gỗ phòng khách</span><ul class="ul-tree-lv-3"></ul></li></ul></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="span-tree-node tree-lv-0" data-url="/trang-tri-ngoai-that">Trang trí ngoại thất</span>
+                                    <ul>
+                                        <li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/go-nhua-ngoai-troi" data-sp=1>Gỗ nhựa ngoài trời</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/gian-hoa-ngoai-troi" data-sp=1>Giàn hoa ngoài trời</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/hang-rao-ngoai-troi" data-sp=1>Hàng rào ngoài trời</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/lan-can-ban-cong" data-sp=1>Lan can - ban công</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/ban-ghe-ngoai-troi" data-sp=1>Bàn ghế ngoài trời</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/go-nhua-ngoai-troi-chau-hoa-go" data-sp=1>Chậu hoa gỗ</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/lam-go-trang-tri" data-sp=1>Lam gỗ trang trí che nắng</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/thung-rac-ngoai-troi-timberman" data-sp=1>Thùng rác ngoài trời TimberMan</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/op-cot-biowood" data-sp=1>Ốp cột Biowood</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/gach-go" data-sp=1>Gạch Gỗ</span><ul class="ul-tree-lv-3"></ul></li><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/go-nhua-ngoai-troi-timberman" data-sp=1>Gỗ nhựa ngoài trời TimberMan</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/op-tuong-ngoai-troi" data-sp=1>Ốp tường ngoài trời</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/tieu-canh-vuon-cay" data-sp=1>Tiểu cảnh vườn cây</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/thanh-che-nang" data-sp=1>Thanh che nắng</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/trang-tri-ban-cong" data-sp=1>Trang trí ban công</span><ul class="ul-tree-lv-2"></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/vi-gach-da" data-sp=1>Vỉ gạch đá</span><ul class="ul-tree-lv-2"></ul></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="span-tree-node tree-lv-0" data-url="/do-gia-dung">Đồ gia dụng</span>
+                                    <ul>
+                                        <li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/cham-soc-bao-duong" data-sp=1>Chăm sóc bảo dưỡng</span><ul class="ul-tree-lv-2"><li class="li-tree-lv-2"><span class="span-tree-node tree-lv-2" data-url="/nuoc-lau-san-layer-clean" data-sp=1>Nước lau sàn Layer Clean</span><ul class="ul-tree-lv-3"></ul></li></ul></li><li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/may-loc-nuoc" data-sp=1>Máy lọc nước</span><ul class="ul-tree-lv-2"></ul></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="span-tree-node tree-lv-0" data-url="/san-tre">Sàn tre</span>
+                                    <ul>
+                                        <li class="li-tree-lv-1"><span class="span-tree-node tree-lv-1" data-url="/san-tre-ali" data-sp=1>Sàn tre ali</span><ul class="ul-tree-lv-2"></ul></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=" align-self-md-center d-flex  ">
+                            <div class="font-weight-bold">
+                                Hotline:
+                            </div>
+                            <img src="images/hot-line-red-icon.svg" class="img-fluid mx-2 icon-nav align-self-center wow tada infinite " style="width: 20px;" />
+                            <div class="align-self-center">
+                                <a rel="nofollow" href="javascript:void(0)">
+                                    <div class=" font-weight-bold mb-0">1800 0022</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class=" btn close-popup" onclick="$('.cate-mobile').toggle(100, 'swing');">
+                    <img src="images/times-icon.svg" />
+                    </button>
+                </section>
                 <div class="pt-1   ">
                     <div class="container">
                         <div class="row">
@@ -258,28 +729,28 @@
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
-                                                        <img src="../noithathunggia/uploads/2020/09/03/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-khuyen-mai-thang-9-2020-san-go-woodmane209.jpg?v=1.0.0" class="d-block w-100" alt="Nội thất Hưng Gia.vn">
+                                                        <img src="../cms.janhome.vn/uploads/2020/09/03/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-khuyen-mai-thang-9-2020-san-go-woodmane209.jpg?v=1.0.0" class="d-block w-100" alt="janhome.vn">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
-                                                        <img data-src="https://noithathunggia//uploads/2020/09/03/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-khuyen-mai-thang-9-2020-tam-op-nano-timberman.jpg?v=1.0.0" class="d-block w-100 swiper-lazy" alt="Nội thất Hưng Gia.vn">
+                                                        <img data-src="https://cms.janhome.vn//uploads/2020/09/03/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-khuyen-mai-thang-9-2020-tam-op-nano-timberman.jpg?v=1.0.0" class="d-block w-100 swiper-lazy" alt="janhome.vn">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
-                                                        <img data-src="https://noithathunggia//uploads/2020/09/03/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-khuyen-mai-thang-9-2020-go-nhua-timberman-tbm01p.jpg?v=1.0.0" class="d-block w-100 swiper-lazy" alt="Nội thất Hưng Gia.vn">
+                                                        <img data-src="https://cms.janhome.vn//uploads/2020/09/03/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-khuyen-mai-thang-9-2020-go-nhua-timberman-tbm01p.jpg?v=1.0.0" class="d-block w-100 swiper-lazy" alt="janhome.vn">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
-                                                        <img data-src="https://noithathunggia//uploads/2020/07/28/he-thong-ban-le-hoan-thien-tai-kho-Nội thất Hưng Gia-khuyen-mai-san-go-duc.png?v=1.0.0" class="d-block w-100 swiper-lazy" alt="Nội thất Hưng Gia.vn">
+                                                        <img data-src="https://cms.janhome.vn//uploads/2020/07/28/he-thong-ban-le-hoan-thien-tai-kho-janhome-khuyen-mai-san-go-duc.png?v=1.0.0" class="d-block w-100 swiper-lazy" alt="janhome.vn">
                                                     </a>
                                                 </div>
                                             </div>
@@ -322,29 +793,29 @@
                             </div>
                             <div class="col-lg-3 col-md-8 col-sm-12 col-12 mt-md-3 mt-lg-0 ml-auto px-md-0 px-lg-3">
                                 <ul class="list-group list-news-right mb-2 mt-3 mt-md-0">
-                                    <li class="list-group-item active">Trải nghiệm cùng Nội thất Hưng Gia</li>
+                                    <li class="list-group-item active">Trải nghiệM cùng JANHOME</li>
                                     <li class="list-group-item">
                                         <a href="javascript:void(0)" title="Khuyến mãi tháng 8">
-                                            Khuyến mãi tháng này
+                                            Khuyến mãi tháng 8
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="javascript:void(0)" title="Trải nghiệm không gian phòng khách cùng Nội thất Hưng Gia">
-                                            Trải nghiệm không gian phòng khách cùng Nội thất Hưng Gia
+                                        <a href="javascript:void(0)" title="Trải nghiệm không gian phòng khách cùng Janhome">
+                                            Trải nghiệm không gian phòng khách cùng Janhome
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="javascript:void(0)" title=" Tư vấn chuyên sâu không gian phòng ngủ từ Nội thất Hưng Gia">
-                                            Tư vấn chuyên sâu không gian phòng ngủ từ Nội thất Hưng Gia
+                                        <a href="javascript:void(0)" title=" Tư vấn chuyên sâu không gian phòng ngủ từ Janhome">
+                                            Tư vấn chuyên sâu không gian phòng ngủ từ Janhome
                                         </a>
                                     </li>
                                 </ul>
                                 <!--Thêm class d-none d-md-block-->
                                 <a href="javascript:void(0)" title="" class="d-none d-md-block">
-                                    <img src="../noithathunggia/uploads/2020/07/22/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-san-nhua-hem-khoa-florton-spce209.jpg?v=1.0.0" class="img-fluid mb-2 w-100" />
+                                    <img src="../cms.janhome.vn/uploads/2020/07/22/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-san-nhua-hem-khoa-florton-spce209.jpg?v=1.0.0" class="img-fluid mb-2 w-100" />
                                 </a>
                                 <a href="javascript:void(0)" title="" class="d-none d-md-block">
-                                    <img src="../noithathunggia/uploads/2020/07/24/bannere209.png?v=1.0.0" class="img-fluid mb-2 w-100" />
+                                    <img src="../cms.janhome.vn/uploads/2020/07/24/bannere209.png?v=1.0.0" class="img-fluid mb-2 w-100" />
                                 </a>
                                 <!--Thêm class d-none d-md-block-->
                             </div>
@@ -353,7 +824,7 @@
                             <div class="col">
                                 <div class="item">
                                     <a href="javascript:void(0)">
-                                        <img src="../noithathunggia/uploads/2020/04/28/giovanggiasoce209.png?v=1.0.0" class="img-fluid mr-2">
+                                        <img src="../cms.janhome.vn/uploads/2020/04/28/giovanggiasoce209.png?v=1.0.0" class="img-fluid mr-2">
                                         Giờ vàng giá sốc
                                     </a>
                                 </div>
@@ -361,7 +832,7 @@
                             <div class="col">
                                 <div class="item">
                                     <a href="javascript:void(0)">
-                                        <img src="../noithathunggia/uploads/2020/04/28/coupon%20(1)e209.png?v=1.0.0" class="img-fluid mr-2">
+                                        <img src="../cms.janhome.vn/uploads/2020/04/28/coupon%20(1)e209.png?v=1.0.0" class="img-fluid mr-2">
                                         Sàn gỗ thanh lý
                                     </a>
                                 </div>
@@ -369,7 +840,7 @@
                             <div class="col">
                                 <div class="item">
                                     <a href="javascript:void(0)">
-                                        <img src="../noithathunggia/uploads/2020/04/28/shopping-bag%20(2)e209.png?v=1.0.0" class="img-fluid mr-2">
+                                        <img src="../cms.janhome.vn/uploads/2020/04/28/shopping-bag%20(2)e209.png?v=1.0.0" class="img-fluid mr-2">
                                         Hàng Châu Âu
                                     </a>
                                 </div>
@@ -377,7 +848,7 @@
                             <div class="col">
                                 <div class="item">
                                     <a href="javascript:void(0)">
-                                        <img src="../noithathunggia/uploads/2020/04/28/mobile-storee209.png?v=1.0.0" class="img-fluid mr-2">
+                                        <img src="../cms.janhome.vn/uploads/2020/04/28/mobile-storee209.png?v=1.0.0" class="img-fluid mr-2">
                                         Bán chạy nhất
                                     </a>
                                 </div>
@@ -385,7 +856,7 @@
                             <div class="col">
                                 <div class="item">
                                     <a href="javascript:void(0)">
-                                        <img src="../noithathunggia/uploads/2020/04/24/gifte209.png?v=1.0.0" class="img-fluid mr-2">
+                                        <img src="../cms.janhome.vn/uploads/2020/04/24/gifte209.png?v=1.0.0" class="img-fluid mr-2">
                                         Vòng quay may mắn
                                     </a>
                                 </div>
@@ -398,7 +869,7 @@
                         <div class="row">
                             <div class="col-xl-8 col-md-8 col-sm-12 col-12">
                                 <a href="javascript:void(0)" title="">
-                                    <img src="../noithathunggia/uploads/2020/08/10/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-san-go-sieu-chiu-nuoc-Nội thất Hưng Gia-ecofle209.jpg?v=1.0.0" class="lazy w-100 mb-3 mb-md-0" />
+                                    <img src="../cms.janhome.vn/uploads/2020/08/10/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-san-go-sieu-chiu-nuoc-janhome-ecofle209.jpg?v=1.0.0" class="lazy w-100 mb-3 mb-md-0" />
                                 </a>
                             </div>
                             <div class="col-xl-4 col-md-4 col-sm-12 col-12">
@@ -441,7 +912,7 @@
                                                     <option value="16">Kendax</option>
                                                     <option value="17">Hornitex</option>
                                                     <option value="18">TimberMan</option>
-                                                    <option value="19">Nội thất Hưng Gia Floor</option>
+                                                    <option value="19">JanHome Floor</option>
                                                     <option value="20">Ecofloor</option>
                                                     <option value="21">Kostlich</option>
                                                 </select>
@@ -756,14 +1227,14 @@
                                                             <div class="tag-1">
                                                             </div>
                                                             <div class="image">
-                                                                <a href="san-go-cot-xanh-aqua-Nội thất Hưng Gia-jhg1207.html"><img src="{{$product->getImage()}}" class="lazy img-fluid" alt="Sàn gỗ Nội thất Hưng Gia siêu chịu nước - JHG1207" /></a>
+                                                                <a href="san-go-cot-xanh-aqua-janhome-jhg1207.html"><img src="{{$product->getImage()}}" class="lazy img-fluid" alt="Sàn gỗ JanHome siêu chịu nước - JHG1207" /></a>
                                                                 <div class="tag-2">
                                                                     <img src="" class="img-fluid tag-2-thumb" />
                                                                 </div>
                                                             </div>
                                                             <div class="">
                                                                 <h5 class="title">
-                                                                <a href="san-go-cot-xanh-aqua-Nội thất Hưng Gia-jhg1207.html" title="Sàn gỗ Nội thất Hưng Gia siêu chịu nước - JHG1207">
+                                                                <a href="san-go-cot-xanh-aqua-janhome-jhg1207.html" title="Sàn gỗ JanHome siêu chịu nước - JHG1207">
                                                                     {!!$product->title!!}
                                                                 </a>
                                                                 </h5>
@@ -805,7 +1276,7 @@
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <div class="image">
-                                            <img src="https://noithathunggia//uploads/2020/09/04/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-khuyen-mai-thang-8-2020-san-go-cot-xanh-sieu-chi.webp?v=1.0.0" class="img-fluid" alt="" />
+                                            <img src="https://cms.janhome.vn//uploads/2020/09/04/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-khuyen-mai-thang-8-2020-san-go-cot-xanh-sieu-chi.webp?v=1.0.0" class="img-fluid" alt="" />
                                             <a href="san-go-viet-nam-sieu-chiu-nuoc.html" class="text text-uppercase">
                                                 <small></small>
                                                 <h4 class="font-weight-bold"></h4>
@@ -814,8 +1285,8 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="image">
-                                            <img src="../noithathunggia/uploads/2020/08/10/banner-Nội thất Hưng Gia-km1e209.jpg?v=1.0.0" class="img-fluid" alt="" />
-                                            <a href="san-go-xuong-ca-Nội thất Hưng Gia.html" class="text text-uppercase">
+                                            <img src="../cms.janhome.vn/uploads/2020/08/10/banner-janhome-km1e209.jpg?v=1.0.0" class="img-fluid" alt="" />
+                                            <a href="san-go-xuong-ca-janhome.html" class="text text-uppercase">
                                                 <small></small>
                                                 <h4 class="font-weight-bold"></h4>
                                             </a>
@@ -823,7 +1294,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="image">
-                                            <img src="../noithathunggia/uploads/2020/08/10/banner-Nội thất Hưng Gia-km5e209.jpg?v=1.0.0" class="img-fluid" alt="" />
+                                            <img src="../cms.janhome.vn/uploads/2020/08/10/banner-janhome-km5e209.jpg?v=1.0.0" class="img-fluid" alt="" />
                                             <a href="san-go-floorart.html" class="text text-uppercase">
                                                 <small>CTKM3</small>
                                                 <h4 class="font-weight-bold"></h4>
@@ -1027,7 +1498,7 @@
                                                             <div class="tag-1">
                                                             </div>
                                                             <div class="image">
-                                                                <a href="san-go-giang-huong-900-x-120mm.html"><img src="{{$product->getImage()}}" data-src="https://noithathunggia//uploads/thumb/2017/08/san-go-tu-nhien-giang-huong-900-120mm.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ Giáng Hương 900 x 120mm" /></a>
+                                                                <a href="san-go-giang-huong-900-x-120mm.html"><img src="{{$product->getImage()}}" data-src="https://cms.janhome.vn//uploads/thumb/2017/08/san-go-tu-nhien-giang-huong-900-120mm.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ Giáng Hương 900 x 120mm" /></a>
                                                                 <div class="tag-2">
                                                                     <img src="#" class="img-fluid tag-2-thumb" />
                                                                 </div>
@@ -1343,7 +1814,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="san-nhua-hem-khoa-florton-spc-fs4803.html"><img src="{{$product->getImage()}}" data-src="https://noithathunggia//uploads/thumb/2020/03/san-nhua-hem-khoa-florton-spc-fs4803-1.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn nhựa hèm khóa Florton SPC FS4803" /></a>
+                                                            <a href="san-nhua-hem-khoa-florton-spc-fs4803.html"><img src="{{$product->getImage()}}" data-src="https://cms.janhome.vn//uploads/thumb/2020/03/san-nhua-hem-khoa-florton-spc-fs4803-1.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn nhựa hèm khóa Florton SPC FS4803" /></a>
                                                             <div class="tag-2">
                                                                 <img src="" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1449,7 +1920,7 @@
                                             <div class="item-product item-product-large">
                                                 <div class="image">
                                                     <a href="san-go-ngoai-troi-timberman-tm140k25-wood-4-lo.html">
-                                                        <img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/2020/07/08/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-banner-san-go-ngoai-troi-timberman-tbm140k25--wood.jpg?v=1.0.0" class="img-fluid lazy" alt="Sàn gỗ ngoài trời Timberman TBM01W2 Wood (4 lỗ)" />
+                                                        <img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/2020/07/08/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-banner-san-go-ngoai-troi-timberman-tbm140k25--wood.jpg?v=1.0.0" class="img-fluid lazy" alt="Sàn gỗ ngoài trời Timberman TBM01W2 Wood (4 lỗ)" />
                                                     </a>
                                                 </div>
                                                 <div class="py-1">
@@ -1482,7 +1953,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="san-go-ngoai-troi-timberman-tm140k25-dark-grey-4-lo.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2017/09/tam-lat-san-ngoai-troi-timberman-tm140k25-dark-grey-.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời Timberman TM140K25 Dark Grey (4 lỗ)" /></a>
+                                                            <a href="san-go-ngoai-troi-timberman-tm140k25-dark-grey-4-lo.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2017/09/tam-lat-san-ngoai-troi-timberman-tm140k25-dark-grey-.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời Timberman TM140K25 Dark Grey (4 lỗ)" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1515,7 +1986,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="san-go-ngoai-troi-timberman-ban-nguyet-tm140k23.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2018/01/san-go-ngoai-troi-timberman-ban-nguyet-tm140k23.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời Timberman bán nguyệt TM140K23" /></a>
+                                                            <a href="san-go-ngoai-troi-timberman-ban-nguyet-tm140k23.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2018/01/san-go-ngoai-troi-timberman-ban-nguyet-tm140k23.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời Timberman bán nguyệt TM140K23" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1548,7 +2019,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="san-go-ngoai-troi-timberman-tm105k30-coffee.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2018/05/san-go-ngoai-troi-timberman-105k30-coffee.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời TimberMan TM105K30 - Coffee" /></a>
+                                                            <a href="san-go-ngoai-troi-timberman-tm105k30-coffee.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2018/05/san-go-ngoai-troi-timberman-105k30-coffee.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời TimberMan TM105K30 - Coffee" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1584,7 +2055,7 @@
                                             <div class="item-product item-product-large">
                                                 <div class="image">
                                                     <a href="san-go-ngoai-troi-timberman-tm140k25-coffee-4-lo.html">
-                                                        <img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/2020/07/08/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-banner-san-go-ngoai-troi-timberman-tbm140k25.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời Timberman TBM01W1 Coffee (4 lỗ)" />
+                                                        <img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/2020/07/08/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-banner-san-go-ngoai-troi-timberman-tbm140k25.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời Timberman TBM01W1 Coffee (4 lỗ)" />
                                                     </a>
                                                 </div>
                                                 <div class="py-1">
@@ -1617,7 +2088,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="san-go-ngoai-troi-timberman-nhap-khau-tbm06w2.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/08/15/tam-lat-san-timberman-tbm06w2.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời Timberman Nhập khẩu TBM06W2" /></a>
+                                                            <a href="san-go-ngoai-troi-timberman-nhap-khau-tbm06w2.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/08/15/tam-lat-san-timberman-tbm06w2.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời Timberman Nhập khẩu TBM06W2" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1650,7 +2121,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="san-go-ngoai-troi-timberman-nhap-khautm140k25-coffee-4-lo.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/08/05/san-go-ngoai-troi-timberman-tbm140k25-nhap-khau.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời Timberman Nhập Khẩu TM140K25 Coffee (4 lỗ)" /></a>
+                                                            <a href="san-go-ngoai-troi-timberman-nhap-khautm140k25-coffee-4-lo.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/08/05/san-go-ngoai-troi-timberman-tbm140k25-nhap-khau.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời Timberman Nhập Khẩu TM140K25 Coffee (4 lỗ)" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1683,7 +2154,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="san-go-ngoai-troi-dac-timberman-nhap-khau-tm140s25.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/08/06/san-go-ngoài-troi-timberman-dac-nhieu-ranh-nho-tbm06w1059.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời đặc Timberman Nhập Khẩu TBM06W1059" /></a>
+                                                            <a href="san-go-ngoai-troi-dac-timberman-nhap-khau-tm140s25.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/08/06/san-go-ngoài-troi-timberman-dac-nhieu-ranh-nho-tbm06w1059.jpg?v=1.0.0" class="lazy img-fluid" alt="Sàn gỗ ngoài trời đặc Timberman Nhập Khẩu TBM06W1059" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1796,7 +2267,7 @@
                                             <div class="item-product item-product-large">
                                                 <div class="image">
                                                     <a href="op-tuong-pvc-gia-da-jnd062799.html">
-                                                        <img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/2020/07/14/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-tam-op-tuong-pvc-gia-da-jnd62799.jpg?v=1.0.0" class="img-fluid lazy" alt="Ốp tường PVC giả đá JND062799" />
+                                                        <img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/2020/07/14/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-tam-op-tuong-pvc-gia-da-jnd62799.jpg?v=1.0.0" class="img-fluid lazy" alt="Ốp tường PVC giả đá JND062799" />
                                                     </a>
                                                 </div>
                                                 <div class="py-1">
@@ -1829,7 +2300,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="tam-op-nano-timerman-tbm14p94020.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2019/12/tam-op-nano-timberman-tbm14p94020.jpg?v=1.0.0" class="lazy img-fluid" alt="Tấm ốp Nano TimerMan TBM14P94020" /></a>
+                                                            <a href="tam-op-nano-timerman-tbm14p94020.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2019/12/tam-op-nano-timberman-tbm14p94020.jpg?v=1.0.0" class="lazy img-fluid" alt="Tấm ốp Nano TimerMan TBM14P94020" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1862,7 +2333,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="tam-op-nano-timerman-tbm14p94022.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2019/12/tam-op-nano-timberman-tbm14p94022.jpg?v=1.0.0" class="lazy img-fluid" alt="Tấm ốp Nano TimerMan TBM14P94022" /></a>
+                                                            <a href="tam-op-nano-timerman-tbm14p94022.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2019/12/tam-op-nano-timberman-tbm14p94022.jpg?v=1.0.0" class="lazy img-fluid" alt="Tấm ốp Nano TimerMan TBM14P94022" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1895,7 +2366,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="tam-op-4-song-phu-phim-timberman-tbm14p49022.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/08/08/tam-op-4song-phu-phim-tbm14p49022.jpg?v=1.0.0" class="lazy img-fluid" alt="Tấm ốp 4 sóng phủ phim TimberMan TBM14P49022" /></a>
+                                                            <a href="tam-op-4-song-phu-phim-timberman-tbm14p49022.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/08/08/tam-op-4song-phu-phim-tbm14p49022.jpg?v=1.0.0" class="lazy img-fluid" alt="Tấm ốp 4 sóng phủ phim TimberMan TBM14P49022" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1931,7 +2402,7 @@
                                             <div class="item-product item-product-large">
                                                 <div class="image">
                                                     <a href="tam-op-nano-timerman-tbm14p94001.html">
-                                                        <img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/2020/07/14/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-tam-op-nano-timberman-tbm14p94001.jpg?v=1.0.0" class="lazy img-fluid" alt="Tấm ốp Nano TimerMan TBM14P94001" />
+                                                        <img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/2020/07/14/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-tam-op-nano-timberman-tbm14p94001.jpg?v=1.0.0" class="lazy img-fluid" alt="Tấm ốp Nano TimerMan TBM14P94001" />
                                                     </a>
                                                 </div>
                                                 <div class="py-1">
@@ -1964,7 +2435,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="op-tuong-pvc-gia-da-jnd062705.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2019/08/op-tuong-pvc-gia-da-jnd062705.jpg?v=1.0.0" class="lazy img-fluid" alt="Ốp tường PVC giả đá JND062705" /></a>
+                                                            <a href="op-tuong-pvc-gia-da-jnd062705.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2019/08/op-tuong-pvc-gia-da-jnd062705.jpg?v=1.0.0" class="lazy img-fluid" alt="Ốp tường PVC giả đá JND062705" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -1997,7 +2468,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="op-tuong-pvc-gia-da-jnd062711.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2019/08/op-tuong-pvc-gia-da-jnd062711.jpg?v=1.0.0" class="lazy img-fluid" alt="Ốp tường PVC giả đá JND062711" /></a>
+                                                            <a href="op-tuong-pvc-gia-da-jnd062711.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2019/08/op-tuong-pvc-gia-da-jnd062711.jpg?v=1.0.0" class="lazy img-fluid" alt="Ốp tường PVC giả đá JND062711" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -2030,7 +2501,7 @@
                                                         <div class="tag-1">
                                                         </div>
                                                         <div class="image">
-                                                            <a href="op-tuong-pvc-gia-da-jnd062721.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2019/08/op-tuong-pvc-gia-da-jnd062721.jpg?v=1.0.0" class="lazy img-fluid" alt="Ốp tường PVC giả đá JND062721" /></a>
+                                                            <a href="op-tuong-pvc-gia-da-jnd062721.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2019/08/op-tuong-pvc-gia-da-jnd062721.jpg?v=1.0.0" class="lazy img-fluid" alt="Ốp tường PVC giả đá JND062721" /></a>
                                                             <div class="tag-2">
                                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                                             </div>
@@ -2095,7 +2566,7 @@
                                                 <div class="tag-1">
                                                 </div>
                                                 <div class="image">
-                                                    <a href="may-loc-nuoc-ro-kostlich-9-loi-klwf-20092.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/08/05/may-loc-nuoc-ro-kostlich-9-loi-klwf-20092.png?v=1.0.0" class="img-fluid lazy" alt="Máy lọc nước RO Kostlich 9 lõi KLWF-20092" /></a>
+                                                    <a href="may-loc-nuoc-ro-kostlich-9-loi-klwf-20092.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/08/05/may-loc-nuoc-ro-kostlich-9-loi-klwf-20092.png?v=1.0.0" class="img-fluid lazy" alt="Máy lọc nước RO Kostlich 9 lõi KLWF-20092" /></a>
                                                     <div class="tag-2">
                                                         <img src="#" class="img-fluid tag-2-thumb" />
                                                     </div>
@@ -2131,7 +2602,7 @@
                                             <div class="tag-1">
                                             </div>
                                             <div class="image">
-                                                <a href="cay-lau-nha-phun-suong.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2018/01/cay-lau-nha-phun-suong-chuyen-dung.jpg?v=1.0.0" class="img-fluid lazy" alt="Cây lau nhà phun sương" /></a>
+                                                <a href="cay-lau-nha-phun-suong.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2018/01/cay-lau-nha-phun-suong-chuyen-dung.jpg?v=1.0.0" class="img-fluid lazy" alt="Cây lau nhà phun sương" /></a>
                                                 <div class="tag-2">
                                                     <img src="#" class="img-fluid tag-2-thumb" />
                                                 </div>
@@ -2167,7 +2638,7 @@
                                         <div class="tag-1">
                                         </div>
                                         <div class="image">
-                                            <a href="robot-hut-bui-thong-minh.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2019/05/robot-hut-bui-thong-minh.jpg?v=1.0.0" class="img-fluid lazy" alt="Robot Hút bụi Thông Minh" /></a>
+                                            <a href="robot-hut-bui-thong-minh.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2019/05/robot-hut-bui-thong-minh.jpg?v=1.0.0" class="img-fluid lazy" alt="Robot Hút bụi Thông Minh" /></a>
                                             <div class="tag-2">
                                                 <img src="#" class="img-fluid tag-2-thumb" />
                                             </div>
@@ -2203,7 +2674,7 @@
                                     <div class="tag-1">
                                     </div>
                                     <div class="image">
-                                        <a href="thung-rac-tu-dong.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2019/05/thung-rac-tu-dong.jpg?v=1.0.0" class="img-fluid lazy" alt="Thùng Rác tự động thông minh" /></a>
+                                        <a href="thung-rac-tu-dong.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2019/05/thung-rac-tu-dong.jpg?v=1.0.0" class="img-fluid lazy" alt="Thùng Rác tự động thông minh" /></a>
                                         <div class="tag-2">
                                             <img src="#" class="img-fluid tag-2-thumb" />
                                         </div>
@@ -2239,7 +2710,7 @@
                                 <div class="tag-1">
                                 </div>
                                 <div class="image">
-                                    <a href="nuoc-lau-san-layer-clean-huong-gio-bien-125l.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-gio-bien-125l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương gió Biển 1,25L" /></a>
+                                    <a href="nuoc-lau-san-layer-clean-huong-gio-bien-125l.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-gio-bien-125l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương gió Biển 1,25L" /></a>
                                     <div class="tag-2">
                                         <img src="#" class="img-fluid tag-2-thumb" />
                                     </div>
@@ -2275,7 +2746,7 @@
                             <div class="tag-1">
                             </div>
                             <div class="image">
-                                <a href="nuoc-lau-san-layer-clean-huong-que-125l.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-que-125l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương Quế 1,25L" /></a>
+                                <a href="nuoc-lau-san-layer-clean-huong-que-125l.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-que-125l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương Quế 1,25L" /></a>
                                 <div class="tag-2">
                                     <img src="#" class="img-fluid tag-2-thumb" />
                                 </div>
@@ -2311,7 +2782,7 @@
                         <div class="tag-1">
                         </div>
                         <div class="image">
-                            <a href="nuoc-lau-san-layer-clean-huong-nuoc-hoa-125l.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-nuoc-hoa-125l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương nước Hoa 1,25L" /></a>
+                            <a href="nuoc-lau-san-layer-clean-huong-nuoc-hoa-125l.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-nuoc-hoa-125l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương nước Hoa 1,25L" /></a>
                             <div class="tag-2">
                                 <img src="#" class="img-fluid tag-2-thumb" />
                             </div>
@@ -2347,7 +2818,7 @@
                     <div class="tag-1">
                     </div>
                     <div class="image">
-                        <a href="nuoc-lau-san-layer-clean-huong-gio-bien-5lit.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-gio-bien-5l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương gió Biển 5Lít" /></a>
+                        <a href="nuoc-lau-san-layer-clean-huong-gio-bien-5lit.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-gio-bien-5l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương gió Biển 5Lít" /></a>
                         <div class="tag-2">
                             <img src="#" class="img-fluid tag-2-thumb" />
                         </div>
@@ -2383,7 +2854,7 @@
                 <div class="tag-1">
                 </div>
                 <div class="image">
-                    <a href="nuoc-lau-san-layer-clean-huong-que-5-lit.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-que-5l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương Quế 5 Lít" /></a>
+                    <a href="nuoc-lau-san-layer-clean-huong-que-5-lit.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-que-5l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương Quế 5 Lít" /></a>
                     <div class="tag-2">
                         <img src="#" class="img-fluid tag-2-thumb" />
                     </div>
@@ -2419,7 +2890,7 @@
             <div class="tag-1">
             </div>
             <div class="image">
-                <a href="nuoc-lau-san-layer-clean-huong-nuoc-hoa-5-lit.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://noithathunggia//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-que-5l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương Nước Hoa 5 Lít" /></a>
+                <a href="nuoc-lau-san-layer-clean-huong-nuoc-hoa-5-lit.html"><img src="images/grayffa5.jpg?v=LPdlHmqT_DsfScf_Vi84uWTSfQQ6uYv1iXL1Wuy6VxM" data-src="https://cms.janhome.vn//uploads/thumb/2020/01/nuoc-lau-san-layer-clean-huong-que-5l.jpg?v=1.0.0" class="img-fluid lazy" alt="Nước lau sàn Layer Clean hương Nước Hoa 5 Lít" /></a>
                 <div class="tag-2">
                     <img src="#" class="img-fluid tag-2-thumb" />
                 </div>
@@ -2465,7 +2936,7 @@
 </section>
 <section class="container mb-4">
 <div class="banner-in py-5"
-style="background: url(../noithathunggia/uploads/2020/06/03/bn-pk-fix.jpg) no-repeat center;background-size: cover;">
+style="background: url(../cms.janhome.vn/uploads/2020/06/03/bn-pk-fix.jpg) no-repeat center;background-size: cover;">
 <div class="row justify-content-center">
 <div class="col-xl-6 col-md-8 col-sm-8 col-12">
 <div>
@@ -2483,7 +2954,7 @@ Hãy liên lạc với chúng tôi theo số
 Video
 </div>
 <div class="ml-auto">
-<a href="video-Nội thất Hưng Gia.html" class="link-view-more">
+<a href="video-janhome.html" class="link-view-more">
 Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 </a>
 </div>
@@ -2496,15 +2967,15 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="swiper-slide">
 <div class="item">
 <div class="video-img">
-    <a href="5-phut-moi-ngay-voi-Nội thất Hưng Gia-trang-tri-phong-voi-moc-treo-binh-hoa-handmade.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="https://noithathunggia//uploads/thumb/2017/06/5-phut-moi-ngay-voi-Nội thất Hưng Gia-trang-tri.jpg" />
+    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-moc-treo-binh-hoa-handmade.html">
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="https://cms.janhome.vn//uploads/thumb/2017/06/5-phut-moi-ngay-voi-janhome-trang-tri.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
     </a>
 </div>
 <h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với Nội thất Hưng Gia: Trang trí phòng với Móc treo bình hoa handmade">5 phút mỗi ngày với Nội thất Hưng Gia: Trang trí phòng với Móc treo bình hoa handmade</a>
+<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: Trang trí phòng với Móc treo bình hoa handmade">5 phút mỗi ngày với JANHOME: Trang trí phòng với Móc treo bình hoa handmade</a>
 </h5>
 <div class="time">
     16/06/2017 04:31;
@@ -2514,15 +2985,15 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="swiper-slide">
 <div class="item">
 <div class="video-img">
-    <a href="-phut-moi-ngay-voi-Nội thất Hưng Gia-trang-tri-phong-voi-day-den-tu-tao.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2020/06/27/video-2-3-4.jpg" />
+    <a href="-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-day-den-tu-tao.html">
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2020/06/27/video-2-3-4.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
     </a>
 </div>
 <h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với Nội thất Hưng Gia: Trang trí phòng với Dây Đèn tự tạo">5 phút mỗi ngày với Nội thất Hưng Gia: Trang trí phòng với Dây Đèn tự tạo</a>
+<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: Trang trí phòng với Dây Đèn tự tạo">5 phút mỗi ngày với JANHOME: Trang trí phòng với Dây Đèn tự tạo</a>
 </h5>
 <div class="time">
     15/06/2017 02:00;
@@ -2532,15 +3003,15 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="swiper-slide">
 <div class="item">
 <div class="video-img">
-    <a href="5-phut-moi-ngay-voi-Nội thất Hưng Gia-trang-tri-phong-voi-gia-treo-anh-va-hop-cay-day-thung-handmade.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/06/maxresdefault-1.jpg" />
+    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-gia-treo-anh-va-hop-cay-day-thung-handmade.html">
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2017/06/maxresdefault-1.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
     </a>
 </div>
 <h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với Nội thất Hưng Gia: Trang trí phòng với Giá treo ảnh và Hộp cây dây thừng">5 phút mỗi ngày với Nội thất Hưng Gia: Trang trí phòng với Giá treo ảnh và Hộp cây dây thừng</a>
+<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: Trang trí phòng với Giá treo ảnh và Hộp cây dây thừng">5 phút mỗi ngày với JANHOME: Trang trí phòng với Giá treo ảnh và Hộp cây dây thừng</a>
 </h5>
 <div class="time">
     15/06/2017 01:56;
@@ -2550,15 +3021,15 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="swiper-slide">
 <div class="item">
 <div class="video-img">
-    <a href="5-phut-moi-ngay-voi-Nội thất Hưng Gia-trang-tri-phong-voi-gia-treo-tuong-bang-que-kem.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/06/1-1-1.jpg" />
+    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-gia-treo-tuong-bang-que-kem.html">
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2017/06/1-1-1.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
     </a>
 </div>
 <h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với Nội thất Hưng Gia: Trang trí phòng với Giá treo tường bằng que kem">5 phút mỗi ngày với Nội thất Hưng Gia: Trang trí phòng với Giá treo tường bằng que kem</a>
+<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: Trang trí phòng với Giá treo tường bằng que kem">5 phút mỗi ngày với JANHOME: Trang trí phòng với Giá treo tường bằng que kem</a>
 </h5>
 <div class="time">
     15/06/2017 01:50;
@@ -2568,15 +3039,15 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="swiper-slide">
 <div class="item">
 <div class="video-img">
-    <a href="5-phut-moi-ngay-voi-Nội thất Hưng Gia-trang-tri-can-phong-voi-hop-dung-do-tai-che.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/05/maxresdefault-3.jpg" />
+    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-can-phong-voi-hop-dung-do-tai-che.html">
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2017/05/maxresdefault-3.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
     </a>
 </div>
 <h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với Nội thất Hưng Gia: Trang trí căn phòng với Hộp đựng đồ tái chế">5 phút mỗi ngày với Nội thất Hưng Gia: Trang trí căn phòng với Hộp đựng đồ tái chế</a>
+<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: Trang trí căn phòng với Hộp đựng đồ tái chế">5 phút mỗi ngày với JANHOME: Trang trí căn phòng với Hộp đựng đồ tái chế</a>
 </h5>
 <div class="time">
     04/05/2017 07:29;
@@ -2586,15 +3057,15 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="swiper-slide">
 <div class="item">
 <div class="video-img">
-    <a href="5-phut-moi-ngay-voi-Nội thất Hưng Gia-trang-tri-phong-ngu-voi-da-thuy-tinh.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/05/maxresdefault-2.jpg" />
+    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-ngu-voi-da-thuy-tinh.html">
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2017/05/maxresdefault-2.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
     </a>
 </div>
 <h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với Nội thất Hưng Gia: trang trí phòng ngủ với đá thủy tinh">5 phút mỗi ngày với Nội thất Hưng Gia: trang trí phòng ngủ với đá thủy tinh</a>
+<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME: trang trí phòng ngủ với đá thủy tinh">5 phút mỗi ngày với JANHOME: trang trí phòng ngủ với đá thủy tinh</a>
 </h5>
 <div class="time">
     04/05/2017 07:09;
@@ -2604,15 +3075,15 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="swiper-slide">
 <div class="item">
 <div class="video-img">
-    <a href="5-phut-moi-ngay-voi-Nội thất Hưng Gia-trang-tri-phong-voi-den-nen-hoa-sen.html">
-        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../noithathunggia/uploads/thumb/2017/05/maxresdefault-4.jpg" />
+    <a href="5-phut-moi-ngay-voi-janhome-trang-tri-phong-voi-den-nen-hoa-sen.html">
+        <img src="images/gray3860.jpg?v=1" class="img-fluid lazy w-100" data-src="../cms.janhome.vn/uploads/thumb/2017/05/maxresdefault-4.jpg" />
         <div class="play-yt">
             <img src="images/youtube3860.svg?v=1" class="">
         </div>
     </a>
 </div>
 <h5 class="title">
-<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với Nội thất Hưng Gia trang trí phòng với đèn nến hoa sen">5 phút mỗi ngày với Nội thất Hưng Gia trang trí phòng với đèn nến hoa sen</a>
+<a rel="nofollow" href="javascript:void(0)" title="5 phút mỗi ngày với JANHOME trang trí phòng với đèn nến hoa sen">5 phút mỗi ngày với JANHOME trang trí phòng với đèn nến hoa sen</a>
 </h5>
 <div class="time">
     04/05/2017 06:54;
@@ -2642,7 +3113,7 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 @endif
 <div class="item">
 <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" >
-    <img src="{{$news->getImage()}}" data-src="https://noithathunggia//uploads/2020/08/17/4-dieu-ban-can-biet-truoc-khi-lua-chon-san-go-cong-nghiep-cho-gia-dinh.jpg?v=1.0.0" alt="4 điều bạn nhất định phải biết trước khi chọn mua sàn gỗ công nghiệp cho gia đình" class="img-fluid lazy" width="100%" height="auto" />
+    <img src="{{$news->getImage()}}" data-src="https://cms.janhome.vn//uploads/2020/08/17/4-dieu-ban-can-biet-truoc-khi-lua-chon-san-go-cong-nghiep-cho-gia-dinh.jpg?v=1.0.0" alt="4 điều bạn nhất định phải biết trước khi chọn mua sàn gỗ công nghiệp cho gia đình" class="img-fluid lazy" width="100%" height="auto" />
 </a>
 <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" title="4 điều bạn nhất định phải biết trước khi chọn mua sàn gỗ công nghiệp cho gia đình" class="">
     <h6 class="title h5 mt-3 ">
@@ -2674,13 +3145,13 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
         <div class="col-xl-3 col-md-4 col-sm-3 col-3">
             <div class="image">
                 <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" >
-                    <img src="{{$news->getImage()}}" data-src="https://noithathunggia//uploads/thumb/2020/08/03/khuyen-mai-thang-8-2020-Nội thất Hưng Gia.jpg?v=1.0.0" class="img-fluid lazy" alt="Khuyến mãi tháng 8 nhiều bất ngờ tại Nội thất Hưng Gia, hệ thống bán lẻ vật liệu hoàn thiện tại kho." />
+                    <img src="{{$news->getImage()}}" data-src="https://cms.janhome.vn//uploads/thumb/2020/08/03/khuyen-mai-thang-8-2020-janhome.jpg?v=1.0.0" class="img-fluid lazy" alt="Khuyến mãi tháng 8 nhiều bất ngờ tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho." />
                 </a>
             </div>
         </div>
         <div class="col-xl-9 col-md-8 col-sm-9 col-9 pl-0">
             <h6 class="title">
-            <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" title="Khuyến mãi tháng 8 nhiều bất ngờ tại Nội thất Hưng Gia, hệ thống bán lẻ vật liệu hoàn thiện tại kho.">{!!$news->title!!}</a>
+            <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" title="Khuyến mãi tháng 8 nhiều bất ngờ tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho.">{!!$news->title!!}</a>
             </h6>
             <div class="time">
                 03/08/2020 05:29
@@ -2703,7 +3174,7 @@ Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
 <div class="col-xl-4 col-md-4 col-sm-4 col-12">
 <div class="d-flex py-3 justify-content-center">
 <div class="image align-self-center">
-<img src="{!!asset('/noithathunggia/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" data-src="https://noithathunggia//uploads/2020/04/28/shipment-international 2.png?v=1.0.0" class="img-fluid lazy" />
+<img src="{!!asset('/cms.janhome.vn/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/shipment-international 2.png?v=1.0.0" class="img-fluid lazy" />
 </div>
 <div class="px-3 align-self-center">
 <label>Xuất xứ</label>
@@ -2716,7 +3187,7 @@ Bảo đảm 100% xuất xứ
 <div class="col-xl-4 col-md-4 col-sm-4 col-12">
 <div class="d-flex py-3 justify-content-center">
 <div class="image align-self-center">
-<img src="{!!asset('noithathunggia//uploads/2020/04/28/Group.png?v=1.0.0')!!}" data-src="https://noithathunggia//uploads/2020/04/28/Group.png?v=1.0.0" class="img-fluid lazy" />
+<img src="{!!asset('cms.janhome.vn//uploads/2020/04/28/Group.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/Group.png?v=1.0.0" class="img-fluid lazy" />
 </div>
 <div class="px-3 align-self-center">
 <label>Hỗ trợ 24/7</label>
@@ -2729,7 +3200,7 @@ Hệ thống toàn quốc
 <div class="col-xl-4 col-md-4 col-sm-4 col-12">
 <div class="d-flex py-3 justify-content-center">
 <div class="image align-self-center">
-<img src="{!!asset('noithathunggia//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}" data-src="https://noithathunggia//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0" class="img-fluid lazy" />
+<img src="{!!asset('cms.janhome.vn//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0" class="img-fluid lazy" />
 </div>
 <div class="px-3 align-self-center">
 <label>Loại hình dịch vụ</label>
@@ -2746,7 +3217,7 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 <div class="container">
 <div class="row justify-content-center ">
 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">
-<h4 class="title-menu">Nội thất Hưng Gia</h4>
+<h4 class="title-menu">JANHOME</h4>
 <ul class="footer-menu ">
 <li><a href="javascript:void(0)">Giới thiệu công ty</a></li>
 <li><a href="javascript:void(0)">Tuyển dụng</a></li>
@@ -3141,8 +3612,8 @@ Xác nhận
 attribution=setup_tool
 page_id="1608844646076677"
 theme_color="#ef822a"
-logged_in_greeting="Nội thất Hưng Gia xin chào ! Chúng tôi có thể giúp gì cho bạn?"
-logged_out_greeting="Nội thất Hưng Gia xin chào ! Chúng tôi có thể giúp gì cho bạn?">
+logged_in_greeting="Janhome xin chào ! Chúng tôi có thể giúp gì cho bạn?"
+logged_out_greeting="Janhome xin chào ! Chúng tôi có thể giúp gì cho bạn?">
 </div>
 <a rel="nofollow" target="_blank" href="https://zalo.me/0902480222" class="zalo">
 <i class="fa" aria-hidden="true">
@@ -3154,12 +3625,12 @@ logged_out_greeting="Nội thất Hưng Gia xin chào ! Chúng tôi có thể gi
 </div>
 <div class="banner-fixed-left">
 <a rel="nofollow" href="javascript:void(0)">
-<img src="{!!asset('noithathunggia/uploads/2020/08/25/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-Nội thất Hưng Gia-banner-san-go-han-quoc-floorarte209.jpg?v=1.0.0" class="img-fluid w-100')!!}" />
+<img src="{!!asset('cms.janhome.vn/uploads/2020/08/25/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-banner-san-go-han-quoc-floorarte209.jpg?v=1.0.0" class="img-fluid w-100')!!}" />
 </a>
 </div>
 <div class="banner-fixed-right">
 <a rel="nofollow" href="javascript:void(0)">
-<img src="{!!asset('noithathunggia/uploads/2020/06/03/banner-doc-1-fixe209.jpg?v=1.0.0')!!}" class="img-fluid w-100" />
+<img src="{!!asset('cms.janhome.vn/uploads/2020/06/03/banner-doc-1-fixe209.jpg?v=1.0.0')!!}" class="img-fluid w-100" />
 </a>
 </div>
 <div class="btn-fixed">
@@ -3176,14 +3647,54 @@ logged_out_greeting="Nội thất Hưng Gia xin chào ! Chúng tôi có thể gi
 <div id="caption"></div>
 </div>
 <div style="display:none" itemscope itemtype="https://schema.org/WebSite">
-<meta itemprop="url" content="Nội thất Hưng Gia.vn" />
+<meta itemprop="url" content="janhome.vn" />
 <form itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
-<meta itemprop="target" content="Nội thất Hưng Gia.vn/Product/Get?keyword={search_term_string}" />
+<meta itemprop="target" content="janhome.vn/Product/Get?keyword={search_term_string}" />
 <input itemprop="query-input" type="text" name="search_term_string" required />
 <input type="submit" />
 </form>
 </div>
-
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"url": "janhome.vn",
+"logo": "/2020/04/28/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Store",
+"image": [
+"https://cms.janhome.vn//uploads/2020/06/05/san-go-cong-nghiep.jpg"
+],
+"@id": "janhome.vn",
+"name": "Janhome",
+"address": {
+"@type": "PostalAddress",
+"streetAddress": "Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội",
+"addressLocality": "Hà Nội",
+"addressRegion": "HN",
+"postalCode": "10000",
+"addressCountry": "VN"
+},
+"review": {
+"@type": "Review",
+"reviewRating": {
+"@type": "Rating",
+"ratingValue": "5",
+"bestRating": "5"
+},
+"author": "admin"
+},
+"url": "janhome.vn",
+"telephone": "1800.0022",
+"servesCuisine": "VietNam",
+"priceRange": "$$$",
+"acceptsReservations": "True"
+}
+</script>
 <script>    document.addEventListener("DOMContentLoaded", function(event) {     gtag('config', 'AW-830211279');       jQuery('[href^="tel:"]').click(function() {          gtag('event', 'conversion', {'send_to': 'AW-830211279/tVQrCMnmsYYBEM-J8IsD'});     });   }); </script>
 <script src="https://kit.fontawesome.com/1560292da9.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{!!asset('js/jquery-3.3.1.mine209.js?v=1.0.0')!!}"></script>
