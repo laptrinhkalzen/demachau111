@@ -683,7 +683,7 @@
                             @foreach ($banner_mid as $key=>$banner)
                             <div class="col-xl-8 col-md-8 col-sm-12 col-12">
                                 <a href="javascript:void(0)" title="">
-                                    <img src="{!!$product->getImage()!!}" class="lazy w-100 mb-3 mb-md-0" />
+                                    <img src="{!!$product->getImage()!!}" style="height: 180px; object-fit: cover" class="lazy w-100 mb-3 mb-md-0" />
                                 </a>
                             </div>
                             @endforeach
@@ -2128,14 +2128,14 @@
             @foreach ($banner_left as $key=>$banner)
             <div class="banner-fixed-left">
                 <a rel="nofollow" href="javascript:void(0)">
-                    <img src="{!!asset('noithathunggia/uploads/2020/08/25/he-thong-ban-le-vat-lieu-hoan-thien-tai-kho-janhome-banner-san-go-han-quoc-floorarte209.jpg?v=1.0.0" class="img-fluid w-100')!!}" />
+                    <img src="{!!$product->getImage()!!}" class="img-fluid w-100')!!}" />
                 </a>
             </div>
             @endforeach
             @foreach ($banner_right as $key=>$banner)
             <div class="banner-fixed-right">
                 <a rel="nofollow" href="javascript:void(0)">
-                    <img src="{!!asset('noithathunggia/uploads/2020/06/03/banner-doc-1-fixe209.jpg?v=1.0.0')!!}" class="img-fluid w-100" />
+                    <img src="{!!$product->getImage()!!}" class="img-fluid w-100" />
                 </a>
             </div>
             @endforeach
