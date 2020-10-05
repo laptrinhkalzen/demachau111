@@ -591,7 +591,7 @@
                                     </div>
                                     <div class="swiper-container gallery-thumbs-home  ">
                                         <div class="swiper-wrapper">
-                                            @foreach ($slide as $key=>$slide)
+                                            @foreach ($slide as $key=>$product)
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
