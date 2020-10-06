@@ -16,6 +16,37 @@
             </head>
             <body>
                 <section class="header">
+                    <div class="list-location-top">
+                        <div class="container position-relative px-md-4">
+                            <div class="swiper-container ">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Công ty: {!!$share_config->company_name!!}
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Địa chỉ:
+                                            {!!$share_config->address!!}
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Email:
+                                            {!!$share_config->address!!}
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="swiper-button-next text-right"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
                     <div class=" nav-center">
                         <div class="container">
                             <nav class="navbar navbar-expand-md py-md-2 px-0">
