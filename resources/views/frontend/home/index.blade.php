@@ -1285,7 +1285,7 @@
                                             </div>
                                         </div>
                                         <div class="row no-gutters">
-                                            @foreach($industry as $key => $product)
+                                            @foreach($nature as $key => $product)
                                             @if($key == 0)
                                             @continue
                                             @endif
@@ -1337,7 +1337,7 @@
                                             @endforeach
                                             <div class="col-lg-7 col-md-12 col-sm-12 col-12">
                                                 <div class="row no-gutters h-100 ">
-                                                    @foreach($industry as $key => $product)
+                                                    @foreach($nature as $key => $product)
                                                     @if($key < 5)
                                                     @continue
                                                     @endif
@@ -1352,15 +1352,27 @@
                                                             <div class="">
                                                                 <h5 class="title">
                                                                 <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ Giáng Hương 900 x 120mm">
-                                                                    Sàn gỗ Giáng Hương 900 x 120mm
+                                                                    {!!$product->title!!}
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    2.650.000đ đ / m2
+                                                                    @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
                                                                 </div>
-                                                                <div class="size small mb-1">
+                                                                <div class="price-old">
+                                                            @if($product->sale_price!=0)
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                            @else
+                                                            <?php echo('')?>
+                                                            @endif
+                                                        </div>
+                                                                <!-- <div class="size small mb-1">
                                                                     Kích thước: 15 x 120 x 900 mm
-                                                                </div>
+                                                                </div> -->
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
