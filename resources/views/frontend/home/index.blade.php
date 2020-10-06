@@ -691,21 +691,52 @@
                                             <div class="col-12 mb-2">
                                                 <select class="form-control mb-2 mb-lg-0 filter-select zone-value">
                                                     <option hidden value="0">Bạn muốn mua gì</option>
-                                                    <option value="1">Option1</option>
+                                                    <option value="15">Sàn gỗ công nghiệp</option>
+                                                    <option value="38">Sàn gỗ tự nhiên</option>
+                                                    <option value="34">Sàn nhựa vinyl</option>
+                                                    <option value="79">Sàn gỗ ngoài trời</option>
+                                                    <option value="43">Phụ kiện</option>
+                                                    <option value="89">Sàn gỗ thanh lý</option>
+                                                    <option value="281">Trang trí nội thất</option>
+                                                    <option value="367">Trang trí ngoại thất</option>
+                                                    <option value="594">Đồ gia dụng</option>
+                                                    <option value="806">Sàn tre</option>
                                                 </select>
                                             </div>
                                             <div class="col-6 mb-2">
                                                 <select class="form-control mb-2 mb-lg-0 filter-select manufacture-value">
                                                     <option hidden value="0">Thương hiệu</option>
-                                                    <option value="1">Option2</option>
+                                                    <option value="1">Janmi</option>
+                                                    <option value="2">Florton</option>
+                                                    <option value="3">DongWha</option>
+                                                    <option value="4">ThaiGreen</option>
+                                                    <option value="5">Kronotex</option>
+                                                    <option value="6">Newsky</option>
+                                                    <option value="7">Classen</option>
+                                                    <option value="8">wineo</option>
+                                                    <option value="10">Woodman</option>
+                                                    <option value="11">Thaixin</option>
+                                                    <option value="12">Alsafloor</option>
+                                                    <option value="13">Masfloor</option>
+                                                    <option value="14">FloorArt</option>
+                                                    <option value="15">ThaiRoyal</option>
+                                                    <option value="16">Kendax</option>
+                                                    <option value="17">Hornitex</option>
+                                                    <option value="18">TimberMan</option>
+                                                    <option value="19">JanHome Floor</option>
+                                                    <option value="20">Ecofloor</option>
+                                                    <option value="21">Kostlich</option>
                                                 </select>
                                             </div>
                                             <div class="col-6 mb-2">
                                                 <select class="form-control mb-2 mb-lg-0 filter-select range-price">
                                                     <option hidden value="">Khung giá</option>
                                                     <option value="">Tất cả</option>
-                                                    <option value="3">Option3</option>
-                                                    
+                                                    <option value="0-100000">Từ 0 - 100.000đ</option>
+                                                    <option value="200000-300000">Từ 200.000 - 300.000đ</option>
+                                                    <option value="300000-400000">Từ 300.000 - 400.000đ</option>
+                                                    <option value="400000-600000">Từ 400.000 - 600.000đ</option>
+                                                    <option value="600000-20000000">Từ 600.000 trở lên</option>
                                                 </select>
                                             </div>
                                             <div class="col-6 margin-0-auto">
