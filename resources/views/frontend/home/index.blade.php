@@ -805,7 +805,7 @@
                                                     <div class="tag-1">
                                                     </div>
                                                     <div class="image">
-                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="img-fluid lazy" alt="Sàn gỗ WOODMAN O127" /></a>
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="img-fluid lazy" style="height: 178.500px; object-fit: cover;"/></a>
                                                         <div class="tag-2">
                                                             <img src="" class="img-fluid tag-2-thumb" />
                                                         </div>
