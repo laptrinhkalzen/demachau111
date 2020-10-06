@@ -132,7 +132,7 @@
                         <li class="nav-item mr-md-3  align-self-md-center d-flex d-sm-none d-lg-flex"
                             style="white-space: nowrap;">
                             <div>
-                                <a href="tu-van.html">
+                                <a href="javascript:void(0)">
                                     <div><span class="font-weight-bold h6">Tin tức</span></div>
                                     <div class="small">& Khuyến mại</div>
                                 </a>
