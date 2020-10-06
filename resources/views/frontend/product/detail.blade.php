@@ -698,7 +698,7 @@
                             <img src="{!!asset('images/lastest-icf002.svg?v=GoDAQeasQ5QDI54pnNLz0oiRudBV9A0ehf63EdEb_1Y')!!}" class="img-fluid mr-2" /> Tin mới
                         </div>
                         <div class="list-right mb-4">
-                            <!-- <div class="item">
+<!--                             <div class="item">
                                 <div class="row">
                                     <div class="col-xl-3 col-md-4 col-sm-3 col-3 pr-0">
                                         <div class="image">
@@ -715,8 +715,8 @@
                                             18/09/2020 10:45
                                         </div>
                                     </div>
-                                </div> -->
-                            </div>
+                                </div>
+                            </div> -->
                             <!-- <div class="item">
                                 <div class="row">
                                     <div class="col-xl-3 col-md-4 col-sm-3 col-3 pr-0">
@@ -820,7 +820,7 @@
                             <img src="{!!asset('images/icon-spuc6e21.svg?v=Ekha1wOyGV0F79MsQJFeGzHD6ER7s06hLCjkaHd1sto')!!}" class="img-fluid mr-2" />Sản phẩm ưa chuộng
                         </div>
                         <div class="list lastest-news">
-                            <!-- <div class="item">
+                            <div class="item">
                                 <div class="row">
                                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-3 pr-0">
                                         <div class="image">
@@ -846,7 +846,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                     <div class="list-menu-right">
