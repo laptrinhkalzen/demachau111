@@ -2125,7 +2125,7 @@
                     </a>
                 </div>
             </div>
-            @foreach ($banner_right as $key=>$banner)
+            @foreach ($banner_mid as $key=>$banner)
             <div class="banner-fixed-left">
                 <a rel="nofollow" href="javascript:void(0)">
                     <img src="{!!$banner->getImage()!!}" class="img-fluid w-100')!!}" />
