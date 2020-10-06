@@ -2128,14 +2128,14 @@
             @foreach ($banner_left as $key=>$banner)
             <div class="banner-fixed-left">
                 <a rel="nofollow" href="javascript:void(0)">
-                    <img src="{!!$product->getImage()!!}" class="img-fluid w-100')!!}" />
+                    <img src="{!!$banner->getImage()!!}" class="img-fluid w-100')!!}" />
                 </a>
             </div>
             @endforeach
             @foreach ($banner_right as $key=>$banner)
             <div class="banner-fixed-right">
                 <a rel="nofollow" href="javascript:void(0)">
-                    <img src="{!!$product->getImage()!!}" class="img-fluid w-100" />
+                    <img src="{!!$banner->getImage()!!}" class="img-fluid w-100" />
                 </a>
             </div>
             @endforeach
