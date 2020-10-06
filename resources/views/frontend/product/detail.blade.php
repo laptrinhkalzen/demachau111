@@ -121,12 +121,12 @@
                                             </div>
                                             Download Brochure
                                         </div>
-                                        <div class="swiper-slide">
+<!--                                         <div class="swiper-slide">
                                             <div class="image p-3">
                                                 <img src="{!!asset('images/change/360do-icon-thumb98a3.svg?v=4e9kXT2F3MV1IMeUeYNlpotkzlymjIQAXizYqfMO05o')!!}" class="img-fluid w-100 " alt="" />
                                             </div>
                                             Hình 360 độ
-                                        </div>
+                                        </div> -->
                                         <div class="swiper-slide">
                                             <div class="image p-3">
                                                 <img src="{!!asset('images/youtube-icon-thumb9f97.svg?v=JYyePGuaK5qmu-3M_SvUVjoQ2YqgMILV8vnWLct9dpc')!!}" class="img-fluid w-100 " alt="" />
@@ -970,12 +970,12 @@
                                         </div>
                                         Download Brochure
                                     </div>
-                                    <div class="swiper-slide">
+<!--                                     <div class="swiper-slide">
                                         <div class="image p-3">
                                             <img src="{!!asset('images/change/360do-icon-thumb98a3.svg?v=4e9kXT2F3MV1IMeUeYNlpotkzlymjIQAXizYqfMO05o')!!}" class="img-fluid w-100 " alt="123" />
                                         </div>
                                         Hình 360 độ
-                                    </div>
+                                    </div> -->
                                     <div class="swiper-slide">
                                         <div class="image p-3">
                                             <img src="images/youtube-icon-thumb9f97.svg?v=JYyePGuaK5qmu-3M_SvUVjoQ2YqgMILV8vnWLct9dpc" class="img-fluid w-100 " alt="" />
