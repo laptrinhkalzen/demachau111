@@ -24,19 +24,43 @@
                                     <!-- Slides -->
                                     <div class="swiper-slide">
                                         <a href="javascript:void(0)" title="Hà Nội">
-                                            <i class="fas fa-map-marker-alt mr-2"></i>Công ty: {!!$share_config->company_name!!}
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Công ty: Nội thất Hưng Gia
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="javascript:void(0)" title="Hà Nội">
-                                            <i class="fas fa-map-marker-alt mr-2"></i>Địa chỉ:
-                                            {!!$share_config->address!!}
+                                            <i class="fas fa-map-marker-alt mr-2"></i>
+                                            
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="javascript:void(0)" title="Hà Nội">
                                             <i class="fas fa-map-marker-alt mr-2"></i>Email:
-                                            {!!$share_config->address!!}
+                                            
+                                        </a>
+                                    </div>
+                                                                        <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Email:
+                                            
+                                        </a>
+                                    </div>
+                                                                        <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Email:
+                                            
+                                        </a>
+                                    </div>
+                                                                        <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Email:
+                                            
+                                        </a>
+                                    </div>
+                                                                        <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Email:
+                                            
                                         </a>
                                     </div>
 
