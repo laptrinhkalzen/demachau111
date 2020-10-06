@@ -605,7 +605,7 @@
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
-                                                        <img src="{!!$product->getImage()!!}" style="width: :340px; object-fit: cover"class="d-block w-100" alt="noithathunggia.vn">
+                                                        <img src="{!!$product->getImage()!!}" style="width: :860px; object-fit: cover"class="d-block w-100" alt="noithathunggia.vn">
                                                     </a>
                                                 </div>
                                             </div>
