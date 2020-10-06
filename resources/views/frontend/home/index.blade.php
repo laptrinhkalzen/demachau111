@@ -256,7 +256,7 @@
                                                         <img src="images/listView.svg" class="img-fluid mr-2" />Danh mục
                                                     </a>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <!-- <li class="list-group-item">
                                                     <a href="san-go-cong-nghiep.html" class="link" title="Sàn gỗ công nghiệp">
                                                         <img src="../noithathunggia/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn gỗ công nghiệp" />Sàn gỗ công nghiệp
@@ -365,11 +365,11 @@
                                                             <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-tre-ali.html" data-url="/san-tre-ali">Sàn tre ali</a><ul class="ul-tree-lv-2"></ul></li>
                                                         </ul>
                                                     </div>
-                                                </li>
+                                                </li> -->
                                                 <!--Nút xem thêm-->
-                                                <li class="list-group-item" style="cursor: pointer;">
+                                                <!-- <li class="list-group-item" style="cursor: pointer;">
                                                     <i class="fas fa-plus mr-3"></i>Xem thêm
-                                                </li>
+                                                </li> -->
                                             </ul>
                                             <ul class="row menu-cate-mobile  d-md-none no-gutters">
                                                 <div class="col-3 px-1">
