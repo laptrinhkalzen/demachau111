@@ -4,7 +4,7 @@
 <div class="col-xl-4 col-md-4 col-sm-4 col-12">
 <div class="d-flex py-3 justify-content-center">
 <div class="image align-self-center">
-<img src="{!!asset('cms.janhome.vn/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" class="img-fluid lazy" />
+<img src="{!!asset('noithathunggia/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" class="img-fluid lazy" />
 </div>
 <div class="px-3 align-self-center">
 <label>Xuất xứ</label>
@@ -17,7 +17,7 @@ Bảo đảm 100% xuất xứ
 <div class="col-xl-4 col-md-4 col-sm-4 col-12">
 <div class="d-flex py-3 justify-content-center">
 <div class="image align-self-center">
-<img src="{!!asset('cms.janhome.vn//uploads/2020/04/28/Group.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/Group.png?v=1.0.0')!!}" class="img-fluid lazy" />
+<img src="{!!asset('noithathunggia//uploads/2020/04/28/Group.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/Group.png?v=1.0.0')!!}" class="img-fluid lazy" />
 </div>
 <div class="px-3 align-self-center">
 <label>Hỗ trợ 24/7</label>
@@ -30,7 +30,7 @@ Hệ thống toàn quốc
 <div class="col-xl-4 col-md-4 col-sm-4 col-12">
 <div class="d-flex py-3 justify-content-center">
 <div class="image align-self-center">
-<img src="{!!asset('cms.janhome.vn//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}" class="img-fluid lazy" />
+<img src="{!!asset('noithathunggia//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}" class="img-fluid lazy" />
 </div>
 <div class="px-3 align-self-center">
 <label>Loại hình dịch vụ</label>
@@ -98,20 +98,16 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 <div class="col-12 border-bottom p-3 mb-3" style="border-color: #7F7D7D!important;">
 </div>
 <div class="col-lg-8 col-md-8 col-sm-12 col-12  pull-left">
-<div class="font-weight-bold mb-2">Công ty Cổ Phần Xuất Nhập Khẩu Tháng Giêng</div>
+<div class="font-weight-bold mb-2">Công ty nội thất Hưng Gia</div>
 <div class="mb-2">
-Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.
-</div>
-<div class="font-weight-bold mb-2">Trụ sở tại miền Nam</div>
-<div class="mb-2">
-QQ18 Ba Vì, Cư xá Bắc Hải, Phường 15, Quận 10, Hồ Chí Minh
+Địa chỉ
 </div>
 <div class="mb-4">
 <div class="d-lg-inline-block mb-2 mb-lg-0">
-<a rel="nofollow" href="tel:18000022"><i class="fas fa-phone-alt mr-2"></i>Hotline: 1800 0022</a>
+<a rel="nofollow" href="tel:{!!$share_config->hotline!!}"><i class="fas fa-phone-alt mr-2"></i>Hotline: {!!$share_config->hotline!!}</a>
 </div>
 <div class="d-lg-inline-block ml-lg-5">
-<a rel="nofollow" href="mail:info@janco.com.vn"><i class="fas fa-envelope mr-2"></i>Email: info@janco.com.vn</a>
+<a rel="nofollow" href="mail:{!!$share_config->email!!}"><i class="fas fa-envelope mr-2"></i>Email: {!!$share_config->email!!}</a>
 </div>
 </div>
 </div>

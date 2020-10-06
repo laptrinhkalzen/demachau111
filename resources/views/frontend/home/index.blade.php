@@ -1776,14 +1776,14 @@
                         <div class="col-lg-8 col-md-8 col-sm-12 col-12  pull-left">
                             <div class="font-weight-bold mb-2">Công ty nội thất Hưng Gia</div>
                             <div class="mb-2">
-                                Địa chỉ
+                                Địa chỉ:
                             </div>
                             <div class="mb-4">
                                 <div class="d-lg-inline-block mb-2 mb-lg-0">
-                                    <a rel="nofollow" href="tel:18000022"><i class="fas fa-phone-alt mr-2"></i>Hotline: {!!$share_config->hotline!!}</a>
+                                    <a rel="nofollow" href="tel:{!!$share_config->hotline!!}"><i class="fas fa-phone-alt mr-2"></i>Hotline: {!!$share_config->hotline!!}</a>
                                 </div>
                                 <div class="d-lg-inline-block ml-lg-5">
-                                    <a rel="nofollow" href="mail:info@janco.com.vn"><i class="fas fa-envelope mr-2"></i>Email: info@janco.com.vn</a>
+                                    <a rel="nofollow" href="mail:{!!$share_config->email!!}"><i class="fas fa-envelope mr-2"></i>Email: {!!$share_config->email!!}</a>
                                 </div>
                             </div>
                         </div>
