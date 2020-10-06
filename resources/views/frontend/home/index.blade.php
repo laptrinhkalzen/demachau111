@@ -744,7 +744,7 @@
                                         <!-- Additional required wrapper -->
                                         <div class="swiper-wrapper">
                                             <!-- Slides -->
-                                            @foreach ($product_hl as $key => $product)
+                                            @foreach ($product_all as $key => $product)
                                             <div class="swiper-slide">
                                                 <div class="item-product" data-id="20182" data-properties="">
                                                     <div class="tag-1">
