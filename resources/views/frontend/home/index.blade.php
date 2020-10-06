@@ -767,11 +767,11 @@
                                                             @else
                                                             <?php echo($product->sale_price)?>
                                                             @endif
-                                                            <!-- đ/ m2 -->
+                                                            đ
                                                         </div>
                                                         <div class="price-old">
                                                             @if($product->sale_price!=0)
-                                                            <?php echo($product->price .'')?>
+                                                            <?php echo($product->price .' đ')?>
                                                             @else
                                                             <?php echo('')?>
                                                             @endif
