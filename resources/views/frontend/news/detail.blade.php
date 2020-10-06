@@ -31,16 +31,7 @@
         <img src="{!!asset('images/menu-icon8bd3.svg?v=qef7cssZHgAquLTKdp4RlX3HxrirbSXXNcb4nv352dM')!!}" class="img-fluid mr-2" />Danh mục
     </div>
     <ul class="list">
-            <li><a href="tin-khuyen-mai.html" title="TIN KHUYẾN MẠI">TIN KHUYẾN MẠI</a></li>
-            <li><a href="bao-gia-thi-cong-lap-dat.html" title="BÁO GIÁ THI CÔNG LẮP ĐẶT">BÁO GIÁ THI CÔNG LẮP ĐẶT</a></li>
-            <li><a href="tu-van.html" title="TƯ VẤN">TƯ VẤN</a></li>
-            <li><a href="tai-catalogue.html" title="Tải Catalogue">TẢI CATALOGUE</a></li>
-            <li><a href="nha-cung-cap-vat-lieu.html" title="NHÀ CUNG CẤP VẬT LIỆU">NHÀ CUNG CẤP VẬT LIỆU</a></li>
-            <li><a href="thu-vien-3d-kien-truc-su.html" title="Thư viện 3D kiến trúc sư">THƯ VIỆN 3D KIẾN TRÚC SƯ</a></li>
-            <li><a href="video-janhome.html" title="VIDEO JANHOME">VIDEO JANHOME</a></li>
-            <li><a href="he-thong-san-go-vat-lieu-hoan-thien-janhome.html" title="Hệ thống sàn gỗ - vật liệu hoàn thiện JANHOME">HỆ THỐNG SÀN GỖ - VẬT LIỆU HOÀN THIỆN JANHOME</a></li>
-            <li><a href="tuyen-dung.html" title="TUYỂN DỤNG">TUYỂN DỤNG</a></li>
-            <li><a href="tin-janhome.html" title="TIN JANHOME">TIN JANHOME</a></li>
+            <!-- <li><a href="tin-khuyen-mai.html" title="TIN KHUYẾN MẠI">TIN KHUYẾN MẠI</a></li> -->     
     </ul>
 </div>
 <div class="list-menu-right">
@@ -115,28 +106,28 @@
             </li>
     </ol>
 
-<nav aria-label="breadcrumb ">
+<!-- <nav aria-label="breadcrumb ">
     <ol class="breadcrumb jan-breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item"><a href="nha-cung-cap-vat-lieu.html">NHÀ CUNG CẤP VẬT LIỆU</a></li>
     </ol>
-</nav>
+</nav> -->
             <div class="blog-content">
                 <h1 class="title">{!!$news->title!!}</h1>
                 <div class="d-flex" style="align-items: center;">
                     <div class="author color-828282 mr-4">
                         <div class="avt align-self-center">
-                            <img src="../cms.janhome.vn/uploads/thumb/2017/12/janhome-cung-cap-day-du-cac-loai-san-go-chiu-nuoc.jpg" class="img-fluid" alt="2 loại sàn gỗ chịu nước tốt nhất được phân phối tại quận Thủ Đức là sàn gỗ nào?" />
+                            <img src="{!!$news->getImage()!!}" class="img-fluid" alt="2 loại sàn gỗ chịu nước tốt nhất được phân phối tại quận Thủ Đức là sàn gỗ nào?" />
                         </div>
                         <div class="align-self-center">
                             
                         </div>
                     </div>
                     <div class="time mb-0">
-                        01/12/2017 02:12
+                        {!!$news->post_schedule!!}
                     </div>
                     <div class="cust-likes-fb-blogs facebook-btn pl-3">
-                        <div class="small mr-3"><img src="{!!asset('images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw')!!}" class="img-fluid mr-2" />233 lượt xem</div>
+                        <div class="small mr-3"><img src="{!!asset('images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw')!!}" class="img-fluid mr-2" /><!-- 233 --> lượt xem</div>
                         <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
                     </div>
                 </div>
