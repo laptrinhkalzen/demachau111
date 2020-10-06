@@ -266,7 +266,7 @@
                                     <div class="row flex-md-row-reverse">
                                         <div class="col-lg-9 col-md-8 col-12 pl-md-0">
                                             <div class="menu-ngang d-flex justify-content-between small">
-                                                <div>
+                                                <!-- <div>
                                                     <a rel="nofollow" href="javascrip:;" class="btn-sm btn-link last-seen-link">
                                                         <img src="images/spvx-ice209.svg?v=1.0.0" class="img-fluid icon mr-2" />Sản phẩm vừa
                                                         xem
@@ -275,7 +275,7 @@
                                                 <div>
                                                     <a href="javascript:void(0)" class="btn-sm btn-link">
                                                         <img src="images/location-icn.svg" class="img-fluid icon mr-2" />Hệ thống
-                                                        <span class="px-1 font-weight-bold" style="color:#007DFF;"><!-- 38 --></span>
+                                                        <span class="px-1 font-weight-bold" style="color:#007DFF;">38</span>
                                                         Showroom
                                                     </a>
                                                 </div>
@@ -301,7 +301,7 @@
                                                         <img src="images/spvx-ic5e209.svg?v=1.0.0" class="img-fluid icon mr-2" />Dự toán công
                                                         trình
                                                     </a>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-4 col-12">
@@ -659,34 +659,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-8 col-sm-12 col-12 mt-md-3 mt-lg-0 ml-auto px-md-0 px-lg-3">
-                                <ul class="list-group list-news-right mb-2 mt-3 mt-md-0">
-                                    <li class="list-group-item active">Trải nghiệm cùng Nội thất Hưng Gia</li>
-                                    <li class="list-group-item">
-                                        <a href="javascript:void(0)">
-                                            Khuyến mãi tháng này
-                                        </a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a href="javascript:void(0)">
-                                            Trải nghiệm không gian phòng khách cùng Nội thất Hưng Gia
-                                        </a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a href="javascript:void(0)">
-                                            Tư vấn chuyên sâu không gian phòng ngủ từ Nội thất Hưng Gia
-                                        </a>
-                                    </li>
-                                </ul>
-                                <!--Thêm class d-none d-md-block-->
-                                <a href="javascript:void(0)" title="" class="d-none d-md-block">
-                                    <img src="../noithathunggia/uploads/2020/07/22/he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho-janhome-san-nhua-hem-khoa-florton-spce209.jpg?v=1.0.0" class="img-fluid mb-2 w-100" />
-                                </a>
-                                <a href="javascript:void(0)" title="" class="d-none d-md-block">
-                                    <img src="../noithathunggia/uploads/2020/07/24/bannere209.png?v=1.0.0" class="img-fluid mb-2 w-100" />
-                                </a>
-                                <!--Thêm class d-none d-md-block-->
-                            </div>
                         </div>
                         <div class="row menu-ngang-2 justify-content-around flex-wrap">
                             <div class="col">
@@ -802,8 +774,6 @@
                                             @foreach ($product_all as $key => $product)
                                             <div class="swiper-slide">
                                                 <div class="item-product" data-id="20182" data-properties="">
-                                                    <div class="tag-1">
-                                                    </div>
                                                     <div class="image">
                                                         <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="img-fluid lazy" style="height: 178.500px; object-fit: cover;"/></a>
                                                         <div class="tag-2">
