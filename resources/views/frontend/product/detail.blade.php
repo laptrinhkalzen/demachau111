@@ -717,7 +717,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <!-- <div class="item">
                                 <div class="row">
                                     <div class="col-xl-3 col-md-4 col-sm-3 col-3 pr-0">
                                         <div class="image">
@@ -811,7 +811,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!--Sản phẩm ưu chuộng-->
@@ -820,7 +820,7 @@
                             <img src="{!!asset('images/icon-spuc6e21.svg?v=Ekha1wOyGV0F79MsQJFeGzHD6ER7s06hLCjkaHd1sto')!!}" class="img-fluid mr-2" />Sản phẩm ưa chuộng
                         </div>
                         <div class="list lastest-news">
-                            <div class="item">
+                            <!-- <div class="item">
                                 <div class="row">
                                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-3 pr-0">
                                         <div class="image">
@@ -846,273 +846,18 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-3 pr-0">
-                                        <div class="image">
-                                            <a href="san-go-janmi-o39.html" title="Sàn gỗ JANMI O39">
-                                                <img src="{!!asset('cms.janhome.vn/uploads/thumb/2017/04/san-go-janmi-o39-8mm-1.jpg')!!}" class="img-fluid" alt="/san-go-janmi-o39.html">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-9 col-lg-9 col-md-8 col-sm-9 col-9">
-                                        <h6 class="title mb-1">
-                                        <a href="san-go-janmi-o39.html" title="Sàn gỗ JANMI O39">Sàn gỗ JANMI O39</a>
-                                        </h6>
-                                        <div class="price color-EE7D22 font-weight-bold mb-1" style="font-size: 18px;">
-                                            315.000đ đ/m2
-                                        </div>
-                                        <div class="d-flex small">
-                                            <div class="color-FFAB1B mr-2">
-                                                5,0/5<i class="fas fa-star ml-1" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="color-828282">
-                                                1 đánh giá
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-3 pr-0">
-                                        <div class="image">
-                                            <a href="san-go-go-900mm.html" title="Sàn gỗ Gõ đỏ 900mm">
-                                                <img src="{!!asset('cms.janhome.vn/uploads/thumb/2017/08/san-go-go-do-900mm-490-600x600.jpg')!!}" class="img-fluid" alt="/san-go-go-900mm.html">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-9 col-lg-9 col-md-8 col-sm-9 col-9">
-                                        <h6 class="title mb-1">
-                                        <a href="san-go-go-900mm.html" title="Sàn gỗ Gõ đỏ 900mm">Sàn gỗ Gõ đỏ 900mm</a>
-                                        </h6>
-                                        <div class="price color-EE7D22 font-weight-bold mb-1" style="font-size: 18px;">
-                                            1.200.000đ đ/m2
-                                        </div>
-                                        <div class="d-flex small">
-                                            <div class="color-FFAB1B mr-2">
-                                                5,0/5<i class="fas fa-star ml-1" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="color-828282">
-                                                1 đánh giá
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-3 pr-0">
-                                        <div class="image">
-                                            <a href="san-nhua-galaxy-msw1011.html" title="Sàn nhựa Galaxy MSW1011">
-                                                <img src="{!!asset('cms.janhome.vn/uploads/thumb/2017/08/san-nhua-galaxy-msw1011-1076-600x600.jpg')!!}" class="img-fluid" alt="/san-nhua-galaxy-msw1011.html">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-9 col-lg-9 col-md-8 col-sm-9 col-9">
-                                        <h6 class="title mb-1">
-                                        <a href="san-nhua-galaxy-msw1011.html" title="Sàn nhựa Galaxy MSW1011">Sàn nhựa Galaxy MSW1011</a>
-                                        </h6>
-                                        <div class="price color-EE7D22 font-weight-bold mb-1" style="font-size: 18px;">
-                                            165.000đ đ/m2
-                                        </div>
-                                        <div class="d-flex small">
-                                            <div class="color-FFAB1B mr-2">
-                                                5,0/5<i class="fas fa-star ml-1" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="color-828282">
-                                                1 đánh giá
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-3 pr-0">
-                                        <div class="image">
-                                            <a href="san-go-ecofloor-0240-6.html" title="Sàn gỗ Ecofloor 0240-6">
-                                                <img src="{!!asset('cms.janhome.vn/uploads/thumb/2017/08/san-go-ecofoor-0240-6-8mm.jpg')!!}" class="img-fluid" alt="/san-go-ecofloor-0240-6.html">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-9 col-lg-9 col-md-8 col-sm-9 col-9">
-                                        <h6 class="title mb-1">
-                                        <a href="san-go-ecofloor-0240-6.html" title="Sàn gỗ Ecofloor 0240-6">Sàn gỗ Ecofloor 0240-6</a>
-                                        </h6>
-                                        <div class="price color-EE7D22 font-weight-bold mb-1" style="font-size: 18px;">
-                                            138.000đ đ/m2
-                                        </div>
-                                        <div class="d-flex small">
-                                            <div class="color-FFAB1B mr-2">
-                                                5,0/5<i class="fas fa-star ml-1" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="color-828282">
-                                                2 đánh giá
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="list-menu-right">
                         <div class="heading mb-3">
                             <img src="{!!asset('images/sale-tag-icon693e.svg?v=be32C1CQrFxhxn3ZHg-2rsr0Zzd-RRRvkhoGZyO23IU')!!}" class="img-fluid mr-2" />Tags
                         </div>
-                        <div class="list  list-tags-right">
+<!--                         <div class="list  list-tags-right">
                             <div class="item">
                                 <a href="the/san-go-cong-nghiep.html">sàn gỗ công nghiệp</a>
                             </div>
-                            <div class="item">
-                                <a href="the/san-nhua.html">sàn nhựa</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-railflex.html">sàn nhựa railflex</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/tham-long-ngan.html">thảm lông ngắn</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go.html">sàn gỗ</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/tham-bi.html">thảm bỉ</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-ngoai-troi.html">sàn gỗ ngoài trời</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-viet-nam.html">sàn gỗ việt nam</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/op-tuong-trong-nha.html">ốp tường trong nhà</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-florton.html">sàn gỗ florton</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/tham-tho-nhi-ky.html">thảm thổ nhĩ kỳ</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-thanh-ly.html">sàn gỗ thanh lý</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-thai-lan.html">sàn gỗ thái lan</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-%c4%91uc.html">sàn gỗ đức</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-timberman.html">sàn gỗ timberman</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-malaysia.html">sàn gỗ malaysia</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-hornitex.html">sàn gỗ hornitex</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-aimaru.html">sàn nhựa aimaru</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-wilson.html">sàn gỗ wilson</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/tham-trai-san.html">thảm trải sàn</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-eurohome.html">sàn gỗ eurohome</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/rem-cau-vong.html">rèm cầu vồng</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/tam-op-nano.html">tấm ốp nano</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-thai-green.html">sàn gỗ thái green</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-woodman.html">san go woodman</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/tam-op-tuong-tran.html">tấm ốp tường trần</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-ecofloor.html">sàn gỗ ecofloor</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/rem-cua.html">rèm cửa</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-gia-re-nhat.html">sàn nhựa giá rẻ nhất</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-gia-re-ha-noi.html">sàn nhựa giá rẻ hà nội</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-gia-re-hcm.html">sàn nhựa giá rẻ hcm</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-gia-sieu-re.html">sàn nhựa giá siêu rẻ</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-masfloor.html">sàn gỗ masfloor</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-galaxy.html">sàn nhựa galaxy</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-wineo.html">sàn gỗ wineo</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-florton.html">sàn nhựa florton</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-florton-spc.html">sàn nhựa florton spc</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-thaixin.html">sàn gỗ thaixin</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-ngoai-troi-biowood.html">sàn gỗ ngoài trời biowood</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-tu-dan.html">sàn nhựa tự dán</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-galaxy-plus.html">sàn nhựa galaxy plus</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-kendax.html">sàn gỗ kendax</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-thairoyal.html">sàn gỗ thairoyal</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-go-janmi.html">sàn gỗ janmi</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-thanh-ly.html">sàn nhựa thanh lý</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-dan-keo.html">sàn nhựa dán keo</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-nhua-ecost.html">san nhua ecost</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/tam-op-tuong-florton.html">tấm ốp tường florton</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-tre-cong-nghiep.html">sàn tre công nghiệp</a>
-                            </div>
-                            <div class="item">
-                                <a href="the/san-tre-ali-ha-noi.html">sàn tre ali hà nội</a>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

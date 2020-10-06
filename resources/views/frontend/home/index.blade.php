@@ -220,7 +220,7 @@
                                                 <div>
                                                     <a href="javascript:void(0)" class="btn-sm btn-link">
                                                         <img src="images/location-icn.svg" class="img-fluid icon mr-2" />Hệ thống
-                                                        <span class="px-1 font-weight-bold" style="color:#007DFF;">38</span>
+                                                        <span class="px-1 font-weight-bold" style="color:#007DFF;"><!-- 38 --></span>
                                                         Showroom
                                                     </a>
                                                 </div>
