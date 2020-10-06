@@ -683,7 +683,7 @@
                             @foreach ($banner_mid as $key=>$banner)
                             <div class="col-xl-8 col-md-8 col-sm-12 col-12">
                                 <a href="javascript:void(0)" title="">
-                                    <img src="{!!$product->getImage()!!}" style="height: 180px; object-fit: cover" class="lazy w-100 mb-3 mb-md-0" />
+                                    <img src="{!!$banner->getImage()!!}" style="height: 180px; object-fit: cover" class="lazy w-100 mb-3 mb-md-0" />
                                 </a>
                             </div>
                             @endforeach
