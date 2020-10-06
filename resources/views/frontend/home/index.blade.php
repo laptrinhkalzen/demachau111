@@ -1345,9 +1345,6 @@
                                                         <div class="item-product" data-id="14325" data-properties="">
                                                             <div class="image">
                                                                 <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid" /></a>
-                                                                <div class="tag-2">
-                                                                    <img src="#" class="img-fluid tag-2-thumb" />
-                                                                </div>
                                                             </div>
                                                             <div class="">
                                                                 <h5 class="title">
