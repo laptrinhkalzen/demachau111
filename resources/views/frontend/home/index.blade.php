@@ -799,9 +799,7 @@
                                                             <?php echo($product->price .' đ/m2')?>
                                                         </div>
                                                         @else
-                                                        <div class="price-old">
-                                                            <?php echo('123')?>
-                                                        </div>
+                                                        &nbsp
                                                         @endif
                                                         <!-- @foreach($product->attributes as $key =>$attributes)
                                                         <div class="size small mb-1">
