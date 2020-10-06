@@ -952,10 +952,8 @@
                                                     @endif
                                                     <div class="col-md-4 col-sm-4 col-6 ">
                                                         <div class="item-product" data-id="95211" data-properties="">
-                                                            <div class="tag-1">
-                                                            </div>
                                                             <div class="image">
-                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid" alt="Sàn gỗ Florton FL180805" /></a>
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="width: 200px; height: 200px; object-fit: cover;" class="lazy img-fluid" /></a>
                                                             </div>
                                                             <div class="">
                                                                 <h5 class="title">
@@ -1055,10 +1053,8 @@
                                                     @endif
                                                     <div class="col-md-4 col-sm-4 col-6 ">
                                                         <div class="item-product" data-id="72193" data-properties="">
-                                                            <div class="tag-1">
-                                                            </div>
                                                             <div class="image">
-                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid" /></a>
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="width: 200px; height: 200px; object-fit: cover;" class="lazy img-fluid" /></a>
                                                                 <div class="tag-2">
                                                                     <img src="" class="img-fluid tag-2-thumb" />
                                                                 </div>
