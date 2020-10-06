@@ -20,7 +20,9 @@
                         <div class="container position-relative px-md-4">
                             <div class="swiper-container ">
                                 <!-- Additional required wrapper -->
-                                <div class="swiper-slide">
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
                                         <a href="javascript:void(0)" title="Hà Nội">
                                             <i class="fas fa-map-marker-alt mr-2"></i>Hà Nội
                                         </a>
@@ -145,6 +147,7 @@
                                             <i class="fas fa-map-marker-alt mr-2"></i>Vĩnh Phúc
                                         </a>
                                     </div>
+                                </div>
                             </div>
                             <!-- If we need navigation buttons -->
                             <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
