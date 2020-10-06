@@ -3,11 +3,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-md py-md-2 px-0">
                 <a class="navbar-brand d-none d-md-block" href="{{route('home.index')}}" title="">
-                    <img src="{!!asset('cms.janhome.vn/uploads/2020/04/28/logoe209.png?v=1.0.0')!!}" alt="janhome.vn"
-                    class="img-fluid" />
-                </a>
-                <a class="navbar-brand d-md-none" href="index.html" title="">
-                    <img  src="{!!asset('images/logo_mobile_2e209.png?v=1.0.0')!!}" alt="" class="img-fluid" />
+                    <img src="{!!$share_config->image!!}" class="img-fluid" />
                 </a>
                 <div class="d-md-none">
                     <div class="input-group form-search flex-nowrap mr-2 width-mb" style="width: 210px;">
@@ -16,33 +12,6 @@
                             <button class="btn btn-search es-search-button">
                             <img  src="{!!asset('images/searche209.svg?v=1.0.0')!!}" class="img-fluid" />
                             </button>
-                        </div>
-                        <div class="suggest-text suggest-text-1">
-                            <div class="h6 px-3">
-                                Gợi ý cho bạn
-                            </div>
-                            <div class="color-007DFF  px-3">
-                                <div class="py-1">
-                                    <a href="san-go-cong-nghiep.html">Sàn gỗ công nghiệp</a>
-                                </div>
-                                <div class="py-1">
-                                    <a href="san-nhua.html">Sàn nhựa vinyl</a>
-                                </div>
-                                <div class="py-1">
-                                    <a href="san-go-gia-re.html">Sàn gỗ công nghiệp giá rẻ</a>
-                                </div>
-                                <div class="py-1">
-                                    <a href="san-go-ngoai-troi.html">Sàn gỗ ngoài trời</a>
-                                </div>
-                                <div class="py-1">
-                                    <a href="san-go-thanh-ly.html">Sàn gỗ thanh lý</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="suggest-text suggest-text-2">
-                            <div class="h6 px-3">
-                                Sản phẩm gợi ý
-                            </div>
                         </div>
                     </div>
                 </div>
