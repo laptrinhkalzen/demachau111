@@ -1,142 +1,4 @@
 <section class="header">
-    <div class="list-location-top">
-        <div class="container position-relative px-md-4">
-            <div class="swiper-container ">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Hà Nội">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Hà Nội
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Bắc Giang">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Bắc Giang
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Bắc Ninh">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Bắc Ninh
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Cao Bằng">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Cao Bằng
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Đà Nẵng">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Đà Nẵng
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Đắk Lắk">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Đắk Lắk
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Điện Biên">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Điện Biên
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Gia Lai">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Gia Lai
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Hà Tĩnh">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Hà Tĩnh
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Hải Dương">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Hải Dương
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Hải Phòng">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Hải Phòng
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Hồ Chí Minh">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Hồ Chí Minh
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Hòa Bình">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Hòa Bình
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Hưng Yên">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Hưng Yên
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Nghệ An">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Nghệ An
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Nha Trang">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Nha Trang
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Phú Thọ">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Phú Thọ
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Quảng Bình">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Quảng Bình
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Quảng Ninh">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Quảng Ninh
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Sơn La">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Sơn La
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Thái Bình">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Thái Bình
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Thái Nguyên">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Thái Nguyên
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Thanh hoá">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Thanh hoá
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Tuyên Quang">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Tuyên Quang
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)" title="Vĩnh Phúc">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Vĩnh Phúc
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
-            <div class="swiper-button-next text-right"><i class="fas fa-chevron-right"></i></div>
-        </div>
-    </div>
     <div class=" nav-center">
         <div class="container">
             <nav class="navbar navbar-expand-md py-md-2 px-0">
@@ -260,7 +122,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown mr-md-3 align-self-md-center   mb-md-0 cart">
-                            <a rel="nofollow" class="d-flex dropdown-cart-trigger" href="{{route('home.checkout_order')}}">
+                            <a rel="nofollow" class="d-flex dropdown-cart-trigger" href="javascript:void(0)">
                                 <div class="icon mr-2">
                                     <img src="{!!asset('images/cart-icone209.svg?v=1.0.0')!!}" class="img-fluid mr-2 icon-nav" />
                                     <div class="amount" id="cart-count">
@@ -293,7 +155,7 @@
                             style="white-space: nowrap;">
                             <div>
                                 <a rel="nofollow" href="tel: 18000022">
-                                    <div><span class="font-weight-bold h6 ">1800.0022</span></div>
+                                    <div><span class="font-weight-bold h6 ">{!!$share_config->hotline!!}</span></div>
                                     <div class="small">(Miễn phí) </div>
                                 </a>
                             </div>
@@ -302,8 +164,8 @@
                             style="white-space: nowrap;">
                             <div>
                                 <a href="tu-van.html">
-                                    <div><span class="font-weight-bold h6">Blog Janhome</span></div>
-                                    <div class="small">& Tin khuyến mại</div>
+                                    <div><span class="font-weight-bold h6">Tin tức</span></div>
+                                    <div class="small">& Khuyến mại</div>
                                 </a>
                             </div>
                         </li>
@@ -314,17 +176,6 @@
                                     aria-expanded="false">
                                     <img src="{!!asset('images/vietname209.svg?v=1.0.0')!!}" class="img-fluid " />
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right"
-                                    aria-labelledby="dropdownMenuLink">
-                                    <a rel="nofollow" class="dropdown-item select-language" href="javascript:void(0)" data-lang="vi-VN">
-                                        <img src="{!!asset('images/vietname209.svg?v=1.0.0')!!}" class="img-fluid mr-1" />
-                                        <span>Tiếng Việt</span>
-                                    </a>
-                                    <a rel="nofollow" class="dropdown-item select-language" href="javascript:void(0)" data-lang="en-US">
-                                        <img src="{!!asset('images/226-united-statese209.svg?v=1.0.0')!!}" class="img-fluid mr-1" />
-                                        <span>English</span>
-                                    </a>
-                                </div>
                             </div>
                         </li>
                     </ul>
@@ -388,7 +239,7 @@
                                         <img  src="{!!asset('images/listView.svg')!!}" class="img-fluid mr-2" />Danh mục
                                     </a>
                                 </li>
-                                <li class="list-group-item">
+                                <!-- <li class="list-group-item">
                                     <a href="san-go-cong-nghiep.html" class="link" title="Sàn gỗ công nghiệp">
                                         <img src="{!!asset('cms.janhome.vn/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0')!!}"
                                         class="img-fluid mr-2" alt="Sàn gỗ công nghiệp" />Sàn gỗ công nghiệp
@@ -497,11 +348,11 @@
                                             <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="san-tre-ali.html" data-url="/san-tre-ali">Sàn tre ali</a><ul class="ul-tree-lv-2"></ul></li>
                                         </ul>
                                     </div>
-                                </li>
+                                </li> -->
                                 <!--Nút xem thêm-->
-                                <li class="list-group-item" style="cursor: pointer;">
+                                <!-- <li class="list-group-item" style="cursor: pointer;">
                                     <i class="fas fa-plus mr-3"></i>Xem thêm
-                                </li>
+                                </li> -->
                             </ul>
                             <ul class="row menu-cate-mobile  d-md-none no-gutters">
                                 <div class="col-3 px-1">
