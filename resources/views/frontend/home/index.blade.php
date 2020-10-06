@@ -27,7 +27,27 @@
                                             <i class="fas fa-map-marker-alt mr-2"></i>Công ty: Nội thất Hưng Gia
                                         </a>
                                     </div>
-                                    
+                                                                        <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Công ty: Nội thất Hưng Gia
+                                        </a>
+                                    </div>
+                                                                        <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Công ty: Nội thất Hưng Gia
+                                        </a>
+                                    </div>
+                                                                        <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Công ty: Nội thất Hưng Gia
+                                        </a>
+                                    </div>
+                                                                        <div class="swiper-slide">
+                                        <a href="javascript:void(0)" title="Hà Nội">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>Công ty: Nội thất Hưng Gia
+                                        </a>
+                                    </div>
+
                                 </div>
                             </div>
                             <!-- If we need navigation buttons -->
