@@ -771,7 +771,7 @@
                                         <!-- Additional required wrapper -->
                                         <div class="swiper-wrapper">
                                             <!-- Slides -->
-                                            @foreach ($product_all as $key => $product)
+                                            @foreach ($industry as $key => $product)
                                             <div class="swiper-slide">
                                                 <div class="item-product" data-id="20182" data-properties="">
                                                     <div class="image">
