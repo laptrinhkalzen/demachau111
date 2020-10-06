@@ -942,14 +942,14 @@
                                     <div class="swiper-slide">
                                         <div class="image">
                                             <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oqjcrRjE3oI" allowfullscreen></iframe>
+                                                <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="image">
                                             <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Mb-BAkEpFv4" allowfullscreen></iframe>
+                                                <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
                                             </div>
                                         </div>
                                     </div>
@@ -964,7 +964,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="image p-3">
-                                            <a href="https://drive.google.com/open?id=14FkNfkWh_0dgzaOA1BUA-Lreca7q1q4F" target="_blank">
+                                            <a href="javascript:void(0)" target="_blank">
                                                 <img src="{!!asset('images/download-con-thumbf430.svg?v=XdaOvOrrIh8LwF_tskYwkMAYdy0LaDeMFB84LXqK7Yo')!!}" class="img-fluid w-100 " alt="" />
                                             </a>
                                         </div>
