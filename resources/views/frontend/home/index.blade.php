@@ -44,7 +44,7 @@
                         <div class="container">
                             <nav class="navbar navbar-expand-md py-md-2 px-0">
                                 <a class="navbar-brand d-none d-md-block" href="{{route('home.index')}}" title="">
-                                    <img src="{!!$share_config->image!!}" alt="janhome.vn"
+                                    <img src="{!!$share_config->image!!}" style="width:100px" alt="janhome.vn"
                                     class="img-fluid" />
                                 </a>
                                 <a class="navbar-brand d-md-none" href="index.html" title="">
@@ -602,7 +602,7 @@
                                         <!--Thêm slide-->
                                         <div class="swiper-wrapper">
                                             @foreach ($slide1 as $key=>$product)
-                                            <div class="swiper-slide" style="width: 860px;">
+                                            <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
                                                         <img src="{!!$product->getImage()!!}" style="width: 860px; object-fit: cover;"class="d-block w-100" alt="noithathunggia.vn">
