@@ -800,7 +800,7 @@
                                                         </div>
                                                         @else
                                                         <div class="price-old">
-                                                            <?php echo()?>
+                                                            <?php echo('')?>
                                                         </div>
                                                         @endif
                                                         <!-- @foreach($product->attributes as $key =>$attributes)
