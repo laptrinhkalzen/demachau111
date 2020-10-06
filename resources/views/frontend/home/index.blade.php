@@ -1776,7 +1776,7 @@
                         <div class="col-lg-8 col-md-8 col-sm-12 col-12  pull-left">
                             <div class="font-weight-bold mb-2">Công ty nội thất Hưng Gia</div>
                             <div class="mb-2">
-                                Địa chỉ:
+                                Địa chỉ: {!!$share_config->address!!}
                             </div>
                             <div class="mb-4">
                                 <div class="d-lg-inline-block mb-2 mb-lg-0">

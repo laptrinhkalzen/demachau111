@@ -6,7 +6,7 @@
 <body>
     @foreach($detail_news as $key => $news )
 <div class="banner-page py-3 mb-4" style="
-        background: url(../cms.janhome.vn/uploads/thumb/2020/04/22/Banner.jpg) no-repeat center;
+        background: url(../noithathunggia/uploads/thumb/2020/04/22/Banner.jpg) no-repeat center;
         min-height: 200px;
         background-size: cover;
         display: flex;
