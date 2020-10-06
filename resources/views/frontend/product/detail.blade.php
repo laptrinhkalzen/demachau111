@@ -98,12 +98,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="text-center">
+<!--                                 <div class="text-center">
                                     <button class="btn btn-link  btn-sm mb-2" data-toggle="modal"
                                     data-target="#modal-slide-imge">
                                     Xem kích thước lớn
                                     </button>
-                                </div>
+                                </div> -->
                                 <div class="swiper-container gallery-thumbs px-3">
                                     <div class="swiper-wrapper">
                                         @foreach(explode(',', $product->images) as $key => $dowloadfile)
@@ -224,13 +224,13 @@
                                 <h6 class="font-weight-600 mb-3">Khuyến mại</h6>
                                 <label class="label-checkbox">
                                     Miễn phí công TƯ VẤN, KHẢO SÁT tại nhà
-                                    <a href="vui-tet-thieu-nhi-1-6-hoan-hi-nhan-qua-khuyen-mai-lon-cua-janhome-he-thong-ban-le-vat-lieu-hoan-thien-tai-kho.html"> - (<span class="extra-link-promotion">Xem chi tiết</span>)</a>
+                                    <a href="javascript:void(0)"> - (<span class="extra-link-promotion">Xem chi tiết</span>)</a>
                                     <input type="checkbox" class="choose_promotion" checked="checked" data-promotion-id="2" data-is-discount="0" data-type="free-setup" data-value="5">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="label-checkbox">
                                     Đơn hàng trên 15tr hoặc trên 70m2 thì miễn phí vận chuyển bán kính 15km
-                                    <a href="vui-tet-thieu-nhi-1-6-hoan-hi-nhan-qua-khuyen-mai-lon-cua-janhome-he-thong-ban-le-vat-lieu-hoan-thien-tai-kho.html"> - (<span class="extra-link-promotion">Xem chi tiết</span>)</a>
+                                    <a href="javascript:void(0)"> - (<span class="extra-link-promotion">Xem chi tiết</span>)</a>
                                     <input type="checkbox" class="choose_promotion" checked="checked" data-promotion-id="8" data-is-discount="0" data-type="free-setup" data-value="0">
                                     <span class="checkmark"></span>
                                 </label>
@@ -334,37 +334,37 @@
                     </a>
                     <div class="policy-new border border-r-4 py-2 px-3 mb-3">
                         <div class="item">
-                            <div class="icon"><img src="{!!asset('cms.janhome.vn/uploads/2020/06/18/price%201.png')!!}" class="img-fluid" /></div>
+                            <div class="icon"><img src="{!!asset('noithathunggia/uploads/2020/06/18/price%201.png')!!}" class="img-fluid" /></div>
                             <div class="text">
                                 <p>Gi&aacute; b&aacute;n tại kho chưa bao gồm&nbsp;lắp đặt vận chuyển&nbsp;<span style="color:#3498db;">(Xem chi tiết)</span></p>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="icon"><img src="{!!asset('cms.janhome.vn/uploads/2020/06/18/stock%201.png')!!}" class="img-fluid" /></div>
+                            <div class="icon"><img src="{!!asset('noithathunggia/uploads/2020/06/18/stock%201.png')!!}" class="img-fluid" /></div>
                             <div class="text">
                                 <p>Nhập khẩu v&agrave; ph&acirc;n phối trực tiếp - H&agrave;ng c&oacute; sẵn tại kho</p>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="icon"><img src="{!!asset('cms.janhome.vn/uploads/2020/06/19/location.png')!!}" class="img-fluid" /></div>
+                            <div class="icon"><img src="{!!asset('noithathunggia/uploads/2020/06/19/location.png')!!}" class="img-fluid" /></div>
                             <div class="text">
                                 <p>Hệ thống trung t&acirc;m&nbsp;Janhome to&agrave;n quốc <span style="color:#3498db;">( Xem hệ thống Janhome)</span></p>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="icon"><img src="{!!asset('cms.janhome.vn/uploads/2020/06/19/contact.png')!!}" class="img-fluid" /></div>
+                            <div class="icon"><img src="{!!asset('noithathunggia/uploads/2020/06/19/contact.png')!!}" class="img-fluid" /></div>
                             <div class="text">
                                 <p>Đội ngũ tư vấn tr&ecirc;n 10 năm kinh nghiệm</p>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="icon"><img src="{!!asset('cms.janhome.vn/uploads/2020/06/19/label.png')!!}" class="img-fluid" /></div>
+                            <div class="icon"><img src="{!!asset('noithathunggia/uploads/2020/06/19/label.png')!!}" class="img-fluid" /></div>
                             <div class="text">
                                 <p>Sản phẩm được&nbsp;đảm bảo nguồn gốc xuất xứ<span style="color:#3498db;"> (Xem chi tiết nguồn gốc)</span></p>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="icon"><img src="{!!asset('cms.janhome.vn/uploads/2020/06/19/shield.png')!!}" class="img-fluid" /></div>
+                            <div class="icon"><img src="{!!asset('noithathunggia/uploads/2020/06/19/shield.png')!!}" class="img-fluid" /></div>
                             <div class="text">
                                 <p>Ch&iacute;nh s&aacute;ch bảo h&agrave;nh tốt nhất - Bảo h&agrave;nh sản phẩm&nbsp;bất k&igrave; tr&ecirc;n to&agrave;n bộ hệ thống&nbsp;<a href="chi-nhanh.html"><span style="color:#3498db;">( Hệ thống bảo h&agrave;nh)</span></a></p>
                             </div>
@@ -638,7 +638,7 @@
                         <div class="pb-2 border-bottom h5 font-weight-600 mb-3">
                             <i class="far fa-clock mr-2"></i> Chi tiết kỹ thuật
                         </div>
-                        <div class="tech-detail border py-2 border-r-4 px-3 mb-4">
+                        <!-- <div class="tech-detail border py-2 border-r-4 px-3 mb-4">
                             <div class="item ">
                                 <div class="label text-uppercase font-weight-600">
                                     Code
@@ -690,7 +690,7 @@
                                 <div class="ml-auto  text-right">
                                 12 mm                                        </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <!--Tin mới-->
                     <div class="lastest-news ">
