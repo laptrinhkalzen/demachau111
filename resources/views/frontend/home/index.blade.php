@@ -901,22 +901,34 @@
                                             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                                                 <div class="item-product item-product-large">
                                                     <div class="image">
-                                                        <a href="san-go-janmi-o121-12mm.html">
-                                                            <img src="{{$product->getImage()}}" style="height: 300px" class="img-fluid lazy" alt="Sàn gỗ JANMI O121 - 12mm" />
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                            <img src="{{$product->getImage()}}" style="height: 250px" class="img-fluid lazy" alt="Sàn gỗ JANMI O121 - 12mm" />
                                                         </a>
                                                     </div>
                                                     <div class="py-1">
                                                         <h5 class="title">
-                                                        <a href="san-go-janmi-o121-12mm.html" title="Sàn gỗ JANMI O121 - 12mm">
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ JANMI O121 - 12mm">
                                                             {!!$product->title!!}
                                                         </a>
                                                         </h5>
                                                         <div class="price-new">
-                                                            495.000đ đ / m2
+                                                             @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                            đ
                                                         </div>
-                                                        <div class="size small mb-1">
+                                                        <div class="price-old">
+                                                            @if($product->sale_price!=0)
+                                                            <?php echo($product->price .' đ')?>
+                                                            @else
+                                                            <?php echo('')?>
+                                                            @endif
+                                                        </div>
+                                                        <!-- <div class="size small mb-1">
                                                             Kích thước: 12    x    115    x    1283 mm
-                                                        </div>
+                                                        </div> -->
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -943,23 +955,32 @@
                                                             <div class="tag-1">
                                                             </div>
                                                             <div class="image">
-                                                                <a href="san-go-florton-fl180805.html"><img src="{{$product->getImage()}}" class="lazy img-fluid" alt="Sàn gỗ Florton FL180805" /></a>
-                                                                <div class="tag-2">
-                                                                    <img src="" class="img-fluid tag-2-thumb" />
-                                                                </div>
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid" alt="Sàn gỗ Florton FL180805" /></a>
                                                             </div>
                                                             <div class="">
                                                                 <h5 class="title">
-                                                                <a href="san-go-florton-fl180805.html" title="Sàn gỗ Florton FL180805">
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ Florton FL180805">
                                                                     {!!$product->title!!}
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    155.000đ đ / m2
+                                                                    @if($product->sale_price==0)
+                                                                    <?php echo($product->price)?>
+                                                                    @else
+                                                                    <?php echo($product->sale_price)?>
+                                                                    @endif
+                                                                    đ
                                                                 </div>
-                                                                <div class="size small mb-1">
+                                                                <div class="price-old">
+                                                            @if($product->sale_price!=0)
+                                                            <?php echo($product->price .' đ')?>
+                                                            @else
+                                                            <?php echo('')?>
+                                                            @endif
+                                                        </div>
+                                                                <!-- <div class="size small mb-1">
                                                                     Kích thước: 8    x    146    x    1221 mm
-                                                                </div>
+                                                                </div> -->
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -986,22 +1007,34 @@
                                             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                                                 <div class="item-product item-product-large">
                                                     <div class="image">
-                                                        <a href="san-go-wineo-rockngo-la149sysv4.html">
-                                                            <img src="{{$product->getImage()}}" style=" height: 300px"class="lazy img-fluid" alt="Sàn gỗ WINEO ROCK&#x27;N&#x27;GO LA149SYSV4" />
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                            <img src="{{$product->getImage()}}" style=" height: 250px"class="lazy img-fluid" alt="Sàn gỗ WINEO ROCK&#x27;N&#x27;GO LA149SYSV4" />
                                                         </a>
                                                     </div>
                                                     <div class="py-1">
                                                         <h5 class="title">
-                                                        <a href="san-go-wineo-rockngo-la149sysv4.html">
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
                                                             {!!$product->title!!}
                                                         </a>
                                                         </h5>
                                                         <div class="price-new">
-                                                            580.000đ đ / m2
+                                                             @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                            đ
                                                         </div>
-                                                        <div class="size small mb-1">
+                                                        <div class="price-old">
+                                                            @if($product->sale_price!=0)
+                                                            <?php echo($product->price .' đ')?>
+                                                            @else
+                                                            <?php echo('')?>
+                                                            @endif
+                                                        </div>
+                                                        <!-- <div class="size small mb-1">
                                                             Kích thước: 9    x    195    x    1288 mm
-                                                        </div>
+                                                        </div> -->
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1025,23 +1058,35 @@
                                                             <div class="tag-1">
                                                             </div>
                                                             <div class="image">
-                                                                <a href="san-go-cot-xanh-aqua-janhome-jhg1207.html"><img src="{{$product->getImage()}}" class="lazy img-fluid" alt="Sàn gỗ JanHome siêu chịu nước - JHG1207" /></a>
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid" /></a>
                                                                 <div class="tag-2">
                                                                     <img src="" class="img-fluid tag-2-thumb" />
                                                                 </div>
                                                             </div>
                                                             <div class="">
                                                                 <h5 class="title">
-                                                                <a href="san-go-cot-xanh-aqua-janhome-jhg1207.html" title="Sàn gỗ JanHome siêu chịu nước - JHG1207">
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ JanHome siêu chịu nước - JHG1207">
                                                                     {!!$product->title!!}
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    325.000đ đ / m2
+                                                                     @if($product->sale_price==0)
+                                                                    <?php echo($product->price)?>
+                                                                    @else
+                                                                    <?php echo($product->sale_price)?>
+                                                                    @endif
+                                                                    đ
                                                                 </div>
-                                                                <div class="size small mb-1">
+                                                                <div class="price-old">
+                                                                    @if($product->sale_price!=0)
+                                                                    <?php echo($product->price .' đ')?>
+                                                                    @else
+                                                                    <?php echo('')?>
+                                                                    @endif
+                                                                </div>
+                                                                <!-- <div class="size small mb-1">
                                                                     Kích thước: 12    x    114    x    1221 mm
-                                                                </div>
+                                                                </div> -->
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         5,0/5<i class="fas fa-star ml-1"></i>
