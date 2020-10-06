@@ -786,22 +786,22 @@
                                                             {!!$product->title!!}
                                                         </a>
                                                         </h5>
-                                                        @if($product->sale_price==0)
                                                         <div class="price-new">
+                                                            @if($product->sale_price==0)
                                                             <?php echo($product->price)?>
-                                                             đ/m2
-                                                        </div>
-                                                        @else
-                                                        <div class="price-new">
+                                                            @else
                                                             <?php echo($product->sale_price)?>
+                                                            @endif
                                                              đ/m2
                                                         </div>
-                                                        @endif
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
                                                             <?php echo($product->price .' đ/m2')?>
                                                         </div>
                                                         @else
+                                                        <div class="price-old">
+                                                            
+                                                        </div>
                                                         @endif
                                                         <!-- @foreach($product->attributes as $key =>$attributes)
                                                         <div class="size small mb-1">
