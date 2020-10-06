@@ -31,7 +31,6 @@ class FrontendController extends Controller {
         $slide1 = $this->slideRepo->getSlide1();
         $slide2 = $this->slideRepo->getSlide2();
         $banner_mid = $this->slideRepo->getBannerMid();
-        dd($banner_mid);
         $banner_left = $this->slideRepo->getBannerLeft();
         $banner_right = $this->slideRepo->getBannerRight();
         $banner_end = $this->slideRepo->getBannerEnd();
