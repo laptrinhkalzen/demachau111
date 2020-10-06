@@ -34,14 +34,14 @@
                 <meta itemprop="position" content="4" />
             </li>
         </ol>
-        <nav aria-label="breadcrumb ">
+<!--         <nav aria-label="breadcrumb ">
             <ol class="breadcrumb jan-breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="san-go-cong-nghiep.html">Sàn gỗ công nghiệp</a></li>
                 <li class="breadcrumb-item"><a href="san-go-viet-nam.html">Sàn gỗ Việt Nam</a></li>
                 <li class="breadcrumb-item"><a href="san-go-florton.html">Sàn gỗ Florton</a></li>
             </ol>
-        </nav>
+        </nav> -->
     </div>
     <section class="product-detail" data-id="44575" data-properties="">
         <div class="container">
@@ -282,7 +282,7 @@
                             </div>
                             <div class="box-km product-suggest mb-3" id="list_combo">
                                 <h6 class="font-weight-600 mb-3 text-uppercase">Thường được mua cùng</h6>
-                                <label class="label-checkbox d-flex">
+<!--                                 <label class="label-checkbox d-flex">
                                     <div class="image-product mr-2">
                                         <img src="{!!asset('cms.janhome.vn/uploads/thumb/2018/03/san-go-florton-fl669-1.jpg')!!}" class="" alt="Sàn gỗ Florton FL669-1" />
                                     </div>
@@ -323,7 +323,7 @@
                                 <div class="text-right">
                                     <div class="mb-3">Tổng dự toán:<span class="font-weight-600 color-EE7D22 mx-2" id="total_combo_price" data-total="273000">273.000đ đ</span></div>
                                     <button role="button" class="btn btn-save " id="add-cart-combo">Thêm <span id="count_combo">4</span> sản phẩm vào giỏ hàng</button>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -387,7 +387,7 @@
                 </div>
                 <div class="row no-gutters">
                     <div class="col-xl-2 col-md-4 col-sm-4 col-6">
-                        <div class="item-product" data-id="22240" data-properties="">
+                        <!-- <div class="item-product" data-id="22240" data-properties="">
                             <div class="tag-1">
                             </div>
                             <div class="image">
@@ -419,7 +419,7 @@
                                     0 đánh giá
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -430,7 +430,7 @@
                         <div class="pb-2 border-bottom h5 font-weight-600 mb-3">
                             <i class="far fa-clock mr-2"></i> Chi tiết kỹ thuật
                         </div>
-                        <div class="tech-detail border py-2 border-r-4 px-3 mb-4">
+                        <!-- <div class="tech-detail border py-2 border-r-4 px-3 mb-4">
                             <div class="item ">
                                 <div class="label text-uppercase font-weight-600">
                                     Code
@@ -482,7 +482,7 @@
                                 <div class="ml-auto  text-right">
                                 12 mm                                        </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="product-description">
                         <div class="pb-2 border-bottom h5 font-weight-600 mb-3">
@@ -698,7 +698,7 @@
                             <img src="{!!asset('images/lastest-icf002.svg?v=GoDAQeasQ5QDI54pnNLz0oiRudBV9A0ehf63EdEb_1Y')!!}" class="img-fluid mr-2" /> Tin mới
                         </div>
                         <div class="list-right mb-4">
-                            <div class="item">
+                            <!-- <div class="item">
                                 <div class="row">
                                     <div class="col-xl-3 col-md-4 col-sm-3 col-3 pr-0">
                                         <div class="image">
@@ -715,7 +715,7 @@
                                             18/09/2020 10:45
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- <div class="item">
                                 <div class="row">
