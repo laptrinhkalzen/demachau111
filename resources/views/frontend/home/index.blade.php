@@ -794,13 +794,13 @@
                                                             @endif
                                                              đ/m2
                                                         </div>
+                                                        @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            @if($product->sale_price!=0)
                                                             <?php echo($product->price .' đ/m2')?>
                                                             @else
-                                                            <?php echo('')?>
-                                                            @endif
+                                                            <?php echo('')?>                                                            
                                                         </div>
+                                                        @endif
                                                         <!-- @foreach($product->attributes as $key =>$attributes)
                                                         <div class="size small mb-1">
                                                             Kích thước: {!!$attributes->title!!} mm
