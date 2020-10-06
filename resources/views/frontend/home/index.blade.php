@@ -902,7 +902,7 @@
                                                 <div class="item-product item-product-large">
                                                     <div class="image">
                                                         <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
-                                                            <img src="{{$product->getImage()}}" style="height: 250px" class="img-fluid lazy" alt="Sàn gỗ JANMI O121 - 12mm" />
+                                                            <img src="{{$product->getImage()}}" style="height: 250px" class="img-fluid lazy" />
                                                         </a>
                                                     </div>
                                                     <div class="py-1">
@@ -967,11 +967,11 @@
                                                                     @else
                                                                     <?php echo($product->sale_price)?>
                                                                     @endif
-                                                                    đ
+                                                                     đ/m2
                                                                 </div>
                                                                 <div class="price-old">
                                                             @if($product->sale_price!=0)
-                                                            <?php echo($product->price .' đ')?>
+                                                            <?php echo($product->price .' đ/m2')?>
                                                             @else
                                                             <?php echo('')?>
                                                             @endif
@@ -1021,11 +1021,11 @@
                                                             @else
                                                             <?php echo($product->sale_price)?>
                                                             @endif
-                                                            đ
+                                                             đ/m2
                                                         </div>
                                                         <div class="price-old">
                                                             @if($product->sale_price!=0)
-                                                            <?php echo($product->price .' đ')?>
+                                                            <?php echo($product->price .' đ/m2')?>
                                                             @else
                                                             <?php echo('')?>
                                                             @endif
@@ -1071,11 +1071,11 @@
                                                                     @else
                                                                     <?php echo($product->sale_price)?>
                                                                     @endif
-                                                                    đ
+                                                                     đ/m2
                                                                 </div>
                                                                 <div class="price-old">
                                                                     @if($product->sale_price!=0)
-                                                                    <?php echo($product->price .' đ')?>
+                                                                    <?php echo($product->price .' đ/m2')?>
                                                                     @else
                                                                     <?php echo('')?>
                                                                     @endif
