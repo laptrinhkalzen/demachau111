@@ -792,11 +792,11 @@
                                                             @else
                                                             <?php echo($product->sale_price)?>
                                                             @endif
-                                                            đ
+                                                             đ/m2
                                                         </div>
                                                         <div class="price-old">
                                                             @if($product->sale_price!=0)
-                                                            <?php echo($product->price .' đ')?>
+                                                            <?php echo($product->price .' đ/m2')?>
                                                             @else
                                                             <?php echo('')?>
                                                             @endif
@@ -917,11 +917,11 @@
                                                             @else
                                                             <?php echo($product->sale_price)?>
                                                             @endif
-                                                            đ
+                                                             đ/m2
                                                         </div>
                                                         <div class="price-old">
                                                             @if($product->sale_price!=0)
-                                                            <?php echo($product->price .' đ')?>
+                                                            <?php echo($product->price .' đ/m2')?>
                                                             @else
                                                             <?php echo('')?>
                                                             @endif
