@@ -756,7 +756,7 @@
                                 <div class="px-3">
                                     <div class="row mb-3 no-gutters ">
                                         <div class="col-8">
-                                            <a href="javascript:void(0)" class="h5 font-weight-bold ">Sản phẩm thêm mới</a>
+                                            <a href="javascript:void(0)" class="h5 font-weight-bold ">Sản phẩm bán chạy 2020</a>
                                         </div>
                                         <div class="col-4 text-right">
                                             <a href="javascript:void(0)" class="link-view-more">
@@ -838,7 +838,7 @@
                                 <div class="container">
                                     <div class="row mb-3 no-gutters ">
                                         <div class="col-md-3 col-12 mb-2 mb-md-0">
-                                            <a href="javascript:void(0)" class="h5 font-weight-bold ">Nội thất loại 1</a>
+                                            <a href="javascript:void(0)" class="h5 font-weight-bold ">Sàn gỗ công nghiệp</a>
                                         </div>
                                         <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                             <div class="menu-op align-self-center mr-lg-3">
@@ -849,20 +849,39 @@
                                                         <!-- Slides -->
                                                         <div class="swiper-slide">
                                                             <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1486">Option 1</a>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1486">Sàn Gỗ công nghiệp<br>bán chạy </a>
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1456">Option 2</a>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1456">Malaysia</a>
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1427">Option 3</a>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1427">Việt Nam</a>
                                                             </div>
                                                         </div>
-                                                        
+                                                        <div class="swiper-slide">
+                                                            <div>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1457">Sàn Đức</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1454">Hàn quốc</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1424">Sàn gỗ EcoFloor</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1455">Thái Lan</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <!--menu pc end-->
