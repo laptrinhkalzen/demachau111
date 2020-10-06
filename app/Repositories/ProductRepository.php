@@ -161,7 +161,9 @@ class ProductRepository extends AbstractRepository {
         return $this->model->where('status', 1)->whereIn('id', $industry)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
     public function getNatureProduct($limit) {
-        return $this->model->where('status', 1)->where('is_new', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('post_schedule', 'desc')->take($limit)->get();
+        $category = \DB::table('category')->where('alias', 'san-go-tu-nhien')->pluck('id');
+        $industry = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
+        return $this->model->where('status', 1)->whereIn('id', $industry)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
 
     public function readSearchProduct($keywords) {

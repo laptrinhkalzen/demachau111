@@ -1135,7 +1135,7 @@
                                 <div class="container">
                                     <div class="row mb-3 no-gutters ">
                                         <div class="col-md-3 col-12 mb-2 mb-md-0">
-                                            <a href="javascript:void(0)" class="h5 font-weight-bold ">Nội thất loại 2</a>
+                                            <a href="javascript:void(0)" class="h5 font-weight-bold ">Sàn gỗ tự nhiên</a>
                                         </div>
                                         <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                             <div class="menu-op align-self-center mr-lg-3">
@@ -1146,17 +1146,27 @@
                                                         <!-- Slides -->
                                                         <div class="swiper-slide">
                                                             <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1483">Option 1 </a>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1483">Sàn gỗ tự nhiên<br>bán chạy </a>
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1449">Option 2 </a>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1449">Gỗ gõ đỏ</a>
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1450">Option 3 </a>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1450">Gỗ Giáng hương</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1448">Gỗ Sồi</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div>
+                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1447">Gỗ Teak </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1178,22 +1188,34 @@
                                             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                                                 <div class="item-product item-product-large">
                                                     <div class="image">
-                                                        <a href="san-go-soi-750-x-90mm.html">
-                                                            <img src="{{$product->getImage()}}" style="height: 300px" class="img-fluid lazy" alt="Sàn gỗ Sồi 750 x 90mm" />
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                            <img src="{{$product->getImage()}}" style="height: 250px" class="img-fluid lazy" />
                                                         </a>
                                                     </div>
                                                     <div class="py-1">
                                                         <h5 class="title">
-                                                        <a href="san-go-soi-750-x-90mm.html" title="Sàn gỗ Sồi 750 x 90mm">
-                                                            Sàn gỗ Sồi 750 x 90mm
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ Sồi 750 x 90mm">
+                                                            {!!$product->title!!}
                                                         </a>
                                                         </h5>
                                                         <div class="price-new">
-                                                            830.000đ đ / m2
+                                                            @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
                                                         </div>
-                                                        <div class="size small mb-1">
+                                                        <div class="price-old">
+                                                            @if($product->sale_price!=0)
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                            @else
+                                                            <?php echo('')?>
+                                                            @endif
+                                                        </div>
+                                                        <!-- <div class="size small mb-1">
                                                             Kích thước: 15 x 90 x 750 mm
-                                                        </div>
+                                                        </div> -->
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1217,26 +1239,36 @@
                                                     @endif
                                                     <div class="col-md-4 col-sm-4 col-6 ">
                                                         <div class="item-product" data-id="42173" data-properties="">
-                                                            <div class="tag-1">
-                                                            </div>
                                                             <div class="image">
-                                                                <a href="san-go-oc-cho-600mm.html"><img src="{{$product->getImage()}}" class="lazy img-fluid" alt="Sàn gỗ Óc chó 600mm" /></a>
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid" /></a>
                                                                 <div class="tag-2">
                                                                     <img src="" class="img-fluid tag-2-thumb" />
                                                                 </div>
                                                             </div>
                                                             <div class="">
                                                                 <h5 class="title">
-                                                                <a href="san-go-oc-cho-600mm.html" title="Sàn gỗ Óc chó 600mm">
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ Óc chó 600mm">
                                                                     {!!$product->title!!}
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    1.700.000đ đ / m2
+                                                                    @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
                                                                 </div>
-                                                                <div class="size small mb-1">
+                                                                <div class="price-old">
+                                                            @if($product->sale_price!=0)
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                            @else
+                                                            <?php echo('')?>
+                                                            @endif
+                                                        </div>
+                                                                <!-- <div class="size small mb-1">
                                                                     Kích thước: 15 x 90 x 600 mm
-                                                                </div>
+                                                                </div> -->
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1263,22 +1295,34 @@
                                             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                                                 <div class="item-product item-product-large">
                                                     <div class="image">
-                                                        <a href="san-go-giang-huong-fjl.html">
-                                                            <img src="{{$product->getImage()}}" style="height: 300px" class="lazy img-fluid" alt="Sàn gỗ Giáng Hương FJL" />
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                            <img src="{{$product->getImage()}}" style="height: 250px" class="lazy img-fluid" alt="Sàn gỗ Giáng Hương FJL" />
                                                         </a>
                                                     </div>
                                                     <div class="py-1">
                                                         <h5 class="title">
-                                                        <a href="san-go-giang-huong-fjl.html" title="Sàn gỗ Giáng Hương FJL">
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ Giáng Hương FJL">
                                                             {!!$product->title!!}
                                                         </a>
                                                         </h5>
                                                         <div class="price-new">
-                                                            1.250.000đ đ / m2
+                                                             @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
                                                         </div>
-                                                        <div class="size small mb-1">
+                                                        <div class="price-old">
+                                                            @if($product->sale_price!=0)
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                            @else
+                                                            <?php echo('')?>
+                                                            @endif
+                                                        </div>
+                                                        <!-- <div class="size small mb-1">
                                                             Kích thước: 15 x 90-150 x 1830 mm
-                                                        </div>
+                                                        </div> -->
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1299,17 +1343,15 @@
                                                     @endif
                                                     <div class="col-md-4 col-sm-4 col-6 ">
                                                         <div class="item-product" data-id="14325" data-properties="">
-                                                            <div class="tag-1">
-                                                            </div>
                                                             <div class="image">
-                                                                <a href="san-go-giang-huong-900-x-120mm.html"><img src="{{$product->getImage()}}" class="lazy img-fluid" /></a>
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid" /></a>
                                                                 <div class="tag-2">
                                                                     <img src="#" class="img-fluid tag-2-thumb" />
                                                                 </div>
                                                             </div>
                                                             <div class="">
                                                                 <h5 class="title">
-                                                                <a href="san-go-giang-huong-900-x-120mm.html" title="Sàn gỗ Giáng Hương 900 x 120mm">
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ Giáng Hương 900 x 120mm">
                                                                     Sàn gỗ Giáng Hương 900 x 120mm
                                                                 </a>
                                                                 </h5>
