@@ -6,7 +6,7 @@
 <body>
     @foreach($detail_news as $key => $news )
 <div class="banner-page py-3 mb-4" style="
-        background: url(../noithathunggia/uploads/thumb/2020/04/22/Banner.jpg) no-repeat center;
+        background-image: url(noithathunggia/uploads/thumb/2020/04/22/Banner.jpg) no-repeat center;
         min-height: 200px;
         background-size: cover;
         display: flex;
@@ -48,7 +48,7 @@
         <img src="{!!asset('images/giftc829.svg?v=9SyPI8n17F7AMeX1L1ifHuyq4N7RRpl6-lxBALqXHbM')!!}" class="img-fluid mr-2" />Khuyến mại
     </div>
     <div class="list lastest-news">
-                        <div class="item">
+                <!-- <div class="item">
                     <div class="row">
                         <div class="col-12 ">
                             <div class="image mb-3">
@@ -67,43 +67,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <div class="row">
-                        <div class="col-12">
-                            <h6 class="title">
-                                <a href="khuyen-mai-thang-8-nhieu-bat-ngo-tai-janhome-he-thong-ban-le-vat-lieu-hoan-thien-tai-kho.html" title="Khuyến mãi tháng 8 nhiều bất ngờ tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho.">Khuyến mãi tháng 8 nhiều bất ngờ tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho.</a>
-                            </h6>
-                            <div class="time ">
-                                2020/08/03
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="row">
-                        <div class="col-12">
-                            <h6 class="title">
-                                <a href="chao-don-thang-7-voi-con-mua-khuyen-mai-tai-janhome-he-thong-ban-le-vat-lieu-hoan-thien-tai-kho.html" title="Chào đón tháng 7 với cơn mưa khuyến mãi tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho">Chào đón tháng 7 với cơn mưa khuyến mãi tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho</a>
-                            </h6>
-                            <div class="time ">
-                                2020/07/03
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="row">
-                        <div class="col-12">
-                            <h6 class="title">
-                                <a href="vui-tet-thieu-nhi-1-6-hoan-hi-nhan-qua-khuyen-mai-lon-cua-janhome-he-thong-ban-le-vat-lieu-hoan-thien-tai-kho.html" title="Vui tết thiếu nhi (1/6), hoan hỉ nhận quà khuyến mãi lớn của JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho">Vui tết thiếu nhi (1/6), hoan hỉ nhận quà khuyến mãi lớn của JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho</a>
-                            </h6>
-                            <div class="time ">
-                                2020/07/02
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
     </div>
 </div>
 <div class="list-menu-right">
@@ -111,7 +75,7 @@
         <img src="{!!asset('images/flag-iconf002.svg?v=GoDAQeasQ5QDI54pnNLz0oiRudBV9A0ehf63EdEb_1Y')!!}" class="img-fluid mr-2" />Mới cập nhật
     </div>
     <div class="list lastest-news">
-                        <div class="item">
+<!--                 <div class="item">
                     <div class="row">
                         <div class="col-12 ">
                             <div class="image mb-3">
@@ -129,67 +93,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <div class="row">
-                        <div class=" col-md-12 ">
-                            <h6 class="title">
-                                <a href="6-bi-quyet-tao-nen-mot-khong-gian-song-yen-binh-de-chiu.html" title="6 bí quyết tạo nên một không gian sống yên bình, dễ chịu">6 bí quyết tạo nên một không gian sống yên bình, dễ chịu</a>
-                            </h6>
-                            <div class="time ">
-                                2020/09/16
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="row">
-                        <div class=" col-md-12 ">
-                            <h6 class="title">
-                                <a href="chi-tiet-ve-tieu-chuan-e0-e1-cua-san-go-cong-nghiep.html" title="Chi tiết về tiêu chuẩn E0, E1 của sàn gỗ công nghiệp">Chi tiết về tiêu chuẩn E0, E1 của sàn gỗ công nghiệp</a>
-                            </h6>
-                            <div class="time ">
-                                2020/09/15
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="row">
-                        <div class=" col-md-12 ">
-                            <h6 class="title">
-                                <a href="thi-cong-san-go-janmi-o120-12mm-ban-nho-tai-can-ho-cao-cap-khu-do-thi-ecopark.html" title="Thi công sàn gỗ Janmi O120 12mm bản nhỏ tại căn hộ cao cấp khu đô thị Ecopark">Thi công sàn gỗ Janmi O120 12mm bản nhỏ tại căn hộ cao cấp khu đô thị Ecopark</a>
-                            </h6>
-                            <div class="time ">
-                                2020/09/14
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="row">
-                        <div class=" col-md-12 ">
-                            <h6 class="title">
-                                <a href="ve-dep-thuc-te-cua-san-go-floorart-r09c-tai-p1803-toa-nha-legacy-106-nguy-nhu-kon-tum.html" title="Vẻ đẹp thực tế của sàn gỗ floorart R09c tại P1803 tòa nhà LeGacy - 106 Nguy Như Kon Tum">Vẻ đẹp thực tế của sàn gỗ floorart R09c tại P1803 tòa nhà LeGacy - 106 Nguy Như Kon Tum</a>
-                            </h6>
-                            <div class="time ">
-                                2020/09/12
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="row">
-                        <div class=" col-md-12 ">
-                            <h6 class="title">
-                                <a href="tim-hieu-ve-tieu-chuan-ac-cua-san-go-thong-so-ac3-ac4-ac5-co-y-nghia-gihtml.html" title="Tìm hiểu về tiêu chuẩn AC của sàn gỗ. Thông số AC3, AC4, AC5 có ý nghĩa gì?">Tìm hiểu về tiêu chuẩn AC của sàn gỗ. Thông số AC3, AC4, AC5 có ý nghĩa gì?</a>
-                            </h6>
-                            <div class="time ">
-                                2020/09/11
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
+                
     </div>
 </div>
         </div>
@@ -252,7 +157,7 @@
                         </div>
                     </div>
                     <div class="row ">
-                                                    <div class="col-xl-3 col-md-6 col-sm-6 col-6">
+<!--                             <div class="col-xl-3 col-md-6 col-sm-6 col-6">
                                 <div class="item-blog-km xem-them-bai-lq">
                                     <div class="image mb-3">
                                         <a href="5-luu-y-khi-chon-mua-san-nhua-phu-hop-voi-gia-dinh.html"><img src="../cms.janhome.vn/uploads/thumb/2019/03/san-nhua-duoc-cung-cap-boi-janhome.jpg" class="img-fluid" alt="5 lưu ý khi chọn mua sàn nhựa phù hợp với gia đình" /></a>
@@ -264,46 +169,7 @@
 
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 col-sm-6 col-6">
-                                <div class="item-blog-km xem-them-bai-lq">
-                                    <div class="image mb-3">
-                                        <a href="chi-tiet-gia-thi-cong-lap-dat-san-go-ngoai-troi-tai-ha-noi.html"><img src="../cms.janhome.vn/uploads/thumb/2019/03/san-go-ngoai-troi.jpg" class="img-fluid" alt="Chi tiết giá thi công lắp đặt sàn gỗ ngoài trời tại Hà Nội" /></a>
-                                    </div>
-                                    <div class="">
-                                        <h5 class="title h6 font-weight-bold">
-                                            <a href="chi-tiet-gia-thi-cong-lap-dat-san-go-ngoai-troi-tai-ha-noi.html" title="Chi tiết giá thi công lắp đặt sàn gỗ ngoài trời tại Hà Nội">Chi tiết giá thi công lắp đặt sàn gỗ ngoài trời tại Hà Nội</a>
-                                        </h5>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 col-sm-6 col-6">
-                                <div class="item-blog-km xem-them-bai-lq">
-                                    <div class="image mb-3">
-                                        <a href="uu-diem-tuyet-voi-cua-hang-rao-go-nhua-ngoai-troi-tai-ha-noi.html"><img src="../cms.janhome.vn/uploads/thumb/2019/03/hang-rao-go-ngoai-troi.jpg" class="img-fluid" alt="Ưu điểm tuyệt vời của hàng rào gỗ nhựa ngoài trời tại Hà Nội" /></a>
-                                    </div>
-                                    <div class="">
-                                        <h5 class="title h6 font-weight-bold">
-                                            <a href="uu-diem-tuyet-voi-cua-hang-rao-go-nhua-ngoai-troi-tai-ha-noi.html" title="Ưu điểm tuyệt vời của hàng rào gỗ nhựa ngoài trời tại Hà Nội">Ưu điểm tuyệt vời của hàng rào gỗ nhựa ngoài trời tại Hà Nội</a>
-                                        </h5>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 col-sm-6 col-6">
-                                <div class="item-blog-km xem-them-bai-lq">
-                                    <div class="image mb-3">
-                                        <a href="nen-dung-ban-ghe-ngoai-troi-nao-cho-cac-cong-trinh-ngoai-that-o-thai-nguyen.html"><img src="../cms.janhome.vn/uploads/thumb/2019/03/ban-ghe-go-nhua-ngoai-troi.jpg" class="img-fluid" alt="Nên dùng bàn ghế ngoài trời nào cho các công trình ngoại thất ở Thái Nguyên" /></a>
-                                    </div>
-                                    <div class="">
-                                        <h5 class="title h6 font-weight-bold">
-                                            <a href="nen-dung-ban-ghe-ngoai-troi-nao-cho-cac-cong-trinh-ngoai-that-o-thai-nguyen.html" title="Nên dùng bàn ghế ngoài trời nào cho các công trình ngoại thất ở Thái Nguyên">Nên dùng bàn ghế ngoài trời nào cho các công trình ngoại thất ở Thái Nguyên</a>
-                                        </h5>
-
-                                    </div>
-                                </div>
-                            </div>
+                            </div> -->
                     </div>
                 </div>
                 <!--Tag-->
