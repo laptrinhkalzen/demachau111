@@ -71,19 +71,19 @@
                                     </div>
                                     <div class="color-007DFF  px-3">
                                         <div class="py-1">
-                                            <a href="san-go-cong-nghiep.html">Sàn gỗ công nghiệp</a>
+                                            <a href="javascript:void(0)">Sàn gỗ công nghiệp</a>
                                         </div>
                                         <div class="py-1">
-                                            <a href="san-nhua.html">Sàn nhựa vinyl</a>
+                                            <a href="javascript:void(0)">Sàn nhựa vinyl</a>
                                         </div>
                                         <div class="py-1">
-                                            <a href="san-go-gia-re.html">Sàn gỗ công nghiệp giá rẻ</a>
+                                            <a href="javascript:void(0)">Sàn gỗ công nghiệp giá rẻ</a>
                                         </div>
                                         <div class="py-1">
-                                            <a href="san-go-ngoai-troi.html">Sàn gỗ ngoài trời</a>
+                                            <a href="javascript:void(0)">Sàn gỗ ngoài trời</a>
                                         </div>
                                         <div class="py-1">
-                                            <a href="san-go-thanh-ly.html">Sàn gỗ thanh lý</a>
+                                            <a href="javascript:void(0)">Sàn gỗ thanh lý</a>
                                         </div>
                                     </div>
                                 </div>
@@ -156,10 +156,10 @@
             </nav>
         </div>
     </div>
-    <div class="local-mobile container d-flex d-md-none small py-2" style="background: #C8EBFD;">
+<!--     <div class="local-mobile container d-flex d-md-none small py-2" style="background: #C8EBFD;">
         <div><i class="fas fa-map-marker-alt mr-2" style="color: #1A468F;"></i>Bạn đang xem sản phẩm tại Hà Nội</div>
         <a href="#" rel="nofollow" class="btn-link ml-auto" style="text-decoration: underline;" data-toggle="modal" data-target="#modal-khu-vuc">Đổi</a>
-    </div>
+    </div> -->
     <section>
         <section class="bg-fff  pb-1">
             <div class="menu-fix home">
@@ -330,7 +330,7 @@
                             <ul class="row menu-cate-mobile  d-md-none no-gutters">
                                 <div class="col-3 px-1">
                                     <a href="san-go-cong-nghiep.html" class="btn btn-cate">
-                                        <img src="{!!asset('cms.janhome.vn/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0')!!}"
+                                        <img src="{!!asset('noithathunggia/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0')!!}"
                                         class="img-fluid mb-2" />
                                         <div>
                                             Sàn gỗ công nghiệp
@@ -339,7 +339,7 @@
                                 </div>
                                 <div class="col-3 px-1">
                                     <a href="san-go-tu-nhien.html" class="btn btn-cate">
-                                        <img src="{!!asset('cms.janhome.vn/uploads/2020/05/21/gotunhiene209.png?v=1.0.0')!!}"
+                                        <img src="{!!asset('noithathunggia/uploads/2020/05/21/gotunhiene209.png?v=1.0.0')!!}"
                                         class="img-fluid mb-2" />
                                         <div>
                                             Sàn gỗ tự nhiên
@@ -348,7 +348,7 @@
                                 </div>
                                 <div class="col-3 px-1">
                                     <a href="san-nhua.html" class="btn btn-cate">
-                                        <img src="{!!asset('cms.janhome.vn/uploads/2020/05/21/sannhuae209.png?v=1.0.0')!!}"
+                                        <img src="{!!asset('noithathunggia/uploads/2020/05/21/sannhuae209.png?v=1.0.0')!!}"
                                         class="img-fluid mb-2" />
                                         <div>
                                             Sàn nhựa vinyl
@@ -366,7 +366,7 @@
                                 </div>
                                 <div class="col-3 px-1">
                                     <a href="phu-kien.html" class="btn btn-cate">
-                                        <img src="{!!asset('cms.janhome.vn/uploads/2020/05/21/cleane209.png?v=1.0.0')!!}"
+                                        <img src="{!!asset('noithathunggia/uploads/2020/05/21/cleane209.png?v=1.0.0')!!}"
                                         class="img-fluid mb-2" />
                                         <div>
                                             Phụ kiện
@@ -375,7 +375,7 @@
                                 </div>
                                 <div class="col-3 px-1">
                                     <a href="san-go-thanh-ly.html" class="btn btn-cate">
-                                        <img src="{!!asset('cms.janhome.vn/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0')!!}"
+                                        <img src="{!!asset('noithathunggia/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0')!!}"
                                         class="img-fluid mb-2" />
                                         <div>
                                             Sàn gỗ thanh lý
@@ -384,7 +384,7 @@
                                 </div>
                                 <div class="col-3 px-1">
                                     <a href="trang-tri-noi-that.html" class="btn btn-cate">
-                                        <img src="{!!asset('cms.janhome.vn/uploads/2020/05/21/bede209.png?v=1.0.0')!!}"
+                                        <img src="{!!asset('noithathunggia/uploads/2020/05/21/bede209.png?v=1.0.0')!!}"
                                         class="img-fluid mb-2" />
                                         <div>
                                             Trang trí nội thất
@@ -393,7 +393,7 @@
                                 </div>
                                 <div class="col-3 px-1">
                                     <a href="trang-tri-ngoai-that.html" class="btn btn-cate">
-                                        <img src="{!!asset('cms.janhome.vn/uploads/2020/05/21/homee209.png?v=1.0.0')!!}"
+                                        <img src="{!!asset('noithathunggia/uploads/2020/05/21/homee209.png?v=1.0.0')!!}"
                                         class="img-fluid mb-2" />
                                         <div>
                                             Trang trí ngoại thất
