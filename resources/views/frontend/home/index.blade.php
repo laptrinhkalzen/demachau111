@@ -1240,7 +1240,7 @@
                                                     <div class="col-md-4 col-sm-4 col-6 ">
                                                         <div class="item-product" data-id="42173" data-properties="">
                                                             <div class="image">
-                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid" /></a>
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="width: 200px; height: 200px; object-fit: cover;" class="lazy img-fluid" /></a>
                                                                 <div class="tag-2">
                                                                     <img src="" class="img-fluid tag-2-thumb" />
                                                                 </div>
@@ -1344,7 +1344,7 @@
                                                     <div class="col-md-4 col-sm-4 col-6 ">
                                                         <div class="item-product" data-id="14325" data-properties="">
                                                             <div class="image">
-                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid" /></a>
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="width: 200px; height: 200px; object-fit: cover;" class="lazy img-fluid" /></a>
                                                             </div>
                                                             <div class="">
                                                                 <h5 class="title">
@@ -1695,7 +1695,7 @@
                                                 <div class="col-md-4 col-sm-4 col-6 ">
                                                     <div class="item-product" data-id="93737" data-properties="">
                                                         <div class="image">
-                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid"/></a>
+                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="width: 200px; height: 200px; object-fit: cover;" class="lazy img-fluid"/></a>
                                                             <div class="tag-2">
                                                                 <img src="" class="img-fluid tag-2-thumb" />
                                                             </div>
