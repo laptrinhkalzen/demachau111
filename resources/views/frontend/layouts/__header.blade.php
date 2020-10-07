@@ -357,7 +357,7 @@
                                 </div>
                                 <div class="col-3 px-1">
                                     <a href="san-go-ngoai-troi.html" class="btn btn-cate">
-                                        <img src="{!!asset('cms.janhome.vn/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0')!!}"
+                                        <img src="{!!asset('noithathunggia/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0')!!}"
                                         class="img-fluid mb-2" />
                                         <div>
                                             Sàn gỗ ngoài trời
