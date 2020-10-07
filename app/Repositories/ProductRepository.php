@@ -173,6 +173,12 @@ class ProductRepository extends AbstractRepository {
         return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $plastic)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
 
+    public function getOutdoorProduct($limit) {
+        $category = \DB::table('category')->where('alias', 'san-go-ngoai-troi')->pluck('id');
+        $outdoor = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $outdoor)->orderBy('post_schedule', 'desc')->take($limit)->get();
+    }
+
     public function getSaleProduct($limit) {
         return $this->model->where('status', 1)->where('sale_price', '!=','0')->orderBy('sale_price', 'desc')->take($limit)->get();
     }

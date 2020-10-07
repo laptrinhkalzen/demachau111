@@ -1747,13 +1747,13 @@
                         </div>
                     </div>
                 </section>
-                                <section class="my-4 san-go-nb">
+                <section class="my-4 san-go-nb">
                     <div class="container ">
                         <div class="bg-fff pt-3 border-r-4" >
                             <div class="container">
                                 <div class="row mb-3 no-gutters ">
                                     <div class="col-md-3 col-12 mb-2 mb-md-0">
-                                        <a href="javascript:void(0)" class="h5 font-weight-bold ">Sàn nhựa</a>
+                                        <a href="javascript:void(0)" class="h5 font-weight-bold ">Sàn gỗ ngoài trời</a>
                                     </div>
                                     <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                         <div class="menu-op align-self-center mr-lg-3">
@@ -1764,32 +1764,27 @@
                                                     <!-- Slides -->
                                                     <div class="swiper-slide">
                                                         <div>
-                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1485">Sàn nhựa bán chạy</a>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1488">Sàn gỗ ngoài trời<br>bán chạy </a>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div>
-                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1452">Florton SPC hèm khóa</a>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1462">Sàn Timberman</a>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div>
-                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1444">Ecofloor Vinyl</a>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1460">Sàn sân vườn</a>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div>
-                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1428">Sàn Railflex</a>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1459">Sàn bể bơi</a>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div>
-                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1451">Sàn Galaxy</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div>
-                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1453">Sàn nhựa Mines</a>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1461">Sàn JANWOOD</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1804,7 +1799,7 @@
                                 <div class="_binding_product">
                                     <div class="set-total" data-total="8" data-id="1485" style="display:none"></div>
                                     <div class="row no-gutters mb-3 mb-md-0">
-                                        @foreach($plastic as $key => $product)
+                                        @foreach($outdoor as $key => $product)
                                         @if($key == 1)
                                         @break
                                         @endif
@@ -1853,7 +1848,7 @@
                                         @endforeach
                                         <div class="col-lg-7 col-md-12 col-sm-12 col-12">
                                             <div class="row no-gutters h-100 ">
-                                                @foreach($plastic as $key => $product)
+                                                @foreach($outdoor as $key => $product)
                                                 @if($key == 0 || $key == 1)
                                                 @continue
                                                 @endif
@@ -1908,7 +1903,7 @@
                                         </div>
                                     </div>
                                     <div class="row no-gutters">
-                                        @foreach($plastic as $key => $product)
+                                        @foreach($outdoor as $key => $product)
                                         @if($key == 0)
                                         @continue
                                         @endif
@@ -1960,7 +1955,7 @@
                                         @endforeach
                                         <div class="col-lg-7 col-md-12 col-sm-12 col-12">
                                             <div class="row no-gutters h-100 ">
-                                                @foreach($plastic as $key => $product)
+                                                @foreach($outdoor as $key => $product)
                                                 @if($key < 5)
                                                 @continue
                                                 @endif
