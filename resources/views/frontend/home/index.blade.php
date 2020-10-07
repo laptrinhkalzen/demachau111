@@ -594,9 +594,9 @@
                 <div class="pt-1   ">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-3 col-md-4 col-12">
+                            <div class="col-3">
                             </div>
-                            <div class="col-lg-6 col-md-8  col-sm-12 col-12 pl-md-0 pr-lg-0 ">
+                            <div class="col-9">
                                 <div class="slide-banner-home mb-4">
                                     <div class="swiper-container gallery-top-home">
                                         <!--Thêm slide-->
