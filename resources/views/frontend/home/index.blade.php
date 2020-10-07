@@ -103,7 +103,7 @@
                                 </button>
                                 <div class="collapse navbar-collapse w-100 align-self-center">
                                     <ul class=" navbar-nav ml-auto mt-4 mt-md-0 w-100 justify-content-xl-around">
-                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp123
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                                         <li class="nav-item mr-md-3 align-self-center d-none d-md-block position-relative ">
                                             <div class="input-group form-search flex-nowrap mb-1 ">
                                                 <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm....">
