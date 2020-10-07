@@ -912,20 +912,20 @@
                                                         </a>
                                                         </h5>
                                                         <div class="price-new">
-                                                             @if($product->sale_price==0)
+                                                            @if($product->sale_price==0)
                                                             <?php echo($product->price)?>
                                                             @else
                                                             <?php echo($product->sale_price)?>
                                                             @endif
                                                              đ/m2
                                                         </div>
+                                                        @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            @if($product->sale_price!=0)
                                                             <?php echo($product->price .' đ/m2')?>
-                                                            @else
-                                                            <?php echo('')?>
-                                                            @endif
                                                         </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
                                                         <!-- <div class="size small mb-1">
                                                             Kích thước: 12    x    115    x    1283 mm
                                                         </div> -->
@@ -962,20 +962,20 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->price)?>
-                                                                    @else
-                                                                    <?php echo($product->sale_price)?>
-                                                                    @endif
-                                                                     đ/m2
-                                                                </div>
-                                                                <div class="price-old">
-                                                            @if($product->sale_price!=0)
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
                                                             @else
-                                                            <?php echo('')?>
+                                                            <?php echo($product->sale_price)?>
                                                             @endif
+                                                             đ/m2
                                                         </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
                                                                 <!-- <div class="size small mb-1">
                                                                     Kích thước: 8    x    146    x    1221 mm
                                                                 </div> -->
