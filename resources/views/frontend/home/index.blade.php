@@ -46,7 +46,7 @@
                                 <a class="navbar-brand d-none d-md-block" href="{{route('home.index')}}" title="">
                                     <img src="{!!$share_config->image!!}" style="width:100px" class="img-fluid" />
                                 </a>
-                                <a class="navbar-brand d-md-none" href="index.html" title="">
+                                <a class="navbar-brand d-md-none" href="{{route('home.index')}}" title="">
                                     <img src="{!!$share_config->image!!}" style="width:80px" class="img-fluid" />
                                 </a>
                                 <div class="d-md-none">
