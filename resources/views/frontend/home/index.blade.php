@@ -47,7 +47,7 @@
                                     <img src="{!!$share_config->image!!}" style="width:100px" class="img-fluid" />
                                 </a>
                                 <a class="navbar-brand d-md-none" href="index.html" title="">
-                                    <img src="{!!$share_config->image!!}" class="img-fluid" />
+                                    <img src="{!!$share_config->image!!}" style="width:80px" class="img-fluid" />
                                 </a>
                                 <div class="d-md-none">
                                     <div class="input-group form-search flex-nowrap mr-2 width-mb" style="width: 210px;">
@@ -91,7 +91,7 @@
                                     <button class="btn p-0 dropdown-cart-trigger-mobile" @*onclick="$('.cart-mobile').toggle(100, 'swing');" *@>
                                     <div class="icon ">
                                         <img src="images/cart-icone209.svg?v=1.0.0" class="img-fluid mr-2 icon-nav" />
-                                        <div id="cart-count-mobile" class="amount">
+                                        <div id="cart-count-mobile" class="amount">0
                                         </div>
                                     </div>
                                     </button>
@@ -203,10 +203,10 @@
                             </nav>
                         </div>
                     </div>
-                    <div class="local-mobile container d-flex d-md-none small py-2" style="background: #C8EBFD;">
+<!--                     <div class="local-mobile container d-flex d-md-none small py-2" style="background: #C8EBFD;">
                         <div><i class="fas fa-map-marker-alt mr-2" style="color: #1A468F;"></i>Bạn đang xem sản phẩm tại Hà Nội</div>
                         <a href="#" rel="nofollow" class="btn-link ml-auto" style="text-decoration: underline;" data-toggle="modal" data-target="#modal-khu-vuc">Đổi</a>
-                    </div>
+                    </div> -->
                     <section>
                         <section class="bg-fff  pb-1">
                             <div class="menu-fix home">
@@ -482,7 +482,7 @@
                             Bạn còn <span class="dropdown-quantity-cart"></span> sản phẩm trong giỏ hàng
                         </div>
                         <div class="h6 ml-auto">
-                            <a rel="nofollow" href="gio-hang.html" id="link-target-cart-mobile" class="btn-link link-view-more text-uppercase">XEM GIỎ HÀNG</a><br />
+                            <a rel="nofollow" href="javascript:void(0)" id="link-target-cart-mobile" class="btn-link link-view-more text-uppercase">XEM GIỎ HÀNG</a><br />
                             <a rel="nofollow" href="javascript:void(0)" id="link-clear-cart" class="btn-link link-view-more text-uppercase">Clear Cart Teserd</a><br />
                         </div>
                     </div>
@@ -820,6 +820,17 @@
                                         </div>
                                         <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                             <div class="menu-op align-self-center mr-lg-3">
+                                                <!--menu mobile-->
+                                                <div class="d-flex flex-wrap d-lg-none">
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region active" data-region-id="1486">Sàn Gỗ công nghiệp bán chạy</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1456">Malaysia</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1427">Việt Nam</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1457">Sàn Đức</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1454">Hàn quốc</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1424">Sàn gỗ EcoFloor</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1455">Thái Lan</a>
+                                                </div>
+                                                <!--menu mobile end-->
                                                 <!--menu pc-->
                                                 <div class="swiper-container d-none d-lg-block">
                                                     <!-- Additional required wrapper -->
