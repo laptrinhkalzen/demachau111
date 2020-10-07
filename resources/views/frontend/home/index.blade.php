@@ -788,15 +788,14 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -913,15 +912,14 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -963,15 +961,14 @@
                                                                 </h5>
                                                                 <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1017,15 +1014,14 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1067,15 +1063,14 @@
                                                                 </h5>
                                                                 <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1200,15 +1195,14 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1253,15 +1247,14 @@
                                                                 </h5>
                                                                 <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1307,15 +1300,14 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1354,15 +1346,14 @@
                                                                 </h5>
                                                                 <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1433,15 +1424,14 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1551,15 +1541,14 @@
                                                     </h5>
                                                     <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1604,15 +1593,14 @@
                                                             </h5>
                                                             <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1658,15 +1646,14 @@
                                                     </h5>
                                                     <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1708,15 +1695,14 @@
                                                             </h5>
                                                             <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1818,15 +1804,14 @@
                                                     </h5>
                                                     <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1871,15 +1856,14 @@
                                                             </h5>
                                                             <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1925,15 +1909,14 @@
                                                     </h5>
                                                     <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -1975,15 +1958,14 @@
                                                             </h5>
                                                             <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -2091,15 +2073,14 @@
                                                     </h5>
                                                     <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -2144,15 +2125,14 @@
                                                             </h5>
                                                             <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -2198,15 +2178,14 @@
                                                     </h5>
                                                     <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -2248,15 +2227,14 @@
                                                             </h5>
                                                             <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
@@ -2326,15 +2304,14 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->price)?>
+                                                            <?php echo($product->getPrice())?>
                                                             @else
-                                                            <?php echo($product->sale_price)?>
+                                                            <?php echo($product->getSalePrice())?>
                                                             @endif
-                                                             đ/m2
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->price .' đ/m2')?>
+                                                            <?php echo($product->getPrice())?>
                                                         </div>
                                                         @else
                                                         &nbsp
