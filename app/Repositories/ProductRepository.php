@@ -160,10 +160,15 @@ class ProductRepository extends AbstractRepository {
         $industry = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
         return $this->model->where('status', 1)->whereIn('id', $industry)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
+
     public function getNatureProduct($limit) {
         $category = \DB::table('category')->where('alias', 'san-go-tu-nhien')->pluck('id');
         $nature = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
         return $this->model->where('status', 1)->whereIn('id', $nature)->orderBy('post_schedule', 'desc')->take($limit)->get();
+    }
+
+    public function getSaleProduct($limit) {
+        return $this->model->where('status', 1)->where('sale_price', '!=','0')->orderBy('sale_price', 'desc')->take($limit)->get();
     }
 
     public function readSearchProduct($keywords) {

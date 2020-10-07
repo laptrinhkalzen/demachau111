@@ -40,7 +40,7 @@ class FrontendController extends Controller {
         $product_hl = $this->productRepo->readHlProduct($limit = 6);
         $industry = $this->productRepo->getIndustryProduct($limit = 8);
         $nature = $this->productRepo->getNatureProduct($limit = 8);
-        $sale = $this->productRepo->getIndustryProduct($limit = 6);
+        $sale = $this->productRepo->getSaleProduct($limit = 10);
         $plastic = $this->productRepo->getIndustryProduct($limit = 8);
         $news_arr = $this->newsRepo->getAllNews($limit = 7);
         if (config('global.device') != 'pc') {
