@@ -2369,7 +2369,7 @@
                             </div>
                         </div>
                     </section>
-                @foreach ($banner_mid as $key => $banner)
+                @foreach ($banner_end as $key => $banner)
                 <section class="container mb-4">
                     <div class="banner-in py-5"
                         style="background: url({!!$banner->getImage()!!}) no-repeat center;background-size: cover;">
