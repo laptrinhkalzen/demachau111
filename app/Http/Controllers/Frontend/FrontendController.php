@@ -41,7 +41,7 @@ class FrontendController extends Controller {
         $industry = $this->productRepo->getIndustryProduct($limit = 8);
         $nature = $this->productRepo->getNatureProduct($limit = 8);
         $sale = $this->productRepo->getSaleProduct($limit = 10);
-        $plastic = $this->productRepo->getIndustryProduct($limit = 8);
+        $plastic = $this->productRepo->getPlasticProduct($limit = 8);
         $news_arr = $this->newsRepo->getAllNews($limit = 7);
         if (config('global.device') != 'pc') {
             return view('mobile/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature', 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all'));

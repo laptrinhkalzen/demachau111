@@ -158,13 +158,19 @@ class ProductRepository extends AbstractRepository {
     public function getIndustryProduct($limit) {
         $category = \DB::table('category')->where('alias', 'san-go-cong-nghiep')->pluck('id');
         $industry = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
-        return $this->model->where('status', 1)->whereIn('id', $industry)->orderBy('post_schedule', 'desc')->take($limit)->get();
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $industry)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
 
     public function getNatureProduct($limit) {
         $category = \DB::table('category')->where('alias', 'san-go-tu-nhien')->pluck('id');
         $nature = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
-        return $this->model->where('status', 1)->whereIn('id', $nature)->orderBy('post_schedule', 'desc')->take($limit)->get();
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $nature)->orderBy('post_schedule', 'desc')->take($limit)->get();
+    }
+
+    public function getPlasticProduct($limit) {
+        $category = \DB::table('category')->where('alias', 'san-nhua')->pluck('id');
+        $plastic = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $plastic)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
 
     public function getSaleProduct($limit) {

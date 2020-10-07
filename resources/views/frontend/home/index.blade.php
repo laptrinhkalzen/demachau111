@@ -1481,7 +1481,7 @@
                             <div class="container">
                                 <div class="row mb-3 no-gutters ">
                                     <div class="col-md-3 col-12 mb-2 mb-md-0">
-                                        <a href="javascript:void(0)" class="h5 font-weight-bold ">Nội thất loại 3</a>
+                                        <a href="javascript:void(0)" class="h5 font-weight-bold ">Sàn nhựa</a>
                                     </div>
                                     <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                         <div class="menu-op align-self-center mr-lg-3">
@@ -1492,17 +1492,32 @@
                                                     <!-- Slides -->
                                                     <div class="swiper-slide">
                                                         <div>
-                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1485">Option 1</a>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1485">Sàn nhựa bán chạy</a>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div>
-                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1452">Option 2</a>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1452">Florton SPC hèm khóa</a>
                                                         </div>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <div>
-                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1444">Option 3</a>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1444">Ecofloor Vinyl</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1428">Sàn Railflex</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1451">Sàn Galaxy</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1453">Sàn nhựa Mines</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1524,25 +1539,34 @@
                                         <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                                             <div class="item-product item-product-large">
                                                 <div class="image">
-                                                    <a href="san-nhua-ecofloor-vinyl-fy7043-1.html">
-                                                        <img src="{{$product->getImage()}}" class="img-fluid lazy" style="height: 300px" alt="Sàn nhựa ECOFLOOR VINYL FY7043-1" />
+                                                    <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                        <img src="{{$product->getImage()}}" class="img-fluid lazy" style="height: 250px" />
                                                     </a>
                                                 </div>
                                                 <div class="py-1">
                                                     <h5 class="title">
-                                                    <a href="san-nhua-ecofloor-vinyl-fy7043-1.html" title="Sàn nhựa ECOFLOOR VINYL FY7043-1">
+                                                    <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
                                                         {!!$product->title!!}
                                                     </a>
                                                     </h5>
                                                     <div class="price-new">
-                                                        98.000đ đ / m2
-                                                    </div>
-                                                    <div class="price-old">
-                                                        125.000đđ
-                                                    </div>
-                                                    <div class="size small mb-1">
+                                                            @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                    <!-- <div class="size small mb-1">
                                                         Kích thước: 2 x 152 x 914 mm
-                                                    </div>
+                                                    </div> -->
                                                     <div class="review d-flex">
                                                         <div class="color-FFAB1B mr-2">
                                                             0,0/5<i class="fas fa-star ml-1"></i>
@@ -1566,26 +1590,36 @@
                                                 @endif
                                                 <div class="col-md-4 col-sm-4 col-6 ">
                                                     <div class="item-product" data-id="26375" data-properties="">
-                                                        <div class="tag-1">
-                                                        </div>
                                                         <div class="image">
-                                                            <a href="san-nhua-ecofloor-vinyl-fy6029-3.html"><img src="{{$product->getImage()}}" class="lazy img-fluid" alt="Sàn nhựa ECOFLOOR VINYL FY6029-3" /></a>
+                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="width: 200px; height: 200px; object-fit: cover;" class="lazy img-fluid" /></a>
                                                             <div class="tag-2">
                                                                 <img src="" class="img-fluid tag-2-thumb" />
                                                             </div>
                                                         </div>
                                                         <div class="">
                                                             <h5 class="title">
-                                                            <a href="san-nhua-ecofloor-vinyl-fy6029-3.html" title="Sàn nhựa ECOFLOOR VINYL FY6029-3">
+                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
                                                                 {!!$product->title!!}
                                                             </a>
                                                             </h5>
                                                             <div class="price-new">
-                                                                125.000đ đ / m2
-                                                            </div>
-                                                            <div class="size small mb-1">
+                                                            @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                            <!-- <div class="size small mb-1">
                                                                 Kích thước: 2 x 152 x 914 mm
-                                                            </div>
+                                                            </div> -->
                                                             <div class="review d-flex">
                                                                 <div class="color-FFAB1B mr-2">
                                                                     0,0/5<i class="fas fa-star ml-1"></i>
@@ -1612,22 +1646,34 @@
                                         <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                                             <div class="item-product item-product-large">
                                                 <div class="image">
-                                                    <a href="san-nhua-hem-khoa-florton-spc-fs4809.html">
-                                                        <img src="{{$product->getImage()}}" class="lazy img-fluid" style="height: 300px" alt="Sàn nhựa hèm khóa Florton SPC FS4809" />
+                                                    <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                        <img src="{{$product->getImage()}}" class="lazy img-fluid" style="height: 250px" />
                                                     </a>
                                                 </div>
                                                 <div class="py-1">
                                                     <h5 class="title">
-                                                    <a href="san-nhua-hem-khoa-florton-spc-fs4809.html" title="Sàn nhựa hèm khóa Florton SPC FS4809">
+                                                    <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" >
                                                         {!!$product->title!!}
                                                     </a>
                                                     </h5>
                                                     <div class="price-new">
-                                                        265.000đ đ / m2
-                                                    </div>
-                                                    <div class="size small mb-1">
+                                                            @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                    <!-- <div class="size small mb-1">
                                                         Kích thước: 4 x 153 x 1224 mm
-                                                    </div>
+                                                    </div> -->
                                                     <div class="review d-flex">
                                                         <div class="color-FFAB1B mr-2">
                                                             0,0/5<i class="fas fa-star ml-1"></i>
@@ -1648,26 +1694,36 @@
                                                 @endif
                                                 <div class="col-md-4 col-sm-4 col-6 ">
                                                     <div class="item-product" data-id="93737" data-properties="">
-                                                        <div class="tag-1">
-                                                        </div>
                                                         <div class="image">
-                                                            <a href="san-nhua-hem-khoa-florton-spc-fs4803.html"><img src="{{$product->getImage()}}" class="lazy img-fluid"/></a>
+                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid"/></a>
                                                             <div class="tag-2">
                                                                 <img src="" class="img-fluid tag-2-thumb" />
                                                             </div>
                                                         </div>
                                                         <div class="">
                                                             <h5 class="title">
-                                                            <a href="san-nhua-hem-khoa-florton-spc-fs4803.html" title="Sàn nhựa hèm khóa Florton SPC FS4803">
+                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
                                                                 {!!$product->title!!}
                                                             </a>
                                                             </h5>
                                                             <div class="price-new">
-                                                                265.000đ đ / m2
-                                                            </div>
-                                                            <div class="size small mb-1">
+                                                            @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                            <!-- <div class="size small mb-1">
                                                                 Kích thước: 4 x 153 x 1224 mm
-                                                            </div>
+                                                            </div> -->
                                                             <div class="review d-flex">
                                                                 <div class="color-FFAB1B mr-2">
                                                                     0,0/5<i class="fas fa-star ml-1"></i>
