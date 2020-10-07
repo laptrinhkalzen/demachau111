@@ -370,13 +370,13 @@
                                                     </div>
                                                 </li>
                                                 <!--Nút xem thêm-->
-                                                <!-- <li class="list-group-item" style="cursor: pointer;">
+                                                <li class="list-group-item" style="cursor: pointer;">
                                                     <i class="fas fa-plus mr-3"></i>Xem thêm
-                                                </li> -->
+                                                </li>
                                             </ul>
                                             <ul class="row menu-cate-mobile  d-md-none no-gutters">
                                                 <div class="col-3 px-1">
-                                                    <a href="san-go-cong-nghiep.html" class="btn btn-cate">
+                                                    <a href="javascript:void(0)" class="btn btn-cate">
                                                         <img src="../noithathunggia/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
@@ -385,7 +385,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-3 px-1">
-                                                    <a href="san-go-tu-nhien.html" class="btn btn-cate">
+                                                    <a href="javascript:void(0)" class="btn btn-cate">
                                                         <img src="../noithathunggia/uploads/2020/05/21/gotunhiene209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
@@ -394,7 +394,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-3 px-1">
-                                                    <a href="san-nhua.html" class="btn btn-cate">
+                                                    <a href="javascript:void(0)" class="btn btn-cate">
                                                         <img src="../noithathunggia/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
@@ -403,7 +403,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-3 px-1">
-                                                    <a href="san-go-ngoai-troi.html" class="btn btn-cate">
+                                                    <a href="javascript:void(0)" class="btn btn-cate">
                                                         <img src="../noithathunggia/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
@@ -412,7 +412,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-3 px-1">
-                                                    <a href="phu-kien.html" class="btn btn-cate">
+                                                    <a href="javascript:void(0)" class="btn btn-cate">
                                                         <img src="../noithathunggia/uploads/2020/05/21/cleane209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
@@ -421,7 +421,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-3 px-1">
-                                                    <a href="san-go-thanh-ly.html" class="btn btn-cate">
+                                                    <a href="javascript:void(0)" class="btn btn-cate">
                                                         <img src="../noithathunggia/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
@@ -430,7 +430,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-3 px-1">
-                                                    <a href="trang-tri-noi-that.html" class="btn btn-cate">
+                                                    <a href="javascript:void(0)" class="btn btn-cate">
                                                         <img src="../noithathunggia/uploads/2020/05/21/bede209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
@@ -439,7 +439,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-3 px-1">
-                                                    <a href="trang-tri-ngoai-that.html" class="btn btn-cate">
+                                                    <a href="javascript:void(0)" class="btn btn-cate">
                                                         <img src="../noithathunggia/uploads/2020/05/21/homee209.png?v=1.0.0"
                                                         class="img-fluid mb-2" />
                                                         <div>
