@@ -2369,10 +2369,10 @@
                             </div>
                         </div>
                     </section>
-                
+                @foreach ($banner_mid as $key => $banner)
                 <section class="container mb-4">
                     <div class="banner-in py-5"
-                        style="background: url(../noithathunggia/uploads/2020/06/03/bn-pk-fix.jpg) no-repeat center;background-size: cover;">
+                        style="background: url({!!$banner->getImage()!!}) no-repeat center;background-size: cover;">
                         <div class="row justify-content-center">
                             <div class="col-xl-6 col-md-8 col-sm-8 col-12">
                                 <div>
@@ -2384,6 +2384,7 @@
                         </div>
                     </div>
                 </section>
+                @endforeach
                 <div class="container blog-video">
                     <div class="heading pb-2  mb-3 d-flex">
                         <div class="h5 font-weight-600 mb-0 ">
