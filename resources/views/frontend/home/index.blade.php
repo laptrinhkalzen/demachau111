@@ -1747,6 +1747,279 @@
                         </div>
                     </div>
                 </section>
+                                <section class="my-4 san-go-nb">
+                    <div class="container ">
+                        <div class="bg-fff pt-3 border-r-4" >
+                            <div class="container">
+                                <div class="row mb-3 no-gutters ">
+                                    <div class="col-md-3 col-12 mb-2 mb-md-0">
+                                        <a href="javascript:void(0)" class="h5 font-weight-bold ">Sàn nhựa</a>
+                                    </div>
+                                    <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
+                                        <div class="menu-op align-self-center mr-lg-3">
+                                            <!--menu pc-->
+                                            <div class="swiper-container d-none d-lg-block">
+                                                <!-- Additional required wrapper -->
+                                                <div class="swiper-wrapper">
+                                                    <!-- Slides -->
+                                                    <div class="swiper-slide">
+                                                        <div>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1485">Sàn nhựa bán chạy</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1452">Florton SPC hèm khóa</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1444">Ecofloor Vinyl</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1428">Sàn Railflex</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1451">Sàn Galaxy</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div>
+                                                            <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1453">Sàn nhựa Mines</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--menu pc end-->
+                                        </div>
+                                        <div class=" align-self-center  ">
+                                            <a href="javascript:void(0)" class="link-view-more url-old-link">Xem tất cả</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="_binding_product">
+                                    <div class="set-total" data-total="8" data-id="1485" style="display:none"></div>
+                                    <div class="row no-gutters mb-3 mb-md-0">
+                                        @foreach($plastic as $key => $product)
+                                        @if($key == 1)
+                                        @break
+                                        @endif
+                                        <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+                                            <div class="item-product item-product-large">
+                                                <div class="image">
+                                                    <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                        <img src="{{$product->getImage()}}" class="img-fluid lazy" style="height: 250px" />
+                                                    </a>
+                                                </div>
+                                                <div class="py-1">
+                                                    <h5 class="title">
+                                                    <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                        {!!$product->title!!}
+                                                    </a>
+                                                    </h5>
+                                                    <div class="price-new">
+                                                            @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                    <!-- <div class="size small mb-1">
+                                                        Kích thước: 2 x 152 x 914 mm
+                                                    </div> -->
+                                                    <div class="review d-flex">
+                                                        <div class="color-FFAB1B mr-2">
+                                                            0,0/5<i class="fas fa-star ml-1"></i>
+                                                        </div>
+                                                        <div class="color-828282">
+                                                            0 đánh giá
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                        <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+                                            <div class="row no-gutters h-100 ">
+                                                @foreach($plastic as $key => $product)
+                                                @if($key == 0 || $key == 1)
+                                                @continue
+                                                @endif
+                                                @if($key == 5)
+                                                @break
+                                                @endif
+                                                <div class="col-md-4 col-sm-4 col-6 ">
+                                                    <div class="item-product" data-id="26375" data-properties="">
+                                                        <div class="image">
+                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="width: 200px; height: 200px; object-fit: cover;" class="lazy img-fluid" /></a>
+                                                            <div class="tag-2">
+                                                                <img src="" class="img-fluid tag-2-thumb" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <h5 class="title">
+                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                                {!!$product->title!!}
+                                                            </a>
+                                                            </h5>
+                                                            <div class="price-new">
+                                                            @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                            <!-- <div class="size small mb-1">
+                                                                Kích thước: 2 x 152 x 914 mm
+                                                            </div> -->
+                                                            <div class="review d-flex">
+                                                                <div class="color-FFAB1B mr-2">
+                                                                    0,0/5<i class="fas fa-star ml-1"></i>
+                                                                </div>
+                                                                <div class="color-828282">
+                                                                    0 đánh giá
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row no-gutters">
+                                        @foreach($plastic as $key => $product)
+                                        @if($key == 0)
+                                        @continue
+                                        @endif
+                                        @if($key == 2)
+                                        @break
+                                        @endif
+                                        <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+                                            <div class="item-product item-product-large">
+                                                <div class="image">
+                                                    <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                        <img src="{{$product->getImage()}}" class="lazy img-fluid" style="height: 250px" />
+                                                    </a>
+                                                </div>
+                                                <div class="py-1">
+                                                    <h5 class="title">
+                                                    <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" >
+                                                        {!!$product->title!!}
+                                                    </a>
+                                                    </h5>
+                                                    <div class="price-new">
+                                                            @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                    <!-- <div class="size small mb-1">
+                                                        Kích thước: 4 x 153 x 1224 mm
+                                                    </div> -->
+                                                    <div class="review d-flex">
+                                                        <div class="color-FFAB1B mr-2">
+                                                            0,0/5<i class="fas fa-star ml-1"></i>
+                                                        </div>
+                                                        <div class="color-828282">
+                                                            0 đánh giá
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                        <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+                                            <div class="row no-gutters h-100 ">
+                                                @foreach($plastic as $key => $product)
+                                                @if($key < 5)
+                                                @continue
+                                                @endif
+                                                <div class="col-md-4 col-sm-4 col-6 ">
+                                                    <div class="item-product" data-id="93737" data-properties="">
+                                                        <div class="image">
+                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="lazy img-fluid"/></a>
+                                                            <div class="tag-2">
+                                                                <img src="" class="img-fluid tag-2-thumb" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <h5 class="title">
+                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                                {!!$product->title!!}
+                                                            </a>
+                                                            </h5>
+                                                            <div class="price-new">
+                                                            @if($product->sale_price==0)
+                                                            <?php echo($product->price)?>
+                                                            @else
+                                                            <?php echo($product->sale_price)?>
+                                                            @endif
+                                                             đ/m2
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            <?php echo($product->price .' đ/m2')?>
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                            <!-- <div class="size small mb-1">
+                                                                Kích thước: 4 x 153 x 1224 mm
+                                                            </div> -->
+                                                            <div class="review d-flex">
+                                                                <div class="color-FFAB1B mr-2">
+                                                                    0,0/5<i class="fas fa-star ml-1"></i>
+                                                                </div>
+                                                                <div class="color-828282">
+                                                                    0 đánh giá
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="view-remain-product" data-skip="8" data-size="" data-id="">
+                                    <div class="see-more"><i class="fas fa-angle-double-right"></i> Xem thêm <span class="remain-product"><b>0</b></span> sản phẩm </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
                 <section class="container mb-4">
                     <div class="banner-in py-5"
                         style="background: url(../noithathunggia/uploads/2020/06/03/bn-pk-fix.jpg) no-repeat center;background-size: cover;">
