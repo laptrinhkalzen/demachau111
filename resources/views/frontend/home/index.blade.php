@@ -203,7 +203,7 @@
                             </nav>
                         </div>
                     </div>
-<!--                     <div class="local-mobile container d-flex d-md-none small py-2" style="background: #C8EBFD;">
+                    <!--                     <div class="local-mobile container d-flex d-md-none small py-2" style="background: #C8EBFD;">
                         <div><i class="fas fa-map-marker-alt mr-2" style="color: #1A468F;"></i>Bạn đang xem sản phẩm tại Hà Nội</div>
                         <a href="#" rel="nofollow" class="btn-link ml-auto" style="text-decoration: underline;" data-toggle="modal" data-target="#modal-khu-vuc">Đổi</a>
                     </div> -->
@@ -1124,6 +1124,15 @@
                                         </div>
                                         <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                             <div class="menu-op align-self-center mr-lg-3">
+                                                <!--menu mobile-->
+                                                <div class="d-flex flex-wrap d-lg-none">
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region active" data-region-id="1483">Sàn gỗ tự nhiên bán chạy</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1449">Gỗ gõ đỏ</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1450">Gỗ Giáng hương</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1448">Gỗ Sồi</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1447">Gỗ Teak </a>
+                                                </div>
+                                                <!--menu mobile end-->
                                                 <!--menu pc-->
                                                 <div class="swiper-container d-none d-lg-block">
                                                     <!-- Additional required wrapper -->
@@ -1465,6 +1474,16 @@
                                         </div>
                                         <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                             <div class="menu-op align-self-center mr-lg-3">
+                                                <!--menu mobile-->
+                                                <div class="d-flex flex-wrap d-lg-none">
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region active" data-region-id="1485">Sàn nhựa bán chạy</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1452">Florton SPC hèm khóa</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1444">Ecofloor Vinyl</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1428">Sàn Railflex</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1451">Sàn Galaxy</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1453">Sàn nhựa Mines</a>
+                                                </div>
+                                                <!--menu mobile end-->
                                                 <!--menu pc-->
                                                 <div class="swiper-container d-none d-lg-block">
                                                     <!-- Additional required wrapper -->
@@ -1733,6 +1752,15 @@
                                         </div>
                                         <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                             <div class="menu-op align-self-center mr-lg-3">
+                                                <!--menu mobile-->
+                                                <div class="d-flex flex-wrap d-lg-none">
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region active" data-region-id="1488">Sàn gỗ ngoài trời bán chạy</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1462">Sàn Timberman</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1460">Sàn sân vườn</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1459">Sàn bể bơi</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1461">Sàn JANWOOD</a>
+                                                </div>
+                                                <!--menu mobile end-->
                                                 <!--menu pc-->
                                                 <div class="swiper-container d-none d-lg-block">
                                                     <!-- Additional required wrapper -->
@@ -1996,6 +2024,16 @@
                                         </div>
                                         <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                             <div class="menu-op align-self-center mr-lg-3">
+                                                <!--menu mobile-->
+                                                <div class="d-flex flex-wrap d-lg-none">
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region active" data-region-id="1493">Trang trí nội thất bán chạy</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1491">Ốp Nano TimberMan</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1481">Giấy dán tường</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1489">ốp tường trương nhà</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1463">Thảm trải sàn 2020</a>
+                                                    <a href="javascript:void(0)" class="link-view-more font-weight-normal mr-3 tab-region " data-region-id="1433">Rèm cửa HOT</a>
+                                                </div>
+                                                <!--menu mobile end-->
                                                 <!--menu pc-->
                                                 <div class="swiper-container d-none d-lg-block">
                                                     <!-- Additional required wrapper -->
