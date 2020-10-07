@@ -47,7 +47,7 @@
                                     <img src="{!!$share_config->image!!}" style="width:100px" class="img-fluid" />
                                 </a>
                                 <a class="navbar-brand d-md-none" href="index.html" title="">
-                                    <img src="images/logo_mobile_2e209.png?v=1.0.0" alt="" class="img-fluid" />
+                                    <img src="{!!$share_config->image!!}" class="img-fluid" />
                                 </a>
                                 <div class="d-md-none">
                                     <div class="input-group form-search flex-nowrap mr-2 width-mb" style="width: 210px;">
@@ -584,7 +584,7 @@
                                             <div class="swiper-slide">
                                                 <div class="image image-fixed">
                                                     <a href="javascript:void(0)">
-                                                        <img src="{!!$product->getImage()!!}" style="height: 340px;; object-fit: cover;"class="d-block w-100" alt="noithathunggia.vn">
+                                                        <img src="{!!$product->getImage()!!}" style="height: 340px; object-fit: cover;"class="d-block w-100" alt="noithathunggia.vn">
                                                     </a>
                                                 </div>
                                             </div>
