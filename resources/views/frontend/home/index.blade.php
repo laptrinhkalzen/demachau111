@@ -1420,7 +1420,7 @@
                                             <div class="swiper-slide">
                                                 <div class="item-product" data-id="92883" data-properties="">
                                                     <div class="image">
-                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" class="img-fluid lazy"/></a>
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="height: 200px; object-fit:cover;"class="img-fluid lazy"/></a>
                                                         <div class="tag-2">
                                                             <img src="" class="img-fluid tag-2-thumb" />
                                                         </div>
