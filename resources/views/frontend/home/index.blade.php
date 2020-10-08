@@ -598,7 +598,7 @@
                                             <div class="swiper-slide">
                                                 <div class="box-text">
                                                     <div class="text">
-                                                        {!!$product->title!!}
+                                                        {!!$product->button_text!!}
                                                     </div>
                                                 </div>
                                             </div>
@@ -761,7 +761,7 @@
                                                     </div>
                                                     <div class="">
                                                         <h5 class="title">
-                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ WOODMAN O127">
+                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" >
                                                             {!!$product->title!!}
                                                         </a>
                                                         </h5>
@@ -779,11 +779,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- @foreach($product->attributes as $key =>$attributes)
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$attributes->title!!} mm
+                                                            Kích thước: {!!$product->size!!} mm
                                                         </div>
-                                                        @endforeach -->
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 4,0/5<i class="fas fa-star ml-1"></i>
