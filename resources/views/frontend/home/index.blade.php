@@ -44,7 +44,7 @@
                         <div class="container">
                             <nav class="navbar navbar-expand-md py-md-2 px-0">
                                 <div class="col-3">
-                                <div class="col-6">
+                                <div class="col-">
                                 <a class="navbar-brand d-none d-md-block" href="{{route('home.index')}}" title="">
                                     <img src="{!!$share_config->image!!}" style="width:100px" class="img-fluid" />
                                 </a>
@@ -105,13 +105,16 @@
                                 onclick="$('.cate-mobile').toggle(100, 'swing');">
                                 <i class="fas fa-bars"></i>
                                 </button>
+                                
                                 <div class="collapse navbar-collapse w-100 align-self-center">
                                     <ul class=" navbar-nav ml-auto mt-4 mt-md-0 w-100 justify-content-xl-around">
                                         <li class="nav-item mr-md-3 align-self-center d-none d-md-block position-relative ">
+                                            <form action="{{route('games.search')}}" method="post">
+                                            {{csrf_field()}}
                                             <div class="input-group form-search flex-nowrap mb-1 ">
-                                                <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm....">
+                                                <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm....123" name="key" id="search">
                                                 <div class="input-group-append es-search-button">
-                                                    <button class="btn btn-search">
+                                                    <button class="btn btn-search" type="submit">
                                                     <img src="images/searche209.svg?v=1.0.0" class="img-fluid" />
                                                     </button>
                                                 </div>
@@ -143,6 +146,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            </form>
                                         </li>
                                         <li class="nav-item dropdown mr-md-3 align-self-md-center   mb-md-0 cart">
                                             <a rel="nofollow" class="d-flex dropdown-cart-trigger" href="javascript:void(0)">

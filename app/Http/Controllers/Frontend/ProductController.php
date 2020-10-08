@@ -66,11 +66,8 @@ class ProductController extends Controller {
     public function search(Request $request) {
          ini_set('memory_limit', '2048M');
         $keywords = $request->key;
-        $product_new = $this->productRepo->readHlProduct();
-        $product_hl = $this->productRepo->readHlProduct();
-        $product_cs = $this->productRepo->readCsProduct();
         $search_product = $this->productRepo->readSearchProduct($keywords);
-       return view('frontend/product/search',compact('product_new','product_hl','product_cs','search_product'));
+       return view('frontend/home/search',compact('search_product'));
     } 
 
     public function filter(Request $request){
