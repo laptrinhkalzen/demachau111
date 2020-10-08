@@ -44,12 +44,14 @@
                         <div class="container">
                             <nav class="navbar navbar-expand-md py-md-2 px-0">
                                 <div class="col-3">
+                                <div class="col-6">
                                 <a class="navbar-brand d-none d-md-block" href="{{route('home.index')}}" title="">
                                     <img src="{!!$share_config->image!!}" style="width:100px" class="img-fluid" />
                                 </a>
                                 <a class="navbar-brand d-md-none" href="{{route('home.index')}}" title="">
                                     <img src="{!!$share_config->image!!}" style="width:80px" class="img-fluid" />
                                 </a>
+                                </div>
                                 </div>
                                 <div class="d-md-none">
                                     <div class="input-group form-search flex-nowrap mr-2 width-mb" style="width: 210px;">
