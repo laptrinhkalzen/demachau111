@@ -43,12 +43,14 @@
                     <div class=" nav-center">
                         <div class="container">
                             <nav class="navbar navbar-expand-md py-md-2 px-0">
+                                <div class="col-3">
                                 <a class="navbar-brand d-none d-md-block" href="{{route('home.index')}}" title="">
                                     <img src="{!!$share_config->image!!}" style="width:100px" class="img-fluid" />
                                 </a>
                                 <a class="navbar-brand d-md-none" href="{{route('home.index')}}" title="">
                                     <img src="{!!$share_config->image!!}" style="width:80px" class="img-fluid" />
                                 </a>
+                                </div>
                                 <div class="d-md-none">
                                     <div class="input-group form-search flex-nowrap mr-2 width-mb" style="width: 210px;">
                                         <input type="text" class="form-control find-product " placeholder="Tìm sản phẩm....">
@@ -63,19 +65,19 @@
                                             </div>
                                             <div class="color-007DFF  px-3">
                                                 <div class="py-1">
-                                                    <a href="san-go-cong-nghiep.html">Sàn gỗ công nghiệp</a>
+                                                    <a href="javascript:void(0)">Sàn gỗ công nghiệp</a>
                                                 </div>
                                                 <div class="py-1">
-                                                    <a href="san-nhua.html">Sàn nhựa vinyl</a>
+                                                    <a href="javascript:void(0)">Sàn nhựa vinyl</a>
                                                 </div>
                                                 <div class="py-1">
-                                                    <a href="san-go-gia-re.html">Sàn gỗ công nghiệp giá rẻ</a>
+                                                    <a href="javascript:void(0)">Sàn gỗ công nghiệp giá rẻ</a>
                                                 </div>
                                                 <div class="py-1">
-                                                    <a href="san-go-ngoai-troi.html">Sàn gỗ ngoài trời</a>
+                                                    <a href="javascript:void(0)">Sàn gỗ ngoài trời</a>
                                                 </div>
                                                 <div class="py-1">
-                                                    <a href="san-go-thanh-ly.html">Sàn gỗ thanh lý</a>
+                                                    <a href="javascript:void(0)">Sàn gỗ thanh lý</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -87,6 +89,7 @@
                                     </div>
                                 </div>
                                 <!--22-4 Thêm btn giỏ hàng-->
+                                <div class="col-9">
                                 <div class="nav-item align-self-md-center mb-0 cart d-md-none">
                                     <button class="btn p-0 dropdown-cart-trigger-mobile" @*onclick="$('.cart-mobile').toggle(100, 'swing');" *@>
                                     <div class="icon ">
@@ -103,7 +106,6 @@
                                 </button>
                                 <div class="collapse navbar-collapse w-100 align-self-center">
                                     <ul class=" navbar-nav ml-auto mt-4 mt-md-0 w-100 justify-content-xl-around">
-                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                                         <li class="nav-item mr-md-3 align-self-center d-none d-md-block position-relative ">
                                             <div class="input-group form-search flex-nowrap mb-1 ">
                                                 <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm....">
@@ -118,19 +120,19 @@
                                                     </div>
                                                     <div class="color-007DFF  px-3">
                                                         <div class="py-1">
-                                                            <a href="san-go-cong-nghiep.html">Sàn gỗ công nghiệp</a>
+                                                            <a href="javascript:void(0)">Sàn gỗ công nghiệp</a>
                                                         </div>
                                                         <div class="py-1">
-                                                            <a href="san-nhua.html">Sàn nhựa vinyl</a>
+                                                            <a href="javascript:void(0)">Sàn nhựa vinyl</a>
                                                         </div>
                                                         <div class="py-1">
-                                                            <a href="san-go-gia-re.html">Sàn gỗ công nghiệp giá rẻ</a>
+                                                            <a href="javascript:void(0)">Sàn gỗ công nghiệp giá rẻ</a>
                                                         </div>
                                                         <div class="py-1">
-                                                            <a href="san-go-ngoai-troi.html">Sàn gỗ ngoài trời</a>
+                                                            <a href="javascript:void(0)">Sàn gỗ ngoài trời</a>
                                                         </div>
                                                         <div class="py-1">
-                                                            <a href="san-go-thanh-ly.html">Sàn gỗ thanh lý</a>
+                                                            <a href="javascript:void(0)">Sàn gỗ thanh lý</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -199,6 +201,7 @@
                                             </div>
                                         </li>
                                     </ul>
+                                </div>
                                 </div>
                             </nav>
                         </div>
