@@ -912,9 +912,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 12    x    115    x    1283 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -961,9 +961,9 @@
                                                                 @else
                                                                 &nbsp
                                                                 @endif
-                                                                <!-- <div class="size small mb-1">
-                                                                    Kích thước: 8    x    146    x    1221 mm
-                                                                </div> -->
+                                                                <div class="size small mb-1">
+                                                                    Kích thước: {!!$product->size!!} mm
+                                                                </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1014,9 +1014,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 9    x    195    x    1288 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1063,9 +1063,9 @@
                                                                 @else
                                                                 &nbsp
                                                                 @endif
-                                                                <!-- <div class="size small mb-1">
-                                                                    Kích thước: 12    x    114    x    1221 mm
-                                                                </div> -->
+                                                                <div class="size small mb-1">
+                                                                    Kích thước: {!!$product->size!!} mm
+                                                                </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         5,0/5<i class="fas fa-star ml-1"></i>
@@ -1204,9 +1204,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 15 x 90 x 750 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1256,9 +1256,9 @@
                                                                 @else
                                                                 &nbsp
                                                                 @endif
-                                                                <!-- <div class="size small mb-1">
-                                                                    Kích thước: 15 x 90 x 600 mm
-                                                                </div> -->
+                                                                <div class="size small mb-1">
+                                                                    Kích thước: {!!$product->size!!} mm
+                                                                </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1309,9 +1309,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 15 x 90-150 x 1830 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1355,9 +1355,9 @@
                                                                 @else
                                                                 &nbsp
                                                                 @endif
-                                                                <!-- <div class="size small mb-1">
-                                                                    Kích thước: 15 x 120 x 900 mm
-                                                                </div> -->
+                                                                <div class="size small mb-1">
+                                                                    Kích thước: {!!$product->size!!} mm
+                                                                </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1433,9 +1433,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 8 x 127 x 1225 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1560,9 +1560,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 2 x 152 x 914 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1612,9 +1612,9 @@
                                                                 @else
                                                                 &nbsp
                                                                 @endif
-                                                                <!-- <div class="size small mb-1">
-                                                                    Kích thước: 2 x 152 x 914 mm
-                                                                </div> -->
+                                                                <div class="size small mb-1">
+                                                                    Kích thước: {!!$product->size!!} mm
+                                                                </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1665,9 +1665,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 4 x 153 x 1224 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1714,9 +1714,9 @@
                                                                 @else
                                                                 &nbsp
                                                                 @endif
-                                                                <!-- <div class="size small mb-1">
-                                                                    Kích thước: 4 x 153 x 1224 mm
-                                                                </div> -->
+                                                                <div class="size small mb-1">
+                                                                    Kích thước: {!!$product->size!!} mm
+                                                                </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1832,9 +1832,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 2 x 152 x 914 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1884,9 +1884,9 @@
                                                                 @else
                                                                 &nbsp
                                                                 @endif
-                                                                <!-- <div class="size small mb-1">
-                                                                    Kích thước: 2 x 152 x 914 mm
-                                                                </div> -->
+                                                                <div class="size small mb-1">
+                                                                    Kích thước: {!!$product->size!!} mm
+                                                                </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1937,9 +1937,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 4 x 153 x 1224 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -1986,9 +1986,9 @@
                                                                 @else
                                                                 &nbsp
                                                                 @endif
-                                                                <!-- <div class="size small mb-1">
-                                                                    Kích thước: 4 x 153 x 1224 mm
-                                                                </div> -->
+                                                                <div class="size small mb-1">
+                                                                    Kích thước: {!!$product->size!!} mm
+                                                                </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -2110,9 +2110,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 2 x 152 x 914 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -2162,9 +2162,9 @@
                                                                 @else
                                                                 &nbsp
                                                                 @endif
-                                                                <!-- <div class="size small mb-1">
-                                                                    Kích thước: 2 x 152 x 914 mm
-                                                                </div> -->
+                                                                <div class="size small mb-1">
+                                                                    Kích thước: {!!$product->size!!} mm
+                                                                </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -2215,9 +2215,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- <div class="size small mb-1">
-                                                            Kích thước: 4 x 153 x 1224 mm
-                                                        </div> -->
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->size!!} mm
+                                                        </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 0,0/5<i class="fas fa-star ml-1"></i>
@@ -2264,9 +2264,9 @@
                                                                 @else
                                                                 &nbsp
                                                                 @endif
-                                                                <!-- <div class="size small mb-1">
-                                                                    Kích thước: 4 x 153 x 1224 mm
-                                                                </div> -->
+                                                                <div class="size small mb-1">
+                                                                    Kích thước: {!!$product->size!!} mm
+                                                                </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -2340,11 +2340,9 @@
                                                         @else
                                                         &nbsp
                                                         @endif
-                                                        <!-- @foreach($product->attributes as $key =>$attributes)
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$attributes->title!!} mm
+                                                            Kích thước: {!!$product->size!!} mm
                                                         </div>
-                                                        @endforeach -->
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
                                                                 4,0/5<i class="fas fa-star ml-1"></i>

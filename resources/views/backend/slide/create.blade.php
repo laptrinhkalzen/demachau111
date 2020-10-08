@@ -64,7 +64,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-form-label col-md-3 text-right">Sắp xếp </label>
+                                <label class="col-form-label col-md-3 text-right">Thứ tự </label>
                                 <div class="col-md-5">
                                     <input type="text" name="ordering" class="form-control touchspin text-center" value="1">
                                 </div>
