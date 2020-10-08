@@ -2426,7 +2426,7 @@
                         <div class="container">
                             <div class="row mb-4">
                                 <div class="col-6">
-                                    <a href="tu-van.html" class="h5 font-weight-bold">TƯ VẤN</a>
+                                    <a href="javascript:void(0)" class="h5 font-weight-bold">TƯ VẤN</a>
                                 </div>
                                 <div class="col-6 text-right">
                                     <a href="javascript:void(0)" class="link-view-more">Xem thêm <i class="fas fa-chevron-right ml-1 small"></i></a>
@@ -2443,16 +2443,16 @@
                                             <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" >
                                                 <img src="{{$news->getImage()}}" class="img-fluid lazy" width="100%" height="auto" />
                                             </a>
-                                            <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" title="4 điều bạn nhất định phải biết trước khi chọn mua sàn gỗ công nghiệp cho gia đình" class="">
+                                            <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" class="">
                                                 <h6 class="title h5 mt-3 ">
                                                 {!!$news->title!!}
                                                 </h6>
                                             </a>
                                             <div class="des">
-                                                <p>Nếu kh&ocirc;ng hiểu r&otilde; về s&agrave;n gỗ c&ocirc;ng nghiệp, kh&aacute;ch h&agrave;ng sẽ dễ mua phải v&aacute;n s&agrave;n c&ocirc;ng nghiệp kh&ocirc;ng ph&ugrave; hợp với nhu cầu, mục đ&iacute;ch sử dụng của m&igrave;nh.&nbsp;</p>
+                                                <p>{!!$news->description!!}</p>
                                             </div>
                                             <div class="text-right mb-3">
-                                                <a href="4-dieu-ban-nhat-dinh-phai-biet-truoc-khi-chon-mua-san-go-cong-nghiep-cho-gia-dinh.html" class="link-view-more">
+                                                <a href="javascript:void(0)" class="link-view-more">
                                                     Đọc tiếp<i class="fas fa-chevron-right ml-1 small"></i>
                                                 </a>
                                             </div>
@@ -2482,7 +2482,7 @@
                                                         <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" >{!!$news->title!!}</a>
                                                         </h6>
                                                         <div class="time">
-                                                            03/08/2020 05:29
+                                                            {!!$news->getPostSchedule()!!}
                                                         </div>
                                                     </div>
                                                 </div>
