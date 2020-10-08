@@ -58,6 +58,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
+                                        <label class="col-md-2 col-form-label text-right">Kích thước </label>
+                                        <div class="col-md-10">
+                                            <textarea class="form-control" name="size">{!!old('size')!!}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
                                         <label class="col-md-2  control-label text-right text-semibold" for="images">Hình ảnh:</label>
                                         <div class="col-lg-10 div-image">
                                             <div class="file-input file-input-ajax-new">
@@ -79,6 +85,7 @@
                                             <span class="help-block">Chỉ cho phép các file ảnh có đuôi <code>jpg</code>, <code>gif</code> và <code>png</code>. File có dung lượng tối đa 20M.</span>
                                         </div>
                                     </div>
+
 
                                 </fieldset>
                             </div>
