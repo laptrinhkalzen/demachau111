@@ -89,7 +89,6 @@
                                     </div>
                                 </div>
                                 <!--22-4 Thêm btn giỏ hàng-->
-                                <div class="col-9">
                                 <div class="nav-item align-self-md-center mb-0 cart d-md-none">
                                     <button class="btn p-0 dropdown-cart-trigger-mobile" @*onclick="$('.cart-mobile').toggle(100, 'swing');" *@>
                                     <div class="icon ">
@@ -201,7 +200,6 @@
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
                                 </div>
                             </nav>
                         </div>
