@@ -31,7 +31,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-2 col-form-label text-right">Tiêu đề <span class="text-danger">*</span></label>
                                         <div class="col-md-10">
-                                            <input type="text" class="form-control" name="title" value="{!!old('title')!!}" ="">
+                                            <input type="text" class="form-control" name="title" value="{!!old('title')!!}">
                                             {!! $errors->first('title', '<span class="text-danger">:message</span>') !!}
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-2 col-form-label text-right">Kích thước </label>
                                         <div class="col-md-10">
-                                            <textarea class="form-control" name="size">{!!old('size')!!}</textarea>
+                                            <input type="text" class="form-control" name="size" value="{!!old('size')!!}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
