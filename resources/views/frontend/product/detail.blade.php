@@ -107,7 +107,7 @@
                                         @foreach(explode(',', $product->images) as $key => $dowloadfile)
                                         <div class="swiper-slide">
                                             <div class="image">
-                                                <img src="{{$dowloadfile}}" class="img-fluid w-100 " alt="Sàn gỗ Florton FL669-1" />
+                                                <img src="{{$dowloadfile}}" class="img-fluid w-100 " style="height: 63.156px" />
                                             </div>
                                         </div>
                                         @endforeach

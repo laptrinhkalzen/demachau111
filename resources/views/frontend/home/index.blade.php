@@ -3028,17 +3028,17 @@
                 <script type="text/javascript" src="{!!asset('js/bootstrap.mine209.js?v=1.0.0')!!}"></script>
                 <script type="text/javascript" src="{!!asset('js/swiper.mine209.js?v=1.0.0')!!}"></script>
                 <script type="text/javascript" src="{!!asset('js/wow.mine209.js?v=1.0.0')!!}"></script>
-                <script type="text/javascript" src="{!!asset('js/libs/momentjs/momentJSe209.js?v=1.0.0')!!}"></script>
-                <script type="text/javascript" src="{!!asset('js/libs/daterangepicker-master/daterangepickere209.js?v=1.0.0')!!}"></script>
-                <script type="text/javascript" src="{!!asset('js/libs/paginationjs/paginationJSe209.js?v=1.0.0')!!}"></script>
-                <script type="text/javascript" src="{!!asset('js/libs/vakata-jstree-6dce227/jstree.mine209.js?v=1.0.0')!!}"></script>
+                <script type="text/javascript" src="{!!asset('js/momentJSe209.js?v=1.0.0')!!}"></script>
+                <script type="text/javascript" src="{!!asset('js/daterangepickere209.js?v=1.0.0')!!}"></script>
+                <script type="text/javascript" src="{!!asset('js/paginationJSe209.js?v=1.0.0')!!}"></script>
+                <script type="text/javascript" src="{!!asset('js/jstree.mine209.js?v=1.0.0')!!}"></script>
                 <script type="text/javascript" src="{!!asset('js/appe209.js?v=1.0.0')!!}"></script>
-                <script type="text/javascript" src="{!!asset('js/core/coree209.js?v=1.0.0')!!}"></script>
-                <script type="text/javascript" src="{!!asset('js/controller/menuControllere209.js?v=1.0.0')!!}"></script>
-                <script type="text/javascript" src="{!!asset('js/controller/orderControllere209.js?v=1.0.0')!!}"></script>
-                <script type="text/javascript" src="{!!asset('js/controller/extraControllere209.js?v=1.0.0')!!}"></script>
-                <script type="text/javascript" src="{!!asset('js/libs/yall-js/dist/yall.mine209.js?v=1.0.0')!!}"></script>
-                <script type="text/javascript" src="{!!asset('js/libs/jquery.lazy-master/jquery.lazye209.js?v=1.0.0')!!}"></script>
+                <script type="text/javascript" src="{!!asset('js/coree209.js?v=1.0.0')!!}"></script>
+                <script type="text/javascript" src="{!!asset('js/menuControllere209.js?v=1.0.0')!!}"></script>
+                <script type="text/javascript" src="{!!asset('js/orderControllere209.js?v=1.0.0')!!}"></script>
+                <script type="text/javascript" src="{!!asset('js/extraControllere209.js?v=1.0.0')!!}"></script>
+                <script type="text/javascript" src="{!!asset('js/yall-js/dist/yall.mine209.js?v=1.0.0')!!}"></script>
+                <script type="text/javascript" src="{!!asset('js/jquery.lazye209.js?v=1.0.0')!!}"></script>
                 <script type="text/javascript">
                 //document.addEventListener("DOMContentLoaded", yall);
                 $('.lazy').Lazy({
