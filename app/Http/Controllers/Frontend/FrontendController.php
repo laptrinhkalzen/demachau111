@@ -46,7 +46,7 @@ class FrontendController extends Controller {
         $decor = $this->productRepo->getDecorProduct($limit = 8);
         $houseware = $this->productRepo->getHousewareProduct($limit = 8);
         $news_arr = $this->newsRepo->getAllNews($limit = 7);
-        $category = $this->newsRepo->getCategoryProduct();
+        $category = $this->categoryRepo->getCategoryProduct();
         if (config('global.device') != 'pc') {
             return view('mobile/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature', 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all','outdoor','decor','houseware','category'));
         } else {
