@@ -65,6 +65,7 @@ class ProductController extends Controller {
 
     public function search(Request $request) {
          ini_set('memory_limit', '2048M');
+         $a = 1;
         $keywords = $request->key;
         $search_product = $this->productRepo->readSearchProduct($keywords);
        return view('frontend/home/search',compact('search_product'));
