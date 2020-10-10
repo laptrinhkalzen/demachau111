@@ -14,11 +14,12 @@ use App\Repositories\SlideRepository;
 
 class FrontendController extends Controller {
 
-    public function __construct(ProductRepository $productRepo, NewsRepository $newsRepo, ProductAttributeRepository $productAttributeRepo, SlideRepository $slideRepo) {
+    public function __construct(ProductRepository $productRepo, NewsRepository $newsRepo, ProductAttributeRepository $productAttributeRepo, SlideRepository $slideRepo, CategoryRepository $categoryRepo) {
         $this->productRepo = $productRepo;
         $this->newsRepo = $newsRepo;
         $this->productAttributeRepo = $productAttributeRepo;
         $this->slideRepo = $slideRepo;
+        $this->categoryRepo = $categoryRepo;
     }
     public function index() {
         //cart
