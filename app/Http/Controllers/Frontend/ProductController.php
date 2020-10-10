@@ -72,10 +72,8 @@ class ProductController extends Controller {
     } 
 
     public function filter(Request $request){
-        $hot_products_slide = $this->productRepo->readHlProduct($limit = 3);
         $platform_category = $this->categoryRepo->readPlatformCategory();
-        $os_category = $this->categoryRepo->readOSCategory();
-        $genre_category = $this->categoryRepo->readGenreCategory();
+        $category = $this->categoryRepo->readGenreCategory();
         foreach($request->genre_filter as $genre){
             $genre1=$genre;
             break;
@@ -88,7 +86,7 @@ class ProductController extends Controller {
         // $array = array($genre, $os, $platform);
         // $filter = implode(",", $array);
         $product_all = $this->productRepo->getFilterProduct($genre1);  
-        return view('frontend/product/all',compact('hot_products_slide','product_all','platform_category','os_category','genre_category'));
+        return view('frontend/home/search',compact('hot_products_slide','product_all','platform_category','os_category','genre_category'));
     }
     public function detail(Request $request,$alias) {
             $detail_products=  $this->productRepo->getDetailProduct($alias);

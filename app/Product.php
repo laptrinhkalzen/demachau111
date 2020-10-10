@@ -47,4 +47,12 @@ class Product extends Model {
     public function url() {
         return route('product.detail', ['alias' => $this->alias]);
     }
+
+    public function getSize() {
+        $size = $this->hasMany('App\ProductAttribute', 'product_id')->where('attribute_id', 5)->first();
+        if(is_null($size))
+        return "";
+        else
+        return $size->value;
+    }
 }

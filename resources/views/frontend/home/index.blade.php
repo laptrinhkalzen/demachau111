@@ -674,18 +674,10 @@
                                         <div class="row">
                                             <div class="col-12 mb-2">
                                                 <select class="form-control mb-2 mb-lg-0 filter-select zone-value">
-                                                    @foreach
+                                                    @foreach($category as $key=>$cat)
                                                     <option hidden value="0">Bạn muốn mua gì</option>
-                                                    <option value="15">Sàn gỗ công nghiệp</option>
-                                                    <option value="38">Sàn gỗ tự nhiên</option>
-                                                    <option value="34">Sàn nhựa vinyl</option>
-                                                    <option value="79">Sàn gỗ ngoài trời</option>
-                                                    <option value="43">Phụ kiện</option>
-                                                    <option value="89">Sàn gỗ thanh lý</option>
-                                                    <option value="281">Trang trí nội thất</option>
-                                                    <option value="367">Trang trí ngoại thất</option>
-                                                    <option value="594">Đồ gia dụng</option>
-                                                    <option value="806">Sàn tre</option>
+                                                    <option value="{!!$cat->id!!}">{!!$cat->title!!}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                             <div class="col-6 mb-2">
@@ -774,20 +766,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -907,20 +899,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -955,22 +947,22 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->getPrice())?>
-                                                                    @else
-                                                                    <?php echo($product->getSalePrice())?>
-                                                                    @endif
-                                                                </div>
-                                                                @if($product->sale_price!=0)
-                                                                <div class="price-old">
-                                                                    <?php echo($product->getPrice())?>
-                                                                </div>
-                                                                @else
-                                                                &nbsp
-                                                                @endif
-                                                                <div class="size small mb-1">
-                                                                    Kích thước: {!!$product->size!!} mm
-                                                                </div>
+                                                            @if($product->sale_price==0)
+                                                            {!!$product->getPrice()!!}
+                                                            @else
+                                                            {!!$product->getSalePrice()!!}
+                                                            @endif
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            {!!$product->getPrice()!!}
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->getSize()!!} mm
+                                                        </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1009,20 +1001,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -1057,22 +1049,22 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->getPrice())?>
-                                                                    @else
-                                                                    <?php echo($product->getSalePrice())?>
-                                                                    @endif
-                                                                </div>
-                                                                @if($product->sale_price!=0)
-                                                                <div class="price-old">
-                                                                    <?php echo($product->getPrice())?>
-                                                                </div>
-                                                                @else
-                                                                &nbsp
-                                                                @endif
-                                                                <div class="size small mb-1">
-                                                                    Kích thước: {!!$product->size!!} mm
-                                                                </div>
+                                                            @if($product->sale_price==0)
+                                                            {!!$product->getPrice()!!}
+                                                            @else
+                                                            {!!$product->getSalePrice()!!}
+                                                            @endif
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            {!!$product->getPrice()!!}
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->getSize()!!} mm
+                                                        </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         5,0/5<i class="fas fa-star ml-1"></i>
@@ -1199,20 +1191,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -1250,22 +1242,22 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->getPrice())?>
-                                                                    @else
-                                                                    <?php echo($product->getSalePrice())?>
-                                                                    @endif
-                                                                </div>
-                                                                @if($product->sale_price!=0)
-                                                                <div class="price-old">
-                                                                    <?php echo($product->getPrice())?>
-                                                                </div>
-                                                                @else
-                                                                &nbsp
-                                                                @endif
-                                                                <div class="size small mb-1">
-                                                                    Kích thước: {!!$product->size!!} mm
-                                                                </div>
+                                                            @if($product->sale_price==0)
+                                                            {!!$product->getPrice()!!}
+                                                            @else
+                                                            {!!$product->getSalePrice()!!}
+                                                            @endif
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            {!!$product->getPrice()!!}
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->getSize()!!} mm
+                                                        </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1304,20 +1296,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -1349,22 +1341,22 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->getPrice())?>
-                                                                    @else
-                                                                    <?php echo($product->getSalePrice())?>
-                                                                    @endif
-                                                                </div>
-                                                                @if($product->sale_price!=0)
-                                                                <div class="price-old">
-                                                                    <?php echo($product->getPrice())?>
-                                                                </div>
-                                                                @else
-                                                                &nbsp
-                                                                @endif
-                                                                <div class="size small mb-1">
-                                                                    Kích thước: {!!$product->size!!} mm
-                                                                </div>
+                                                            @if($product->sale_price==0)
+                                                            {!!$product->getPrice()!!}
+                                                            @else
+                                                            {!!$product->getSalePrice()!!}
+                                                            @endif
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            {!!$product->getPrice()!!}
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->getSize()!!} mm
+                                                        </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1428,20 +1420,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -1555,20 +1547,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -1606,22 +1598,22 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->getPrice())?>
-                                                                    @else
-                                                                    <?php echo($product->getSalePrice())?>
-                                                                    @endif
-                                                                </div>
-                                                                @if($product->sale_price!=0)
-                                                                <div class="price-old">
-                                                                    <?php echo($product->getPrice())?>
-                                                                </div>
-                                                                @else
-                                                                &nbsp
-                                                                @endif
-                                                                <div class="size small mb-1">
-                                                                    Kích thước: {!!$product->size!!} mm
-                                                                </div>
+                                                            @if($product->sale_price==0)
+                                                            {!!$product->getPrice()!!}
+                                                            @else
+                                                            {!!$product->getSalePrice()!!}
+                                                            @endif
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            {!!$product->getPrice()!!}
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->getSize()!!} mm
+                                                        </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1660,20 +1652,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -1708,22 +1700,22 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->getPrice())?>
-                                                                    @else
-                                                                    <?php echo($product->getSalePrice())?>
-                                                                    @endif
-                                                                </div>
-                                                                @if($product->sale_price!=0)
-                                                                <div class="price-old">
-                                                                    <?php echo($product->getPrice())?>
-                                                                </div>
-                                                                @else
-                                                                &nbsp
-                                                                @endif
-                                                                <div class="size small mb-1">
-                                                                    Kích thước: {!!$product->size!!} mm
-                                                                </div>
+                                                            @if($product->sale_price==0)
+                                                            {!!$product->getPrice()!!}
+                                                            @else
+                                                            {!!$product->getSalePrice()!!}
+                                                            @endif
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            {!!$product->getPrice()!!}
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->getSize()!!} mm
+                                                        </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1827,20 +1819,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -1878,22 +1870,22 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->getPrice())?>
-                                                                    @else
-                                                                    <?php echo($product->getSalePrice())?>
-                                                                    @endif
-                                                                </div>
-                                                                @if($product->sale_price!=0)
-                                                                <div class="price-old">
-                                                                    <?php echo($product->getPrice())?>
-                                                                </div>
-                                                                @else
-                                                                &nbsp
-                                                                @endif
-                                                                <div class="size small mb-1">
-                                                                    Kích thước: {!!$product->size!!} mm
-                                                                </div>
+                                                            @if($product->sale_price==0)
+                                                            {!!$product->getPrice()!!}
+                                                            @else
+                                                            {!!$product->getSalePrice()!!}
+                                                            @endif
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            {!!$product->getPrice()!!}
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->getSize()!!} mm
+                                                        </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -1932,20 +1924,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -1980,22 +1972,22 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->getPrice())?>
-                                                                    @else
-                                                                    <?php echo($product->getSalePrice())?>
-                                                                    @endif
-                                                                </div>
-                                                                @if($product->sale_price!=0)
-                                                                <div class="price-old">
-                                                                    <?php echo($product->getPrice())?>
-                                                                </div>
-                                                                @else
-                                                                &nbsp
-                                                                @endif
-                                                                <div class="size small mb-1">
-                                                                    Kích thước: {!!$product->size!!} mm
-                                                                </div>
+                                                            @if($product->sale_price==0)
+                                                            {!!$product->getPrice()!!}
+                                                            @else
+                                                            {!!$product->getSalePrice()!!}
+                                                            @endif
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            {!!$product->getPrice()!!}
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
+                                                        <div class="size small mb-1">
+                                                            Kích thước: {!!$product->getSize()!!} mm
+                                                        </div>
                                                                 <div class="review d-flex">
                                                                     <div class="color-FFAB1B mr-2">
                                                                         0,0/5<i class="fas fa-star ml-1"></i>
@@ -2105,20 +2097,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -2210,20 +2202,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">
@@ -2335,20 +2327,20 @@
                                                         </h5>
                                                         <div class="price-new">
                                                             @if($product->sale_price==0)
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                             @else
-                                                            <?php echo($product->getSalePrice())?>
+                                                            {!!$product->getSalePrice()!!}
                                                             @endif
                                                         </div>
                                                         @if($product->sale_price!=0)
                                                         <div class="price-old">
-                                                            <?php echo($product->getPrice())?>
+                                                            {!!$product->getPrice()!!}
                                                         </div>
                                                         @else
                                                         &nbsp
                                                         @endif
                                                         <div class="size small mb-1">
-                                                            Kích thước: {!!$product->size!!} mm
+                                                            Kích thước: {!!$product->getSize()!!} mm
                                                         </div>
                                                         <div class="review d-flex">
                                                             <div class="color-FFAB1B mr-2">

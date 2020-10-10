@@ -36,8 +36,8 @@ class CategoryRepository extends AbstractRepository {
         return $this->model->where('type', $type)->orderBy('created_at', 'desc')->get();
     }
 
-    public function readPlatformCategory() {
-        return $this->model->where('status', '1')->where('parent_id', '255')->get();
+    public function getCategory() {
+        return $this->model->where('status', '1')->get();
     }
     public function readOSCategory() {
         return $this->model->where('status', '1')->where('parent_id', '256')->get();
