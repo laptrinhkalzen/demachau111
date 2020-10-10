@@ -668,11 +668,13 @@
                             @endforeach
                             <div class="col-xl-4 col-md-4 col-sm-12 col-12">
                                 <div class="nd-fast-search h-100 w-100">
+                                    <form  method="get" action="{{route('product.filter')}}" id="product_filter_form">
                                     <div class="txt-1-fastsot">Tìm kiếm nhanh</div>
                                     <div class="main-fast-search">
                                         <div class="row">
                                             <div class="col-12 mb-2">
                                                 <select class="form-control mb-2 mb-lg-0 filter-select zone-value">
+                                                    @foreach
                                                     <option hidden value="0">Bạn muốn mua gì</option>
                                                     <option value="15">Sàn gỗ công nghiệp</option>
                                                     <option value="38">Sàn gỗ tự nhiên</option>
@@ -723,10 +725,11 @@
                                                 </select>
                                             </div>
                                             <div class="col-6 margin-0-auto">
-                                                <button class="btn btn-save mb-2 mb-md-0 w-100" type="button">Tìm kiếm</button>
+                                                <button class="btn btn-save mb-2 mb-md-0 w-100" type="submit" name="search">Tìm kiếm</button>
                                             </div>
                                         </div>
                                     </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
