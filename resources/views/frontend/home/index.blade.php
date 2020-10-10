@@ -109,7 +109,7 @@
                                             <form action="{{route('games.search')}}" method="post">
                                             {{csrf_field()}}
                                             <div class="input-group form-search flex-nowrap mb-1 ">
-                                                <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm....123" name="key" id="search" autocomplete="off">
+                                                <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm...." name="key" id="search" autocomplete="off">
                                                 <div class="input-group-append es-search-button">
                                                     <button class="btn btn-search" type="submit">
                                                     <img src="images/searche209.svg?v=1.0.0" class="img-fluid" />

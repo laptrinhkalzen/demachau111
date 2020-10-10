@@ -57,6 +57,8 @@
                 <div class="collapse navbar-collapse w-100 align-self-center">
                     <ul class=" navbar-nav ml-auto mt-4 mt-md-0 w-100 justify-content-xl-around">
                         <li class="nav-item mr-md-3 align-self-center d-none d-md-block position-relative ">
+                            <form action="{{route('games.search')}}" method="post">
+                            {{csrf_field()}}
                             <div class="input-group form-search flex-nowrap mb-1 ">
                                 <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm....">
                                 <div class="input-group-append es-search-button">
@@ -92,6 +94,7 @@
                                     </div>
                                 </div>
                             </div>
+                            </form>
                         </li>
                         <li class="nav-item dropdown mr-md-3 align-self-md-center   mb-md-0 cart">
                             <a rel="nofollow" class="d-flex dropdown-cart-trigger" href="javascript:void(0)">
