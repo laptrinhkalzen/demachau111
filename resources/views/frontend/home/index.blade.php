@@ -579,7 +579,7 @@
                         <div class="row">
                             <div class="col-3">
                             </div>
-                            <div class="col-9">
+                            <div class="col-xl-9">
                                 <div class="slide-banner-home mb-4">
                                     <div class="swiper-container gallery-top-home">
                                         <!--Thêm slide-->
@@ -723,7 +723,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-6 margin-0-auto">
-                                                <button class="btn btn-save mb-2 mb-md-0 filter-home w-100" type="button">Tìm kiếm</button>
+                                                <button class="btn btn-save mb-2 mb-md-0 w-100" type="button">Tìm kiếm</button>
                                             </div>
                                         </div>
                                     </div>
