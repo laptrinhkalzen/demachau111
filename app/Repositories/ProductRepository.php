@@ -11,6 +11,7 @@ namespace App\Repositories;
 
 use Repositories\Support\AbstractRepository;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 class ProductRepository extends AbstractRepository {
 
     public function __construct(\Illuminate\Container\Container $app) {
@@ -49,14 +50,11 @@ class ProductRepository extends AbstractRepository {
             $product_ids = \Db::table('product_category')->where('category_id', $request->get('category_id'))->pluck('product_id');
             $model = $model->whereIn('id', $product_ids);
         }
-        if ($request->get('attribute_id') || $request->get('category_id')) {
+        if ($request->get('attribute_id')) {
             $attribute_ids = explode(',', $request->get('attribute_id'));
-            $category_ids = explode(',', $request->get('category_id'));
-            $product_ids = \Db::table('product_attribute')->whereIn('attribute_id', $category_ids)->pluck('product_id');
-            dd($product_ids);
+            $product_ids = \Db::table('product_attribute')->whereIn('attribute_id', $attribute_ids)->pluck('product_id');
             $model = $model->whereIn('id', $product_ids);
         }
-
         if ($request->get('keyword')) {
             $category = \App\Category::where('title','like',$request->get('keyword'))->first();
             if($category){
@@ -150,6 +148,10 @@ class ProductRepository extends AbstractRepository {
         return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('post_schedule', 'desc')->take($limit)->paginate(10);
     }
 
+    public function readEmptyProduct() {
+        return $this->model->where('status', 3)->get();
+    }
+
     public function readNewProduct($limit = 10) {
         return $this->model->where('status', 1)->where('is_new', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
@@ -203,12 +205,31 @@ class ProductRepository extends AbstractRepository {
         return $this->model->where('title','like', '%'.$keywords.'%')->get();
     }
 
-    public function getFilterProduct($genre){
-        $product_ids = \DB::table('product_category')->where('category_id', $genre)->pluck('product_id');
-
-       return $this->model->where('status', 1)->whereIn('id', $product_ids)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('post_schedule', 'desc')->paginate(10);
+    public function getFilterProduct($genre,Request $request){
+             $i=0;
+             $i1=0;
+            $product_ids = \DB::table('product_attribute')->whereIn('attribute_id', $genre)->pluck('product_id');
+             $product = \DB::table('product_attribute')->whereIn('attribute_id',$genre)->get();   
+            foreach($request->filter as $fil){
+                if($fil>0){
+                    $i++;
+                }
+                }
+            foreach($product as  $pro){  
+                foreach ($product as $key => $pro1) {
+                    if($pro->product_id==$pro1->product_id){
+                          $i1++;
+                    }  
+                }
+               if($i1==$i){
+                   $data[]=$pro->product_id;
+               }
+               $i1=0;      
+            }
+           if(!empty($data)){
+             return $this->model->whereIn('id', $data)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('post_schedule', 'desc')->paginate(10); 
+            }
     }
-
     public function readRecentProduct($page = 0, $limit = 3) {
         $data = $this->model->where('status', 1)->orderBy('updated_at', 'desc')->skip($page * $limit)->take($limit)->get();
         return $data;

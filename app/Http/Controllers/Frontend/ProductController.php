@@ -43,10 +43,19 @@ class ProductController extends Controller {
     } 
 
     public function filter(Request $request){
-        $price = $request->get('price');
-        $search_product = $this->productRepo->readFE($request);
+        $filter=array();
+        foreach($request->filter as $fil){
+           if($fil>0){
+            $array[] = $fil;
+            $search_product = $this->productRepo->getFilterProduct($array,$request);
+
+            }
+            else{
+                $search_product =  $this->productRepo->readEmptyProduct();
+            }
+        }
         $count = count($search_product);
-        return view('frontend/home/search',compact('search_product','count'));
+        return view('frontend/home/search',compact('search_product','count'));    
     }
     public function detail(Request $request,$alias) {
             $detail_products=  $this->productRepo->getDetailProduct($alias);
