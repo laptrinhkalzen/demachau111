@@ -49,11 +49,14 @@ class ProductRepository extends AbstractRepository {
             $product_ids = \Db::table('product_category')->where('category_id', $request->get('category_id'))->pluck('product_id');
             $model = $model->whereIn('id', $product_ids);
         }
-        if ($request->get('attribute_id')) {
+        if ($request->get('attribute_id') || $request->get('category_id')) {
             $attribute_ids = explode(',', $request->get('attribute_id'));
-            $product_ids = \Db::table('product_attribute')->whereIn('attribute_id', $attribute_ids)->pluck('product_id');
+            $category_ids = explode(',', $request->get('category_id'));
+            $product_ids = \Db::table('product_attribute')->whereIn('attribute_id', $category_ids)->pluck('product_id');
+            dd($product_ids);
             $model = $model->whereIn('id', $product_ids);
         }
+
         if ($request->get('keyword')) {
             $category = \App\Category::where('title','like',$request->get('keyword'))->first();
             if($category){

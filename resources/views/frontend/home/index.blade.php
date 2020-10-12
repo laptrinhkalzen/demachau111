@@ -673,7 +673,7 @@
                                     <div class="main-fast-search">
                                         <div class="row">
                                             <div class="col-12 mb-2">
-                                                <select class="form-control mb-2 mb-lg-0 filter-select zone-value" name="attribute_id">
+                                                <select class="form-control mb-2 mb-lg-0 filter-select zone-value" name="category_id">
                                                     <option hidden value="0">Bạn muốn mua gì</option>
                                                     @foreach ($category as $key=>$category)
                                                     <option value="{!!$category->id!!}">{!!$category->title!!}</option>
@@ -2366,7 +2366,7 @@
                         </div>
                     </section>
                     @endforeach
-                    <div class="container blog-video">
+                    <!-- <div class="container blog-video">
                         <div class="heading pb-2  mb-3 d-flex">
                             <div class="h5 font-weight-600 mb-0 ">
                                 Video
@@ -2379,9 +2379,9 @@
                         </div>
                         <div class="slide-video">
                             <div class="swiper-container">
-                                <!-- Additional required wrapper -->
+                                Additional required wrapper
                                 <div class="swiper-wrapper">
-                                    <!-- Slides -->
+                                    Slides
                                     <div class="swiper-slide">
                                         <div class="item">
                                             <div class="video-img">
@@ -2403,7 +2403,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <section class="blogs-home py-5">
                         <div class="container">
                             <div class="row mb-4">
