@@ -44,7 +44,6 @@ class ProductController extends Controller {
 
     public function filter(Request $request){
         $price = $request->get('price');
-        dd($price);
         $search_product = $this->productRepo->readFE($request);
         $count = count($search_product);
         return view('frontend/home/search',compact('search_product','count'));
