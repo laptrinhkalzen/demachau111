@@ -109,7 +109,7 @@
                                             <form action="{{route('games.search')}}" method="post">
                                             {{csrf_field()}}
                                             <div class="input-group form-search flex-nowrap mb-1 ">
-                                                <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm...." name="key" id="search" autocomplete="off">
+                                                <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm...." name="keyword" id="search" autocomplete="off">
                                                 <div class="input-group-append es-search-button">
                                                     <button class="btn btn-search" type="submit">
                                                     <img src="images/searche209.svg?v=1.0.0" class="img-fluid" />
@@ -673,40 +673,23 @@
                                     <div class="main-fast-search">
                                         <div class="row">
                                             <div class="col-12 mb-2">
-                                                <select class="form-control mb-2 mb-lg-0 filter-select zone-value">
-                                                    @foreach($category as $key=>$cat)
+                                                <select class="form-control mb-2 mb-lg-0 filter-select zone-value" name="attribute_id">
                                                     <option hidden value="0">Bạn muốn mua gì</option>
-                                                    <option value="{!!$cat->id!!}">{!!$cat->title!!}</option>
+                                                    @foreach ($category as $key=>$category)
+                                                    <option value="{!!$category->id!!}">{!!$category->title!!}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
                                             <div class="col-6 mb-2">
-                                                <select class="form-control mb-2 mb-lg-0 filter-select manufacture-value">
+                                                <select class="form-control mb-2 mb-lg-0 filter-select manufacture-value" name="attribute_id">
                                                     <option hidden value="0">Thương hiệu</option>
-                                                    <option value="1">Janmi</option>
-                                                    <option value="2">Florton</option>
-                                                    <option value="3">DongWha</option>
-                                                    <option value="4">ThaiGreen</option>
-                                                    <option value="5">Kronotex</option>
-                                                    <option value="6">Newsky</option>
-                                                    <option value="7">Classen</option>
-                                                    <option value="8">wineo</option>
-                                                    <option value="10">Woodman</option>
-                                                    <option value="11">Thaixin</option>
-                                                    <option value="12">Alsafloor</option>
-                                                    <option value="13">Masfloor</option>
-                                                    <option value="14">FloorArt</option>
-                                                    <option value="15">ThaiRoyal</option>
-                                                    <option value="16">Kendax</option>
-                                                    <option value="17">Hornitex</option>
-                                                    <option value="18">TimberMan</option>
-                                                    <option value="19">JanHome Floor</option>
-                                                    <option value="20">Ecofloor</option>
-                                                    <option value="21">Kostlich</option>
+                                                    @foreach ($brand as $key=>$brand)
+                                                    <option value="{!!$brand->id!!}">{!!$brand->title!!}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                             <div class="col-6 mb-2">
-                                                <select class="form-control mb-2 mb-lg-0 filter-select range-price">
+                                                <select class="form-control mb-2 mb-lg-0 filter-select range-price" name="price">
                                                     <option hidden value="">Khung giá</option>
                                                     <option value="">Tất cả</option>
                                                     <option value="0-100000">Từ 0 - 100.000đ</option>
@@ -2148,19 +2131,19 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->getPrice())?>
-                                                                    @else
-                                                                    <?php echo($product->getSalePrice())?>
-                                                                    @endif
-                                                                </div>
-                                                                @if($product->sale_price!=0)
-                                                                <div class="price-old">
-                                                                    <?php echo($product->getPrice())?>
-                                                                </div>
-                                                                @else
-                                                                &nbsp
-                                                                @endif
+                                                            @if($product->sale_price==0)
+                                                            {!!$product->getPrice()!!}
+                                                            @else
+                                                            {!!$product->getSalePrice()!!}
+                                                            @endif
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            {!!$product->getPrice()!!}
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
                                                                 <div class="size small mb-1">
                                                                     Kích thước: {!!$product->size!!} mm
                                                                 </div>
@@ -2250,19 +2233,19 @@
                                                                 </a>
                                                                 </h5>
                                                                 <div class="price-new">
-                                                                    @if($product->sale_price==0)
-                                                                    <?php echo($product->getPrice())?>
-                                                                    @else
-                                                                    <?php echo($product->getSalePrice())?>
-                                                                    @endif
-                                                                </div>
-                                                                @if($product->sale_price!=0)
-                                                                <div class="price-old">
-                                                                    <?php echo($product->getPrice())?>
-                                                                </div>
-                                                                @else
-                                                                &nbsp
-                                                                @endif
+                                                            @if($product->sale_price==0)
+                                                            {!!$product->getPrice()!!}
+                                                            @else
+                                                            {!!$product->getSalePrice()!!}
+                                                            @endif
+                                                        </div>
+                                                        @if($product->sale_price!=0)
+                                                        <div class="price-old">
+                                                            {!!$product->getPrice()!!}
+                                                        </div>
+                                                        @else
+                                                        &nbsp
+                                                        @endif
                                                                 <div class="size small mb-1">
                                                                     Kích thước: {!!$product->size!!} mm
                                                                 </div>

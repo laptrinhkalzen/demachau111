@@ -35,58 +35,19 @@ class ProductController extends Controller {
         $this->productcategoryRepo= $productcategoryRepo;
     }
 
-    public function hot(Request $request) {
-         ini_set('memory_limit', '2048M');
-        $search = $request->all();
-        $hot_products_slide = $this->productRepo->readHlProduct($limit = 3);
-        $product_new = $this->productRepo->readNewProduct();
-        $product_hl = $this->productRepo->readHlProduct();
-        $product_cs = $this->productRepo->readCsProduct();
-        $platform_category = $this->categoryRepo->readPlatformCategory();
-        $os_category = $this->categoryRepo->readOSCategory();
-        $genre_category = $this->categoryRepo->readGenreCategory();
-       return view('frontend/product/hot',compact('hot_products_slide','product_new','product_hl','product_cs','platform_category','os_category','genre_category'));
-    }
-    public function all(Request $request) {
-         ini_set('memory_limit', '2048M');
-        $search = $request->all();
-        $hot_products_slide = $this->productRepo->readHlProduct($limit = 3);
-        $product_all = $this->productRepo->readAllProduct($limit);
-        $product_new = $this->productRepo->readNewProduct();
-        $product_hl = $this->productRepo->readHlProduct();
-        $product_cs = $this->productRepo->readCsProduct();
-        $platform_category = $this->categoryRepo->readPlatformCategory();
-        $os_category = $this->categoryRepo->readOSCategory();
-        $genre_category = $this->categoryRepo->readGenreCategory();
-        // $sizesArray = $this->categoryRepo->readGenreCategory();
-        // $sizesArray = array_flatten(json_decode(json_encode($sizesArray),true));
-       return view('frontend/product/all',compact('hot_products_slide','product_all','product_new','product_new','product_hl','product_cs','platform_category','os_category','genre_category'));
-    }
-
     public function search(Request $request) {
          ini_set('memory_limit', '2048M');
-        $keywords = $request->key;
-        $search_product = $this->productRepo->readSearchProduct($keywords);
+        $search_product = $this->productRepo->readFE($request);
         $count = count($search_product);
        return view('frontend/home/search',compact('search_product','count'));
     } 
 
     public function filter(Request $request){
-        $platform_category = $this->categoryRepo->readPlatformCategory();
-        $category = $this->categoryRepo->readGenreCategory();
-        foreach($request->genre_filter as $genre){
-            $genre1=$genre;
-            break;
-        }
-        foreach($request->os_filter as $os){
-            $os1=$os;
-            break;
-        }
-       
-        // $array = array($genre, $os, $platform);
-        // $filter = implode(",", $array);
-        $product_all = $this->productRepo->getFilterProduct($genre1);  
-        return view('frontend/home/search',compact('hot_products_slide','product_all','platform_category','os_category','genre_category'));
+        $price = $request->get('price');
+        dd($price);
+        $search_product = $this->productRepo->readFE($request);
+        $count = count($search_product);
+        return view('frontend/home/search',compact('search_product','count'));
     }
     public function detail(Request $request,$alias) {
             $detail_products=  $this->productRepo->getDetailProduct($alias);
