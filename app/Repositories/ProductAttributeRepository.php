@@ -25,8 +25,4 @@ class ProductAttributeRepository extends AbstractRepository
         return $this->model->where('product_id', $product_id)->get();
     }
 
-    public function getSize()
-    {
-        return $this->model->where('attribute_id', 5)->get();
-    }
 }

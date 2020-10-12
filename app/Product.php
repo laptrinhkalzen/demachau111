@@ -55,4 +55,11 @@ class Product extends Model {
         else
         return $size->value;
     }
+    public function getCategory() {
+        $category = $this->hasMany('App\ProductAttribute', 'product_id')->where('attribute_id', 4)->first();
+        if(is_null($category))
+        return "";
+        else
+        return $$category->value;
+    }
 }
