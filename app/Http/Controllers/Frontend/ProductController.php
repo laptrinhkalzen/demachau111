@@ -48,7 +48,6 @@ class ProductController extends Controller {
            if($fil>0){
             $array[] = $fil;
             $search_product = $this->productRepo->getFilterProduct($array,$request);
-
             }
             else{
                 $search_product =  $this->productRepo->readEmptyProduct();
@@ -57,6 +56,7 @@ class ProductController extends Controller {
         if($search_product!=null)
             $count = count($search_product);
         else
+            $search_product =  $this->productRepo->readEmptyProduct();
             $count = 0;
         return view('frontend/home/search',compact('search_product','count'));    
     }
