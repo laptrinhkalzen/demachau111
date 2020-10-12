@@ -54,7 +54,10 @@ class ProductController extends Controller {
                 $search_product =  $this->productRepo->readEmptyProduct();
             }
         }
-        $count = count($search_product);
+        if($search_product!=null)
+            $count = count($search_product);
+        else
+            $count = 0;
         return view('frontend/home/search',compact('search_product','count'));    
     }
     public function detail(Request $request,$alias) {
