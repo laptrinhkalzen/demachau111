@@ -673,7 +673,7 @@
                                     <div class="main-fast-search">
                                         <div class="row">
                                             <div class="col-12 mb-2">
-                                                <select class="form-control mb-2 mb-lg-0 filter-select zone-value" name="filter[]">
+                                                <select class="form-control mb-2 mb-lg-0 filter-select zone-value" name="category_id">
                                                     <option hidden value="0">Bạn muốn mua gì</option>
                                                     @foreach ($category as $key=>$category)
                                                     <option value="{!!$category->id!!}">{!!$category->title!!}</option>
@@ -681,7 +681,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-6 mb-2">
-                                                <select class="form-control mb-2 mb-lg-0 filter-select manufacture-value" name="filter[]">
+                                                <select class="form-control mb-2 mb-lg-0 filter-select manufacture-value" name="attribute_id">
                                                     <option hidden value="0">Thương hiệu</option>
                                                     @foreach ($brand as $key=>$brand)
                                                     <option value="{!!$brand->id!!}">{!!$brand->title!!}</option>
