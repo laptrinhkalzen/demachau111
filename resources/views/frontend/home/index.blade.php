@@ -692,11 +692,11 @@
                                                 <select class="form-control mb-2 mb-lg-0 filter-select range-price" name="price">
                                                     <option hidden value="">Khung giá</option>
                                                     <option value="">Tất cả</option>
-                                                    <option value="0-100000">Từ 0 - 100.000đ</option>
-                                                    <option value="200000-300000">Từ 200.000 - 300.000đ</option>
-                                                    <option value="300000-400000">Từ 300.000 - 400.000đ</option>
-                                                    <option value="400000-600000">Từ 400.000 - 600.000đ</option>
-                                                    <option value="600000-20000000">Từ 600.000 trở lên</option>
+                                                    <option value="1">Từ 0 - 100.000đ</option>
+                                                    <option value="2">Từ 200.000 - 300.000đ</option>
+                                                    <option value="3">Từ 300.000 - 400.000đ</option>
+                                                    <option value="4">Từ 400.000 - 600.000đ</option>
+                                                    <option value="5">Từ 600.000 trở lên</option>
                                                 </select>
                                             </div>
                                             <div class="col-6 margin-0-auto">

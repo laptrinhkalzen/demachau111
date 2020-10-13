@@ -51,14 +51,6 @@ class ProductController extends Controller {
     } 
 
     public function filter(Request $request){
-        // $filter=array();
-        // foreach($request->filter as $fil){
-        //     $array[] = $fil;
-        //     $search_product = $this->productRepo->getFilterProduct($array,$request);
-        //     if($search_product==null){
-        //         $search_product = $this->productRepo->readEmptyProduct();
-        //     }
-        // }
         $search_product = $this->productRepo->readFE($request);
         $count = count($search_product);
         return view('frontend/home/search',compact('search_product','count'));

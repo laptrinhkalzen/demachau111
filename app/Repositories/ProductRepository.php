@@ -55,6 +55,27 @@ class ProductRepository extends AbstractRepository {
             $product_ids = \Db::table('product_attribute')->whereIn('attribute_id', $attribute_ids)->pluck('product_id');
             $model = $model->whereIn('id', $product_ids);
         }
+        if ($request->get('price')) {
+            $price = $request->get('price');
+            switch ($price) {
+                case '1':
+                    $model=$model->where('price','<',100000);
+                    break;
+                case '2':
+                    $model=$model->whereBetween('price',[2000000,300000]);
+                    break;
+                case '3':
+                    $model=$model->whereBetween('price',[3000000,400000]);
+                    break;
+                case '4':
+                    $model=$model->whereBetween('price',[4000000,600000]);
+                    break;
+                case '5':
+                    $model=$model->where('price','>',600000);
+                    break;
+            }
+
+        }
         if ($request->get('keyword')) {
             $category = \App\Category::where('title','like',$request->get('keyword'))->first();
             if($category){
@@ -70,6 +91,7 @@ class ProductRepository extends AbstractRepository {
         if ($request->get('count_product')) {
             $limit = $request->get('count_product');
         }
+
         else{
             $limit = 80;
         }
