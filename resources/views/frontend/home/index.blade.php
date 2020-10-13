@@ -264,7 +264,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <a href="javascript:void(0)" class="link" title="Sàn gỗ công nghiệp">
+                                                    <a href="{{route('product.show',['alias' => 'san-go-cong-nghiep'])}}" class="link" title="Sàn gỗ công nghiệp">
                                                         <img src="../noithathunggia/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn gỗ công nghiệp" />Sàn gỗ công nghiệp
                                                     </a>
@@ -275,7 +275,7 @@
                                                     </div>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <a href="javascript:void(0)" class="link" title="Sàn gỗ tự nhiên">
+                                                    <a href="{{route('product.show',['alias' => 'san-go-tu-nhien'])}}" class="link" title="Sàn gỗ tự nhiên">
                                                         <img src="../noithathunggia/uploads/2020/05/21/gotunhiene209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn gỗ tự nhiên" />Sàn gỗ tự nhiên
                                                     </a>
@@ -286,7 +286,7 @@
                                                     </div>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <a href="javascript:void(0)" class="link" title="Sàn nhựa vinyl">
+                                                    <a href="{{route('product.show',['alias' => 'san-nhua'])}}" class="link" title="Sàn nhựa vinyl">
                                                         <img src="../noithathunggia/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn nhựa vinyl" />Sàn nhựa vinyl
                                                     </a>
@@ -297,7 +297,7 @@
                                                     </div>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <a href="javascript:void(0)" class="link" title="Sàn gỗ ngoài trời">
+                                                    <a href="{{route('product.show',['alias' => 'san-go-ngoai-troi'])}}" class="link" title="Sàn gỗ ngoài trời">
                                                         <img src="../noithathunggia/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Sàn gỗ ngoài trời" />Sàn gỗ ngoài trời
                                                     </a>
@@ -330,7 +330,7 @@
                                                     </div>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <a href="javascript:void(0)" class="link" title="Trang trí nội thất">
+                                                    <a href="{{route('product.show',['alias' => 'trang-tri-noi-that'])}}" class="link" title="Trang trí nội thất">
                                                         <img src="../noithathunggia/uploads/2020/05/21/bede209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Trang trí nội thất" />Trang trí nội thất
                                                     </a>
@@ -352,7 +352,7 @@
                                                     </div>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <a href="javascript:void(0)" class="link" title="Đồ gia dụng">
+                                                    <a href="{{route('product.show',['alias' => 'do-gia-dung'])}}" class="link" title="Đồ gia dụng">
                                                         <img src="../noithathunggia/uploads/2020/05/21/cleane209.png?v=1.0.0"
                                                         class="img-fluid mr-2" alt="Đồ gia dụng" />Đồ gia dụng
                                                     </a>
@@ -2281,7 +2281,7 @@
                                             <a href="javascript:void(0)" class="h5 font-weight-bold ">Sản phẩm gia dụng</a>
                                         </div>
                                         <div class="col-4 text-right">
-                                            <a href="{{route('product.show',['alias' => 'san-pham-gia-dung'])}}" class="link-view-more">
+                                            <a href="{{route('product.show',['alias' => 'do-gia-dung'])}}" class="link-view-more">
                                                 Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
                                             </a>
                                         </div>
