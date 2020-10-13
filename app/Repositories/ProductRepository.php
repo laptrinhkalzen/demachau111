@@ -62,13 +62,13 @@ class ProductRepository extends AbstractRepository {
                     $model=$model->where('price','<',100000);
                     break;
                 case '2':
-                    $model=$model->whereBetween('price',[2000000,300000]);
+                    $model=$model->whereBetween('price',[200000,300000]);
                     break;
                 case '3':
-                    $model=$model->whereBetween('price',[3000000,400000]);
+                    $model=$model->whereBetween('price',[300000,400000]);
                     break;
                 case '4':
-                    $model=$model->whereBetween('price',[4000000,600000]);
+                    $model=$model->whereBetween('price',[400000,600000]);
                     break;
                 case '5':
                     $model=$model->where('price','>',600000);
