@@ -43,7 +43,7 @@ class FrontendController extends Controller {
         $product_hl = $this->productRepo->readHlProduct($limit = 10);
         $industry = $this->productRepo->getIndustryProduct($limit = 8);
         $nature = $this->productRepo->getNatureProduct($limit = 8);
-        $sale = $this->productRepo->getSaleProduct($limit = 10);
+        $sale = $this->productRepo->getProduct($alias= 'hang-thanh-ly', $limit = 10);
         $plastic = $this->productRepo->getPlasticProduct($limit = 8);
         $outdoor = $this->productRepo->getOutdoorProduct($limit = 8);
         $decor = $this->productRepo->getDecorProduct($limit = 8);

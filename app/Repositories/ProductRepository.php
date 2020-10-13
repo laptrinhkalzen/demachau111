@@ -182,10 +182,10 @@ class ProductRepository extends AbstractRepository {
          return $this->model->where('status', 1)->where('is_hot', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('post_schedule', 'desc')->orderBy('created_at', 'desc')->take($limit)->get();
     }
 
-    public function getProduct($alias) {
+    public function getProduct($alias, $limit) {
         $category = \DB::table('category')->where('alias', $alias)->pluck('id');
         $product = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $product)->orderBy('post_schedule', 'desc')->get();
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $product)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
 
     public function getIndustryProduct($limit) {
@@ -222,11 +222,6 @@ class ProductRepository extends AbstractRepository {
         $category = \DB::table('category')->where('alias', 'trang-tri-noi-that')->pluck('id');
         $decor = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
         return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $decor)->orderBy('post_schedule', 'desc')->take($limit)->get();
-    }
-
-
-    public function getSaleProduct($limit) {
-        return $this->model->where('status', 1)->where('sale_price', '!=','0')->orderBy('sale_price', 'desc')->take($limit)->get();
     }
 
     public function readSearchProduct($keywords) {
