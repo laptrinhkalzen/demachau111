@@ -35,6 +35,14 @@ class ProductController extends Controller {
         $this->productcategoryRepo= $productcategoryRepo;
     }
 
+    public function show($alias) {
+         ini_set('memory_limit', '2048M');
+        $search_product = $this->productRepo->getProduct($alias);
+        $title = \DB::table('category')->where('alias', $alias)->pluck('title');
+        $count = count($search_product);
+       return view('frontend/home/search',compact('search_product','count','title'));
+    }
+
     public function search(Request $request) {
          ini_set('memory_limit', '2048M');
         $search_product = $this->productRepo->readFE($request);

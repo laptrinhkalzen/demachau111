@@ -57,7 +57,7 @@
                 <div class="collapse navbar-collapse w-100 align-self-center">
                     <ul class=" navbar-nav ml-auto mt-4 mt-md-0 w-100 justify-content-xl-around">
                         <li class="nav-item mr-md-3 align-self-center d-none d-md-block position-relative ">
-                            <form action="{{route('games.search')}}" method="post">
+                            <form action="{{route('product.search')}}" method="post">
                             {{csrf_field()}}
                             <div class="input-group form-search flex-nowrap mb-1 ">
                                 <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm...." name="keyword" id="search" autocomplete="off">

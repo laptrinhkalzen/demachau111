@@ -160,6 +160,12 @@ class ProductRepository extends AbstractRepository {
          return $this->model->where('status', 1)->where('is_hot', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('post_schedule', 'desc')->orderBy('created_at', 'desc')->take($limit)->get();
     }
 
+    public function getProduct($alias) {
+        $category = \DB::table('category')->where('alias', $alias)->pluck('id');
+        $product = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $product)->orderBy('post_schedule', 'desc')->get();
+    }
+
     public function getIndustryProduct($limit) {
         $category = \DB::table('category')->where('alias', 'san-go-cong-nghiep')->pluck('id');
         $industry = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');

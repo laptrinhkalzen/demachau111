@@ -106,7 +106,7 @@
                                 <div class="collapse navbar-collapse w-100 align-self-center">
                                     <ul class=" navbar-nav ml-auto mt-4 mt-md-0 w-100 justify-content-xl-around">
                                         <li class="nav-item mr-md-3 align-self-center d-none d-md-block position-relative ">
-                                            <form action="{{route('games.search')}}" method="post">
+                                            <form action="{{route('product.search')}}" method="post">
                                             {{csrf_field()}}
                                             <div class="input-group form-search flex-nowrap mb-1 ">
                                                 <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm...." name="keyword" id="search" autocomplete="off">
@@ -856,7 +856,7 @@
                                                 <!--menu pc end-->
                                             </div>
                                             <div class=" align-self-center  ">
-                                                <a href="{{route('games.search')}}" class="link-view-more url-old-link">Xem tất cả</a>
+                                                <a href="{{route('product.show',['alias' => 'san-go-cong-nghiep'])}}" class="link-view-more url-old-link">Xem tất cả</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1148,7 +1148,7 @@
                                                 <!--menu pc end-->
                                             </div>
                                             <div class=" align-self-center  ">
-                                                <a href="javascript:void(0)" class="link-view-more url-old-link">Xem tất cả</a>
+                                                <a href="{{route('product.show',['alias' => 'san-go-tu-nhien'])}}" class="link-view-more url-old-link">Xem tất cả</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1374,7 +1374,7 @@
                                             <a href="javascript:void(0)" class="align-self-center h5 mr-3 text-uppercase mb-0" style="color: #fff;">
                                                 <b>Hàng Thanh lý</b>
                                             </a>
-                                            <a href="javascript:void(0)">
+                                            <a href="{{route('product.show',['alias' => 'hang-thanh-ly'])}}">
                                                 Xem thêm<i class="fas fa-chevron-right ml-2 "></i>
                                             </a>
                                         </div>
@@ -1504,7 +1504,7 @@
                                                 <!--menu pc end-->
                                             </div>
                                             <div class=" align-self-center  ">
-                                                <a href="javascript:void(0)" class="link-view-more url-old-link">Xem tất cả</a>
+                                                <a href="{{route('product.show',['alias' => 'san-nhua'])}}" class="link-view-more url-old-link">Xem tất cả</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1776,7 +1776,7 @@
                                                 <!--menu pc end-->
                                             </div>
                                             <div class=" align-self-center  ">
-                                                <a href="javascript:void(0)" class="link-view-more url-old-link">Xem tất cả</a>
+                                                <a href="{{route('product.show',['alias' => 'san-go-ngoai-troi'])}}" class="link-view-more url-old-link">Xem tất cả</a>
                                             </div>
                                         </div>
                                     </div>
@@ -2054,7 +2054,7 @@
                                                 <!--menu pc end-->
                                             </div>
                                             <div class=" align-self-center  ">
-                                                <a href="javascript:void(0)" class="link-view-more url-old-link">Xem tất cả</a>
+                                                <a href="{{route('product.show',['alias' => 'trang-tri-noi-that'])}}" class="link-view-more url-old-link">Xem tất cả</a>
                                             </div>
                                         </div>
                                     </div>
@@ -2281,7 +2281,7 @@
                                             <a href="javascript:void(0)" class="h5 font-weight-bold ">Sản phẩm gia dụng</a>
                                         </div>
                                         <div class="col-4 text-right">
-                                            <a href="javascript:void(0)" class="link-view-more">
+                                            <a href="{{route('product.show',['alias' => 'san-pham-gia-dung'])}}" class="link-view-more">
                                                 Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
                                             </a>
                                         </div>

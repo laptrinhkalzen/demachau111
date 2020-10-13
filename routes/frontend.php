@@ -18,7 +18,8 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::get('/member/activation/{key}', ['as' => 'member.activation', 'uses' => 'Frontend\MemberController@activation']);
     /* Sản phẩm */
     Route::get('/san-pham', ['as' => 'product.index', 'uses' => 'Frontend\ProductController@index']);
-    Route::post('/search-games', ['as' => 'games.search', 'uses' => 'Frontend\ProductController@search']);
+    Route::get('/show-product/{alias}', ['as' => 'product.show', 'uses' => 'Frontend\ProductController@show']);
+    Route::post('/search-product', ['as' => 'product.search', 'uses' => 'Frontend\ProductController@search']);
     Route::get('/filter-product', ['as' => 'product.filter', 'uses' => 'Frontend\ProductController@filter']);
     Route::get('/sale', ['as' => 'product.sale', 'uses' => 'Frontend\ProductController@sale']);
     Route::get('/san-pham/{alias}', ['as' => 'product.detail', 'uses' => 'Frontend\ProductController@detail']);
