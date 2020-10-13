@@ -205,11 +205,12 @@ class ProductRepository extends AbstractRepository {
         return $this->model->where('title','like', '%'.$keywords.'%')->get();
     }
 
-    public function getFilterProduct($genre,Request $request){
+    public function getFilterProduct($attribute,Request $request){
              $i=0;
              $i1=0;
-            $product_ids = \DB::table('product_attribute')->whereIn('attribute_id', $genre)->pluck('product_id');
-             $product = \DB::table('product_attribute')->whereIn('attribute_id',$genre)->get();   
+            $product_ids = \DB::table('product_attribute')->whereIn('attribute_id', $attribute)->pluck('product_id');
+             $product = \DB::table('product_attribute')->whereIn('attribute_id',$attribute)->get();   
+
             foreach($request->filter as $fil){
                 if($fil>0){
                     $i++;
