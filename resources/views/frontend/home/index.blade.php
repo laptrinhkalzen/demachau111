@@ -856,7 +856,7 @@
                                                 <!--menu pc end-->
                                             </div>
                                             <div class=" align-self-center  ">
-                                                <a href="javascript:void(0)" class="link-view-more url-old-link">Xem tất cả</a>
+                                                <a href="{{route('games.search')}}" class="link-view-more url-old-link">Xem tất cả</a>
                                             </div>
                                         </div>
                                     </div>
