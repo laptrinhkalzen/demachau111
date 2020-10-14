@@ -160,7 +160,7 @@
                     <div class="blog-ss-3">
                         <div class="heading pb-2 border-bottom mb-3 d-flex">
                             <a href="trai-nghiem-cung-janhome.html">
-                                <h5 class="title font-weight-600 mb-3 mb-lg-0 d-inline-block mr-4 ">TRẢI NGHIỆM CÙNG JANHOME</h5>
+                                <h5 class="title font-weight-600 mb-3 mb-lg-0 d-inline-block mr-4 ">TRẢI NGHIỆM CÙNG NỘI THẤT HƯNG GIA</h5>
                             </a>
                             <div class="review d-inline-block color-EE7D22">
                                 
@@ -187,7 +187,7 @@
                                 <div class="item-blog-km item-blog-km-large">
                                     <div class="image mb-3">
                                         <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
-                                            <img src="{{$news->getImage()}}" class="img-fluid"/>
+                                            <img src="{{$news->getImage()}}" class="img-fluid" style="height: 200px;" />
                                         </a>
                                     </div>
                                     <div class="">
@@ -211,7 +211,7 @@
                                 <div class="item-blog-km item-blog-km-ls">
                                     <div class="image mb-3">
                                         <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
-                                            <img src="{{$news->getImage()}}" class="img-fluid" />
+                                            <img src="{{$news->getImage()}}" class="img-fluid" style="height: 140px;" />
                                         </a>
                                     </div>
                                     <div class="">
