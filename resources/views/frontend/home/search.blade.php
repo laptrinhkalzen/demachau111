@@ -31,7 +31,7 @@
                     @break
                     @endif
                     <a href="javascript:void(0)" title="" class="hide-mobile">
-                        <img src="{!!$product->getImage()!!}" style="width: 336px; height:170px; object-fit:cover; margin-bottom: 30px " />
+                        <img src="{!!$product->getImage()!!}" style="width: 336px; height:170px; object-fit:cover; margin-bottom: 20px; margin-top: 10px;" />
                     </a>
                     @endforeach
                 </div>
