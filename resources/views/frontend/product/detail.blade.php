@@ -1192,32 +1192,7 @@
                 </div>
             </div>
         </form>
-        <div class="social-button">
-            <div class="social-button-content">
-                <a rel="nofollow" href="tel: 1800.0022" class="call-icon" rel="nofollow">
-                    <i class="fas fa-mobile-alt"></i>
-                    <div class="animated alo-circle"></div>
-                    <div class="animated alo-circle-fill"></div>
-                    <span>1800.0022</span>
-                </a>
-                <!-- Load Facebook SDK for JavaScript -->
-                <div id="fb-root"></div>
-                <!-- Your Chat Plugin code -->
-                <div class="fb-customerchat"
-                    attribution=setup_tool
-                    page_id="1608844646076677"
-                    theme_color="#ef822a"
-                    logged_in_greeting="Janhome xin chào ! Chúng tôi có thể giúp gì cho bạn?"
-                    logged_out_greeting="Janhome xin chào ! Chúng tôi có thể giúp gì cho bạn?">
-                </div>
-                <a rel="nofollow" target="_blank" href="https://zalo.me/0902480222" class="zalo">
-                    <i class="fa" aria-hidden="true">
-                    <img src="{!!asset('stc-zaloprofile.zdn.vn/pc/v1/images/zalo_sharelogo.png')!!}" width="25px" />
-                    </i>
-                    <span>Zalo: 0902480222</span>
-                </a>
-            </div>
-        </div>
+        
         <div class="btn-fixed">
             <div class="text-center mb-3">
                 <a rel="nofollow" href="javascript:;" onclick=" topFunction() " class="">

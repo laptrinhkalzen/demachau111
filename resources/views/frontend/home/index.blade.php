@@ -2908,11 +2908,11 @@
                 </form>
                 <div class="social-button">
                     <div class="social-button-content">
-                        <a rel="nofollow" href="tel: 1800.0022" class="call-icon" rel="nofollow">
+                        <a rel="nofollow" href="tel: {!!$share_config->hotline!!}" class="call-icon" rel="nofollow">
                             <i class="fas fa-mobile-alt"></i>
                             <div class="animated alo-circle"></div>
                             <div class="animated alo-circle-fill"></div>
-                            <span>1800.0022</span>
+                            <span>{!!$share_config->hotline!!}</span>
                         </a>
                         <!-- Load Facebook SDK for JavaScript -->
                         <div id="fb-root"></div>
@@ -2924,11 +2924,11 @@
                             logged_in_greeting="Nội thất Hưng Gia xin chào ! Chúng tôi có thể giúp gì cho bạn?"
                             logged_out_greeting="Nội thất Hưng Gia xin chào ! Chúng tôi có thể giúp gì cho bạn?">
                         </div>
-                        <a rel="nofollow" target="_blank" href="https://zalo.me/0902480222" class="zalo">
+                        <a rel="nofollow" target="_blank" href="https://zalo.me/{!!$share_config->phone!!}" class="zalo">
                             <i class="fa" aria-hidden="true">
                             <img src="{!!asset('stc-zaloprofile.zdn.vn/pc/v1/images/zalo_sharelogo.png')!!}" width="25px" />
                             </i>
-                            <span>Zalo: 0902480222</span>
+                            <span>Zalo: {!!$share_config->phone!!}</span>
                         </a>
                     </div>
                 </div>

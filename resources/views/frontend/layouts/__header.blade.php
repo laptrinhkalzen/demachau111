@@ -100,7 +100,7 @@
                             <a rel="nofollow" class="d-flex dropdown-cart-trigger" href="javascript:void(0)">
                                 <div class="icon mr-2">
                                     <img src="{!!asset('images/cart-icone209.svg?v=1.0.0')!!}" class="img-fluid mr-2 icon-nav" />
-                                    <div class="amount" id="cart-count">
+                                    <div class="amount" id="cart-count">0
                                     </div>
                                 </div>
                             </a>
@@ -129,7 +129,7 @@
                         <li class="nav-item mr-md-3  align-self-md-center d-flex d-sm-none d-lg-flex"
                             style="white-space: nowrap;">
                             <div>
-                                <a rel="nofollow" href="tel: 18000022">
+                                <a rel="nofollow" href="tel: {!!$share_config->hotline!!}">
                                     <div><span class="font-weight-bold h6 ">{!!$share_config->hotline!!}</span></div>
                                     <div class="small">(Miễn phí) </div>
                                 </a>
@@ -418,4 +418,30 @@
             </div>
         </section>
     </section>
+    <div class="social-button">
+        <div class="social-button-content">
+            <a rel="nofollow" href="tel: {!!$share_config->hotline!!}" class="call-icon" rel="nofollow">
+                <i class="fas fa-mobile-alt"></i>
+                <div class="animated alo-circle"></div>
+                <div class="animated alo-circle-fill"></div>
+                <span>{!!$share_config->hotline!!}</span>
+            </a>
+            <!-- Load Facebook SDK for JavaScript -->
+            <div id="fb-root"></div>
+            <!-- Your Chat Plugin code -->
+            <div class="fb-customerchat"
+                attribution=setup_tool
+                page_id="1608844646076677"
+                theme_color="#ef822a"
+                logged_in_greeting="Xin chào ! Chúng tôi có thể giúp gì cho bạn?"
+                logged_out_greeting="Xin chào ! Chúng tôi có thể giúp gì cho bạn?">
+            </div>
+            <a rel="nofollow" target="_blank" href="https://zalo.me/{!!$share_config->phone!!}" class="zalo">
+                <i class="fa" aria-hidden="true">
+                <img src="../stc-zaloprofile.zdn.vn/pc/v1/images/zalo_sharelogo.png" width="25px" />
+                </i>
+                <span>Zalo: {!!$share_config->phone!!}</span>
+            </a>
+        </div>
+    </div>
 </section>
