@@ -221,34 +221,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-sm-4 col-12">
-                                <div class="item-blog-km item-blog-km-ls">
-                                    <div class="image mb-3">
-                                        <a href="san-go-thaixin-san-go-thai-lan-duoc-ua-chuong-nhat-hien-nay.html">
-                                            <img src="../cms.janhome.vn/uploads/thumb/2020/06/05/mua-san-go-thaixin.jpg" class="img-fluid" alt="Sàn gỗ Thaixin, sàn gỗ Thái lan được ưa chuộng nhất hiện nay" />
-                                        </a>
-                                    </div>
-                                    <div class="">
-                                        <h5 class="title h6">
-                                        <a href="san-go-thaixin-san-go-thai-lan-duoc-ua-chuong-nhat-hien-nay.html" title="Sàn gỗ Thaixin, sàn gỗ Thái lan được ưa chuộng nhất hiện nay">Sàn gỗ Thaixin, sàn gỗ Thái lan được ưa chuộng nhất hiện nay</a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-sm-4 col-12">
-                                <div class="item-blog-km item-blog-km-ls">
-                                    <div class="image mb-3">
-                                        <a href="3-diem-manh-vuot-troi-cua-gian-hoa-go-nhua-ngoai-troi-tai-hoa-binh.html">
-                                            <img src="../cms.janhome.vn/uploads/thumb/2020/06/05/gian-hoa-ngoai-troi-chat-luong.jpg" class="img-fluid" alt="3 điểm mạnh vượt trội của giàn hoa gỗ nhựa ngoài trời tại Hòa Bình" />
-                                        </a>
-                                    </div>
-                                    <div class="">
-                                        <h5 class="title h6">
-                                        <a href="3-diem-manh-vuot-troi-cua-gian-hoa-go-nhua-ngoai-troi-tai-hoa-binh.html" title="3 điểm mạnh vượt trội của giàn hoa gỗ nhựa ngoài trời tại Hòa Bình">3 điểm mạnh vượt trội của giàn hoa gỗ nhựa ngoài trời tại Hòa Bình</a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="blogs-home blogs-home-tn mb-4">

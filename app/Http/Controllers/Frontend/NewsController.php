@@ -31,9 +31,9 @@ class NewsController extends Controller {
         $category_arr = $this->categoryRepo->readHomeNewsCategory();
         $featured_news = $this->newsRepo->readFeaturedNews($limit = 5);
         if (config('global.device') != 'pc') {
-            return view('mobile/news/list', compact('records', 'category_arr', 'featured_news','lifestyle'));
+            return view('mobile/news/list', compact('records', 'category_arr', 'featured_news','lifestyle','experience'));
         } else {
-            return view('frontend/news/list', compact('records', 'category_arr', 'featured_news','lifestyle'));
+            return view('frontend/news/list', compact('records', 'category_arr', 'featured_news','lifestyle','experience'));
         }
     }
 
