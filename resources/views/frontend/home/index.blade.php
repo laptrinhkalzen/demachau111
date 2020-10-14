@@ -2413,7 +2413,7 @@
                                     <a href="javascript:void(0)" class="h5 font-weight-bold">TƯ VẤN</a>
                                 </div>
                                 <div class="col-6 text-right">
-                                    <a href="javascript:void(0)" class="link-view-more">Xem thêm <i class="fas fa-chevron-right ml-1 small"></i></a>
+                                    <a href="{{route('news.index')}}" class="link-view-more">Xem thêm <i class="fas fa-chevron-right ml-1 small"></i></a>
                                 </div>
                             </div>
                             <div class="cust-bg-use">
