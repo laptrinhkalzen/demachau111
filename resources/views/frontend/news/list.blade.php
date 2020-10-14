@@ -79,7 +79,7 @@
                 <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
                     <div class="blogs-home blogs-home-tn mb-4">
                         <div class="heading pb-2 border-bottom mb-3 d-flex">
-                            <a href="phong-cach-song.html">
+                            <a href="javascript:void(0)">
                                 <h5 class="title font-weight-600 mb-3 mb-lg-0 d-inline-block mr-4 ">PHONG CÁCH SỐNG</h5>
                             </a>
                             <div class="review d-inline-block color-EE7D22">
@@ -100,7 +100,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xl-7 col-md-6 col-sm-12 col-12">
-                                @foreach ($records as $key => $news)
+                                @foreach ($lifestyle as $key => $news)
                                 @if($key == 1)
                                 @break
                                 @endif
@@ -123,7 +123,7 @@
                             </div>
                             <div class="col-xl-5 col-md-6 col-sm-12 col-12 pl-md-0">
                                 <div class="list-right">
-                                    @foreach ($records as $key => $news)
+                                    @foreach ($lifestyle as $key => $news)
                                     @if($key == 0)
                                     @continue
                                     @endif
@@ -178,49 +178,45 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- <div class="row justify-content-center mb-4">
+                        <div class="row justify-content-center mb-4">
+                            @foreach ($experience as $key => $news)
+                            @if($key == 2)
+                            @break
+                            @endif
                             <div class="col-xl-6 col-sm-6 col-12">
                                 <div class="item-blog-km item-blog-km-large">
                                     <div class="image mb-3">
-                                        <a href="17-y-tuong-tao-nen-khong-gian-song-day-moi-me-trong-ngoi-nha-ban.html">
-                                            <img src="../cms.janhome.vn/uploads/2020/06/05/thiet-ke-phong-khach.jpg" class="img-fluid" alt="17 ý tưởng tạo nên không gian sống đầy mới mẻ trong ngôi nhà bạn" />
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                            <img src="{{$news->getImage()}}" class="img-fluid"/>
                                         </a>
                                     </div>
                                     <div class="">
                                         <h5 class="title">
-                                        <a href="17-y-tuong-tao-nen-khong-gian-song-day-moi-me-trong-ngoi-nha-ban.html" title="17 ý tưởng tạo nên không gian sống đầy mới mẻ trong ngôi nhà bạn">17 ý tưởng tạo nên không gian sống đầy mới mẻ trong ngôi nhà bạn</a>
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">{!!$news->title!!}</a>
                                         </h5>
                                     </div>
                                     <div class="tag-time">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-sm-6 col-12">
-                                <div class="item-blog-km item-blog-km-large">
-                                    <div class="image mb-3">
-                                        <a href="san-go-malaysia-giup-lam-dep-cac-van-phong-hien-dai-tai-viet-nam.html">
-                                            <img src="../cms.janhome.vn/uploads/2019/10/san-go-malaysia-lap-dat-van-phong-hien-dai.jpg" class="img-fluid" alt="Sàn gỗ Malaysia giúp làm đẹp các văn phòng hiện đại tại Việt Nam" />
-                                        </a>
-                                    </div>
-                                    <div class="">
-                                        <h5 class="title">
-                                        <a href="san-go-malaysia-giup-lam-dep-cac-van-phong-hien-dai-tai-viet-nam.html" title="Sàn gỗ Malaysia giúp làm đẹp các văn phòng hiện đại tại Việt Nam">Sàn gỗ Malaysia giúp làm đẹp các văn phòng hiện đại tại Việt Nam</a>
-                                        </h5>
-                                    </div>
-                                    <div class="tag-time">
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            @foreach ($experience as $key => $news)
+                            @if($key < 2)
+                            @continue
+                            @endif
+                            @if($key == 5)
+                            @break
+                            @endif
                             <div class="col-xl-4 col-sm-4 col-12">
                                 <div class="item-blog-km item-blog-km-ls">
                                     <div class="image mb-3">
-                                        <a href="hoan-thien-va-trang-tri-ngoai-that-vinhome-tan-cang-voi-san-go-ngoai-troi-timberman.html">
-                                            <img src="../cms.janhome.vn/uploads/thumb/2020/06/05/lat-san-go-timberman-cho-vinhome-tan-cang16.jpg" class="img-fluid" alt="Hoàn thiện và trang trí ngoại thất Vinhome Tân Cảng với sàn gỗ ngoài trời Timberman" />
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                            <img src="{{$news->getImage()}}" class="img-fluid" />
                                         </a>
                                     </div>
                                     <div class="">
                                         <h5 class="title h6">
-                                        <a href="hoan-thien-va-trang-tri-ngoai-that-vinhome-tan-cang-voi-san-go-ngoai-troi-timberman.html" title="Hoàn thiện và trang trí ngoại thất Vinhome Tân Cảng với sàn gỗ ngoài trời Timberman">Hoàn thiện và trang trí ngoại thất Vinhome Tân Cảng với sàn gỗ ngoài trời Timberman</a>
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">{!!$news->title!!}</a>
                                         </h5>
                                     </div>
                                 </div>
@@ -253,7 +249,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="blogs-home blogs-home-tn mb-4">
                         <div class="heading pb-2 border-bottom mb-3 d-flex">

@@ -50,6 +50,14 @@ class NewsRepository extends AbstractRepository {
         return $query->where('news.status', 1)->orderBy('news.created_at', 'desc')->paginate($limit);
     }
 
+    public function getNews($alias, $limit) {
+
+        $category = \DB::table('category')->where('alias', $alias)->pluck('id');
+        $news = \DB::table('news_category')->where('category_id', $category)->pluck('news_id');
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $news)->orderBy('post_schedule', 'desc')->take($limit)->get();
+
+    }
+
     public function getAllNews($limit ) {
         return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
