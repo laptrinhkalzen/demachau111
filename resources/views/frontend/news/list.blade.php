@@ -245,50 +245,64 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- <div class="row">
+                        <div class="row">
                             <div class="col-xl-7 col-md-6 col-sm-12 col-12">
+                                @foreach ($expert as $key => $news)
+                                @if($key == 1)
+                                @break
+                                @endif
                                 <div class="item">
                                     <div class="image">
-                                        <a href="lat-san-go-janmi-039-8mm-cho-chung-cu-viet-duc-complex.html" title="Lát sàn gỗ Janmi 039 8mm cho chung cư Việt Đức Complex">
-                                            <img src="../cms.janhome.vn/uploads/2020/07/06/san-go-janmi-039.jpg" class="img-fluid w-100" alt="Lát sàn gỗ Janmi 039 8mm cho chung cư Việt Đức Complex" />
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                            <img src="{{$news->getImage()}}" class="img-fluid w-100"/>
                                         </a>
                                     </div>
-                                    <a href="lat-san-go-janmi-039-8mm-cho-chung-cu-viet-duc-complex.html" title="Lát sàn gỗ Janmi 039 8mm cho chung cư Việt Đức Complex" class="">
+                                    <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
                                         <h6 class="title  mt-3 ">
-                                        Lát sàn gỗ Janmi 039 8mm cho chung cư Việt Đức Complex
+                                        {!!$news->title!!}
                                         </h6>
                                     </a>
                                     <div class="des">
-                                        <p><strong><a href="lat-san-go-janmi-039-8mm-cho-chung-cu-viet-duc-complex.html">S&agrave;n gỗ Janmi 039 8mm</a></strong>&nbsp;l&agrave; s&agrave;n gỗ c&ocirc;ng nghiệp Malaysia c&oacute; khả năng chịu nước rất tốt. Sản phẩm kh&ocirc;ng chỉ đảm bảo độ bền cho c&aacute;c c&ocirc;ng tr&igrave;nh nội thất m&agrave; c&ograve;n gi&uacute;p c&aacute;c c&ocirc;ng tr&igrave;nh trở n&ecirc;n sang trọng v&agrave; hiện đại hơn.&nbsp;</p>
+                                        {!!$news->description!!}
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
                             <div class="col-xl-5 col-md-6 col-sm-12 col-12 pl-md-0">
                                 <div class="list-right">
+                                    @foreach ($expert as $key => $news)
+                                    @if($key == 0)
+                                    @continue
+                                    @endif
+                                    @if($key == 6)
+                                    @break
+                                    @endif
                                     <div class="item">
                                         <div class="row">
                                             <div class="col-xl-3 col-md-4 col-sm-3 col-3 pr-0">
                                                 <div class="image">
-                                                    <a href="lua-chon-san-go-cong-nghiep-tot-nhat-cho-ngoi-nha-viet.html" title="Lựa chọn sàn gỗ công nghiệp tốt nhất cho ngôi nhà Việt">
-                                                        <img src="../cms.janhome.vn/uploads/thumb/2020/07/03/lua-chon-san-go-cong-nghiep-tot-nhat-cho-ngoi-nha-viet.jpg" class="img-fluid" alt="Lựa chọn sàn gỗ công nghiệp tốt nhất cho ngôi nhà Việt" />
+                                                    <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                                        <img src="{{$news->getImage()}}" class="img-fluid" />
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-xl-9 col-md-8 col-sm-9 col-9 ">
                                                 <h6 class="title">
-                                                <a href="lua-chon-san-go-cong-nghiep-tot-nhat-cho-ngoi-nha-viet.html" title="Lựa chọn sàn gỗ công nghiệp tốt nhất cho ngôi nhà Việt">
-                                                    Lựa chọn sàn gỗ công nghiệp tốt nhất cho ngôi nhà Việt
+                                                <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                                    {!!$news->title!!}
                                                 </a>
                                                 </h6>
                                                 <div class="time">
-                                                    03/07/2020 <img src="images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw" class="img-fluid mr-2" style=" margin-bottom: .1rem;" />246 lượt xem
+                                                    {!!$news->getPostSchedule()!!} 
+                                                    <img src="images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw" class="img-fluid mr-2" style=" margin-bottom: .1rem;" />0 lượt xem
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="blog-ss-3">
                         <div class="heading pb-2 border-bottom mb-3 d-flex">
@@ -311,82 +325,51 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- <div class="row justify-content-center mb-4">
+                        <div class="row justify-content-center mb-4">
+                            @foreach ($tutorial as $key => $news)
+                            @if($key == 2)
+                            @break
+                            @endif
                             <div class="col-xl-6 col-sm-6 col-12">
                                 <div class="item-blog-km item-blog-km-large">
                                     <div class="image mb-3">
-                                        <a href="thi-cong-thuc-te-san-go-florton-fl808-tai-khach-san-thuong-mai-25-ngoc-khanh.html">
-                                            <img src="../cms.janhome.vn/uploads/2020/08/05/cong-trinh-lat-san-go-florton-fl808-dep-mat.jpg" class="img-fluid" alt="Thi công thực tế sàn gỗ Florton FL808 tại Khách sạn Thương Mại 25 Ngọc Khánh " />
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                            <img src="{{$news->getImage()}}" class="img-fluid" style="height: 200px;" />
                                         </a>
                                     </div>
                                     <div class="">
                                         <h5 class="title">
-                                        <a href="thi-cong-thuc-te-san-go-florton-fl808-tai-khach-san-thuong-mai-25-ngoc-khanh.html" title="Thi công thực tế sàn gỗ Florton FL808 tại Khách sạn Thương Mại 25 Ngọc Khánh ">Thi công thực tế sàn gỗ Florton FL808 tại Khách sạn Thương Mại 25 Ngọc Khánh </a>
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">{!!$news->title!!}</a>
                                         </h5>
                                     </div>
                                     <div class="tag-time">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-sm-6 col-12">
-                                <div class="item-blog-km item-blog-km-large">
-                                    <div class="image mb-3">
-                                        <a href="uu-va-nhuoc-diem-chung-cua-cac-loai-san-go-cong-nghiep.html">
-                                            <img src="../cms.janhome.vn/uploads/2020/07/03/uu-va-nhuoc-diem-chung-cua-san-go-cong-nghiep.jpg" class="img-fluid" alt="Ưu và nhược điểm chung của các loại sàn gỗ công nghiệp" />
-                                        </a>
-                                    </div>
-                                    <div class="">
-                                        <h5 class="title">
-                                        <a href="uu-va-nhuoc-diem-chung-cua-cac-loai-san-go-cong-nghiep.html" title="Ưu và nhược điểm chung của các loại sàn gỗ công nghiệp">Ưu và nhược điểm chung của các loại sàn gỗ công nghiệp</a>
-                                        </h5>
-                                    </div>
-                                    <div class="tag-time">
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            @foreach ($tutorial as $key => $news)
+                            @if($key < 2)
+                            @continue
+                            @endif
+                            @if($key == 5)
+                            @break
+                            @endif
                             <div class="col-xl-4 col-sm-4 col-12">
                                 <div class="item-blog-km item-blog-km-ls">
                                     <div class="image mb-3">
-                                        <a href="huong-dan-lap-dat-san-nhua-hem-khoa-spc.html">
-                                            <img src="../cms.janhome.vn/uploads/thumb/2019/09/lap-dat-san-nhua-hem-khoa-dung-ky-thuat.jpg" class="img-fluid" alt="Hướng dẫn lắp đặt sàn nhựa hèm khóa SPC" />
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                            <img src="{{$news->getImage()}}" class="img-fluid" style="height: 140px;" />
                                         </a>
                                     </div>
                                     <div class="">
                                         <h5 class="title h6">
-                                        <a href="huong-dan-lap-dat-san-nhua-hem-khoa-spc.html" title="Hướng dẫn lắp đặt sàn nhựa hèm khóa SPC">Hướng dẫn lắp đặt sàn nhựa hèm khóa SPC</a>
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">{!!$news->title!!}</a>
                                         </h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-sm-4 col-12">
-                                <div class="item-blog-km item-blog-km-ls">
-                                    <div class="image mb-3">
-                                        <a href="quy-trinh-thi-cong-lap-dat-san-go-xuong-ca.html">
-                                            <img src="../cms.janhome.vn/uploads/thumb/2019/05/lap-dat-san-go-xuong-ca.jpg" class="img-fluid" alt="Quy trình thi công lắp đặt sàn gỗ xương cá" />
-                                        </a>
-                                    </div>
-                                    <div class="">
-                                        <h5 class="title h6">
-                                        <a href="quy-trinh-thi-cong-lap-dat-san-go-xuong-ca.html" title="Quy trình thi công lắp đặt sàn gỗ xương cá">Quy trình thi công lắp đặt sàn gỗ xương cá</a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-sm-4 col-12">
-                                <div class="item-blog-km item-blog-km-ls">
-                                    <div class="image mb-3">
-                                        <a href="huong-dan-thi-cong-tam-nhua-pvc-van-da-op-tuong.html">
-                                            <img src="../cms.janhome.vn/uploads/thumb/2020/06/05/lap-dat-tam-pvc-van-da.jpg" class="img-fluid" alt="Hướng dẫn thi công tấm nhựa PVC vân đá ốp tường" />
-                                        </a>
-                                    </div>
-                                    <div class="">
-                                        <h5 class="title h6">
-                                        <a href="huong-dan-thi-cong-tam-nhua-pvc-van-da-op-tuong.html" title="Hướng dẫn thi công tấm nhựa PVC vân đá ốp tường">Hướng dẫn thi công tấm nhựa PVC vân đá ốp tường</a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+                            @endforeach
+                        </div>
                     </div>
                     <!--Gửi Comment-->
                     

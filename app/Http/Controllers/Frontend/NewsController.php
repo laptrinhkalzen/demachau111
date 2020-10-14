@@ -22,6 +22,8 @@ class NewsController extends Controller {
 
         $lifestyle = $this->newsRepo->getNews($alias='phong-cach-song',$limit=10);
         $experience = $this->newsRepo->getNews($alias='trai-nghiem',$limit=10);
+        $expert = $this->newsRepo->getNews($alias='chuyen-gia',$limit=10);
+        $tutorial = $this->newsRepo->getNews($alias='huong-dan',$limit=10);
         if ($alias) {
             $category = $this->categoryRepo->findByAlias($alias);
             $records = $this->newsRepo->readFE($request, $category->id);
@@ -31,9 +33,9 @@ class NewsController extends Controller {
         $category_arr = $this->categoryRepo->readHomeNewsCategory();
         $featured_news = $this->newsRepo->readFeaturedNews($limit = 5);
         if (config('global.device') != 'pc') {
-            return view('mobile/news/list', compact('records', 'category_arr', 'featured_news','lifestyle','experience'));
+            return view('mobile/news/list', compact('records', 'category_arr', 'featured_news', 'lifestyle', 'experience', 'expert', 'tutorial'));
         } else {
-            return view('frontend/news/list', compact('records', 'category_arr', 'featured_news','lifestyle','experience'));
+            return view('frontend/news/list', compact('records', 'category_arr', 'featured_news', 'lifestyle', 'experience', 'expert', 'tutorial'));
         }
     }
 
