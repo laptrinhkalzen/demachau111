@@ -1,6 +1,43 @@
 @extends('frontend.layouts.master')
 @section('content')
 <body>
+    <section class=" pt-3 pb-4">
+        <div class="container">
+
+            <div class="row">
+                @foreach ($slide1 as $key=>$product)
+                @if($key == 1)
+                @break
+                @endif
+                <div class="col-lg-8 col-md-8 col-dm-12 col-12">
+                    <div id="carouselHome" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="javascript:void(0)">
+                                    <img src="{!!$product->getImage()!!}" class="d-block w-100">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                <div class="col-lg-4 col-md-4 col-12">
+                    @foreach ($slide1 as $key=>$product)
+                    @if($key == 0)
+                    @continue
+                    @endif
+                    @if($key == 3)
+                    @break
+                    @endif
+                    <a href="javascript:void(0)" title="" class="hide-mobile">
+                        <img src="{!!$product->getImage()!!}" />
+                    </a>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="loc-kq">
         &nbsp
         <div class="container">
@@ -25,7 +62,7 @@
             <div class="form-book">
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" style="font-size: 15px;" id="news" role="tabpanel" aria-labelledby="home-tab">
-                        <!-- <div class="container mb-3 client-cate">
+                        <div class="container mb-3 client-cate">
                             <div class="bg-fff border-r-4">
                                 <div class="row no-gutters">
                                     <div class="col-lg-3 col-md-4 col-12 align-self-center ">
@@ -145,102 +182,102 @@
                                     <div class="row no-gutters">
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="1">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/jan-mi-logo-thuong-hieu.jpg" class="img-fluid" alt="Janmi" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/jan-mi-logo-thuong-hieu.jpg" class="img-fluid" alt="Janmi" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="2">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/san-go-florton.jpg" class="img-fluid" alt="Florton" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/san-go-florton.jpg" class="img-fluid" alt="Florton" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="3">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/logo-dongwha.jpg" class="img-fluid" alt="DongWha" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/logo-dongwha.jpg" class="img-fluid" alt="DongWha" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="4">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/thai-green-janhome-logo.png" class="img-fluid" alt="ThaiGreen" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/thai-green-janhome-logo.png" class="img-fluid" alt="ThaiGreen" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="5">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/Kronotex_Logo_janhome.jpg" class="img-fluid" alt="Kronotex" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/Kronotex_Logo_janhome.jpg" class="img-fluid" alt="Kronotex" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="6">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/newsky-san-go-logo-thuong-hieu.jpg" class="img-fluid" alt="Newsky" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/newsky-san-go-logo-thuong-hieu.jpg" class="img-fluid" alt="Newsky" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="7">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/28976-600x800-1.jpg" class="img-fluid" alt="Classen" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/28976-600x800-1.jpg" class="img-fluid" alt="Classen" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="8">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/logo--tablet.png" class="img-fluid" alt="wineo" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/logo--tablet.png" class="img-fluid" alt="wineo" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="10">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/logo-woodman_.png" class="img-fluid" alt="Woodman" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/logo-woodman_.png" class="img-fluid" alt="Woodman" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="11">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/thai-xin.png" class="img-fluid" alt="Thaixin" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/thai-xin.png" class="img-fluid" alt="Thaixin" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="12">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/logo-alsafloor-janhome.png" class="img-fluid" alt="Alsafloor" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/logo-alsafloor-janhome.png" class="img-fluid" alt="Alsafloor" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="13">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/vZZ8ngVm.jpg" class="img-fluid" alt="Masfloor" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/vZZ8ngVm.jpg" class="img-fluid" alt="Masfloor" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="14">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/floorart-logo-janhome-1.png" class="img-fluid" alt="FloorArt" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/floorart-logo-janhome-1.png" class="img-fluid" alt="FloorArt" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="15">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/thai-royal-logo.png" class="img-fluid" alt="ThaiRoyal" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/thai-royal-logo.png" class="img-fluid" alt="ThaiRoyal" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="16">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/san-go-kendax-8mm-k8204-2.jpg" class="img-fluid" alt="Kendax" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/san-go-kendax-8mm-k8204-2.jpg" class="img-fluid" alt="Kendax" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="17">
-                                                <img src="../cms.janhome.vn/uploads/2020/06/09/hornitex-logo-san-go.jpg" class="img-fluid" alt="Hornitex" />
+                                                <img src="../noithathunggia/uploads/2020/06/09/hornitex-logo-san-go.jpg" class="img-fluid" alt="Hornitex" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="18">
-                                                <img src="../cms.janhome.vn/uploads/2020/08/03/logo%20timberman.png" class="img-fluid" alt="TimberMan" />
+                                                <img src="../noithathunggia/uploads/2020/08/03/logo%20timberman.png" class="img-fluid" alt="TimberMan" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="19">
-                                                <img src="../cms.janhome.vn/uploads/2020/08/03/janhome%20aqua.png" class="img-fluid" alt="JanHome Floor" />
+                                                <img src="../noithathunggia/uploads/2020/08/03/janhome%20aqua.png" class="img-fluid" alt="JanHome Floor" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="20">
-                                                <img src="../cms.janhome.vn/uploads/2020/08/03/logo%20ecofloor.png" class="img-fluid" alt="Ecofloor" />
+                                                <img src="../noithathunggia/uploads/2020/08/03/logo%20ecofloor.png" class="img-fluid" alt="Ecofloor" />
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                                             <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="21">
-                                                <img src="../cms.janhome.vn/uploads/2020/08/05/logo%20kostlich.png" class="img-fluid" alt="Kostlich" />
+                                                <img src="../noithathunggia/uploads/2020/08/05/logo%20kostlich.png" class="img-fluid" alt="Kostlich" />
                                             </div>
                                         </div>
                                     </div>
@@ -478,12 +515,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
-                    <!--<div class="list-prod-search bg-fff">
+                        </div>
+<!--                     <div class="list-prod-search bg-fff">
                             <div class="container">
                                 <p class="txt-all-sp">Tất cả sản phẩm : <strong class="tk-keyword"></strong></p>
                             </div>
-                        </div> -->
+                        </div>  -->
                         <div class="row no-gutters _binding_product_query_db">
                             <div class="_get-info" data-total="41" data-keyword="Tất cả danh mục" style="display:none;"></div>
                             @foreach($search_product as $key => $product)

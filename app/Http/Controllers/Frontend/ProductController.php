@@ -16,12 +16,13 @@ use App\Repositories\OrderRepository;
 use App\Repositories\OrderDetailRepository;
 use Repositories\GalleryRepository;
 use App\Product;
+use App\Repositories\SlideRepository;
 
 class ProductController extends Controller {
 
     
     
-    public function __construct(OrderRepository $orderRepo, OrderDetailRepository $orderdetailRepo, ProductRepository $productRepo,NewsRepository $newsRepo, CategoryRepository $categoryRepo, AttributeRepository $attributeRepo, ProductAttributeRepository $productAttrRepo, ProductCategoryRepository $productCategoryRepo, KeywordRepository $keywordRepo, GalleryRepository $galleryRepo,ProductCategoryRepository $productcategoryRepo) {
+    public function __construct(OrderRepository $orderRepo, OrderDetailRepository $orderdetailRepo, ProductRepository $productRepo,NewsRepository $newsRepo, CategoryRepository $categoryRepo, AttributeRepository $attributeRepo, ProductAttributeRepository $productAttrRepo, ProductCategoryRepository $productCategoryRepo, KeywordRepository $keywordRepo, GalleryRepository $galleryRepo,ProductCategoryRepository $productcategoryRepo, SlideRepository $slideRepo) {
         $this->productRepo = $productRepo;
         $this->newsRepo = $newsRepo;
         $this->categoryRepo = $categoryRepo;
@@ -33,6 +34,7 @@ class ProductController extends Controller {
         $this->orderRepo = $orderRepo;
         $this->orderdetailRepo = $orderdetailRepo;
         $this->productcategoryRepo= $productcategoryRepo;
+        $this->slideRepo = $slideRepo;
     }
 
     public function show($alias) {
@@ -40,20 +42,23 @@ class ProductController extends Controller {
         $search_product = $this->productRepo->getProduct($alias, $limit=null);
         $title = \DB::table('category')->where('alias', $alias)->pluck('title');
         $count = count($search_product);
-       return view('frontend/home/search',compact('search_product','count','title'));
+        $slide1 = $this->slideRepo->getSlide1();
+       return view('frontend/home/search',compact('search_product','count','title','slide1'));
     }
 
     public function search(Request $request) {
          ini_set('memory_limit', '2048M');
         $search_product = $this->productRepo->readFE($request);
         $count = count($search_product);
-       return view('frontend/home/search',compact('search_product','count'));
+        $slide1 = $this->slideRepo->getSlide1();
+       return view('frontend/home/search',compact('search_product','count','slide1'));
     } 
 
     public function filter(Request $request){
         $search_product = $this->productRepo->readFE($request);
         $count = count($search_product);
-        return view('frontend/home/search',compact('search_product','count'));
+        $slide1 = $this->slideRepo->getSlide1();
+        return view('frontend/home/search',compact('search_product','count','slide1'));
     }
     public function detail(Request $request,$alias) {
             $detail_products=  $this->productRepo->getDetailProduct($alias);

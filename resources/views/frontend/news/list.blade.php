@@ -1,309 +1,1120 @@
 @extends('frontend.layouts.master')
 @section('content')
-    <body class="page-body">
-    <!-- Start Main Content -->
-    <main class="main-content gradient-lg position-relative">
-
-        <!-- Overlay -->
-        <div class="overlay pe-n br-n bp-c bs-c o-30" style="background-image: url(assets2/img/bg/bg_shape.png);"></div>
-        <!-- /.Overlay -->
-
-        <!-- Start Content Area -->
-        <div class="content-section news-section carousel-spotlight ig-carousel text-light">
-            <div class="container">
-                <header class="header">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb-product breadcrumb-nowrap breadcrumb breadcrumb-angle bg-transparent pl-0 pr-0 mb-0">
-                            <li class="breadcrumb-item"><a href="{{route('home.store')}}">All Games</a></li>
-                            <li class="breadcrumb-item"><a href="{{route('home.store')}}">Action Games</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Vestibulum</li>
-                        </ol>
-                    </nav>
-                    <h2>All News</h2>
-                </header>
-                <div class="position-relative">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <!-- nav tabs -->
-                            <ul class="spotlight-tabs spotlight-tabs-dark nav nav-tabs border-0 mb-5 position-relative flex-nowrap" id="most_popular_products-carousel-01" role="tablist">
-                                <li class="nav-item text-fnwp position-relative">
-                                    <a class="nav-link active show" id="mp-2-01-tab" data-toggle="tab" href="#mp-2-01-c" role="tab" aria-controls="mp-2-01-c" aria-selected="true">Full Stories</a>
-                                </li>
-                                <li class="nav-item text-fnwp position-relative">
-                                    <a class="nav-link" id="mp-2-02-tab" data-toggle="tab" href="#mp-2-02-c" role="tab" aria-controls="mp-2-02-c" aria-selected="false">Headlines</a>
-                                </li>
-                            </ul>
-                            <!-- tab panes -->
-{{--                            <main>--}}
-{{--                                <div class="news-item col-12 mb-4" style="">--}}
-{{--                                    <div class="row" style="">--}}
-
-{{--                                            <div class="card">--}}
-{{--                                                @foreach($records as $record)--}}
-{{--                                                    <div class="" style="width: 770px;">--}}
-{{--                                                        <article class="blog" style="border:  1px solid white;">--}}
-{{--                                                            <figure >--}}
-{{--                                                                <a href="{{$record->url()}}"><img src="{{$record->getImage()}}" style="float: left;height: 150px; width: 220px;" alt="{{$record->title}}">--}}
-
-{{--                                                                </a>--}}
-{{--                                                                <div class="post_info" style="float: left; margin-left: 25px; ">--}}
-
-{{--                                                                    <h2 class="post-title"><a style="font-size: 22px;" href="{{$record->url()}}">{{$record->title}}</a></h2>--}}
-{{--                                                                    <div class="small-3 mb-2">--}}
-{{--                                                                        <span class="mr-2"><i class="fas fa-calendar-alt mr-1"></i> {{$record->created_at()}}</span>--}}
-{{--                                                                        <a href="{{route('home.store_product')}}" class="comments"><i class="fas fa-comment-alt mr-1"></i> <span>7</span> comments</a>--}}
-{{--                                                                    </div>--}}
-
-{{--                                                                    <b class="post-description">{{$record->description}}</b>--}}
-{{--                                                                    <!-- /article -->--}}
-{{--                                                                </div>--}}
-{{--                                                            </figure>--}}
-
-{{--                                                                --}}{{--                                <ul>--}}
-{{--                                                                --}}{{--                                    <li>--}}
-{{--                                                                --}}{{--                                        <div class="thumb"><img src="{{$record->createdBy->avatar}}" alt="{{$record->createdBy->full_name}}"></div> {{$record->createdBy->full_name}}--}}
-{{--                                                                --}}{{--                                    </li>--}}
-{{--                                                                --}}{{--                                    <li><i class="ti-eye"></i>{{$record->view_count}}</li>--}}
-{{--                                                                --}}{{--                                </ul>--}}
-{{--                                                            </div>--}}
-{{--                                                    <div class="col-12 mt-2">--}}
-{{--                                                        <div class="d-flex align-items-center bg-dark_A-10 px-4 py-2">--}}
-{{--                                                            <div class="text-uppercase small fw-600 mr-3">Share: </div>--}}
-{{--                                                            <div class="social-buttons">--}}
-{{--                                                                <a class="social-facebook mr-1" href="#"><i class="fab fa-facebook"></i></a>--}}
-{{--                                                                <a class="social-twitter mr-1" href="#"><i class="fab fa-twitter"></i></a>--}}
-{{--                                                                <a class="social-dribbble mr-1" href="#"><i class="fab fa-dribbble"></i></a>--}}
-{{--                                                                <a class="social-instagram" href="#"><i class="fab fa-instagram"></i></a>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </div>--}}
-{{--                                                        </article>--}}
-
-{{--                                                @endforeach--}}
-{{--                                            </div>--}}
-
-{{--                                            <!-- /row -->--}}
-
-{{--                                        {!!$records->render()!!}--}}
-{{--                                        <!-- /pagination -->--}}
-
-{{--                                        </div><br><br>--}}
-
-{{--                                    <!-- /row -->--}}
-{{--                                </div>--}}
-{{--                                <!-- /container -->--}}
-{{--                            </main>--}}
-
-
-                            <div class="news-item col-12 mb-4">
-                                @foreach($records as $record)
-                                <div class="row" style="border-bottom:  1px solid grey ;padding-top: 30px;padding-bottom: 30px;">
-                                    <div class="col-lg-4 mb-5 mb-lg-0" style="">
-                                        <div class="card" >
-                                            <div>
-                                                <a href="{{$record->url()}}"><img src="{{$record->getImage()}}" style="float: left;height: 150px; width: 220px;" alt="{{$record->title}}">
-
-                                                </a>
-                                                <div class="badges badges-left badges-top pl-2 pt-1 text-white">
-                                                    <a class="badge badge-warning text-secondary fw-600" href="{{$record->url()}}"">News</a>
-                                                </div>
-                                            </div>
+<body>
+    
+    <div class="banner-page py-3 mb-4" style="margin-top: 30px">
+        <div class="container align-self-center">
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-12 ">
+                    <h1 class="text-center">TƯ VẤN</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row flex-md-row-reverse">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+                
+                <div class="list-menu-right">
+                    <div class="heading">
+                        <img src="images/menu-icon8bd3.svg?v=qef7cssZHgAquLTKdp4RlX3HxrirbSXXNcb4nv352dM" class="img-fluid mr-2" />Danh mục
+                    </div>
+                    <!--                     <ul class="list">
+                        <li><a href="tin-khuyen-mai.html" title="TIN KHUYẾN MẠI">TIN KHUYẾN MẠI</a></li>
+                    </ul> -->
+                </div>
+                <div class="list-menu-right">
+                    <div class="heading mb-md-3">
+                        <img src="images/giftc829.svg?v=9SyPI8n17F7AMeX1L1ifHuyq4N7RRpl6-lxBALqXHbM" class="img-fluid mr-2" />Khuyến mại
+                    </div>
+                    <!-- <div class="list lastest-news">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-12 ">
+                                    <div class="image mb-3">
+                                        <a href="mung-ngay-doc-lap-giam-gia-cuc-soc-tai-janhome-he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho.html" title="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">
+                                            <img src="../cms.janhome.vn/uploads/thumb/2020/09/04/khuyen-mai-thang-9-2020-tai-janhome.jpg" class="img-fluid" alt="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <h6 class="title">
+                                    <a href="mung-ngay-doc-lap-giam-gia-cuc-soc-tai-janhome-he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho.html" title="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho</a>
+                                    </h6>
+                                    <div class="des ">
+                                        <p>Trong th&aacute;ng 9/2020, JanHome đưa ra rất nhiều chương tr&igrave;nh khuyến m&atilde;i hấp dẫn, vừa giảm gi&aacute;, vừa tặng qu&agrave;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="list-menu-right">
+                    <div class="heading mb-3">
+                        <img src="images/flag-iconf002.svg?v=GoDAQeasQ5QDI54pnNLz0oiRudBV9A0ehf63EdEb_1Y" class="img-fluid mr-2" />Mới cập nhật
+                    </div>
+                    <!-- <div class="list lastest-news">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-12 ">
+                                    <div class="image mb-3">
+                                        <a href="vi-gach-go-nhua-lat-san-nha-tam-ban-cong-san-thuong-sieu-chiu-nuoc.html" title="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">
+                                            <img src="../cms.janhome.vn/uploads/thumb/2020/09/18/vi-gach-go-nhua-lat-san-ban-cong-san-thuong-sieu-chiu-nuoc.jpg" class="img-fluid" alt="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <h6 class="title">
+                                    <a href="vi-gach-go-nhua-lat-san-nha-tam-ban-cong-san-thuong-sieu-chiu-nuoc.html" title="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước</a>
+                                    </h6>
+                                    <div class="des ">
+                                        <p>Vỉ gạch gỗ nhựa l&agrave; vật liệu l&aacute;t s&agrave;n hiện đại, được tạo n&ecirc;n từ sợi gỗ, nhựa c&ugrave;ng c&aacute;c...
                                         </div>
                                     </div>
-                                    <div class="col-lg-8">
-                                        <div class="text-gray">
-                                            <h5 class="text-uppercase fw-600"><a href="{{$record->url()}}">{{$record->title}}</a></h5>
-                                            <div class="small-3 mb-2">
-                                                <span class="mr-2"><i class="fas fa-calendar-alt mr-1"></i> {{$record->created_at()}}</span>
-                                                <a href="{{route('home.store_product')}}" class="comments"><i class="fas fa-comment-alt mr-1"></i> <span>{{$record->comment_count}}</span> comments</a>
-                                            </div>
-                                            <p>{{$record->description}}</p>
-                                        </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
+                    <div class="blogs-home blogs-home-tn mb-4">
+                        <div class="heading pb-2 border-bottom mb-3 d-flex">
+                            <a href="phong-cach-song.html">
+                                <h5 class="title font-weight-600 mb-3 mb-lg-0 d-inline-block mr-4 ">PHONG CÁCH SỐNG</h5>
+                            </a>
+                            <div class="review d-inline-block color-EE7D22">
+                                
+                                <div class="star-rating  text-center mb-3" data-id="136" data-type="3">
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="javascript:void(0)" class="link-view-more">
+                                    Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-7 col-md-6 col-sm-12 col-12">
+                                @foreach ($records as $key => $news)
+                                @if($key == 1)
+                                @break
+                                @endif
+                                <div class="item">
+                                    <div class="image">
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                            <img src="{{$news->getImage()}}" class="img-fluid w-100"/>
+                                        </a>
                                     </div>
-                                    <div class="col-12 mt-2">
-                                        <div class="d-flex align-items-center bg-dark_A-10 px-4 py-2">
-                                            <div class="text-uppercase small fw-600 mr-3">Share: </div>
-                                            <div class="social-buttons">
-                                                <a class="fb-share" href="javascript:void(0)" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={!! $record->url() !!}', 'Facebook', 'width=600,height=400');"><i class="fab fa-facebook"></i> </a>
-                                                <a class="twitter-share" href="javascript:void(0)" onclick="window.open('https://twitter.com/share?text=&url={!! $record->url() !!}', 'Twitter', 'width=600,height=400')"><i class="fab fa-twitter"></i> </a>
-                                                <a class="pinterest-share" href="javascript:void(0)" onclick="window.open('http://pinterest.com/pin/create/button/?url={!! $record->url() !!}', 'Pinterest', 'width=600,height=400')"><i class="fab fa-dribbble"></i> </a>
-                                                <a class="linkedin-share" href="javascript:void(0)" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url={!! $record->url() !!}', 'Linkedin', 'width=600,height=400')"><i class="fab fa-instagram"></i> </a>
-
-                                            </div>
-                                        </div>
+                                    <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                        <h6 class="title  mt-3 ">
+                                        {!!$news->title!!}
+                                        </h6>
+                                    </a>
+                                    <div class="des">
+                                        {!!$news->description!!}
                                     </div>
                                 </div>
                                 @endforeach
                             </div>
-
-
-                            <!-- pagination -->
-
-
-
-
-
-
-                            {{--@yield('frontend.layouts.master')--}}
-                            <nav class="" aria-label="Page navigation">
-                                <ul class="pagination justify-content-end">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span class="ti-angle-left small-7" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span class="ti-angle-right small-7" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-
-                            <!-- /.pagination -->
-                        </div>
-                        <div class="col-lg-4">
-
-{{--                            <div class="widget search_blog">--}}
-{{--                                <form action="{{route('news.list')}}" method="get">--}}
-{{--                                    <div class="form-group">--}}
-{{--                                        <input type="text" name="keyword" id="search" class="form-control" placeholder="Import a keyword">--}}
-{{--                                        <span><input type="submit" value="Search"></span>--}}
-{{--                                    </div>--}}
-{{--                                </form>--}}
-{{--                            </div>--}}
-                            <div class="rounded mb-4">
-                                <form class="input-group border-0 input-transparent bg-transparent" action="{{route('news.list')}}" method="get">
-                                    <input class="form-control border border-secondary border-right-0" type="search" placeholder="Type something.." aria-label="Search" name="keyword" id="search">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-sm btn-warning text-secondary my-0 mx-0" type="submit"><i class="fas fa-search"></i></button>
+                            <div class="col-xl-5 col-md-6 col-sm-12 col-12 pl-md-0">
+                                <div class="list-right">
+                                    @foreach ($records as $key => $news)
+                                    @if($key == 0)
+                                    @continue
+                                    @endif
+                                    @if($key == 6)
+                                    @break
+                                    @endif
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-xl-3 col-md-4 col-sm-3 col-3 pr-0">
+                                                <div class="image">
+                                                    <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                                        <img src="{{$news->getImage()}}" class="img-fluid" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-9 col-md-8 col-sm-9 col-9 ">
+                                                <h6 class="title">
+                                                <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                                    {!!$news->title!!}
+                                                </a>
+                                                </h6>
+                                                <div class="time">
+                                                    {!!$news->getPostSchedule()!!} 
+                                                    <img src="images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw" class="img-fluid mr-2" style=" margin-bottom: .1rem;" />0 lượt xem
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </form>
-                            </div>
-                            <div class="filters border border-secondary rounded p-4 mb-4">
-                                <ul class="sidebar-nav-light-hover list-unstyled mb-0 text-unset small-3 fw-600">
-
-                                    <li class="nav-item text-light transition mb-2 active">
-                                        <a href="news.html" aria-expanded="false" class="nav-link py-2 px-3 text-uppercase nav-link-border">
-                                            <span class="p-collapsing-title">All News</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item text-light transition mb-2">
-                                        <a href="news.html" aria-expanded="false" class="nav-link py-2 px-3 text-uppercase nav-link-border">
-                                            <span class="p-collapsing-title">Announcements</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item text-light transition mb-2">
-                                        <a href="news.html" aria-expanded="false" class="nav-link py-2 px-3 text-uppercase nav-link-border">
-                                            <span class="p-collapsing-title">Press Releases</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item text-light transition mb-2">
-                                        <a href="news.html" aria-expanded="false" class="nav-link py-2 px-3 text-uppercase nav-link-border">
-                                            <span class="p-collapsing-title">Product Releases</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item text-light transition mb-2">
-                                        <a href="news.html" aria-expanded="false" class="nav-link py-2 px-3 text-uppercase nav-link-border">
-                                            <span class="p-collapsing-title">Product Releases</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="archive border border-secondary rounded">
-                                <div class="bg-secondary px-4 py-1"><span class="fw-600 ls-1 text-uppercase small">Achive</span></div>
-                                <div class="p-4">
-                                    <ul class="list-unstyled small mb-0">
-                                        <li><a href="news.html">2020</a></li>
-                                        <li><a href="news.html">2019</a></li>
-                                        <li><a href="news.html">2018</a></li>
-                                        <li><a href="news.html">2017</a></li>
-                                        <li><a href="news.html">2016</a></li>
-                                        <li><a href="news.html">2015</a></li>
-                                        <li><a href="news.html">2014</a></li>
-                                    </ul>
+                                    @endforeach
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-ss-3">
+                        <div class="heading pb-2 border-bottom mb-3 d-flex">
+                            <a href="trai-nghiem-cung-janhome.html">
+                                <h5 class="title font-weight-600 mb-3 mb-lg-0 d-inline-block mr-4 ">TRẢI NGHIỆM CÙNG JANHOME</h5>
+                            </a>
+                            <div class="review d-inline-block color-EE7D22">
+                                
+                                <div class="star-rating  text-center mb-3" data-id="138" data-type="3">
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="javascript:void(0)" class="link-view-more">
+                                    Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <div class="row justify-content-center mb-4">
+                            <div class="col-xl-6 col-sm-6 col-12">
+                                <div class="item-blog-km item-blog-km-large">
+                                    <div class="image mb-3">
+                                        <a href="17-y-tuong-tao-nen-khong-gian-song-day-moi-me-trong-ngoi-nha-ban.html">
+                                            <img src="../cms.janhome.vn/uploads/2020/06/05/thiet-ke-phong-khach.jpg" class="img-fluid" alt="17 ý tưởng tạo nên không gian sống đầy mới mẻ trong ngôi nhà bạn" />
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="title">
+                                        <a href="17-y-tuong-tao-nen-khong-gian-song-day-moi-me-trong-ngoi-nha-ban.html" title="17 ý tưởng tạo nên không gian sống đầy mới mẻ trong ngôi nhà bạn">17 ý tưởng tạo nên không gian sống đầy mới mẻ trong ngôi nhà bạn</a>
+                                        </h5>
+                                    </div>
+                                    <div class="tag-time">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-sm-6 col-12">
+                                <div class="item-blog-km item-blog-km-large">
+                                    <div class="image mb-3">
+                                        <a href="san-go-malaysia-giup-lam-dep-cac-van-phong-hien-dai-tai-viet-nam.html">
+                                            <img src="../cms.janhome.vn/uploads/2019/10/san-go-malaysia-lap-dat-van-phong-hien-dai.jpg" class="img-fluid" alt="Sàn gỗ Malaysia giúp làm đẹp các văn phòng hiện đại tại Việt Nam" />
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="title">
+                                        <a href="san-go-malaysia-giup-lam-dep-cac-van-phong-hien-dai-tai-viet-nam.html" title="Sàn gỗ Malaysia giúp làm đẹp các văn phòng hiện đại tại Việt Nam">Sàn gỗ Malaysia giúp làm đẹp các văn phòng hiện đại tại Việt Nam</a>
+                                        </h5>
+                                    </div>
+                                    <div class="tag-time">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-4 col-12">
+                                <div class="item-blog-km item-blog-km-ls">
+                                    <div class="image mb-3">
+                                        <a href="hoan-thien-va-trang-tri-ngoai-that-vinhome-tan-cang-voi-san-go-ngoai-troi-timberman.html">
+                                            <img src="../cms.janhome.vn/uploads/thumb/2020/06/05/lat-san-go-timberman-cho-vinhome-tan-cang16.jpg" class="img-fluid" alt="Hoàn thiện và trang trí ngoại thất Vinhome Tân Cảng với sàn gỗ ngoài trời Timberman" />
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="title h6">
+                                        <a href="hoan-thien-va-trang-tri-ngoai-that-vinhome-tan-cang-voi-san-go-ngoai-troi-timberman.html" title="Hoàn thiện và trang trí ngoại thất Vinhome Tân Cảng với sàn gỗ ngoài trời Timberman">Hoàn thiện và trang trí ngoại thất Vinhome Tân Cảng với sàn gỗ ngoài trời Timberman</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-4 col-12">
+                                <div class="item-blog-km item-blog-km-ls">
+                                    <div class="image mb-3">
+                                        <a href="san-go-thaixin-san-go-thai-lan-duoc-ua-chuong-nhat-hien-nay.html">
+                                            <img src="../cms.janhome.vn/uploads/thumb/2020/06/05/mua-san-go-thaixin.jpg" class="img-fluid" alt="Sàn gỗ Thaixin, sàn gỗ Thái lan được ưa chuộng nhất hiện nay" />
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="title h6">
+                                        <a href="san-go-thaixin-san-go-thai-lan-duoc-ua-chuong-nhat-hien-nay.html" title="Sàn gỗ Thaixin, sàn gỗ Thái lan được ưa chuộng nhất hiện nay">Sàn gỗ Thaixin, sàn gỗ Thái lan được ưa chuộng nhất hiện nay</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-4 col-12">
+                                <div class="item-blog-km item-blog-km-ls">
+                                    <div class="image mb-3">
+                                        <a href="3-diem-manh-vuot-troi-cua-gian-hoa-go-nhua-ngoai-troi-tai-hoa-binh.html">
+                                            <img src="../cms.janhome.vn/uploads/thumb/2020/06/05/gian-hoa-ngoai-troi-chat-luong.jpg" class="img-fluid" alt="3 điểm mạnh vượt trội của giàn hoa gỗ nhựa ngoài trời tại Hòa Bình" />
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="title h6">
+                                        <a href="3-diem-manh-vuot-troi-cua-gian-hoa-go-nhua-ngoai-troi-tai-hoa-binh.html" title="3 điểm mạnh vượt trội của giàn hoa gỗ nhựa ngoài trời tại Hòa Bình">3 điểm mạnh vượt trội của giàn hoa gỗ nhựa ngoài trời tại Hòa Bình</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="blogs-home blogs-home-tn mb-4">
+                        <div class="heading pb-2 border-bottom mb-3 d-flex">
+                            <a href="chuyen-gia-cua-ban.html">
+                                <h5 class="title font-weight-600 mb-3 mb-lg-0 d-inline-block mr-4 ">CHUYÊN GIA CỦA BẠN</h5>
+                            </a>
+                            <div class="review d-inline-block color-EE7D22">
+                                
+                                <div class="star-rating  text-center mb-3" data-id="139" data-type="3">
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="javascript:void(0)" class="link-view-more">
+                                    Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-xl-7 col-md-6 col-sm-12 col-12">
+                                <div class="item">
+                                    <div class="image">
+                                        <a href="lat-san-go-janmi-039-8mm-cho-chung-cu-viet-duc-complex.html" title="Lát sàn gỗ Janmi 039 8mm cho chung cư Việt Đức Complex">
+                                            <img src="../cms.janhome.vn/uploads/2020/07/06/san-go-janmi-039.jpg" class="img-fluid w-100" alt="Lát sàn gỗ Janmi 039 8mm cho chung cư Việt Đức Complex" />
+                                        </a>
+                                    </div>
+                                    <a href="lat-san-go-janmi-039-8mm-cho-chung-cu-viet-duc-complex.html" title="Lát sàn gỗ Janmi 039 8mm cho chung cư Việt Đức Complex" class="">
+                                        <h6 class="title  mt-3 ">
+                                        Lát sàn gỗ Janmi 039 8mm cho chung cư Việt Đức Complex
+                                        </h6>
+                                    </a>
+                                    <div class="des">
+                                        <p><strong><a href="lat-san-go-janmi-039-8mm-cho-chung-cu-viet-duc-complex.html">S&agrave;n gỗ Janmi 039 8mm</a></strong>&nbsp;l&agrave; s&agrave;n gỗ c&ocirc;ng nghiệp Malaysia c&oacute; khả năng chịu nước rất tốt. Sản phẩm kh&ocirc;ng chỉ đảm bảo độ bền cho c&aacute;c c&ocirc;ng tr&igrave;nh nội thất m&agrave; c&ograve;n gi&uacute;p c&aacute;c c&ocirc;ng tr&igrave;nh trở n&ecirc;n sang trọng v&agrave; hiện đại hơn.&nbsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-md-6 col-sm-12 col-12 pl-md-0">
+                                <div class="list-right">
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-xl-3 col-md-4 col-sm-3 col-3 pr-0">
+                                                <div class="image">
+                                                    <a href="lua-chon-san-go-cong-nghiep-tot-nhat-cho-ngoi-nha-viet.html" title="Lựa chọn sàn gỗ công nghiệp tốt nhất cho ngôi nhà Việt">
+                                                        <img src="../cms.janhome.vn/uploads/thumb/2020/07/03/lua-chon-san-go-cong-nghiep-tot-nhat-cho-ngoi-nha-viet.jpg" class="img-fluid" alt="Lựa chọn sàn gỗ công nghiệp tốt nhất cho ngôi nhà Việt" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-9 col-md-8 col-sm-9 col-9 ">
+                                                <h6 class="title">
+                                                <a href="lua-chon-san-go-cong-nghiep-tot-nhat-cho-ngoi-nha-viet.html" title="Lựa chọn sàn gỗ công nghiệp tốt nhất cho ngôi nhà Việt">
+                                                    Lựa chọn sàn gỗ công nghiệp tốt nhất cho ngôi nhà Việt
+                                                </a>
+                                                </h6>
+                                                <div class="time">
+                                                    03/07/2020 <img src="images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw" class="img-fluid mr-2" style=" margin-bottom: .1rem;" />246 lượt xem
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="blog-ss-3">
+                        <div class="heading pb-2 border-bottom mb-3 d-flex">
+                            <a href="huong-dan-lap-dat.html">
+                                <h5 class="title font-weight-600 mb-3 mb-lg-0 d-inline-block mr-4 ">HƯỚNG DẪN LẮP ĐẶT</h5>
+                            </a>
+                            <div class="review d-inline-block color-EE7D22">
+                                
+                                <div class="star-rating  text-center mb-3" data-id="536" data-type="3">
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star checked" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="javascript:void(0)" class="link-view-more">
+                                    Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <div class="row justify-content-center mb-4">
+                            <div class="col-xl-6 col-sm-6 col-12">
+                                <div class="item-blog-km item-blog-km-large">
+                                    <div class="image mb-3">
+                                        <a href="thi-cong-thuc-te-san-go-florton-fl808-tai-khach-san-thuong-mai-25-ngoc-khanh.html">
+                                            <img src="../cms.janhome.vn/uploads/2020/08/05/cong-trinh-lat-san-go-florton-fl808-dep-mat.jpg" class="img-fluid" alt="Thi công thực tế sàn gỗ Florton FL808 tại Khách sạn Thương Mại 25 Ngọc Khánh " />
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="title">
+                                        <a href="thi-cong-thuc-te-san-go-florton-fl808-tai-khach-san-thuong-mai-25-ngoc-khanh.html" title="Thi công thực tế sàn gỗ Florton FL808 tại Khách sạn Thương Mại 25 Ngọc Khánh ">Thi công thực tế sàn gỗ Florton FL808 tại Khách sạn Thương Mại 25 Ngọc Khánh </a>
+                                        </h5>
+                                    </div>
+                                    <div class="tag-time">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-sm-6 col-12">
+                                <div class="item-blog-km item-blog-km-large">
+                                    <div class="image mb-3">
+                                        <a href="uu-va-nhuoc-diem-chung-cua-cac-loai-san-go-cong-nghiep.html">
+                                            <img src="../cms.janhome.vn/uploads/2020/07/03/uu-va-nhuoc-diem-chung-cua-san-go-cong-nghiep.jpg" class="img-fluid" alt="Ưu và nhược điểm chung của các loại sàn gỗ công nghiệp" />
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="title">
+                                        <a href="uu-va-nhuoc-diem-chung-cua-cac-loai-san-go-cong-nghiep.html" title="Ưu và nhược điểm chung của các loại sàn gỗ công nghiệp">Ưu và nhược điểm chung của các loại sàn gỗ công nghiệp</a>
+                                        </h5>
+                                    </div>
+                                    <div class="tag-time">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-4 col-12">
+                                <div class="item-blog-km item-blog-km-ls">
+                                    <div class="image mb-3">
+                                        <a href="huong-dan-lap-dat-san-nhua-hem-khoa-spc.html">
+                                            <img src="../cms.janhome.vn/uploads/thumb/2019/09/lap-dat-san-nhua-hem-khoa-dung-ky-thuat.jpg" class="img-fluid" alt="Hướng dẫn lắp đặt sàn nhựa hèm khóa SPC" />
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="title h6">
+                                        <a href="huong-dan-lap-dat-san-nhua-hem-khoa-spc.html" title="Hướng dẫn lắp đặt sàn nhựa hèm khóa SPC">Hướng dẫn lắp đặt sàn nhựa hèm khóa SPC</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-4 col-12">
+                                <div class="item-blog-km item-blog-km-ls">
+                                    <div class="image mb-3">
+                                        <a href="quy-trinh-thi-cong-lap-dat-san-go-xuong-ca.html">
+                                            <img src="../cms.janhome.vn/uploads/thumb/2019/05/lap-dat-san-go-xuong-ca.jpg" class="img-fluid" alt="Quy trình thi công lắp đặt sàn gỗ xương cá" />
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="title h6">
+                                        <a href="quy-trinh-thi-cong-lap-dat-san-go-xuong-ca.html" title="Quy trình thi công lắp đặt sàn gỗ xương cá">Quy trình thi công lắp đặt sàn gỗ xương cá</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-4 col-12">
+                                <div class="item-blog-km item-blog-km-ls">
+                                    <div class="image mb-3">
+                                        <a href="huong-dan-thi-cong-tam-nhua-pvc-van-da-op-tuong.html">
+                                            <img src="../cms.janhome.vn/uploads/thumb/2020/06/05/lap-dat-tam-pvc-van-da.jpg" class="img-fluid" alt="Hướng dẫn thi công tấm nhựa PVC vân đá ốp tường" />
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <h5 class="title h6">
+                                        <a href="huong-dan-thi-cong-tam-nhua-pvc-van-da-op-tuong.html" title="Hướng dẫn thi công tấm nhựa PVC vân đá ốp tường">Hướng dẫn thi công tấm nhựa PVC vân đá ốp tường</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!--Gửi Comment-->
+                    
+                    <div class="comment_binding">
+                        <div class="row mb-3">
+                            <div class="col-md-8 col-sm-8 col-8 ">
+                                <h5 class="font-weight-600 mb-0 mt-1">0 Bình luận</h5>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-4 text-right">
+                                <div class="search-comment">
+                                    <input class="form-control " type="text" placeholder="Search" />
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="border border-r-4 mb-4 upload-parent" id="comment-form" data-type="comment" data-object-id="207" data-object-type="3" data-lang="vi-VN">
+                            <textarea class="form-control txt_content" rows="5" placeholder="Type your topic here"
+                            style="border: 0;" minlength="50"></textarea>
+                            <div class="border-top">
+                                <div class="form-row p-2 ">
+                                    <div class="col-xl-2 col-md-2 col-12">
+                                        <div class="position-relative form-control text-center mb-2 mb-md-0"
+                                            style="font-size: 14px;">
+                                            <img src="images/camera76b3.svg?v=uzA-a65s3aL1-wYwtH3MvhhBjkxH_9yLA4nhYQFRRyk" class="img-fluid" />
+                                            <input type="file" class="input-choose-file " accept="image/*" data-target-url="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-md-4 col-12">
+                                        <input type="text" style="font-size: 14px;" class="form-control mb-2 mb-md-0 txt_name" placeholder="Tên (bắt buộc)" required>
+                                    </div>
+                                    <div class="col-xl-4 col-md-4 col-12">
+                                        <input type="text" style="font-size: 14px;" class="form-control mb-2 mb-md-0 txt_phoneOrEmail" placeholder="Email (bắt buộc)" required>
+                                    </div>
+                                    <div class="col-xl-2 col-md-2 col-12">
+                                        <button class="btn btn-save px-5 mb-2 mb-md-0 send-comment w-100" data-type="comment" data-object-id="207" data-object-type="3" data-lang="vi-VN" type="submit">Gửi</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="_binding_pickup_img" style="display:none; position:relative">
+                                <div style="">
+                                    <img class="_place-img" />
+                                </div>
+                                <div class="_close_customize" style="position:absolute; top:0px; right: 0px">
+                                    <button class="_place-img-close" type="button" style="background-color: transparent; border: 0;"><i class="fal fa-times-circle"></i></button>
+                                </div>
+                                
+                            </div>
+                        </form>
+                        <div class="list-comment mb-4 comment-binding">
+                        </div>
+                        
+                    </div>
+                    <div class="comment-paging" data-total="0" data-size="10" data-object-id="207" data-object-type="3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="fb-root"></div>
+        
+        <!--Modal chọn khu vực-->
+        <div class="modal jan-modal fade" id="modal-khu-vuc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                        <h6 class="modal-title font-weight-bold">Khu vực</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <select id="location-selectbox" class="form-control department-location">
+                            <option value="22">Hà Nội</option>
+                            <option value="550">Bắc Giang</option>
+                            <option value="654">Bắc Ninh</option>
+                            <option value="18">Cao Bằng</option>
+                            <option value="19">Đà Nẵng</option>
+                            <option value="20">Đắk Lắk</option>
+                            <option value="21">Điện Biên</option>
+                            <option value="549">Gia Lai</option>
+                            <option value="23">Hà Tĩnh</option>
+                            <option value="24">Hải Dương</option>
+                            <option value="548">Hải Phòng</option>
+                            <option value="25">Hồ Chí Minh</option>
+                            <option value="26">Hòa Bình</option>
+                            <option value="27">Hưng Yên</option>
+                            <option value="1180">Nghệ An</option>
+                            <option value="703">Nha Trang</option>
+                            <option value="551">Phú Thọ</option>
+                            <option value="653">Quảng Bình</option>
+                            <option value="28">Quảng Ninh</option>
+                            <option value="29">Sơn La</option>
+                            <option value="1242">Thái Bình</option>
+                            <option value="30">Thái Nguyên</option>
+                            <option value="700">Thanh hoá</option>
+                            <option value="1202">Tuyên Quang</option>
+                            <option value="1243">Vĩnh Phúc</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn " data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-save save-location" data-dismiss="modal" data-toggle="modal"
+                        data-target="#modal-xn">
+                        Xác nhận
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal jan-modal fade" id="modal-xn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="mb-3">
+                            <img src="images/logoe209.png?v=1.0.0" class="img-fluid" />
+                        </div>
+                        <h5 class="mb-3 font-weight-bold">Xách nhận thành công!</h5>
+                        <div>
+                            <img src="images/checke209.svg?v=1.0.0" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center border-0">
+                        <button type="button" class="btn btn-save px-lg-5" data-dismiss="modal">Hoàn tất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal liên hệ -->
+        <form class="modal jan-modal fade" id="modal-lien-he" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                        <h6 class="modal-title font-weight-bold">Liên hệ bảo hành</h6>
+                    </div>
+                    <div class="modal-body">
+                        <div class="">
+                            <h6 class="font-weight-bold">Khu vực</h6>
+                            <div class="mb-3">
+                                <select id="location-selectbox" class="form-control department-location">
+                                    <option value="22">Hà Nội</option>
+                                    <option value="550">Bắc Giang</option>
+                                    <option value="654">Bắc Ninh</option>
+                                    <option value="18">Cao Bằng</option>
+                                    <option value="19">Đà Nẵng</option>
+                                    <option value="20">Đắk Lắk</option>
+                                    <option value="21">Điện Biên</option>
+                                    <option value="549">Gia Lai</option>
+                                    <option value="23">Hà Tĩnh</option>
+                                    <option value="24">Hải Dương</option>
+                                    <option value="548">Hải Phòng</option>
+                                    <option value="25">Hồ Chí Minh</option>
+                                    <option value="26">Hòa Bình</option>
+                                    <option value="27">Hưng Yên</option>
+                                    <option value="1180">Nghệ An</option>
+                                    <option value="703">Nha Trang</option>
+                                    <option value="551">Phú Thọ</option>
+                                    <option value="653">Quảng Bình</option>
+                                    <option value="28">Quảng Ninh</option>
+                                    <option value="29">Sơn La</option>
+                                    <option value="1242">Thái Bình</option>
+                                    <option value="30">Thái Nguyên</option>
+                                    <option value="700">Thanh hoá</option>
+                                    <option value="1202">Tuyên Quang</option>
+                                    <option value="1243">Vĩnh Phúc</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-control form-group h-100">
+                            <div class="dropdown h-100" style="word-wrap:break-word">
+                                <!--Trigger-->
+                                <button class="btn btn-primary dropdown-toggle cust-btn-sec h-100" style="font-size:16px;" type="button" id="dropdownMenu1-1"
+                                data-toggle="dropdown">
+                                Chọn Showroom
+                                </button>
+                                <!--Menu-->
+                                <div class="dropdown-menu dropdown-primary cust-popbh" id="your-custom-id">
+                                    <label class="label-checkbox mb-2 pr-4 dropdown-item cust-drop-item">
+                                        Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.(Bên cạnh Big C Hồ Gươm)
+                                        <input type="checkbox" checked />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="label-checkbox mb-2 pr-4 dropdown-item cust-drop-item">
+                                        Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.(Bên cạnh Big C Hồ Gươm)
+                                        <input type="checkbox" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="label-checkbox mb-2 pr-4 dropdown-item cust-drop-item">
+                                        Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.(Bên cạnh Big C Hồ Gươm)
+                                        <input type="checkbox" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="label-checkbox mb-2 pr-4 dropdown-item cust-drop-item">
+                                        Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.(Bên cạnh Big C Hồ Gươm)
+                                        <input type="checkbox" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="label-checkbox mb-2 pr-4 dropdown-item cust-drop-item">
+                                        Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.(Bên cạnh Big C Hồ Gươm)
+                                        <input type="checkbox" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="label-checkbox mb-2 pr-4 dropdown-item cust-drop-item">
+                                        Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.(Bên cạnh Big C Hồ Gươm)
+                                        <input type="checkbox" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="txt-name-bh" class="form-control" placeholder="Họ và tên (bắt buộc)" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="txt-phone-bh" class="form-control" placeholder="Số điện thoại" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="txt-yc-bh" class="form-control" placeholder="Yêu cầu" />
+                        </div>
+                        <div class="form-group">
+                            <textarea type="text" rows="5" class="form-control" id="txt-nd-bh" placeholder="Nội dung chi tiết"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn " data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-save">
+                        Xác nhận
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- Modal showrom gần nhất -->
+        <form class="modal jan-modal fade" id="modal-showromm-ganhat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog  cust-modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bdb-modal">
+                        <h6 class="modal-title font-weight-bold">Kiểm tra siêu thị có hàng trưng bày</h6>
+                        <div class="">
+                            <select id="location-selectbox" class="form-control department-location">
+                                <option value="22">Hà Nội</option>
+                                <option value="550">Bắc Giang</option>
+                                <option value="654">Bắc Ninh</option>
+                                <option value="18">Cao Bằng</option>
+                                <option value="19">Đà Nẵng</option>
+                                <option value="20">Đắk Lắk</option>
+                                <option value="21">Điện Biên</option>
+                                <option value="549">Gia Lai</option>
+                                <option value="23">Hà Tĩnh</option>
+                                <option value="24">Hải Dương</option>
+                                <option value="548">Hải Phòng</option>
+                                <option value="25">Hồ Chí Minh</option>
+                                <option value="26">Hòa Bình</option>
+                                <option value="27">Hưng Yên</option>
+                                <option value="1180">Nghệ An</option>
+                                <option value="703">Nha Trang</option>
+                                <option value="551">Phú Thọ</option>
+                                <option value="653">Quảng Bình</option>
+                                <option value="28">Quảng Ninh</option>
+                                <option value="29">Sơn La</option>
+                                <option value="1242">Thái Bình</option>
+                                <option value="30">Thái Nguyên</option>
+                                <option value="700">Thanh hoá</option>
+                                <option value="1202">Tuyên Quang</option>
+                                <option value="1243">Vĩnh Phúc</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="background-color: #F6F6F7;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h6 class="modal-title font-weight-bold">Đăng ký xem hàng trưng bày tại</h6>
+                                <p class="_picking_address"></p>
+                                <div class="d-flex">
+                                    <label class="label-checkbox mb-2 pr-4">
+                                        Anh
+                                        <input type="radio" name="_cus_gender" checked required />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="label-checkbox  mb-2 ">
+                                        Chị
+                                        <input type="radio" name="_cus_gender" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="txt-name-bh-1" class="form-control" placeholder="Họ và tên" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="txt-phone-bh-1" class="form-control" placeholder="Số điện thoại" required />
+                                </div>
+                                <h6 class="modal-title font-weight-bold">Thời gian ghé</h6>
+                                <div class="form-group">
+                                </div>
+                                <div class="customer form-control">
+                                    <div class="cus-name">
+                                        <label for="name-input" class="cus-ic-box">
+                                            <i class="fal fa-calendar-alt "></i>
+                                        </label>
+                                        <input type="text" name="txtName" id="txt-time-input" class="w-100 ip-css" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 cust-bg-mdal">
+                                <label class="label-checkbox mb-2 pr-4 dropdown-item cust-drop-item">
+                                    Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.(Bên cạnh Big C Hồ Gươm)
+                                    <input type="checkbox" checked />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="label-checkbox mb-2 pr-4 dropdown-item cust-drop-item">
+                                    Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.(Bên cạnh Big C Hồ Gươm)
+                                    <input type="checkbox" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="label-checkbox mb-2 pr-4 dropdown-item cust-drop-item">
+                                    Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.(Bên cạnh Big C Hồ Gươm)
+                                    <input type="checkbox" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="label-checkbox mb-2 pr-4 dropdown-item cust-drop-item">
+                                    Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội.(Bên cạnh Big C Hồ Gươm)
+                                    <input type="checkbox" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="w-100 mt-3 modal-footer justify-content-between">
+                                <button type="button" class="btn " data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-save">
+                                Xác nhận
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- /.End Content Area -->
-
-    </main>
-
-    <!-- offcanvas-cart -->
-    <div id="offcanvas-cart" class="offcanvas-cart offcanvas text-light h-100 r-0 l-auto d-flex flex-column" data-animation="slideRight">
-        <div>
-            <button type="button" data-toggle="offcanvas-close" class="close float-right ml-4 text-light o-1 fw-100" data-dismiss="offcanvas" aria-label="Close">
-                <span aria-hidden="true">×</span>
-            </button>
-            <hr class="border-light o-20 mt-8 mb-4">
-        </div>
-        <div class="offcanvas-cart-body flex-1">
-            <div class="offcanvas-cart-list row align-items-center no-gutters">
-                <div class="ocs-cart-item col-12">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col-3 item_img d-none d-sm-block">
-                            <a href="{{route('home.store_product')}}"><img class="img bl-3 text-primary" src="assets2/img/content/store/h-08.jpg" alt="Product"></a>
-                        </div>
-                        <div class="col-7 flex-1 flex-grow pl-0 pl-sm-4 pr-4">
-                            <a href="{{route('home.store_product')}}"><span class="d-block item_title text-lt ls-1 lh-1 small-1 fw-600 text-uppercase mb-2">Journey of the Solarcity</span></a>
-                            <div class="position-relative lh-1">
-                                <div class="number-input">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ><i class="ti-minus"></i></button>
-                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="ti-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="row align-items-center h-100 no-gutters">
-                                <div class="ml-auto text-center">
-                                    <a href="#"><i class="far fa-trash-alt"></i></a><br>
-                                    <span class="fw-500 text-warning">€44.99</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </form>
+        <div class="social-button">
+            <div class="social-button-content">
+                <a rel="nofollow" href="tel: 1800.0022" class="call-icon" rel="nofollow">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div class="animated alo-circle"></div>
+                    <div class="animated alo-circle-fill"></div>
+                    <span>1800.0022</span>
+                </a>
+                <!-- Load Facebook SDK for JavaScript -->
+                <div id="fb-root"></div>
+                <!-- Your Chat Plugin code -->
+                <div class="fb-customerchat"
+                    attribution=setup_tool
+                    page_id="1608844646076677"
+                    theme_color="#ef822a"
+                    logged_in_greeting="Janhome xin chào ! Chúng tôi có thể giúp gì cho bạn?"
+                    logged_out_greeting="Janhome xin chào ! Chúng tôi có thể giúp gì cho bạn?">
                 </div>
-                <div class="ocs-cart-item col-12">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col-3 item_img d-none d-sm-block">
-                            <a href="{{route('home.store_product')}}"><img class="img bl-3 text-primary" src="assets2/img/content/store/h-09.jpg" alt="Product"></a>
-                        </div>
-                        <div class="col-7 flex-1 flex-grow pl-0 pl-sm-4 pr-4">
-                            <a href="{{route('home.store_product')}}"><span class="d-block item_title text-lt ls-1 lh-1 small-1 fw-600 text-uppercase mb-2">Exploration Memories</span></a>
-                            <div class="position-relative lh-1">
-                                <div class="number-input">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ><i class="ti-minus"></i></button>
-                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="ti-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="row align-items-center h-100 no-gutters">
-                                <div class="ml-auto text-center">
-                                    <a href="#"><i class="far fa-trash-alt"></i></a><br>
-                                    <span class="fw-500 text-warning">€27.59</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <a rel="nofollow" target="_blank" href="https://zalo.me/0902480222" class="zalo">
+                    <i class="fa" aria-hidden="true">
+                    <img src="../stc-zaloprofile.zdn.vn/pc/v1/images/zalo_sharelogo.png" width="25px" />
+                    </i>
+                    <span>Zalo: 0902480222</span>
+                </a>
             </div>
         </div>
-        <div>
-            <a href="{{route('home.checkout_order')}}" class="btn btn-lg btn-block btn-outline-light">View cart</a>
+        <div class="btn-fixed">
+            <div class="text-center mb-3">
+                <a rel="nofollow" href="javascript:;" onclick=" topFunction() " class="">
+                    <img src="images/scroll3860.svg?v=1" class="img-fluid " />
+                </a>
+            </div>
         </div>
-    </div>
-    <!-- /.offcanvas-cart -->
-    </body>
+        <div id="cover-spin"></div>
+        <div id="full-load-img" class="modal modal-img">
+            <button class="close-load-img"><i class="far fa-window-close"></i></button>
+            <img class="modal-content modal-content-full-img?v=1" id="img01">
+            <div id="caption"></div>
+        </div>
+        
+        <div style="display:none" itemscope itemtype="https://schema.org/WebSite">
+            <meta itemprop="url" content="janhome.vn" />
+            <form itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
+                <meta itemprop="target" content="janhome.vn/Product/Get?keyword={search_term_string}" />
+                <input itemprop="query-input" type="text" name="search_term_string" required />
+                <input type="submit" />
+            </form>
+        </div>
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "janhome.vn",
+        "logo": "/2020/04/28/logo.png"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "image": [
+        "https://cms.janhome.vn//uploads/2020/06/05/san-go-cong-nghiep.jpg"
+        ],
+        "@id": "janhome.vn",
+        "name": "Janhome",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tầng 3 Nhà C2 Vinaconex 1 289A Khuất Duy Tiến, Q Cầu giấy, TP Hà Nội",
+        "addressLocality": "Hà Nội",
+        "addressRegion": "HN",
+        "postalCode": "10000",
+        "addressCountry": "VN"
+        },
+        "review": {
+        "@type": "Review",
+        "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+        },
+        "author": "admin"
+        },
+        "url": "janhome.vn",
+        "telephone": "1800.0022",
+        "servesCuisine": "VietNam",
+        "priceRange": "$$$",
+        "acceptsReservations": "True"
+        }
+        </script>
+        <script>    document.addEventListener("DOMContentLoaded", function(event) {     gtag('config', 'AW-830211279');       jQuery('[href^="tel:"]').click(function() {          gtag('event', 'conversion', {'send_to': 'AW-830211279/tVQrCMnmsYYBEM-J8IsD'});     });   }); </script>
+        <script type="text/javascript">
+        //document.addEventListener("DOMContentLoaded", yall);
+        $('.lazy').Lazy({
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        visibleOnly: true,
+        onError: function (element) {
+        console.log('error loading ' + element.data('src'));
+        }
+        });
+        </script>
+        <script>
+        $(document).ready(function () {
+        $('.save-location').off('click').on('click',
+        function () {
+        var currentUrl = window.location.href;
+        var location_id = $('#location-selectbox').val();
+        var location_name = $('#location-selectbox option:selected').html();
+        localStorage.setItem("_LocationId", location_id);
+        localStorage.setItem("_LocationName", location_name);
+        var params = {
+        location_id: localStorage.getItem("_LocationId"),
+        location_name: localStorage.getItem("_LocationName"),
+        currentUrl: currentUrl
+        }
+        $.post('/Cookie/ChangeCurrentLocation',
+        params,
+        function () {
+        console.log(100);
+        location.reload(true);
+        })
+        });
+        sessionStorage.setItem("current-js-tree", localStorage.getItem("jstree"));
+        $('.tree-menu-mobile').jstree({
+        "core": {
+        "animation": 100,
+        "check_callback": true,
+        "multiple": false, // no multiselection
+        "themes": {
+        "dots": false, // no connecting dots between dots
+        "icons": false
+        },
+        },
+        "plugins": ["state", "wholerow", "types"],
+        'types': {
+        'default': {
+        'icon': 'fa fa-angle-right fa-fw'
+        },
+        'f-open': {
+        'icon': 'fa fa-folder-open fa-fw'
+        },
+        'f-closed': {
+        'icon': 'fa fa-folder fa-fw'
+        }
+        }
+        });
+        if (window.location.pathname == "" || window.location.pathname === "index.html") {
+        localStorage.setItem("jstree", "");
+        }
+        //var jstreelocal = JSON.parse(localStorage.getItem("jstree"));
+        //if (jstreelocal != "" || jstreelocal !== 'undefinde') {
+        //}
+        //var current_selected_node =
+        $('.tree-menu-mobile').on("select_node.jstree", function (e, data) {
+        var r = data.node;
+        //console.log(r);
+        var nodesToKeepOpen = [];
+        // get all parent nodes to keep open
+        $('#' + data.node.id).parents('.jstree-node').each(function () {
+        nodesToKeepOpen.push(this.id);
+        });
+        // add current node to keep open
+        nodesToKeepOpen.push(data.node.id);
+        // close all other nodes
+        $('.jstree-node').each(function () {
+        if (nodesToKeepOpen.indexOf(this.id) === -1) {
+        $(".tree-menu-mobile").jstree().close_node(this.id);
+        }
+        })
+        if (r.state.opened == false && r.children.length > 0) {
+        $('.tree-menu-mobile').jstree("toggle_node", data.node);
+        return false;
+        }
+        if (r.state.opened == true || r.children.length == 0) {
+        var id = r.id;
+        var url = $('#' + id).find('.span-tree-node').data('url');
+        var old_node = $(id).find('.jstree-clicked');
+        if (sessionStorage.getItem('current-js-tree') == "" || sessionStorage.getItem('current-js-tree') === "undefined") {
+        window.location.href = url;
+        } else {
+        var ss = JSON.parse(sessionStorage.getItem('current-js-tree'));
+        console.log(ss);
+        if (ss == null) {
+        window.location.href = url;
+        }
+        var seleced_current = ss.state.core.selected;
+        if (seleced_current.length > 0) {
+        if (seleced_current[0] != id) {
+        //console.log("Khac roi nay");
+        //sessionStorage.setItem("current-js-tree", localStorage.getItem("jstree"));
+        window.location.href = url;
+        }
+        if (seleced_current[0] == id) {
+        //console.log("Trung roi nay")
+        }
+        }
+        }
+        //if (ss == "1") {
+        //}
+        return false;
+        }
+        });
+        $('#txt-time-input').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        //minYear: 1901,
+        //maxYear: parseInt(moment().format('YYYY'), 10),
+        locale: {
+        "format": "DD/MM/YYYY"
+        }
+        //}, function (start, end, label) {
+        //    var years = moment().diff(start, 'years');
+        //    alert("You are " + years + " years old!");
+        });
+        var url = window.location.pathname;
+        $('.menu-cate-mobile div a[href="' + url + '"]').addClass('active');
+        $('.find-product').keydown(function (e) {
+        if ($(this).val().length < 2) {
+        $(".suggest-text.suggest-text-2").hide();
+        $(".suggest-text.suggest-text-1").show();
+        } else {
+        $(".suggest-text.suggest-text-2").show();
+        $(".suggest-text.suggest-text-1").hide();
+        $(this).autocomplete({
+        delay: 300,
+        source: function (request, response) {
+        $.ajax({
+        url: "/Product/Get",
+        dataType: "json",
+        data: {
+        keyword: request.term
+        },
+        success: function (data) {
+        //debugger
+        response(data);
+        }
+        });
+        },
+        minLength: 1,
+        }).autocomplete("instance")._renderItem = function (div, item) {
+        //--debugger
+        $(".suggest-text.suggest-text-2").empty();
+        var lstItem = "";
+        lstItem += "<div class='h6 px-3'>Sản phẩm gợi ý</div>"
+        $.each(item, function (index, im) {
+        var name = im.name.charAt(0).toUpperCase() + im.name.slice(1);
+        lstItem += '<div class="item-cart"><div class="image-product"><img src="' + im.avatar + '" class="" /></div>';
+        lstItem += '<div class="text px-2 "> <h6 class="name-product mb-1"><a href="' + im.url + '">' + name + '</a></h6>';
+        if (im.discountPrice.length > 0) {
+        lstItem += '<div class="price d-inline-block">' + im.discountPrice + 'đ ' + im.unit + '</div>';
+        }
+        if (im.discountPrice.price > 0) {
+        lstItem += ' <div class=" price-old d-inline-block">' + im.price + 'đ ' + im.unit + '</div>';
+        }
+    lstItem += "</div></div>";
+    });
+    $(div).removeClass("ui-menu");
+    return $(lstItem).appendTo(".suggest-text.suggest-text-2");
+    };
+    if (e.which == 13) {
+    //console.log(data);
+    var kw = $(this).val();
+    var index = 1;
+    var size = 24;
+    var p = {
+    keyword: kw,
+    index: index,
+    size: size
+    }
+    console.log(p);
+    sessionStorage.setItem("esSearch", JSON.stringify(p));
+    window.location.href = "tim-kiem.html";
+    //$.get("/Product/GetElasticAll?keyword="+kw+"&index="+index+"&size="+size+"", function (response) {
+    //    console.log(response);
+    //})
+    //$("#go").click();
+    }
+    $('.es-search-button').off('click').on('click', function () {
+    var kw = $(this).closest('.input-group').find('.find-product').val();
+    var index = 1;
+    var size = 24;
+    var p = {
+    keyword: kw,
+    index: index,
+    size: size
+    }
+    console.log(p);
+    sessionStorage.setItem("esSearch", JSON.stringify(p));
+    window.location.href = "tim-kiem.html";
+    })
+    }
+    })
+    $('.es-search-button').off('click').on('click', function () {
+    var kw = $(this).closest('.input-group').find('.find-product').val();
+    var index = 1;
+    var size = 24;
+    var p = {
+    keyword: kw,
+    index: index,
+    size: size
+    }
+    console.log(p);
+    sessionStorage.setItem("esSearch", JSON.stringify(p));
+    window.location.href = "tim-kiem.html";
+    })
+    $('.find-product').on("focusout", function () {
+    setTimeout(function () {
+    $(".suggest-text.suggest-text-2").hide();
+    $(".suggest-text.suggest-text-1").hide();
+    }, 1000);
+    });
+    $('.find-product').on("focus", function () {
+    if ($(this).val().length < 3) {
+    $(".suggest-text.suggest-text-1").show();
+    }
+    });
+    $('.cust-ag').off('click').on('click', function () {
+    var url_image = $(this).data('original');
+    if (typeof url_image === 'undefined')
+    url_image = $(this).data('src');
+    //var url_image = $(this).parent().data('url');
+    $('#img01').attr('src', url_image);
+    $('.modal-img').modal('show');
+    $('.modal-backdrop').replaceWith("");
+    })
+    $('.close-load-img').off('click').on('click', function () {
+    $('.modal-img').modal('hide');
+    })
+    $('#modal-id').on('shown.bs.modal', function () {
+    $(".modal-backdrop.in").hide();
+    })
+    })
+    </script>
+    <script>
+    window.fbAsyncInit = function () {
+    setTimeout(function () {
+    FB.init({
+    xfbml: true,
+    version: 'v7.0'
+    });
+    }, 12000);
+    };
+    setTimeout(function () {
+    (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = '../connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    }, 1200);
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98267825-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-98267825-1'); </script>
+</body>
 @stop

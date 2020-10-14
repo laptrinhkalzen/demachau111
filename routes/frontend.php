@@ -21,6 +21,7 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::get('/show-product/{alias}', ['as' => 'product.show', 'uses' => 'Frontend\ProductController@show']);
     Route::post('/search-product', ['as' => 'product.search', 'uses' => 'Frontend\ProductController@search']);
     Route::get('/filter-product', ['as' => 'product.filter', 'uses' => 'Frontend\ProductController@filter']);
+    Route::get('/news', ['as' => 'news.index', 'uses' => 'Frontend\NewsController@index']);
     Route::get('/sale', ['as' => 'product.sale', 'uses' => 'Frontend\ProductController@sale']);
     Route::get('/san-pham/{alias}', ['as' => 'product.detail', 'uses' => 'Frontend\ProductController@detail']);
     Route::get('/hot-product', ['as' => 'product.hot', 'uses' => 'Frontend\ProductController@hot']);
