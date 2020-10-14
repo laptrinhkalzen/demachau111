@@ -891,7 +891,7 @@
 <div class="btn-fixed">
     <div class="text-center mb-3">
         <a rel="nofollow" href="javascript:;" onclick=" topFunction() " class="">
-            <img src="images/scroll3860.svg?v=1" class="img-fluid " />
+            <img src="{!!asset('images/scroll3860.svg?v=1')!!}" class="img-fluid " />
         </a>
     </div>
 </div>
