@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 <body>
-    <section class=" pt-3 pb-4">
+    <section class=" pt-3 pb-4" style="margin-top: 20px;">
         <div class="container">
 
             <div class="row">
