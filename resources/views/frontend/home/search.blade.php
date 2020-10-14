@@ -14,7 +14,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <a href="javascript:void(0)">
-                                    <img src="{!!$product->getImage()!!}" style="height:400px " class="d-block w-100">
+                                    <img src="{!!$product->getImage()!!}" style="height:400px; object-fit: cover;" class="d-block w-100">
                                 </a>
                             </div>
 
@@ -31,7 +31,7 @@
                     @break
                     @endif
                     <a href="javascript:void(0)" title="" class="hide-mobile">
-                        <img src="{!!$product->getImage()!!}" style="height:200px " />
+                        <img src="{!!$product->getImage()!!}" style="height:200px; object-fit:cover; " />
                     </a>
                     @endforeach
                 </div>
