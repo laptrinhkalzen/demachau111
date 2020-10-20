@@ -75,7 +75,7 @@
                 </li>
                 
                 
-                <li class="nav-item nav-item-submenu">
+                <!-- <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-video-camera"></i> <span>Video</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Layouts">
                         <li class="nav-item"><a href="{{route('admin.category.index', \App\Category::TYPE_VIDEO)}}" class="nav-link">Danh mục</a></li>
@@ -88,7 +88,7 @@
                         <li class="nav-item"><a href="{{route('admin.category.index', \App\Category::TYPE_GALLERY)}}" class="nav-link">Danh mục</a></li>
                         <li class="nav-item"><a href="{{route('admin.gallery.index')}}" class="nav-link">Hình ảnh</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Sản phẩm</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm">

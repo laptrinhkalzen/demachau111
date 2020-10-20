@@ -644,7 +644,7 @@
                                             <a href="javascript:void(0)" class="h5 font-weight-bold ">Sản phẩm bán chạy 2020</a>
                                         </div>
                                         <div class="col-4 text-right">
-                                            <a href="javascript:void(0)" class="link-view-more">
+                                            <a href="{{route('product.show',['alias' => 'san-pham-ban-chay'])}}" class="link-view-more">
                                                 Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
                                             </a>
                                         </div>
