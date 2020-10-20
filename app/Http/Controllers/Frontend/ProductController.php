@@ -51,7 +51,9 @@ class ProductController extends Controller {
         $search_product = $this->productRepo->readFE($request);
         $count = count($search_product);
         $slide1 = $this->slideRepo->getSlide1();
-       return view('frontend/home/search',compact('search_product','count','slide1'));
+        $brand =  $this->attributeRepo->getAttributes($parent_id = 2);
+        $origin =  $this->attributeRepo->getAttributes($parent_id = 19);
+       return view('frontend/home/search',compact('search_product','count','slide1','origin'));
     } 
 
     public function filter(Request $request){
