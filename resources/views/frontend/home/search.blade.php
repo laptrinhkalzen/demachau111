@@ -4,13 +4,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body>
-        <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
-        @foreach($origin as $row)
-        <div class="list-group-item checkbox">
-            <label><input type="checkbox" class="common_selector origin" value="{!!$row->id!!}"  > {!!$row->title!!} </label>
-        </div>
-        @endforeach 
-        </div>
+
         
 <!--         <script type="text/javascript">
             $(document).ready(function){
