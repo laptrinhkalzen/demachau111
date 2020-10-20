@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Repositories\NewsRepository;
 use Repositories\CategoryRepository;
-use Repositories\CategoryRepository;
 class NewsController extends Controller {
 
     //
