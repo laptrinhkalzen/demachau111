@@ -260,7 +260,7 @@
                                             <ul class="list-group list-menu-cate d-none d-md-block " style="height: auto;">
                                                 <li class="list-group-item active ">
                                                     <a rel="nofollow" href="javascript:;" class="link">
-                                                        <img src="images/listView.svg" class="img-fluid mr-2" />Danh mục
+                                                        <img src="{!!asset('images/listView.svg')!!}" class="img-fluid mr-2" />Danh mục
                                                     </a>
                                                 </li>
                                                 @foreach ($category as $key=>$cat)
