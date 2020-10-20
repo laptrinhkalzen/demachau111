@@ -188,20 +188,19 @@
                             <div class="price-product-detail">
                                 <span class="new" id="price-sale">
                                     <span id="price-sale-detail">
-                                        @if($product->sale_price==0)
-                                        <?php echo($product->price)?>
+                                         @if($product->sale_price==0)
+                                        {!!$product->getPrice()!!}
                                         @else
-                                        <?php echo($product->sale_price)?>
+                                        {!!$product->getSalePrice()!!}
                                         @endif
-                                        </span> <span>đ/m2</span>
                                     </span>
+                                    @if($product->sale_price!=0)
                                     <span class="old" id="price-normal">
-                                        @if($product->sale_price!=0)
-                                        <?php echo($product->price .' đ/ m2')?>
-                                        @else
-                                        <?php echo('')?>
-                                        @endif
+                                        {!!$product->getPrice()!!}
                                     </span>
+                                    @else
+                                    &nbsp
+                                    @endif
                                 </div>
                                 <div class="d-flex mb-3">
                                     <div class="font-weight-600 text-uppercase align-self-center mr-3">
