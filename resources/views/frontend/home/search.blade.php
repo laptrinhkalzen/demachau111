@@ -1,9 +1,53 @@
 @extends('frontend.layouts.master')
 @section('content')
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body>
+        <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
+        @foreach($origin as $row)
+        <div class="list-group-item checkbox">
+            <label><input type="checkbox" class="common_selector origin" value="{!!$row->id!!}"  > {!!$row->title!!} </label>
+        </div>
+        @endforeach 
+        </div>
+        
+<!--         <script type="text/javascript">
+            $(document).ready(function){
+                filter_data();
+                function filter_data(){
+                    var action = '';
+                    var origin = get_filter('origin');
+                }
+
+                $.ajax({
+                    url:"",
+                    method:"POST",
+                    data: {action:action, origin:origin},
+                    success:function(data){
+                        $('.filter_data').html(data);
+                    }
+
+                })
+                function get_filter(class_name){
+                    var filter = [];
+                    $('.'+class_name+':checked').each(function(){
+                        filter.push($(this).val());
+                    });
+
+                    $('.common_selector').click(function(){
+                        filter_data();
+                    });
+            }
+        </script> -->
+    <div class="col-md-9">
+        <br />
+        <div class="row filter_data">
+
+        </div>
+    </div>
     <section class=" pt-3 pb-4" style="margin-top: 20px;">
         <div class="container">
-
             <div class="row">
                 @foreach ($slide1 as $key=>$product)
                 @if($key == 1)
@@ -17,7 +61,6 @@
                                     <img src="{!!$product->getImage()!!}" style="height:400px; object-fit: cover;" class="d-block w-100">
                                 </a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -62,250 +105,250 @@
             <div class="form-book">
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" style="font-size: 15px;" id="news" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="container mb-3 client-cate">
-                            <div class="bg-fff border-r-4">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-3 col-md-4 col-12 align-self-center ">
-                                        <div class="px-3 py-2" style="font-size: 13px;line-height: 1.1;">Tìm kiếm theo thương hiệu</div>
-                                    </div>
-                                    <div class="col-lg-8 col-md-11 col-10">
-                                        <div class="swiper-container slide-brand">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="1">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/jan-mi-logo-thuong-hieu.jpg" class="img-fluid" alt="Janmi" title="Janmi" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="2">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/san-go-florton.jpg" class="img-fluid" alt="Florton" title="Florton" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="3">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/logo-dongwha.jpg" class="img-fluid" alt="DongWha" title="DongWha" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="4">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/thai-green-janhome-logo.png" class="img-fluid" alt="ThaiGreen" title="ThaiGreen" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="5">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/Kronotex_Logo_janhome.jpg" class="img-fluid" alt="Kronotex" title="Kronotex" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="6">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/newsky-san-go-logo-thuong-hieu.jpg" class="img-fluid" alt="Newsky" title="Newsky" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="7">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/28976-600x800-1.jpg" class="img-fluid" alt="Classen" title="Classen" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="8">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/logo--tablet.png" class="img-fluid" alt="wineo" title="wineo" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="10">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/logo-woodman_.png" class="img-fluid" alt="Woodman" title="Woodman" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="11">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/thai-xin.png" class="img-fluid" alt="Thaixin" title="Thaixin" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="12">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/logo-alsafloor-janhome.png" class="img-fluid" alt="Alsafloor" title="Alsafloor" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="13">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/vZZ8ngVm.jpg" class="img-fluid" alt="Masfloor" title="Masfloor" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="14">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/floorart-logo-janhome-1.png" class="img-fluid" alt="FloorArt" title="FloorArt" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="15">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/thai-royal-logo.png" class="img-fluid" alt="ThaiRoyal" title="ThaiRoyal" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="16">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/san-go-kendax-8mm-k8204-2.jpg" class="img-fluid" alt="Kendax" title="Kendax" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="17">
-                                                        <img src="../noithathunggia/uploads/2020/06/09/hornitex-logo-san-go.jpg" class="img-fluid" alt="Hornitex" title="Hornitex" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="18">
-                                                        <img src="../noithathunggia/uploads/2020/08/03/logo%20timberman.png" class="img-fluid" alt="TimberMan" title="TimberMan" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="19">
-                                                        <img src="../noithathunggia/uploads/2020/08/03/janhome%20aqua.png" class="img-fluid" alt="JanHome Floor" title="JanHome Floor" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="20">
-                                                        <img src="../noithathunggia/uploads/2020/08/03/logo%20ecofloor.png" class="img-fluid" alt="Ecofloor" title="Ecofloor" />
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="21">
-                                                        <img src="../noithathunggia/uploads/2020/08/05/logo%20kostlich.png" class="img-fluid" alt="Kostlich" title="Kostlich" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1 col-md-1 col-2 text-center">
-                                        <a href="javascript:;" onclick="expandClient()" class="btn btn-sm pt-2 "><i class="fas fa-chevron-down"></i></a>
-                                    </div>
-                                </div>
-                                <div class="full-client">
+                        <form id="form_order" method="get">
+                            <div class="container mb-3 client-cate">
+                                <div class="bg-fff border-r-4">
                                     <div class="row no-gutters">
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="1">
-                                                <img src="../noithathunggia/uploads/2020/06/09/jan-mi-logo-thuong-hieu.jpg" class="img-fluid" alt="Janmi" />
+                                        <div class="col-lg-3 col-md-4 col-12 align-self-center ">
+                                            <div class="px-3 py-2" style="font-size: 13px;line-height: 1.1;">Tìm kiếm theo thương hiệu</div>
+                                        </div>
+                                        <div class="col-lg-8 col-md-11 col-10">
+                                            <div class="swiper-container slide-brand">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="1">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/jan-mi-logo-thuong-hieu.jpg" class="img-fluid" alt="Janmi" title="Janmi" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="2">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/san-go-florton.jpg" class="img-fluid" alt="Florton" title="Florton" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="3">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/logo-dongwha.jpg" class="img-fluid" alt="DongWha" title="DongWha" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="4">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/thai-green-janhome-logo.png" class="img-fluid" alt="ThaiGreen" title="ThaiGreen" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="5">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/Kronotex_Logo_janhome.jpg" class="img-fluid" alt="Kronotex" title="Kronotex" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="6">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/newsky-san-go-logo-thuong-hieu.jpg" class="img-fluid" alt="Newsky" title="Newsky" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="7">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/28976-600x800-1.jpg" class="img-fluid" alt="Classen" title="Classen" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="8">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/logo--tablet.png" class="img-fluid" alt="wineo" title="wineo" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="10">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/logo-woodman_.png" class="img-fluid" alt="Woodman" title="Woodman" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="11">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/thai-xin.png" class="img-fluid" alt="Thaixin" title="Thaixin" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="12">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/logo-alsafloor-janhome.png" class="img-fluid" alt="Alsafloor" title="Alsafloor" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="13">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/vZZ8ngVm.jpg" class="img-fluid" alt="Masfloor" title="Masfloor" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="14">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/floorart-logo-janhome-1.png" class="img-fluid" alt="FloorArt" title="FloorArt" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="15">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/thai-royal-logo.png" class="img-fluid" alt="ThaiRoyal" title="ThaiRoyal" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="16">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/san-go-kendax-8mm-k8204-2.jpg" class="img-fluid" alt="Kendax" title="Kendax" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="17">
+                                                            <img src="../noithathunggia/uploads/2020/06/09/hornitex-logo-san-go.jpg" class="img-fluid" alt="Hornitex" title="Hornitex" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="18">
+                                                            <img src="../noithathunggia/uploads/2020/08/03/logo%20timberman.png" class="img-fluid" alt="TimberMan" title="TimberMan" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="19">
+                                                            <img src="../noithathunggia/uploads/2020/08/03/janhome%20aqua.png" class="img-fluid" alt="JanHome Floor" title="JanHome Floor" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="20">
+                                                            <img src="../noithathunggia/uploads/2020/08/03/logo%20ecofloor.png" class="img-fluid" alt="Ecofloor" title="Ecofloor" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="21">
+                                                            <img src="../noithathunggia/uploads/2020/08/05/logo%20kostlich.png" class="img-fluid" alt="Kostlich" title="Kostlich" />
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="2">
-                                                <img src="../noithathunggia/uploads/2020/06/09/san-go-florton.jpg" class="img-fluid" alt="Florton" />
-                                            </div>
+                                        <div class="col-lg-1 col-md-1 col-2 text-center">
+                                            <a href="javascript:;" onclick="expandClient()" class="btn btn-sm pt-2 "><i class="fas fa-chevron-down"></i></a>
                                         </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="3">
-                                                <img src="../noithathunggia/uploads/2020/06/09/logo-dongwha.jpg" class="img-fluid" alt="DongWha" />
+                                    </div>
+                                    <div class="full-client">
+                                        <div class="row no-gutters">
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="1">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/jan-mi-logo-thuong-hieu.jpg" class="img-fluid" alt="Janmi" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="4">
-                                                <img src="../noithathunggia/uploads/2020/06/09/thai-green-janhome-logo.png" class="img-fluid" alt="ThaiGreen" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="2">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/san-go-florton.jpg" class="img-fluid" alt="Florton" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="5">
-                                                <img src="../noithathunggia/uploads/2020/06/09/Kronotex_Logo_janhome.jpg" class="img-fluid" alt="Kronotex" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="3">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/logo-dongwha.jpg" class="img-fluid" alt="DongWha" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="6">
-                                                <img src="../noithathunggia/uploads/2020/06/09/newsky-san-go-logo-thuong-hieu.jpg" class="img-fluid" alt="Newsky" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="4">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/thai-green-janhome-logo.png" class="img-fluid" alt="ThaiGreen" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="7">
-                                                <img src="../noithathunggia/uploads/2020/06/09/28976-600x800-1.jpg" class="img-fluid" alt="Classen" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="5">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/Kronotex_Logo_janhome.jpg" class="img-fluid" alt="Kronotex" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="8">
-                                                <img src="../noithathunggia/uploads/2020/06/09/logo--tablet.png" class="img-fluid" alt="wineo" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="6">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/newsky-san-go-logo-thuong-hieu.jpg" class="img-fluid" alt="Newsky" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="10">
-                                                <img src="../noithathunggia/uploads/2020/06/09/logo-woodman_.png" class="img-fluid" alt="Woodman" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="7">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/28976-600x800-1.jpg" class="img-fluid" alt="Classen" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="11">
-                                                <img src="../noithathunggia/uploads/2020/06/09/thai-xin.png" class="img-fluid" alt="Thaixin" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="8">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/logo--tablet.png" class="img-fluid" alt="wineo" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="12">
-                                                <img src="../noithathunggia/uploads/2020/06/09/logo-alsafloor-janhome.png" class="img-fluid" alt="Alsafloor" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="10">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/logo-woodman_.png" class="img-fluid" alt="Woodman" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="13">
-                                                <img src="../noithathunggia/uploads/2020/06/09/vZZ8ngVm.jpg" class="img-fluid" alt="Masfloor" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="11">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/thai-xin.png" class="img-fluid" alt="Thaixin" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="14">
-                                                <img src="../noithathunggia/uploads/2020/06/09/floorart-logo-janhome-1.png" class="img-fluid" alt="FloorArt" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="12">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/logo-alsafloor-janhome.png" class="img-fluid" alt="Alsafloor" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="15">
-                                                <img src="../noithathunggia/uploads/2020/06/09/thai-royal-logo.png" class="img-fluid" alt="ThaiRoyal" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="13">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/vZZ8ngVm.jpg" class="img-fluid" alt="Masfloor" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="16">
-                                                <img src="../noithathunggia/uploads/2020/06/09/san-go-kendax-8mm-k8204-2.jpg" class="img-fluid" alt="Kendax" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="14">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/floorart-logo-janhome-1.png" class="img-fluid" alt="FloorArt" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="17">
-                                                <img src="../noithathunggia/uploads/2020/06/09/hornitex-logo-san-go.jpg" class="img-fluid" alt="Hornitex" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="15">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/thai-royal-logo.png" class="img-fluid" alt="ThaiRoyal" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="18">
-                                                <img src="../noithathunggia/uploads/2020/08/03/logo%20timberman.png" class="img-fluid" alt="TimberMan" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="16">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/san-go-kendax-8mm-k8204-2.jpg" class="img-fluid" alt="Kendax" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="19">
-                                                <img src="../noithathunggia/uploads/2020/08/03/janhome%20aqua.png" class="img-fluid" alt="JanHome Floor" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="17">
+                                                    <img src="../noithathunggia/uploads/2020/06/09/hornitex-logo-san-go.jpg" class="img-fluid" alt="Hornitex" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="20">
-                                                <img src="../noithathunggia/uploads/2020/08/03/logo%20ecofloor.png" class="img-fluid" alt="Ecofloor" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="18">
+                                                    <img src="../noithathunggia/uploads/2020/08/03/logo%20timberman.png" class="img-fluid" alt="TimberMan" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                            <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="21">
-                                                <img src="../noithathunggia/uploads/2020/08/05/logo%20kostlich.png" class="img-fluid" alt="Kostlich" />
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="19">
+                                                    <img src="../noithathunggia/uploads/2020/08/03/janhome%20aqua.png" class="img-fluid" alt="JanHome Floor" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="20">
+                                                    <img src="../noithathunggia/uploads/2020/08/03/logo%20ecofloor.png" class="img-fluid" alt="Ecofloor" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="21">
+                                                    <img src="../noithathunggia/uploads/2020/08/05/logo%20kostlich.png" class="img-fluid" alt="Kostlich" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="filter-cate">
-                            <div class="container ">
-                                <div class="bg-fff border-r-4 px-3 py-2 mb-3">
-                                    <div class="row">
-                                        <div class="col-xl-2 col-md-6 col-sm-12 col-12">
-                                            <div class="form-group d-flex mb-2 mb-lg-0 small py-2">
-                                                <label for="formControlRange " class="mb-0 mr-3 ">Tìm kiếm theo</label>
+                            <div class="filter-cate">
+                                <div class="container ">
+                                    <div class="bg-fff border-r-4 px-3 py-2 mb-3">
+                                        <div class="row">
+                                            <div class="col-xl-2 col-md-6 col-sm-12 col-12">
+                                                <div class="form-group d-flex mb-2 mb-lg-0 small py-2">
+                                                    <label for="formControlRange " class="mb-0 mr-3 ">Tìm kiếm theo</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-xl-2 col-md-6 col-sm-12 col-12">
-                                            <select class="form-control mb-2 mb-lg-0 filter-select range-price">
-                                                <option hidden value="">Khung giá</option>
-                                                <option value="">Tất cả</option>
-                                                <option value="0-100000">Từ 0 - 100.000đ</option>
-                                                <option value="200000-300000">Từ 200.000 - 300.000đ</option>
-                                                <option value="300000-400000">Từ 300.000 - 400.000đ</option>
-                                                <option value="400000-600000">Từ 400.000 - 600.000đ</option>
-                                                <option value="600000-20000000">Từ 600.000 trở lên</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-xl-8 col-md-12 col-12 align-self-center">
-                                            <form>
+                                            <div class="col-xl-2 col-md-6 col-sm-12 col-12">
+                                                <select name="price" class="form-control mb-2 mb-lg-0 filter-select range-price" onchange='this.form.submit()'>
+                                                    <option hidden value="">Khung giá</option>
+                                                    <option value="">Tất cả</option>
+                                                    <option value="1">Từ 0 - 100.000đ</option>
+                                                    <option value="2">Từ 200.000 - 300.000đ</option>
+                                                    <option value="3">Từ 300.000 - 400.000đ</option>
+                                                    <option value="4">Từ 400.000 - 600.000đ</option>
+                                                    <option value="5">Từ 600.000 trở lên</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-8 col-md-12 col-12 align-self-center">
                                                 <div class="form-row">
                                                     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                                                         <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" data-spec-id="17">
@@ -502,21 +545,21 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <select class="form-control mb-2 mb-lg-0 filter-select extra">
-                                                            <option hidden value="">Bổ sung</option>
-                                                            <option value="2">Giá tăng dần</option>
-                                                            <option value="1">Giá giảm dần</option>
-                                                            <option value="3">Nổi bật nhất</option>
+                                                        <select name="orderby" class="form-control mb-2 mb-lg-0 filter-select extra orderby" onchange='this.form.submit()'>
+                                                            <option hidden value="">Sắp xếp</option>
+                                                            <option value="price_max">Giá tăng dần</option>
+                                                            <option value="price_min">Giá giảm dần</option>
+                                                            <option value="desc">Nổi bật nhất</option>
                                                         </select>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-<!--                     <div class="list-prod-search bg-fff">
+                        </form>
+                        <!--                     <div class="list-prod-search bg-fff">
                             <div class="container">
                                 <p class="txt-all-sp">Tất cả sản phẩm : <strong class="tk-keyword"></strong></p>
                             </div>
@@ -574,9 +617,7 @@
         </div>
     </div>
 </section>
-
 <div id="fb-root"></div>
-
 <!--Modal chọn khu vực-->
 <div class="modal jan-modal fade" id="modal-khu-vuc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -875,7 +916,6 @@
     <img class="modal-content modal-content-full-img?v=1" id="img01">
     <div id="caption"></div>
 </div>
-
 <div style="display:none" itemscope itemtype="https://schema.org/WebSite">
     <meta itemprop="url" content="janhome.vn" />
     <form itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
@@ -1189,7 +1229,69 @@ fjs.parentNode.insertBefore(js, fjs);
 }, 1200);
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98267825-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-98267825-1'); </script>
-
 <script type="text/javascript" src="{!!asset('js/esSearchController.js?v=1.0.0')!!}"></script>
+<!-- lọc js -->
+<!-- <script type="text/javascript">
+    $(function (){
+        $('.orderby').change(function () {
+            $("#form_order").submit();
+        })
+    })
+</script> -->
+<!-- Filter JS -->
+<script>
+$(document).ready(function(){
+
+    filter_data();
+
+    function filter_data()
+    {
+        $('.filter_data').html('<div id="loading" style="" ></div>');
+        var action = 'fetch_data';
+        var minimum_price = $('#hidden_minimum_price').val();
+        var maximum_price = $('#hidden_maximum_price').val();
+        var brand = get_filter('brand');
+        var ram = get_filter('ram');
+        var storage = get_filter('storage');
+        $.ajax({
+            url:"fetch_data.php",
+            method:"POST",
+            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, brand:brand, ram:ram, storage:storage},
+            success:function(data){
+                $('.filter_data').html(data);
+            }
+        });
+    }
+
+    function get_filter(class_name)
+    {
+        var filter = [];
+        $('.'+class_name+':checked').each(function(){
+            filter.push($(this).val());
+        });
+        return filter;
+    }
+
+    $('.common_selector').click(function(){
+        filter_data();
+    });
+
+    $('#price_range').slider({
+        range:true,
+        min:1000,
+        max:65000,
+        values:[1000, 65000],
+        step:500,
+        stop:function(event, ui)
+        {
+            $('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
+            $('#hidden_minimum_price').val(ui.values[0]);
+            $('#hidden_maximum_price').val(ui.values[1]);
+            filter_data();
+        }
+    });
+
+});
+</script>
 </body>
 @stop
