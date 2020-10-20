@@ -36,14 +36,8 @@ class CategoryRepository extends AbstractRepository {
         return $this->model->where('type', $type)->orderBy('created_at', 'desc')->get();
     }
 
-    public function getCategory() {
-        return $this->model->where('status', '1')->get();
-    }
-    public function readOSCategory() {
-        return $this->model->where('status', '1')->where('parent_id', '256')->get();
-    }
-    public function readGenreCategory() {
-        return $this->model->where('status', '1')->where('parent_id', '257')->get();
+    public function getProductCategory() {
+        return $this->model->where('status', '1')->where('parent_id', '0')->where('type', '4')->get();
     }
 
     public function readParentCategory($type, $parent_id) {
@@ -68,8 +62,11 @@ class CategoryRepository extends AbstractRepository {
         $item->parent = $this->getParent($item->parent_id, $type);
         return $item;
     }
-    public function getChildren($parent_id, $type = 'product') {
-        $item = $this->model->where('parent_id', $parent_id)->get();        
+    public function getChildren($id, $type = 'product') {
+        $item = $this->model->where('parent_id', $id)->get(); 
+        foreach($item as $value){
+            $value->children = $this->getChildren($value->id, $type);
+        }      
         return $item;
     }
 
