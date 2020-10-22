@@ -740,19 +740,12 @@
                                                     <!-- Additional required wrapper -->
                                                     <div class="swiper-wrapper">
                                                         <!-- Slides -->
-
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1486">Sàn Gỗ công nghiệp<br>bán chạy </a>
-                                                            </div>
-                                                        </div>
-                                                        @foreach ($origin as $key=>$origin)
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a value="{!!$origin->id!!}" class="link-view-more font-weight-normal tab-region" data-region-id="1456">{!!$origin->title!!}</a>
-                                                            </div>
-                                                        </div>
+                                                        <ul class="nav nav-pills">
+                                                        @foreach ($origin as $key=>$origin1) 
+                                                            <li><a data-toggle="pill" href="#industry_{{$key}}" style="color:#007dff">{!!$origin1->title!!}</a></li>
+                                                            &nbsp&nbsp&nbsp&nbsp&nbsp
                                                         @endforeach
+                                                        </ul>
                                                     </div>
                                                 </div>
                                                 <!--menu pc end-->
@@ -762,14 +755,26 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="tab-content">
+                                    @foreach($origin as $key => $origin)
+                                    
+                                    <div id="industry_{{$key}}" class="tab-pane fade">
                                     <div class="_binding_product">
                                         <div class="set-total" data-total="8" data-id="1486" style="display:none"></div>
                                         <div class="row no-gutters mb-3 mb-md-0">
-                                            @foreach($industry as $key => $product)
-                                            @if($key == 1)
-                                            @break
-                                            @endif
+                                    @foreach($industry_origin as $key=> $product)
+                                    @if($origin->id==$product->attribute_id)
+                                            
+                                            {!!$product->title!!}
+                                               @endif
+                                    @endforeach
+
                                             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+                                            @php $i=0; @endphp
+                                            @foreach($industry_origin as $key=> $product)
+                                            @if($origin->id==$product->attribute_id)
+                                            @if($i <2 )
+                                                <div >
                                                 <div class="item-product item-product-large">
                                                     <div class="image">
                                                         <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
@@ -809,17 +814,19 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                                </div>
+                                            @php $i++; @endphp
+                                            <?php $index=$key ?>
+                                            @endif
+                                            @endif
                                             @endforeach
+                                            </div>
+                                            
+                                           
                                             <div class="col-lg-7 col-md-12 col-sm-12 col-12">
                                                 <div class="row no-gutters h-100 ">
-                                                    @foreach($industry as $key => $product)
-                                                    @if($key == 0 || $key == 1)
-                                                    @continue
-                                                    @endif
-                                                    @if($key == 5)
-                                                    @break
-                                                    @endif
+                                                    @foreach($industry_origin as $key=> $product)
+                                                    @if($origin->id==$product->attribute_id && $key>$index) 
                                                     <div class="col-md-4 col-sm-4 col-6 ">
                                                         <div class="item-product" data-id="95211" data-properties="">
                                                             <div class="image">
@@ -859,112 +866,19 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    @endforeach
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row no-gutters">
-                                            @foreach($industry as $key => $product)
-                                            @if($key == 0)
-                                            @continue
-                                            @endif
-                                            @if($key == 2)
-                                            @break
-                                            @endif
-                                            <div class="col-lg-5 col-md-12 col-sm-12 col-12">
-                                                <div class="item-product item-product-large">
-                                                    <div class="image">
-                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
-                                                            <img src="{{$product->getImage()}}" style=" height: 250px"class="lazy img-fluid" alt="Sàn gỗ WINEO ROCK&#x27;N&#x27;GO LA149SYSV4" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="py-1">
-                                                        <h5 class="title">
-                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
-                                                            {!!$product->title!!}
-                                                        </a>
-                                                        </h5>
-                                                        <div class="price-new">
-                                                            @if($product->sale_price==0)
-                                                            {!!$product->getPrice()!!}
-                                                            @else
-                                                            {!!$product->getSalePrice()!!}
-                                                            @endif
-                                                        </div>
-                                                        @if($product->sale_price!=0)
-                                                        <div class="price-old">
-                                                            {!!$product->getPrice()!!}
-                                                        </div>
-                                                        @else
-                                                        &nbsp
-                                                        @endif
-                                                        <div class="size small mb-1">
-                                                            Kích thước: {!!$product->getSize()!!} mm
-                                                        </div>
-                                                        <div class="review d-flex">
-                                                            <div class="color-FFAB1B mr-2">
-                                                                0,0/5<i class="fas fa-star ml-1"></i>
-                                                            </div>
-                                                            <div class="color-828282">
-                                                                0 đánh giá
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            @endforeach
-                                            <div class="col-lg-7 col-md-12 col-sm-12 col-12">
-                                                <div class="row no-gutters h-100 ">
-                                                    @foreach($industry as $key => $product)
-                                                    @if($key < 5)
-                                                    @continue
+                                                    @php $i++; @endphp
+                                                    @if($i==8)
+                                                    @break;
                                                     @endif
-                                                    <div class="col-md-4 col-sm-4 col-6 ">
-                                                        <div class="item-product" data-id="72193" data-properties="">
-                                                            <div class="image">
-                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="width: 200px; height: 200px; object-fit: cover;" class="lazy img-fluid" /></a>
-                                                                <div class="tag-2">
-                                                                    <img src="" class="img-fluid tag-2-thumb" />
-                                                                </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <h5 class="title">
-                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" >
-                                                                    {!!$product->title!!}
-                                                                </a>
-                                                                </h5>
-                                                                <div class="price-new">
-                                                            @if($product->sale_price==0)
-                                                            {!!$product->getPrice()!!}
-                                                            @else
-                                                            {!!$product->getSalePrice()!!}
-                                                            @endif
-                                                        </div>
-                                                        @if($product->sale_price!=0)
-                                                        <div class="price-old">
-                                                            {!!$product->getPrice()!!}
-                                                        </div>
-                                                        @else
-                                                        &nbsp
-                                                        @endif
-                                                        <div class="size small mb-1">
-                                                            Kích thước: {!!$product->getSize()!!} mm
-                                                        </div>
-                                                                <div class="review d-flex">
-                                                                    <div class="color-FFAB1B mr-2">
-                                                                        5,0/5<i class="fas fa-star ml-1"></i>
-                                                                    </div>
-                                                                    <div class="color-828282">
-                                                                        0 đánh giá
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    @endif
                                                     @endforeach
                                                 </div>
                                             </div>
                                         </div>
+                                        
+                                    </div>
+                                    </div>
+                                    @endforeach
                                     </div>
                                     <a href="javascript:void(0)" class="view-remain-product" data-skip="8" data-size="" data-id="">
                                         <div class="see-more"><i class="fas fa-angle-double-right"></i> Xem thêm <span class="remain-product"><b>0</b></span> sản phẩm </div>
@@ -1020,31 +934,12 @@
                                                     <!-- Additional required wrapper -->
                                                     <div class="swiper-wrapper">
                                                         <!-- Slides -->
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1483">Sàn gỗ tự nhiên<br>bán chạy </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1449">Gỗ gõ đỏ</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1450">Gỗ Giáng hương</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1448">Gỗ Sồi</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="swiper-slide">
-                                                            <div>
-                                                                <a href="javascript:void(0)" class="link-view-more font-weight-normal tab-region" data-region-id="1447">Gỗ Teak </a>
-                                                            </div>
-                                                        </div>
+                                                        <ul class="nav nav-pills">
+                                                        @foreach ($material as $key=>$material1) 
+                                                            <li><a data-toggle="pill" href="#nature_{{$key}}" style="color:#007dff">{!!$material1->title!!}</a></li>
+                                                            &nbsp&nbsp&nbsp&nbsp&nbsp
+                                                        @endforeach
+                                                        </ul>
                                                     </div>
                                                 </div>
                                                 <!--menu pc end-->
@@ -1054,14 +949,25 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="tab-content">
+                                    @foreach($material as $key => $material)
+                                    
+                                    <div id="nature_{{$key}}" class="tab-pane fade">
                                     <div class="_binding_product">
                                         <div class="set-total" data-total="8" data-id="1483" style="display:none"></div>
                                         <div class="row no-gutters mb-3 mb-md-0">
-                                            @foreach($nature as $key => $product)
-                                            @if($key == 1)
-                                            @break
-                                            @endif
+                                            @foreach($nature_category as $key=> $product)
+                                    @if($material->id==$product->category_id)
+                                            
+                                            {!!$product->title!!}
+                                               @endif
+                                    @endforeach
                                             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+                                                @php $i=0; @endphp
+                                            @foreach($nature_category as $key=> $product)
+                                            @if($material->id==$product->category_id)
+                                            @if($i <2 )
+                                            <div>
                                                 <div class="item-product item-product-large">
                                                     <div class="image">
                                                         <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
@@ -1101,17 +1007,18 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                                </div>
+                                            @php $i++; @endphp
+                                            <?php $index=$key ?>
+                                            @endif
+                                            @endif
                                             @endforeach
+                                            </div>
+                                            
                                             <div class="col-lg-7 col-md-12 col-sm-12 col-12">
                                                 <div class="row no-gutters h-100 ">
-                                                    @foreach($nature as $key => $product)
-                                                    @if($key == 0 || $key == 1)
-                                                    @continue
-                                                    @endif
-                                                    @if($key == 5)
-                                                    @break
-                                                    @endif
+                                                    @foreach($nature_category as $key=> $product)
+                                                    @if($material->id==$product->category_id && $key>$index) 
                                                     <div class="col-md-4 col-sm-4 col-6 ">
                                                         <div class="item-product" data-id="42173" data-properties="">
                                                             <div class="image">
@@ -1154,109 +1061,19 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    @endforeach
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row no-gutters">
-                                            @foreach($nature as $key => $product)
-                                            @if($key == 0)
-                                            @continue
-                                            @endif
-                                            @if($key == 2)
-                                            @break
-                                            @endif
-                                            <div class="col-lg-5 col-md-12 col-sm-12 col-12">
-                                                <div class="item-product item-product-large">
-                                                    <div class="image">
-                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
-                                                            <img src="{{$product->getImage()}}" style="height: 250px" class="lazy img-fluid" alt="Sàn gỗ Giáng Hương FJL" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="py-1">
-                                                        <h5 class="title">
-                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ Giáng Hương FJL">
-                                                            {!!$product->title!!}
-                                                        </a>
-                                                        </h5>
-                                                        <div class="price-new">
-                                                            @if($product->sale_price==0)
-                                                            {!!$product->getPrice()!!}
-                                                            @else
-                                                            {!!$product->getSalePrice()!!}
-                                                            @endif
-                                                        </div>
-                                                        @if($product->sale_price!=0)
-                                                        <div class="price-old">
-                                                            {!!$product->getPrice()!!}
-                                                        </div>
-                                                        @else
-                                                        &nbsp
-                                                        @endif
-                                                        <div class="size small mb-1">
-                                                            Kích thước: {!!$product->getSize()!!} mm
-                                                        </div>
-                                                        <div class="review d-flex">
-                                                            <div class="color-FFAB1B mr-2">
-                                                                0,0/5<i class="fas fa-star ml-1"></i>
-                                                            </div>
-                                                            <div class="color-828282">
-                                                                0 đánh giá
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            @endforeach
-                                            <div class="col-lg-7 col-md-12 col-sm-12 col-12">
-                                                <div class="row no-gutters h-100 ">
-                                                    @foreach($nature as $key => $product)
-                                                    @if($key < 5)
-                                                    @continue
+                                                    @php $i++; @endphp
+                                                    @if($i==8)
+                                                    @break;
                                                     @endif
-                                                    <div class="col-md-4 col-sm-4 col-6 ">
-                                                        <div class="item-product" data-id="14325" data-properties="">
-                                                            <div class="image">
-                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="width: 200px; height: 200px; object-fit: cover;" class="lazy img-fluid" /></a>
-                                                            </div>
-                                                            <div class="">
-                                                                <h5 class="title">
-                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ Giáng Hương 900 x 120mm">
-                                                                    {!!$product->title!!}
-                                                                </a>
-                                                                </h5>
-                                                                <div class="price-new">
-                                                            @if($product->sale_price==0)
-                                                            {!!$product->getPrice()!!}
-                                                            @else
-                                                            {!!$product->getSalePrice()!!}
-                                                            @endif
-                                                        </div>
-                                                        @if($product->sale_price!=0)
-                                                        <div class="price-old">
-                                                            {!!$product->getPrice()!!}
-                                                        </div>
-                                                        @else
-                                                        &nbsp
-                                                        @endif
-                                                        <div class="size small mb-1">
-                                                            Kích thước: {!!$product->getSize()!!} mm
-                                                        </div>
-                                                                <div class="review d-flex">
-                                                                    <div class="color-FFAB1B mr-2">
-                                                                        0,0/5<i class="fas fa-star ml-1"></i>
-                                                                    </div>
-                                                                    <div class="color-828282">
-                                                                        0 đánh giá
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    @endif
                                                     @endforeach
                                                 </div>
                                             </div>
                                         </div>
+                                        
+                                    </div>
+                                    </div>
+                                    @endforeach
                                     </div>
                                     <a href="javascript:void(0)" class="view-remain-product" data-skip="8" data-size="" data-id="">
                                         <div class="see-more"><i class="fas fa-angle-double-right"></i> Xem thêm <span class="remain-product"><b>0</b></span> sản phẩm </div>

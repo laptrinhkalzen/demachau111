@@ -190,6 +190,11 @@ class ProductRepository extends AbstractRepository {
         return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $product)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
 
+    public function getIndustryOrigin($limit) {
+        $origin = \DB::table('attribute')->where('parent_id',19)->pluck('id');
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->join('product_attribute','product_attribute.product_id','=','product.id')->whereIn('attribute_id',$origin)->orderBy('post_schedule', 'desc')->take($limit)->get();
+    }
+
     public function getIndustryProduct($limit) {
         $category = \DB::table('category')->where('alias', 'san-go-cong-nghiep')->pluck('id');
         $industry = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
@@ -202,8 +207,20 @@ class ProductRepository extends AbstractRepository {
         return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $nature)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
 
+    public function getNatureCategory($limit) {
+        $category = \DB::table('category')->where('parent_id', 3)->pluck('id');
+
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->join('product_category','product_category.product_id','=','product.id')->whereIn('category_id',$category)->orderBy('post_schedule', 'desc')->take($limit)->get();
+    }
+
     public function getPlasticProduct($limit) {
         $category = \DB::table('category')->where('alias', 'san-nhua')->pluck('id');
+        $plastic = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $plastic)->orderBy('post_schedule', 'desc')->take($limit)->get();
+    }
+
+    public function getPlasticCategory($limit) {
+        $category = \DB::table('category')->where('parent_id', 3)->pluck('id');
         $plastic = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
         return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $plastic)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }

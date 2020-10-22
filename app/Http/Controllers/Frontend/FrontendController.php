@@ -41,10 +41,13 @@ class FrontendController extends Controller {
         $hot_products_slide = $this->productRepo->readHlProduct($limit = 4);
         $product_all = $this->productRepo->readAllProduct($limit = 10);
         $product_hl = $this->productRepo->readHlProduct($limit = 10);
-        $industry = $this->productRepo->getIndustryProduct($limit = 8);
+        $industry = $this->productRepo->getIndustryProduct($limit);
+        $industry_origin = $this->productRepo->getIndustryOrigin($limit);
         $nature = $this->productRepo->getNatureProduct($limit = 8);
+        $nature_category = $this->productRepo->getNatureCategory($limit);
         $sale = $this->productRepo->getProduct($alias= 'hang-thanh-ly', $limit = 10);
         $plastic = $this->productRepo->getPlasticProduct($limit = 8);
+        $plastic_category = $this->productRepo->getPlasticProduct($limit = 8);
         $outdoor = $this->productRepo->getOutdoorProduct($limit = 8);
         $decor = $this->productRepo->getDecorProduct($limit = 8);
         $houseware = $this->productRepo->getHousewareProduct($limit = 8);
@@ -55,10 +58,11 @@ class FrontendController extends Controller {
         } 
         $brand =  $this->attributeRepo->getAttributes($parent_id = 2);
         $origin =  $this->attributeRepo->getAttributes($parent_id = 19);
+        $material =  $this->categoryRepo->getChildrenCategory($parent_id = 3);
         if (config('global.device') != 'pc') {
-            return view('mobile/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature', 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all','outdoor','decor','houseware','category','brand','origin'));
+            return view('mobile/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature', 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all','outdoor','decor','houseware','category','brand','origin','industry_origin','material','nature_category'));
         } else {
-            return view('frontend/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature' , 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all','outdoor','decor','houseware','category','brand','origin'));
+            return view('frontend/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature' , 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all','outdoor','decor','houseware','category','brand','origin','industry_origin','material','nature_category'));
         }
     }
     
