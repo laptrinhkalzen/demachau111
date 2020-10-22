@@ -928,6 +928,7 @@
                                                     <div class="swiper-wrapper">
                                                         <!-- Slides -->
                                                         <ul class="nav nav-pills">
+                                                        <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
                                                         @foreach ($material as $key=>$material1) 
                                                             <li><a data-toggle="pill" href="#nature_{{$key}}" style="color:#007dff">{!!$material1->title!!}</a></li>
                                                             &nbsp&nbsp&nbsp&nbsp&nbsp
@@ -2194,7 +2195,7 @@
                                         <img src="{!!asset('/noithathunggia/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" class="img-fluid lazy" />
                                     </div>
                                     <div class="px-3 align-self-center">
-                                        <label>Xuất xứ</label>
+                                        <label style="text-transform: uppercase;">Xuất xứ</label>
                                         <div class="small">
                                             Bảo đảm 100% xuất xứ
                                         </div>
@@ -2207,7 +2208,7 @@
                                         <img src="{!!asset('noithathunggia/uploads/2020/04/28/Group.png?v=1.0.0')!!}"  class="img-fluid lazy" />
                                     </div>
                                     <div class="px-3 align-self-center">
-                                        <label>Hỗ trợ 24/7</label>
+                                        <label style="text-transform: uppercase;">Hỗ trợ 24/7</label>
                                         <div class="small">
                                             Hệ thống toàn quốc
                                         </div>
@@ -2220,7 +2221,7 @@
                                         <img src="{!!asset('noithathunggia/uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}"  class="img-fluid lazy" />
                                     </div>
                                     <div class="px-3 align-self-center">
-                                        <label>Loại hình dịch vụ</label>
+                                        <label style="text-transform: uppercase;">Loại hình dịch vụ</label>
                                         <div class="small">
                                             Nhập khẩu - phân phối - bán lẻ trực tiếp
                                         </div>
