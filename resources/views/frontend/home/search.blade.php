@@ -4,40 +4,35 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body>
-
-        
-<!--         <script type="text/javascript">
-            $(document).ready(function){
-                filter_data();
-                function filter_data(){
-                    var action = '';
-                    var origin = get_filter('origin');
-                }
-
-                $.ajax({
-                    url:"",
-                    method:"POST",
-                    data: {action:action, origin:origin},
-                    success:function(data){
-                        $('.filter_data').html(data);
-                    }
-
-                })
-                function get_filter(class_name){
-                    var filter = [];
-                    $('.'+class_name+':checked').each(function(){
-                        filter.push($(this).val());
-                    });
-
-                    $('.common_selector').click(function(){
-                        filter_data();
-                    });
-            }
-        </script> -->
+    
+    <!--         <script type="text/javascript">
+    $(document).ready(function){
+    filter_data();
+    function filter_data(){
+    var action = '';
+    var origin = get_filter('origin');
+    }
+    $.ajax({
+    url:"",
+    method:"POST",
+    data: {action:action, origin:origin},
+    success:function(data){
+    $('.filter_data').html(data);
+    }
+    })
+    function get_filter(class_name){
+    var filter = [];
+    $('.'+class_name+':checked').each(function(){
+    filter.push($(this).val());
+    });
+    $('.common_selector').click(function(){
+    filter_data();
+    });
+    }
+    </script> -->
     <div class="col-md-9">
         <br />
         <div class="row filter_data">
-
         </div>
     </div>
     <section class=" pt-3 pb-4" style="margin-top: 20px;">
@@ -99,7 +94,8 @@
             <div class="form-book">
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" style="font-size: 15px;" id="news" role="tabpanel" aria-labelledby="home-tab">
-                        <form id="form_order" method="get">
+                        <form id="product_filter_form" method="post" action="{{route('product.search')}}">
+                            {{ csrf_field() }}
                             <div class="container mb-3 client-cate">
                                 <div class="bg-fff border-r-4">
                                     <div class="row no-gutters">
@@ -331,20 +327,20 @@
                                                     <label for="formControlRange " class="mb-0 mr-3 ">Tìm kiếm theo</label>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-2 col-md-6 col-sm-12 col-12">
-                                                <select name="price" class="form-control mb-2 mb-lg-0 filter-select range-price" onchange='this.form.submit()'>
-                                                    <option hidden value="">Khung giá</option>
-                                                    <option value="">Tất cả</option>
-                                                    <option value="1">Từ 0 - 100.000đ</option>
-                                                    <option value="2">Từ 200.000 - 300.000đ</option>
-                                                    <option value="3">Từ 300.000 - 400.000đ</option>
-                                                    <option value="4">Từ 400.000 - 600.000đ</option>
-                                                    <option value="5">Từ 600.000 trở lên</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xl-8 col-md-12 col-12 align-self-center">
+                                            <div class="col-xl-5 col-md-6 col-sm-12 col-12">
                                                 <div class="form-row">
-                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                                                        <select name="price" class="form-control mb-2 mb-lg-0 filter-select range-price">
+                                                            <option hidden value="">Khung giá</option>
+                                                            <option value="">Tất cả</option>
+                                                            <option value="1">Từ 0 - 100.000đ</option>
+                                                            <option value="2">Từ 200.000 - 300.000đ</option>
+                                                            <option value="3">Từ 300.000 - 400.000đ</option>
+                                                            <option value="4">Từ 400.000 - 600.000đ</option>
+                                                            <option value="5">Từ 600.000 trở lên</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                                                         <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" data-spec-id="17">
                                                             <option hidden value="">Bảo hành</option>
                                                             <option value="">Tất cả</option>
@@ -354,7 +350,7 @@
                                                             <option value="5 năm">5 năm</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                                                         <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" data-spec-id="70">
                                                             <option hidden value="">Độ dày</option>
                                                             <option value="">Tất cả</option>
@@ -369,7 +365,7 @@
                                                             <option value="9 mm">9 mm</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                                                         <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" data-spec-id="45">
                                                             <option hidden value="">Độ Mài Mòn</option>
                                                             <option value="">Tất cả</option>
@@ -378,7 +374,11 @@
                                                             <option value="AC5">AC5</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-5 col-md-12 col-12 align-self-center">
+                                                <div class="form-row">
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                                                         <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" data-spec-id="1">
                                                             <option hidden value="">Kích thước</option>
                                                             <option value="">Tất cả</option>
@@ -460,7 +460,7 @@
                                                             <option value="9    x    195    x    1288">9    x    195    x    1288</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                                                         <select class="form-control mb-2 mb-lg-0 filter-select color">
                                                             <option hidden value="">Màu sắc</option>
                                                             <option value="">Tất cả</option>
@@ -538,13 +538,17 @@
                                                             </option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <select name="orderby" class="form-control mb-2 mb-lg-0 filter-select extra orderby" onchange='this.form.submit()'>
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                                                        <select name="orderby" class="form-control mb-2 mb-lg-0 filter-select extra orderby">
                                                             <option hidden value="">Sắp xếp</option>
                                                             <option value="price_max">Giá tăng dần</option>
                                                             <option value="price_min">Giá giảm dần</option>
                                                             <option value="desc">Nổi bật nhất</option>
                                                         </select>
+                                                        
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                                                        <button class="btn btn-save mb-2 mb-md-0 w-100" type="submit" name="search">Tìm kiếm</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1226,65 +1230,59 @@ fjs.parentNode.insertBefore(js, fjs);
 <script type="text/javascript" src="{!!asset('js/esSearchController.js?v=1.0.0')!!}"></script>
 <!-- lọc js -->
 <!-- <script type="text/javascript">
-    $(function (){
-        $('.orderby').change(function () {
-            $("#form_order").submit();
-        })
-    })
+$(function (){
+$('.orderby').change(function () {
+$("#form_order").submit();
+})
+})
 </script> -->
 <!-- Filter JS -->
 <script>
 $(document).ready(function(){
-
-    filter_data();
-
-    function filter_data()
-    {
-        $('.filter_data').html('<div id="loading" style="" ></div>');
-        var action = 'fetch_data';
-        var minimum_price = $('#hidden_minimum_price').val();
-        var maximum_price = $('#hidden_maximum_price').val();
-        var brand = get_filter('brand');
-        var ram = get_filter('ram');
-        var storage = get_filter('storage');
-        $.ajax({
-            url:"fetch_data.php",
-            method:"POST",
-            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, brand:brand, ram:ram, storage:storage},
-            success:function(data){
-                $('.filter_data').html(data);
-            }
-        });
-    }
-
-    function get_filter(class_name)
-    {
-        var filter = [];
-        $('.'+class_name+':checked').each(function(){
-            filter.push($(this).val());
-        });
-        return filter;
-    }
-
-    $('.common_selector').click(function(){
-        filter_data();
-    });
-
-    $('#price_range').slider({
-        range:true,
-        min:1000,
-        max:65000,
-        values:[1000, 65000],
-        step:500,
-        stop:function(event, ui)
-        {
-            $('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
-            $('#hidden_minimum_price').val(ui.values[0]);
-            $('#hidden_maximum_price').val(ui.values[1]);
-            filter_data();
-        }
-    });
-
+filter_data();
+function filter_data()
+{
+$('.filter_data').html('<div id="loading" style="" ></div>');
+var action = 'fetch_data';
+var minimum_price = $('#hidden_minimum_price').val();
+var maximum_price = $('#hidden_maximum_price').val();
+var brand = get_filter('brand');
+var ram = get_filter('ram');
+var storage = get_filter('storage');
+$.ajax({
+url:"fetch_data.php",
+method:"POST",
+data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, brand:brand, ram:ram, storage:storage},
+success:function(data){
+$('.filter_data').html(data);
+}
+});
+}
+function get_filter(class_name)
+{
+var filter = [];
+$('.'+class_name+':checked').each(function(){
+filter.push($(this).val());
+});
+return filter;
+}
+$('.common_selector').click(function(){
+filter_data();
+});
+$('#price_range').slider({
+range:true,
+min:1000,
+max:65000,
+values:[1000, 65000],
+step:500,
+stop:function(event, ui)
+{
+$('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
+$('#hidden_minimum_price').val(ui.values[0]);
+$('#hidden_maximum_price').val(ui.values[1]);
+filter_data();
+}
+});
 });
 </script>
 </body>

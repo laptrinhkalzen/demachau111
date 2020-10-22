@@ -96,8 +96,8 @@ class AttributeRepository extends AbstractRepository {
         }
     }
 
-    public function getAttributes($parent_id) {
-            $item = $this->model->where('parent_id', $parent_id)->get();
+    public function getAttributes($limit,$parent_id) {
+            $item = $this->model->where('parent_id', $parent_id)->take($limit)->get();
             return $item;
     }
 
