@@ -762,13 +762,6 @@
                                     <div class="_binding_product">
                                         <div class="set-total" data-total="8" data-id="1486" style="display:none"></div>
                                         <div class="row no-gutters mb-3 mb-md-0">
-                                    @foreach($industry_origin as $key=> $product)
-                                    @if($origin->id==$product->attribute_id)
-                                            
-                                            {!!$product->title!!}
-                                               @endif
-                                    @endforeach
-
                                             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                                             @php $i=0; @endphp
                                             @foreach($industry_origin as $key=> $product)
@@ -956,12 +949,6 @@
                                     <div class="_binding_product">
                                         <div class="set-total" data-total="8" data-id="1483" style="display:none"></div>
                                         <div class="row no-gutters mb-3 mb-md-0">
-                                            @foreach($nature_category as $key=> $product)
-                                    @if($material->id==$product->category_id)
-                                            
-                                            {!!$product->title!!}
-                                               @endif
-                                    @endforeach
                                             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                                                 @php $i=0; @endphp
                                             @foreach($nature_category as $key=> $product)
