@@ -48,11 +48,12 @@ class ProductController extends Controller {
 
     public function search(Request $request) {
          ini_set('memory_limit', '2048M');
+
         $search_product = $this->productRepo->readFE($request);
         $count = count($search_product);
         $slide1 = $this->slideRepo->getSlide1();
-        $brand =  $this->attributeRepo->getAttributes($parent_id = 2);
-        $origin =  $this->attributeRepo->getAttributes($parent_id = 19);
+        $brand =  $this->attributeRepo->getAttributes(null, $parent_id = 2);
+        $origin =  $this->attributeRepo->getAttributes(null, $parent_id = 19);
        return view('frontend/home/search',compact('search_product','count','slide1','origin'));
     } 
 
@@ -63,6 +64,7 @@ class ProductController extends Controller {
         return view('frontend/home/search',compact('search_product','count','slide1'));
     }
     public function detail(Request $request,$alias) {
+            $attribute = $this->attributeRepo->
             $detail_products=  $this->productRepo->getDetailProduct($alias);
             return view('frontend/product/detail',compact('detail_products'));
         }      

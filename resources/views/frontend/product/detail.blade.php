@@ -426,7 +426,7 @@
                             <div class="pb-2 border-bottom h5 font-weight-600 mb-3">
                                 <i class="far fa-clock mr-2"></i> Chi tiết kỹ thuật
                             </div>
-                            <!-- <div class="tech-detail border py-2 border-r-4 px-3 mb-4">
+                            <div class="tech-detail border py-2 border-r-4 px-3 mb-4">
                                 <div class="item ">
                                     <div class="label text-uppercase font-weight-600">
                                         Code
@@ -435,7 +435,7 @@
                                         Florton-FL669-1
                                     </div>
                                 </div>
-                                <div class="item ">
+                                <!-- <div class="item ">
                                     <div class="label text-uppercase font-weight-600">
                                         Unit
                                     </div>
@@ -477,8 +477,8 @@
                                     </div>
                                     <div class="ml-auto  text-right">
                                     12 mm                                        </div>
-                                </div>
-                            </div> -->
+                                </div> -->
+                            </div>
                         </div>
                         <div class="product-description">
                             <div class="pb-2 border-bottom h5 font-weight-600 mb-3">
