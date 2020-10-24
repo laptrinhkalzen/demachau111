@@ -634,13 +634,13 @@
                             <div class="pb-2 border-bottom h5 font-weight-600 mb-3">
                                 <i class="far fa-clock mr-2"></i> Chi tiết kỹ thuật
                             </div>
-                            <!-- <div class="tech-detail border py-2 border-r-4 px-3 mb-4">
+                            <div class="tech-detail border py-2 border-r-4 px-3 mb-4">
                                 <div class="item ">
                                     <div class="label text-uppercase font-weight-600">
                                         Code
                                     </div>
                                     <div class=" ml-auto text-right">
-                                        Florton-FL669-1
+                                        {!!$product->getCode()!!}
                                     </div>
                                 </div>
                                 <div class="item ">
@@ -656,37 +656,42 @@
                                         Kích thước
                                     </div>
                                     <div class="ml-auto  text-right">
-                                    12    x    128    x    1221                                        </div>
+                                    {!!$product->getSize()!!}                                   
+                                    </div>
                                 </div>
                                 <div class="item ">
                                     <div class="label text-uppercase font-weight-600">
                                         Ứng dụng
                                     </div>
                                     <div class="ml-auto  text-right">
-                                    Lát sàn phòng khách, phòng ngủ, biệt thự, chung cư...                                        </div>
+                                    {!!$product->getApplication()!!}                                      
+                                    </div>
                                 </div>
                                 <div class="item ">
                                     <div class="label text-uppercase font-weight-600">
                                         Đóng hộp
                                     </div>
                                     <div class="ml-auto  text-right">
-                                    16 Tấm/ Hộp (2.5006m2)                                        </div>
+                                    {!!$product->getAmount()!!}
+                                    </div>
                                 </div>
                                 <div class="item ">
                                     <div class="label text-uppercase font-weight-600">
                                         Cấp độ chống mài mòn
                                     </div>
                                     <div class="ml-auto  text-right">
-                                    AC4                                        </div>
+                                    {!!$product->getThickness()!!}                                        
+                                    </div>
                                 </div>
                                 <div class="item ">
                                     <div class="label text-uppercase font-weight-600">
                                         Độ dày
                                     </div>
                                     <div class="ml-auto  text-right">
-                                    12 mm                                        </div>
+                                    {!!$product->getThickness()!!} 
+                                    </div>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                         <!--Tin mới-->
                         <div class="lastest-news ">

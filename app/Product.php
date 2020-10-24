@@ -57,10 +57,45 @@ class Product extends Model {
     }
     public function getCategory() {
         $category = $this->hasMany('App\ProductAttribute', 'product_id')->where('attribute_id', 4)->first();
-        dd($category);
         if(is_null($category))
         return "";
         else
         return $category->value;
     }
+    public function getCode() {
+        $category = $this->hasMany('App\ProductAttribute', 'product_id')->where('attribute_id', 26)->first();
+        if(is_null($category))
+        return "";
+        else
+        return $category->value;
+    }
+    public function getThickness() {
+        $category = $this->hasMany('App\ProductAttribute', 'product_id')->where('attribute_id', 30)->first();
+        if(is_null($category))
+        return "";
+        else
+        return $category->value;
+    }
+    public function getApplication() {
+        $category = $this->hasMany('App\ProductAttribute', 'product_id')->where('attribute_id', 29)->first();
+        if(is_null($category))
+        return "";
+        else
+        return $category->value;
+    }
+    public function getAmount() {
+        $category = $this->hasMany('App\ProductAttribute', 'product_id')->where('attribute_id', 27)->first();
+        if(is_null($category))
+        return "";
+        else
+        return $category->value;
+    }
+    public function getStandard() {
+        $category = $this->hasMany('App\ProductAttribute', 'product_id')->where('attribute_id', 28)->first();
+        if(is_null($category))
+        return "";
+        else
+        return $category->value;
+    }
+
 }
