@@ -290,4 +290,13 @@ class ProductRepository extends AbstractRepository {
         return $this->model->select('title', 'description','keywords', 'meta_title', 'meta_keywords', 'meta_description')->where('id', $id)->first();
     }
 
+    public function getSimilarProduct($limit,$id) {
+        $category = \DB::table('product_category')->where('product_id', $id)->pluck('category_id');
+
+        $product_id = \DB::table('product_category')->whereIn('category_id',$category)->pluck('product_id');
+
+        $similar_product = array_unique($product_id->toArray());
+        return $this->model->whereIn('id', $similar_product)->orderBy('post_schedule', 'desc')->take($limit)->get();
+    }
+
 }

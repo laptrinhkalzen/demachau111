@@ -26,7 +26,7 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::get('/san-pham/{alias}', ['as' => 'product.detail', 'uses' => 'Frontend\ProductController@detail']);
     Route::get('/hot-product', ['as' => 'product.hot', 'uses' => 'Frontend\ProductController@hot']);
     Route::get('/all-product', ['as' => 'product.all', 'uses' => 'Frontend\ProductController@all']);
-    Route::get('/product/{alias}', ['as' => 'product.detail', 'uses' => 'Frontend\ProductController@detail']);
+    Route::get('/product/{alias}/{id}', ['as' => 'product.detail', 'uses' => 'Frontend\ProductController@detail']);
 
     /* Hình ảnh */
     Route::get('/hinh-anh', ['as' => 'gallery.index', 'uses' => 'Frontend\GalleryController@index']);

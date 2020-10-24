@@ -382,13 +382,15 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
+                        @foreach($similar_products as $key => $product)
                         <div class="col-xl-2 col-md-4 col-sm-4 col-6">
-                            <!-- <div class="item-product" data-id="22240" data-properties="">
+                            
+                            <div class="item-product" data-id="22240" data-properties="">
                                 <div class="tag-1">
                                 </div>
                                 <div class="image">
-                                    <a href="san-go-florton-fl666.html">
-                                        <img src="{!!asset('cms.janhome.vn/uploads/thumb/2017/09/san-go-florton-fl666-moi-1.jpg')!!}" class="img-fluid  w-100" alt="Sàn gỗ Florton FL666-1" />
+                                    <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                        <img src="{{$product->getImage()}}" class="img-fluid  w-100" />
                                     </a>
                                     <div class="tag-2">
                                         <img src="" class="img-fluid tag-2-thumb" />
@@ -415,8 +417,10 @@
                                         0 đánh giá
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
+                            
                         </div>
+                        @endforeach
                     </div>
                 </div>
                 <!--Sản phẩm tương tự end-->

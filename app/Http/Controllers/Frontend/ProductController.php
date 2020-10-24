@@ -63,10 +63,11 @@ class ProductController extends Controller {
         $slide1 = $this->slideRepo->getSlide1();
         return view('frontend/home/search',compact('search_product','count','slide1'));
     }
-    public function detail(Request $request,$alias) {
+    public function detail(Request $request,$alias,$id) {
 
             $detail_products=  $this->productRepo->getDetailProduct($alias);
-            return view('frontend/product/detail',compact('detail_products'));
+            $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
+            return view('frontend/product/detail',compact('similar_products','detail_products'));
         }      
 
     public function index(Request $request) {
