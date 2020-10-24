@@ -386,8 +386,6 @@
                         <div class="col-xl-2 col-md-4 col-sm-4 col-6">
                             
                             <div class="item-product" data-id="22240" data-properties="">
-                                <div class="tag-1">
-                                </div>
                                 <div class="image">
                                     <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
                                         <img src="{{$product->getImage()}}" style="height: 144px" class="img-fluid  w-100" />
