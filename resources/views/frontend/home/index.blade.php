@@ -1117,7 +1117,7 @@
                                                             </div>
                                                             <div class="">
                                                                 <h5 class="title">
-                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ Florton FL180805">
+                                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
                                                                     {!!$product->title!!}
                                                                 </a>
                                                                 </h5>

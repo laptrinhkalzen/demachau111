@@ -390,24 +390,35 @@
                                 </div>
                                 <div class="image">
                                     <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
-                                        <img src="{{$product->getImage()}}" class="img-fluid  w-100" />
+                                        <img src="{{$product->getImage()}}" style="height: 144px" class="img-fluid  w-100" />
                                     </a>
                                     <div class="tag-2">
                                         <img src="" class="img-fluid tag-2-thumb" />
                                     </div>
                                 </div>
                                 <h5 class="title">
-                                <a href="san-go-florton-fl666.html" title="Sàn gỗ Florton FL666-1">
-                                    Sàn gỗ Florton FL666-1
+                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" >
+                                    {!!$product->title!!}
                                 </a>
                                 </h5>
                                 <div class="text-left">
                                     <div class="price-new">
-                                        198.000đ đ
+                                        @if($product->sale_price==0)
+                                        {!!$product->getPrice()!!}
+                                        @else
+                                        {!!$product->getSalePrice()!!}
+                                        @endif
                                     </div>
+                                    @if($product->sale_price!=0)
+                                    <div class="price-old">
+                                        {!!$product->getPrice()!!}
+                                    </div>
+                                    @else
+                                    &nbsp
+                                    @endif
                                 </div>
                                 <div class="size small mb-1">
-                                    Kích thước: 12    x    128    x    1221
+                                    Kích thước: {!!$product->getSize()!!} mm
                                 </div>
                                 <div class="review d-flex">
                                     <div class="color-FFAB1B mr-2">
