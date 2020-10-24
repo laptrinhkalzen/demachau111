@@ -64,7 +64,7 @@ class ProductController extends Controller {
         return view('frontend/home/search',compact('search_product','count','slide1'));
     }
     public function detail(Request $request,$alias) {
-            $attribute = $this->attributeRepo->
+
             $detail_products=  $this->productRepo->getDetailProduct($alias);
             return view('frontend/product/detail',compact('detail_products'));
         }      
