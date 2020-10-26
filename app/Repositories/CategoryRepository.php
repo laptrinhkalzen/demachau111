@@ -48,6 +48,10 @@ class CategoryRepository extends AbstractRepository {
         return $this->model->where('type', $type)->where('id', $parent_id)->first();
     }
 
+    public function getAllCategoryNews($alias,$parent_id) {
+        return $this->model->where('type', $alias)->where('parent_id',0)->get();
+    }
+
     public function readHomeProductCategory() {
         return $this->model->where('type', \App\Category::TYPE_PRODUCT)->where('parent_id', \App\Category::PRODUCT_SHOP_ID)->get();
     }

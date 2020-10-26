@@ -19,9 +19,11 @@
                     <div class="heading">
                         <img src="images/menu-icon8bd3.svg?v=qef7cssZHgAquLTKdp4RlX3HxrirbSXXNcb4nv352dM" class="img-fluid mr-2" />Danh mục
                     </div>
-                    <!--                     <ul class="list">
-                        <li><a href="tin-khuyen-mai.html" title="TIN KHUYẾN MẠI">TIN KHUYẾN MẠI</a></li>
-                    </ul> -->
+                    <ul class="list">
+                        @foreach($category_arr as $key=> $cat)
+                        <li><a href="{!! route('news.list',['alias' => $cat->alias])!!}">{{$cat->title}}</a></li>
+                        @endforeach
+                    </ul>
                 </div>
                 <div class="list-menu-right">
                     <div class="heading mb-md-3">

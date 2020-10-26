@@ -29,7 +29,7 @@ class NewsController extends Controller {
         } else {
             $records = $this->newsRepo->readFE($request);
         }
-        $category_arr = $this->categoryRepo->readHomeNewsCategory();
+        $category_arr = $this->categoryRepo->getAllCategoryNews(2,0);
         $featured_news = $this->newsRepo->readFeaturedNews($limit = 5);
         if (config('global.device') != 'pc') {
             return view('mobile/news/list', compact('records', 'category_arr', 'featured_news', 'lifestyle', 'experience', 'expert', 'tutorial'));
