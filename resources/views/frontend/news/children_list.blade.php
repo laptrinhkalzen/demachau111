@@ -194,7 +194,7 @@
                             <div class="swiper-slide">
                                 <div class="item mb-3">
                                     <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
-                                        <img src="{{$news->getImage()}}" class="w-100" />
+                                        <img src="{{$news->getImage()}}" style="height: 795px"class="w-100" />
                                     </a>
                                     <h2 class="title">
                                     <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" >{!!$news->title!!}</a>
@@ -224,7 +224,7 @@
                                     </h5>
                                     <div style="display:flex; align-items:center">
                                         <div class="time">
-                                            07/12/2017 02:16 <img src="images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw" class="img-fluid mr-2" style=" margin-bottom: .1rem;" />258 lượt xem
+                                            {!!$news->getPostSchedule()!!}  <img src="{!!asset('images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw')!!}" class="img-fluid mr-2" style=" margin-bottom: .1rem;" />0 lượt xem
                                         </div>
                                         <div class="small mr-3" ></div>
                                     </div>

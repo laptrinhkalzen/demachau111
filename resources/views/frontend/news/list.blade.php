@@ -147,7 +147,7 @@
                                                 </h6>
                                                 <div class="time">
                                                     {!!$news->getPostSchedule()!!} 
-                                                    <img src="images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw" class="img-fluid mr-2" style=" margin-bottom: .1rem;" />0 lượt xem
+                                                    <img src="{!!asset('images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw')!!}" class="img-fluid mr-2" style=" margin-bottom: .1rem;" />0 lượt xem
                                                 </div>
                                             </div>
                                         </div>
@@ -294,7 +294,7 @@
                                                 </h6>
                                                 <div class="time">
                                                     {!!$news->getPostSchedule()!!} 
-                                                    <img src="images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw" class="img-fluid mr-2" style=" margin-bottom: .1rem;" />0 lượt xem
+                                                    <img src="{!!asset('images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw')!!}" class="img-fluid mr-2" style=" margin-bottom: .1rem;" />0 lượt xem
                                                 </div>
                                             </div>
                                         </div>
