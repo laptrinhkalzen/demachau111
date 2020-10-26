@@ -10,6 +10,7 @@
         min-height: 200px;
         background-size: cover;
         display: flex;
+        margin-top:30px;
     ">
     <div class="container align-self-center">
         <div class="row justify-content-center">
