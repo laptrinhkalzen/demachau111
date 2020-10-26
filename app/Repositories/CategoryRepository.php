@@ -82,4 +82,8 @@ class CategoryRepository extends AbstractRepository {
         return $this->model->where('type', \App\Category::TYPE_NEWS)->where('is_home', 1)->take($limit)->get();
     }
 
+    public function getCategoryNews($alias) {
+        return $this->model->where('type', \App\Category::TYPE_NEWS)->where('alias',$alias)->first();
+    }
+
 }

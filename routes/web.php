@@ -35,5 +35,5 @@ Route::get('/detail-product', function () {
     return view('frontend/product/detail');
 });
 Route::get('/detail-new', function () {
-    return view('frontend/news/detail');
+    return view('frontend/news/children_list');
 });

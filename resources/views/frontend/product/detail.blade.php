@@ -772,11 +772,11 @@
                             <div class="heading mb-3">
                                 <img src="{!!asset('images/sale-tag-icon693e.svg?v=be32C1CQrFxhxn3ZHg-2rsr0Zzd-RRRvkhoGZyO23IU')!!}" class="img-fluid mr-2" />Tags
                             </div>
-                            <!--                         <div class="list  list-tags-right">
+                                                    <div class="list  list-tags-right">
                                 <div class="item">
                                     <a href="the/san-go-cong-nghiep.html">sàn gỗ công nghiệp</a>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>

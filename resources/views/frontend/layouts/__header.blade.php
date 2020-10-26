@@ -216,6 +216,7 @@
                                 </li>
                                 @foreach ($category as $key=>$cat)
                                 <li class="list-group-item">
+
                                     <a href="{!! route('product.show',['alias' => $cat->alias])!!}" class="link">
                                         <img src=""
                                         class="img-fluid mr-2"/>{!!$cat->title!!}

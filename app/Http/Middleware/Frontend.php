@@ -38,6 +38,7 @@ class Frontend {
         \View::share(['count_cart' => $count]);
         \View::share(['menu' => $menu]);
         \View::share(['category' => $category]);
+        
         \View::share(['news_footer1' => $news_footer1]);
         \View::share(['news_footer2' => $news_footer2]);
         \View::share(['template' => $template]);
