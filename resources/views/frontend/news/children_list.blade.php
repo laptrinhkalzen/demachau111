@@ -30,7 +30,7 @@
                     </div>
                     
                     <div class="list lastest-news">
-                        @foreach($sale as $key=> $cat)
+                        @foreach($sale as $key=> $news)
                         <div class="item">
                             <div class="row">
                                 <div class="col-12 ">
