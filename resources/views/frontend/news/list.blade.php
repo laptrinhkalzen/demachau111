@@ -173,7 +173,7 @@
                                 </div>
                             </div>
                             <div class="ml-auto">
-                                <a href="javascript:void(0)" class="link-view-more">
+                                <a href="{!! route('news.list',['alias' => 'trai-nghiem'])!!}" class="link-view-more">
                                     Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
                                 </a>
                             </div>
@@ -240,7 +240,7 @@
                                 </div>
                             </div>
                             <div class="ml-auto">
-                                <a href="javascript:void(0)" class="link-view-more">
+                                <a href="{!! route('news.list',['alias' => 'chuyen-gia'])!!}" class="link-view-more">
                                     Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
                                 </a>
                             </div>
@@ -320,7 +320,7 @@
                                 </div>
                             </div>
                             <div class="ml-auto">
-                                <a href="javascript:void(0)" class="link-view-more">
+                                <a href="{!! route('news.list',['alias' => 'huong-dan'])!!}" class="link-view-more">
                                     Xem thêm <i class="fas fa-chevron-right ml-1 small"></i>
                                 </a>
                             </div>

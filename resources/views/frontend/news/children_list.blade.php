@@ -16,7 +16,7 @@
                 
                 <div class="list-menu-right">
                     <div class="heading">
-                        <img src="images/menu-icon8bd3.svg?v=qef7cssZHgAquLTKdp4RlX3HxrirbSXXNcb4nv352dM" class="img-fluid mr-2" />Danh mục
+                        <img src="{!!asset('images/menu-icon8bd3.svg?v=qef7cssZHgAquLTKdp4RlX3HxrirbSXXNcb4nv352dM')!!}" class="img-fluid mr-2" />Danh mục
                     </div>
                     <ul class="list">
                         <li><a href="tin-khuyen-mai.html" title="TIN KHUYẾN MẠI">TIN KHUYẾN MẠI</a></li>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="list-menu-right">
                     <div class="heading mb-md-3">
-                        <img src="images/giftc829.svg?v=9SyPI8n17F7AMeX1L1ifHuyq4N7RRpl6-lxBALqXHbM" class="img-fluid mr-2" />Khuyến mại
+                        <img src="{!!asset('images/giftc829.svg?v=9SyPI8n17F7AMeX1L1ifHuyq4N7RRpl6-lxBALqXHbM')!!}" class="img-fluid mr-2" />Khuyến mại
                     </div>
                     <div class="list lastest-news">
                         <div class="item">
@@ -194,7 +194,7 @@
                             <div class="swiper-slide">
                                 <div class="item mb-3">
                                     <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
-                                        <img src="{{$news->getImage()}}" style="height: 795px"class="w-100" />
+                                        <img src="{{$news->getImage()}}" style="height: 450px"class="w-100" />
                                     </a>
                                     <h2 class="title">
                                     <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" >{!!$news->title!!}</a>
