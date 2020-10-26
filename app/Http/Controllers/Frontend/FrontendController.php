@@ -59,10 +59,12 @@ class FrontendController extends Controller {
         $brand =  $this->attributeRepo->getAttributes($limit, $parent_id = 2);
         $origin =  $this->attributeRepo->getAttributes($limit = 5, $parent_id = 19);
         $material =  $this->categoryRepo->getChildrenCategory($parent_id = 3);
+        $plastic_brand = $this->categoryRepo->getChildrenCategory($parent_id = 4);
+        // dd($plastic_brand[0]->title);
         if (config('global.device') != 'pc') {
-            return view('mobile/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature', 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all','outdoor','decor','houseware','category','brand','origin','industry_origin','material','nature_category'));
+            return view('mobile/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature', 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all','outdoor','decor','houseware','category','brand','origin','industry_origin','material','nature_category','plastic_brand','plastic_category'));
         } else {
-            return view('frontend/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature' , 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all','outdoor','decor','houseware','category','brand','origin','industry_origin','material','nature_category'));
+            return view('frontend/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature' , 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all','outdoor','decor','houseware','category','brand','origin','industry_origin','material','nature_category','plastic_brand','plastic_category'));
         }
     }
     
