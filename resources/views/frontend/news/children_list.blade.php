@@ -19,78 +19,38 @@
                         <img src="{!!asset('images/menu-icon8bd3.svg?v=qef7cssZHgAquLTKdp4RlX3HxrirbSXXNcb4nv352dM')!!}" class="img-fluid mr-2" />Danh mục
                     </div>
                     <ul class="list">
-                        <li><a href="tin-khuyen-mai.html" title="TIN KHUYẾN MẠI">TIN KHUYẾN MẠI</a></li>
-                        <li><a href="bao-gia-thi-cong-lap-dat.html" title="BÁO GIÁ THI CÔNG LẮP ĐẶT">BÁO GIÁ THI CÔNG LẮP ĐẶT</a></li>
-                        <li><a href="tu-van.html" title="TƯ VẤN">TƯ VẤN</a></li>
-                        <li><a href="tai-catalogue.html" title="Tải Catalogue">TẢI CATALOGUE</a></li>
-                        <li><a href="nha-cung-cap-vat-lieu.html" title="NHÀ CUNG CẤP VẬT LIỆU">NHÀ CUNG CẤP VẬT LIỆU</a></li>
-                        <li><a href="thu-vien-3d-kien-truc-su.html" title="Thư viện 3D kiến trúc sư">THƯ VIỆN 3D KIẾN TRÚC SƯ</a></li>
-                        <li><a href="video-janhome.html" title="VIDEO JANHOME">VIDEO JANHOME</a></li>
-                        <li><a href="he-thong-san-go-vat-lieu-hoan-thien-janhome.html" title="Hệ thống sàn gỗ - vật liệu hoàn thiện JANHOME">HỆ THỐNG SÀN GỖ - VẬT LIỆU HOÀN THIỆN JANHOME</a></li>
-                        <li><a href="tuyen-dung.html" title="TUYỂN DỤNG">TUYỂN DỤNG</a></li>
-                        <li><a href="tin-janhome.html" title="TIN JANHOME">TIN JANHOME</a></li>
+                        @foreach($category_arr as $key=> $cat)
+                        <li><a href="{!! route('news.list',['alias' => $cat->alias])!!}">{{$cat->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="list-menu-right">
                     <div class="heading mb-md-3">
                         <img src="{!!asset('images/giftc829.svg?v=9SyPI8n17F7AMeX1L1ifHuyq4N7RRpl6-lxBALqXHbM')!!}" class="img-fluid mr-2" />Khuyến mại
                     </div>
+                    
                     <div class="list lastest-news">
+                        @foreach($sale as $key=> $cat)
                         <div class="item">
                             <div class="row">
                                 <div class="col-12 ">
                                     <div class="image mb-3">
-                                        <a href="mung-ngay-doc-lap-giam-gia-cuc-soc-tai-janhome-he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho.html" title="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">
-                                            <img src="../cms.janhome.vn/uploads/thumb/2020/09/04/khuyen-mai-thang-9-2020-tai-janhome.jpg" class="img-fluid" alt="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">
+                                        <a href="{!! route('news.list',['alias' => $cat->alias])!!}">
+                                            <img src="{{$news->getImage()}}" class="img-fluid" >
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <h6 class="title">
-                                    <a href="mung-ngay-doc-lap-giam-gia-cuc-soc-tai-janhome-he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho.html" title="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho</a>
+                                    <a href="{!! route('news.list',['alias' => $cat->alias])!!}">{!!$news->title!!}</a>
                                     </h6>
                                     <div class="des ">
-                                        <p>Trong th&aacute;ng 9/2020, JanHome đưa ra rất nhiều chương tr&igrave;nh khuyến m&atilde;i hấp dẫn, vừa giảm gi&aacute;, vừa tặng qu&agrave;</p>
+                                        <p>{!!$news->description!!}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h6 class="title">
-                                    <a href="khuyen-mai-thang-8-nhieu-bat-ngo-tai-janhome-he-thong-ban-le-vat-lieu-hoan-thien-tai-kho.html" title="Khuyến mãi tháng 8 nhiều bất ngờ tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho.">Khuyến mãi tháng 8 nhiều bất ngờ tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho.</a>
-                                    </h6>
-                                    <div class="time ">
-                                        2020/08/03
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h6 class="title">
-                                    <a href="chao-don-thang-7-voi-con-mua-khuyen-mai-tai-janhome-he-thong-ban-le-vat-lieu-hoan-thien-tai-kho.html" title="Chào đón tháng 7 với cơn mưa khuyến mãi tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho">Chào đón tháng 7 với cơn mưa khuyến mãi tại JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho</a>
-                                    </h6>
-                                    <div class="time ">
-                                        2020/07/03
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h6 class="title">
-                                    <a href="vui-tet-thieu-nhi-1-6-hoan-hi-nhan-qua-khuyen-mai-lon-cua-janhome-he-thong-ban-le-vat-lieu-hoan-thien-tai-kho.html" title="Vui tết thiếu nhi (1/6), hoan hỉ nhận quà khuyến mãi lớn của JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho">Vui tết thiếu nhi (1/6), hoan hỉ nhận quà khuyến mãi lớn của JanHome, hệ thống bán lẻ vật liệu hoàn thiện tại kho</a>
-                                    </h6>
-                                    <div class="time ">
-                                        2020/07/02
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="list-menu-right">

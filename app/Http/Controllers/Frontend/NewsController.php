@@ -62,8 +62,10 @@ class NewsController extends Controller {
 
     public function list(Request $request,$alias) {
         $category_title = $this->categoryRepo->getCategoryNews($alias);
+        $category_arr = $this->categoryRepo->getAllCategoryNews(2,0);
+        $sale = $this->newsRepo->getNews('tin-khuyen-mai',10);
         $news_arr = $this->newsRepo->getNews($alias,10);
-        return view('frontend/news/children_list',compact('news_arr','category_title'));
+        return view('frontend/news/children_list',compact('news_arr','category_title','category_arr','sale'));
     }      
 
 }
