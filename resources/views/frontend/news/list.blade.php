@@ -57,27 +57,28 @@
                     <div class="heading mb-3">
                         <img src="images/flag-iconf002.svg?v=GoDAQeasQ5QDI54pnNLz0oiRudBV9A0ehf63EdEb_1Y" class="img-fluid mr-2" />Mới cập nhật
                     </div>
-                    <!-- <div class="list lastest-news">
+                    <div class="list lastest-news">
+                        @foreach($news_hl as $key=> $news)
                         <div class="item">
                             <div class="row">
                                 <div class="col-12 ">
                                     <div class="image mb-3">
-                                        <a href="vi-gach-go-nhua-lat-san-nha-tam-ban-cong-san-thuong-sieu-chiu-nuoc.html" title="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">
-                                            <img src="../cms.janhome.vn/uploads/thumb/2020/09/18/vi-gach-go-nhua-lat-san-ban-cong-san-thuong-sieu-chiu-nuoc.jpg" class="img-fluid" alt="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">
+                                        <a href="{!! route('news.list',['alias' => $cat->alias])!!}">
+                                            <img src="{{$news->getImage()}}" class="img-fluid">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <h6 class="title">
-                                    <a href="vi-gach-go-nhua-lat-san-nha-tam-ban-cong-san-thuong-sieu-chiu-nuoc.html" title="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước</a>
+                                    <a href="{!! route('news.list',['alias' => $cat->alias])!!}">{!!$news->title!!}</a>
                                     </h6>
-                                    <div class="des ">
-                                        <p>Vỉ gạch gỗ nhựa l&agrave; vật liệu l&aacute;t s&agrave;n hiện đại, được tạo n&ecirc;n từ sợi gỗ, nhựa c&ugrave;ng c&aacute;c...
-                                        </div>
+                                    <div class="des">
+                                        {!!$news->description!!}
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">

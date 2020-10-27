@@ -95,7 +95,7 @@ class ProductRepository extends AbstractRepository {
         else{
             $limit = 80;
         }
-        $limit = 10;
+        $limit = 12;
         return $model->where('status', 1)->orderBy('created_at', 'desc')->paginate($limit);
     }
     public function readSale($request) {
@@ -188,7 +188,7 @@ class ProductRepository extends AbstractRepository {
     public function getProduct($alias, $limit) {
         $category = \DB::table('category')->where('alias', $alias)->pluck('id');
         $product = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $product)->orderBy('post_schedule', 'desc')->take($limit)->paginate(2);
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $product)->orderBy('post_schedule', 'desc')->take($limit)->paginate(12);
     }
 
     public function getIndustryOrigin($limit) {
