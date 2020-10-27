@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 <body>
-    <div class="banner-page py-3 mb-4" style="margin-top:30px">
+    <div class="banner-page py-3 mb-4" style="margin-top:35px">
         <div class="container align-self-center">
             <div class="row justify-content-center">
                 <div class="col-sm-10 col-12 ">
@@ -55,89 +55,30 @@
                 </div>
                 <div class="list-menu-right">
                     <div class="heading mb-3">
-                        <img src="images/flag-iconf002.svg?v=GoDAQeasQ5QDI54pnNLz0oiRudBV9A0ehf63EdEb_1Y" class="img-fluid mr-2" />Mới cập nhật
+                        <img src="{!!asset('images/flag-iconf002.svg?v=GoDAQeasQ5QDI54pnNLz0oiRudBV9A0ehf63EdEb_1Y')!!}" class="img-fluid mr-2" />Mới cập nhật
                     </div>
                     <div class="list lastest-news">
+                        @foreach($news_hl as $key=> $news)
                         <div class="item">
                             <div class="row">
                                 <div class="col-12 ">
                                     <div class="image mb-3">
-                                        <a href="vi-gach-go-nhua-lat-san-nha-tam-ban-cong-san-thuong-sieu-chiu-nuoc.html" title="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">
-                                            <img src="../cms.janhome.vn/uploads/thumb/2020/09/18/vi-gach-go-nhua-lat-san-ban-cong-san-thuong-sieu-chiu-nuoc.jpg" class="img-fluid" alt="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">
+                                        <a href="{!! route('news.list',['alias' => $cat->alias])!!}">
+                                            <img src="{{$news->getImage()}}" class="img-fluid">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <h6 class="title">
-                                    <a href="vi-gach-go-nhua-lat-san-nha-tam-ban-cong-san-thuong-sieu-chiu-nuoc.html" title="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước</a>
+                                    <a href="{!! route('news.list',['alias' => $cat->alias])!!}">{!!$news->title!!}</a>
                                     </h6>
-                                    <div class="des ">
-                                        <p>Vỉ gạch gỗ nhựa l&agrave; vật liệu l&aacute;t s&agrave;n hiện đại, được tạo n&ecirc;n từ sợi gỗ, nhựa c&ugrave;ng c&aacute;c...
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class=" col-md-12 ">
-                                        <h6 class="title">
-                                        <a href="6-bi-quyet-tao-nen-mot-khong-gian-song-yen-binh-de-chiu.html" title="6 bí quyết tạo nên một không gian sống yên bình, dễ chịu">6 bí quyết tạo nên một không gian sống yên bình, dễ chịu</a>
-                                        </h6>
-                                        <div class="time ">
-                                            2020/09/16
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class=" col-md-12 ">
-                                        <h6 class="title">
-                                        <a href="chi-tiet-ve-tieu-chuan-e0-e1-cua-san-go-cong-nghiep.html" title="Chi tiết về tiêu chuẩn E0, E1 của sàn gỗ công nghiệp">Chi tiết về tiêu chuẩn E0, E1 của sàn gỗ công nghiệp</a>
-                                        </h6>
-                                        <div class="time ">
-                                            2020/09/15
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class=" col-md-12 ">
-                                        <h6 class="title">
-                                        <a href="thi-cong-san-go-janmi-o120-12mm-ban-nho-tai-can-ho-cao-cap-khu-do-thi-ecopark.html" title="Thi công sàn gỗ Janmi O120 12mm bản nhỏ tại căn hộ cao cấp khu đô thị Ecopark">Thi công sàn gỗ Janmi O120 12mm bản nhỏ tại căn hộ cao cấp khu đô thị Ecopark</a>
-                                        </h6>
-                                        <div class="time ">
-                                            2020/09/14
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class=" col-md-12 ">
-                                        <h6 class="title">
-                                        <a href="ve-dep-thuc-te-cua-san-go-floorart-r09c-tai-p1803-toa-nha-legacy-106-nguy-nhu-kon-tum.html" title="Vẻ đẹp thực tế của sàn gỗ floorart R09c tại P1803 tòa nhà LeGacy - 106 Nguy Như Kon Tum">Vẻ đẹp thực tế của sàn gỗ floorart R09c tại P1803 tòa nhà LeGacy - 106 Nguy Như Kon Tum</a>
-                                        </h6>
-                                        <div class="time ">
-                                            2020/09/12
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class=" col-md-12 ">
-                                        <h6 class="title">
-                                        <a href="tim-hieu-ve-tieu-chuan-ac-cua-san-go-thong-so-ac3-ac4-ac5-co-y-nghia-gihtml.html" title="Tìm hiểu về tiêu chuẩn AC của sàn gỗ. Thông số AC3, AC4, AC5 có ý nghĩa gì?">Tìm hiểu về tiêu chuẩn AC của sàn gỗ. Thông số AC3, AC4, AC5 có ý nghĩa gì?</a>
-                                        </h6>
-                                        <div class="time ">
-                                            2020/09/11
-                                        </div>
+                                    <div class="des">
+                                        {!!$news->description!!}
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">

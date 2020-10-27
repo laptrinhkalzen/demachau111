@@ -18,7 +18,6 @@ class NewsController extends Controller {
 
     public function index(Request $request, $alias = '') {
 
-
         $lifestyle = $this->newsRepo->getNews($alias='phong-cach-song',$limit=10);
         $experience = $this->newsRepo->getNews($alias='trai-nghiem',$limit=10);
         $expert = $this->newsRepo->getNews($alias='chuyen-gia',$limit=10);
@@ -30,12 +29,10 @@ class NewsController extends Controller {
             $records = $this->newsRepo->readFE($request);
         }
         $category_arr = $this->categoryRepo->getAllCategoryNews(2,0);
+        $sale = $this->newsRepo->getNews('tin-khuyen-mai',10);
         $featured_news = $this->newsRepo->readFeaturedNews($limit = 5);
-        if (config('global.device') != 'pc') {
-            return view('mobile/news/list', compact('records', 'category_arr', 'featured_news', 'lifestyle', 'experience', 'expert', 'tutorial'));
-        } else {
-            return view('frontend/news/list', compact('records', 'category_arr', 'featured_news', 'lifestyle', 'experience', 'expert', 'tutorial'));
-        }
+        $news_hl = $this->newsRepo->getAllNews(3);
+        return view('frontend/news/list', compact('records', 'category_arr', 'featured_news', 'lifestyle', 'experience', 'expert', 'tutorial','sale','news_hl'));
     }
 
     // public function detail($alias) {
@@ -63,9 +60,10 @@ class NewsController extends Controller {
     public function list(Request $request,$alias) {
         $category_title = $this->categoryRepo->getCategoryNews($alias);
         $category_arr = $this->categoryRepo->getAllCategoryNews(2,0);
-        $sale = $this->newsRepo->getNews('tin-khuyen-mai',10);
+        $sale = $this->newsRepo->getNews('tin-khuyen-mai',3);
+        $news_hl = $this->newsRepo->getAllNews(3);
         $news_arr = $this->newsRepo->getNews($alias,10);
-        return view('frontend/news/children_list',compact('news_arr','category_title','category_arr','sale'));
+        return view('frontend/news/children_list',compact('news_arr','category_title','category_arr','sale','news_hl'));
     }      
 
 }

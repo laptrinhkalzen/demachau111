@@ -29,27 +29,29 @@
                     <div class="heading mb-md-3">
                         <img src="images/giftc829.svg?v=9SyPI8n17F7AMeX1L1ifHuyq4N7RRpl6-lxBALqXHbM" class="img-fluid mr-2" />Khuyến mại
                     </div>
-                    <!-- <div class="list lastest-news">
+                    <div class="list lastest-news">
+                        @foreach($sale as $key=> $news)
                         <div class="item">
                             <div class="row">
                                 <div class="col-12 ">
                                     <div class="image mb-3">
-                                        <a href="mung-ngay-doc-lap-giam-gia-cuc-soc-tai-janhome-he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho.html" title="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">
-                                            <img src="../cms.janhome.vn/uploads/thumb/2020/09/04/khuyen-mai-thang-9-2020-tai-janhome.jpg" class="img-fluid" alt="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">
+                                        <a href="{!! route('news.list',['alias' => $cat->alias])!!}">
+                                            <img src="{{$news->getImage()}}" class="img-fluid" >
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <h6 class="title">
-                                    <a href="mung-ngay-doc-lap-giam-gia-cuc-soc-tai-janhome-he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho.html" title="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho</a>
+                                    <a href="{!! route('news.list',['alias' => $cat->alias])!!}">{!!$news->title!!}</a>
                                     </h6>
                                     <div class="des ">
-                                        <p>Trong th&aacute;ng 9/2020, JanHome đưa ra rất nhiều chương tr&igrave;nh khuyến m&atilde;i hấp dẫn, vừa giảm gi&aacute;, vừa tặng qu&agrave;</p>
+                                        <p>{!!$news->description!!}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                        @endforeach
+                    </div>
                 </div>
                 <div class="list-menu-right">
                     <div class="heading mb-3">
