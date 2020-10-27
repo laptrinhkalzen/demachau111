@@ -606,13 +606,17 @@
                             </div>
                             @endforeach
                         </div>
-                        <div class="text-center my-5 pb-4">
+<!--                         <div class="text-center my-5 pb-4">
                             <a href="javascript:void(0)" class="btn btn-outline-view-more _view-more-product-query-db">Xem thêm<i class="fas fa-chevron-down ml-2 " aria-hidden="true"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
+            @if($search_product!=null)
+            {!! $search_product->links() !!}
+            @endif
         </div>
+
     </div>
 </section>
 <div id="fb-root"></div>

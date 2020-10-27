@@ -106,8 +106,7 @@
                                 <div class="collapse navbar-collapse w-100 align-self-center">
                                     <ul class=" navbar-nav ml-auto mt-4 mt-md-0 w-100 justify-content-xl-around">
                                         <li class="nav-item mr-md-3 align-self-center d-none d-md-block position-relative ">
-                                            <form action="{{route('product.search')}}" method="post">
-                                                {{csrf_field()}}
+                                            <form action="{{route('product.search')}}" method="get">
                                                 <div class="input-group form-search flex-nowrap mb-1 ">
                                                     <input type="text" class="form-control find-product" placeholder="Tìm sản phẩm...." name="keyword" id="search" autocomplete="off">
                                                     <div class="input-group-append es-search-button">
@@ -585,8 +584,7 @@
                     @endforeach
                     <div class="col-xl-4 col-md-4 col-sm-12 col-12">
                         <div class="nd-fast-search h-100 w-100">
-                            <form  method="post" action="{{route('product.search')}}" id="product_filter_form">
-                                {{ csrf_field() }}
+                            <form  method="get" action="{{route('product.search')}}" id="product_filter_form">
                                 <div class="txt-1-fastsot">Tìm kiếm nhanh</div>
                                 <div class="main-fast-search">
                                     <div class="row">
@@ -1394,7 +1392,7 @@
                                             <div class="swiper-wrapper">
                                                 <!-- Slides -->
                                                 <ul class="nav nav-pills">
-                                                    <li><a data-toggle="pill" href="#plastic_home" style="color:#007dff">Sàn nhựa bán chạy</a></li>
+                                                    <li class="active"><a data-toggle="pill" href="#plastic_home" style="color:#007dff">Sàn nhựa bán chạy</a></li>
                                                     &nbsp&nbsp&nbsp&nbsp&nbsp
                                                     @foreach ($plastic_brand as $key=>$plastic_brand1)
                                                     <li><a data-toggle="pill" href="#plastic_{{$key}}" style="color:#007dff">{!!$plastic_brand1->title!!}        </a></li>
