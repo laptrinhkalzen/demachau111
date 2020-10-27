@@ -57,6 +57,7 @@
                     <div class="heading mb-3">
                         <img src="{!!asset('images/flag-iconf002.svg?v=GoDAQeasQ5QDI54pnNLz0oiRudBV9A0ehf63EdEb_1Y')!!}" class="img-fluid mr-2" />Mới cập nhật
                     </div>
+                    
                     <div class="list lastest-news">
                         @foreach($news_hl as $key=> $news)
                         <div class="item">
@@ -78,8 +79,11 @@
                                 </div>
                             </div>
                         </div>
-                        @endforeach
+                            @endforeach
+                        </div> 
+
                     </div>
+                    
                 </div>
                 <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
                     <div class="heading pb-2 border-bottom mb-3 d-flex">
