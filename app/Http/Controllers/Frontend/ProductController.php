@@ -40,10 +40,14 @@ class ProductController extends Controller {
     public function show($alias) {
          ini_set('memory_limit', '2048M');
         $search_product = $this->productRepo->getProduct($alias, $limit=null);
-        $title = \DB::table('category')->where('alias', $alias)->pluck('title');
+        $title_category = \DB::table('category')->where('alias', $alias)->first();
+        $parent_category =  $this->categoryRepo->getChildrenCategoryByAlias($alias);
+        $children_category = $this->categoryRepo->getChildrenCategoryByArray($parent_category->pluck('id'));
+        $product_category = $this->productRepo->getProductByArrayCategory($children_category->pluck('id'));
         $count = count($search_product);
         $slide1 = $this->slideRepo->getSlide1();
-       return view('frontend/home/search',compact('search_product','count','title','slide1'));
+        $category_arr = $this->categoryRepo->getChildrenCategoryByAlias($alias);
+       return view('frontend/product/show',compact('search_product','count','title_category','slide1','category_arr','parent_category','children_category','product_category'));
     }
 
     public function search(Request $request) {

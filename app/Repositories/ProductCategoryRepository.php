@@ -34,4 +34,8 @@ class ProductCategoryRepository extends AbstractRepository
     {
         return $this->model->whereIn('category_id', $category_arr->pluck('id'))->orderBy('category_id', 'desc')->first();
     }
+
+    public function getProductByArrayCategory($category=array()) {
+        return $this->model->where('status', 1)->whereIn('category_id', $category)->join('product','product.id','=','product_category.product_id')->orderBy('post_schedule', 'desc')->get();
+    }
 }

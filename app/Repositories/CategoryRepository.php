@@ -40,6 +40,15 @@ class CategoryRepository extends AbstractRepository {
         return $this->model->where('type', '4')->where('parent_id',$parent_id)->orderBy('created_at', 'desc')->get();
     }
 
+    public function getChildrenCategoryByArray($parent_id=array()) {
+        return $this->model->where('type', '4')->whereIn('parent_id',$parent_id)->orderBy('created_at', 'desc')->get();
+    }
+
+    public function getChildrenCategoryByAlias($alias) {
+        $parent_id = \Db::table('category')->where('alias', $alias)->pluck('id');
+        return $this->model->where('type', '4')->where('parent_id',$parent_id)->orderBy('created_at', 'desc')->get();
+    }
+
     public function getProductCategory() {
         return $this->model->where('status', '1')->where('parent_id', '0')->where('type', '4')->get();
     }

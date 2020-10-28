@@ -312,4 +312,8 @@ class ProductRepository extends AbstractRepository {
         return $this->model->whereIn('id', $similar_product)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
 
+    public function getProductByArrayCategory($category=array()) {
+        $product_id = \DB::table('product_category')->whereIn('category_id', $category)->pluck('product_id');
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id',$product_id)->join('product_category','product_category.product_id','=','product.id')->whereIn('category_id',$category)->orderBy('post_schedule', 'desc')->get();
+    }
 }

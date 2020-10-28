@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-<body class="page-body">
+<body class="page-body" style="background-color: #F6F6F7;">
   @yield('product')
   <div class="col-lg-4">
     <form  method="get" action="{{route('product.filter')}}" id="product_filter_form">

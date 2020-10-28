@@ -67,6 +67,12 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label class="col-md-3 required control-label text-right text-semibold" for="image">Nội dung:</label>
+                                <div class="col-md-9">
+                                    <textarea class="form-control ckeditor" id="content" name="content">{!!is_null(old('content'))?$record->content:old('content')!!}</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-form-label col-md-3 text-right">Thứ tự </label>
                                 <div class="col-md-2">
                                     <input type="text" name="ordering" class="form-control touchspin text-center" value="{{$record->ordering}}">
@@ -115,5 +121,5 @@
 <script src="{!! asset('assets/global_assets/js/plugins/uploaders/fileinput/plugins/purify.min.js') !!}"></script>
 <script src="{!! asset('assets/global_assets/js/plugins/uploaders/fileinput/plugins/sortable.min.js') !!}"></script>
 <script src="{!! asset('assets/global_assets/js/plugins/uploaders/fileinput/fileinput.min.js') !!}"></script>
-
+<script src="{!! asset('assets/backend/ckeditor/ckeditor.js') !!}"></script>
 @stop
