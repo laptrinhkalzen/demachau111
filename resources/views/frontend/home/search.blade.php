@@ -95,7 +95,7 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" style="font-size: 15px;" id="news" role="tabpanel" aria-labelledby="home-tab">
                         <form id="product_filter_form" method="get" action="{{route('product.search')}}">
-                            <div class="container mb-3 client-cate">
+                            <!-- <div class="container mb-3 client-cate">
                                 <div class="bg-fff border-r-4">
                                     <div class="row no-gutters">
                                         <div class="col-lg-3 col-md-4 col-12 align-self-center ">
@@ -112,96 +112,6 @@
                                                     <div class="swiper-slide">
                                                         <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="2">
                                                             <img src="../noithathunggia/uploads/2020/06/09/san-go-florton.jpg" class="img-fluid" alt="Florton" title="Florton" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="3">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/logo-dongwha.jpg" class="img-fluid" alt="DongWha" title="DongWha" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="4">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/thai-green-janhome-logo.png" class="img-fluid" alt="ThaiGreen" title="ThaiGreen" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="5">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/Kronotex_Logo_janhome.jpg" class="img-fluid" alt="Kronotex" title="Kronotex" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="6">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/newsky-san-go-logo-thuong-hieu.jpg" class="img-fluid" alt="Newsky" title="Newsky" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="7">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/28976-600x800-1.jpg" class="img-fluid" alt="Classen" title="Classen" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="8">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/logo--tablet.png" class="img-fluid" alt="wineo" title="wineo" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="10">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/logo-woodman_.png" class="img-fluid" alt="Woodman" title="Woodman" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="11">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/thai-xin.png" class="img-fluid" alt="Thaixin" title="Thaixin" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="12">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/logo-alsafloor-janhome.png" class="img-fluid" alt="Alsafloor" title="Alsafloor" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="13">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/vZZ8ngVm.jpg" class="img-fluid" alt="Masfloor" title="Masfloor" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="14">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/floorart-logo-janhome-1.png" class="img-fluid" alt="FloorArt" title="FloorArt" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="15">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/thai-royal-logo.png" class="img-fluid" alt="ThaiRoyal" title="ThaiRoyal" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="16">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/san-go-kendax-8mm-k8204-2.jpg" class="img-fluid" alt="Kendax" title="Kendax" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="17">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/hornitex-logo-san-go.jpg" class="img-fluid" alt="Hornitex" title="Hornitex" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="18">
-                                                            <img src="../noithathunggia/uploads/2020/08/03/logo%20timberman.png" class="img-fluid" alt="TimberMan" title="TimberMan" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="19">
-                                                            <img src="../noithathunggia/uploads/2020/08/03/janhome%20aqua.png" class="img-fluid" alt="JanHome Floor" title="JanHome Floor" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="20">
-                                                            <img src="../noithathunggia/uploads/2020/08/03/logo%20ecofloor.png" class="img-fluid" alt="Ecofloor" title="Ecofloor" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="21">
-                                                            <img src="../noithathunggia/uploads/2020/08/05/logo%20kostlich.png" class="img-fluid" alt="Kostlich" title="Kostlich" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -223,100 +133,10 @@
                                                     <img src="../noithathunggia/uploads/2020/06/09/san-go-florton.jpg" class="img-fluid" alt="Florton" />
                                                 </div>
                                             </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="3">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/logo-dongwha.jpg" class="img-fluid" alt="DongWha" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="4">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/thai-green-janhome-logo.png" class="img-fluid" alt="ThaiGreen" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="5">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/Kronotex_Logo_janhome.jpg" class="img-fluid" alt="Kronotex" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="6">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/newsky-san-go-logo-thuong-hieu.jpg" class="img-fluid" alt="Newsky" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="7">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/28976-600x800-1.jpg" class="img-fluid" alt="Classen" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="8">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/logo--tablet.png" class="img-fluid" alt="wineo" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="10">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/logo-woodman_.png" class="img-fluid" alt="Woodman" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="11">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/thai-xin.png" class="img-fluid" alt="Thaixin" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="12">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/logo-alsafloor-janhome.png" class="img-fluid" alt="Alsafloor" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="13">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/vZZ8ngVm.jpg" class="img-fluid" alt="Masfloor" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="14">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/floorart-logo-janhome-1.png" class="img-fluid" alt="FloorArt" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="15">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/thai-royal-logo.png" class="img-fluid" alt="ThaiRoyal" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="16">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/san-go-kendax-8mm-k8204-2.jpg" class="img-fluid" alt="Kendax" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="17">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/hornitex-logo-san-go.jpg" class="img-fluid" alt="Hornitex" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="18">
-                                                    <img src="../noithathunggia/uploads/2020/08/03/logo%20timberman.png" class="img-fluid" alt="TimberMan" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="19">
-                                                    <img src="../noithathunggia/uploads/2020/08/03/janhome%20aqua.png" class="img-fluid" alt="JanHome Floor" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="20">
-                                                    <img src="../noithathunggia/uploads/2020/08/03/logo%20ecofloor.png" class="img-fluid" alt="Ecofloor" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="21">
-                                                    <img src="../noithathunggia/uploads/2020/08/05/logo%20kostlich.png" class="img-fluid" alt="Kostlich" />
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="filter-cate">
                                 <div class="container ">
                                     <div class="bg-fff border-r-4 px-3 py-2 mb-3">
@@ -326,9 +146,9 @@
                                                     <label for="formControlRange " class="mb-0 mr-3 ">Tìm kiếm theo</label>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-5 col-md-6 col-sm-12 col-12">
+                                            <div class="col-xl-10 col-md-6 col-sm-12 col-12">
                                                 <div class="form-row">
-                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                                                         <select name="price" class="form-control mb-2 mb-lg-0 filter-select range-price">
                                                             <option hidden value="">Khung giá</option>
                                                             <option value="">Tất cả</option>
@@ -339,205 +159,30 @@
                                                             <option value="5">Từ 600.000 trở lên</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                                        <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" data-spec-id="17">
-                                                            <option hidden value="">Bảo hành</option>
+                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                                                        <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
+                                                            <option hidden value="">Loại sản phẩm</option>
                                                             <option value="">Tất cả</option>
-                                                            <option value="10 năm">10 năm</option>
-                                                            <option value="15 năm">15 năm</option>
-                                                            <option value="20 Năm">20 Năm</option>
-                                                            <option value="5 năm">5 năm</option>
+                                                            <option value=""> WoodFloor </option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                                        <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" data-spec-id="70">
-                                                            <option hidden value="">Độ dày</option>
+                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                                                        <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
+                                                            <option hidden value="">Tên Thương Hiệu</option>
                                                             <option value="">Tất cả</option>
-                                                            <option value="10 mm">10 mm</option>
-                                                            <option value="10mm">10mm</option>
-                                                            <option value="12">12</option>
-                                                            <option value="12 mm">12 mm</option>
-                                                            <option value="12mm">12mm</option>
-                                                            <option value="7 mm">7 mm</option>
-                                                            <option value="8 mm">8 mm</option>
-                                                            <option value="8mm">8mm</option>
-                                                            <option value="9 mm">9 mm</option>
+                                                            <option value=""> WoodFloor </option>
+                                                            
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                                        <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" data-spec-id="45">
-                                                            <option hidden value="">Độ Mài Mòn</option>
+                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                                                        <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
+                                                            <option hidden value="">Màu Sắc</option>
                                                             <option value="">Tất cả</option>
-                                                            <option value="8mm">8mm</option>
-                                                            <option value="AC4">AC4</option>
-                                                            <option value="AC5">AC5</option>
+                                                            <option value=""> Màu Vàng </option>
+                                                            
                                                         </select>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-5 col-md-12 col-12 align-self-center">
-                                                <div class="form-row">
-                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                                        <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" data-spec-id="1">
-                                                            <option hidden value="">Kích thước</option>
-                                                            <option value="">Tất cả</option>
-                                                            <option value=" 12 x 114 x 1221 "> 12 x 114 x 1221 </option>
-                                                            <option value=" x  120  x 1200 "> x  120  x 1200 </option>
-                                                            <option value=" x  190  x 1200 "> x  190  x 1200 </option>
-                                                            <option value=" x  x "> x  x </option>
-                                                            <option value="10    x    194    x    1292">10    x    194    x    1292</option>
-                                                            <option value="10    x    195    x    1845">10    x    195    x    1845</option>
-                                                            <option value="10 x 123 x 1285">10 x 123 x 1285</option>
-                                                            <option value="11 x 132 x 809">11 x 132 x 809</option>
-                                                            <option value="12    x    102    x    600">12    x    102    x    600</option>
-                                                            <option value="12    x    110    x    802">12    x    110    x    802</option>
-                                                            <option value="12    x    113    x    1207">12    x    113    x    1207</option>
-                                                            <option value="12    x    114    x    1221">12    x    114    x    1221</option>
-                                                            <option value="12    x    115    x    1283">12    x    115    x    1283</option>
-                                                            <option value="12    x    120    x    1200">12    x    120    x    1200</option>
-                                                            <option value="12    x    122    x    1286">12    x    122    x    1286</option>
-                                                            <option value="12    x    123    x    1208">12    x    123    x    1208</option>
-                                                            <option value="12    x    123    x    802">12    x    123    x    802</option>
-                                                            <option value="12    x    124    x    1206">12    x    124    x    1206</option>
-                                                            <option value="12    x    128    x    1221">12    x    128    x    1221</option>
-                                                            <option value="12    x    130    x    808">12    x    130    x    808</option>
-                                                            <option value="12    x    136    x    1292">12    x    136    x    1292</option>
-                                                            <option value="12    x    141    x    1208">12    x    141    x    1208</option>
-                                                            <option value="12    x    144    x    1218">12    x    144    x    1218</option>
-                                                            <option value="12    x    145    x    1210">12    x    145    x    1210</option>
-                                                            <option value="12    x    160    x    1286">12    x    160    x    1286</option>
-                                                            <option value="12    x    161    x    1205">12    x    161    x    1205</option>
-                                                            <option value="12    x    188    x    1375">12    x    188    x    1375</option>
-                                                            <option value="12    x    188    x    1845">12    x    188    x    1845</option>
-                                                            <option value="12    x    191    x    1205">12    x    191    x    1205</option>
-                                                            <option value="12    x    193    x    1205">12    x    193    x    1205</option>
-                                                            <option value="12    x    193    x    1283">12    x    193    x    1283</option>
-                                                            <option value="12    x    194    x    1286">12    x    194    x    1286</option>
-                                                            <option value="12    x    195    x    1210">12    x    195    x    1210</option>
-                                                            <option value="12    x    198    x    1210">12    x    198    x    1210</option>
-                                                            <option value="12    x    94    x    604">12    x    94    x    604</option>
-                                                            <option value="12 x 105 x 810">12 x 105 x 810</option>
-                                                            <option value="12 x 107 x 810">12 x 107 x 810</option>
-                                                            <option value="12 x 113 x 803">12 x 113 x 803</option>
-                                                            <option value="12 x 114 x 1221 ">12 x 114 x 1221 </option>
-                                                            <option value="12 x 117 x 803">12 x 117 x 803</option>
-                                                            <option value="12 x 124 x 1208">12 x 124 x 1208</option>
-                                                            <option value="12 x 127 x 1208">12 x 127 x 1208</option>
-                                                            <option value="12 x 128 x 1221 ">12 x 128 x 1221 </option>
-                                                            <option value="12 x 150 x 810">12 x 150 x 810</option>
-                                                            <option value="12 x 192 x 1285">12 x 192 x 1285</option>
-                                                            <option value="12 x 197 x 1218">12 x 197 x 1218</option>
-                                                            <option value="12 x 198 x 1219">12 x 198 x 1219</option>
-                                                            <option value="12 x 199 x 1218">12 x 199 x 1218</option>
-                                                            <option value="12.3 x 108 x 810">12.3 x 108 x 810</option>
-                                                            <option value="12.3 x 130 x 808">12.3 x 130 x 808</option>
-                                                            <option value="1283x193x8">1283x193x8</option>
-                                                            <option value="1847 x 246 x 10">1847 x 246 x 10</option>
-                                                            <option value="604 x 94 x 12">604 x 94 x 12</option>
-                                                            <option value="7    x    194    x    1286">7    x    194    x    1286</option>
-                                                            <option value="8    x    123    x    802">8    x    123    x    802</option>
-                                                            <option value="8    x    132    x    813">8    x    132    x    813</option>
-                                                            <option value="8    x    136    x    1292">8    x    136    x    1292</option>
-                                                            <option value="8    x    146    x    1221">8    x    146    x    1221</option>
-                                                            <option value="8    x    160    x    1286">8    x    160    x    1286</option>
-                                                            <option value="8    x    160    x    1380">8    x    160    x    1380</option>
-                                                            <option value="8    x    190    x    1200">8    x    190    x    1200</option>
-                                                            <option value="8    x    191    x    1205">8    x    191    x    1205</option>
-                                                            <option value="8    x    192    x    1205">8    x    192    x    1205</option>
-                                                            <option value="8    x    193    x    1205">8    x    193    x    1205</option>
-                                                            <option value="8    x    193    x    1283">8    x    193    x    1283</option>
-                                                            <option value="8    x    194    x    1286">8    x    194    x    1286</option>
-                                                            <option value="8    x    195    x    1210">8    x    195    x    1210</option>
-                                                            <option value="8    x    195    x    1288">8    x    195    x    1288</option>
-                                                            <option value="8    x    196    x    1207">8    x    196    x    1207</option>
-                                                            <option value="8    x    198    x    1210">8    x    198    x    1210</option>
-                                                            <option value="8 x 130 x 808">8 x 130 x 808</option>
-                                                            <option value="8 x 150 x 810">8 x 150 x 810</option>
-                                                            <option value="8 x 192 x 1285">8 x 192 x 1285</option>
-                                                            <option value="8 x 195 x 1215">8 x 195 x 1215</option>
-                                                            <option value="8 x 199 x 1219">8 x 199 x 1219</option>
-                                                            <option value="9    x    195    x    1288">9    x    195    x    1288</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                                        <select class="form-control mb-2 mb-lg-0 filter-select color">
-                                                            <option hidden value="">Màu sắc</option>
-                                                            <option value="">Tất cả</option>
-                                                            <option value="#0000ff">
-                                                                <div class="d-flex">
-                                                                    <div class="color-circle" style="background-color:#0000ff">
-                                                                    </div>
-                                                                    <div class="align-self-md-end" style="margin:auto">
-                                                                        Hệ ánh vàng <span class="color-828282"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </option>
-                                                            <option value="#514343">
-                                                                <div class="d-flex">
-                                                                    <div class="color-circle" style="background-color:#514343">
-                                                                    </div>
-                                                                    <div class="align-self-md-end" style="margin:auto">
-                                                                        Óc chó sẫm <span class="color-828282"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </option>
-                                                            <option value="#705c5c">
-                                                                <div class="d-flex">
-                                                                    <div class="color-circle" style="background-color:#705c5c">
-                                                                    </div>
-                                                                    <div class="align-self-md-end" style="margin:auto">
-                                                                        Hệ Nâu <span class="color-828282"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </option>
-                                                            <option value="#827d7d">
-                                                                <div class="d-flex">
-                                                                    <div class="color-circle" style="background-color:#827d7d">
-                                                                    </div>
-                                                                    <div class="align-self-md-end" style="margin:auto">
-                                                                        Ghi đen <span class="color-828282"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </option>
-                                                            <option value="#ad5252">
-                                                                <div class="d-flex">
-                                                                    <div class="color-circle" style="background-color:#ad5252">
-                                                                    </div>
-                                                                    <div class="align-self-md-end" style="margin:auto">
-                                                                        Hệ đỏ <span class="color-828282"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </option>
-                                                            <option value="#c2c2c2">
-                                                                <div class="d-flex">
-                                                                    <div class="color-circle" style="background-color:#c2c2c2">
-                                                                    </div>
-                                                                    <div class="align-self-md-end" style="margin:auto">
-                                                                        Hệ Xám <span class="color-828282"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </option>
-                                                            <option value="#fafafa">
-                                                                <div class="d-flex">
-                                                                    <div class="color-circle" style="background-color:#fafafa">
-                                                                    </div>
-                                                                    <div class="align-self-md-end" style="margin:auto">
-                                                                        Hệ trắng <span class="color-828282"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </option>
-                                                            <option value="#ff8040">
-                                                                <div class="d-flex">
-                                                                    <div class="color-circle" style="background-color:#ff8040">
-                                                                    </div>
-                                                                    <div class="align-self-md-end" style="margin:auto">
-                                                                        Hệ cam <span class="color-828282"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                                                         <select name="orderby" class="form-control mb-2 mb-lg-0 filter-select extra orderby">
                                                             <option hidden value="">Sắp xếp</option>
                                                             <option value="price_max">Giá tăng dần</option>
@@ -546,7 +191,7 @@
                                                         </select>
                                                         
                                                     </div>
-                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                                                         <button class="btn btn-save mb-2 mb-md-0 w-100" type="submit" name="search">Tìm kiếm</button>
                                                     </div>
                                                 </div>
@@ -605,7 +250,7 @@
                             </div>
                             @endforeach
                         </div>
-<!--                         <div class="text-center my-5 pb-4">
+                        <!--                         <div class="text-center my-5 pb-4">
                             <a href="javascript:void(0)" class="btn btn-outline-view-more _view-more-product-query-db">Xem thêm<i class="fas fa-chevron-down ml-2 " aria-hidden="true"></i></a>
                         </div> -->
                     </div>
@@ -615,7 +260,6 @@
             {!! $search_product->links() !!}
             @endif
         </div>
-
     </div>
 </section>
 <div id="fb-root"></div>
