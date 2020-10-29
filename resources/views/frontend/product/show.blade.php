@@ -624,7 +624,7 @@
                                                 </div>
                                                 @endif
                                                 <div class=" align-self-center  ">
-                                                    <a href="{{route('product.show',['alias' => 'san-go-cong-nghiep'])}}" class="link-view-more url-old-link">Xem tất cả</a>
+                                                    <a href="{{route('product.show',['alias' => $parent_cat->alias])}}" class="link-view-more url-old-link">Xem tất cả</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -880,7 +880,7 @@
                                             </div>
                                             <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                                 <div class=" align-self-center  ">
-                                                    <a href="{{route('product.show',['alias' => 'san-go-cong-nghiep'])}}" class="link-view-more url-old-link">Xem tất cả</a>
+                                                    <a href="{{route('product.show',['alias' => $title_category->alias])}}" class="link-view-more url-old-link">Xem tất cả</a>
                                                 </div>
                                             </div>
                                         </div>
