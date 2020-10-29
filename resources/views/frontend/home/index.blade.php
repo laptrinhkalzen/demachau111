@@ -268,25 +268,26 @@
                                                         <img src=""
                                                         class="img-fluid mr-2"/>{!!$cat->title!!}
                                                     </a>
-                                                    @if(!is_null($cat->children))
-                                                    
-                                                    @foreach ($cat->children as $key=>$cat1)
-                                                    @if($cat1)
                                                     <div class="subcate">
                                                         <ul class="ul-tree-lv-1">
+                                                            @if(!is_null($cat->children))
+                                                            
+                                                            @foreach ($cat->children as $key=>$cat1)
+                                                            @if($cat1)
                                                             <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="{!! route('product.show',['alias' => $cat1->alias])!!}" data-url="/san-tre-ali">{!!$cat1->title!!}</a>
                                                             <ul class="ul-tree-lv-2">
                                                                 @foreach ($cat1->children as $key=>$cat2)
-                                                                <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="{!! route('product.show',['alias' => $cat2->alias])!!}" data-url="/san-tre-ali">{!!$cat2->title!!}</a>
+                                                                <li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="{!! route('product.show',['alias' => $cat2->alias])!!}" data-url="/san-tre-ali">{!!$cat2->title!!}</a>
                                                             </li>
                                                             @endforeach
                                                         </ul>
                                                     </li>
+                                                    @endif
+                                                    @endforeach
+                                                    @endif
                                                 </ul>
                                             </div>
-                                            @endif
-                                            @endforeach
-                                            @endif
+                                            
                                         </li>
                                         @endforeach
                                         <!--Nút xem thêm-->
@@ -870,7 +871,7 @@
                                             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                                                 @php $i=0; @endphp
                                                 @foreach($industry_origin as $key=> $product)
-                                                @if($origin->id==$product->attribute_id)
+                                                @if($origin->id==$product->category_id)
                                                 @if($i <2 )
                                                 <div >
                                                     <div class="item-product item-product-large">
@@ -924,7 +925,7 @@
                                             <div class="col-lg-7 col-md-12 col-sm-12 col-12">
                                                 <div class="row no-gutters h-100 ">
                                                     @foreach($industry_origin as $key=> $product)
-                                                    @if($origin->id==$product->attribute_id && $key>$index)
+                                                    @if($origin->id==$product->category_id && $key>$index)
                                                     <div class="col-md-4 col-sm-4 col-6 ">
                                                         <div class="item-product" data-id="95211" data-properties="">
                                                             <div class="image">

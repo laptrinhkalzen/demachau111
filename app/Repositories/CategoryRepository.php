@@ -99,4 +99,8 @@ class CategoryRepository extends AbstractRepository {
         return $this->model->where('type', \App\Category::TYPE_NEWS)->where('alias',$alias)->first();
     }
 
+    public function getCategoryByAlias($alias) {
+        return $this->model->where('type', \App\Category::TYPE_PRODUCT)->where('alias',$alias)->first();
+    }
+
 }

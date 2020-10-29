@@ -216,30 +216,30 @@
                                 </li>
                                 @foreach ($category as $key=>$cat)
                                 <li class="list-group-item">
-
                                     <a href="{!! route('product.show',['alias' => $cat->alias])!!}" class="link">
                                         <img src=""
                                         class="img-fluid mr-2"/>{!!$cat->title!!}
                                     </a>
-                                    @if(!is_null($cat->children))
-                                    
-                                    @foreach ($cat->children as $key=>$cat1)
-                                    @if($cat1)
                                     <div class="subcate">
                                         <ul class="ul-tree-lv-1">
+                                            @if(!is_null($cat->children))
+                                            
+                                            @foreach ($cat->children as $key=>$cat1)
+                                            @if($cat1)
                                             <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="{!! route('product.show',['alias' => $cat1->alias])!!}" data-url="/san-tre-ali">{!!$cat1->title!!}</a>
                                             <ul class="ul-tree-lv-2">
                                                 @foreach ($cat1->children as $key=>$cat2)
-                                                <li class="li-tree-lv-1"><a class="span-tree-node tree-lv-1" href="{!! route('product.show',['alias' => $cat2->alias])!!}" data-url="/san-tre-ali">{!!$cat2->title!!}</a>
+                                                <li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="{!! route('product.show',['alias' => $cat2->alias])!!}" data-url="/san-tre-ali">{!!$cat2->title!!}</a>
                                             </li>
                                             @endforeach
                                         </ul>
                                     </li>
+                                    @endif
+                                    @endforeach
+                                    @endif
                                 </ul>
                             </div>
-                            @endif
-                            @endforeach
-                            @endif
+                            
                         </li>
                         @endforeach
                         <!--Nút xem thêm-->

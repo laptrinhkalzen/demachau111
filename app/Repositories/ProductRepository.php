@@ -191,70 +191,18 @@ class ProductRepository extends AbstractRepository {
         return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $product)->orderBy('post_schedule', 'desc')->take($limit)->paginate(12);
     }
 
-    public function getIndustryOrigin($limit) {
-        $origin = \DB::table('attribute')->where('parent_id',19)->pluck('id');
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->join('product_attribute','product_attribute.product_id','=','product.id')->whereIn('attribute_id',$origin)->orderBy('post_schedule', 'desc')->take($limit)->get();
-    }
-
-    public function getIndustryProduct($limit) {
-        $category = \DB::table('category')->where('alias', 'san-go-cong-nghiep')->pluck('id');
-        $industry = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $industry)->orderBy('post_schedule', 'desc')->take($limit)->get();
-    }
-
-    public function getNatureProduct($limit) {
-        $category = \DB::table('category')->where('alias', 'san-go-tu-nhien')->pluck('id');
-        $nature = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $nature)->orderBy('post_schedule', 'desc')->take($limit)->get();
-    }
-
-    public function getNatureCategory($limit) {
-        $category = \DB::table('category')->where('parent_id', 3)->pluck('id');
+    public function getProductByParentIdCategory($limit,$parent_id) {
+        $category = \DB::table('category')->where('parent_id', $parent_id)->pluck('id');
 
         return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->join('product_category','product_category.product_id','=','product.id')->whereIn('category_id',$category)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
 
-    public function getPlasticProduct($limit) {
-        $category = \DB::table('category')->where('alias', 'san-nhua')->pluck('id');
-        $plastic = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $plastic)->orderBy('post_schedule', 'desc')->take($limit)->get();
+    public function getProductByAliasCategory($limit,$alias) {
+        $category = \DB::table('category')->where('alias', $alias)->pluck('id');
+        $product_id = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->join('product_category','product_category.product_id','=','product.id')->whereIn('id', $product_id)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
 
-    public function getPlasticCategory($limit) {
-        $category = \DB::table('category')->where('parent_id', 4)->pluck('id');
-
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->join('product_category','product_category.product_id','=','product.id')->whereIn('category_id',$category)->orderBy('post_schedule', 'desc')->take($limit)->get();
-    }
-
-    public function getOutdoorProduct($limit) {
-        $category = \DB::table('category')->where('alias', 'san-go-ngoai-troi')->pluck('id');
-        $outdoor = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $outdoor)->orderBy('post_schedule', 'desc')->take($limit)->get();
-    }
-
-    public function getOutdoorCategory($limit) {
-        $category = \DB::table('category')->where('parent_id', 5)->pluck('id');
-
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->join('product_category','product_category.product_id','=','product.id')->whereIn('category_id',$category)->orderBy('post_schedule', 'desc')->take($limit)->get();
-    }
-
-    public function getHousewareProduct($limit) {
-        $category = \DB::table('category')->where('alias', 'do-gia-dung')->pluck('id');
-        $houseware = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $houseware)->orderBy('post_schedule', 'desc')->take($limit)->get();
-    }
-
-    public function getDecorProduct($limit) {
-        $category = \DB::table('category')->where('alias', 'trang-tri-noi-that')->pluck('id');
-        $decor = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $decor)->orderBy('post_schedule', 'desc')->take($limit)->get();
-    }
-
-    public function getDecorCategory($limit) {
-        $category = \DB::table('category')->where('parent_id', 6)->pluck('id');
-
-        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->join('product_category','product_category.product_id','=','product.id')->whereIn('category_id',$category)->orderBy('post_schedule', 'desc')->take($limit)->get();
-    }
 
     public function readSearchProduct($keywords) {
         return $this->model->where('title','like', '%'.$keywords.'%')->get();
