@@ -57,7 +57,7 @@ class NewsController extends Controller {
         $category_arr = $this->categoryRepo->getAllCategoryNews(2,0);
         $sale = $this->newsRepo->getNews('tin-khuyen-mai',3);
         $news_hl = $this->newsRepo->getAllNews(3);
-        return view('frontend/news/detail',compact('detail_news','category_arr','sale','new_hl'));
+        return view('frontend/news/detail',compact('detail_news','category_arr','sale','news_hl'));
     }
 
     public function list(Request $request,$alias) {
