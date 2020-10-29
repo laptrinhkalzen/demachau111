@@ -4,7 +4,7 @@
 <div class="col-xl-4 col-md-4 col-sm-4 col-12">
 <div class="d-flex py-3 justify-content-center">
 <div class="image align-self-center">
-<img src="{!!asset('noithathunggia/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}" class="img-fluid lazy" />
+<img src="{!!asset('noithathunggia/uploads/2020/04/28/shipment-international 2.png?v=1.0.0')!!}"  class="img-fluid lazy" />
 </div>
 <div class="px-3 align-self-center">
 <label>Xuất xứ</label>
@@ -17,7 +17,7 @@ Bảo đảm 100% xuất xứ
 <div class="col-xl-4 col-md-4 col-sm-4 col-12">
 <div class="d-flex py-3 justify-content-center">
 <div class="image align-self-center">
-<img src="{!!asset('noithathunggia//uploads/2020/04/28/Group.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/Group.png?v=1.0.0')!!}" class="img-fluid lazy" />
+<img src="{!!asset('icon/24-hours-phone-service.png')!!}"  class="img-fluid lazy" />
 </div>
 <div class="px-3 align-self-center">
 <label>Hỗ trợ 24/7</label>
@@ -30,7 +30,7 @@ Hệ thống toàn quốc
 <div class="col-xl-4 col-md-4 col-sm-4 col-12">
 <div class="d-flex py-3 justify-content-center">
 <div class="image align-self-center">
-<img src="{!!asset('noithathunggia//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}" data-src="https://cms.janhome.vn//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}" class="img-fluid lazy" />
+<img src="{!!asset('noithathunggia//uploads/2020/04/28/saving-piggy-dollars 3.png?v=1.0.0')!!}" class="img-fluid lazy" />
 </div>
 <div class="px-3 align-self-center">
 <label>Loại hình dịch vụ</label>

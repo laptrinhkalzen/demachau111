@@ -4,7 +4,7 @@
 @section('content')
 
 <body>
-    @foreach($detail_news as $key => $news )
+    @foreach($detail_news as $key => $detail )
 <div class="banner-page py-3 mb-4" style="
         background-image: url(noithathunggia/uploads/thumb/2020/04/22/Banner.jpg) no-repeat center;
         min-height: 200px;
@@ -32,7 +32,9 @@
         <img src="{!!asset('images/menu-icon8bd3.svg?v=qef7cssZHgAquLTKdp4RlX3HxrirbSXXNcb4nv352dM')!!}" class="img-fluid mr-2" />Danh mục
     </div>
     <ul class="list">
-            <!-- <li><a href="tin-khuyen-mai.html" title="TIN KHUYẾN MẠI">TIN KHUYẾN MẠI</a></li> -->     
+        @foreach($category_arr as $key=> $cat)
+            <li><a href="{!! route('news.list',['alias' => $cat->alias])!!}">{{$cat->title}}</a></li>
+        @endforeach
     </ul>
 </div>
 <div class="list-menu-right">
@@ -40,26 +42,27 @@
         <img src="{!!asset('images/giftc829.svg?v=9SyPI8n17F7AMeX1L1ifHuyq4N7RRpl6-lxBALqXHbM')!!}" class="img-fluid mr-2" />Khuyến mại
     </div>
     <div class="list lastest-news">
-                <!-- <div class="item">
-                    <div class="row">
-                        <div class="col-12 ">
-                            <div class="image mb-3">
-                                <a href="mung-ngay-doc-lap-giam-gia-cuc-soc-tai-janhome-he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho.html" title="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">
-                                    <img src="../cms.janhome.vn/uploads/thumb/2020/09/04/khuyen-mai-thang-9-2020-tai-janhome.jpg" class="img-fluid" alt="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <h6 class="title">
-                                <a href="mung-ngay-doc-lap-giam-gia-cuc-soc-tai-janhome-he-thong-ban-le-san-go-vat-lieu-hoan-thien-tai-kho.html" title="Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho">Mừng ngày độc lập, giảm giá cực sốc tại JanHome, hệ thống bán lẻ sàn gỗ, vật liệu hoàn thiện tại kho</a>
-                            </h6>
-                            <div class="des ">
-                                <p>Trong th&aacute;ng 9/2020, JanHome đưa ra rất nhiều chương tr&igrave;nh khuyến m&atilde;i hấp dẫn, vừa giảm gi&aacute;, vừa tặng qu&agrave;</p>
-
-                            </div>
-                        </div>
+        @foreach($sale as $key=> $news)
+        <div class="item">
+            <div class="row">
+                <div class="col-12 ">
+                    <div class="image mb-3">
+                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                            <img src="{{$news->getImage()}}" class="img-fluid" >
+                        </a>
                     </div>
-                </div> -->
+                </div>
+                <div class="col-12">
+                    <h6 class="title">
+                    <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">{!!$news->title!!}</a>
+                    </h6>
+                    <div class="des ">
+                        <p>{!!$news->description!!}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
     </div>
 </div>
 <div class="list-menu-right">
@@ -67,26 +70,27 @@
         <img src="{!!asset('images/flag-iconf002.svg?v=GoDAQeasQ5QDI54pnNLz0oiRudBV9A0ehf63EdEb_1Y')!!}" class="img-fluid mr-2" />Mới cập nhật
     </div>
     <div class="list lastest-news">
-<!--                 <div class="item">
-                    <div class="row">
-                        <div class="col-12 ">
-                            <div class="image mb-3">
-                                <a href="vi-gach-go-nhua-lat-san-nha-tam-ban-cong-san-thuong-sieu-chiu-nuoc.html" title="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">
-                                    <img src="../cms.janhome.vn/uploads/thumb/2020/09/18/vi-gach-go-nhua-lat-san-ban-cong-san-thuong-sieu-chiu-nuoc.jpg" class="img-fluid" alt="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <h6 class="title">
-                                <a href="vi-gach-go-nhua-lat-san-nha-tam-ban-cong-san-thuong-sieu-chiu-nuoc.html" title="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước</a>
-                            </h6>
-                            <div class="des ">
-                                <p>Vỉ gạch gỗ nhựa l&agrave; vật liệu l&aacute;t s&agrave;n hiện đại, được tạo n&ecirc;n từ sợi gỗ, nhựa c&ugrave;ng c&aacute;c...
-                            </div>
+        @foreach($news_hl as $key=> $news)
+            <div class="item">
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="image mb-3">
+                            <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                <img src="{{$news->getImage()}}" class="img-fluid">
+                            </a>
                         </div>
                     </div>
-                </div> -->
-                
+                    <div class="col-12">
+                        <h6 class="title">
+                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">{!!$news->title!!}</a>
+                        </h6>
+                        <div class="des">
+                            {!!$news->description!!}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
 </div>
         </div>
@@ -114,18 +118,18 @@
     </ol>
 </nav> -->
             <div class="blog-content">
-                <h1 class="title">{!!$news->title!!}</h1>
+                <h1 class="title">{!!$detail->title!!}</h1>
                 <div class="d-flex" style="align-items: center;">
                     <div class="author color-828282 mr-4">
                         <div class="avt align-self-center">
-                            <img src="{!!$news->getImage()!!}" class="img-fluid" alt="2 loại sàn gỗ chịu nước tốt nhất được phân phối tại quận Thủ Đức là sàn gỗ nào?" />
+                            <img src="{!!$news->getImage()!!}" class="img-fluid"  />
                         </div>
                         <div class="align-self-center">
                             
                         </div>
                     </div>
                     <div class="time mb-0">
-                        {!!$news->post_schedule!!}
+                        {!!$detail->getPostSchedule()!!}
                     </div>
                     <div class="cust-likes-fb-blogs facebook-btn pl-3">
                         <div class="small mr-3"><img src="{!!asset('images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw')!!}" class="img-fluid mr-2" /><!-- 233 --> lượt xem</div>
@@ -137,7 +141,7 @@
 
 
                 <div class="detail-container" data-id="36357">
-                     {!!$news->content!!}
+                     {!!$detail->content!!}
                 </div>
 
                 

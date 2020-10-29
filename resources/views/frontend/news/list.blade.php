@@ -35,14 +35,14 @@
                             <div class="row">
                                 <div class="col-12 ">
                                     <div class="image mb-3">
-                                        <a href="{!! route('news.list',['alias' => $cat->alias])!!}">
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
                                             <img src="{{$news->getImage()}}" class="img-fluid" >
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <h6 class="title">
-                                    <a href="{!! route('news.list',['alias' => $cat->alias])!!}">{!!$news->title!!}</a>
+                                    <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">{!!$news->title!!}</a>
                                     </h6>
                                     <div class="des ">
                                         <p>{!!$news->description!!}</p>
@@ -63,14 +63,14 @@
                             <div class="row">
                                 <div class="col-12 ">
                                     <div class="image mb-3">
-                                        <a href="{!! route('news.list',['alias' => $cat->alias])!!}">
+                                        <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
                                             <img src="{{$news->getImage()}}" class="img-fluid">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <h6 class="title">
-                                    <a href="{!! route('news.list',['alias' => $cat->alias])!!}">{!!$news->title!!}</a>
+                                    <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">{!!$news->title!!}</a>
                                     </h6>
                                     <div class="des">
                                         {!!$news->description!!}
