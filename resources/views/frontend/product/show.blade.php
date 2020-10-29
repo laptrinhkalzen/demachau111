@@ -76,8 +76,7 @@
             <div class="form-book">
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" style="font-size: 15px;" id="news" role="tabpanel" aria-labelledby="home-tab">
-                        <form id="product_filter_form" method="post" action="{{route('product.search')}}">
-                            {{ csrf_field() }}
+                        <form id="product_filter_form" method="get" action="{{route('product.search')}}">
                             <div class="container mb-3 client-cate">
                                 <div class="bg-fff border-r-4">
                                     <div class="row no-gutters">
