@@ -1,35 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body style="background-color: #f6f8f8">
-    
-    <!--         <script type="text/javascript">
-    $(document).ready(function){
-    filter_data();
-    function filter_data(){
-    var action = '';
-    var origin = get_filter('origin');
-    }
-    $.ajax({
-    url:"",
-    method:"POST",
-    data: {action:action, origin:origin},
-    success:function(data){
-    $('.filter_data').html(data);
-    }
-    })
-    function get_filter(class_name){
-    var filter = [];
-    $('.'+class_name+':checked').each(function(){
-    filter.push($(this).val());
-    });
-    $('.common_selector').click(function(){
-    filter_data();
-    });
-    }
-    </script> -->
     <div class="col-md-9">
         <br />
         <div class="row filter_data">
@@ -71,56 +42,11 @@
         </div>
     </section>
     <section class="loc-kq">
-        &nbsp
         <div class="container">
             <div class="form-book">
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" style="font-size: 15px;" id="news" role="tabpanel" aria-labelledby="home-tab">
                         <form id="product_filter_form" method="get" action="{{route('product.search')}}">
-                            <!-- <div class="container mb-3 client-cate">
-                                <div class="bg-fff border-r-4">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-3 col-md-4 col-12 align-self-center ">
-                                            <div class="px-3 py-2" style="font-size: 13px;line-height: 1.1;">Tìm kiếm theo thương hiệu</div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-11 col-10">
-                                            <div class="swiper-container slide-brand">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="1">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/jan-mi-logo-thuong-hieu.jpg" class="img-fluid" alt="Janmi" title="Janmi" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="border-right border-left py-1 px-3 filter-picking choose-manufacture" data-manu-id="2">
-                                                            <img src="../noithathunggia/uploads/2020/06/09/san-go-florton.jpg" class="img-fluid" alt="Florton" title="Florton" />
-                                                        </div>
-                                                    </div>
-                                                
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-1 col-md-1 col-2 text-center">
-                                            <a href="javascript:;" onclick="expandClient()" class="btn btn-sm pt-2 "><i class="fas fa-chevron-down"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="full-client">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="1">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/jan-mi-logo-thuong-hieu.jpg" class="img-fluid" alt="Janmi" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                                <div class="border py-1 px-3 filter-picking choose-manufacture" data-manu-id="2">
-                                                    <img src="../noithathunggia/uploads/2020/06/09/san-go-florton.jpg" class="img-fluid" alt="Florton" />
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
                             <div class="filter-cate">
                                 <div class="container ">
                                     <div class="bg-fff border-r-4 px-3 py-2 mb-3">
@@ -144,34 +70,36 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
+                                                        <select name="category_id" class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
                                                             <option hidden value="">Loại sản phẩm</option>
                                                             <option value="">Tất cả</option>
-                                                            <option value=""> WoodFloor </option>
+                                                            @foreach ($category_filter as $key=>$cat)
+                                                            <option value="{!!$cat->id!!}">{!!$cat->title!!}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
-                                                            <option hidden value="">Tên Thương Hiệu</option>
+                                                        <select name="brand" class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
+                                                            <option  hidden value="">Tên Thương Hiệu</option>
                                                             <option value="">Tất cả</option>
-                                                            <option value=""> WoodFloor </option>
-                                                            
+                                                            @foreach ($brand as $key=>$brand)
+                                                            <option value="{!!$brand->id!!}">{!!$brand->title!!}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <select class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
+                                                        <select name="color" class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
                                                             <option hidden value="">Màu Sắc</option>
-                                                            <option value="">Tất cả</option>
-                                                            <option value=""> Màu Vàng </option>
-                                                            
+                                                            @foreach ($color as $key=>$color)
+                                                            <option value="{!!$color->id!!}">{!!$color->title!!}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                                                         <select name="orderby" class="form-control mb-2 mb-lg-0 filter-select extra orderby">
                                                             <option hidden value="">Sắp xếp</option>
-                                                            <option value="price_max">Giá tăng dần</option>
-                                                            <option value="price_min">Giá giảm dần</option>
-                                                            <option value="desc">Nổi bật nhất</option>
+                                                            <option value="1">Giá tăng dần</option>
+                                                            <option value="2">Giá giảm dần</option>
                                                         </select>
                                                         
                                                     </div>

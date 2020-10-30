@@ -55,6 +55,20 @@ class ProductRepository extends AbstractRepository {
             $product_ids = \Db::table('product_attribute')->whereIn('attribute_id', $attribute_ids)->pluck('product_id');
             $model = $model->whereIn('id', $product_ids);
         }
+        if ($request->get('category')) {
+            $product_ids = \Db::table('product_category')->where('category_id', $request->get('category_id'))->pluck('product_id');
+            $model = $model->whereIn('id', $product_ids);
+        }
+        if ($request->get('brand')) {
+            $attribute_ids = explode(',', $request->get('brand'));
+            $product_ids = \Db::table('product_attribute')->whereIn('attribute_id', $attribute_ids)->pluck('product_id');
+            $model = $model->whereIn('id', $product_ids);
+        }
+        if ($request->get('color')) {
+            $attribute_ids = explode(',', $request->get('color'));
+            $product_ids = \Db::table('product_attribute')->whereIn('attribute_id', $attribute_ids)->pluck('product_id');
+            $model = $model->whereIn('id', $product_ids);
+        }
         if ($request->get('price')) {
             $price = $request->get('price');
             switch ($price) {
@@ -76,6 +90,18 @@ class ProductRepository extends AbstractRepository {
             }
 
         }
+        if ($request->get('orderby')) {
+            $orderby = $request->get('orderby');
+            switch ($orderby) {
+                case '1':
+                    $model=$model->orderby('price','asc');
+                    break;
+                case '2':
+                    $model=$model->orderby('price','desc');
+                    break;
+            }
+
+        }
         if ($request->get('keyword')) {
             $category = \App\Category::where('title','like',$request->get('keyword'))->first();
             if($category){
@@ -93,9 +119,8 @@ class ProductRepository extends AbstractRepository {
         }
 
         else{
-            $limit = 80;
+            $limit = 6;
         }
-        $limit = 12;
         return $model->where('status', 1)->orderBy('created_at', 'desc')->paginate($limit);
     }
     public function readSale($request) {

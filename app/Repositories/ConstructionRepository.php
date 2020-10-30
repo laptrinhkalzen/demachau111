@@ -44,6 +44,7 @@ class ConstructionRepository extends AbstractRepository {
     public function readFE($request) {
         $limit = 10;
         $query = $this->model;
+        dd($request->get('construction_category_id'));
         if ($request->get('construction_category_id')) {
             $item_ids = \Db::table('item')->where('category_id', $request->get('construction_category_id'))->pluck('id');
             $construction_ids = \Db::table('construction_item')->whereIn('item_id', $item_ids)->pluck('construction_id');

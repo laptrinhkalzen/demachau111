@@ -49,7 +49,11 @@ class ProductController extends Controller {
         $count = count($search_product);
         $slide1 = $this->slideRepo->getSlide1();
         $category_arr = $this->categoryRepo->getChildrenCategoryByAlias($alias);
-       return view('frontend/product/show',compact('search_product','count','title_category','slide1','category_arr','parent_category','children_category','product_category','product_arr','main_category'));
+        $category_filter =  $this->categoryRepo->getProductCategory();
+        $brand =  $this->attributeRepo->getAttributes(null, $parent_id = 2);
+        $origin =  $this->attributeRepo->getAttributes(null, $parent_id = 19);
+        $color =  $this->attributeRepo->getAttributes(null, $parent_id = 25);
+       return view('frontend/product/show',compact('search_product','count','title_category','slide1','category_arr','parent_category','children_category','product_category','product_arr','main_category','origin','category_filter','brand','color'));
     }
 
     public function search(Request $request) {
@@ -58,9 +62,17 @@ class ProductController extends Controller {
         $search_product = $this->productRepo->readFE($request);
         $count = count($search_product);
         $slide1 = $this->slideRepo->getSlide1();
+        $category_filter =  $this->categoryRepo->getProductCategory();
         $brand =  $this->attributeRepo->getAttributes(null, $parent_id = 2);
         $origin =  $this->attributeRepo->getAttributes(null, $parent_id = 19);
-       return view('frontend/home/search',compact('search_product','count','slide1','origin'));
+        $color =  $this->attributeRepo->getAttributes(null, $parent_id = 25);
+        //paginate
+        $price_id = $request->get('price');
+        $cat_id = $request->get('category_id');
+        $brand_id = $request->get('brand');
+        $color_id = $request->get('color');
+        $sort_id = $request->get('orderby');
+       return view('frontend/home/search',compact('search_product','count','slide1','origin','category_filter','brand','color','cat_id','price_id','brand_id','color_id','sort_id'));
     } 
 
     public function filter(Request $request){
