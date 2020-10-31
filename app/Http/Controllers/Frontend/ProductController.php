@@ -47,7 +47,7 @@ class ProductController extends Controller {
         $children_category = $this->categoryRepo->getChildrenCategoryByArray($parent_category->pluck('id'));
         $product_category = $this->productRepo->getProductByArrayCategory($children_category->pluck('id'));
         $count = count($search_product);
-        $slide1 = $this->slideRepo->getSlide1();
+        $slide1 = $this->slideRepo->getBanner($position=7);
         $category_arr = $this->categoryRepo->getChildrenCategoryByAlias($alias);
         $category_filter =  $this->categoryRepo->getProductCategory();
         $brand =  $this->attributeRepo->getAttributes(null, $parent_id = 2);
