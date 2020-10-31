@@ -58,7 +58,7 @@
                                             </div>
                                             <div class="col-xl-10 col-md-6 col-sm-12 col-12">
                                                 <div class="form-row">
-                                                                                                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                                                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                                                         <select name="price" class="form-control mb-2 mb-lg-0 filter-select range-price" onchange="this.form.submit()">
                                                             <option hidden value="">Khung giá</option>
                                                             <option  value="">Tất cả</option>
@@ -215,6 +215,119 @@
                                         
                                         @if(count($children_category)!=0)
                                         <div class="tab-content">
+                                            <div id="home" class="tab-pane active">
+                                                <div class="_binding_product">
+                                                    <div class="set-total" data-total="8" data-id="1486" style="display:none"></div>
+                                                    <div class="row no-gutters mb-3 mb-md-0">
+                                                        <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+                                                            @php $i=0; @endphp
+                                                            @foreach($product_arr as $key=> $product)
+                                                            @if($parent_cat->id==$product->category_id)
+                                                            @if($i <2 )
+                                                            <div >
+                                                                <div class="item-product item-product-large">
+                                                                    <div class="image">
+                                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">
+                                                                            <img src="{{$product->getImage()}}" style="height: 250px" class="img-fluid lazy" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="py-1">
+                                                                        <h5 class="title">
+                                                                        <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ JANMI O121 - 12mm">
+                                                                            {!!$product->title!!}
+                                                                        </a>
+                                                                        </h5>
+                                                                        <div class="price-new">
+                                                                            @if($product->sale_price==0)
+                                                                            {!!$product->getPrice()!!}
+                                                                            @else
+                                                                            {!!$product->getSalePrice()!!}
+                                                                            @endif
+                                                                        </div>
+                                                                        @if($product->sale_price!=0)
+                                                                        <div class="price-old">
+                                                                            {!!$product->getPrice()!!}
+                                                                        </div>
+                                                                        @else
+                                                                        &nbsp
+                                                                        @endif
+                                                                        <div class="size small mb-1">
+                                                                            Kích thước: {!!$product->getSize()!!} mm
+                                                                        </div>
+                                                                        <div class="review d-flex">
+                                                                            <div class="color-FFAB1B mr-2">
+                                                                                0,0/5<i class="fas fa-star ml-1"></i>
+                                                                            </div>
+                                                                            <div class="color-828282">
+                                                                                0 đánh giá
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            @php $i++; @endphp
+                                                            <?php $index=$key ?>
+                                                            @endif
+                                                            @endif
+                                                            @endforeach
+                                                        </div>
+                                                        
+                                                        
+                                                        <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+                                                            <div class="row no-gutters h-100 ">
+                                                                @foreach($product_arr as $key=> $product)
+                                                                @if($parent_cat->id==$product->category_id && $key>$index)
+                                                                <div class="col-md-4 col-sm-4 col-6 ">
+                                                                    <div class="item-product" data-id="95211" data-properties="">
+                                                                        <div class="image">
+                                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"><img src="{{$product->getImage()}}" style="width: 200px; height: 200px; object-fit: cover;" class="lazy img-fluid" /></a>
+                                                                        </div>
+                                                                        <div class="">
+                                                                            <h5 class="title">
+                                                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" title="Sàn gỗ Florton FL180805">
+                                                                                {!!$product->title!!}
+                                                                            </a>
+                                                                            </h5>
+                                                                            <div class="price-new">
+                                                                                @if($product->sale_price==0)
+                                                                                {!!$product->getPrice()!!}
+                                                                                @else
+                                                                                {!!$product->getSalePrice()!!}
+                                                                                @endif
+                                                                            </div>
+                                                                            @if($product->sale_price!=0)
+                                                                            <div class="price-old">
+                                                                                {!!$product->getPrice()!!}
+                                                                            </div>
+                                                                            @else
+                                                                            &nbsp
+                                                                            @endif
+                                                                            <div class="size small mb-1">
+                                                                                Kích thước: {!!$product->getSize()!!} mm
+                                                                            </div>
+                                                                            <div class="review d-flex">
+                                                                                <div class="color-FFAB1B mr-2">
+                                                                                    0,0/5<i class="fas fa-star ml-1"></i>
+                                                                                </div>
+                                                                                <div class="color-828282">
+                                                                                    0 đánh giá
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                @php $i++; @endphp
+                                                                @if($i==8)
+                                                                @break;
+                                                                @endif
+                                                                @endif
+                                                                @endforeach
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
                                             @foreach($children_category as $key => $children_cat)
                                             
                                             <div id="tab_{{$key}}_{{$key2}}" class="tab-pane fade ">
