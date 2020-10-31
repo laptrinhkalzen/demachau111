@@ -90,9 +90,9 @@ class ProductRepository extends AbstractRepository {
             }
 
         }
-        if ($request->get('orderby')) {
-            $orderby = $request->get('orderby');
-            switch ($orderby) {
+        if ($request->get('sort')) {
+            $sort = $request->get('sort');
+            switch ($sort) {
                 case '1':
                     $model=$model->orderby('price','asc');
                     break;

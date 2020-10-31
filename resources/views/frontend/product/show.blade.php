@@ -58,53 +58,63 @@
                                             </div>
                                             <div class="col-xl-10 col-md-6 col-sm-12 col-12">
                                                 <div class="form-row">
-                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <select name="price" class="form-control mb-2 mb-lg-0 filter-select range-price">
+                                                                                                        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                                                        <select name="price" class="form-control mb-2 mb-lg-0 filter-select range-price" onchange="this.form.submit()">
                                                             <option hidden value="">Khung giá</option>
-                                                            <option value="">Tất cả</option>
-                                                            <option value="1">Từ 0 - 100.000đ</option>
-                                                            <option value="2">Từ 200.000 - 300.000đ</option>
-                                                            <option value="3">Từ 300.000 - 400.000đ</option>
-                                                            <option value="4">Từ 400.000 - 600.000đ</option>
-                                                            <option value="5">Từ 600.000 trở lên</option>
+                                                            <option  value="">Tất cả</option>
+                                                            <option <?php if($price_id==1) echo ('selected')?> value="1">Từ 0 - 100.000đ</option>
+                                                            <option <?php if($price_id==2) echo ('selected')?> value="2">Từ 200.000 - 300.000đ</option>
+                                                            <option <?php if($price_id==3) echo ('selected')?> value="3">Từ 300.000 - 400.000đ</option>
+                                                            <option <?php if($price_id==4) echo ('selected')?> value="4">Từ 400.000 - 600.000đ</option>
+                                                            <option <?php if($price_id==5) echo ('selected')?> value="5">Từ 600.000 trở lên</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <select name="category_id" class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
+                                                        <select name="category_id" class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" onchange="this.form.submit()">
                                                             <option hidden value="">Loại sản phẩm</option>
                                                             <option value="">Tất cả</option>
                                                             @foreach ($category_filter as $key=>$cat)
+                                                            @if($cat->id==$cat_id)
+                                                            <option selected value="{!!$cat->id!!}">{!!$cat->title!!}</option>
+                                                            @else
                                                             <option value="{!!$cat->id!!}">{!!$cat->title!!}</option>
+                                                            @endif
                                                             @endforeach
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <select name="brand" class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
+                                                        <select name="brand" class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" onchange="this.form.submit()">
                                                             <option  hidden value="">Tên Thương Hiệu</option>
                                                             <option value="">Tất cả</option>
                                                             @foreach ($brand as $key=>$brand)
+                                                            @if($brand->id==$brand_id)
+                                                            <option selected value="{!!$brand->id!!}">{!!$brand->title!!}</option>
+                                                            @else
                                                             <option value="{!!$brand->id!!}">{!!$brand->title!!}</option>
+                                                            @endif
                                                             @endforeach
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <select name="color" class="form-control mb-2 mb-lg-0 filter-select dynamic-filter">
+                                                        <select name="color" class="form-control mb-2 mb-lg-0 filter-select dynamic-filter" onchange="this.form.submit()">
                                                             <option hidden value="">Màu Sắc</option>
+                                                            <option value="">Tất cả</option>
                                                             @foreach ($color as $key=>$color)
+                                                            @if($color->id==$color_id)
+                                                            <option selected value="{!!$color->id!!}">{!!$color->title!!}</option>
+                                                            @else
                                                             <option value="{!!$color->id!!}">{!!$color->title!!}</option>
+                                                            @endif
                                                             @endforeach
                                                         </select>
                                                     </div>
                                                     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <select name="orderby" class="form-control mb-2 mb-lg-0 filter-select extra orderby">
+                                                        <select name="sort" class="form-control mb-2 mb-lg-0 filter-select extra orderby" onchange="this.form.submit()">
                                                             <option hidden value="">Sắp xếp</option>
-                                                            <option value="1">Giá tăng dần</option>
-                                                            <option value="2">Giá giảm dần</option>
-                                                        </select>
-                                                        
-                                                    </div>
-                                                    <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                                                        <button class="btn btn-save mb-2 mb-md-0 w-100" type="submit" name="search">Tìm kiếm</button>
+                                                            <option value="">Mặc định</option>
+                                                            <option <?php if($sort_id==1) echo ('selected')?> value="1">Giá tăng dần</option>
+                                                            <option <?php if($sort_id==2) echo ('selected')?> value="2">Giá giảm dần</option>
+                                                        </select>   
                                                     </div>
                                                 </div>
                                             </div>

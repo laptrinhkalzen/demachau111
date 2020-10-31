@@ -37,7 +37,7 @@ class ProductController extends Controller {
         $this->slideRepo = $slideRepo;
     }
 
-    public function show($alias) {
+    public function show(Request $request, $alias) {
          ini_set('memory_limit', '2048M');
         $search_product = $this->productRepo->getProduct($alias, $limit=null);
         $title_category = \DB::table('category')->where('alias', $alias)->first();
@@ -53,7 +53,13 @@ class ProductController extends Controller {
         $brand =  $this->attributeRepo->getAttributes(null, $parent_id = 2);
         $origin =  $this->attributeRepo->getAttributes(null, $parent_id = 19);
         $color =  $this->attributeRepo->getAttributes(null, $parent_id = 25);
-       return view('frontend/product/show',compact('search_product','count','title_category','slide1','category_arr','parent_category','children_category','product_category','product_arr','main_category','origin','category_filter','brand','color'));
+        //paginate
+        $price_id = $request->get('price');
+        $cat_id = $request->get('category_id');
+        $brand_id = $request->get('brand');
+        $color_id = $request->get('color');
+        $sort_id = $request->get('sort');
+       return view('frontend/product/show',compact('search_product','count','title_category','slide1','category_arr','parent_category','children_category','product_category','product_arr','main_category','origin','category_filter','brand','color','cat_id','price_id','brand_id','color_id','sort_id'));
     }
 
     public function search(Request $request) {
@@ -71,7 +77,7 @@ class ProductController extends Controller {
         $cat_id = $request->get('category_id');
         $brand_id = $request->get('brand');
         $color_id = $request->get('color');
-        $sort_id = $request->get('orderby');
+        $sort_id = $request->get('sort');
        return view('frontend/home/search',compact('search_product','count','slide1','origin','category_filter','brand','color','cat_id','price_id','brand_id','color_id','sort_id'));
     } 
 
