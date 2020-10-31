@@ -540,7 +540,7 @@
                     </div>
                     <div class="col">
                         <div class="item">
-                            <a href="javascript:void(0)">
+                            <a href="{{route('product.show',['alias' => 'hang-thanh-ly'])}}">
                                 <img src="../noithathunggia/uploads/2020/04/28/coupon%20(1)e209.png?v=1.0.0" class="img-fluid mr-2">
                                 Hàng thanh lý
                             </a>
@@ -548,7 +548,7 @@
                     </div>
                     <div class="col">
                         <div class="item">
-                            <a href="javascript:void(0)">
+                            <a href="{{route('product.show',['alias' => 'hang-cao-cap'])}}">
                                 <img src="../noithathunggia/uploads/2020/04/28/shopping-bag%20(2)e209.png?v=1.0.0" class="img-fluid mr-2">
                                 Hàng cao cấp
                             </a>
@@ -556,7 +556,7 @@
                     </div>
                     <div class="col">
                         <div class="item">
-                            <a href="javascript:void(0)">
+                            <a href="{{route('product.show',['alias' => 'san-pham-ban-chay'])}}">
                                 <img src="../noithathunggia/uploads/2020/04/28/mobile-storee209.png?v=1.0.0" class="img-fluid mr-2">
                                 Bán chạy nhất
                             </a>
