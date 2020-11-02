@@ -50,7 +50,7 @@ class CategoryRepository extends AbstractRepository {
     }
 
     public function getProductCategory() {
-        return $this->model->where('status', '1')->where('parent_id', '0')->where('type', '4')->get();
+        return $this->model->where('status', '1')->where('parent_id', '0')->where('type', '4')->orderBy('ordering', 'asc')->get();
     }
 
     public function readParentCategory($type, $parent_id) {
