@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 <div class="container ">
-    <div class="banner-page py-3" style="background: url(noithathunggia/uploads/2020/05/14/flashSalejanhome.png?v=1.0.0) no-repeat center;background-size:cover;">
+    <div class="banner-page py-3" style="background: url(noithathunggia/uploads/2020/05/14/flashSalejanhome.png?v=1.0.0) no-repeat center;background-size:cover;margin-top: 30px;">
     </div>
 </div>
 <div class="container mb-4">

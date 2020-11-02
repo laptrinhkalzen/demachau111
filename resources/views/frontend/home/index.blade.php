@@ -11,6 +11,7 @@
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&amp;display=swap&amp;subset=vietnamese"
                 rel="stylesheet">
                 <link href="{!!asset('css/allmin6531.css?v=G6Iw6849yRHkXXaCwks-vCrCPIohiF6r-SDUwKtNLN8')!!}" rel="stylesheet" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <link href="css/style.css" rel="stylesheet" />
                 <title>Nội thất Hưng Gia</title>
             </head>
