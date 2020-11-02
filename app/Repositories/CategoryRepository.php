@@ -103,4 +103,9 @@ class CategoryRepository extends AbstractRepository {
         return $this->model->where('type', \App\Category::TYPE_PRODUCT)->where('alias',$alias)->first();
     }
 
+    public function getCategoryByIdProduct($id) {
+        $id = \Db::table('product_category')->whereIn('product_id', $id)->pluck('category_id');
+        return $this->model->where('type', \App\Category::TYPE_PRODUCT)->whereIn('id',$id)->get();
+    }
+
 }

@@ -90,8 +90,9 @@ class ProductController extends Controller {
     public function detail(Request $request,$alias,$id) {
 
             $detail_products=  $this->productRepo->getDetailProduct($alias);
+            $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));
             $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
-            return view('frontend/product/detail',compact('similar_products','detail_products'));
+            return view('frontend/product/detail',compact('similar_products','detail_products','tags'));
         }      
 
     public function index(Request $request) {

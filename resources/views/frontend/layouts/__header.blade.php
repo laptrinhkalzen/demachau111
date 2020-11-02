@@ -355,7 +355,7 @@
     </div>
     <a rel="nofollow" target="_blank" href="https://zalo.me/{!!$share_config->phone!!}" class="zalo">
         <i class="fa" aria-hidden="true">
-        <img src="../stc-zaloprofile.zdn.vn/pc/v1/images/zalo_sharelogo.png" width="25px" />
+        <img src="{!!asset('stc-zaloprofile.zdn.vn/pc/v1/images/zalo_sharelogo.png')!!}" width="25px" />
         </i>
         <span>Zalo: {!!$share_config->phone!!}</span>
     </a>

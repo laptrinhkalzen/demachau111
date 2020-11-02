@@ -253,7 +253,7 @@
                                     <div class="row">
                                         <div class="col-sm-6 col-12 pr-sm-2">
                                             <a href="javascript:void(0)" class="btn btn-order w-100  mb-3" id="buy-now" data-product-id="44575" data-quantit="10000">
-                                                <img src="{!!asset('images/Cartae69.svg?v=ZRc4SSL-epYZ6iz_rSu7x0fmZGGpnXJBp7W7vn2o99s')!!}" class="img-fluid mr-2" />MUA HÀNG NGAY
+                                                <img src="{!!asset('images/Cartae69.svg?v=ZRc4SSL-epYZ6iz_rSu7x0fmZGGpnXJBp7W7vn2o99s')!!}" class="img-fluid mr-2" />{!!$share_config->hotline!!}
                                             </a>
                                         </div>
                                         <div class="col-sm-6 col-12 pl-sm-2  ">
@@ -772,10 +772,12 @@
                             <div class="heading mb-3">
                                 <img src="{!!asset('images/sale-tag-icon693e.svg?v=be32C1CQrFxhxn3ZHg-2rsr0Zzd-RRRvkhoGZyO23IU')!!}" class="img-fluid mr-2" />Tags
                             </div>
-                                                    <div class="list  list-tags-right">
+                            <div class="list  list-tags-right">
+                                @foreach($tags as $key => $tags)
                                 <div class="item">
-                                    <a href="the/san-go-cong-nghiep.html">sàn gỗ công nghiệp</a>
+                                    <a href="{!! route('product.show',['alias' => $tags->alias])!!}" >{!!$tags->alias!!}</a>
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
