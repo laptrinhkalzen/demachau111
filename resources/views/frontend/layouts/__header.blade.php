@@ -9,7 +9,6 @@
                         <a href="javascript:void(0)" title="Hà Nội">
                             {!!$share_config->company_name!!}&nbsp|
                             Hotline: {!!$share_config->hotline!!}&nbsp|
-                            Phone: {!!$share_config->phone!!}&nbsp|
                             Email: {!!$share_config->email!!}&nbsp|
                             Địa chỉ: {!!$share_config->address!!}&nbsp|
                             Thời gian làm việc: {!!$share_config->working_hours!!}&nbsp|
