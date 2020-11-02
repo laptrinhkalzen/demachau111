@@ -12,7 +12,7 @@
                 rel="stylesheet">
                 <link href="{!!asset('css/allmin6531.css?v=G6Iw6849yRHkXXaCwks-vCrCPIohiF6r-SDUwKtNLN8')!!}" rel="stylesheet" />
                 <link href="css/style.css" rel="stylesheet" />
-                <title>Nội thất Hưng Gia123</title>
+                <title>Nội thất Hưng Gia</title>
             </head>
             <body>
                 <section class="header">
