@@ -192,15 +192,6 @@
                                                 </a>
                                             </div>
                                         </li>
-                                        <li class=" nav-item align-self-md-center ">
-                                            <div class=" nav-link dropdown">
-                                                <a rel="nofollow" class="btn dropdown-toggle p-0" href="#" role="button"
-                                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                    <img src="images/vietname209.svg?v=1.0.0" class="img-fluid " />
-                                                </a>
-                                            </div>
-                                        </li>
                                     </ul>
                                 </div>
                             </nav>
