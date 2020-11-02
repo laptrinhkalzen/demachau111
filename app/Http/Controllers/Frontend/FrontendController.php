@@ -67,4 +67,7 @@ class FrontendController extends Controller {
         return view('frontend/home/index', compact('total','hot_products_slide','product_new', 'product_hl', 'industry', 'nature' , 'sale', 'plastic', 'news_arr','slide1','slide2','banner_mid', 'banner_left', 'banner_right', 'banner_end','product_all','outdoor','decor','houseware','category','brand','origin','industry_origin','material','nature_category','plastic_brand','plastic_category','outdoor_category','outdoor_brand','decor_category','decor_brand'));
     }
     
+    public function event() {
+        return view('frontend/home/event');
+    }
 }

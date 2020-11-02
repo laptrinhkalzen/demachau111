@@ -130,7 +130,7 @@
                             <div>
                                 <a rel="nofollow" href="tel: {!!$share_config->hotline!!}">
                                     <div><span class="font-weight-bold h6 ">{!!$share_config->hotline!!}</span></div>
-                                    <div class="small">(Miễn phí) </div>
+                                    <div class="small">Hotline</div>
                                 </a>
                             </div>
                         </li>

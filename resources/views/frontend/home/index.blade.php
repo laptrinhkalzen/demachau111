@@ -179,7 +179,7 @@
                                             <div>
                                                 <a rel="nofollow" href="tel: {!!$share_config->hotline!!}">
                                                     <div><span class="font-weight-bold h6 ">{!!$share_config->hotline!!}</span></div>
-                                                    <div class="small">(Miễn phí) </div>
+                                                    <div class="small">Hotline</div>
                                                 </a>
                                             </div>
                                         </li>
@@ -523,7 +523,7 @@
                 <div class="row menu-ngang-2 justify-content-around flex-wrap">
                     <div class="col">
                         <div class="item">
-                            <a href="javascript:void(0)">
+                            <a href="{{route('event.sale')}}">
                                 <img src="../noithathunggia/uploads/2020/04/28/giovanggiasoce209.png?v=1.0.0" class="img-fluid mr-2">
                                 Giờ vàng giá sốc
                             </a>
