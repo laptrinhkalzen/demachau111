@@ -199,13 +199,13 @@
                         <div class="col-lg-3 col-md-4 col-12">
                             <ul class="list-group list-menu-cate d-none d-md-block un-expand   " style="">
                                 <li class="list-group-item active ">
-                                    <a rel="nofollow" href="javascript:;" class="link">
+                                    <a rel="nofollow" href="javascript:;" >
                                         <img src="{!!asset('images/listView.svg')!!}" class="img-fluid mr-2" />Danh mục
                                     </a>
                                 </li>
                                 @foreach ($category as $key=>$cat)
                                 <li class="list-group-item">
-                                    <a href="{!! route('product.show',['alias' => $cat->alias])!!}" class="link">
+                                    <a href="{!! route('product.show',['alias' => $cat->alias])!!}" >
                                         <img src=""
                                         class="img-fluid mr-2"/>{!!$cat->title!!}
                                     </a>

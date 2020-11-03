@@ -32,6 +32,7 @@
             rel="stylesheet">
             <link href="{!!asset('css/allmin6531.css?v=G6Iw6849yRHkXXaCwks-vCrCPIohiF6r-SDUwKtNLN8')!!}" rel="stylesheet" />
             <link href="css/style.css" rel="stylesheet" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
             <meta property="fb:app_id" content="125831801610404" />
             <meta property="og:url" content="index.html" />
             <meta property="og:type" content="article" />
