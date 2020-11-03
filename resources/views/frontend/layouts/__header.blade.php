@@ -202,6 +202,7 @@
                                     <a rel="nofollow" href="javascript:;" >
                                         <img src="{!!asset('images/listView.svg')!!}" class="img-fluid mr-2" />Danh mục
                                     </a>
+                                    <i class="fas fa-caret-down" style="float: right;"></i>
                                 </li>
                                 @foreach ($category as $key=>$cat)
                                 <li class="list-group-item">
@@ -228,7 +229,7 @@
                                     @endif
                                 </ul>
                             </div>
-                            
+                            <i class="fas fa-angle-right" style="float: right;"></i>
                         </li>
                         @endforeach
                         <!--Nút xem thêm-->
