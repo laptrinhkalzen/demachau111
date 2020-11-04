@@ -2917,7 +2917,6 @@
     }
     </script>
     <script>    document.addEventListener("DOMContentLoaded", function(event) {     gtag('config', 'AW-830211279');       jQuery('[href^="tel:"]').click(function() {          gtag('event', 'conversion', {'send_to': 'AW-830211279/tVQrCMnmsYYBEM-J8IsD'});     });   }); </script>
-    <script src="https://kit.fontawesome.com/1560292da9.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{!!asset('js/jquery-3.3.1.mine209.js?v=1.0.0')!!}"></script>
     <script type="text/javascript" src="{!!asset('js/jquery-ui.mine209.js?v=1.0.0')!!}"></script>
     <script type="text/javascript" src="{!!asset('js/popper.mine209.js?v=1.0.0')!!}"></script>
