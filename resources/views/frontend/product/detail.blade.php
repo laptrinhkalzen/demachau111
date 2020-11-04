@@ -852,7 +852,7 @@
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="image">
-                                                <img src="{!!asset('cms.janhome.vn/uploads/2018/03/san-go-florton-fl669-1.jpg')!!}" class="img-fluid w-100 " alt="" />
+                                                <img src="{!!asset('noithathunggia/uploads/2018/03/san-go-florton-fl669-1.jpg')!!}" class="img-fluid w-100 " alt="" />
                                             </div>
                                         </div>
                                         <div class="swiper-slide">

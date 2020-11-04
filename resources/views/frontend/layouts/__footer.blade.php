@@ -85,10 +85,10 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 </div>
 <h4 class="title-menu mb-4">Kết nối với chúng tôi</h4>
 <div class="social">
-<a rel="nofollow" href="javascript:void(0)" title="Facebook">
+<a rel="nofollow" href="{!!$share_config->facebook!!}" title="Facebook">
 <img src="{!!asset('images/fb-cir-ice209.svg?v=1.0.0')!!}" class="img-fluid mr-2" />
 </a>
-<a rel="nofollow" href="javascript:void(0)" title="Twitter">
+<a rel="nofollow" href="{!!$share_config->twitter!!}" title="Twitter">
 <img src="{!!asset('images/twitter-ice209.svg?v=1.0.0')!!}" class="img-fluid" />
 </a>
 </div>
