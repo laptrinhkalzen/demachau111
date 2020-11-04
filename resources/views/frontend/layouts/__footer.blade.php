@@ -150,7 +150,7 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 <script type="text/javascript" src="{!!asset('js/paginationJSe209.js?v=1.0.0')!!}"></script>
 <script type="text/javascript" src="{!!asset('js/jstree.mine209.js?v=1.0.0')!!}"></script>
 <script type="text/javascript" src="{!!asset('js/appe209.js?v=1.0.0')!!}"></script>
-<script type="text/javascript" src="{!!asset('js/core/coree209.js?v=1.0.0')!!}"></script>
+<script type="text/javascript" src="{!!asset('js/coree209.js?v=1.0.0')!!}"></script>
 <script type="text/javascript" src="{!!asset('js/menuControllere209.js?v=1.0.0')!!}"></script>
 <script type="text/javascript" src="{!!asset('js/orderControllere209.js?v=1.0.0')!!}"></script>
 <script type="text/javascript" src="{!!asset('js/extraControllere209.js?v=1.0.0')!!}"></script>
