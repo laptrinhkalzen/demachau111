@@ -121,7 +121,7 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 </div>
 </div>
 </div>
-<div class="bottom-footer py-3 text-right">
+<div class="bottom-footer py-3 text-right" style="background-color: #13295B">
 <div class="container">
 <a rel="nofollow" href="javascript:void(0)">
 <img src="{!!asset('images/visa-ice209.svg?v=1.0.0')!!}" class="img-fluid" />
