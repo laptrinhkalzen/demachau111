@@ -770,7 +770,7 @@
             </div>
             <div class="modal-body text-center">
                 <div class="mb-3">
-                    <img src="images/logoe209.png?v=1.0.0" class="img-fluid" />
+                    <img src="" class="img-fluid" />
                 </div>
                 <h5 class="mb-3 font-weight-bold">Xách nhận thành công!</h5>
                 <div>
