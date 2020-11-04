@@ -242,7 +242,6 @@
                                             data-material="1"
                                             data-price="198000"
                                             data-sale-price="198000"
-                                            data-avatar="../cms.janhome.vn/uploads/thumb/2018/03/san-go-florton-fl669-1.jpg"
                                             data-spec-name="Kích thước"
                                             data-spec-value="12    x    128    x    1221"
                                             data-title="Sàn gỗ Florton FL669-1"
@@ -852,12 +851,12 @@
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="image">
-                                                <img src="{!!asset('noithathunggia/uploads/2018/03/san-go-florton-fl669-1.jpg')!!}" class="img-fluid w-100 " alt="" />
+                                                <img src="" class="img-fluid w-100 " alt="" />
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="image">
-                                                <img src="{!!asset('cms.janhome.vn/uploads/2018/03/san-go-florton-fl669-1.jpg')!!}" class="img-fluid w-100 " alt="" />
+                                                <img src="" class="img-fluid w-100 " alt="" />
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
@@ -880,7 +879,7 @@
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="image">
-                                                <img src="{!!asset('cms.janhome.vn/uploads/thumb/2018/03/san-go-florton-fl669-1.jpg')!!}" class="img-fluid w-100 " alt="" />
+                                                <img src="" class="img-fluid w-100 " alt="" />
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
@@ -899,7 +898,7 @@
                                         </div> -->
                                         <div class="swiper-slide">
                                             <div class="image p-3">
-                                                <img src="images/youtube-icon-thumb9f97.svg?v=JYyePGuaK5qmu-3M_SvUVjoQ2YqgMILV8vnWLct9dpc" class="img-fluid w-100 " alt="" />
+                                                <img src="{!!asset('images/youtube-icon-thumb9f97.svg?v=JYyePGuaK5qmu-3M_SvUVjoQ2YqgMILV8vnWLct9dpc')!!}" class="img-fluid w-100 " alt="" />
                                             </div>
                                             Video
                                         </div>
@@ -988,11 +987,11 @@
                     </div>
                     <div class="modal-body text-center">
                         <div class="mb-3">
-                            <img src="images/logoe209.png?v=1.0.0" class="img-fluid" />
+                            <img src="{!!asset('images/logoe209.png?v=1.0.0')!!}" class="img-fluid" />
                         </div>
                         <h5 class="mb-3 font-weight-bold">Xách nhận thành công!</h5>
                         <div>
-                            <img src="images/checke209.svg?v=1.0.0" class="img-fluid" />
+                            <img src="{!!asset('images/checke209.svg?v=1.0.0')!!}" class="img-fluid" />
                         </div>
                     </div>
                     <div class="modal-footer justify-content-center border-0">
@@ -1533,7 +1532,6 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = '../connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     }, 1200);
