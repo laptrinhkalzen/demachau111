@@ -76,6 +76,8 @@ class Product extends Model {
         return "";
         else
         $category = \DB::table('product_attribute')->where('product_id',$id)->whereIn('attribute_id', $children_attribute)->first();
+        if(is_null($category))
+        return "";
         $value = \DB::table('attribute')->where('id',$category->attribute_id)->first()->title;
         return $value;
     }
