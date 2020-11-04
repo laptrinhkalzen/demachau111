@@ -227,6 +227,12 @@ class ProductRepository extends AbstractRepository {
         $product_id = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
         return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->join('product_category','product_category.product_id','=','product.id')->whereIn('id', $product_id)->orderBy('post_schedule', 'desc')->take($limit)->get();
     }
+    
+    public function getProductByAliasCategory2($limit,$alias) {
+        $category = \DB::table('category')->where('alias', $alias)->pluck('id');
+        $product_id = \DB::table('product_category')->where('category_id', $category)->pluck('product_id');
+        return $this->model->where('status', 1)->where('post_schedule' ,'<=', Carbon::now('Asia/Ho_Chi_Minh'))->whereIn('id', $product_id)->orderBy('post_schedule', 'desc')->take($limit)->get();
+    }
 
 
     public function readSearchProduct($keywords) {
