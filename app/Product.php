@@ -62,12 +62,22 @@ class Product extends Model {
         else
         return $category->value;
     }
-    public function getCode() {
-        $category = $this->hasMany('App\ProductAttribute', 'product_id')->where('attribute_id', 26)->first();
+    public function getValueText($id,$attributes) {
+        $category = \DB::table('product_attribute')->where('product_id',$id)->where('attribute_id', $attributes)->first();
         if(is_null($category))
         return "";
         else
         return $category->value;
+    }
+
+    public function getValueSelect($id,$attributes) {
+        $children_attribute = \DB::table('attribute')->where('parent_id',$attributes)->pluck('id');
+        if(is_null($children_attribute))
+        return "";
+        else
+        $category = \DB::table('product_attribute')->where('product_id',$id)->whereIn('attribute_id', $children_attribute)->first();
+        $value = \DB::table('attribute')->where('id',$category->attribute_id)->first()->title;
+        return $value;
     }
     public function getThickness() {
         $category = $this->hasMany('App\ProductAttribute', 'product_id')->where('attribute_id', 30)->first();

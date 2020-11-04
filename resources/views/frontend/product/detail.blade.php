@@ -4,7 +4,7 @@
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=691807794780343&autoLogAppEvents=1" nonce="l1Pzn4DQ"></script>
     &nbsp
-    @foreach($detail_products as $key => $product )
+    @foreach($detail_products as $key => $product1 )
     <div class="container my-3">
         
         <!--         <ol style="display:none" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -40,7 +40,7 @@
         <nav aria-label="breadcrumb ">
             <ol class="breadcrumb jan-breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('home.index')}}">Home</a></li>
-                <li class="breadcrumb-item"><a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}">{{$product->title}}</a></li>
+                <li class="breadcrumb-item"><a href="{!! route('product.detail', ['alias' => $product1->alias, 'id' => $product1->id]) !!}">{{$product1->title}}</a></li>
             </ol>
         </nav>
     </div>
@@ -48,7 +48,7 @@
         <div class="container">
             <div class="row mb-3">
                 <div class="col-lg-9 col-md-9 col-12 align-self-center">
-                    <h1 class="title mb-3 mb-lg-0 d-inline-block mr-4 ">{{$product->title}}</h1>
+                    <h1 class="title mb-3 mb-lg-0 d-inline-block mr-4 ">{{$product1->title}}</h1>
                     <div class="small d-inline-block p-2 ">
                         <div class="star-rating d-inline-block  text-center mb-3" data-id="44575" data-rate-type="1">
                             
@@ -75,7 +75,7 @@
                             <div class="slide-product-detail mb-4">
                                 <div class="swiper-container gallery-top">
                                     <div class="swiper-wrapper">
-                                        @foreach(explode(',', $product->images) as $key => $dowloadfile)
+                                        @foreach(explode(',', $product1->images) as $key => $dowloadfile)
                                         <div class="swiper-slide">
                                             <div class="img-magnifier-container">
                                                 <img id="myimage-1" src="{{$dowloadfile}}" width="100%" height="auto" alt="Sàn gỗ Florton FL669-1">
@@ -106,7 +106,7 @@
                                 </div> -->
                                 <div class="swiper-container gallery-thumbs px-3">
                                     <div class="swiper-wrapper">
-                                        @foreach(explode(',', $product->images) as $key => $dowloadfile)
+                                        @foreach(explode(',', $product1->images) as $key => $dowloadfile)
                                         <div class="swiper-slide">
                                             <div class="image">
                                                 <img src="{{$dowloadfile}}" class="img-fluid w-100 " style="height: 63.156px" />
@@ -190,15 +190,15 @@
                             <div class="price-product-detail">
                                 <span class="new" id="price-sale">
                                     <span id="price-sale-detail">
-                                        @if($product->sale_price==0)
-                                        {!!$product->getPrice()!!}
+                                        @if($product1->sale_price==0)
+                                        {!!$product1->getPrice()!!}
                                         @else
-                                        {!!$product->getSalePrice()!!}
+                                        {!!$product1->getSalePrice()!!}
                                         @endif
                                     </span>
-                                    @if($product->sale_price!=0)
+                                    @if($product1->sale_price!=0)
                                     <span class="old" id="price-normal">
-                                        {!!$product->getPrice()!!}
+                                        {!!$product1->getPrice()!!}
                                     </span>
                                     @else
                                     &nbsp
@@ -606,7 +606,8 @@
                                         Code
                                     </div>
                                     <div class=" ml-auto text-right">
-                                        {!!$product->getCode()!!}
+                                        {!!$product->getValueText($product1->id,26)!!}
+                                        
                                     </div>
                                 </div>
                                 <div class="item ">
@@ -622,7 +623,7 @@
                                         Kích thước
                                     </div>
                                     <div class="ml-auto  text-right">
-                                        {!!$product->getSize()!!}
+                                        {!!$product1->size!!}
                                     </div>
                                 </div>
                                 <div class="item ">
@@ -630,7 +631,7 @@
                                         Ứng dụng
                                     </div>
                                     <div class="ml-auto  text-right">
-                                        {!!$product->getApplication()!!}
+                                        {!!$product->getValueText($product1->id,29)!!}
                                     </div>
                                 </div>
                                 <div class="item ">
@@ -638,7 +639,7 @@
                                         Đóng hộp
                                     </div>
                                     <div class="ml-auto  text-right">
-                                        {!!$product->getAmount()!!}
+                                        {!!$product->getValueText($product1->id,27)!!}
                                     </div>
                                 </div>
                                 <div class="item ">
@@ -646,7 +647,7 @@
                                         Cấp độ chống mài mòn
                                     </div>
                                     <div class="ml-auto  text-right">
-                                        {!!$product->getThickness()!!}
+                                        {!!$product->getValueSelect($product1->id,28)!!}
                                     </div>
                                 </div>
                                 <div class="item ">
@@ -654,7 +655,7 @@
                                         Độ dày
                                     </div>
                                     <div class="ml-auto  text-right">
-                                        {!!$product->getThickness()!!}
+                                        {!!$product->getValueSelect($product1->id,30)!!}
                                     </div>
                                 </div>
                             </div>
