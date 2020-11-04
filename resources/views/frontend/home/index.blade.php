@@ -63,7 +63,7 @@
                                         </div>
                                         <div class="color-007DFF  px-3">
                                             <div class="py-1">
-                                                <a href="javascript:void(0)">Sàn gỗ công nghiệp</a>
+                                                <a href="{!! route('product.show',['alias' => 'san-go-cong-nghiep'])!!}">Sàn gỗ công nghiệp</a>
                                             </div>
                                             <div class="py-1">
                                                 <a href="javascript:void(0)">Sàn nhựa vinyl</a>
