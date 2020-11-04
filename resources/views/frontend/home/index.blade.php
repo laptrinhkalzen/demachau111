@@ -289,7 +289,7 @@
                                 <ul class="row menu-cate-mobile  d-md-none no-gutters">
                                     <div class="col-3 px-1">
                                         <a href="javascript:void(0)" class="btn btn-cate">
-                                            <img src="../noithathunggia/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0"
+                                            <img src="{!!asset('/noithathunggia/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0')!!}"
                                             class="img-fluid mb-2" />
                                             <div>
                                                 Sàn gỗ công nghiệp
@@ -298,7 +298,7 @@
                                     </div>
                                     <div class="col-3 px-1">
                                         <a href="javascript:void(0)" class="btn btn-cate">
-                                            <img src="../noithathunggia/uploads/2020/05/21/gotunhiene209.png?v=1.0.0"
+                                            <img src="{!!asset('/noithathunggia/uploads/2020/05/21/gotunhiene209.png?v=1.0.0')!!}"
                                             class="img-fluid mb-2" />
                                             <div>
                                                 Sàn gỗ tự nhiên
@@ -307,7 +307,7 @@
                                     </div>
                                     <div class="col-3 px-1">
                                         <a href="javascript:void(0)" class="btn btn-cate">
-                                            <img src="../noithathunggia/uploads/2020/05/21/sannhuae209.png?v=1.0.0"
+                                            <img src="{!!asset('/noithathunggia/uploads/2020/05/21/sannhuae209.png?v=1.0.0')!!}"
                                             class="img-fluid mb-2" />
                                             <div>
                                                 Sàn nhựa vinyl
@@ -316,7 +316,7 @@
                                     </div>
                                     <div class="col-3 px-1">
                                         <a href="javascript:void(0)" class="btn btn-cate">
-                                            <img src="../noithathunggia/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0"
+                                            <img src="{!!asset('/noithathunggia/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0')!!}"
                                             class="img-fluid mb-2" />
                                             <div>
                                                 Sàn gỗ ngoài trời
@@ -325,7 +325,7 @@
                                     </div>
                                     <div class="col-3 px-1">
                                         <a href="javascript:void(0)" class="btn btn-cate">
-                                            <img src="../noithathunggia/uploads/2020/05/21/cleane209.png?v=1.0.0"
+                                            <img src="{!!asset('/noithathunggia/uploads/2020/05/21/cleane209.png?v=1.0.0')!!}"
                                             class="img-fluid mb-2" />
                                             <div>
                                                 Phụ kiện
@@ -334,7 +334,7 @@
                                     </div>
                                     <div class="col-3 px-1">
                                         <a href="javascript:void(0)" class="btn btn-cate">
-                                            <img src="../noithathunggia/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0"
+                                            <img src="{!!asset('/noithathunggia/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0')!!}"
                                             class="img-fluid mb-2" />
                                             <div>
                                                 Sàn gỗ thanh lý
@@ -343,7 +343,7 @@
                                     </div>
                                     <div class="col-3 px-1">
                                         <a href="javascript:void(0)" class="btn btn-cate">
-                                            <img src="../noithathunggia/uploads/2020/05/21/bede209.png?v=1.0.0"
+                                            <img src="{!!asset('/noithathunggia/uploads/2020/05/21/bede209.png?v=1.0.0')!!}"
                                             class="img-fluid mb-2" />
                                             <div>
                                                 Trang trí nội thất
@@ -352,7 +352,7 @@
                                     </div>
                                     <div class="col-3 px-1">
                                         <a href="javascript:void(0)" class="btn btn-cate">
-                                            <img src="../noithathunggia/uploads/2020/05/21/homee209.png?v=1.0.0"
+                                            <img src="{!!asset('/noithathunggia/uploads/2020/05/21/homee209.png?v=1.0.0')!!}"
                                             class="img-fluid mb-2" />
                                             <div>
                                                 Trang trí ngoại thất
@@ -2479,10 +2479,10 @@
                     </div>
                     <h4 class="title-menu mb-4">Kết nối với chúng tôi</h4>
                     <div class="social">
-                        <a rel="nofollow" href="javascript:void(0)" title="Facebook">
+                        <a rel="nofollow" href="{!!$share_config->facebook!!}" title="Facebook">
                             <img src="images/fb-cir-ice209.svg?v=1.0.0" class="img-fluid mr-2" />
                         </a>
-                        <a rel="nofollow" href="javascript:void(0)" title="Twitter">
+                        <a rel="nofollow" href="{!!$share_config->twitter!!}" title="Twitter">
                             <img src="images/twitter-ice209.svg?v=1.0.0" class="img-fluid" />
                         </a>
                     </div>
