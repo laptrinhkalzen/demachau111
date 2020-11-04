@@ -2933,7 +2933,7 @@
     <script type="text/javascript" src="{!!asset('js/menuControllere209.js?v=1.0.0')!!}"></script>
     <script type="text/javascript" src="{!!asset('js/orderControllere209.js?v=1.0.0')!!}"></script>
     <script type="text/javascript" src="{!!asset('js/extraControllere209.js?v=1.0.0')!!}"></script>
-    <script type="text/javascript" src="{!!asset('js/yall-js/dist/yall.mine209.js?v=1.0.0')!!}"></script>
+    <script type="text/javascript" src="{!!asset('js/yall.mine209.js?v=1.0.0')!!}"></script>
     <script type="text/javascript" src="{!!asset('js/jquery.lazye209.js?v=1.0.0')!!}"></script>
     <script type="text/javascript">
     //document.addEventListener("DOMContentLoaded", yall);
