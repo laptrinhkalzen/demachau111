@@ -709,20 +709,23 @@
                                             <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"> {!!$product->title!!}</a>
                                             </h6>
                                             <div class="price color-EE7D22 font-weight-bold mb-1" style="font-size: 18px;">
-                                                <div class="price-new">
-                                                    @if($product->sale_price==0)
-                                                    {!!$product->getPrice()!!}
-                                                    @else
-                                                    {!!$product->getSalePrice()!!}
-                                                    @endif
-                                                </div>
-                                                @if($product->sale_price!=0)
-                                                <div class="price-old">
-                                                    {!!$product->getPrice()!!}
-                                                </div>
-                                                @else
-                                                &nbsp
-                                                @endif
+                                                                            <div class="price-product-detail">
+                                <span class="new" id="price-sale">
+                                    <span id="price-sale-detail">
+                                        @if($product->sale_price==0)
+                                        {!!$product->getPrice()!!}
+                                        @else
+                                        {!!$product->getSalePrice()!!}
+                                        @endif
+                                    </span>
+                                    @if($product->sale_price!=0)
+                                    <span class="old" id="price-normal">
+                                        {!!$product->getPrice()!!}
+                                    </span>
+                                    @else
+                                    &nbsp
+                                    @endif
+                                </div>
                                             </div>
                                             <div class="d-flex small">
                                                 <div class="color-FFAB1B mr-2">
