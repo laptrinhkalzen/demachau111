@@ -43,7 +43,7 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 </div>
 </div>
 </section>
-<footer class="footer">
+<footer class="footer" style="background-color: #13295B">
 <div class="container">
 <div class="row justify-content-center ">
 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">

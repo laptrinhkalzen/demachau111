@@ -198,7 +198,7 @@
                         </div>
                         <div class="col-lg-3 col-md-4 col-12">
                             <ul class="list-group list-menu-cate d-none d-md-block un-expand   " style="">
-                                <li class="list-group-item active ">
+                                <li class="list-group-item active " style="background-color: #13295B">
                                     <a rel="nofollow" href="javascript:;" >
                                         <img src="{!!asset('images/listView.svg')!!}" class="img-fluid mr-2" />Danh mục
                                     </a>

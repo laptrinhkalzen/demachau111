@@ -39,7 +39,7 @@
                         <div class="swiper-button-next text-right"><i class="fas fa-chevron-right"></i></div>
                     </div>
                 </div>
-                <div class=" nav-center">
+                <div class=" nav-center" style="background-color: #13295B">
                     <div class="container">
                         <nav class="navbar navbar-expand-md py-md-2 px-0">
                             
@@ -247,7 +247,7 @@
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-12">
                                         <ul class="list-group list-menu-cate d-none d-md-block " style="height: auto;">
-                                            <li class="list-group-item active ">
+                                            <li class="list-group-item active " style="background-color: #13295B">
                                                 <a rel="nofollow" href="javascript:;">
                                                     <img src="{!!asset('images/listView.svg')!!}" class="img-fluid mr-2" />Danh mục
                                                 </a>
@@ -2437,7 +2437,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" style="background-color: #13295B">
         <div class="container">
             <div class="row justify-content-center ">
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">
@@ -2515,7 +2515,7 @@
                 </div>
             </div>
         </div>
-        <div class="bottom-footer py-3 text-right">
+        <div class="bottom-footer py-3 text-right" style="background-color: #13295B">
             <div class="container">
                 <a rel="nofollow" href="javascript:void(0)">
                     <img src="images/visa-ice209.svg?v=1.0.0" class="img-fluid" />
