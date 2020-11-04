@@ -172,7 +172,7 @@
                                     <div class="container">
                                         <div class="row mb-3 no-gutters ">
                                             <div class="col-md-3 col-12 mb-2 mb-md-0">
-                                                <a href="javascript:void(0)" class="h5 font-weight-bold ">{!!$parent_cat->title!!}</a>
+                                                <a href="{!! route('product.show',['alias' => $parent_cat->alias])!!}" class="h5 font-weight-bold ">{!!$parent_cat->title!!}</a>
                                             </div>
                                             <div class="col-md-9 col-12 d-lg-flex justify-content-lg-end align-self-center">
                                                 @if(count($children_category)!=0)
