@@ -664,49 +664,65 @@
                             <div class="pb-2 border-bottom h5 font-weight-600 mb-3">
                                 <img src="{!!asset('images/lastest-icf002.svg?v=GoDAQeasQ5QDI54pnNLz0oiRudBV9A0ehf63EdEb_1Y')!!}" class="img-fluid mr-2" /> Tin mới
                             </div>
-                            <!--                         <div class="list-right mb-4">
+                            <div class="list-right mb-4">
+                                @foreach ($news_arr as $key => $news)
                                 <div class="item">
                                     <div class="row">
                                         <div class="col-xl-3 col-md-4 col-sm-3 col-3 pr-0">
                                             <div class="image">
-                                                <a href="vi-gach-go-nhua-lat-san-nha-tam-ban-cong-san-thuong-sieu-chiu-nuoc.html" title="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">
-                                                    <img src="{!!asset('cms.janhome.vn/uploads/thumb/2020/09/18/vi-gach-go-nhua-lat-san-ban-cong-san-thuong-sieu-chiu-nuoc.jpg')!!}" class="img-fluid" alt="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">
+                                                <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}">
+                                                    <img src="{{$news->getImage()}}" class="img-fluid" >
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="col-xl-9 col-md-8 col-sm-9 col-9">
                                             <h6 class="title">
-                                            <a href="vi-gach-go-nhua-lat-san-nha-tam-ban-cong-san-thuong-sieu-chiu-nuoc.html" title="Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước">Vỉ gạch gỗ nhựa lát sàn nhà tắm, ban công, sân thượng siêu chịu nước</a>
+                                            <a href="{!! route('news.detail', ['alias' => $news->alias]) !!}" >{!!$news->title!!}</a>
                                             </h6>
                                             <div class="time">
-                                                18/09/2020 10:45
+                                                {!!$news->getPostSchedule()!!}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                                @endforeach
+                            </div>
                         </div>
                         <!--Sản phẩm ưu chuộng-->
                         <div class="list-menu-right">
                             <div class="heading mb-3">
                                 <img src="{!!asset('images/icon-spuc6e21.svg?v=Ekha1wOyGV0F79MsQJFeGzHD6ER7s06hLCjkaHd1sto')!!}" class="img-fluid mr-2" />Sản phẩm ưa chuộng
                             </div>
-                            <!--                         <div class="list lastest-news">
+                            <div class="list lastest-news">
+                                @foreach ($hl_products as $key => $product)
                                 <div class="item">
                                     <div class="row">
                                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-3 pr-0">
                                             <div class="image">
-                                                <a href="san-go-janmi-ca11-12mm.html" title="Sàn gỗ JANMI CA11 - 12mm">
-                                                    <img src="{!!asset('cms.janhome.vn/uploads/thumb/2017/04/san-go-janmi-ca11-nho-12mm-4.jpg')!!}" class="img-fluid" alt="/san-go-janmi-ca11-12mm.html">
+                                                <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}" >
+                                                    <img src="{{$product->getImage()}}" class="img-fluid" >
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-9 col-9">
                                             <h6 class="title mb-1">
-                                            <a href="san-go-janmi-ca11-12mm.html" title="Sàn gỗ JANMI CA11 - 12mm">Sàn gỗ JANMI CA11 - 12mm</a>
+                                            <a href="{!! route('product.detail', ['alias' => $product->alias, 'id' => $product->id]) !!}"> {!!$product->title!!}</a>
                                             </h6>
                                             <div class="price color-EE7D22 font-weight-bold mb-1" style="font-size: 18px;">
-                                                495.000đ đ/m2
+                                                <div class="price-new">
+                                                    @if($product->sale_price==0)
+                                                    {!!$product->getPrice()!!}
+                                                    @else
+                                                    {!!$product->getSalePrice()!!}
+                                                    @endif
+                                                </div>
+                                                @if($product->sale_price!=0)
+                                                <div class="price-old">
+                                                    {!!$product->getPrice()!!}
+                                                </div>
+                                                @else
+                                                &nbsp
+                                                @endif
                                             </div>
                                             <div class="d-flex small">
                                                 <div class="color-FFAB1B mr-2">
@@ -719,7 +735,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                                @endforeach
+                            </div>
                         </div>
                         <div class="list-menu-right">
                             <div class="heading mb-3">

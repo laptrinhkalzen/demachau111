@@ -92,7 +92,9 @@ class ProductController extends Controller {
             $detail_products=  $this->productRepo->getDetailProduct($alias);
             $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));
             $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
-            return view('frontend/product/detail',compact('similar_products','detail_products','tags'));
+            $news_arr = $this->newsRepo->getAllNews($limit = 7);
+            $hl_products=  $this->productRepo->getProductByAliasCategory(5,'san-pham-ua-chuong');
+            return view('frontend/product/detail',compact('similar_products','detail_products','tags','news_arr','hl_products'));
         }      
 
     public function index(Request $request) {
