@@ -1,11 +1,13 @@
 @extends('frontend.layouts.master')
 @section('content')
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=691807794780343&autoLogAppEvents=1" nonce="l1Pzn4DQ"></script>
     &nbsp
     @foreach($detail_products as $key => $product )
     <div class="container my-3">
         
-<!--         <ol style="display:none" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <!--         <ol style="display:none" itemscope itemtype="https://schema.org/BreadcrumbList">
             ›
             <li itemprop="itemListElement" itemscope
                 itemtype="https://schema.org/ListItem">
@@ -63,7 +65,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12 facebook-btn">
                     
-                    <div class="fb-like" data-href="https://janhome.vn/san-go-florton-fl669.html" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+                    
                 </div>
             </div>
             <div class="row">
@@ -111,7 +113,7 @@
                                             </div>
                                         </div>
                                         @endforeach
-<!--                                         <div class="swiper-slide">
+                                        <!--                                         <div class="swiper-slide">
                                             <div class="image p-3">
                                                 <a href="javascript:void(0)" target="_blank">
                                                     <img src="{!!asset('images/download-con-thumbf430.svg?v=XdaOvOrrIh8LwF_tskYwkMAYdy0LaDeMFB84LXqK7Yo')!!}" class="img-fluid w-100 " alt="" />
@@ -125,7 +127,7 @@
                                             </div>
                                             Hình 360 độ
                                         </div> -->
-<!--                                         <div class="swiper-slide">
+                                        <!--                                         <div class="swiper-slide">
                                             <div class="image p-3">
                                                 <img src="{!!asset('images/youtube-icon-thumb9f97.svg?v=JYyePGuaK5qmu-3M_SvUVjoQ2YqgMILV8vnWLct9dpc')!!}" class="img-fluid w-100 " alt="" />
                                             </div>
@@ -188,7 +190,7 @@
                             <div class="price-product-detail">
                                 <span class="new" id="price-sale">
                                     <span id="price-sale-detail">
-                                         @if($product->sale_price==0)
+                                        @if($product->sale_price==0)
                                         {!!$product->getPrice()!!}
                                         @else
                                         {!!$product->getSalePrice()!!}
@@ -586,59 +588,11 @@
                         </div>
                         <!--Gửi Comment-->
                         
-                        <div class="comment_binding">
-                            <div class="row mb-3">
-                                <div class="col-md-8 col-sm-8 col-8 ">
-                                    <h5 class="font-weight-600 mb-0 mt-1">0 Bình luận</h5>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-4 text-right">
-                                    <div class="search-comment">
-                                        <input class="form-control " type="text" placeholder="Search" />
-                                        <i class="fas fa-search"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <form class="border border-r-4 mb-4 upload-parent" id="comment-form" data-type="comment" data-object-id="44575" data-object-type="1" data-lang="vi-VN">
-                                <textarea class="form-control txt_content" rows="5" placeholder="Type your topic here"
-                                style="border: 0;" minlength="50"></textarea>
-                                <div class="border-top">
-                                    <div class="form-row p-2 ">
-                                        <div class="col-xl-2 col-md-2 col-12">
-                                            <div class="position-relative form-control text-center mb-2 mb-md-0"
-                                                style="font-size: 14px;">
-                                                <img src="{!!asset('images/camera76b3.svg?v=uzA-a65s3aL1-wYwtH3MvhhBjkxH_9yLA4nhYQFRRyk')!!}" class="img-fluid" />
-                                                <input type="file" class="input-choose-file " accept="image/*" data-target-url="">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4 col-md-4 col-12">
-                                            <input type="text" style="font-size: 14px;" class="form-control mb-2 mb-md-0 txt_name" placeholder="Tên (bắt buộc)" required>
-                                        </div>
-                                        <div class="col-xl-4 col-md-4 col-12">
-                                            <input type="text" style="font-size: 14px;" class="form-control mb-2 mb-md-0 txt_phoneOrEmail" placeholder="Email (bắt buộc)" required>
-                                        </div>
-                                        <div class="col-xl-2 col-md-2 col-12">
-                                            <button class="btn btn-save px-5 mb-2 mb-md-0 send-comment w-100" data-type="comment" data-object-id="44575" data-object-type="1" data-lang="vi-VN" type="submit">Gửi</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="_binding_pickup_img" style="display:none; position:relative">
-                                    <div style="">
-                                        <img class="_place-img" />
-                                    </div>
-                                    <div class="_close_customize" style="position:absolute; top:0px; right: 0px">
-                                        <button class="_place-img-close" type="button" style="background-color: transparent; border: 0;"><i class="fal fa-times-circle"></i></button>
-                                    </div>
-                                    
-                                </div>
-                            </form>
-                            <div class="list-comment mb-4 comment-binding">
-                            </div>
-                            
-                        </div>
+                        <div class="fb-comments" data-href="http://noithathunggia.vn/product/detail/{{$product->id}}" data-numposts="10" data-width=""></div>
+                        
                         <div class="comment-paging" data-total="0" data-size="10" data-object-id="44575" data-object-type="1">
                         </div>
                         <!--Đánh giá end-->
-                        <div class="fb-comments" data-href="https://janhome.vn/san-go-florton-fl669.html" data-numposts="5" data-width="100%"></div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12 ">
                         <!--Chi tiết kỹ thuật-->
@@ -668,7 +622,7 @@
                                         Kích thước
                                     </div>
                                     <div class="ml-auto  text-right">
-                                    {!!$product->getSize()!!}                                   
+                                        {!!$product->getSize()!!}
                                     </div>
                                 </div>
                                 <div class="item ">
@@ -676,7 +630,7 @@
                                         Ứng dụng
                                     </div>
                                     <div class="ml-auto  text-right">
-                                    {!!$product->getApplication()!!}                                      
+                                        {!!$product->getApplication()!!}
                                     </div>
                                 </div>
                                 <div class="item ">
@@ -684,7 +638,7 @@
                                         Đóng hộp
                                     </div>
                                     <div class="ml-auto  text-right">
-                                    {!!$product->getAmount()!!}
+                                        {!!$product->getAmount()!!}
                                     </div>
                                 </div>
                                 <div class="item ">
@@ -692,7 +646,7 @@
                                         Cấp độ chống mài mòn
                                     </div>
                                     <div class="ml-auto  text-right">
-                                    {!!$product->getThickness()!!}                                        
+                                        {!!$product->getThickness()!!}
                                     </div>
                                 </div>
                                 <div class="item ">
@@ -700,7 +654,7 @@
                                         Độ dày
                                     </div>
                                     <div class="ml-auto  text-right">
-                                    {!!$product->getThickness()!!} 
+                                        {!!$product->getThickness()!!}
                                     </div>
                                 </div>
                             </div>
