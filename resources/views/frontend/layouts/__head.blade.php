@@ -1,7 +1,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="revisit-after" content="1 days" />
-    <link rel="shortcut icon" href="{!!asset('cms.janhome.vn/uploads/2020/07/13/janhome.png')!!}" />
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />

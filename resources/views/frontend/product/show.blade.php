@@ -1,11 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
 <body style="background-color: #f6f8f8">
-    <div class="col-md-9">
-        <br />
-        <div class="row filter_data">
-        </div>
-    </div>
     <section class=" pt-3 pb-4" style="margin-top: 20px;">
         <div class="container">
             <div class="row">
@@ -779,7 +774,7 @@
                 </div>
                 <h5 class="mb-3 font-weight-bold">Xách nhận thành công!</h5>
                 <div>
-                    <img src="images/checke209.svg?v=1.0.0" class="img-fluid" />
+                    <img src="{!!asset('images/checke209.svg?v=1.0.0')!!}" class="img-fluid" />
                 </div>
             </div>
             <div class="modal-footer justify-content-center border-0">
