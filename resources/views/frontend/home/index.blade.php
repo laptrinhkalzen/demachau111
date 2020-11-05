@@ -318,11 +318,11 @@
                                         </a>
                                     </div>
                                     <div class="col-3 px-1">
-                                        <a href="{!! route('product.show',['alias' => 'phu-kien'])!!}" class="btn btn-cate">
+                                        <a href="{!! route('product.show',['alias' => 'do-gia-dung'])!!}" class="btn btn-cate">
                                             <img src="{!!asset('/noithathunggia/uploads/2020/05/21/cleane209.png?v=1.0.0')!!}"
                                             class="img-fluid mb-2" />
                                             <div>
-                                                Phụ kiện
+                                                Đồ gia dụng
                                             </div>
                                         </a>
                                     </div>
