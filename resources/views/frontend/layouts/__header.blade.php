@@ -239,7 +239,7 @@
                     </ul>
                     <ul class="row menu-cate-mobile  d-md-none no-gutters">
                         <div class="col-3 px-1">
-                            <a href="javascript:void(0)" class="btn btn-cate">
+                            <a href="{!! route('product.show',['alias' => 'san-go-cong-nghiep'])!!}" class="btn btn-cate">
                                 <img src="{!!asset('/noithathunggia/uploads/2020/09/07/gocongnghiepe209.png?v=1.0.0')!!}"
                                 class="img-fluid mb-2" />
                                 <div>
@@ -248,7 +248,7 @@
                             </a>
                         </div>
                         <div class="col-3 px-1">
-                            <a href="javascript:void(0)" class="btn btn-cate">
+                            <a href="{!! route('product.show',['alias' => 'san-go-tu-nhien'])!!}" class="btn btn-cate">
                                 <img src="{!!asset('/noithathunggia/uploads/2020/05/21/gotunhiene209.png?v=1.0.0')!!}"
                                 class="img-fluid mb-2" />
                                 <div>
@@ -257,7 +257,7 @@
                             </a>
                         </div>
                         <div class="col-3 px-1">
-                            <a href="javascript:void(0)" class="btn btn-cate">
+                            <a href="{!! route('product.show',['alias' => 'san-nhua'])!!}" class="btn btn-cate">
                                 <img src="{!!asset('/noithathunggia/uploads/2020/05/21/sannhuae209.png?v=1.0.0')!!}"
                                 class="img-fluid mb-2" />
                                 <div>
@@ -266,7 +266,7 @@
                             </a>
                         </div>
                         <div class="col-3 px-1">
-                            <a href="javascript:void(0)" class="btn btn-cate">
+                            <a href="{!! route('product.show',['alias' => 'san-go-ngoai-troi'])!!}" class="btn btn-cate">
                                 <img src="{!!asset('/noithathunggia/uploads/2020/05/21/Go%20Ngoai%20troie209.png?v=1.0.0')!!}"
                                 class="img-fluid mb-2" />
                                 <div>
@@ -275,7 +275,7 @@
                             </a>
                         </div>
                         <div class="col-3 px-1">
-                            <a href="javascript:void(0)" class="btn btn-cate">
+                            <a href="{!! route('product.show',['alias' => 'phu-kien'])!!}" class="btn btn-cate">
                                 <img src="{!!asset('/noithathunggia/uploads/2020/05/21/cleane209.png?v=1.0.0')!!}"
                                 class="img-fluid mb-2" />
                                 <div>
@@ -284,7 +284,7 @@
                             </a>
                         </div>
                         <div class="col-3 px-1">
-                            <a href="javascript:void(0)" class="btn btn-cate">
+                            <a href="{!! route('product.show',['alias' => 'san-go-thanh-ly'])!!}" class="btn btn-cate">
                                 <img src="{!!asset('/noithathunggia/uploads/2020/05/21/gocongnghiepe209.png?v=1.0.0')!!}"
                                 class="img-fluid mb-2" />
                                 <div>
@@ -293,7 +293,7 @@
                             </a>
                         </div>
                         <div class="col-3 px-1">
-                            <a href="javascript:void(0)" class="btn btn-cate">
+                            <a href="{!! route('product.show',['alias' => 'trang-tri-noi-that'])!!}" class="btn btn-cate">
                                 <img src="{!!asset('/noithathunggia/uploads/2020/05/21/bede209.png?v=1.0.0')!!}"
                                 class="img-fluid mb-2" />
                                 <div>
@@ -302,7 +302,7 @@
                             </a>
                         </div>
                         <div class="col-3 px-1">
-                            <a href="javascript:void(0)" class="btn btn-cate">
+                            <a href="{!! route('product.show',['alias' => 'trang-tri-ngoai-that'])!!}" class="btn btn-cate">
                                 <img src="{!!asset('/noithathunggia/uploads/2020/05/21/homee209.png?v=1.0.0')!!}"
                                 class="img-fluid mb-2" />
                                 <div>
@@ -326,44 +326,44 @@
     </div>
 </section>
 <!--22-4 danh mục mobile popup-->
-    <section class="cate-mobile ">
-        <div class="bg-fff p-3 m-auto">
-            <div class="tree-menu-mobile">
-                <ul>
-                    @foreach ($category as $key=>$cat)
-                    <li>
-                        <a href="{!! route('product.show',['alias' => $cat->alias])!!}"><span class="span-tree-node tree-lv-0">{!!$cat->title!!}</span></a>
-                        <ul>
-                            @if(!is_null($cat->children))
-                            @foreach ($cat->children as $key=>$cat1)
-                            @if($cat1)
-                            <li class="li-tree-lv-1">
-                                <a href="{!! route('product.show',['alias' => $cat1->alias])!!}"><span class="span-tree-node tree-lv-1" data-sp=1>{!!$cat1->title!!}</span></a>
-                            </li>
-                            @endif
-                            @endforeach
-                            @endif
-                        </ul>
-                    </li>
-                    @endforeach
-                </ul>
+<section class="cate-mobile ">
+    <div class="bg-fff p-3 m-auto">
+        <div class="tree-menu-mobile">
+            <ul>
+                @foreach ($category as $key=>$cat)
+                <li>
+                    <a href="{!! route('product.show',['alias' => $cat->alias])!!}"><span class="span-tree-node tree-lv-0">{!!$cat->title!!}</span></a>
+                    <ul>
+                        @if(!is_null($cat->children))
+                        @foreach ($cat->children as $key=>$cat1)
+                        @if($cat1)
+                        <li class="li-tree-lv-1">
+                            <a href="{!! route('product.show',['alias' => $cat1->alias])!!}"><span class="span-tree-node tree-lv-1" data-sp=1>{!!$cat1->title!!}</span></a>
+                        </li>
+                        @endif
+                        @endforeach
+                        @endif
+                    </ul>
+                </li>
+                @endforeach
+            </ul>
+        </div>
+        <div class=" align-self-md-center d-flex  ">
+            <div class="font-weight-bold">
+                Hotline:
             </div>
-            <div class=" align-self-md-center d-flex  ">
-                <div class="font-weight-bold">
-                    Hotline:
-                </div>
-                <img src="images/hot-line-red-icon.svg" class="img-fluid mx-2 icon-nav align-self-center wow tada infinite " style="width: 20px;" />
-                <div class="align-self-center">
-                    <a rel="nofollow" href="javascript:void(0)">
-                        <div class=" font-weight-bold mb-0">{!!$share_config->hotline!!}</div>
-                    </a>
-                </div>
+            <img src="images/hot-line-red-icon.svg" class="img-fluid mx-2 icon-nav align-self-center wow tada infinite " style="width: 20px;" />
+            <div class="align-self-center">
+                <a rel="nofollow" href="javascript:void(0)">
+                    <div class=" font-weight-bold mb-0">{!!$share_config->hotline!!}</div>
+                </a>
             </div>
         </div>
-        <button class=" btn close-popup" onclick="$('.cate-mobile').toggle(100, 'swing');">
-        <img src="images/times-icon.svg" />
-        </button>
-    </section>
+    </div>
+    <button class=" btn close-popup" onclick="$('.cate-mobile').toggle(100, 'swing');">
+    <img src="images/times-icon.svg" />
+    </button>
+</section>
 </section>
 <div class="social-button">
 <div class="social-button-content">
