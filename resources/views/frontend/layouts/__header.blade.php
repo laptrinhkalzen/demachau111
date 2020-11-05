@@ -26,7 +26,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-md py-md-2 px-0">
                 <a class="navbar-brand d-none d-md-block" href="{{route('home.index')}}" title="">
-                    <img src="{!!$share_config->image!!}" style="width:100px" class="img-fluid" />
+                    <img src="{!!$share_config->image!!}" style="width:20px" class="img-fluid" />
                 </a>
                 <div class="d-md-none">
                     <div class="input-group form-search flex-nowrap mr-2 width-mb" style="width: 210px;">
@@ -325,6 +325,45 @@
         </div>
     </div>
 </section>
+<!--22-4 danh mục mobile popup-->
+    <section class="cate-mobile ">
+        <div class="bg-fff p-3 m-auto">
+            <div class="tree-menu-mobile">
+                <ul>
+                    @foreach ($category as $key=>$cat)
+                    <li>
+                        <a href="{!! route('product.show',['alias' => $cat1->alias])!!}"><span class="span-tree-node tree-lv-0">{!!$cat->title!!}</span></a>
+                        <ul>
+                            @if(!is_null($cat->children))
+                            @foreach ($cat->children as $key=>$cat1)
+                            @if($cat1)
+                            <li class="li-tree-lv-1">
+                                <span class="span-tree-node tree-lv-1" data-url="{!! route('product.show',['alias' => $cat1->alias])!!}" data-sp=1>{!!$cat1->title!!}</span>
+                            </li>
+                            @endif
+                            @endforeach
+                            @endif
+                        </ul>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class=" align-self-md-center d-flex  ">
+                <div class="font-weight-bold">
+                    Hotline:
+                </div>
+                <img src="images/hot-line-red-icon.svg" class="img-fluid mx-2 icon-nav align-self-center wow tada infinite " style="width: 20px;" />
+                <div class="align-self-center">
+                    <a rel="nofollow" href="javascript:void(0)">
+                        <div class=" font-weight-bold mb-0">{!!$share_config->hotline!!}</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class=" btn close-popup" onclick="$('.cate-mobile').toggle(100, 'swing');">
+        <img src="images/times-icon.svg" />
+        </button>
+    </section>
 </section>
 <div class="social-button">
 <div class="social-button-content">
