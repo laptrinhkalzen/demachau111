@@ -332,13 +332,13 @@
                 <ul>
                     @foreach ($category as $key=>$cat)
                     <li>
-                        <a href="{!! route('product.show',['alias' => $cat1->alias])!!}"><span class="span-tree-node tree-lv-0">{!!$cat->title!!}</span></a>
+                        <a href="{!! route('product.show',['alias' => $cat->alias])!!}"><span class="span-tree-node tree-lv-0">{!!$cat->title!!}</span></a>
                         <ul>
                             @if(!is_null($cat->children))
                             @foreach ($cat->children as $key=>$cat1)
                             @if($cat1)
                             <li class="li-tree-lv-1">
-                                <span class="span-tree-node tree-lv-1" data-url="{!! route('product.show',['alias' => $cat1->alias])!!}" data-sp=1>{!!$cat1->title!!}</span>
+                                <a href="{!! route('product.show',['alias' => $cat1->alias])!!}"><span class="span-tree-node tree-lv-1" data-sp=1>{!!$cat1->title!!}</span></a>
                             </li>
                             @endif
                             @endforeach

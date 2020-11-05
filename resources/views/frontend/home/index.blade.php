@@ -47,7 +47,7 @@
                                 <img src="{!!$share_config->image!!}" style="width:100px" class="img-fluid" />
                             </a>
                             <a class="navbar-brand d-md-none" href="{{route('home.index')}}" title="">
-                                <img src="{!!$share_config->image!!}" style="width:20px" class="img-fluid" />
+                                <img src="{!!$share_config->image!!}" style="width:30px" class="img-fluid" />
                             </a>
                             <div class="d-md-none">
                                 <div class="input-group form-search flex-nowrap mr-2 width-mb" style="width: 210px;">
@@ -400,7 +400,7 @@
                 <ul>
                     @foreach ($category as $key=>$cat)
                     <li>
-                        <a href="{!! route('product.show',['alias' => $cat1->alias])!!}"><span class="span-tree-node tree-lv-0">{!!$cat->title!!}</span></a>
+                        <a href="{!! route('product.show',['alias' => $cat->alias])!!}"><span class="span-tree-node tree-lv-0">{!!$cat->title!!}</span></a>
                         <ul>
                             @if(!is_null($cat->children))
                             @foreach ($cat->children as $key=>$cat1)
