@@ -26,7 +26,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-md py-md-2 px-0">
                 <a class="navbar-brand d-none d-md-block" href="{{route('home.index')}}" title="">
-                    <img src="{!!$share_config->image!!}" style="width:20px" class="img-fluid" />
+                    <img src="{!!$share_config->image!!}" style="width:100px" class="img-fluid" />
                 </a>
                 <div class="d-md-none">
                     <div class="input-group form-search flex-nowrap mr-2 width-mb" style="width: 210px;">
