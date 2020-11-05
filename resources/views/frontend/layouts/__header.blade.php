@@ -28,6 +28,9 @@
                 <a class="navbar-brand d-none d-md-block" href="{{route('home.index')}}" title="">
                     <img src="{!!$share_config->image!!}" style="width:100px" class="img-fluid" />
                 </a>
+                <a class="navbar-brand d-md-none" href="{{route('home.index')}}" title="">
+                    <img src="{!!$share_config->image!!}" style="width:30px" class="img-fluid" />
+                </a>
                 <div class="d-md-none">
                     <div class="input-group form-search flex-nowrap mr-2 width-mb" style="width: 210px;">
                         <input type="text" class="form-control find-product " placeholder="Tìm sản phẩm....">
