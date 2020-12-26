@@ -1157,9 +1157,16 @@ function initMap() {
 
 })( jQuery );
 
-$('a[data-action ="add-to-cart"]').click(function(){
+
+     
+
+
+
+
+ $('#add-to-cart1').click(function( e ){
      var product_id=$(this).data('product_id');
      var quantity=1;
+ 
      $.ajax({
             url:'/api/add-to-cart',
             method:'POST',

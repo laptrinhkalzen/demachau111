@@ -1,5 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
+
 <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=691807794780343&autoLogAppEvents=1" nonce="l1Pzn4DQ"></script>
@@ -258,8 +259,9 @@
                                             </a>
                                         </div>
                                         <div class="col-sm-6 col-12 pl-sm-2  ">
-                                            <button href="#" class="btn btn-order-2 w-100   mb-3" id="add-to-cart"  data-product-id="44575">THÊM VÀO GIỎ</button>
+                                            <button href="#" class="btn btn-order-2 w-100   mb-3" id="add-to-cart1"  data-product_id="{{$product1->id}}">THÊM VÀO GIỎ</button>
                                         </div>
+                                        
                                         <div class="col-12  ">
                                             <div class="bg-tuvan">
                                                 <label class="mb-3">
@@ -277,6 +279,7 @@
                                         </div>
                                     </div>
                                 </div>
+                 
                                 <div class="box-km product-suggest mb-3" id="list_combo">
                                     <h6 class="font-weight-600 mb-3 text-uppercase">Thường được mua cùng</h6>
                                     <!--                                 <label class="label-checkbox d-flex">
@@ -1249,6 +1252,7 @@
         "acceptsReservations": "True"
         }
         </script>
+
         <script>    document.addEventListener("DOMContentLoaded", function(event) {     gtag('config', 'AW-830211279');       jQuery('[href^="tel:"]').click(function() {          gtag('event', 'conversion', {'send_to': 'AW-830211279/tVQrCMnmsYYBEM-J8IsD'});     });   }); </script>
         <script type="text/javascript">
         //document.addEventListener("DOMContentLoaded", yall);
@@ -1493,6 +1497,7 @@
     })
     })
     </script>
+    
     <script>
     window.fbAsyncInit = function () {
     setTimeout(function () {

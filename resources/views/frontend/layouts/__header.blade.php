@@ -1,3 +1,4 @@
+
 <section class="header">
     <div class="list-location-top">
         <div class="container position-relative px-md-4">
@@ -22,6 +23,13 @@
             <div class="swiper-button-next text-right"><i class="fas fa-chevron-right"></i></div>
         </div>
     </div>
+    
+  
+     
+       
+   
+
+
     <div class=" nav-center">
         <div class="container">
             <nav class="navbar navbar-expand-md py-md-2 px-0">
@@ -98,16 +106,22 @@
                             </form>
                         </li>
                         <li class="nav-item dropdown mr-md-3 align-self-md-center   mb-md-0 cart">
-                            <a rel="nofollow" class="d-flex dropdown-cart-trigger" href="javascript:void(0)">
+                            <div id="cart">
                                 <div class="icon mr-2">
                                     <img src="{!!asset('images/cart-icone209.svg?v=1.0.0')!!}" class="img-fluid mr-2 icon-nav" />
-                                    <div class="amount" id="cart-count">0
+                                    <div class="amount" id="cart-count">
                                     </div>
                                 </div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-cart">
+                            </div>
+                             
+                            <div id='cart_items' class="dropdown-menu dropdown-menu-right dropdown-cart">
                                 <div class="_binding_dropdown_cart">
                                 </div>
+                                @if(Session('cart'))
+                                @foreach(Session('cart') as $val)
+                                   <div>{{$val['title']}}</div>
+                                @endforeach
+                                @endif
                                 <div class="d-flex px-3">
                                     <div class="text-uppercase">
                                         Tổng tiền:
@@ -394,4 +408,13 @@
     </a>
 </div>
 </div>
+<script type="text/javascript">
+ $("#cart").on("mouseover", function () {
+     $('#cart_items').slideDown("300");
+ });
+
+ $('#cart').click(function(){
+        $('#cart_items').hide();
+ });
+ </script>
 </section>

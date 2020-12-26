@@ -24,6 +24,7 @@
     <link rel="alternate" href="index.html" />
     <link rel="canonical" href="index.html" />
     <link rel="prev" href="index.html" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" type="image / png" href="{!!$share_config->favicon!!}"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&amp;display=swap&amp;subset=vietnamese"
         rel="preload">

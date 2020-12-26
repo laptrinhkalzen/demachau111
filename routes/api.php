@@ -42,3 +42,4 @@ Route::post('/register-member', ['as' => 'api.register-member', 'uses' => 'Api\F
 Route::post('/upload', ['as' => 'api.upload', 'uses' => 'Api\FrontendController@upload']);
 Route::post('/uploadImage', ['as' => 'api.uploadimage', 'uses' => 'Api\FrontendController@uploadImage']);
 Route::post('/delete_image', ['as' => 'api.upload', 'uses' => 'Api\FrontendController@delete_image']);
+Route::post('/add-to-cart1', ['as' => 'api.add_to_cart1', 'uses' => 'Api\ProductController@addToCart']);

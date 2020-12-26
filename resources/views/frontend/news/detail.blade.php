@@ -4,6 +4,9 @@
 @section('content')
 
 <body>
+    <div id="fb-root"></div>
+       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=691807794780343&autoLogAppEvents=1" nonce="l1Pzn4DQ"></script>
+
     @foreach($detail_news as $key => $detail )
 <div class="banner-page py-3 mb-4" style="
         background-image: url(noithathunggia/uploads/thumb/2020/04/22/Banner.jpg) no-repeat center;
@@ -133,7 +136,7 @@
                     </div>
                     <div class="cust-likes-fb-blogs facebook-btn pl-3">
                         <div class="small mr-3"><img src="{!!asset('images/eyecda8.svg?v=0XeLHLM8IpYLOQugNrIb_MnFyB1ai4jM4Sj5aZ6mtfw')!!}" class="img-fluid mr-2" /><!-- 233 --> lượt xem</div>
-                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
+                       
                     </div>
                 </div>
                 <br />
@@ -173,7 +176,7 @@
                     <label class="">Từ khóa:</label>
 
                 </div>
-                <!--Gửi Comment-->
+                <!--Gửi Comment
                 
 
 <div class="comment_binding">
@@ -224,7 +227,10 @@
     <div class="list-comment mb-4 comment-binding">
     </div>
     
-</div>
+</div>-->
+    <div class="fb-comments" data-href="http://noithathunggia.vn/news/detail/{{$detail->id}}" data-numposts="10" data-width=""></div>
+    
+
 <div class="comment-paging" data-total="0" data-size="10" data-object-id="36357" data-object-type="2">
 
 </div>
@@ -232,8 +238,7 @@
 
 
             
-                <div class="fb-comments" data-href="https://janhome.vn/2-loai-san-go-chiu-nuoc-tot-nhat-duoc-phan-phoi-tai-quan-thu-duc-la-san-go-nao.html" data-numposts="5" data-width="100%"></div>
-            
+                
             </div>
         </div>
     </div>

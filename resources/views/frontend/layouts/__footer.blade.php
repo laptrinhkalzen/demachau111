@@ -138,6 +138,37 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 </div>
 </div>
 </footer>
+<!-- //Thêm giỏ hàng -->
+<script type="text/javascript">
+            $(document).ready(function(){
+
+            	$( "#cart-count" ).mouseover(function() {
+				  $( "#cart-count").append( "<div>Handler for .mouseover() called.</div>" );
+				});
+               $('#add-to-cart1').click(function( e ){
+               	     var product_id=$(this).data('product_id');
+				     var quantity=$('#quantity').val();
+		
+				     $.ajax({
+				            url:'{{route("api.add_to_cart1")}}',
+				            method:'POST',
+				            data:{product_id : product_id,quantity:quantity},
+				            success:function(resp){
+				      
+				               if(resp.success == true){
+				               alert(resp.cart);
+				               
+				                 $('#cart-count').html(resp.count);
+				                 $('#total').html(resp.total +' đ');
+				                 alert('Thêm giỏ hàng thành công');
+				               }else{
+				                 alert('Thêm giỏ hàng không thành công');
+				               }
+				            }
+				        });
+	            });
+	       });
+</script>
 <script type="text/javascript" src="{!!asset('js/jquery-3.3.1.mine209.js?v=1.0.0')!!}"></script>
 <script type="text/javascript" src="{!!asset('js/jquery-ui.mine209.js?v=1.0.0')!!}"></script>
 <script type="text/javascript" src="{!!asset('js/popper.mine209.js?v=1.0.0')!!}"></script>

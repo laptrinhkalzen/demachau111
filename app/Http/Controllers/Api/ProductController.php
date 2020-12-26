@@ -18,6 +18,7 @@ class ProductController extends Controller {
     public function addToCart(Request $request) {
         $id = $request->get('product_id');
         $quantity = $request->get('quantity');
+
         $product = $this->productRepo->find($id);
         if (!$product) {
             abort(404);
@@ -42,7 +43,7 @@ class ProductController extends Controller {
                 $total += ($val['price'] * $val['quantity']);
             }
             return response()->json([
-                        'success' => true, 'count' => $count, 'total' => number_format($total)
+                       'success' => true, 'count' => $count, 'total' => number_format($total),'cart'=>$cart
             ]);
         }
         if (isset($cart[$id])) {
@@ -54,7 +55,7 @@ class ProductController extends Controller {
                 $total += ($val['price'] * $val['quantity']);
             }
             return response()->json([
-                        'success' => true, 'count' => $count, 'total' => number_format($total)
+                       'success' => true, 'count' => $count, 'total' => number_format($total),'cart'=>$cart
             ]);
         } else {
             $cart[$id] = [
@@ -71,7 +72,7 @@ class ProductController extends Controller {
             $total += ($val['price'] * $val['quantity']);
         }
         return response()->json([
-                    'success' => true, 'count' => $count, 'total' => number_format($total)
+                    'success' => true, 'count' => $count, 'total' => number_format($total),'cart'=>$cart
         ]);
     }
 
