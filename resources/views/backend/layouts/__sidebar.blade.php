@@ -104,10 +104,12 @@
                     </ul>
                 </li> -->
                 
+                
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Giao diện</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Layouts">
                         <li class="nav-item"><a href="{{route('admin.slide.index')}}" class="nav-link">Slide-Banner</a></li>
+                        <li class="nav-item"><a href="{{route('admin.social.index')}}" class="nav-link">Chat Box</a></li>
 <!--                         <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
                         <li class="nav-item"><a href="{{route('admin.service.index')}}" class="nav-link">Dịch vụ</a></li>
                         <li class="nav-item"><a href="{{route('admin.block.index')}}" class="nav-link">Khối</a></li>

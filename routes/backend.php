@@ -29,6 +29,23 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::post('/coupon/update/{id}', ['as' => 'admin.coupon.update', 'uses' => 'Backend\CouponController@update']);
     Route::delete('/coupon/delete/{id}', ['as' => 'admin.coupon.destroy', 'uses' => 'Backend\CouponController@destroy']);
 
+    // Giao diện: social
+     Route::get('/social', ['as' => 'admin.social.index', 'uses' => 'Backend\SocialController@index']);
+    Route::get('/social/create', ['as' => 'admin.social.create', 'uses' => 'Backend\SocialController@create']);
+    Route::get('/social/edit/{id}', ['as' => 'admin.social.edit', 'uses' => 'Backend\SocialController@edit']);
+    Route::post('/social/store', ['as' => 'admin.social.store', 'uses' => 'Backend\SocialController@store']);
+    Route::post('/social/update/{id}', ['as' => 'admin.social.update', 'uses' => 'Backend\SocialController@update']);
+    Route::delete('/social/delete/{id}', ['as' => 'admin.social.destroy', 'uses' => 'Backend\SocialController@destroy']);
+
+    /* Phương thức thanh toán */
+    Route::get('/payment-method', ['as' => 'admin.payment_method.index', 'uses' => 'Backend\PaymentMethodController@index']);
+    Route::get('/payment-method/create', ['as' => 'admin.payment_method.create', 'uses' => 'Backend\PaymentMethodController@create']);
+    Route::get('/payment-method/edit/{id}', ['as' => 'admin.payment_method.edit', 'uses' => 'Backend\PaymentMethodController@edit']);
+    Route::post('/payment-method/store', ['as' => 'admin.payment_method.store', 'uses' => 'Backend\PaymentMethodController@store']);
+    Route::post('/payment-method/update/{id}', ['as' => 'admin.payment_method.update', 'uses' => 'Backend\PaymentMethodController@update']);
+    Route::delete('/payment-method/delete/{id}', ['as' => 'admin.payment_method.destroy', 'uses' => 'Backend\PaymentMethodController@destroy']);
+    Route::get('/', ['as' => 'admin.index', 'uses' => 'Backend\BackendController@index']);
+
     /* Quản lý video */
     Route::get('/video', ['as' => 'admin.video.index', 'uses' => 'Backend\VideoController@index']);
     Route::get('/video/create', ['as' => 'admin.video.create', 'uses' => 'Backend\VideoController@create']);

@@ -21,7 +21,8 @@ class Frontend {
         foreach($category as $value){
             $value->children = $this->categoryRepo->getChildren($value->id);
         } 
-        
+        $social = \DB::table('social')->orderBy('order','asc')->get();
+        $payment = \DB::table('payment')->orderBy('order','asc')->get();
         $template_setting= \DB::table('template_setting')->join('template_attribute','template_setting.attribute_id','=','template_attribute.id')->select('template_setting.name','template_setting.value','template_attribute.title')->get();
         $news_footer1 = \DB::table('news')->join('news_category', 'news.id', '=', 'news_category.news_id')->where('news_category.category_id',238)->where('status',1)->select('news.*')->orderBy('news.ordering')->get();
         $news_footer2 = \DB::table('news')->join('news_category', 'news.id', '=', 'news_category.news_id')->where('news_category.category_id',239)->where('status',1)->select('news.*')->orderBy('news.ordering')->get();
@@ -46,7 +47,8 @@ class Frontend {
         \View::share(['count_total' => $total]);
         \View::share(['menu' => $menu]);
         \View::share(['category' => $category]);
-        
+        \View::share(['social' => $social]);
+        \View::share(['payment' => $payment]);
         \View::share(['news_footer1' => $news_footer1]);
         \View::share(['news_footer2' => $news_footer2]);
         \View::share(['template' => $template]);

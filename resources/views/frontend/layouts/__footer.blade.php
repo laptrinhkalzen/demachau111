@@ -1,3 +1,73 @@
+<style type="text/css">
+
+
+.fab-icon-holder:hover {
+    opacity: 0.8;
+    color: #66a3ff;
+}
+
+.fab-icon-holder i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.fab {
+    width: 60px;
+    height: 60px;
+    background: none;
+}
+
+.fab-options {
+    list-style-type: none;
+    margin: 0;
+
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+
+    opacity: 0;
+
+    transition: all 0.3s ease;
+    transform: scale(0);
+    transform-origin: 85% bottom;
+}
+
+.fab:hover+.fab-options,
+.fab-options:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fab-options li {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.fab-label {
+    padding: 2px 5px;
+    align-self: center;
+    user-select: none;
+    white-space: nowrap;
+    border-radius: 3px;
+    font-size: 13px;
+    background: ;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+.fab-label:hover{
+    opacity: 0.8;
+    background:#66a3ff;
+    
+}
+</style>
 <section class="service-home py-3">
 <div class="container">
 <div class="row">
@@ -83,19 +153,30 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 <button class="btn input-group-text btn-email-collection">Đăng ký</button>
 </div>
 </div>
-<h4 class="title-menu mb-4">Kết nối với chúng tôi</h4>
-<div class="social">
-<a rel="nofollow" href="{!!$share_config->facebook!!}" title="Facebook">
-<img src="{!!asset('images/fb-cir-ice209.svg?v=1.0.0')!!}" class="img-fluid mr-2" />
-</a>
-<a rel="nofollow" href="{!!$share_config->twitter!!}" title="Twitter">
-<img src="{!!asset('images/twitter-ice209.svg?v=1.0.0')!!}" class="img-fluid" />
-</a>
-</div>
-</div>
-</div>
+	<div  class="col-lg-12">
+        <h4  class="title-menu ">Liên hệ với chúng tôi</h4>
+        <li style="display:flex; margin-bottom:15px;">
+        	@foreach($social as $contact)
+          <div class="fab-icon-holder">
+           <a style="" href="{{$contact->link}}" target="_blank" class="mr-2"><img style="width: 50px;" src="{!!url('upload/config/'.$contact->image)!!}" ></a>
+          </div>
+           @endforeach
+        </li>
+    </div>
+
+    <div class="col-lg-3 order-lg-last" >
+                <div class="mb-2">
+                    <h6 class="text-uppercase fw-600 mb-4">Payment Method</h6>
+                    <div class="text-light lead-5">
+                      @foreach($payment as $payment)
+                        <a href="{{$payment->link}}" target="_blank" class="mr-2"><img style="width:70px; height:50px; background:none; border-radius:5px;;" src="{!!url('upload/config/'.$payment->image)!!}" ></a>
+                      @endforeach  
+                    </div>
+                </div>    
+            </div>
+            
 <div class="row d-flex justify-content-center" style="align-items:center;">
-<div class="col-12 border-bottom p-3 mb-3" style="border-color: #7F7D7D!important;">
+<div class="col-12 border-bottom mb-3" style="border-color: #7F7D7D!important;">
 </div>
 <div class="col-lg-8 col-md-8 col-sm-12 col-12  pull-left">
 <div class="font-weight-bold mb-2">Công ty nội thất Hưng Gia</div>
@@ -103,12 +184,13 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 Địa chỉ: {!!$share_config->address!!}
 </div>
 <div class="mb-4">
-<div class="d-lg-inline-block mb-2 mb-lg-0">
-<a rel="nofollow" href="tel:{!!$share_config->hotline!!}"><i class="fas fa-phone-alt mr-2"></i>Hotline: {!!$share_config->hotline!!}</a>
-</div>
-<div class="d-lg-inline-block ml-lg-5">
-<a rel="nofollow" href="mail:{!!$share_config->email!!}"><i class="fas fa-envelope mr-2"></i>Email: {!!$share_config->email!!}</a>
-</div>
+
+	<div class="d-lg-inline-block mb-2 mb-lg-0">
+		<a rel="nofollow" href="tel:{!!$share_config->hotline!!}"><i class="fas fa-phone-alt mr-2"></i>Hotline: {!!$share_config->hotline!!}</a>
+	</div>
+	<div class="d-lg-inline-block mb-2 mb-lg-0">
+		<a rel="nofollow" href="mail:{!!$share_config->email!!}"><i class="fas fa-envelope mr-2"></i>Email: {!!$share_config->email!!}</a>
+	</div>
 </div>
 </div>
 <div class="col-lg-2 col-md-2 col-sm-4 col-4  text-center">
@@ -142,7 +224,9 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 <script type="text/javascript">
             $(document).ready(function(){
 
-            	
+            	$( "#cart-count" ).mouseover(function() {
+				  $( "#cart-count").append( "<div>Handler for .mouseover() called.</div>" );
+				});
                $('#add-to-cart1').click(function( e ){
                	     var product_id=$(this).data('product_id');
 				     var quantity=$('#quantity').val();
@@ -152,15 +236,12 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 				            method:'POST',
 				            data:{product_id : product_id,quantity:quantity},
 				            success:function(resp){
-				                  
+				      
 				               if(resp.success == true){
-				               
+				               alert(resp.cart);
 				               
 				                 $('#cart-count').html(resp.count);
-				                 $('#total1').html(resp.total +' đ');
-				                 $("#cart_items").load(" #cart_items > *");
-				                 $("#cart").load(" #cart > *");
-				                 $("#sub_total").load(" #sub_total > *");
+				                 $('#total').html(resp.total +' đ');
 				                 alert('Thêm giỏ hàng thành công');
 				               }else{
 				                 alert('Thêm giỏ hàng không thành công');
