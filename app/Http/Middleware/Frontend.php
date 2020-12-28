@@ -35,8 +35,15 @@ class Frontend {
                     $count += $val['quantity'];
             }
         }
+        $total=0;
+        if(! is_null(session('cart'))){
+            foreach(session('cart') as $val){
+                    $total += $val['price']*$val['quantity'];
+            }
+        }
         \View::share(['share_config' => $config]);
         \View::share(['count_cart' => $count]);
+        \View::share(['count_total' => $total]);
         \View::share(['menu' => $menu]);
         \View::share(['category' => $category]);
         

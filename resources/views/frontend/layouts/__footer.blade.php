@@ -142,9 +142,7 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 <script type="text/javascript">
             $(document).ready(function(){
 
-            	$( "#cart-count" ).mouseover(function() {
-				  $( "#cart-count").append( "<div>Handler for .mouseover() called.</div>" );
-				});
+            	
                $('#add-to-cart1').click(function( e ){
                	     var product_id=$(this).data('product_id');
 				     var quantity=$('#quantity').val();
@@ -154,12 +152,15 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 				            method:'POST',
 				            data:{product_id : product_id,quantity:quantity},
 				            success:function(resp){
-				      
+				                  
 				               if(resp.success == true){
-				               alert(resp.cart);
+				               
 				               
 				                 $('#cart-count').html(resp.count);
-				                 $('#total').html(resp.total +' đ');
+				                 $('#total1').html(resp.total +' đ');
+				                 $("#cart_items").load(" #cart_items > *");
+				                 $("#cart").load(" #cart > *");
+				                 $("#sub_total").load(" #sub_total > *");
 				                 alert('Thêm giỏ hàng thành công');
 				               }else{
 				                 alert('Thêm giỏ hàng không thành công');

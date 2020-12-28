@@ -28,8 +28,7 @@
      
        
    
-
-
+                             
     <div class=" nav-center">
         <div class="container">
             <nav class="navbar navbar-expand-md py-md-2 px-0">
@@ -105,29 +104,45 @@
                                 </div>
                             </form>
                         </li>
-                        <li class="nav-item dropdown mr-md-3 align-self-md-center   mb-md-0 cart">
+                    
+                        <li  class="nav-item dropdown mr-md-3 align-self-md-center   mb-md-0 cart">
+
                             <div id="cart">
                                 <div class="icon mr-2">
                                     <img src="{!!asset('images/cart-icone209.svg?v=1.0.0')!!}" class="img-fluid mr-2 icon-nav" />
-                                    <div class="amount" id="cart-count">
+                                    <div class="amount" >
+                                        {{$count_cart}}
                                     </div>
                                 </div>
                             </div>
                              
                             <div id='cart_items' class="dropdown-menu dropdown-menu-right dropdown-cart">
                                 <div class="_binding_dropdown_cart">
+                                    <div class="container">
+
+                                    @if(Session('cart'))
+                                    @foreach(Session('cart') as $val)
+                                     <div class="row">
+
+                                        <div class="col-md-4">
+                                            <img src="{{$val['image']}}" >
+                                        </div> 
+                                         <div class="col-md-8">
+                                            <div>{{$val['title']}}</div>
+                                             <div>{{$val['quantity']}} x {{$val['price']}}</div>
+                                        </div>   
+                                     </div>   
+                                    @endforeach
+                                    @endif
                                 </div>
-                                @if(Session('cart'))
-                                @foreach(Session('cart') as $val)
-                                   <div>{{$val['title']}}</div>
-                                @endforeach
-                                @endif
-                                <div class="d-flex px-3">
+                                </div>
+                                
+                                <div id="sub_total" class="d-flex px-3">
                                     <div class="text-uppercase">
                                         Tổng tiền:
                                     </div>
                                     <div class="h6 font-weight-bold ml-auto color-EE7D22 small-total-cart">
-                                        21.000đ
+                                        {{number_format($count_total)}}đ
                                     </div>
                                 </div>
                                 <div class="bottom-dropdown d-flex  ">
@@ -139,8 +154,9 @@
                                         <a rel="nofollow" href="{{route('home.checkout_order')}}"  id="link-clear-cart" class="btn-link link-view-more text-uppercase"><small>Xóa giỏ hàng</small></a><br />
                                     </div>
                                 </div>
-                            </div>
+                         
                         </li>
+                        </div>
                         <li class="nav-item mr-md-3  align-self-md-center d-flex d-sm-none d-lg-flex"
                             style="white-space: nowrap;">
                             <div>
@@ -164,6 +180,7 @@
             </nav>
         </div>
     </div>
+          
     <!--     <div class="local-mobile container d-flex d-md-none small py-2" style="background: #C8EBFD;">
         <div><i class="fas fa-map-marker-alt mr-2" style="color: #1A468F;"></i>Bạn đang xem sản phẩm tại Hà Nội</div>
         <a href="#" rel="nofollow" class="btn-link ml-auto" style="text-decoration: underline;" data-toggle="modal" data-target="#modal-khu-vuc">Đổi</a>
