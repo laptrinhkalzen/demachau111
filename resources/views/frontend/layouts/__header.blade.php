@@ -1,3 +1,52 @@
+<<<<<<< Updated upstream
+=======
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+    <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='copyright' content=''>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title Tag  -->
+    <title>Eshop - eCommerce HTML5 Template.</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{asset('public/demachau/images/favicon.png')}}">
+    <!-- Web Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    
+    <!-- StyleSheet -->
+    
+    <!-- Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{{asset('public/demachau/css/bootstrap.css')}}">
+    <!-- Magnific Popup -->
+<link rel="stylesheet" href="{{asset('public/demachau/css/magnific-popup.min.css')}}">
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="{{asset('public/demachau/css/font-awesome.css')}}">
+    <!-- Fancybox -->
+<link rel="stylesheet" href="{{asset('public/demachau/css/jquery.fancybox.min.css')}}">
+    <!-- Themify Icons -->
+<link rel="stylesheet" href="{{asset('public/demachau/css/themify-icons.css')}}">
+    <!-- Nice Select CSS -->
+<link rel="stylesheet" href="{{asset('public/demachau/css/niceselect.css')}}">
+    <!-- Animate CSS -->
+<link rel="stylesheet" href="{{asset('public/demachau/css/animate.css')}}">
+    <!-- Flex Slider CSS -->
+<link rel="stylesheet" href="{{asset('public/demachau/css/flex-slider.min.css')}}">
+    <!-- Owl Carousel -->
+<link rel="stylesheet" href="{{asset('public/demachau/css/owl-carousel.css')}}">
+    <!-- Slicknav -->
+<link rel="stylesheet" href="{{asset('public/demachau/css/slicknav.min.css')}}">
+    
+    <!-- Eshop StyleSheet -->
+<link rel="stylesheet" href="{{asset('public/demachau/css/reset.css')}}">
+<link rel="stylesheet" href="{{asset('public/demachau/css/style.css')}}">
+<link rel="stylesheet" href="{{asset('public/demachau/css/responsive.css')}}">
+>>>>>>> Stashed changes
 
 <section class="header">
     <div class="list-location-top">
@@ -48,14 +97,41 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< Updated upstream
                 <!--22-4 Thêm btn giỏ hàng-->
                 <div class="nav-item align-self-md-center mb-0 cart d-md-none">
                     <button class="btn p-0 dropdown-cart-trigger-mobile" @*onclick="$('.cart-mobile').toggle(100, 'swing');" *@>
                     <div class="icon ">
                         <img src="{!!asset('images/cart-icone209.svg?v=1.0.0')!!}" class="img-fluid mr-2 icon-nav" />
                         <div id="cart-count-mobile" class="amount">
+=======
+            </div>
+        </div>
+        <!-- End Topbar -->
+        <div class="middle-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-12">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="{{route('home.index')}}"><img src="{{('images/logo.png')}}" alt="logo"></a>
+                        </div>
+                        <!--/ End Logo -->
+                        <!-- Search Form -->
+                        <div class="search-top">
+                            <div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
+                            <!-- Search Form -->
+                            <div class="search-top">
+                                <form class="search-form">
+                                    <input type="text" placeholder="Search here..." name="search">
+                                    <button value="search" type="submit"><i class="ti-search"></i></button>
+                                </form>
+                            </div>
+                            <!--/ End Search Form -->
+>>>>>>> Stashed changes
                         </div>
                     </div>
+<<<<<<< Updated upstream
                     </button>
                 </div>
                 <!--22-4 Sửa onclick-->
@@ -95,11 +171,49 @@
                                                 <a href="javascript:void(0)">Sàn gỗ thanh lý</a>
                                             </div>
                                         </div>
+=======
+                    <div class="col-lg-8 col-md-7 col-12">
+                        <div class="search-bar-top">
+                            <div class="search-bar">
+                                <select>
+                                    <option selected="selected">Danh mục</option>
+                                    <option>watch</option>
+                                    <option>mobile</option>
+                                    <option>kid’s item</option>
+                                </select>
+                                <form>
+                                    <input name="search" placeholder="Nhập sản phẩm muốn tìm kiếm" type="search">
+                                    <button class="btnn"><i class="ti-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-12">
+                        <div class="right-bar">
+                            <!-- Search Form -->
+                            <div class="sinlge-bar">
+                                <a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="sinlge-bar">
+                                <a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="sinlge-bar shopping">
+                                <a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
+                                <!-- Shopping Item -->
+                                <div class="shopping-item">
+                                    <div class="dropdown-cart-header">
+                                        <span>2 Items</span>
+                                        <a href="#">View Cart</a>
+>>>>>>> Stashed changes
                                     </div>
                                     <div class="suggest-text suggest-text-2">
                                         <div class="h6 px-3">
                                             Sản phẩm gợi ý
                                         </div>
+<<<<<<< Updated upstream
+=======
+                                        <a href="{{route('home.checkout_order')}}" class="btn animate">Checkout</a>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                             </form>
@@ -179,6 +293,7 @@
                 </div>
             </nav>
         </div>
+<<<<<<< Updated upstream
     </div>
           
     <!--     <div class="local-mobile container d-flex d-md-none small py-2" style="background: #C8EBFD;">
@@ -254,6 +369,67 @@
                                             <ul class="ul-tree-lv-2">
                                                 @foreach ($cat1->children as $key=>$cat2)
                                                 <li class="li-tree-lv-2"><a class="span-tree-node tree-lv-2" href="{!! route('product.show',['alias' => $cat2->alias])!!}" data-url="/san-tre-ali">{!!$cat2->title!!}</a>
+=======
+        <!-- Header Inner -->
+        <div class="header-inner">
+            <div class="container">
+                <div class="cat-nav-head">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="all-category">
+                                <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>DANH MỤC</h3>
+                                <ul class="main-category">
+                                    <li><a href="#">New Arrivals <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <ul class="sub-category">
+                                            <li><a href="#">accessories</a></li>
+                                            <li><a href="#">best selling</a></li>
+                                            <li><a href="#">top 100 offer</a></li>
+                                            <li><a href="#">sunglass</a></li>
+                                            <li><a href="#">watch</a></li>
+                                            <li><a href="#">man’s product</a></li>
+                                            <li><a href="#">ladies</a></li>
+                                            <li><a href="#">westrn dress</a></li>
+                                            <li><a href="#">denim </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="main-mega"><a href="#">best selling <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <ul class="mega-menu">
+                                            <li class="single-menu">
+                                                <a href="#" class="title-link">Shop Kid's</a>
+                                                <div class="image">
+                                                    <img src="https://via.placeholder.com/225x155" alt="#">
+                                                </div>
+                                                <div class="inner-link">
+                                                    <a href="#">Kids Toys</a>
+                                                    <a href="#">Kids Travel Car</a>
+                                                    <a href="#">Kids Color Shape</a>
+                                                    <a href="#">Kids Tent</a>
+                                                </div>
+                                            </li>
+                                            <li class="single-menu">
+                                                <a href="#" class="title-link">Shop Men's</a>
+                                                <div class="image">
+                                                    <img src="https://via.placeholder.com/225x155" alt="#">
+                                                </div>
+                                                <div class="inner-link">
+                                                    <a href="#">Watch</a>
+                                                    <a href="#">T-shirt</a>
+                                                    <a href="#">Hoodies</a>
+                                                    <a href="#">Formal Pant</a>
+                                                </div>
+                                            </li>
+                                            <li class="single-menu">
+                                                <a href="#" class="title-link">Shop Women's</a>
+                                                <div class="image">
+                                                    <img src="https://via.placeholder.com/225x155" alt="#">
+                                                </div>
+                                                <div class="inner-link">
+                                                    <a href="#">Ladies Shirt</a>
+                                                    <a href="#">Ladies Frog</a>
+                                                    <a href="#">Ladies Sun Glass</a>
+                                                    <a href="#">Ladies Watch</a>
+                                                </div>
+>>>>>>> Stashed changes
                                             </li>
                                             @endforeach
                                         </ul>
@@ -281,6 +457,7 @@
                                 </div>
                             </a>
                         </div>
+<<<<<<< Updated upstream
                         <div class="col-3 px-1">
                             <a href="{!! route('product.show',['alias' => 'san-go-tu-nhien'])!!}" class="btn btn-cate">
                                 <img src="{!!asset('/noithathunggia/uploads/2020/05/21/gotunhiene209.png?v=1.0.0')!!}"
@@ -316,6 +493,38 @@
                                     Đồ gia dụng
                                 </div>
                             </a>
+=======
+                        <div class="col-lg-9 col-12">
+                            <div class="menu-area">
+                                <!-- Main Menu -->
+                                <nav class="navbar navbar-expand-lg">
+                                    <div class="navbar-collapse">   
+                                        <div class="nav-inner"> 
+                                            <ul class="nav main-menu menu navbar-nav">
+                                                    <li class="active"><a href="#">Home</a></li>
+                                                    <li><a href="#">Product</a></li>                                                
+                                                    <li><a href="#">Service</a></li>
+                                                    <li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="shop-grid.html">Shop Grid</a></li>
+                                                            <li><a href="cart.html">Cart</a></li>
+                                                            <li><a href="{{route('home.checkout_order')}}">Checkout</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Pages</a></li>                                  
+                                                    <li><a href="#">Blog<i class="ti-angle-down"></i></a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="blog-single-sidebar.html">Blog Single Sidebar</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="contact.html">Contact Us</a></li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <!--/ End Main Menu --> 
+                            </div>
+>>>>>>> Stashed changes
                         </div>
                         <div class="col-3 px-1">
                             <a href="{!! route('product.show',['alias' => 'san-go-thanh-ly'])!!}" class="btn btn-cate">

@@ -17,7 +17,7 @@ class CheckoutOrderController extends Controller {
         if (config('global.device') != 'pc') {
             return view('mobile/home/checkout_order');
         } else {
-            return view('frontend/home/checkout_order')->with('total',$total);
+            return view('frontend/cart/checkout')->with('total',$total);
         }
     }
 

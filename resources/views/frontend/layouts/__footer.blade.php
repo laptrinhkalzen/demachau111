@@ -174,6 +174,7 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
                     </div>
                 </div>    
             </div>
+<<<<<<< Updated upstream
             
 <div class="row d-flex justify-content-center" style="align-items:center;">
 <div class="col-12 border-bottom mb-3" style="border-color: #7F7D7D!important;">
@@ -274,3 +275,46 @@ Nhập khẩu - phân phối - bán lẻ trực tiếp
 <script type="text/javascript" src="{!!asset('js/paginationJS270f.js?v=_GywrNV0fMW9l0mnOa6Gz8zbqp7_d5F3yBpGH6xQmEM')!!}"></script>
 <script type="text/javascript" src="{!!asset('js/blogDetailController16e5.js?v=jeDzoTlSznrquScD36vjEo8fS4cC-UKkPnTH1HmuiwQ')!!}"></script>
 <script type="text/javascript" src="{!!asset('js/productDetailController88a2.js?v=QePaWHwNjOh9moaVkc8tT2VLuGo6eQ_JR_aZ76R4hY8')!!}"></script>
+=======
+        </div>
+    </footer>
+    <!-- /End Footer Area -->
+    
+ 
+    <!-- Jquery -->
+    
+  <script src="{{asset('demachau/js/jquery.min.js')}}"></script>
+    <script src="{{asset('demachau/js/jquery-migrate-3.0.0.js')}}"></script>
+    <script src="{{asset('demachau/js/jquery-ui.min.js')}}"></script>
+    <!-- Popper JS -->
+    <script src="{{asset('demachau/js/popper.min.js')}}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{{asset('demachau/js/bootstrap.min.js')}}"></script>
+    <!-- Color JS -->
+    <script src="{{asset('demachau/js/colors.js')}}"></script>
+    <!-- Slicknav JS -->
+    <script src="{{asset('demachau/js/slicknav.min.js')}}"></script>
+    <!-- Owl Carousel JS -->
+    <script src="{{asset('demachau/js/owl-carousel.js')}}"></script>
+    <!-- Magnific Popup JS -->
+    <script src="{{asset('demachau/js/magnific-popup.js')}}"></script>
+    <!-- Waypoints JS -->
+    <script src="{{asset('demachau/js/waypoints.min.js')}}"></script>
+    <!-- Countdown JS -->
+    <script src="{{asset('demachau/js/finalcountdown.min.js')}}"></script>
+    <!-- Nice Select JS -->
+    <script src="{{asset('demachau/js/nicesellect.js')}}"></script>
+    <!-- Flex Slider JS -->
+    <script src="{{asset('demachau/js/flex-slider.js')}}"></script>
+    <!-- ScrollUp JS -->
+    <script src="{{asset('demachau/js/scrollup.js')}}"></script>
+    <!-- Onepage Nav JS -->
+    <script src="{{asset('demachau/js/onepage-nav.min.js')}}"></script>
+    <!-- Easing JS -->
+    <script src="{{asset('demachau/js/easing.js')}}"></script>
+    <!-- Active JS -->
+    <script src="{{asset('demachau/js/active.js')}}"></script>
+    <script src="{{asset('demachau/js/custom.js')}}"></script>
+</body>
+</html>
+>>>>>>> Stashed changes
