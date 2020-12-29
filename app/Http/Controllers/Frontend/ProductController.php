@@ -64,7 +64,7 @@ class ProductController extends Controller {
 
     public function category(Request $request, $alias) {
           $product_arr = $this->productRepo->getProductByAliasCategory($alias);
-          dd($product_arr);
+          dd($product_arr); 
           return view('frontend/category/show',compact('product_arr',$product_arr));
     }
 
