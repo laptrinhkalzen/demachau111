@@ -62,6 +62,12 @@ class ProductController extends Controller {
        return view('frontend/product/show',compact('search_product','count','title_category','slide1','category_arr','parent_category','children_category','product_category','product_arr','main_category','origin','category_filter','brand','color','cat_id','price_id','brand_id','color_id','sort_id'));
     }
 
+    public function category(Request $request, $alias) {
+          $product_arr = $this->productRepo->getProductByAliasCategory($alias);
+          dd($product_arr);
+          return view('frontend/category/show',compact('product_arr',$product_arr));
+    }
+
     public function search(Request $request) {
          ini_set('memory_limit', '2048M');
 
