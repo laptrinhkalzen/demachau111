@@ -16,14 +16,14 @@ class CategoryRepository extends AbstractRepository {
 
     public function validateCreate() {
         return $rules = [
-            'title' => 'required',
+            'name' => 'required',
             'alias' => 'required'
         ];
     }
 
     public function validateUpdate($id) {
         return $rules = [
-            'title' => 'required',
+            'name' => 'required',
             'alias' => 'required'
         ];
     }

@@ -40,8 +40,8 @@
                 @foreach($records as $key=>$record)
                 <tr>
                     <td>{{++$key}}</td>
-                    <td>{{$record->title}}</td>
-                    <td>@if($record->parent){{$record->parent->title}}@endif</td>
+                    <td>{{$record->name}}</td>
+                    <td>@if($record->parent){{$record->parent->name}}@endif</td>
                     <td>{{$record->ordering}}</td>
                     <td>
                         @if($record->status)

@@ -31,14 +31,14 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label text-right">Tiêu đề <span class="text-danger">*</span></label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" name="title" value="{!!old('title')!!}" required="">
-                                    {!! $errors->first('title', '<span class="text-danger">:message</span>') !!}
+                                    <input type="text" class="form-control" name="name" value="{!!old('name')!!}" required="">
+                                    {!! $errors->first('name', '<span class="text-danger">:message</span>') !!}
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label text-right">Url <span class="text-danger">*</span></label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" name="alias" readonly="" value="{!!old('alias')!!}" required="">
+                                    <input type="text" class="form-control" name="alias"  value="{!!old('alias')!!}" required="">
                                     {!! $errors->first('alias', '<span class="text-danger">:message</span>') !!}
                                 </div>
                             </div>

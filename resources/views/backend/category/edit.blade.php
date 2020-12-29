@@ -32,8 +32,8 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label text-right">Tiêu đề <span class="text-danger">*</span></label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" name="title" value="{!!$record->title!!}" required="">
-                                    {!! $errors->first('title', '<span class="text-danger">:message</span>') !!}
+                                    <input type="text" class="form-control" name="name" value="{!!$record->name!!}" required="">
+                                    {!! $errors->first('name', '<span class="text-danger">:message</span>') !!}
                                 </div>
                             </div>
                             <div class="form-group row">

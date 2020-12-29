@@ -15,11 +15,15 @@ class Frontend {
         $config = \DB::table('config')->first();
         $menu_arr = \DB::table('menu')->where('status',1)->orderBy('ordering', 'asc')->get();
         $menu_cat = \DB::table('category')->where('status',1)->orderBy('ordering', 'asc')->get();
+        $menu_cats = \DB::table('category')->where('parent_id', 0)->get();
         $menu = \DB::table('menu')->where('parent_id', 0)->get();
         foreach($menu as $key=>$val){
             $menu[$key]->children = \DB::table('menu')->where('parent_id',$val->id)->get();
         }
         foreach($menu_cat as $value){
+            $value->children = $this->categoryRepo->getChildren($value->id);
+        }
+        foreach($menu_cats as $value){  
             $value->children = $this->categoryRepo->getChildren($value->id);
         }
         $category =  $this->categoryRepo->getProductCategory();
@@ -51,6 +55,7 @@ class Frontend {
         \View::share(['count_cart' => $count]);
         \View::share(['count_total' => $total]);
         \View::share(['menu_cat' => $menu_cat]);
+        \View::share(['menu_cats' => $menu_cats]);
         \View::share(['menu' => $menu]);
         \View::share(['menu_arr' => $menu_arr]);
         \View::share(['category' => $category]);

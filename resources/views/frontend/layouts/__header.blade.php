@@ -187,7 +187,7 @@
                                 <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
                                 
                                 <ul class="main-category">
-                                    @foreach($menu_cat as $key => $cat)
+                                    @foreach($menu_cats as $key => $cat)
                                     <li><a href="#">{!!$cat->name!!} <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="sub-category">
                                             @if(!is_null($cat->children))

@@ -34,7 +34,7 @@ class CategoryController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create($type) {
-        $parent_html = StringHelper::getSelectOptions(\App\Category::all()->where('type', $type));
+        $parent_html = StringHelper::getSelectRoleOptions(\App\Category::all()->where('type', $type));
         return view('backend/category/create', compact('type', 'parent_html'));
     }
 
@@ -85,7 +85,7 @@ class CategoryController extends Controller {
      */
     public function edit($type, $id) {
         $record = $this->categoryRepo->find($id);
-        $parent_html = StringHelper::getSelectOptions(\App\Category::all()->where('type', $type), $record->parent_id);
+        $parent_html = StringHelper::getSelectRoleOptions(\App\Category::all()->where('type', $type), $record->parent_id);
         return view('backend/category/edit', compact('record', 'type', 'parent_html'));
     }
 

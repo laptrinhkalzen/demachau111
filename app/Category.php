@@ -16,7 +16,7 @@ class Category extends Model {
 
     protected $table = 'category';
     protected $fillable = [
-        'title', 'parent_id', 'alias', 'image', 'content', 'description', 'type', 'is_home', 'status', 'ordering',
+        'name', 'parent_id', 'alias', 'image', 'content', 'description', 'type', 'is_home', 'status', 'ordering',
     ];
 
     public function created_at() {
