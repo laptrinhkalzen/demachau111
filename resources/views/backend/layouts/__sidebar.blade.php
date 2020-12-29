@@ -95,6 +95,7 @@
                         <li class="nav-item"><a href="{{route('admin.category.index', \App\Category::TYPE_PRODUCT)}}" class="nav-link">Danh mục</a></li>
                         <li class="nav-item"><a href="{{route('admin.product.index')}}" class="nav-link">Sản phẩm</a></li>
                         <li class="nav-item"><a href="{{route('admin.attribute.index')}}" class="nav-link">Thuộc tính</a></li>
+
                     </ul>
                 </li>
                 <!--                 <li class="nav-item nav-item-submenu">
@@ -110,6 +111,8 @@
                     <ul class="nav nav-group-sub" data-submenu-title="Layouts">
                         <li class="nav-item"><a href="{{route('admin.slide.index')}}" class="nav-link">Slide-Banner</a></li>
                         <li class="nav-item"><a href="{{route('admin.social.index')}}" class="nav-link">Chat Box</a></li>
+                        <li class="nav-item"><a href="{{route('admin.payment_method.index')}}" class="nav-link">Payment Method</a></li>
+                        <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
 <!--                         <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
                         <li class="nav-item"><a href="{{route('admin.service.index')}}" class="nav-link">Dịch vụ</a></li>
                         <li class="nav-item"><a href="{{route('admin.block.index')}}" class="nav-link">Khối</a></li>

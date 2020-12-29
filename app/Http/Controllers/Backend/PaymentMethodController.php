@@ -82,7 +82,7 @@ class PaymentMethodController extends Controller {
     public function update(Request $request, $id) {
         // $input = $request->all();
         $input = request()->except(['_token']);
-        $validator = \Validator::make($input, $this->paymentMethodRepo->validateCreate());
+        $validator = \Validator::make($input, $this->paymentMethodRepo->validateUpdate($id));
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
