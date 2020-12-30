@@ -1,7 +1,16 @@
 @extends('frontend.layouts.master')
 @section('content')
 
-
+<script type="text/javascript">
+    $(document).ready(function(){
+      
+            $('.hide-header').show();
+        $('#show-header').on('mouseout',function(){
+            $('.hide-header').show();
+        });
+       
+    });
+</script>
     <!--/ End Header -->
     
     <!-- Slider Area -->

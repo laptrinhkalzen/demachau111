@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="zxx">
+<style type="text/css">
+
+</style>
 <head>
     <!-- Meta Tag -->
     <meta charset="utf-8">
@@ -15,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     
     <!-- StyleSheet -->
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap -->
 <link rel="stylesheet" href="{{asset('public/demachau/css/bootstrap.css')}}">
     <!-- Magnific Popup -->
@@ -41,6 +44,7 @@
 <link rel="stylesheet" href="{{asset('public/demachau/css/reset.css')}}">
 <link rel="stylesheet" href="{{asset('public/demachau/css/style.css')}}">
 <link rel="stylesheet" href="{{asset('public/demachau/css/responsive.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     
     
@@ -96,9 +100,11 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-12">
                         <!-- Logo -->
+                        
                         <div class="logo">
-                            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                            <a href="{{route('home.index')}}"><img src="{{$share_config->image}}" alt="logo"></a>
                         </div>
+                        
                         <!--/ End Logo -->
                         <!-- Search Form -->
                         <div class="search-top">
@@ -183,10 +189,11 @@
                 <div class="cat-nav-head">
                     <div class="row">
                         <div class="col-lg-3">
-                            <div class="all-category">
+                            <div class="all-category" id="show-header">
                                 <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
+                               
+                                <ul class="main-category hide-header" style="display: none;" >
                                 
-                                <ul class="main-category">
                                     @foreach($menu_cats as $key => $cat)
                                     <li><a href="#">{!!$cat->name!!} <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="sub-category">
@@ -221,6 +228,11 @@
                                                         <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
                                                     </li>
                                                     @endforeach
+                                                     <li class="nav-item">
+                                                        <a class="nav-link" href="{{route('news.list')}}">Tin tức</a>
+                                                    </li>
+                                                    
+                                                </ul>
                                                 </ul>
                                         </div>
                                     </div>
@@ -228,9 +240,20 @@
                                 <!--/ End Main Menu --> 
                             </div>
                         </div>
+      
                     </div>
                 </div>
             </div>
         </div>
         <!--/ End Header Inner -->
     </header>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#show-header').on('mouseover',function(){
+            $('.hide-header').show();
+        });
+        $('#show-header').on('mouseout',function(){
+            $('.hide-header').hide();
+        });
+    });
+</script>

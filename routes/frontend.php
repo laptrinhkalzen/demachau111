@@ -21,7 +21,7 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::get('/search-product', ['as' => 'product.search', 'uses' => 'Frontend\ProductController@search']);
     Route::get('/filter-product', ['as' => 'product.filter', 'uses' => 'Frontend\ProductController@filter']);
     Route::get('/news', ['as' => 'news.index', 'uses' => 'Frontend\NewsController@index']);
-    Route::get('/news/{alias}', ['as' => 'news.list', 'uses' => 'Frontend\NewsController@list']);
+    
     Route::get('/sale', ['as' => 'product.sale', 'uses' => 'Frontend\ProductController@sale']);
     Route::get('/san-pham/{alias}', ['as' => 'product.detail', 'uses' => 'Frontend\ProductController@detail']);
     Route::get('/hot-product', ['as' => 'product.hot', 'uses' => 'Frontend\ProductController@hot']);
@@ -48,6 +48,7 @@ Route::group(['middleware' => 'frontend'], function() {
 
     // Route::get('/tin-tuc', ['as' => 'news.list', 'uses' => 'Frontend\NewsController@index']);
     Route::get('/danh-muc-tin/{alias}', ['as' => 'news_category.index', 'uses' => 'Frontend\NewsController@index']);
+    Route::get('/tin-tuc', ['as' => 'news.list', 'uses' => 'Frontend\NewsController@list']);
     Route::get('/tin-tuc/{alias}', ['as' => 'news.detail', 'uses' => 'Frontend\NewsController@detail']);
     /* Video */
     Route::get('/video', ['as' => 'video.index', 'uses' => 'Frontend\VideoController@index']);

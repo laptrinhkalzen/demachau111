@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Repositories\NewsRepository;
 use Repositories\CategoryRepository;
+use DB;
 class NewsController extends Controller {
 
     //
@@ -54,19 +55,14 @@ class NewsController extends Controller {
 
     public function detail(Request $request,$alias) {
         $detail_news=  $this->newsRepo->getDetailNews($alias);
-        $category_arr = $this->categoryRepo->getAllCategoryNews(2,0);
-        $sale = $this->newsRepo->getNews('tin-khuyen-mai',3);
-        $news_hl = $this->newsRepo->getAllNews(3);
-        return view('frontend/news/detail',compact('detail_news','category_arr','sale','news_hl'));
+        $category = DB::table('category')->where('parent_id', 0)->where('type',2)->orderBy('ordering', 'asc')->get();
+        return view('frontend/news/detail',compact('detail_news','category'));
     }
 
-    public function list(Request $request,$alias) {
-        $category_title = $this->categoryRepo->getCategoryNews($alias);
-        $category_arr = $this->categoryRepo->getAllCategoryNews(2,0);
-        $sale = $this->newsRepo->getNews('tin-khuyen-mai',3);
-        $news_hl = $this->newsRepo->getAllNews(3);
-        $news_arr = $this->newsRepo->getNews($alias,10);
-        return view('frontend/news/children_list',compact('news_arr','category_title','category_arr','sale','news_hl','category_arr'));
+    public function list(Request $request) {
+        $category = DB::table('category')->where('parent_id', 0)->where('type',2)->orderBy('ordering', 'asc')->get();
+        $records = DB::table('news')->orderBy('ordering', 'asc')->get();
+        return view('frontend/news/list',compact('records','category'));
     }      
 
 }
