@@ -50,6 +50,7 @@
                                     <select class="form-control select-search"  data-fouc name="module" required="">
                                         <option value="product">Sản phẩm</option>
                                         <option value="gallery">Hình ảnh</option>
+                                        <option value="brand">Thông số kĩ thuật</option>
                                     </select>
                                 </div>
                             </div>

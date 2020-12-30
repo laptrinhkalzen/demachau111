@@ -22,6 +22,7 @@ class AttributeController extends Controller
         foreach ($records as $key => $val) {
             $records[$key]['parent'] = $this->attributeRepo->readParentCategory($val->parent_id);
         }
+
         return view('backend/attribute/index', compact('records'));
     }
 
@@ -33,6 +34,7 @@ class AttributeController extends Controller
     public function create()
     {
         $parent_html = \App\Helpers\StringHelper::getSelectOptions($this->attributeRepo->all()->where('parent_id', 0));
+     
         return view('backend/attribute/create', compact('parent_html'));
     }
 

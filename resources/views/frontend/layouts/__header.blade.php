@@ -45,7 +45,7 @@
     
     
 </head>
-<body class="js">
+<body class="js" style="background-color: #f3f5f7">
     
     <!-- Preloader -->
     <div class="preloader">

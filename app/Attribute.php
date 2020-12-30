@@ -12,6 +12,7 @@ class Attribute extends Model {
     const TYPE_TEXT = 'text';
     const MODULE_PRODUCT = 'product';
     const MODULE_GALLERY = 'gallery';
+    const MODULE_BRAND = 'brand';
 
     protected $fillable = [
         'title', 'parent_id', 'type', 'module'

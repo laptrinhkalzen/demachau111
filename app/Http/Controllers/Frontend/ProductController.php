@@ -53,7 +53,6 @@ class ProductController extends Controller {
         $brand =  $this->attributeRepo->getAttributes(null, $parent_id = 2);
         $origin =  $this->attributeRepo->getAttributes(null, $parent_id = 19);
         $color =  $this->attributeRepo->getAttributes(null, $parent_id = 25);
-        //paginate
         $price_id = $request->get('price');
         $cat_id = $request->get('category_id');
         $brand_id = $request->get('brand');
@@ -64,7 +63,6 @@ class ProductController extends Controller {
 
     public function category(Request $request, $alias) {
           $product_arr = $this->productRepo->getProductByAliasCategory($alias);
-          dd($product_arr); 
           return view('frontend/category/show',compact('product_arr',$product_arr));
     }
 
@@ -93,14 +91,14 @@ class ProductController extends Controller {
         $slide1 = $this->slideRepo->getSlide1();
         return view('frontend/home/search',compact('search_product','count','slide1'));
     }
-    public function detail(Request $request,$alias,$id) {
+    public function detail(Request $request,$alias) {
 
             $detail_products=  $this->productRepo->getDetailProduct($alias);
-            $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));
-            $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
-            $news_arr = $this->newsRepo->getAllNews($limit = 7);
-            $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
-            return view('frontend/product/detail',compact('similar_products','detail_products','tags','news_arr','hl_products'));
+            // $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));
+            // $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
+            // $news_arr = $this->newsRepo->getAllNews($limit = 7);
+            // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
+            return view('frontend/product/detail',compact('detail_products'));
         }      
 
     public function index(Request $request) {

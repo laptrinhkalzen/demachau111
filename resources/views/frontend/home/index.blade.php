@@ -86,8 +86,8 @@
     
     <!-- Start Most Popular -->
     @foreach($danh_muc_cha as $danh_muc_cha)
-    <div class="product-area most-popular section" style>
-        <div class="container">
+    <div class="product-area most-popular section1" style>
+        <div class="container" style="background-color:white;">
             <!-- <div class="row">
                 <div class="col-12">
                     <div class="section-title">
@@ -97,11 +97,11 @@
             </div> -->
             <div class="nav-main">
                                 <!-- Tab Nav -->
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
+                                <ul style="border-bottom: solid 1px #FFA500;" class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li style="float: left; border-bottom: none; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
                                     @foreach($danh_muc_con as $danh_muc_con1)
                                     @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
-                                    <li class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" class="nav-link"  >{{$danh_muc_con1->name}}</a></li>
+                                    <li style="float: left; border-bottom: solid 1px #FFA500;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
                                     @endif
                                     @endforeach
                                 </ul>
@@ -132,8 +132,8 @@
                                 </div>
                             </div>
                             <div class="product-content">
-                                <h3><a href="product-details.html">{{$product_danh_muc_cha1->title}}</a></h3>
-                                <div class="product-price">
+                                <h3  style="text-align: center;"><a href="product-details.html">{{$product_danh_muc_cha1->title}}</a></h3>
+                                <div class="product-price" style="text-align: center;">
                                     @if($product_danh_muc_cha1->sale_price>0)
                                     <span class="old">{{$product_danh_muc_cha1->sale_price}}</span>
                                     <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>

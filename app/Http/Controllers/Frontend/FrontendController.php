@@ -28,14 +28,9 @@ class FrontendController extends Controller {
         //cart
         $total = 0;
      
-        $danh_muc_cha=DB::table('category')->where('parent_id',0)->get();
+        $danh_muc_cha=DB::table('category')->where('parent_id',0)->where('type',4)->get();
         $product_danh_muc_cha=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->get();
         $danh_muc_con=DB::table('category')->where('parent_id','!=',0)->get();
-       
-
-       
-
-      
         return view('frontend/home/index', compact('danh_muc_cha','product_danh_muc_cha','danh_muc_con','total'));
     }
     
