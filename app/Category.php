@@ -10,6 +10,7 @@ class Category extends Model {
     const TYPE_NEWS = 2;
     const TYPE_GALLERY = 3;
     const TYPE_PRODUCT = 4;
+    const TYPE_BRAND = 4;
     const TYPE_CONSTRUCTION = 5;
     const PRODUCT_SHOP_ID = 80;
     const GALLERY_ALBUM = 40;
