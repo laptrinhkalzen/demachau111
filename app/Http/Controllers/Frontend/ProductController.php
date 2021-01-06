@@ -93,12 +93,13 @@ class ProductController extends Controller {
     }
     public function detail(Request $request,$alias) {
 
-            $detail_products=  $this->productRepo->getDetailProduct($alias);
+            $detail_product =  $this->productRepo->getDetailProduct($alias);
+            
             // $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));
             // $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
             // $news_arr = $this->newsRepo->getAllNews($limit = 7);
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
-            return view('frontend/product/detail',compact('detail_products'));
+            return view('frontend/product/detail',compact('detail_product'));
         }      
 
     public function index(Request $request) {

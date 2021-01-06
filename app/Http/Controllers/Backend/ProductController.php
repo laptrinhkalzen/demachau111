@@ -8,7 +8,7 @@ use App\Repositories\ProductRepository;
 use Repositories\CategoryRepository;
 use Repositories\AttributeRepository;
 use Repositories\PostHistoryRepository;
-
+use DB;
 class ProductController extends Controller {
 
     /**
@@ -24,6 +24,11 @@ class ProductController extends Controller {
     }
 
     public function index() {
+        $option=DB::table('variant_product')->groupBy('option_sort');
+        // foreach ($option as $key => $op) {
+        //     $data[]=DB::table('variant_product')->where('option_sort',$op)->first();
+        // }
+        // dd($data);
         $records = $this->productRepo->all();
         return view('backend/product/index', compact('records'));
     }
@@ -36,7 +41,7 @@ class ProductController extends Controller {
     public function create() {
         //
         $options = $this->categoryRepo->readCategoryByType(\App\Category::TYPE_PRODUCT);
-        $category_html = \App\Helpers\StringHelper::getSelectOptions($options);
+        $category_html = \App\Helpers\StringHelper::getSelectRoleOptions($options);
         $attributes = $this->attributeRepo->readAttributeByParentAdmin();
         return view('backend/product/create', compact('category_html', 'attributes'));
     }
@@ -48,6 +53,7 @@ class ProductController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
+
         $input = $request->all();
         $validator = \Validator::make($input, $this->productRepo->validateCreate());
         if ($validator->fails()) {
@@ -67,6 +73,31 @@ class ProductController extends Controller {
         //Thêm thuộc tính sản phẩm
         $attributes = $this->getProductAttributes($input);
         $product->attributes()->attach($attributes);
+        //Thêm variant
+        $variants=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$product->id)->where('attribute.parent_id','!=','0')->get();
+
+          $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$product->id)->where('attribute.parent_id','!=','0')->groupBy('parent_id')->pluck('parent_id');
+          $count=$parent_ids->count();
+          foreach ($parent_ids as $key => $parent_id) { //Lấy danh mục cha
+               if($key==$count-1){
+                break;
+               }
+               foreach ($variants as $variant) { //lặp sản phẩm
+                  if($parent_id==$variant->parent_id){ //lấy sản phẩm của danh mục cha 
+                       $childrens=$variants->where('parent_id',$parent_ids[$key+1]); //lấy sp con của sp 
+                        foreach ($childrens as  $children){
+                            $input=array();
+                            $input['product_id']=$product->id;
+                            $input['variant_id']=$children->id;
+                            $input['parent_variant']=$variant->id;
+                            $input['sort']=$key;
+                            $input['count']=$count-1;
+                            DB::table('variant_product')->insert($input);
+                            }     
+           }
+           }
+         }
+             
         if ($product) {
             return redirect()->route('admin.product.index')->with('success', 'Tạo mới thành công');
         } else {
@@ -90,11 +121,33 @@ class ProductController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id) {
+    public function edit($id=64) {
+         $variants=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->get();
+
+          $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->groupBy('parent_id')->pluck('parent_id');
+           $count=$parent_ids->count();
+           $variant_products = DB::table('variant_product')->where('product_id',64)->get();
+        foreach ($variant_products as $key => $variant_product) { //Lấy danh mục cha
+               if($key==$count-1){
+                break;
+               }
+               foreach ($variants as $variant) { //lặp sản phẩm
+                  if($parent_id==$variant->parent_id){ //lấy sản phẩm của danh mục cha 
+                       $childrens=$variants->where('parent_id',$parent_ids[$key+1]); //lấy sp con của sp 
+                        foreach ($childrens as $key1 => $children) {
+                            $input=array();
+                            
+                            $input['$group_variant']=$key1;
+                            dd($input);
+                            DB::table('variant_product')->insert($input);
+                            }     
+           }
+           }
+         }
         $record = $this->productRepo->find($id);
         $options = $this->categoryRepo->readCategoryByType(\App\Category::TYPE_PRODUCT);
         $category_ids = $record->categories()->get()->pluck('id')->toArray();
-        $category_html = \App\Helpers\StringHelper::getSelectOptions($options, $category_ids);
+        $category_html = \App\Helpers\StringHelper::getSelectRoleOptions($options, $category_ids);
         $attributes = $this->attributeRepo->readAttributeByParentAdmin();
         //Lấy danh sách id thuộc tính của sản phẩm
         $product_attribute_ids = $record->attributes()->get()->pluck('id')->toArray();
@@ -116,6 +169,18 @@ class ProductController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
+        $variants=DB::table('variant_product')->where('product_id',64)->get();
+        $count=$variants->pluck('count')->first();
+        $parents=DB::table('variant_product')->where('product_id',64)->groupBy('parent_variant')->pluck('parent_variant');
+        // dd($parents);
+        // for($i=0;$i<$count;$i++){
+        //     foreach ($variants as $key => $variant) {
+        //         if($variant->parent_variant==$i){
+                    
+
+        //         }
+        //     }
+        // }
         $input = $request->all();
         $validator = \Validator::make($input, $this->productRepo->validateUpdate($id));
         if ($validator->fails()) {

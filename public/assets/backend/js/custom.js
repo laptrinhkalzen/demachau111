@@ -4,6 +4,10 @@ if ($('.select-search').length) {
     $('.select-search').select2();
 }
 
+if ($('.select-search1').length) {
+    $('.select-search1').select2();
+}
+
 // Initialize
 if ($('.touchspin').length) {
     $('.touchspin').TouchSpin({

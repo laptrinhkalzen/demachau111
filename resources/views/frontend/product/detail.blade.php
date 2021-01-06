@@ -99,20 +99,15 @@ hr.ke_vach {
                                    
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <h1>Tên</h1>
-                                            <select name="state-province" id="state-province">
-                                                <option value="divition" selected="selected">New Yourk</option>
-                                                <option>Los Angeles</option>
-                                                <option>Chicago</option>
-                                                <option>Houston</option>
-                                                <option>San Diego</option>
-                                                <option>Dallas</option>
-                                                <option>Charlotte</option>
-                                            </select>
+                                       
+                                           <p>{{$detail_product->title}}</p>
                                         </div>
                                         <div class="form-group">
                                             <div class="row col-lg-12">
                                                 <p style="font-weight: 130px; color: black;">Loại đệm: </p>&nbsp; <p>Đệm tấm</p> 
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                 <p style="color:red;">{{$detail_product->price}}</p> 
                                             </div>
                                         
                                              
@@ -123,12 +118,14 @@ hr.ke_vach {
                                                 <input type="number" name="quantity" value="1" id="quantity" min="1">
                                                 </div>
                                                 <div class="col-md-8">
-                                                <button type="submit" class="btn btn-danger">Thêm vào giỏ hàng</button>
+                                                <button type="button" class="btn btn-danger">Thêm vào giỏ hàng</button>
                                                 
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div class="form-group">                                           
+                                                <button type="submit" class="btn btn-success">Mua ngay</button>
+                                        </div>
                                         <hr class="ke_vach">
                                     </div>
                                    

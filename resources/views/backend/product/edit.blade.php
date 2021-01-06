@@ -167,7 +167,7 @@
                                     <label class="col-md-3 col-form-label text-right">{{$val->title}}</label>
                                     <div class="col-md-9">
                                         @if ($val->type == \App\Attribute::TYPE_SELECT)
-                                        <select name="attribute_select[]" class="select-search" data-placeholder="Chọn">
+                                        <select name="attribute_select[]" class="select-search" data-placeholder="Chọn" multiple="">
                                             <option></option>
                                             @foreach ($val->children as $k => $v)
                                             <option value="{{$v->id}}" @if(in_array($v->id, $product_attribute_ids)) selected @endif>{{$v->title}}</option>

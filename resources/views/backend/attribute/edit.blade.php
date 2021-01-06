@@ -50,6 +50,7 @@
                                     <select class="form-control select-search"  data-fouc name="module" required="">
                                         <option value="product" @if ($record->module == 'product') selected @endif>Sản phẩm</option>
                                         <option value="gallery" @if ($record->module == 'gallery') selected @endif>Hình ảnh</option>
+                                        <option value="brand" @if ($record->module == 'brand') selected @endif>Thông số kĩ thuật</option>
                                     </select>
                                 </div>
                             </div>

@@ -171,11 +171,15 @@
                                 @foreach ($attributes as $key => $val)
 
                                 <div class="form-group row">
+                                    @if($val->module!='brand')
                                     <label class="col-md-3 col-form-label text-right">{{$val->title}}</label>
+                                    @else
+                                    <label class="col-md-3 col-form-label text-right">{{$val->title}}(Variant)</label>
+                                    @endif
                                     <div class="col-md-9">
                                         @if ($val->type == \App\Attribute::TYPE_SELECT)
-                                        <select name="attribute_select[]" class="select-search" data-placeholder="Chọn">
-                                            <option></option>
+                                        <select name="attribute_select[]" class="select-search form-control" data-placeholder="Chọn"  multiple>
+                                           
                                             @foreach ($val->children as $k => $v)
                                             <option value="{{$v->id}}">{{$v->title}}</option>
                                             @endforeach
@@ -220,7 +224,8 @@
                     <div class="col-md-12">
                         <div class="text-center">
                             <a type="button" href="{{route('admin.product.index')}}" class="btn btn-secondary legitRipple">Hủy</a>
-                            <button type="submit" class="btn btn-primary legitRipple">Lưu lại <i class="icon-arrow-right14 position-right"></i></button>
+                            <button type="submit" class="btn btn-primary legitRipple" value="1">Lưu lại <i class="icon-arrow-right14 position-right"></i></button>
+                            <button type="submit" class="btn btn-success legitRipple" value="2">Lưu và tạo biến thể<i class="icon-arrow-right14 position-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -231,6 +236,7 @@
 @stop
 @section('script')
 @parent
+
 <script src="{!! asset('assets/global_assets/js/plugins/forms/selects/select2.min.js') !!}"></script>
 
 <script src="{!! asset('assets/global_assets/js/plugins/forms/styling/uniform.min.js') !!}"></script>
