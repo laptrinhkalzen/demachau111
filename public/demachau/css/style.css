@@ -4842,7 +4842,7 @@ Version:1.0
 	20. Start Footer CSS
 ===============================*/
 .footer{
-	background:#222;
+	background:white;
 }
 .footer .about {
 	padding-right: 50px;
@@ -4850,7 +4850,7 @@ Version:1.0
 .footer .single-footer h4 {
 	font-size: 17px;
 	font-weight: 600;
-	color: #fff;
+	color: #black;
 	text-transform: capitalize;
 	margin-bottom: 30px;
 }
@@ -4859,7 +4859,7 @@ Version:1.0
 }
 .footer .about .logo img{}
 .footer .about .text{
-	color:#fff;
+	color:black;
 	font-weight: 400;
 }
 .footer .about .call {
@@ -4895,7 +4895,7 @@ Version:1.0
 .footer .social .contact{}
 .footer .social .contact ul{}
 .footer .social .contact ul li {
-	color: #fff;
+	color: black;
 	display: block;
 	margin-bottom: 4px;
 	font-weight: 400;

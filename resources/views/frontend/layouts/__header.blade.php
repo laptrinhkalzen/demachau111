@@ -18,6 +18,9 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     
     <!-- StyleSheet -->
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=691807794780343&autoLogAppEvents=1" nonce="nOPTY4k6"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap -->
 <link rel="stylesheet" href="{{asset('public/demachau/css/bootstrap.css')}}">
@@ -190,7 +193,7 @@
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="all-category" id="show-header">
-                                <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
+                                <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>Danh mục</h3>
                                
                                 <ul class="main-category hide-header" style="display: none;" >
                                 

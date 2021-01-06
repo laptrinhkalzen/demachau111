@@ -44,12 +44,23 @@
                     </a>
                 </li>
                 @if (\Auth::user()->role_id == \App\User::ROLE_ADMINISTRATOR)
-                <li class="nav-item">
-                    <a href="{{route('admin.config.index')}}" class="nav-link">
-                        <i class="icon-cog"></i>
-                        <span>Cấu hình website</span>
-                    </a>
+                
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-cog"></i> <span>Cấu hình website</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+                        <li class="nav-item">
+                            <a href="{{route('admin.config.index')}}" class="nav-link">
+                                <span>Cấu hình website</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.facebook_url.index')}}" class="nav-link">
+                                <span>Facebook URL</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
+
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-user-tie"></i> <span>Người dùng</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Layouts">
@@ -107,12 +118,25 @@
                 
                 
                 <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Giao diện</span></a>
+                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Header</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+                        <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
+<!--                         <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
+                        <li class="nav-item"><a href="{{route('admin.service.index')}}" class="nav-link">Dịch vụ</a></li>
+                        <li class="nav-item"><a href="{{route('admin.block.index')}}" class="nav-link">Khối</a></li>
+                        <li class="nav-item"><a href="{{route('admin.template_setting.index')}}" class="nav-link">Tùy chỉnh giao diện</a></li> -->
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Footer</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Layouts">
                         <li class="nav-item"><a href="{{route('admin.slide.index')}}" class="nav-link">Slide-Banner</a></li>
+                        <li class="nav-item"><a href="{{route('admin.company_infor.index')}}" class="nav-link">Thông tin công ty</a></li>
+                        <li class="nav-item"><a href="{{route('admin.customer_support.index')}}" class="nav-link">Hỗ trợ khách hàng</a></li>
                         <li class="nav-item"><a href="{{route('admin.social.index')}}" class="nav-link">Chat Box</a></li>
-                        <li class="nav-item"><a href="{{route('admin.payment_method.index')}}" class="nav-link">Payment Method</a></li>
-                        <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
+                        <li class="nav-item"><a href="{{route('admin.payment_method.index')}}" class="nav-link">Phương thức thanh toán</a></li>
+                        <li class="nav-item"><a href="{{route('admin.mes_register.index')}}" class="nav-link">Đăng ký nhận tin</a></li>
+                        
 <!--                         <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
                         <li class="nav-item"><a href="{{route('admin.service.index')}}" class="nav-link">Dịch vụ</a></li>
                         <li class="nav-item"><a href="{{route('admin.block.index')}}" class="nav-link">Khối</a></li>

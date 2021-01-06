@@ -37,6 +37,22 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::post('/social/update/{id}', ['as' => 'admin.social.update', 'uses' => 'Backend\SocialController@update']);
     Route::delete('/social/delete/{id}', ['as' => 'admin.social.destroy', 'uses' => 'Backend\SocialController@destroy']);
 
+    // Giao diện: company-infor
+     Route::get('/company-infor', ['as' => 'admin.company_infor.index', 'uses' => 'Backend\CompanyInforController@index']);
+    Route::get('/company-infor/create', ['as' => 'admin.company_infor.create', 'uses' => 'Backend\CompanyInforController@create']);
+    Route::get('/company-infor/edit/{id}', ['as' => 'admin.company_infor.edit', 'uses' => 'Backend\CompanyInforController@edit']);
+    Route::post('/company-infor/store', ['as' => 'admin.company_infor.store', 'uses' => 'Backend\CompanyInforController@store']);
+    Route::post('/company-infor/update/{id}', ['as' => 'admin.company_infor.update', 'uses' => 'Backend\CompanyInforController@update']);
+    Route::delete('/company-infor/delete/{id}', ['as' => 'admin.company_infor.destroy', 'uses' => 'Backend\CompanyInforController@destroy']);
+
+    // Giao diện: customer-support
+     Route::get('/customer-support', ['as' => 'admin.customer_support.index', 'uses' => 'Backend\CustomerSupportController@index']);
+    Route::get('/customer-support/create', ['as' => 'admin.customer_support.create', 'uses' => 'Backend\CustomerSupportController@create']);
+    Route::get('/customer-support/edit/{id}', ['as' => 'admin.customer_support.edit', 'uses' => 'Backend\CustomerSupportController@edit']);
+    Route::post('/customer-support/store', ['as' => 'admin.customer_support.store', 'uses' => 'Backend\CustomerSupportController@store']);
+    Route::post('/customer-support/update/{id}', ['as' => 'admin.customer_support.update', 'uses' => 'Backend\CustomerSupportController@update']);
+    Route::delete('/customer-support/delete/{id}', ['as' => 'admin.customer_support.destroy', 'uses' => 'Backend\CustomerSupportController@destroy']);
+
     /* Phương thức thanh toán */
     Route::get('/payment-method', ['as' => 'admin.payment_method.index', 'uses' => 'Backend\PaymentMethodController@index']);
     Route::get('/payment-method/create', ['as' => 'admin.payment_method.create', 'uses' => 'Backend\PaymentMethodController@create']);
@@ -77,6 +93,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('/attribute/edit/{id}', ['as' => 'admin.attribute.edit', 'uses' => 'Backend\AttributeController@edit']);
     Route::post('/attribute/update/{id}', ['as' => 'admin.attribute.update', 'uses' => 'Backend\AttributeController@update']);
     Route::delete('/attribute/delete/{id}', ['as' => 'admin.attribute.destroy', 'uses' => 'Backend\AttributeController@destroy']);
+
+    /* Quản lý facebook-url */
+    Route::get('/facebook-url', ['as' => 'admin.facebook_url.index', 'uses' => 'Backend\FacebookUrlController@index']);
+    Route::post('/facebook-url/update', ['as' => 'admin.facebook_url.update', 'uses' => 'Backend\FacebookUrlController@update']);
+
+     /* Quản lý đăng ký nhận tin */
+    Route::get('/mes-register', ['as' => 'admin.mes_register.index', 'uses' => 'Backend\MesRegisterController@index']);
+    Route::post('/mes-register/update', ['as' => 'admin.mes_register.update', 'uses' => 'Backend\MesRegisterController@update']);
+    
 
     /* Quản lý hạng mục */
     Route::get('/item', ['as' => 'admin.item.index', 'uses' => 'Backend\ItemController@index']);

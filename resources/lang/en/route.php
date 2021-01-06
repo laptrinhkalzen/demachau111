@@ -43,5 +43,11 @@ return [
     'admin.role.index' => 'Phân quyền',
     'admin.subscriber.index' => 'Đăng kí theo dõi',
     'admin.service.index' => 'Dịch vụ',
-    'admin.review.index'=>'Đánh giá'
+    'admin.review.index'=>'Đánh giá',
+    'admin.facebook_url.index'=>'Facebook Url',
+    'admin.social.index'=>'Chat Box',
+    'admin.payment_method.index'=>'Phương thức thanh toán',
+    'admin.mes_register.index'=>'Đăng ký nhận tin',
+    'admin.company_infor.index'=>'Thông tin công ty',
+    'admin.customer_support.index'=>'Hỗ trợ khách hàng',
 ];

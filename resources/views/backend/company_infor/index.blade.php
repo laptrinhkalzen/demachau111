@@ -5,7 +5,7 @@
     <!-- Table header styling -->
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h5 class="card-title">Chat Box</h5>
+            <h5 class="card-title">Thông tin công ty</h5>
             <div class="header-elements">
                 <div class="list-icons">
                     <a class="list-icons-item" data-action="collapse"></a>
@@ -31,22 +31,20 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Tên mạng xã hội</th>
-                    <th>Icon</th>
+                    <th>Tiêu đề</th>
                     <th>Link</th>
                     <th>Thao tác</th>
                     
                 </tr>
             </thead>
-                 @foreach($socials as $key => $social)
+                 @foreach($company_infor as $key => $infor)
                  <tr>
                     <th>{{$key+1}}</th>
-                    <th>{{$social->name}}</th>
-                    <th>{!!$social->image!!}</th>
-                    <th>{!!$social->link!!}</th>
+                    <th>{{$infor->name}}</th>
+                    <th>{!!$infor->link!!}</th>
                     <td class="text-center">
-                        <a href="{{route('admin.social.edit', $social->id)}}" title="Chỉnh sửa" class="success"><i class="icon-pencil"></i></a>   
-                        <form action="{!! route('admin.social.destroy', $social->id) !!}" method="POST" style="display: inline-block">
+                        <a href="{{route('admin.company_infor.edit', $infor->id)}}" title="Chỉnh sửa" class="success"><i class="icon-pencil"></i></a>   
+                        <form action="{!! route('admin.company_infor.destroy', $infor->id) !!}" method="POST" style="display: inline-block">
                             {!! method_field('DELETE') !!}
                             {!! csrf_field() !!}
                             <a title="Xóa" class="delete text-danger" data-action="delete">

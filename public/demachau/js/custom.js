@@ -1,4 +1,4 @@
-
+$( document ).ready(function() {
     $('#add-to-cart1').click(function( e ){
    	     var product_id=$(this).data('product_id');
 	     var quantity=$('#quantity').val();
@@ -21,3 +21,23 @@
 	            }
 	        });
     });
+
+    $('#sendmail1').click(function(e){
+    	var email = $('#email1').val();
+    	if(email=='') {
+    		alert('123');
+    	}
+    	else{
+    	$.ajax({
+    		url:'{{route("api.get_email11")}}',
+    		method:'GET',
+    		data:{email: email},
+    		success:function(data){
+    			alert('111');
+    		}
+
+    	});
+	}
+});
+
+});

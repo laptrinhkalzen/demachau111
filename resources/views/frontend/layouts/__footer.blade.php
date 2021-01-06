@@ -9,9 +9,11 @@
 }
 #hover{
     margin-top:8px;
-    color: white;
+    color: black;
 }
-
+.single-footer .contact a:hover{
+    color: orange;
+}
 
 .fab-icon-holder {
     width: 50px;
@@ -19,7 +21,7 @@
     border-radius: 100%;
     background:none;
 
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    
 }
 
 .fab-icon-holder:hover {
@@ -94,72 +96,127 @@
         <div class="footer-top section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 col-md-6 col-12">
-                        <!-- Single Widget -->
-                        <div class="single-footer about">
-                            <div class="logo">
-                                <a href="index.html"><img src="images/logo2.png" alt="#"></a>
-                            </div>
-                            <p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue,  magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-                            <p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">+0123 456 789</a></span></p>
-                        </div>
-                        <!-- End Single Widget -->
-                    </div>
+                    
 
-            <div  class="col-lg-2 col-md-6 col-12" >
+            <div  class="col-lg-3 col-md-6 col-12" >
                 <div class="single-footer links">
-                <h4>Find Us</h4>
-               
+                    <h4>CÔNG TY CỔ PHẦN THƯƠNG MẠI HÀ MINH GIANG</h4>
+                      <div class="contact">
+                        <ul>
+                            <li>Trụ sở chính:&nbsp {{$share_config->address}}</li>
+                            <li>Showroom 2:&nbsp {{$share_config->address}}</li>
+                            <li>Hotline:&nbsp {{$share_config->hotline}}</li>
+                            <li>Email:&nbsp {{$share_config->email}}</li>
+                            <li>Website:&nbsp {{$share_config->address}}</li>
+                        </ul>
+                    </div>  
                 
-                @foreach($social as $contact)
-                <li style="display:flex; margin-bottom:15px; width: 150px; ">
-                  <div class="fab-icon-holder">
-                   <a href="{{$contact->link}}" target="_blank" class="mr-2"><img style="width: 40px;" src="{!!url('upload/config/'.$contact->image)!!}" ></a>     
-                  </div>
-                  <a id="hover" href="{{$contact->link}}" target="_blank" style="margin-left: 5px;" class="fab-label abc">{!!$contact->name!!}</a>
-                </li>
-                @endforeach 
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer links">
+                          <h4>THÔNG TIN CÔNG TY</h4>
+                            <div class="contact">
+                            @foreach($company_infor as $infor)
+                                <ul>
+                                    <a href="{{$infor->link}}"><li>{{$infor->name}}</li></a>
+                                </ul>
+                            @endforeach 
+                    </div>
+                </div>
+                
+            </div>
+
+                    
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Single Widget -->
+                <div class="single-footer links">
+                    <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                    <!-- Single Widget -->
+                    <div class="contact">
+                        @foreach($customer_support as $support)
+                                <ul>
+                                    <a href="{{$support->link}}"><li>{{$support->name}}</li></a>
+                                </ul>
+                            @endforeach 
+                    </div>
+                    
+                </div>
+                <!-- End Single Widget -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Single Widget -->
+                <div class="single-footer social">
+                    <h4>TỔNG ĐÀI HỖ TRỢ</h4>
+                    <!-- Single Widget -->
+                    <div class="contact">
+                        <ul>
+                            <li>Hotline: {{$share_config->hotline}}</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- End Single Widget -->
+            </div>
+                </div>
+            </div>
+
+        </div>
+<!--////////////////////////////////////////////////////////////////////////-->
+        <div class="container">
+                <div class="row">
+                    
+
+            <div  class="col-lg-4 col-md-6 col-12" >
+                <div class="single-footer links">
+                    <h4>PHƯƠNG THỨC THANH TOÁN</h4>
+                      @foreach($payment as $payments)
+                        <a href="{{$payments->link}}" target="_blank" class="mr-2"><img style="width:77px; height:26px; background:none; " src="{!!url('upload/config/'.$payments->image)!!}" ></a>
+                      @endforeach  
+                
 
             </div>
                 </div>
 
-            <div class="col-lg-2 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12">
                         <!-- Single Widget -->
                         <div class="single-footer links">
-                            <h4>Payment Method</h4>
-                      @foreach($payment as $payments)
-                        <a href="{{$payments->link}}" target="_blank" class="mr-2"><img style="width:70px; height:50px; background:none; border-radius:5px;;" src="{!!url('upload/config/'.$payments->image)!!}" ></a>
-                      @endforeach  
+                          <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                            
+                            <li style="display:flex; margin-bottom:15px; ">
+                                @foreach($social as $contact)
+                              <div class="fab-icon-holder">
+                               <a href="{{$contact->link}}" target="_blank" class="mr-2"><img style="width: 40px; border-radius: 100%;" src="{!!url('upload/config/'.$contact->image)!!}" ></a>     
+                              </div>
+                              <!-- <a id="hover" href="{{$contact->link}}" target="_blank" style="margin-left: 5px;" class="fab-label abc">{!!$contact->name!!}</a> -->
+                            @endforeach 
+                            </li>
+                            
                     </div>
                 
             </div>
 
                     
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div class="col-lg-4 col-md-6 col-12">
                         <!-- Single Widget -->
                         <div class="single-footer social">
-                            <h4>Get In Tuch</h4>
+                            <h4>ĐĂNG KÝ NHẬN TIN</h4>
                             <!-- Single Widget -->
                             <div class="contact">
                                 <ul>
-                                    <li>NO. 342 - London Oxford Street.</li>
-                                    <li>012 United Kingdom.</li>
-                                    <li>info@eshop.com</li>
-                                    <li>+032 3456 7890</li>
+                                    <li>{{$share_config->mes_register}}</li>
                                 </ul>
                             </div>
-                            <!-- End Single Widget -->
-                            <ul>
-                                <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                <li><a href="#"><i class="ti-twitter"></i></a></li>
-                                <li><a href="#"><i class="ti-flickr"></i></a></li>
-                                <li><a href="#"><i class="ti-instagram"></i></a></li>
-                            </ul>
+                            
                         </div>
                         <!-- End Single Widget -->
                     </div>
                 </div>
             </div>
+            
         </div>
         <!-- End Footer Top -->
         <div class="copyright">

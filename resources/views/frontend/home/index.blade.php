@@ -11,10 +11,17 @@
        
     });
 </script>
+<style type="text/css">
+    aside {position: fixed; top: 320px; bottom: 0px; width: 150px; background-color: #999; z-index: 1;}
+    .left {left: 0;}
+    .right {right: 0;}
+</style>
     <!--/ End Header -->
     
     <!-- Slider Area -->
+    <aside class="left"><img style="width: 150px; height: 440px;" src="{{$share_config->banner_left}}"></img></aside>
     <section class="hero-slider">
+
         <!-- Single Slider -->
         <div class="single-slider">
             <div class="container">
@@ -40,7 +47,10 @@
         <!--/ End Single Slider -->
     </section>
     <!--/ End Slider Area -->
-    
+    <form  method="get" target="_blank" class="newsletter-inner">
+            <input name="email1" id="email1" placeholder="Your email address" required="" type="email">
+           <button type="button" id="sendmail1" class="btn">Subscribe</button>
+        </form>
     <!-- Start Small Banner  -->
     <section class="small-banner section">
         <div class="container-fluid">
@@ -300,29 +310,6 @@
     </section>
     <!-- End Shop Services Area -->
     
-    <!-- Start Shop Newsletter  -->
-    <section class="shop-newsletter section">
-        <div class="container">
-            <div class="inner-top">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2 col-12">
-                        <!-- Start Newsletter Inner -->
-                        <div class="inner">
-                            <h4>Newsletter</h4>
-                            <p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
-                            <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-                                <input name="EMAIL" placeholder="Your email address" required="" type="email">
-                                <button class="btn">Subscribe</button>
-                            </form>
-                        </div>
-                        <!-- End Newsletter Inner -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Shop Newsletter -->
-    
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -434,6 +421,7 @@
                 </div>
             </div>
     </div>
+    <aside class="right"><img style="width: 150px; height: 540px;" src="{{$share_config->banner_right}}"></img></aside>
   
     <!-- Modal end -->
     

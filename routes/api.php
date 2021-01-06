@@ -43,3 +43,4 @@ Route::post('/upload', ['as' => 'api.upload', 'uses' => 'Api\FrontendController@
 Route::post('/uploadImage', ['as' => 'api.uploadimage', 'uses' => 'Api\FrontendController@uploadImage']);
 Route::post('/delete_image', ['as' => 'api.upload', 'uses' => 'Api\FrontendController@delete_image']);
 Route::post('/add-to-cart1', ['as' => 'api.add_to_cart1', 'uses' => 'Api\ProductController@addToCart']);
+Route::get('/get-email11', ['as' => 'api.get_email11', 'uses' => 'Api\FrontendController@get_email']);

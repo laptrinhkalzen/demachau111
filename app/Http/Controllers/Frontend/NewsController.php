@@ -55,14 +55,16 @@ class NewsController extends Controller {
 
     public function detail(Request $request,$alias) {
         $detail_news=  $this->newsRepo->getDetailNews($alias);
+        $some_news=  $this->newsRepo->getAllNews(5);
         $category = DB::table('category')->where('parent_id', 0)->where('type',2)->orderBy('ordering', 'asc')->get();
-        return view('frontend/news/detail',compact('detail_news','category'));
+        return view('frontend/news/detail',compact('detail_news','category','some_news'));
     }
 
     public function list(Request $request) {
         $category = DB::table('category')->where('parent_id', 0)->where('type',2)->orderBy('ordering', 'asc')->get();
+        $some_news=  $this->newsRepo->getAllNews(5);
         $records = DB::table('news')->orderBy('ordering', 'asc')->get();
-        return view('frontend/news/list',compact('records','category'));
+        return view('frontend/news/list',compact('records','category','some_news'));
     }      
 
 }

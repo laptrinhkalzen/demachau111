@@ -473,4 +473,8 @@ class FrontendController extends Controller {
          File::delete('..'.$request->get('link'));
     }
 
+    public function get_email(Request $request){
+         
+         echo('abc');
+    }
 }

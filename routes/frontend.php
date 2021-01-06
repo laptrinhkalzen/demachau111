@@ -62,4 +62,5 @@ Route::group(['middleware' => 'frontend'], function() {
     /* Tiếp thị liên kết */
     Route::get('/marketing/{alias}', ['as' => 'marketing.index', 'uses' => 'Frontend\MarketingController@index']);
     Route::get('/khach-hang/tai-khoan/{alias}', ['as' => 'member.edit_profile', 'uses' => 'Frontend\MemberController@editProfile']);
+    
 });
