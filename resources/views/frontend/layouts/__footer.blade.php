@@ -7,6 +7,11 @@
     cursor: pointer;
    
 }
+.col-lg-6 .left img{
+    height: 55px;
+    float: left;
+}
+
 #hover{
     margin-top:8px;
     color: black;
@@ -20,8 +25,10 @@
     height: 50px;
     border-radius: 100%;
     background:none;
-
-    
+}
+.single-footer .title{
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .fab-icon-holder:hover {
@@ -93,14 +100,14 @@
 </style>
  <footer class="footer">
         <!-- Footer Top -->
-        <div class="footer-top section">
+        <div class="footer-top ">
             <div class="container">
                 <div class="row">
                     
 
             <div  class="col-lg-3 col-md-6 col-12" >
                 <div class="single-footer links">
-                    <h4>CÔNG TY CỔ PHẦN THƯƠNG MẠI HÀ MINH GIANG</h4>
+                    <span class="title">CÔNG TY CỔ PHẦN THƯƠNG MẠI HÀ MINH GIANG</span>
                       <div class="contact">
                         <ul>
                             <li>Trụ sở chính:&nbsp {{$share_config->address}}</li>
@@ -118,7 +125,7 @@
             <div class="col-lg-3 col-md-6 col-12">
                         <!-- Single Widget -->
                         <div class="single-footer links">
-                          <h4>THÔNG TIN CÔNG TY</h4>
+                          <span class="title">THÔNG TIN CÔNG TY</span>
                             <div class="contact">
                             @foreach($company_infor as $infor)
                                 <ul>
@@ -134,7 +141,7 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Single Widget -->
                 <div class="single-footer links">
-                    <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                    <span class="title">HỖ TRỢ KHÁCH HÀNG</span>
                     <!-- Single Widget -->
                     <div class="contact">
                         @foreach($customer_support as $support)
@@ -149,8 +156,8 @@
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Single Widget -->
-                <div class="single-footer social">
-                    <h4>TỔNG ĐÀI HỖ TRỢ</h4>
+                <div class="single-footer links">
+                    <span class="title">TỔNG ĐÀI HỖ TRỢ</span>
                     <!-- Single Widget -->
                     <div class="contact">
                         <ul>
@@ -165,17 +172,21 @@
             </div>
 
         </div>
+
+
 <!--////////////////////////////////////////////////////////////////////////-->
-        <div class="container">
-                <div class="row">
+        <div class="container" style="border-top: 1px solid #ebedeb; margin-top: 20px;">
+                <div class="row" style="margin-top: 20px;">
                     
 
             <div  class="col-lg-4 col-md-6 col-12" >
                 <div class="single-footer links">
-                    <h4>PHƯƠNG THỨC THANH TOÁN</h4>
+                    <span class="title">PHƯƠNG THỨC THANH TOÁN</span>
+                    <li style="display:flex; margin-bottom:15px; ">
                       @foreach($payment as $payments)
-                        <a href="{{$payments->link}}" target="_blank" class="mr-2"><img style="width:77px; height:26px; background:none; " src="{!!url('upload/config/'.$payments->image)!!}" ></a>
+                        <a href="{{$payments->link}}" target="_blank" class="mr-2"><img style="width:77px; height:26px; background:none;" src="{!!url('upload/config/'.$payments->image)!!}" ></a>
                       @endforeach  
+                  </li>
                 
 
             </div>
@@ -184,7 +195,7 @@
             <div class="col-lg-4 col-md-6 col-12">
                         <!-- Single Widget -->
                         <div class="single-footer links">
-                          <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                          <span class="title">KẾT NỐI VỚI CHÚNG TÔI</span>
                             
                             <li style="display:flex; margin-bottom:15px; ">
                                 @foreach($social as $contact)
@@ -194,22 +205,29 @@
                               <!-- <a id="hover" href="{{$contact->link}}" target="_blank" style="margin-left: 5px;" class="fab-label abc">{!!$contact->name!!}</a> -->
                             @endforeach 
                             </li>
-                            
-                    </div>
-                
+                    </div>  
             </div>
 
                     
                     <div class="col-lg-4 col-md-6 col-12">
                         <!-- Single Widget -->
-                        <div class="single-footer social">
-                            <h4>ĐĂNG KÝ NHẬN TIN</h4>
+                        <div class="single-footer links">
+                            <span class="title">ĐĂNG KÝ NHẬN TIN</span>
                             <!-- Single Widget -->
                             <div class="contact">
                                 <ul>
                                     <li>{{$share_config->mes_register}}</li>
                                 </ul>
                             </div>
+                            <div class="inner">
+                                
+                                <form  method="post" target="_blank" class="newsletter-inner">
+                                    @csrf
+                                    <input name="email1" id="email1" placeholder="Email của bạn" required="" type="email">
+                                   <button type="button" id="sendmail" class="btn">Đăng ký</button>
+                                </form>
+                            </div>
+
                             
                         </div>
                         <!-- End Single Widget -->
@@ -223,13 +241,13 @@
             <div class="container">
                 <div class="inner">
                     <div class="row">
-                        <div class="col-lg-6 col-12">
+                        <!-- <div class="col-lg-6 col-12">
                             <div class="left">
                                 <p>Copyright © 2020 <a href="http://www.wpthemesgrid.com" target="_blank">Wpthemesgrid</a>  -  All Rights Reserved.</p>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-6 col-12">
-                            <div class="right">
+                            <div class="left">
                                 <img src="images/payments.png" alt="#">
                             </div>
                         </div>
@@ -239,7 +257,14 @@
         </div>
     </footer>
     <!-- /End Footer Area -->
- 
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#sendmail').click(function(e){
+        alert('123');
+        
+            });
+        });
+    </script>
     <!-- Jquery -->
     <script src="{{asset('demachau/js/jquery.min.js')}}"></script>
     <script src="{{asset('demachau/js/jquery-migrate-3.0.0.js')}}"></script>

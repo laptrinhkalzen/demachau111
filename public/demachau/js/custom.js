@@ -21,23 +21,4 @@ $( document ).ready(function() {
 	            }
 	        });
     });
-
-    $('#sendmail1').click(function(e){
-    	var email = $('#email1').val();
-    	if(email=='') {
-    		alert('123');
-    	}
-    	else{
-    	$.ajax({
-    		url:'{{route("api.get_email11")}}',
-    		method:'GET',
-    		data:{email: email},
-    		success:function(data){
-    			alert('111');
-    		}
-
-    	});
-	}
-});
-
 });

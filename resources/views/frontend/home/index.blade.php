@@ -12,7 +12,7 @@
     });
 </script>
 <style type="text/css">
-    aside {position: fixed; top: 320px; bottom: 0px; width: 150px; background-color: #999; z-index: 1;}
+    aside {position: fixed; top: 320px; bottom: 0px; width: 150px;  z-index: 1;}
     .left {left: 0;}
     .right {right: 0;}
 </style>
@@ -47,10 +47,7 @@
         <!--/ End Single Slider -->
     </section>
     <!--/ End Slider Area -->
-    <form  method="get" target="_blank" class="newsletter-inner">
-            <input name="email1" id="email1" placeholder="Your email address" required="" type="email">
-           <button type="button" id="sendmail1" class="btn">Subscribe</button>
-        </form>
+    
     <!-- Start Small Banner  -->
     <section class="small-banner section">
         <div class="container-fluid">
@@ -115,17 +112,17 @@
                 </div>
             </div> -->
             <div class="nav-main">
-                                <!-- Tab Nav -->
-                                <ul style="border-bottom: solid 1px #FFA500;" class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li style="float: left; border-bottom: none; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
-                                    @foreach($danh_muc_con as $danh_muc_con1)
-                                    @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
-                                    <li style="float: left; border-bottom: solid 1px #FFA500;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
-                                    @endif
-                                    @endforeach
-                                </ul>
-                                <!--/ End Tab Nav -->
-                            </div>
+                <!-- Tab Nav -->
+                <ul style="border-bottom: solid 1px #FFA500;" class="nav nav-tabs" id="myTab" role="tablist">
+                    <li style="float: left; border-bottom: none; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
+                    @foreach($danh_muc_con as $danh_muc_con1)
+                    @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
+                    <li style="float: left; border-bottom: solid 1px #FFA500;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
+                    @endif
+                    @endforeach
+                </ul>
+                <!--/ End Tab Nav -->
+            </div>
             <div class="row">
                 <div class="col-12">
                     <div class="owl-carousel popular-slider">
