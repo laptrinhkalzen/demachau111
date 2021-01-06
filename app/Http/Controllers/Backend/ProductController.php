@@ -85,7 +85,7 @@ class ProductController extends Controller {
                foreach ($variants as $variant) { //lặp sản phẩm
                   if($parent_id==$variant->parent_id){ //lấy sản phẩm của danh mục cha 
                        $childrens=$variants->where('parent_id',$parent_ids[$key+1]); //lấy sp con của sp 
-                        foreach ($childrens as  $children){
+                        foreach ($childrens as  $children) {
                             $input=array();
                             $input['product_id']=$product->id;
                             $input['variant_id']=$children->id;
@@ -127,7 +127,7 @@ class ProductController extends Controller {
           $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->groupBy('parent_id')->pluck('parent_id');
            $count=$parent_ids->count();
            $variant_products = DB::table('variant_product')->where('product_id',64)->get();
-        foreach ($variant_products as $key => $variant_product) { //Lấy danh mục cha
+        foreach ($variant_products as $key => $parent_id) { //Lấy danh mục cha
                if($key==$count-1){
                 break;
                }

@@ -42,7 +42,8 @@ class Frontend {
         foreach($template_setting as $key=>$val){
             $template[$val->name][$val->title]=$val->value;
         }
-        $count=0;
+        
+         $count=0;
         if(! is_null(session('cart'))){
             foreach(session('cart') as $val){
                     $count += $val['quantity'];

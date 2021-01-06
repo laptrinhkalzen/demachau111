@@ -131,10 +131,10 @@
                        @if($product_danh_muc_cha1->category_id == $danh_muc_cha->id)
                         <div class="single-product"> 
                             <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{$product_danh_muc_cha1->images}}" alt="#">
-                                    <img class="hover-img" src="{{$product_danh_muc_cha1->images}}" alt="#">
-                                    <span class="out-of-stock">Hot</span>
+                                <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
+                                    <img class="default-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}">
+                                    <img class="hover-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}">
+                                   <!--  //<span class="out-of-stock">Hot</span> -->
                                 </a>
                                 <div class="button-head">
                                     <div class="product-action">
@@ -148,7 +148,7 @@
                                 </div>
                             </div>
                             <div class="product-content">
-                                <h3  style="text-align: center;"><a href="product-details.html">{{$product_danh_muc_cha1->title}}</a></h3>
+                                <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
                                 <div class="product-price" style="text-align: center;">
                                     @if($product_danh_muc_cha1->sale_price>0)
                                     <span class="old">{{$product_danh_muc_cha1->sale_price}}</span>

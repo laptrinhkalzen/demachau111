@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
 
 class CheckoutOrderController extends Controller {
 
@@ -14,11 +15,8 @@ class CheckoutOrderController extends Controller {
                 $total += ($val['price'] * $val['quantity']);
             }
         }
-        if (config('global.device') != 'pc') {
-            return view('mobile/home/checkout_order');
-        } else {
-            return view('frontend/cart/checkout')->with('total',$total);
-        }
+        return view('frontend/checkout/checkout')->with('total',$total);
+        
     }
 
 }

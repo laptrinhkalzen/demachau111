@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $( document ).ready(function() {
     $('#add-to-cart1').click(function( e ){
    	     var product_id=$(this).data('product_id');
@@ -22,3 +23,5 @@ $( document ).ready(function() {
 	        });
     });
 });
+=======
+>>>>>>> origin/main
