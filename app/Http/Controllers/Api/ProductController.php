@@ -29,6 +29,7 @@ class ProductController extends Controller {
         if (is_null($cart)) {
             $cart = [
                 $id => [
+                    "alias" =>$product->alias,
                     "title" => $product->title,
                     "quantity" => $quantity,
                     "price" => $product->sale_price == 0 ? $product->price : $product->sale_price,
@@ -59,6 +60,7 @@ class ProductController extends Controller {
             ]);
         } else {
             $cart[$id] = [
+                "alias" =>$product->alias,
                 "title" => $product->title,
                 "quantity" => $quantity,
                 "price" => $product->sale_price == 0 ? $product->price : $product->sale_price,

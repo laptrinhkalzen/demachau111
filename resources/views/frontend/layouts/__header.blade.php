@@ -4,6 +4,7 @@
 
 </style>
 <head>
+
     <!-- Meta Tag -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,6 +53,7 @@
     
     
 </head>
+<input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
 <body class="js" style="background-color: #f3f5f7">
     
     <!-- Preloader -->
@@ -150,33 +152,34 @@
                                 <a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                             </div>
                             <div class="sinlge-bar shopping">
-                                <a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
+                                <a href="#" class="single-icon"><i class="ti-bag"></i><span class="total-count" id="cart-count">{{$count_cart}}</span></a>
                                 <!-- Shopping Item -->
                                 <div class="shopping-item">
                                     <div class="dropdown-cart-header">
-                                        <span>2 Items</span>
-                                        <a href="#">View Cart</a>
+                                        <span id="count-sp">{{$count_cart}} Sản phẩm</span>
+                                        <a href="{{route('checkout_order.index')}}">Xem giỏ hàng</a>
                                     </div>
-                                    <ul class="shopping-list">
-                                        <li>
-                                            <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                                            <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
-                                            <h4><a href="#">Woman Ring</a></h4>
-                                            <p class="quantity">1x - <span class="amount">$99.00</span></p>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                                            <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
-                                            <h4><a href="#">Woman Necklace</a></h4>
-                                            <p class="quantity">1x - <span class="amount">$35.00</span></p>
-                                        </li>
+                                    <ul class="shopping-list" id="cart_items">
+                                          @if(Session('cart'))
+                                            @foreach(Session('cart') as $val)
+                                            <li>
+                                            <a href="#" class="remove" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
+                                            <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}"><img src="{{$val['image']}}" alt="#"></a>
+                                            <h4><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h4>
+                                            <p class="quantity">{{$val['quantity']}}x - <span style="color: red;" class="amount">{{number_format($val['price'])}} đ</span></p>
+                                          </li>
+                                            @endforeach
+                                            @endif
+                                        
+                                        
                                     </ul>
                                     <div class="bottom">
                                         <div class="total">
-                                            <span>Total</span>
-                                            <span class="total-amount">$134.00</span>
+                                            <span>Tổng</span>
+                                            <span class="total-amount" id="total1" style="color: red;">{{number_format($count_total)}} đ</span>
                                         </div>
-                                        <a href="checkout.html" class="btn animate">Checkout</a>
+                                        <a href="{{route('checkout_order.index')}}" class="btn animate">Xem giỏ hàng</a>
+                                        <a href="{{route('checkout_order.index')}}" class="btn animate">Thanh toán</a>
                                     </div>
                                 </div>
                                 <!--/ End Shopping Item -->

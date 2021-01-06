@@ -241,6 +241,7 @@
     <!-- /End Footer Area -->
  
     <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{asset('demachau/js/jquery.min.js')}}"></script>
     <script src="{{asset('demachau/js/jquery-migrate-3.0.0.js')}}"></script>
     <script src="{{asset('demachau/js/jquery-ui.min.js')}}"></script>
@@ -272,5 +273,53 @@
     <script src="{{asset('demachau/js/easing.js')}}"></script>
     <!-- Active JS -->
     <script src="{{asset('demachau/js/active.js')}}"></script>
+    <script src="{{asset('demachau/js/custom.js')}}"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+    $('#add-to-cart').click(function( e ){
+      
+         var product_id=$(this).data('product_id');
+         var quantity=$('#quantity').val();
+        
+         $.ajax({
+                url:'{{route("api.add_to_cart1")}}',
+                method:'POST',
+                data:{product_id : product_id,quantity:quantity,_token: $('#token').val()},
+                success:function(resp){           
+                   if(resp.success == true){
+                     $('#cart-count').html(resp.count);
+                     $('#total1').html(resp.total +' đ');
+                     $('#count-sp').html(resp.count + ' Sản phẩm');
+                     $("#cart_items").load(" #cart_items > *");
+                     $("#cart").load(" #cart > *");
+                     $("#sub_total").load(" #sub_total > *");
+                     alert('Thêm giỏ hàng thành công');
+                   }else{
+                     alert('Thêm giỏ hàng không thành công');
+                   }
+                }
+            });
+            });
+
+            $('#sendmail1').click(function(e){
+                var email = $('#email1').val();
+                if(email=='') {
+                    alert('123');
+                }
+                else{
+                $.ajax({
+                    url:'{{route("api.get_email11")}}',
+                    method:'GET',
+                    data:{email: email},
+                    success:function(data){
+                        alert('111');
+                    }
+
+                });
+            }
+        });
+
+});
+    </script>
 </body>
 </html>

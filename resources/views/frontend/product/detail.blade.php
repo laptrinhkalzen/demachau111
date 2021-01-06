@@ -1,5 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
+
 <style type="text/css">
     body {
     background-color: #7B1FA2
@@ -118,7 +119,7 @@ hr.ke_vach {
                                                 <input type="number" name="quantity" value="1" id="quantity" min="1">
                                                 </div>
                                                 <div class="col-md-8">
-                                                <button type="button" class="btn btn-danger">Thêm vào giỏ hàng</button>
+                                                <button type="button" class="btn btn-danger" id="add-to-cart"  data-product_id="{{$detail_product->id}}">Thêm vào giỏ hàng</button>
                                                 
                                                 </div>
                                             </div>
@@ -139,6 +140,7 @@ hr.ke_vach {
                             <!--/ End Form -->
                         </div>
                     </div>
+            
                     <div class="col-lg-4 col-12">
                         <div class="order-details">
                             <!-- Order Widget -->
@@ -254,4 +256,5 @@ hr.ke_vach {
                 </div>
             </div>
         </section>
+
 @stop

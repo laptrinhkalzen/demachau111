@@ -9,7 +9,7 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::get('/flash-sale', ['as' => 'event.sale', 'uses' => 'Frontend\FrontendController@event']);
 
     Route::get('/about', ['as' => 'home.about', 'uses' => 'Frontend\AboutController@index']);
-    Route::get('/checkout-order', ['as' => 'home.checkout_order', 'uses' => 'Frontend\CheckoutOrderController@index']);
+    Route::get('/checkout-order', ['as' => 'checkout_order.index', 'uses' => 'Frontend\CheckoutOrderController@index']);
     Route::get('/checkout-address', ['as' => 'home.checkout_address', 'uses' => 'Frontend\CheckoutAddressController@index']);
     Route::get('/checkout-payment', ['as' => 'home.checkout_payment', 'uses' => 'Frontend\CheckoutPaymentController@index']);
     Route::get('/marketing/activation/{key}', ['as' => 'marketing.activation', 'uses' => 'Frontend\MarketingController@activation']);
