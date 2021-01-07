@@ -6,8 +6,10 @@ use App\Repositories\NewsCategoryRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Repositories\NewsRepository;
+use Repositories\ContactRepository;
 use Repositories\CategoryRepository;
 use DB;
+use Carbon\Carbon;
 class NewsController extends Controller {
 
     //
@@ -59,6 +61,33 @@ class NewsController extends Controller {
         $category = DB::table('category')->where('parent_id', 0)->where('type',2)->orderBy('ordering', 'asc')->get();
         return view('frontend/news/detail',compact('detail_news','category','some_news'));
     }
+
+    public function contact_detail(Request $request) {
+       return view('frontend/news/contact_detail');
+    }
+
+    public function contact_store(Request $request){
+        $data = array();
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+        $data['mobile'] = $request->mobile;
+        $data['content'] = $request->content;
+        $data['created_at'] = Carbon::now('Asia/Ho_Chi_Minh');
+
+
+        $dem = 0;
+        $contact=DB::table('contact')->get();
+        foreach ($contact as $key => $value) {
+            if($value->email == $request->email ){
+                $dem++;
+            }
+        }
+        
+        $contact_detail = DB::table('contact')->insert($data);
+        return redirect()->back()->with('success','Gửi thành công');
+    
+
+  }
 
     public function list(Request $request) {
         $category = DB::table('category')->where('parent_id', 0)->where('type',2)->orderBy('ordering', 'asc')->get();

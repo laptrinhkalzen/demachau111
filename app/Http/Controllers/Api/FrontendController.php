@@ -19,6 +19,7 @@ use Repositories\ReviewPersonRepository;
 use App\Repositories\MemberRepository;
 use Mail;
 use Illuminate\Support\Facades\File; 
+use DB;
 
 class FrontendController extends Controller {
 
@@ -474,7 +475,18 @@ class FrontendController extends Controller {
     }
 
     public function get_email(Request $request){
-         
-         echo('abc');
+        $data = array();
+        $data['email'] = $request->email;
+
+        $dem = 0;
+        $email_receive=DB::table('email_receive')->get();
+        foreach ($email_receive as $key => $value) {
+            if($value->email == $request->email ){
+                $dem++;
+            }
+        }
+        if($dem==0){
+        $email = DB::table('email_receive')->insert($data);
     }
+  }
 }

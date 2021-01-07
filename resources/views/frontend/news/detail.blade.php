@@ -53,7 +53,7 @@
                         
                     <div class="col-lg-9 col-md-8 col-12">
                        <h6 class="entry-category is-xsmall">
-                        <a href="https://demachau.com/kinh-nghiem-hay/" rel="category tag">Tin tức</a></h6>
+                        <a href="{{route('news.list')}}" rel="category tag">Tin tức</a></h6>
 
                     <h1 class="entry-title">{{$news->title}}</h1>
                     <div class="product-content">

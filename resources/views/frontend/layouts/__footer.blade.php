@@ -102,7 +102,7 @@
         <!-- Footer Top -->
         <div class="footer-top ">
             <div class="container">
-                <div class="row">
+                <div class="row" >
                     
 
             <div  class="col-lg-3 col-md-6 col-12" >
@@ -223,9 +223,12 @@
                                 
                                 <form  method="post" target="_blank" class="newsletter-inner">
                                     @csrf
-                                    <input name="email1" id="email1" placeholder="Email của bạn" required="" type="email">
+                                  
+                                    <input name="email1" id="email1" placeholder="Email của bạn" required="" type="text">
                                    <button type="button" id="sendmail" class="btn">Đăng ký</button>
+                                   <div  aria-hidden="true" class="success"><span style="margin-left:14px;">Đăng ký thành công</span></div>
                                 </form>
+
                             </div>
 
                             
@@ -248,7 +251,7 @@
                         </div> -->
                         <div class="col-lg-6 col-12">
                             <div class="left">
-                                <img src="images/payments.png" alt="#">
+                                <img src="{{asset('images/payments.png')}}" alt="#">
                             </div>
                         </div>
                     </div>
@@ -257,14 +260,7 @@
         </div>
     </footer>
     <!-- /End Footer Area -->
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('#sendmail').click(function(e){
-        alert('123');
-        
-            });
-        });
-    </script>
+    
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{asset('demachau/js/jquery.min.js')}}"></script>
@@ -326,21 +322,29 @@
             });
             });
 
-            $('#sendmail1').click(function(e){
+
+            $('#sendmail').click(function(e){
                 var email = $('#email1').val();
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
                 if(email=='') {
-                    alert('123');
+                    alert('Hãy nhập email của bạn');   
                 }
                 else{
+                    if(regex.test(email)==false){
+                        alert('Vui lòng kiếm tra lại email của bạn');
+                    }
+                    else{
                 $.ajax({
                     url:'{{route("api.get_email11")}}',
-                    method:'GET',
+                    method:'POST',
                     data:{email: email},
                     success:function(data){
-                        alert('111');
+                        $("#email1").val("");
+                        $(".success").show();
                     }
 
                 });
+              }
             }
         });
 

@@ -619,8 +619,20 @@ input[type="submit"] {
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
+	background: #283988;
+	color: #fff;
+	line-height: 1;
+}
+
+button,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #446084;
+	color: #fff;
 	line-height: 1;
 }
 
@@ -1709,7 +1721,7 @@ object {
 	border: none;
 }
 .quickview-content .quantity .button .btn:hover{
-	color:#F7941D;
+	color:#446084;
 }
 .quickview-content .quantity .input-number {
 	border: 1px solid #eceded;

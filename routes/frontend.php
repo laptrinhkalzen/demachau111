@@ -44,8 +44,11 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::post('/thi-cong/cap-nhat-tai-khoan/{alias}', ['as' => 'construction.update_profile', 'uses' => 'Frontend\ConstructionController@updateProfile']);
     /* Dự án */
     Route::get('/du-an/{alias}', ['as' => 'project.detail', 'uses' => 'Frontend\ProjectController@detail']);
-    /* Tin tuc */
+    //Contact
+    Route::get('/lien-he/', ['as' => 'contact.detail', 'uses' => 'Frontend\NewsController@contact_detail']);
+    Route::post('/lien-he/store/', ['as' => 'contact.store', 'uses' => 'Frontend\NewsController@contact_store']);
 
+    /* Tin tuc */
     // Route::get('/tin-tuc', ['as' => 'news.list', 'uses' => 'Frontend\NewsController@index']);
     Route::get('/danh-muc-tin/{alias}', ['as' => 'news_category.index', 'uses' => 'Frontend\NewsController@index']);
     Route::get('/tin-tuc', ['as' => 'news.list', 'uses' => 'Frontend\NewsController@list']);

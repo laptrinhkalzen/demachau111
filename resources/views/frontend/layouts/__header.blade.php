@@ -234,18 +234,17 @@
                                                         <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
                                                     </li>
                                                     @endforeach
-                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="{{route('news.list')}}">Tin tức</a>
-                                                    </li>
+                                                     
                                                     
                                                 </ul>
-                                                </ul>
+                                                
                                         </div>
                                     </div>
                                 </nav>
                                 <!--/ End Main Menu --> 
                             </div>
                         </div>
+
       
                     </div>
                 </div>
