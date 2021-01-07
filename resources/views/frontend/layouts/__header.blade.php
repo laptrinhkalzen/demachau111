@@ -99,6 +99,7 @@
                 </div>
             </div>
         </div>
+   
         <!-- End Topbar -->
         <div class="middle-inner">
             <div class="container">
@@ -130,7 +131,7 @@
                         <div class="search-bar-top">
                             <div class="search-bar">
                                 <select>
-                                    <option selected="selected">All Category</option>
+                                    <option class="select2" selected="selected">All Category</option>
                                     <option>watch</option>
                                     <option>mobile</option>
                                     <option>kid’s item</option>

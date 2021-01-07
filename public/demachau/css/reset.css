@@ -1289,44 +1289,7 @@ object {
 	text-transform: capitalize;
 	margin-bottom: 12px;
 }
-.quickview-content .nice-select {
-	clear: initial;
-	margin: 0;
-	height: 45px;
-	width: 100%;
-	text-align: center;
-	background: transparent;
-	text-transform: capitalize;
-	padding: 0 0 0 20px;
-	line-height: 45px;
-	font-size: 14px;
-	font-weight: 400;
-	border: 1px solid #eee;
-	border-radius: 0;
-}
-.quickview-content .nice-select::after {
-	border-color: #666;
-	right: 20px;
-}
-.quickview-content .nice-select .list {
-	border-radius:0px;
-	width: 100%;
-}
-.quickview-content .nice-select .list li.focus{
-	font-weight:400;
-	text-transform:lowercase;
-}
-.quickview-content .nice-select .list li {
-	color: #666;
-	border-radius: 0px;
-	font-size: 14px;
-	font-weight: 400;
-	text-transform:lowercase;
-}
-.quickview-content .nice-select .list li:hover{
-	background:#F7941D;
-	color:#fff;
-}
+
 
 .quickview-content .quickview-peragraph ul {
   margin: 30px 0 0;

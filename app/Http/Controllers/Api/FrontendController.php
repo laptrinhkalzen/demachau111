@@ -38,6 +38,23 @@ class FrontendController extends Controller {
         $this->memberRepo = $memberRepo;
     }
 
+    public function select_address(Request $request){
+        $data = $request->all();
+        if($data['action']){
+            $output = '';
+            if($data['action']=="city"){
+                $select_province = DB::table('district')->where('city_id',$data['ma_id'])->orderby('id_qh','ASC')->get();
+                    $output.='<option>---Chọn quận huyện---</option>';
+                foreach($select_province as $key => $province){
+                    $output.='<option value="'.$province->id_qh.'">'.$province->name_qh.'</option>';
+                }
+
+            }
+            echo $output;
+        }
+        
+    }
+
     public function registerMarketing(Request $request) {
         $input = $request->all();
         $validator = \Validator::make($input, $this->marketingRepo->validateCreate());

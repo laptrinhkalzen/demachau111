@@ -296,7 +296,7 @@
     <script src="{{asset('demachau/js/active.js')}}"></script>
     <script src="{{asset('demachau/js/custom.js')}}"></script>
     <script type="text/javascript">
-        $( document ).ready(function() {
+    $( document ).ready(function() {
     $('#add-to-cart').click(function( e ){
       
          var product_id=$(this).data('product_id');
@@ -321,9 +321,7 @@
                 }
             });
             });
-
-
-            $('#sendmail').click(function(e){
+     $('#sendmail').click(function(e){
                 var email = $('#email1').val();
                 var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
                 if(email=='') {
@@ -345,10 +343,41 @@
 
                 });
               }
-            }
-        });
+          }
+                });
+     });
 
-});
+
+
+           
+
+
+    
     </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+            $('.option').on('change',function(){
+            var action = $(this).attr('id');
+            var ma_id = $(this).val();
+            var _token = $('#token').val();
+            var result = '';
+            if(action=='city'){
+                result = 'district';
+
+            }
+            $.ajax({
+                url : '{{route('api.select_address')}}',
+                method: 'POST',
+                data:{action:action,ma_id:ma_id,_token:_token},
+                success:function(data){
+                  
+                    $("#district1").html(data);
+            
+                }
+            });
+        }); 
+    });
+</script>
+
 </body>
 </html>

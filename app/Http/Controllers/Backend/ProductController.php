@@ -73,12 +73,14 @@ class ProductController extends Controller {
         //Thêm thuộc tính sản phẩm
         $attributes = $this->getProductAttributes($input);
         $product->attributes()->attach($attributes);
+        //$attributes=DB::table('attribute')->where('product_id',$product->id)->get();
         //Thêm variant
-        $variants=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$product->id)->where('attribute.parent_id','!=','0')->get();
+        $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$product->id)->where('attribute.parent_id','!=','0')->get();
 
-          $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$product->id)->where('attribute.parent_id','!=','0')->groupBy('parent_id')->pluck('parent_id');
-          $count=$parent_ids->count();
-          foreach ($parent_ids as $key => $parent_id) { //Lấy danh mục cha
+        $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$product->id)->where('attribute.parent_id','!=','0')->groupBy('parent_id')->pluck('parent_id');
+        $count=$parent_ids->count();
+
+        foreach ($parent_ids as $key => $parent_id) { //Lấy danh mục cha
                if($key==$count-1){
                 break;
                }
@@ -93,10 +95,32 @@ class ProductController extends Controller {
                             $input['sort']=$key;
                             $input['count']=$count-1;
                             DB::table('variant_product')->insert($input);
-                            }     
-           }
-           }
-         }
+                            }  
+                        }
+                    }
+                }
+
+         //  foreach ($parent_ids as $key => $parent_id) { //Lấy danh mục cha
+         //       if($key==$count-1){
+         //        break;
+         //       }
+         //       foreach ($variants as $variant) { //lặp sản phẩm
+         //          if($parent_id==$variant->parent_id){ //lấy sản phẩm của danh mục cha 
+         //               $childrens=$variants->where('parent_id',$parent_ids[$key+1]); //lấy sp con của sp 
+         //                foreach ($childrens as  $children) {
+         //                    $input=array();
+         //                    $input['product_id']=$product->id;
+         //                    $input['variant_id']=$children->id;
+         //                    $input['parent_variant']=$variant->id;
+         //                    $input['sort']=$key;
+         //                    $input['count']=$count-1;
+         //                    DB::table('variant_product')->insert($input);
+         //                    }     
+         //   }
+         //   }
+         // }
+
+          
              
         if ($product) {
             return redirect()->route('admin.product.index')->with('success', 'Tạo mới thành công');
