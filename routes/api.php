@@ -18,7 +18,8 @@ use Illuminate\Http\Request;
   });
  */
 
-Route::post('/select-address', ['as' => 'api.select_address', 'uses' => 'Api\FrontendController@select_address']);  
+Route::post('/select-address', ['as' => 'api.select_address', 'uses' => 'Api\FrontendController@select_address']);
+Route::post('/check-option', ['as' => 'api.check_option', 'uses' => 'Api\FrontendController@check_option']);  
 Route::post('/get-product-attribute', ['as' => 'api.get_product_attribute', 'uses' => 'Api\ProductController@getProductAttribute']);
 Route::post('/get-sale-product-attribute', ['as' => 'api.get_sale_product_attribute', 'uses' => 'Api\ProductController@getSaleProductAttribute']);
 Route::post('/slugify', ['as' => 'api.slugify', 'uses' => 'Api\BackendController@slugify']);

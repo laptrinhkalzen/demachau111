@@ -39,7 +39,7 @@ class ProductController extends Controller {
     }
 
     public function show(Request $request, $alias) {
-         ini_set('memory_limit', '2048M');
+        ini_set('memory_limit', '2048M');
         $search_product = $this->productRepo->getProduct($alias, $limit=null);
         $title_category = \DB::table('category')->where('alias', $alias)->first();
         $main_category = $this->categoryRepo->getCategoryByAlias($alias);
@@ -93,14 +93,30 @@ class ProductController extends Controller {
         return view('frontend/home/search',compact('search_product','count','slide1'));
     }
     public function detail(Request $request,$alias) {
+<<<<<<< HEAD
             $benefit = DB::table('benefit')->orderBy('order','asc')->get();
             $detail_product =  $this->productRepo->getDetailProduct($alias);
+=======
+>>>>>>> origin/main
             
+            $detail_product =  $this->productRepo->getDetailProduct($alias);
+            $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',64)->where('attribute.parent_id','!=','0')->get();
+            $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',64)->where('attribute.parent_id','!=','0')->get()->pluck('parent_id')->unique();
+            foreach ($parent_ids as $key => $value) {
+                $input[$key]['id']=$value;
+                $input[$key]['name']=DB::table('attribute')->where('id',$value)->pluck('title')->first();
+            }
+           
+             
             // $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));
             // $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
             // $news_arr = $this->newsRepo->getAllNews($limit = 7);
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
+<<<<<<< HEAD
             return view('frontend/product/detail',compact('detail_product','benefit'));
+=======
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input'));
+>>>>>>> origin/main
         }      
 
     public function index(Request $request) {

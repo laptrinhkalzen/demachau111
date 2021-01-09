@@ -18,8 +18,8 @@
                 <ul class="nav nav-tabs nav-tabs-highlight">
                     <li class="nav-item"><a href="#left-icon-tab1" class="nav-link active" data-toggle="tab"><i class="icon-menu7 mr-2"></i> Thông tin cơ bản</a></li>
                     <li class="nav-item"><a href="#left-icon-tab2" class="nav-link" data-toggle="tab"><i class="icon-stack2 mr-2"></i> Thuộc tính sản phẩm</a></li>
-                    <li class="nav-item"><a href="#left-icon-tab3" class="nav-link" data-toggle="tab"><i class="icon-mention mr-2"></i> Thẻ meta</a></li>
-
+                     <li class="nav-item"><a href="#left-icon-tab3" class="nav-link" data-toggle="tab"><i class="icon-stack2 mr-2"></i> Biến thể</a></li>
+                    <li class="nav-item"><a href="#left-icon-tab4" class="nav-link" data-toggle="tab"><i class="icon-mention mr-2"></i> Thẻ meta</a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -183,6 +183,38 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="left-icon-tab3">
+                        <div class="form-group row">
+                            @foreach($attribute_names as $attr_name)
+                                <div class="col-md-2">
+                                    <b>{{$attr_name->parent_name}}</b>
+                                </div>    
+                            @endforeach
+                            <div class="col-md-2">
+                                    <b>GIÁ</b>
+                            </div> 
+                        </div>
+                            @foreach($options as $option)
+                                 <div class="form-group row">
+                                 @foreach($option as $option1)
+                                 <div class="col-md-2">
+                                    
+                                     <select class="form-control" name="value[]" aria-label="Default select example">
+                                      <option selected>{{$option1->value}}</option>
+                                      <option value="" select>Không giá trị mặc định</option>
+                                    </select>
+                                 </div>
+                                 @endforeach
+                                 <div class="col-md-2">
+                                   <input class="form-control" type="number" name="option_price[]" value="" placeholder="Điền giá bán">
+                                 </div> 
+                                 </div>
+                            @endforeach
+                          
+
+                            
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="left-icon-tab4">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="form-group row">
