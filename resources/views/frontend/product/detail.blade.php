@@ -58,10 +58,10 @@ hr.ke_vach {
         <!-- End Breadcrumbs -->
                 
         <!-- Start Checkout -->
-        <section class="shop checkout section">
+        <section class="shop checkout section" style="background-color: #f6f7fb;"  >
             <div class="container">
                 <div class="row"> 
-                    <div class="col-lg-8 col-12">
+                    <div class="col-lg-8 col-12" style="background-color: #fff;">
                         <div class="checkout-form">
                             
                             <!-- Form -->
@@ -73,7 +73,7 @@ hr.ke_vach {
     
     <!--Carousel Wrapper-->
     
-    <div class="row">
+    <div class="row" >
         <div class="col-md-12">
             <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
                 <!-- slides -->
@@ -104,11 +104,31 @@ hr.ke_vach {
                                            <p>{{$detail_product->title}}</p>
                                         </div>
                                         <div class="form-group">
-                                            <div class="row col-lg-12">
-                                                <p style="font-weight: 130px; color: black;">Loại đệm: </p>&nbsp; <p>Đệm tấm</p> 
-                                            </div>
-                                            <div class="row col-lg-12">
-                                                 <p style="color:red;">{{$detail_product->price}}</p> 
+                                             <div class="row">
+                                        
+                                        @foreach($input as $inputt)
+                                           <div class="col-lg-12"> 
+                                            <span>{{$inputt['name']}}</span>
+                                            </div>   
+                                            @foreach($attributes as $attribute)
+
+                                            
+                                                 @if($attribute->parent_id==$inputt['id'])
+                                                <div class="col-lg-4">  
+
+                                               <input type="radio" class="check-option" name="{{$inputt['name']}}" value="{{$attribute->title}}">
+                                                 <label for="other">{{$attribute->title}}</label>
+                                                 </div>
+                                                 @endif
+                                                 @endforeach
+                                       
+                                         @endforeach
+                                           
+                                        
+                                             
+                                        </div>
+                                            <div class="row col-lg-6" >
+                                                 <p id="option_price" style="color:red;">{{$detail_product->price}}</p> 
                                             </div>
                                         
                                              
@@ -116,74 +136,90 @@ hr.ke_vach {
                                          <div class="form-group">                                           
                                              <div class="row">
                                                 <div class="col-md-4">
-                                                <input type="number" name="quantity" value="1" id="quantity" min="1">
+                                                <input style="width:100%"  type="number" name="quantity" value="1" id="quantity" min="1">
                                                 </div>
                                                 <div class="col-md-8">
-                                                <button type="button" class="btn btn-danger" id="add-to-cart"  data-product_id="{{$detail_product->id}}">Thêm vào giỏ hàng</button>
+                                                <button type="button" class="btn btn-danger" id="add-to-cart"  data-product_id="{{$detail_product->id}}">Thêm vào giỏ</button>
                                                 
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">                                           
-                                                <button type="submit" class="btn btn-success">Mua ngay</button>
+                                        <div class="form-group">
+                                                 <div class="row">  
+                                                 <div class="col-md-6">                                         
+                                                <button type="submit" style="width:100%"  class="btn btn-success">Mua ngay</button>
+                                                </div>
+                                                 <div class="col-md-6"> 
+                                                <button type="submit" style="width:100%"  class="btn btn-success">Mua ngay</button>
+                                                </div>
+                                                </div>      
                                         </div>
+                                        <div class="form-group">                                            
+                                                <button type="submit" style="width:100%"  class="btn btn-success">Mua ngay</button>    
+                                        </div>
+                                        <div class="form-group" style="background-color: #f5f5f5;">
+                                            
+                             
+                                        <div class="col-md-12">
+                                            <span> Gọi mua hàng (8:00 - 21:00): 1900 3052</span>
+                                          </div>
+                                       
+                                         <div class="row">
+                                        <div class="col-md-7">            
+                                            <input style="background-color:#fff; margin-left:5px;" type="text" placeholder="Nhập số điện thoại"  id="contact-me">  
+                                        </div> 
+                                        <div class="col-md-5">                                
+                                            <button type="submit" class="btn btn-success">Gọi cho tôi</button>
+                                        </div>      
+                                        </div>
+                                       </div>
                                         <hr class="ke_vach">
+
                                     </div>
                                    
                                     
                                     
                                     
+                            
                                    
                                     
                                 </div>
                             </form>
+
                             <!--/ End Form -->
                         </div>
                     </div>
             
-                    <div class="col-lg-4 col-12">
-                        <div class="order-details">
+                    <div class="col-lg-3 col-12" style="border: 1px solid #ebebeb;">
+                        
                             <!-- Order Widget -->
                             <div class="single-widget">
-                                <h2>CART  TOTALS</h2>
                                 <div class="content">
                                     <ul>
-                                        <li>Sub Total<span>$330.00</span></li>
-                                        <li>(+) Shipping<span>$10.00</span></li>
-                                        <li class="last">Total<span>$340.00</span></li>
+                                        @foreach($benefit as $benefits)
+                                        <div class="">
+                                            <div class="form-group">                                           
+                                             <div class="row">
+                                                <div class="col-md-3">
+                                                <a target="_blank" class="mr-2"><img style="width: 55px; border-radius: 100%;" src="{!!url('upload/config/'.$benefits->image)!!}" ></a> 
+                                                </div>
+                                                <div class="col-md-9">
+                                                <div style="font-weight: bold;">{!!$benefits->name!!}</div>
+                                                <p>{!!$benefits->content!!}</p>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                            
+                                            
+                                        </div>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
                             <!--/ End Order Widget -->
-                            <!-- Order Widget -->
-                            <div class="single-widget">
-                                <h2>Payments</h2>
-                                <div class="content">
-                                    <div class="checkbox">
-                                        <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label>
-                                        <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox"> Cash On Delivery</label>
-                                        <label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox"> PayPal</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/ End Order Widget -->
-                            <!-- Payment Method Widget -->
-                            <div class="single-widget payement">
-                                <div class="content">
-                                    <img src="images/payment-method.png" alt="#">
-                                </div>
-                            </div>
-                            <!--/ End Payment Method Widget -->
-                            <!-- Button Widget -->
-                            <div class="single-widget get-button">
-                                <div class="content">
-                                    <div class="button">
-                                        <a href="#" class="btn">proceed to checkout</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/ End Button Widget -->
-                        </div>
+                           
                     </div>
                 </div>
             </div>
@@ -256,5 +292,29 @@ hr.ke_vach {
                 </div>
             </div>
         </section>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+               $('.check-option').on('click',function(){
+                    // var list = [];
+                    // $('div').find("input:radio:checked").each(function () {
+                    //    list.push($(this).val());
+                    // });
+                    search = $('div').find("input:radio:checked").map(function(){
+                        return $(this).val();
+                    }).get();
+                         
+                    $.ajax({
+                        url:'{{route("api.check_option")}}',
+                        method:'POST',
+                        data:{search:search,_token: $('#token').val()},
+                        success:function(resp){ 
+                            $('#option_price').html(resp.result['option_price'] + ' đ');       
+                             alert(resp.result['option_price']);
+                        }
+                    });
+                });
+            });
+        </script>
 
 @stop
