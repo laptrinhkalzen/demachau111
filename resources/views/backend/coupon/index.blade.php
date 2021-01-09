@@ -36,6 +36,8 @@
                     <th>Số lượng</th>
                     <th>Loại giảm</th>
                     <th>Giá trị giảm</th>
+                    <th>Điều kiện giảm</th>
+                    <th>Trạng thái</th>
                     <!-- <th>Ngày tạo</th> -->
                     <th>Ngày hết hạn</th>
                     <th>Thao tác</th>
@@ -48,11 +50,27 @@
                     <td>{{$coupon->coupon_name}}</td>
                     <td>{{$coupon->coupon_code}}</td>
                     <td>{{$coupon->coupon_number}}</td>
-                    <td>{{$coupon->coupon_type}}</td>
                     @if($coupon->coupon_type==1)
-                    <td>{{$coupon->coupon_value}}k</td>
-                    @else
+                       <td>Theo phần trăm</td>
+                        @else  
+                        <td>Theo giá tiền</td>
+                        @endif
+                    
+                    @if($coupon->coupon_type==1)
                     <td>{{$coupon->coupon_value}}%</td>
+                    @else
+                    <td>{{$coupon->coupon_value}}$</td>
+                    @endif
+                    @if($coupon->coupon_condition>0)
+                    <td>Đơn hàng từ {{$coupon->coupon_condition}}$</td>
+                    @else
+                    <td></td>
+                    @endif
+                    
+                    @if($coupon->coupon_status==0)
+                    <td>Ẩn</td>
+                    @else
+                    <td>Hiển thị</td>
                     @endif
               
                     <td>{{$coupon->coupon_end}}</td>

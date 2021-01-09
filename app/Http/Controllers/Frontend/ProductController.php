@@ -93,12 +93,9 @@ class ProductController extends Controller {
         return view('frontend/home/search',compact('search_product','count','slide1'));
     }
     public function detail(Request $request,$alias) {
-<<<<<<< HEAD
+
             $benefit = DB::table('benefit')->orderBy('order','asc')->get();
             $detail_product =  $this->productRepo->getDetailProduct($alias);
-=======
->>>>>>> origin/main
-            
             $detail_product =  $this->productRepo->getDetailProduct($alias);
             $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',64)->where('attribute.parent_id','!=','0')->get();
             $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',64)->where('attribute.parent_id','!=','0')->get()->pluck('parent_id')->unique();
@@ -112,11 +109,11 @@ class ProductController extends Controller {
             // $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
             // $news_arr = $this->newsRepo->getAllNews($limit = 7);
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
-<<<<<<< HEAD
-            return view('frontend/product/detail',compact('detail_product','benefit'));
-=======
-            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input'));
->>>>>>> origin/main
+
+            
+
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit'));
+
         }      
 
     public function index(Request $request) {

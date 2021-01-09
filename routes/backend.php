@@ -21,11 +21,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::post('/category/{type}/update/{id}', ['as' => 'admin.category.update', 'uses' => 'Backend\CategoryController@update']);
     Route::delete('/category/{type}/delete/{id}', ['as' => 'admin.category.destroy', 'uses' => 'Backend\CategoryController@destroy']);
 
-        /* Quản lý mã giảm giá */
+       /* Quản lý coupon */
     Route::get('/coupon', ['as' => 'admin.coupon.index', 'uses' => 'Backend\CouponController@index']);
     Route::get('/coupon/create', ['as' => 'admin.coupon.create', 'uses' => 'Backend\CouponController@create']);
-    Route::get('/coupon/edit/{id}', ['as' => 'admin.coupon.edit', 'uses' => 'Backend\CouponController@edit']);
     Route::post('/coupon/store', ['as' => 'admin.coupon.store', 'uses' => 'Backend\CouponController@store']);
+    Route::get('/coupon/edit/{id}', ['as' => 'admin.coupon.edit', 'uses' => 'Backend\CouponController@edit']);
     Route::post('/coupon/update/{id}', ['as' => 'admin.coupon.update', 'uses' => 'Backend\CouponController@update']);
     Route::delete('/coupon/delete/{id}', ['as' => 'admin.coupon.destroy', 'uses' => 'Backend\CouponController@destroy']);
 

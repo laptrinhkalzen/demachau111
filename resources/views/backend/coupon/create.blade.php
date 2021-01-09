@@ -20,7 +20,9 @@
                     <form action="{!!route('admin.coupon.store')!!}" class="form-validate-jquery" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
                         <fieldset>
-                           
+                            
+                       
+                                    
                          <div class="form-group row">
                                 <label class="col-md-3 col-form-label text-right">Tên mã <span class="text-danger">*</span></label>
                                 <div class="col-md-9">
@@ -65,6 +67,15 @@
                                      {!! $errors->first('coupon_value', '<span class="text-danger">:message</span>') !!}
                                 </div>
                               </div>
+
+                              <div class="form-group row">
+                                <label class="col-form-label col-md-3 text-right">Điều kiện giảm </label>
+                                <div class="col-md-2">
+                                    <input type="text" name="coupon_condition" class="form-control touchspin text-center" value="0">
+                                     {!! $errors->first('coupon_condition', '<span class="text-danger">:message</span>') !!}
+                                </div>
+                              </div>
+
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label text-right">Hạn dùng <span class="text-danger">*</span></label>
                                 <div class="col-md-9">
@@ -72,6 +83,15 @@
                                     {!! $errors->first('coupon_end', '<span class="text-danger">:message</span>') !!}
                                 </div>
                             </div>
+                            
+                             <div class="form-group row" style="float: right;"> 
+                                    <div class="form-check col-md-6 form-check-right">
+                                        <label class="form-check-label float-right">
+                                            Hiển thị
+                                            <input type="checkbox" class="form-check-input-styled" name="coupon_status" data-fouc="">
+                                        </label>
+                                    </div>
+                                </div>
 
                        
                        

@@ -5,12 +5,13 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Repositories\CouponRepository;
 use App\Repositories\ProductRepository;
- use Repositories\CategoryRepository;
+use Repositories\CategoryRepository;
 use Repositories\AttributeRepository;
 use Repositories\PostHistoryRepository;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use TIMESTAMP;
+use DB;
 
 
 class CouponController extends Controller {
@@ -36,6 +37,7 @@ class CouponController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
+        // $members=DB::table('member')->orderBy('created_at', 'desc')->get();
         return view('backend/coupon/create');
     }
 
@@ -51,7 +53,10 @@ class CouponController extends Controller {
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
-          $coupon = $this->couponRepo->create($input);
+        $input['coupon_status'] = isset($input['coupon_status']) ? 1 : 0;
+        
+        $coupon = $this->couponRepo->create($input);
+        
         if ($coupon) {
             return redirect()->route('admin.coupon.index')->with('success', 'Tạo mới thành công');
         } else {
@@ -76,8 +81,9 @@ class CouponController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit($id) {
-         $coupon = $this->couponRepo->find($id);
-        return view('backend/coupon/update')->with('coupon',$coupon);
+         $record = $this->couponRepo->find($id);
+         $coupon_end=DB::table('coupon')->where('id',$id)->get('coupon_end');
+        return view('backend/coupon/update')->with('record',$record)->with('coupon_end',$coupon_end);
     }
 
     /**
@@ -89,10 +95,11 @@ class CouponController extends Controller {
      */
     public function update(Request $request, $id) {
         $input = $request->all();
-        $validator = \Validator::make($input, $this->couponRepo->validateCreate());
+        $validator = \Validator::make($input, $this->couponRepo->validateUpdate($id));
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
+        $input['coupon_status'] = isset($input['coupon_status']) ? 1 : 0;
          $res = $this->couponRepo->update($input, $id);
         if ($res) {
             return redirect()->route('admin.coupon.index')->with('success', 'Cập nhật thành công');
@@ -126,13 +133,13 @@ class CouponController extends Controller {
         return $attributes;
     }
 
-    public function addPostHistory($product) {
+    // public function addPostHistory($product) {
 
-        $post_history['item_id'] = $product->id;
-        $post_history['created_at'] = $product->created_at;
-        $post_history['updated_at'] = $product->post_schedule ?: $product->updated_at;
-        $post_history['module'] = 'product';
-        $this->postHistoryRepo->create($post_history);
-    }
+    //     $post_history['item_id'] = $product->id;
+    //     $post_history['created_at'] = $product->created_at;
+    //     $post_history['updated_at'] = $product->post_schedule ?: $product->updated_at;
+    //     $post_history['module'] = 'product';
+    //     $this->postHistoryRepo->create($post_history);
+    // }
 
 }
