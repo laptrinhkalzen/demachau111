@@ -53,6 +53,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::post('/customer-support/update/{id}', ['as' => 'admin.customer_support.update', 'uses' => 'Backend\CustomerSupportController@update']);
     Route::delete('/customer-support/delete/{id}', ['as' => 'admin.customer_support.destroy', 'uses' => 'Backend\CustomerSupportController@destroy']);
 
+    // Quan ly benefit
+     Route::get('/benefit', ['as' => 'admin.benefit.index', 'uses' => 'Backend\BenefitController@index']);
+    Route::get('/benefit/create', ['as' => 'admin.benefit.create', 'uses' => 'Backend\BenefitController@create']);
+    Route::get('/benefit/edit/{id}', ['as' => 'admin.benefit.edit', 'uses' => 'Backend\BenefitController@edit']);
+    Route::post('/benefit/store', ['as' => 'admin.benefit.store', 'uses' => 'Backend\BenefitController@store']);
+    Route::post('/benefit/update/{id}', ['as' => 'admin.benefit.update', 'uses' => 'Backend\BenefitController@update']);
+    Route::delete('/benefit/delete/{id}', ['as' => 'admin.benefit.destroy', 'uses' => 'Backend\BenefitController@destroy']);
+
     /* Phương thức thanh toán */
     Route::get('/payment-method', ['as' => 'admin.payment_method.index', 'uses' => 'Backend\PaymentMethodController@index']);
     Route::get('/payment-method/create', ['as' => 'admin.payment_method.create', 'uses' => 'Backend\PaymentMethodController@create']);

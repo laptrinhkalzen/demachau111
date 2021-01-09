@@ -12,18 +12,19 @@
     });
 </script>
 <style type="text/css">
-    aside {position: fixed; top: 320px; bottom: 0px; width: 150px;  z-index: 1;}
+    aside {position: fixed; top: 320px; bottom: 0px; width: 150px; width: calc((100% - 1250px)/2); z-index: 999; overflow: hidden; display: block;}
     .left {left: 0;}
     .right {right: 0;}
 </style>
     <!--/ End Header -->
     
     <!-- Slider Area -->
-    <aside class="left"><img style="width: 150px; height: 440px;" src="{{$share_config->banner_left}}"></img></aside>
-    <section class="hero-slider">
+    <aside class="left"><img style="width: 150px;  height: 440px; " src="{{$share_config->banner_left}}"></img></aside>
+
+    <section class="hero-slider" style="margin: 0 auto;">
 
         <!-- Single Slider -->
-        <div class="single-slider">
+        <div class=" single-slider" style="margin-left: 190px; margin-right: 190px;">
             <div class="container">
                 <div class="row no-gutters">
                     <div class="col-lg-9 offset-lg-3 col-12">
@@ -46,14 +47,17 @@
         </div>
         <!--/ End Single Slider -->
     </section>
-    <!--/ End Slider Area -->
-    
-    <!-- Start Small Banner  -->
-    <section class="small-banner section">
-        <div class="container-fluid">
+    <section class="shop-blog section">
+        <div class="container">
             <div class="row">
-                <!-- Single Banner  -->
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2>From Our Blog</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-banner">
                         <img src="{{asset('demachau/images/blog1')}}" alt="#">
                         <div class="content">
@@ -63,8 +67,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- /End Single Banner  -->
-                <!-- Single Banner  -->
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-banner">
                         <img src="https://via.placeholder.com/600x370" alt="#">
@@ -87,18 +89,58 @@
                         </div>
                     </div>
                 </div>
-                <!-- /End Single Banner  -->
             </div>
         </div>
     </section>
-    <!-- End Small Banner -->
+
+    <section class="shop-blog section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2>From Our Blog</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-banner">
+                        <img src="{{asset('demachau/images/blog1')}}" alt="#">
+                        <div class="content">
+                            <p>Man's Collectons</p>
+                            <h3>Summer travel <br> collection</h3>
+                            <a href="#">Discover Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-banner">
+                        <img src="https://via.placeholder.com/600x370" alt="#">
+                        <div class="content">
+                            <p>Bag Collectons</p>
+                            <h3>Awesome Bag <br> 2020</h3>
+                            <a href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /End Single Banner  -->
+                <!-- Single Banner  -->
+                <div class="col-lg-4 col-12">
+                    <div class="single-banner tab-height">
+                        <img src="https://via.placeholder.com/600x370" alt="#">
+                        <div class="content">
+                            <p>Flash Sale</p>
+                            <h3>Mid Season <br> Up to <span>40%</span> Off</h3>
+                            <a href="#">Discover Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
-    <!-- Start Product Area -->
-       <!-- End Product Area -->
     
-    <!-- Start Midium Banner  -->
-    
-    <!-- End Midium Banner -->
     
     <!-- Start Most Popular -->
     @foreach($danh_muc_cha as $danh_muc_cha)
@@ -182,8 +224,8 @@
     <!-- End Shop Home List  -->
     
     <!-- Start Cowndown Area -->
-    <section class="cown-down">
-        <div class="section-inner ">
+    <section class="cown-down" style="margin: 0 auto;">
+        <div class="section-inner " style="margin-left: 170px; margin-right: 170px;"> 
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6 col-12 padding-right">
@@ -418,7 +460,7 @@
                 </div>
             </div>
     </div>
-    <aside class="right"><img style="width: 150px; height: 540px;" src="{{$share_config->banner_right}}"></img></aside>
+    <aside class="right"><img style="width: 150px;  height: 540px;" src="{{$share_config->banner_right}}"></img></aside>
   
     <!-- Modal end -->
     

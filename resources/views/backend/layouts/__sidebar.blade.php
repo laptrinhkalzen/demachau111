@@ -106,6 +106,7 @@
                         <li class="nav-item"><a href="{{route('admin.category.index', \App\Category::TYPE_PRODUCT)}}" class="nav-link">Danh mục</a></li>
                         <li class="nav-item"><a href="{{route('admin.product.index')}}" class="nav-link">Sản phẩm</a></li>
                         <li class="nav-item"><a href="{{route('admin.attribute.index')}}" class="nav-link">Thuộc tính</a></li>
+                        <li class="nav-item"><a href="{{route('admin.benefit.index')}}" class="nav-link">Lợi ích</a></li>
 
                     </ul>
                 </li>

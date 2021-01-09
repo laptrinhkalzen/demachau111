@@ -50,4 +50,5 @@ return [
     'admin.mes_register.index'=>'Đăng ký nhận tin',
     'admin.company_infor.index'=>'Thông tin công ty',
     'admin.customer_support.index'=>'Hỗ trợ khách hàng',
+    'admin.benefit.index'=>'Lợi ích',
 ];

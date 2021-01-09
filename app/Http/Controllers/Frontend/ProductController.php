@@ -17,6 +17,7 @@ use App\Repositories\OrderDetailRepository;
 use Repositories\GalleryRepository;
 use App\Product;
 use App\Repositories\SlideRepository;
+use DB;
 
 class ProductController extends Controller {
 
@@ -92,14 +93,14 @@ class ProductController extends Controller {
         return view('frontend/home/search',compact('search_product','count','slide1'));
     }
     public function detail(Request $request,$alias) {
-
+            $benefit = DB::table('benefit')->orderBy('order','asc')->get();
             $detail_product =  $this->productRepo->getDetailProduct($alias);
             
             // $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));
             // $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
             // $news_arr = $this->newsRepo->getAllNews($limit = 7);
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
-            return view('frontend/product/detail',compact('detail_product'));
+            return view('frontend/product/detail',compact('detail_product','benefit'));
         }      
 
     public function index(Request $request) {

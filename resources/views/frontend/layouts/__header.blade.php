@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-<style type="text/css">
-
-</style>
 <head>
 
     <!-- Meta Tag -->
@@ -66,36 +63,70 @@
         </div>
     </div>
     <!-- End Preloader -->
-    
+
+
+    <div class="hotline-phone-ring-wrap">       
+            <div class="hotline-phone-ring">
+            <div class="hotline-phone-ring-circle"></div>
+            <div class="hotline-phone-ring-circle-fill"></div>
+            <div class="hotline-phone-ring-img-circle"> <a href="tel:{{$share_config->hotline}}" class="pps-btn-img"> <img src="https://netweb.vn/img/hotline/icon.png" alt="so dien thoai" width="50"> </a></div>
+        </div>      
+                 
+        
+</div>
+
+
+
+<div class="float-icon-hotline">            
+        <ul class ="left-icon hotline">
+            <li class="hotline_float_icon"><a target="_blank" rel="nofollow" id="messengerButton" href="{{$share_config->facebook}}"><i class="fa fa-zalo animated infinite tada"></i><span>Zalo</span></a></li>
+            <li class="hotline_float_icon"><a target="_blank" rel="nofollow" id="messengerButton" href="{{$share_config->twitter}}"><i class="fa fa-messenger animated infinite tada"></i><span>Facebook</span></a></li>
+        </ul>       
+</div>
     
     <!-- Header -->
     <header class="header shop">
         <!-- Topbar -->
-        <div class="topbar">
-            <div class="container">
+        <div class="topbar" style="background-color: #3a559f;" >
+            <div class="container"  >
                 <div class="row">
-                    <div class="col-lg-4 col-md-12 col-12">
+                    <div class="col-lg-3 col-md-12 col-12">
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
-                                <li><i class="ti-email"></i> support@shophub.com</li>
+                                <li><i class="ti-headphone-alt"></i>  Hotline miễn phí: 1900 3052 (8:00 - 21:00)</li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
                     </div>
-                    <div class="col-lg-8 col-md-12 col-12">
-                        <!-- Top Right -->
-                        <div class="right-content">
+                    <div class="col-lg-3 col-md-12 col-12">
+                        <!-- Top Left -->
+                        <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="ti-location-pin"></i> Store location</li>
-                                <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
-                                <li><i class="ti-user"></i> <a href="#">My account</a></li>
-                                <li><i class="ti-power-off"></i><a href="login.html#">Login</a></li>
+                                <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
                             </ul>
                         </div>
-                        <!-- End Top Right -->
+                        <!--/ End Top Left -->
                     </div>
+                    <div class="col-lg-3 col-md-12 col-12">
+                        <!-- Top Left -->
+                        <div class="top-left">
+                            <ul class="list-main">
+                                <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
+                            </ul>
+                        </div>
+                        <!--/ End Top Left -->
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-12">
+                        <!-- Top Left -->
+                        <div class="top-left">
+                            <ul class="list-main">
+                                <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
+                            </ul>
+                        </div>
+                        <!--/ End Top Left -->
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -103,11 +134,11 @@
         <!-- End Topbar -->
         <div class="middle-inner">
             <div class="container">
-                <div class="row">
+                <div class="row" >
                     <div class="col-lg-2 col-md-2 col-12">
                         <!-- Logo -->
                         
-                        <div class="logo">
+                        <div style="padding-top: 32px;" class="logo">
                             <a href="{{route('home.index')}}"><img src="{{$share_config->image}}" alt="logo"></a>
                         </div>
                         
@@ -127,15 +158,10 @@
                         <!--/ End Search Form -->
                         <div class="mobile-nav"></div>
                     </div>
-                    <div class="col-lg-8 col-md-7 col-12">
-                        <div class="search-bar-top">
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <div style="padding-top: 32px;" class="search-bar-top">
                             <div class="search-bar">
-                                <select>
-                                    <option class="select2" selected="selected">All Category</option>
-                                    <option>watch</option>
-                                    <option>mobile</option>
-                                    <option>kid’s item</option>
-                                </select>
+                                
                                 <form>
                                     <input name="search" placeholder="Search Products Here....." type="search">
                                     <button class="btnn"><i class="ti-search"></i></button>
@@ -144,14 +170,23 @@
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-3 col-12">
-                        <div class="right-bar">
+                         
+                       <div class="hotline-phone-ring-wrap1"> 
+
+                                <div class="hotline-phone-ring">
+                                <div class="hotline-phone-ring-circle"></div>
+                                <div class="hotline-phone-ring-circle-fill"></div>
+                                <div class="hotline-phone-ring-img-circle"> <a href="tel:{{$share_config->hotline}}" class="pps-btn-img"> <img src="https://netweb.vn/img/hotline/icon.png" alt="so dien thoai" width="50"> </a></div>
+                            </div>      
+                            <div class="hotline-bar"> 
+                                <a href="tel:{{$share_config->hotline}}"> <span class="text-hotline">{{$share_config->hotline}}</span> </a>
+                            </div>           
+                            </div>
+                    </div>
+                
+                    <div class="col-lg-2 col-md-3 col-12">
+                        <div style="padding-top: 35px;" class="right-bar">
                             <!-- Search Form -->
-                            <div class="sinlge-bar">
-                                <a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                            </div>
-                            <div class="sinlge-bar">
-                                <a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-                            </div>
                             <div class="sinlge-bar shopping">
                                 <a href="#" class="single-icon"><i class="ti-bag"></i><span class="total-count" id="cart-count">{{$count_cart}}</span></a>
                                 <!-- Shopping Item -->
@@ -185,24 +220,40 @@
                                 </div>
                                 <!--/ End Shopping Item -->
                             </div>
+                           
+                        
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Header Inner -->
-        <div class="header-inner">
+        <div class="header-inner" style="background-color: #283988;">
             <div class="container">
                 <div class="cat-nav-head">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="all-category" id="show-header">
+                    <div class="row" >
+                        <div class="col-lg-3" id="show-header">
+                            <div class="all-category" >
                                 <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>Danh mục</h3>
                                
                                 <ul class="main-category hide-header" style="display: none;" >
-                                
                                     @foreach($menu_cats as $key => $cat)
-                                    <li><a href="#">{!!$cat->name!!} <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                    
+                                        @php
+                                        $dem=0;
+                                        @endphp
+                                        @foreach($cat->children as $oke)
+                                        @php
+                                        $dem++;
+                                        @endphp
+                                        @endforeach 
+                                        @if($dem>0)  
+                                        <li><a href="#">{!!$cat->name!!}<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        @else
+                                        <li><a href="#">{!!$cat->name!!}</a>
+                                        @endif
+                                        
                                         <ul class="sub-category">
                                             @if(!is_null($cat->children))
                                             
@@ -229,11 +280,17 @@
                                     <div class="navbar-collapse">   
                                         <div class="nav-inner"> 
                                             <ul class="nav main-menu menu navbar-nav">
-       
+                                                    
                                                     @foreach ($menu_arr as $key=>$menu)
+                                                    @if($key == 0)
+                                                    <li class="nav-item" style="background-color: #ea1621;">
+                                                        <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
+                                                    </li>
+                                                    @else
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
                                                     </li>
+                                                    @endif
                                                     @endforeach
                                                      
                                                     
