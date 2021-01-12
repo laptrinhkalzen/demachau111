@@ -27,13 +27,20 @@ class FrontendController extends Controller {
     public function index() {
         //cart
         $total = 0;
-     
         $danh_muc_cha=DB::table('category')->where('parent_id',0)->where('type',4)->get();
         $product_danh_muc_cha=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->get();
         $danh_muc_con=DB::table('category')->where('parent_id','!=',0)->get();
         $show = 1;
-       
-        return view('frontend/home/index', compact('danh_muc_cha','product_danh_muc_cha','danh_muc_con','total','show'));
+        $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('attribute.parent_id','!=','0')->get();
+        $product_attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('attribute.parent_id','!=','0')->get();
+            foreach ($product_attributes as $key => $value) {
+                $value->parent_name=DB::table('attribute')->where('id',$value->parent_id)->pluck('title');
+            }
+          $product_attrs=$product_attributes->groupBy('product_id');
+         //dd($product_attrs);
+      // dd($attributes);
+     
+        return view('frontend/home/index', compact('danh_muc_cha','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs'));
     }
     
     public function event() {

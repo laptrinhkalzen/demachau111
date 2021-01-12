@@ -179,13 +179,13 @@
                                    <!--  //<span class="out-of-stock">Hot</span> -->
                                 </a>
                                 <div class="button-head">
-                                    <div class="product-action">
+                                  <!--   <div class="product-action">
                                         <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào giỏ hàng</span></a>
                                         <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm giỏ hàng</span></a>
                                         <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Yêu thích</span></a>
-                                    </div>
-                                    <div class="product-action-2">
-                                        <a title="Add to cart" href="#">Thêm vào giỏ hàng</a>
+                                    </div> -->
+                                    <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
+                                        <a  data-toggle="modal" data-target="#exampleModal_{{$product_danh_muc_cha1->id}}" title="Mua hàng" href="#">Mua hàng</a>
                                     </div>
                                 </div>
                             </div>
@@ -345,12 +345,16 @@
                     <!-- End Single Service -->
                 </div>
             </div>
-        </div>
+        </div>ía
     </section>
     <!-- End Shop Services Area -->
     
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    @foreach($product_danh_muc_cha as $product_modal)
+    <form method="post" action="{{route('home.buy_now_alias',['alias'=>$product_modal->alias])}}">
+        @csrf
+
+    <div class="modal fade" id="exampleModal_{{$product_modal->id}}" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -363,6 +367,9 @@
                                     <div class="product-gallery">
                                         <div class="quickview-slider-active">
                                             <div class="single-slider">
+                                                <img style="width: 100%;" src="{{$product_modal->images}}" alt="#">
+                                            </div>
+                                           <!--  <div class="single-slider">
                                                 <img src="https://via.placeholder.com/569x528" alt="#">
                                             </div>
                                             <div class="single-slider">
@@ -370,18 +377,18 @@
                                             </div>
                                             <div class="single-slider">
                                                 <img src="https://via.placeholder.com/569x528" alt="#">
-                                            </div>
-                                            <div class="single-slider">
-                                                <img src="https://via.placeholder.com/569x528" alt="#">
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 <!-- End Product slider -->
                             </div>
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                <div class="quickview-content">
-                                    <h2>Flared Shift Dress</h2>
-                                    <div class="quickview-ratting-review">
+                                <div class="quickview-content " >
+                                    <div class="">
+                                     <input type="hidden"  class="option_number_{{$product_modal->id}}" value="" name="option_number">
+                                    <h2>{{$product_modal->title}}</h2>
+                                </div>
+                                  <!--   <div class="quickview-ratting-review">
                                         <div class="quickview-ratting-wrap">
                                             <div class="quickview-ratting">
                                                 <i class="yellow fa fa-star"></i>
@@ -395,44 +402,76 @@
                                         <div class="quickview-stock">
                                             <span><i class="fa fa-check-circle-o"></i> in stock</span>
                                         </div>
-                                    </div>
-                                    <h3>$29.00</h3>
-                                    <div class="quickview-peragraph">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste laborum ad impedit pariatur esse optio tempora sint ullam autem deleniti nam in quos qui nemo ipsum numquam.</p>
+                                    </div> -->
+                                   <!--  <h3>$29.00</h3> -->
+                                    <div class="quickview-peragraph"> <!-- //mo ta ngan -->
+                                        <p>{{$product_modal->description}}</p>
                                     </div>
                                     <div class="size">
                                         <div class="row">
-                                            <div class="col-lg-6 col-12">
-                                                <h5 class="title">Size</h5>
-                                                <select>
-                                                    <option selected="selected">s</option>
-                                                    <option>m</option>
-                                                    <option>l</option>
-                                                    <option>xl</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-6 col-12">
+
+                                            
+                                                @php 
+                                                    $dem=0;
+                                                    $index=0;
+                                                @endphp
+                                                @foreach($product_attrs[64] as $product_attr)
+                                                @php 
+                                                     if($product_attr->parent_id!=$index){
+                                                     $dem++;
+                                                     $check=1;
+                                                     }
+                                                     else{
+                                                     $dem=0;
+                                                     $check=0;
+                                                     }
+                                                     $index=$product_attr->parent_id;
+                                                @endphp
+                                                @if($dem==1)
+                                                    <div class="col-lg-12"> 
+                                                        <span>{{$product_attr->parent_name[0]}}</span>
+                                                    </div> 
+                                                @endif 
+                                                       @if($check==1)
+                                                        <div  class="col-lg-4 radio-check">  
+                                                       <input type="radio"  class="check-option" name="{{$index}}" value="{{$product_attr->title}}" checked="checked">
+                                                         <label for="other">{{$product_attr->title}}</label>
+                                                         </div>
+                                                        @else
+                                                        <div style="" class="col-lg-4 radio-check">  
+                                                       <input type="radio" check class="check-option" name="{{$index}}" value="{{$product_attr->title}}">
+                                                         <label for="other">{{$product_attr->title}}</label>
+                                                         </div>
+                                                        @endif
+
+                                                    
+                                                 @endforeach
+                                                
+                                           
+
+                                            <!-- <div class="col-lg-12 col-12">
                                                 <h5 class="title">Color</h5>
-                                                <select>
-                                                    <option selected="selected">orange</option>
-                                                    <option>purple</option>
-                                                    <option>black</option>
-                                                    <option>pink</option>
-                                                </select>
-                                            </div>
+                                                
+                                            </div> -->
                                         </div>
+                                        <hr>
+                                        <div class="col-md-12">
+                                                <p class=" option_price1" style="color: red; font-size: 150%;"></p>
+                                            </div>
+                                        
                                     </div>
+
                                     <div class="quantity">
                                         <!-- Input Order -->
                                         <div class="input-group">
                                             <div class="button minus">
-                                                <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                                <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quantity">
                                                     <i class="ti-minus"></i>
                                                 </button>
                                             </div>
-                                            <input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
+                                            <input type="text" name="quantity" class="input-number"  data-min="1" data-max="1000" value="1">
                                             <div class="button plus">
-                                                <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
+                                                <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quantity">
                                                     <i class="ti-plus"></i>
                                                 </button>
                                             </div>
@@ -440,11 +479,11 @@
                                         <!--/ End Input Order -->
                                     </div>
                                     <div class="add-to-cart">
-                                        <a href="#" class="btn">Add to cart</a>
-                                        <a href="#" class="btn min"><i class="ti-heart"></i></a>
-                                        <a href="#" class="btn min"><i class="fa fa-compress"></i></a>
+                                        <button class="btn">Thêm vào giỏ hàng</button>
+                           <!--              <a href="#" class="btn min"><i class="ti-heart"></i></a>
+                                        <a href="#" class="btn min"><i class="fa fa-compress"></i></a> -->
                                     </div>
-                                    <div class="default-social">
+                                  <!--   <div class="default-social">
                                         <h4 class="share-now">Share:</h4>
                                         <ul>
                                             <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -452,7 +491,7 @@
                                             <li><a class="youtube" href="#"><i class="fa fa-pinterest-p"></i></a></li>
                                             <li><a class="dribbble" href="#"><i class="fa fa-google-plus"></i></a></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -460,6 +499,37 @@
                 </div>
             </div>
     </div>
+      <script type="text/javascript">
+            $(document).ready(function(){
+                checkOption();
+               function checkOption(){
+                search = $('div').find("input:radio:checked").map(function(){
+                        return $(this).val();
+                    }).get();
+                         
+                    $.ajax({
+                        url:'{{route("api.check_option")}}',
+                        method:'POST',
+                        data:{search:search,_token: $('#token').val()},
+                        success:function(resp){ 
+                            $('.option_price1').html(resp.result['option_price'] + ' đ'); 
+                            $('.option_number_'+ resp.result['product_id']).val(resp.option_number);      
+                        }
+                    });
+               }
+               $('.check-option').on('click',function(){
+                    checkOption();
+                    // var list = [];
+                    // $('div').find("input:radio:checked").each(function () {
+                    //    list.push($(this).val());
+                    // });
+                    
+                });
+            });
+        </script>
+    </form>
+    @endforeach
+    
     <aside class="right"><img style="width: 150px;  height: 540px;" src="{{$share_config->banner_right}}"></img></aside>
   
     <!-- Modal end -->

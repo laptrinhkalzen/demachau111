@@ -191,12 +191,13 @@
                                 <a href="#" class="single-icon"><i class="ti-bag"></i><span class="total-count" id="cart-count">{{$count_cart}}</span></a>
                                 <!-- Shopping Item -->
                                 <div class="shopping-item">
+                                     @if(Session('cart'))
                                     <div class="dropdown-cart-header">
                                         <span id="count-sp">{{$count_cart}} Sản phẩm</span>
                                         <a href="{{route('checkout_order.index')}}">Xem giỏ hàng</a>
                                     </div>
                                     <ul class="shopping-list" id="cart_items">
-                                          @if(Session('cart'))
+                                         
                                             @foreach(Session('cart') as $val)
                                             <li>
                                             <a href="#" class="remove" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
@@ -205,7 +206,7 @@
                                             <p class="quantity">{{$val['quantity']}}x - <span style="color: red;" class="amount">{{number_format($val['price'])}} đ</span></p>
                                           </li>
                                             @endforeach
-                                            @endif
+                                      
                                         
                                         
                                     </ul>
@@ -217,6 +218,13 @@
                                         <a href="{{route('checkout_order.index')}}" class="btn animate">Xem giỏ hàng</a>
                                         <a href="{{route('checkout_order.index')}}" class="btn animate">Thanh toán</a>
                                     </div>
+                                          @else
+                                        <div class="dropdown-cart-header">
+                                        <span id="count-sp">Chưa có sản phẩm trong giỏ hàng</span>
+                                      
+                                    </div>
+                                    @endif   
+
                                 </div>
                                 <!--/ End Shopping Item -->
                             </div>

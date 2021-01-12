@@ -2,16 +2,46 @@
 @section('content')
 
 		<!-- End Breadcrumbs -->
-				
+	
 		<!-- Start Checkout -->
 		<section class="shop checkout section" style="background-color: #f3f5f7;">
 			<div class="container">
+				
+				
 				<div class="row"> 
-					<div class="col-lg-8 col-12" style="background-color:white;">
+
+
+					<div class="col-lg-7 col-12" style="background-color:white;">
+
+						<h5>Hình thức thanh toán</h5>
+					<!-- 	<div class="col-lg-12 col-md-12 col-12"> -->
+						<div class="form-group">
+					     <div class="col=md-12">
+						<label><input type="radio" name="colorRadio" value="red" checked=""> red</label>
+						<div class="red box" >You have selected <strong>red radio button</strong> so i am here</div>
+					   </div>
+					   <hr>
+					   <div class="col=md-12">
+						<label><input type="radio" name="colorRadio" value="green"> green</label>
+						<div class="green box" >You have selected <strong>green radio button</strong> so i am here</div>
+					   </div> 
+					   <hr>
+						<div class="col=md-12">
+						<label><input type="radio" name="colorRadio" value="blue"> blue</label>
+						<div class="blue box" >You have selected <strong>blue radio button</strong> so i am here</div>
+					<!-- </div> -->
+                  
+    
+   
+   
+							</div>
+						</div>
 						<div class="checkout-form">
 							<h5>Thông tin thanh toán</h5>
 							<!-- Form -->
+
 							<form class="form" method="post" action="#">
+
 								<div class="row">
 									<div class="col-lg-12 col-md-12 col-12">
 										<div class="form-group">
@@ -77,17 +107,36 @@
 							<!--/ End Form -->
 						</div>
 					</div>
-					<div class="col-lg-4 col-12">
+
+					<div class="col-lg-5 col-12">
 						<div class="order-details">
 							<!-- Order Widget -->
 							<div class="single-widget">
 								<h2>CART  TOTALS</h2>
 								<div class="content">
-									<ul>
-										<li>Sub Total<span>$330.00</span></li>
-										<li>(+) Shipping<span>$10.00</span></li>
-										<li class="last">Total<span>$340.00</span></li>
-									</ul>
+									@if(Session('cart'))
+									@foreach(Session('cart') as $key1 => $val)
+									<div class="col-md-12">
+                                         <h5>{{$key1}}. {{$val['title']}}</h5>
+								    </div>
+								    <div class="row form-group">
+								    	<div  class="col-md-4">
+								    		<img class="form-control" src="{{$val['image']}}">
+								    	</div>
+								    	<div class="col-md-8">
+								    		@foreach($product_options as $product_option)
+								    		@if($product_option->product_id==$val['product_id'])
+								    		    <div class="col-lg-12">
+								    		          <span>{{$product_option->value}}</span>
+								    		     </div>     
+								    		    
+								    		@endif
+								    		@endforeach
+								    	</div>
+								    </div>
+
+								    @endforeach
+								    @endif		
 								</div>
 							</div>
 							<!--/ End Order Widget -->
@@ -192,5 +241,17 @@
 				</div>
 			</div>
 		</section>
+		<div>
+        
+		<script>
+		$(document).ready(function(){
+		    $('input[type="radio"]').click(function(){
+		        var inputValue = $(this).attr("value");
+		        var targetBox = $("." + inputValue);
+		        $(".box").not(targetBox).hide();
+		        $(targetBox).show();
+		    });
+		});
+		</script>
 
 		@stop

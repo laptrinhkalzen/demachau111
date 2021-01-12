@@ -41,6 +41,7 @@ hr.ke_vach {
     width: 80%
 }
 </style>
+
 <div class="breadcrumbs">
             <div class="container">
                 <div class="row">
@@ -65,10 +66,12 @@ hr.ke_vach {
                         <div class="checkout-form">
                             
                             <!-- Form -->
-                            <form class="form" method="post" action="#">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                          <div class=" my-4">
+                <form class="form" method="post" action="{{route('home.buy_now',['id'=>$detail_product->id])}}">
+                        @csrf 
+                        <input type="hidden" id="option_number" name="option_number">       
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                              <div class=" my-4">
 
     
     <!--Carousel Wrapper-->
@@ -98,93 +101,95 @@ hr.ke_vach {
           </div>
            </div>
                                    
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="form-group">
-                                       
-                                           <p>{{$detail_product->title}}</p>
-                                        </div>
-                                        <div class="form-group">
-                                             <div class="row">
-                                        
-                                        @foreach($input as $inputt)
-                                           <div class="col-lg-12"> 
-                                            <span>{{$inputt['name']}}</span>
-                                            </div>   
-                                            @foreach($attributes as $attribute)
-
-                                            
-                                                 @if($attribute->parent_id==$inputt['id'])
-                                                <div class="col-lg-4">  
-
-                                               <input type="radio" class="check-option" name="{{$inputt['name']}}" value="{{$attribute->title}}">
-                                                 <label for="other">{{$attribute->title}}</label>
-                                                 </div>
-                                                 @endif
-                                                 @endforeach
-                                       
-                                         @endforeach
-                                           
-                                        
-                                             
-                                        </div>
-                                            <div class="row col-lg-6" >
-                                                 <p id="option_price" style="color:red;">{{$detail_product->price}}</p> 
-                                            </div>
-                                        
-                                             
-                                        </div>
-                                         <div class="form-group">                                           
-                                             <div class="row">
-                                                <div class="col-md-4">
-                                                <input style="width:100%"  type="number" name="quantity" value="1" id="quantity" min="1">
-                                                </div>
-                                                <div class="col-md-8">
-                                                <button type="button" class="btn btn-danger" id="add-to-cart"  data-product_id="{{$detail_product->id}}">Thêm vào giỏ</button>
-                                                
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                                 <div class="row">  
-                                                 <div class="col-md-6">                                         
-                                                <button type="submit" style="width:100%"  class="btn btn-success">Mua ngay</button>
-                                                </div>
-                                                 <div class="col-md-6"> 
-                                                <button type="submit" style="width:100%"  class="btn btn-success">Mua ngay</button>
-                                                </div>
-                                                </div>      
-                                        </div>
-                                        <div class="form-group">                                            
-                                                <button type="submit" style="width:100%"  class="btn btn-success">Mua ngay</button>    
-                                        </div>
-                                        <div class="form-group" style="background-color: #f5f5f5;">
-                                            
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group">
+                       
+                           <p>{{$detail_product->title}}</p>
+                        </div>
+                        <div class="form-group">
+                             <div class="row">
+                        
+                        @foreach($input as $inputt)
+                           <div class="col-lg-12"> 
+                            <span>{{$inputt['name']}}</span>
+                            </div> 
+                            @php
+                            $dem=0;
+                            @endphp  
+                        @foreach($attributes as $attribute)
+                                 @if($attribute->parent_id==$inputt['id'])
+                                 @php
+                                 $dem++;
+                                 @endphp
+                                 @if($dem==1)
+                                <div class="col-lg-4 radio-check">  
+                               <input type="radio" checked class="check-option" name="{{$inputt['name']}}" value="{{$attribute->title}}">
+                                 <label for="other">{{$attribute->title}}</label>
+                                 </div>
+                                 @else
+                                 <div class="col-lg-4 radio-check">  
+                                <input type="radio" check class="check-option" name="{{$inputt['name']}}" value="{{$attribute->title}}">
+                                 <label for="other">{{$attribute->title}}</label>
+                                 </div>
+                                 @endif
+                                 @endif
+                                 @endforeach
+                       
+                         @endforeach
+                           
+                        
                              
-                                        <div class="col-md-12">
-                                            <span> Gọi mua hàng (8:00 - 21:00): 1900 3052</span>
-                                          </div>
-                                       
-                                         <div class="row">
-                                        <div class="col-md-7">            
-                                            <input style="background-color:#fff; margin-left:5px;" type="text" placeholder="Nhập số điện thoại"  id="contact-me">  
-                                        </div> 
-                                        <div class="col-md-5">                                
-                                            <button type="submit" class="btn btn-success">Gọi cho tôi</button>
-                                        </div>      
-                                        </div>
-                                       </div>
-                                        <hr class="ke_vach">
-
-                                    </div>
-                                   
-                                    
-                                    
-                                    
-                            
-                                   
-                                    
+                        </div>
+                            <div class="row col-lg-6" >
+                                 <p id="option_price" style="color:red;">{{$detail_product->price}}</p> 
+                            </div>
+                        
+                             
+                        </div>
+                         <div class="form-group">                                           
+                             <div class="row">
+                                <div class="col-md-4">
+                                <input style="width:100%"  type="number" name="quantity" value="1" id="quantity" min="1">
                                 </div>
-                            </form>
+                                <div class="col-md-8">
+                                <button type="button" class="btn btn-danger" id="add-to-cart"  data-product_id="{{$detail_product->id}}">Thêm vào giỏ</button>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                 <div class="row">  
+                                 <div class="col-md-6">                                         
+                                <button type="submit" style="width:100%"  class="btn btn-success">Mua ngay</button>
+                                </div>
+                                 <div class="col-md-6"> 
+                                <button type="submit" style="width:100%"  class="btn btn-success">Mua ngay</button>
+                                </div>
+                                </div>      
+                        </div>
+                        <div class="form-group">                                            
+                                <button type="submit"  style="width:100%"  class="btn btn-success">Mua ngay</button>    
+                        </div>
+                        <div class="form-group" style="background-color: #f5f5f5;">
+                            
+             
+                        <div class="col-md-12">
+                            <span> Gọi mua hàng (8:00 - 21:00): 1900 3052</span>
+                          </div>
+                       
+                         <div class="row">
+                        <div class="col-md-7">            
+                            <input style="background-color:#fff; margin-left:5px;" type="text" placeholder="Nhập số điện thoại"  id="contact-me">  
+                        </div> 
+                        <div class="col-md-5">                                
+                            <button type="submit" class="btn btn-success">Gọi cho tôi</button>
+                        </div>      
+                        </div>
+                       </div>
+                        <hr class="ke_vach">
+                     </div>
+                        </div>
+                    </form>
 
                             <!--/ End Form -->
                         </div>
@@ -295,12 +300,9 @@ hr.ke_vach {
 
         <script type="text/javascript">
             $(document).ready(function(){
-               $('.check-option').on('click',function(){
-                    // var list = [];
-                    // $('div').find("input:radio:checked").each(function () {
-                    //    list.push($(this).val());
-                    // });
-                    search = $('div').find("input:radio:checked").map(function(){
+                checkOption();
+               function checkOption(){
+                search = $('div').find("input:radio:checked").map(function(){
                         return $(this).val();
                     }).get();
                          
@@ -309,10 +311,19 @@ hr.ke_vach {
                         method:'POST',
                         data:{search:search,_token: $('#token').val()},
                         success:function(resp){ 
-                            $('#option_price').html(resp.result['option_price'] + ' đ');       
-                             alert(resp.result['option_price']);
+                            $('#option_price').html(resp.result['option_price'] + ' đ'); 
+                            $('#option_number').val(resp.option_number);      
+                         
                         }
                     });
+               }
+               $('.check-option').on('click',function(){
+                    checkOption();
+                    // var list = [];
+                    // $('div').find("input:radio:checked").each(function () {
+                    //    list.push($(this).val());
+                    // });
+                    
                 });
             });
         </script>

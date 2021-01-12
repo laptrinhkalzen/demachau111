@@ -224,7 +224,7 @@
                                 <form  method="post" target="_blank" class="newsletter-inner">
                                     @csrf
                                   
-                                    <input name="email1" id="email1" placeholder="Email của bạn" required="" type="text">
+                                    <input name="email1" id="email1" placeholder="Email của bạn"  type="text">
                                    <button type="button" id="sendmail" class="btn">Đăng ký</button>
                                    <div  aria-hidden="true" class="success"><span style="margin-left:14px;">Đăng ký thành công</span></div>
                                 </form>

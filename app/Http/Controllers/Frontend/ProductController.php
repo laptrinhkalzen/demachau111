@@ -103,14 +103,14 @@ class ProductController extends Controller {
                 $input[$key]['id']=$value;
                 $input[$key]['name']=DB::table('attribute')->where('id',$value)->pluck('title')->first();
             }
+
+
            
              
             // $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));
             // $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
             // $news_arr = $this->newsRepo->getAllNews($limit = 7);
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
-
-            
 
             return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit'));
 

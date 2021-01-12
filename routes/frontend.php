@@ -5,11 +5,14 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::get('/support', ['as' => 'home.support', 'uses' => 'Frontend\SupportController@index']);
     Route::get('/store', ['as' => 'home.store', 'uses' => 'Frontend\StoreController@index']);
     Route::get('/store-product', ['as' => 'home.store_product', 'uses' => 'Frontend\StoreProductController@index']);
+
     Route::get('/news', ['as' => 'home.news', 'uses' => 'Frontend\News2Controller@index']);
     Route::get('/flash-sale', ['as' => 'event.sale', 'uses' => 'Frontend\FrontendController@event']);
 
     Route::get('/about', ['as' => 'home.about', 'uses' => 'Frontend\AboutController@index']);
     Route::get('/checkout-order', ['as' => 'checkout_order.index', 'uses' => 'Frontend\CheckoutOrderController@index']);
+    Route::post('/buy-now/{id}', ['as' => 'home.buy_now', 'uses' => 'Frontend\CheckoutOrderController@buy_now']);
+    Route::post('/buy-now-alias/{alias}', ['as' => 'home.buy_now_alias', 'uses' => 'Frontend\CheckoutOrderController@buy_now_alias']);
     Route::get('/checkout-address', ['as' => 'home.checkout_address', 'uses' => 'Frontend\CheckoutAddressController@index']);
     Route::get('/checkout-payment', ['as' => 'home.checkout_payment', 'uses' => 'Frontend\CheckoutPaymentController@index']);
     Route::get('/marketing/activation/{key}', ['as' => 'marketing.activation', 'uses' => 'Frontend\MarketingController@activation']);

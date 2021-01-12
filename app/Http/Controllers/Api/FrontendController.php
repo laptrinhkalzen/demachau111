@@ -82,7 +82,7 @@ class FrontendController extends Controller {
         }
         }
         $result_final=DB::table('option_detail')->where('option_id',$number)->first();
-        return response()->json(['result' => $result_final]);
+        return response()->json(['result' => $result_final,'option_number'=>$number]);
     }
 
     public function registerMarketing(Request $request) {
