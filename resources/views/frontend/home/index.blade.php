@@ -12,81 +12,52 @@
     });
 </script>
 <style type="text/css">
-    aside {position: fixed; top: 320px; bottom: 0px; width: 150px; width: calc((100% - 1250px)/2); z-index: 999; overflow: hidden; display: block;}
+    aside {position: fixed; top: 320px; bottom: 0px; width: 150px; width: calc((100% - 1250px)/2);  overflow: hidden; display: block;}
     .left {left: 0;}
     .right {right: 0;}
 </style>
     <!--/ End Header -->
     
     <!-- Slider Area -->
-    <aside class="left"><img style="width: 150px;  height: 440px; " src="{{$share_config->banner_left}}"></img></aside>
+    <aside class="left"><a href="{{$share_config->banner_left_link}}"><img style="width: 150px; height: 540px; " src="{{$share_config->banner_left}}"></img></a></aside>
 
     <section class="hero-slider" style="margin: 0 auto;">
 
         <!-- Single Slider -->
         <div class=" single-slider" style="margin-left: 190px; margin-right: 190px;">
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-lg-9 offset-lg-3 col-12">
-                        <div class="text-inner">
-                            <div class="row">
-                                <div class="col-lg-7 col-12">
-                                    <div class="hero-text">
-                                        <h1><span>UP TO 50% OFF </span>Shirt For Man</h1>
-                                        <p>Maboriosam in a nesciung eget magnae <br> dapibus disting tloctio in the find it pereri <br> odiy maboriosm.</p>
-                                        <div class="button">
-                                            <a id="add-to-cart1" href="javascript:void(0)" class="btn">Shop Now!</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="">
+                        <img style="width: 277px; height: 406px;" src="https://demachau.com/wp-content/uploads/2020/10/stick-banner.jpg" alt="#">
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="">
+                        <img style="width: 862px; height: 406px;" src="https://demachau.com/wp-content/uploads/2020/10/slide-02.jpg" alt="#">
                     </div>
                 </div>
             </div>
         </div>
         <!--/ End Single Slider -->
     </section>
-    <section class="shop-blog section">
+    <section class="shop-blog">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h2>From Our Blog</h2>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                  <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-banner">
-                        <img src="{{asset('demachau/images/blog1')}}" alt="#">
-                        <div class="content">
-                            <p>Man's Collectons</p>
-                            <h3>Summer travel <br> collection</h3>
-                            <a href="#">Discover Now</a>
-                        </div>
+                        <img src="https://demachau.com/wp-content/uploads/2020/11/banner-01.jpg" alt="#">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-banner">
-                        <img src="https://via.placeholder.com/600x370" alt="#">
-                        <div class="content">
-                            <p>Bag Collectons</p>
-                            <h3>Awesome Bag <br> 2020</h3>
-                            <a href="#">Shop Now</a>
-                        </div>
+                        <img src="https://demachau.com/wp-content/uploads/2020/11/banner-01.jpg" alt="#">
                     </div>
                 </div>
                 <!-- /End Single Banner  -->
                 <!-- Single Banner  -->
                 <div class="col-lg-4 col-12">
                     <div class="single-banner tab-height">
-                        <img src="https://via.placeholder.com/600x370" alt="#">
-                        <div class="content">
-                            <p>Flash Sale</p>
-                            <h3>Mid Season <br> Up to <span>40%</span> Off</h3>
-                            <a href="#">Discover Now</a>
-                        </div>
+                        <img src="https://demachau.com/wp-content/uploads/2020/11/banner-01.jpg" alt="#">
                     </div>
                 </div>
             </div>
@@ -98,7 +69,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>From Our Blog</h2>
+                        <h2>Săn Deal mỗi ngày </h2>
                     </div>
                 </div>
             </div>
@@ -345,12 +316,12 @@
                     <!-- End Single Service -->
                 </div>
             </div>
-        </div>ía
+        </div>
     </section>
     <!-- End Shop Services Area -->
     
     <!-- Modal -->
-    @foreach($product_danh_muc_cha as $product_modal)
+   <!--  @foreach($product_danh_muc_cha as $product_modal)
     <form method="post" action="{{route('home.buy_now_alias',['alias'=>$product_modal->alias])}}">
         @csrf
 
@@ -363,24 +334,16 @@
                     <div class="modal-body">
                         <div class="row no-gutters">
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                <!-- Product Slider -->
+                                
                                     <div class="product-gallery">
                                         <div class="quickview-slider-active">
                                             <div class="single-slider">
                                                 <img style="width: 100%;" src="{{$product_modal->images}}" alt="#">
                                             </div>
-                                           <!--  <div class="single-slider">
-                                                <img src="https://via.placeholder.com/569x528" alt="#">
-                                            </div>
-                                            <div class="single-slider">
-                                                <img src="https://via.placeholder.com/569x528" alt="#">
-                                            </div>
-                                            <div class="single-slider">
-                                                <img src="https://via.placeholder.com/569x528" alt="#">
-                                            </div> -->
+                                           
                                         </div>
                                     </div>
-                                <!-- End Product slider -->
+                                
                             </div>
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                 <div class="quickview-content " >
@@ -388,23 +351,8 @@
                                      <input type="hidden"  class="option_number_{{$product_modal->id}}" value="" name="option_number">
                                     <h2>{{$product_modal->title}}</h2>
                                 </div>
-                                  <!--   <div class="quickview-ratting-review">
-                                        <div class="quickview-ratting-wrap">
-                                            <div class="quickview-ratting">
-                                                <i class="yellow fa fa-star"></i>
-                                                <i class="yellow fa fa-star"></i>
-                                                <i class="yellow fa fa-star"></i>
-                                                <i class="yellow fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <a href="#"> (1 customer review)</a>
-                                        </div>
-                                        <div class="quickview-stock">
-                                            <span><i class="fa fa-check-circle-o"></i> in stock</span>
-                                        </div>
-                                    </div> -->
-                                   <!--  <h3>$29.00</h3> -->
-                                    <div class="quickview-peragraph"> <!-- //mo ta ngan -->
+                                  
+                                    <div class="quickview-peragraph"> 
                                         <p>{{$product_modal->description}}</p>
                                     </div>
                                     <div class="size">
@@ -449,10 +397,7 @@
                                                 
                                            
 
-                                            <!-- <div class="col-lg-12 col-12">
-                                                <h5 class="title">Color</h5>
-                                                
-                                            </div> -->
+                                            
                                         </div>
                                         <hr>
                                         <div class="col-md-12">
@@ -462,7 +407,7 @@
                                     </div>
 
                                     <div class="quantity">
-                                        <!-- Input Order -->
+                                       
                                         <div class="input-group">
                                             <div class="button minus">
                                                 <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quantity">
@@ -476,22 +421,13 @@
                                                 </button>
                                             </div>
                                         </div>
-                                        <!--/ End Input Order -->
+                                       
                                     </div>
                                     <div class="add-to-cart">
                                         <button class="btn">Thêm vào giỏ hàng</button>
-                           <!--              <a href="#" class="btn min"><i class="ti-heart"></i></a>
-                                        <a href="#" class="btn min"><i class="fa fa-compress"></i></a> -->
+                          
                                     </div>
-                                  <!--   <div class="default-social">
-                                        <h4 class="share-now">Share:</h4>
-                                        <ul>
-                                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a class="youtube" href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                            <li><a class="dribbble" href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        </ul>
-                                    </div> -->
+                                  
                                 </div>
                             </div>
                         </div>
@@ -499,7 +435,10 @@
                 </div>
             </div>
     </div>
-      <script type="text/javascript">
+
+    </form>
+    @endforeach -->
+          <script type="text/javascript">
             $(document).ready(function(){
                 checkOption();
                function checkOption(){
@@ -527,10 +466,8 @@
                 });
             });
         </script>
-    </form>
-    @endforeach
     
-    <aside class="right"><img style="width: 150px;  height: 540px;" src="{{$share_config->banner_right}}"></img></aside>
+    <aside class="right"><a href="{{$share_config->banner_right_link}}"><img style="width: 150px;  height: 540px;" src="{{$share_config->banner_right}}"></img></a></aside>
   
     <!-- Modal end -->
     

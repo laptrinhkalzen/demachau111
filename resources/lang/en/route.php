@@ -51,4 +51,6 @@ return [
     'admin.company_infor.index'=>'Thông tin công ty',
     'admin.customer_support.index'=>'Hỗ trợ khách hàng',
     'admin.benefit.index'=>'Lợi ích',
+    'admin.coupon.index'=>'Mã giảm giá',
+
 ];

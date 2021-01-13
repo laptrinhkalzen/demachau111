@@ -361,6 +361,21 @@ ul.left-icon.hotline {
 	color:#fff;
 	background:#F7941D;
 }
+.single-slider .row .col-lg-3{
+	margin: 0px;
+	padding-left: 15px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.single-slider .row .col-lg-9{
+	margin: 0px;
+	padding: 0px; 
+}
+.header-inner .container .cat-nav-head .row .col-lg-3{
+	margin: 0px;
+	padding: 0px;
+}
 #scrollUp {
 	right: 10px;
 	z-index: 33;
@@ -395,6 +410,7 @@ ul.left-icon.hotline {
 	border-bottom: 1px solid #e2e2e2;
 	padding: 15px 0;
 }
+
 /* Logo */
 .header .logo {
 	float: left;
@@ -929,6 +945,7 @@ ul.left-icon.hotline {
 	color: #333;
 }
 .header.shop .all-category {
+	margin-left: 15px;
 	color: #fff;
 	background: transparent;
 	position: relative;
@@ -939,10 +956,12 @@ ul.left-icon.hotline {
 	padding: 20px 25px;
 }
 .header.shop .cat-heading {
+
 	font-size: 20px;
 	color: #fff;
 }
 .header.shop .cat-heading i {
+	height: auto;
 	color: #fff;
 	display: inline-block;
 	margin-right: 15px;
@@ -955,7 +974,7 @@ ul.left-icon.hotline {
 	background: #fff;
 	z-index: 1;
 	width: 100%;
-	height: 520px;
+	height: 416px;
 	-webkit-box-shadow: 0px 5px 15px #0000000a;
 	-moz-box-shadow: 0px 5px 15px #0000000a;
 	box-shadow: 0px 5px 15px #0000000a;
@@ -1314,7 +1333,12 @@ ul.left-icon.hotline {
 	width:100%;
 	z-index:999;
 }
-.header.sticky .all-category{}
+.cat-nav-head .row .col-lg-3 .all-category{
+
+}
+.cat-nav-head .row .col-lg-9{
+padding-left: 0px;
+}
 .header.sticky .all-category h3{
 	cursor:pointer;
 	
@@ -1387,11 +1411,10 @@ ul.left-icon.hotline {
 }
 .hero-slider .single-slider {
 	height: auto;
-	background-image: url('https://via.placeholder.com/1900x700');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-    height: 510px;
+    /*height: 510px;*/
 }
 .hero-slider .text-inner {
 	
@@ -2085,7 +2108,7 @@ ul.left-icon.hotline {
 .single-product .product-img .product-action-2 a {
 	display: block;
 	background-color: transparent;
-	color: #fff;
+	color: #333;
 	text-align: left;
 	font-size: 12px;
 	font-weight: 600;
@@ -3379,19 +3402,8 @@ ul.left-icon.hotline {
 	font-size: 16px;
 }
 .shop.checkout .form .form-group input {
-	width: 100%;
-	height: 45px;
-	line-height: 50px;
-	padding: 0 20px;
-	border-radius: 3px;
-	border-radius: 0px;
-	color: #333 !important;
-	border: none;
-	background: #F6F7FB;
-}
-
-.shop .checkout .form .form-group .radio-check input {
-
+	/*//width: 100%;
+	height: 45px;*/
 	line-height: 50px;
 	padding: 0 20px;
 	border-radius: 3px;
@@ -4238,6 +4250,9 @@ ul.left-icon.hotline {
 /*======================================
    Start Shop Blog CSS
 ========================================*/
+.shop-blog{
+	margin-top: 10px;
+}
 .shop-blog.grid .shop-single-blog{
 	margin-top:30px;
 }

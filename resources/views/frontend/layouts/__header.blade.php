@@ -103,7 +103,7 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
+                                <li><i class="fa fa-calendar"></i> 30 Ngày đổi trả miễn phí</li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
@@ -112,7 +112,7 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
+                                <li><i class="fa fa-truck"></i> Miễn phí vận chuyển</li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
@@ -121,7 +121,7 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
+                                <li><i class="fas fa-pig"></i> Trả góp lãi xuất 0%</li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->

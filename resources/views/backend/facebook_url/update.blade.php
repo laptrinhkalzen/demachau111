@@ -69,16 +69,30 @@ function showPreview(event){
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="form-group row">
-                                    <label class="col-md-2 col-form-label text-right">Banner_left: <span class="text-danger">*</span></label>
+                                    <label class="col-md-2 col-form-label text-right">Banner left: <span class="text-danger">*</span></label>
                                         <div class="col-md-10">
                                             <input type="text" class="form-control" name="banner_left" value="{{$socials->banner_left}}">
                                         </div>
                                     
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-2 col-form-label text-right">Banner_right: <span class="text-danger">*</span></label>
+                                    <label class="col-md-2 col-form-label text-right">Link banner left: <span class="text-danger">*</span></label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" name="banner_left_link" value="{{$socials->banner_left_link}}">
+                                        </div>
+                                    
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-2 col-form-label text-right">Banner right: <span class="text-danger">*</span></label>
                                         <div class="col-md-10">
                                             <input type="text" class="form-control" name="banner_right" value="{{$socials->banner_right}}">
+                                        </div>
+                                    
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-2 col-form-label text-right">Link banner right: <span class="text-danger">*</span></label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" name="banner_right_link" value="{{$socials->banner_right_link}}">
                                         </div>
                                     
                                 </div>

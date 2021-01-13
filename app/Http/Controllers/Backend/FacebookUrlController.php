@@ -28,6 +28,8 @@ class FacebookUrlController extends Controller {
         $data = array();
         $data['facebook_url'] = $request->facebook_url;
         $data['banner_left'] = $request->banner_left;
+        $data['banner_left_link'] = $request->banner_left_link;
+        $data['banner_right_link'] = $request->banner_right_link;
         $data['banner_right'] = $request->banner_right;
        $input = DB::table('config')->update($data);
              return Redirect()->back()->with('success','Cập nhật thành công');

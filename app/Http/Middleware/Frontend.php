@@ -15,7 +15,7 @@ class Frontend {
         $config = \DB::table('config')->first();
         $menu_arr = \DB::table('menu')->where('status',1)->orderBy('ordering', 'asc')->get();
         $menu_cat = \DB::table('category')->where('status',1)->where('type', '4')->orderBy('ordering', 'asc')->get();
-        $menu_cats = \DB::table('category')->where('parent_id', 0)->where('type', '4')->orderBy('ordering', 'asc')->get();
+        $menu_cats = \DB::table('category')->where('status',1)->where('parent_id', 0)->where('type', '4')->orderBy('ordering', 'asc')->limit(10)->get();
         $menu = \DB::table('menu')->where('parent_id', 0)->get();
         
         foreach($menu as $key=>$val){
