@@ -235,15 +235,15 @@ function showPreview(event){
                                  $(this).parents('.form-row').find('.price_input').val(
                                   $(this).find('.select2').find(":selected").data("price")
                                 );
+
+                                 $(this).parents('.form-row').find('.price_reduce').val(
+                                $(this).find('.select2').find(":selected").data("price")-$(this).parents('.form-row').find('.discount_value').val()
+                                );
+                                  });
                                  
-
-                                
-
-                              }); 
+                            
 
                               $('body').delegate('#discount_value','change',function (){
-                        
-                                
                                  $(this).parents('.form-row').find('.price_reduce').val(
                                   $(this).parents('.form-row').find('.price_input').val()- $(this).parents('.form-row').find('.discount_value').val()
                                   );
