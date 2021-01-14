@@ -1,6 +1,5 @@
 @extends('frontend.layouts.master')
 @section('content')
-
 <script type="text/javascript">
     $(document).ready(function(){
       
@@ -11,10 +10,20 @@
        
     });
 </script>
+
 <style type="text/css">
+
+
+
     aside {position: fixed; top: 320px; bottom: 0px; width: 150px; width: calc((100% - 1250px)/2);  overflow: hidden; display: block;}
     .left {left: 0;}
     .right {right: 0;}
+
+   .nav-main ul #countdown{
+  text-align: right;
+  font-size: 14px;
+  margin-top: 0px;
+}
 </style>
     <!--/ End Header -->
     
@@ -40,6 +49,7 @@
         </div>
         <!--/ End Single Slider -->
     </section>
+    
     <section class="shop-blog">
         <div class="container">
             <div class="row">
@@ -64,53 +74,98 @@
         </div>
     </section>
 
-    <section class="shop-blog section">
-        <div class="container">
-            <div class="row">
+    
+
+    <div class="product-area most-popular section1" style>
+        <div class="container" style="background-color:white;">
+            <!-- <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Săn Deal mỗi ngày </h2>
+                        <h2>Hot Item</h2>
                     </div>
                 </div>
+            </div> -->
+            <div class="nav-main">
+                <div class="row">
+                    <div class="col-lg-7"> 
+                    <!-- Tab Nav -->
+                    <div class="nav nav-tabs" id="myTab" role="tablist">
+                                <img src="https://demachau.com/wp-content/uploads/2020/09/sale-bar-3.png">
+                                <h2 class="">
+                                    <a href="">Săn Deal mỗi ngày</a>
+                                </h2>
+                    </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="ux-timer">
+                            <span >
+                                <strong id="day"></strong>
+                            </span>
+                            <span >
+                                <strong id="hour"></strong>
+                            </span>
+                            <span >
+                                <strong id="minute"></strong>
+                            </span>
+                            <span >
+                                <strong id="second"></strong>
+                            </span>
+                        </div>
+                    </div>
+                 </div>
+                <!--/ End Tab Nav -->
             </div>
-            <div class="row">
-                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-banner">
-                        <img src="{{asset('demachau/images/blog1')}}" alt="#">
-                        <div class="content">
-                            <p>Man's Collectons</p>
-                            <h3>Summer travel <br> collection</h3>
-                            <a href="#">Discover Now</a>
+            <div class="row" style="border: 3px solid #ed1c24;background-color: #fff;overflow: hidden;padding: 20px;">
+                <div class="col-12">
+                    <div class="owl-carousel popular-slider">
+                        <!-- Start Single Product -->
+                       @foreach($product_danh_muc_cha as $product_danh_muc_cha1)
+                       @if($product_danh_muc_cha1->category_id == $danh_muc_deal->id)
+                        <div class="single-product"> 
+                            <div class="product-img">
+                                <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
+                                    <img class="default-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}">
+                                    <img class="hover-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}">
+                                   <!--  //<span class="out-of-stock">Hot</span> -->
+                                </a>
+                                <div class="button-head">
+                                  <!--   <div class="product-action">
+                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào giỏ hàng</span></a>
+                                        <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm giỏ hàng</span></a>
+                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Yêu thích</span></a>
+                                    </div> -->
+                                    <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
+                                        <a  data-toggle="modal" data-target="#exampleModal_{{$product_danh_muc_cha1->id}}" title="Mua hàng" href="#">Mua hàng</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
+                                <div class="product-price" style="text-align: center;">
+                                    @if($product_danh_muc_cha1->sale_price>0)
+                                    <span class="old">{{$product_danh_muc_cha1->sale_price}}</span>
+                                    <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
+                                    @else
+                                    <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-banner">
-                        <img src="https://via.placeholder.com/600x370" alt="#">
-                        <div class="content">
-                            <p>Bag Collectons</p>
-                            <h3>Awesome Bag <br> 2020</h3>
-                            <a href="#">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /End Single Banner  -->
-                <!-- Single Banner  -->
-                <div class="col-lg-4 col-12">
-                    <div class="single-banner tab-height">
-                        <img src="https://via.placeholder.com/600x370" alt="#">
-                        <div class="content">
-                            <p>Flash Sale</p>
-                            <h3>Mid Season <br> Up to <span>40%</span> Off</h3>
-                            <a href="#">Discover Now</a>
-                        </div>
+                        @endif
+                        @endforeach
+                       
+                        <!-- End Single Product -->
+                        <!-- Start Single Product -->
+                 
+                        <!-- End Single Product -->
+                        <!-- Start Single Product -->
+                        
+                        <!-- End Single Product -->
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    
+    </div>
     
     
     <!-- Start Most Popular -->
@@ -161,6 +216,7 @@
                                 </div>
                             </div>
                             <div class="product-content">
+                                
                                 <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
                                 <div class="product-price" style="text-align: center;">
                                     @if($product_danh_muc_cha1->sale_price>0)
@@ -438,6 +494,7 @@
 
     </form>
     @endforeach -->
+
           <script type="text/javascript">
             $(document).ready(function(){
                 checkOption();
@@ -466,6 +523,42 @@
                 });
             });
         </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="countdown"
+  //document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  document.getElementById("day").innerHTML = days ;
+  document.getElementById("hour").innerHTML =  hours ;
+  document.getElementById("minute").innerHTML = minutes ;
+  document.getElementById("second").innerHTML = seconds ;
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+});
+</script>
+
     
     <aside class="right"><a href="{{$share_config->banner_right_link}}"><img style="width: 150px;  height: 540px;" src="{{$share_config->banner_right}}"></img></a></aside>
   
