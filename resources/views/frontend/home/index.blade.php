@@ -377,6 +377,7 @@
     <!-- End Shop Services Area -->
     
     <!-- Modal -->
+
    <!--  @foreach($product_danh_muc_cha as $product_modal)
     <form method="post" action="{{route('home.buy_now_alias',['alias'=>$product_modal->alias])}}">
         @csrf
@@ -559,6 +560,9 @@ var x = setInterval(function() {
 });
 </script>
 
+=======
+   
+>>>>>>> 4df9ece (dat 14/1)
     
     <aside class="right"><a href="{{$share_config->banner_right_link}}"><img style="width: 150px;  height: 540px;" src="{{$share_config->banner_right}}"></img></a></aside>
   

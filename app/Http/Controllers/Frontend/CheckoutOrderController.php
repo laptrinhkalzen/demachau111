@@ -10,6 +10,7 @@ use App\Product;
 class CheckoutOrderController extends Controller {
 
     public function index() {
+        dd(session('cart'));
         $district=DB::table('district')->get();
         $city=DB::table('city')->get();
     	$total = 0;

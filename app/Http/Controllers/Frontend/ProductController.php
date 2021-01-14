@@ -86,6 +86,15 @@ class ProductController extends Controller {
        return view('frontend/home/search',compact('search_product','count','slide1','origin','category_filter','brand','color','cat_id','price_id','brand_id','color_id','sort_id'));
     } 
 
+      public function search_product(Request $request) {
+         
+     
+        $product_arr=DB::table('product')->where('status',1)->where('alias','LIKE','%'.$request->search.'%')->orWhere('meta_keywords','LIKE','%'.$request->search.'%')->paginate(12);
+       return view('frontend/category/show',compact('product_arr'));
+    } 
+
+
+
     public function filter(Request $request){
         $search_product = $this->productRepo->readFE($request);
         $count = count($search_product);

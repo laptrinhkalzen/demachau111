@@ -298,22 +298,25 @@
     <script type="text/javascript">
     $( document ).ready(function() {
     $('#add-to-cart').click(function( e ){
-      
+          var option_number=$('#option_number').val();
          var product_id=$(this).data('product_id');
          var quantity=$('#quantity').val();
+         alert(option_number);
         
          $.ajax({
                 url:'{{route("api.add_to_cart1")}}',
                 method:'POST',
-                data:{product_id : product_id,quantity:quantity,_token: $('#token').val()},
+                data:{option_number:option_number,product_id : product_id,quantity:quantity,_token: $('#token').val()},
                 success:function(resp){           
                    if(resp.success == true){
                      $('#cart-count').html(resp.count);
                      $('#total1').html(resp.total +' đ');
                      $('#count-sp').html(resp.count + ' Sản phẩm');
-                     $("#cart_items").load(" #cart_items > *");
-                     $("#cart").load(" #cart > *");
-                     $("#sub_total").load(" #sub_total > *");
+              
+                     $(".shopping-item").load(" .shopping-item > *");
+                     // $("#cart_items").load(" #cart_items > *");
+                     // $("#cart").load(" #cart > *");
+                     // $("#sub_total").load(" #sub_total > *");
                      alert('Thêm giỏ hàng thành công');
                    }else{
                      alert('Thêm giỏ hàng không thành công');
@@ -368,7 +371,7 @@
             $.ajax({
                 url : '{{route('api.select_address')}}',
                 method: 'POST',
-                data:{action:action,ma_id:ma_id,_token:_token},
+                data:{action:action,ma_id:ma_id,option_number:option_number,_token:_token},
                 success:function(data){
                   
                     $("#district1").html(data);
@@ -378,6 +381,8 @@
         }); 
     });
 </script>
+
+ 
 
 </body>
 </html>
