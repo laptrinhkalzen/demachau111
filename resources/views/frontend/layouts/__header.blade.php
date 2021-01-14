@@ -11,7 +11,7 @@
     <!-- Title Tag  -->
     <title>Đệm Á Châu</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{asset('public/demachau/images/favicon.png')}}">
+    <link rel="icon" type="image/png" href="{!!$share_config->favicon!!}">
     <!-- Web Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     
@@ -244,7 +244,7 @@
             </div>
         </div>
         <!-- Header Inner -->
-        <div class="header-inner" style="background-color: #283988;">
+        <div class="header-inner" style="background-color: #283988;height: 64px;">
             <div class="container">
                 <div class="cat-nav-head">
                     <div class="row" >
@@ -298,7 +298,7 @@
                                                     
                                                     @foreach ($menu_arr as $key=>$menu)
                                                     @if($key == 0)
-                                                    <li class="nav-item" style="background-color: #ea1621;">
+                                                    <li class="nav-item" style="background-color: #ea1621;height: 64px;">
                                                         <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
                                                     </li>
                                                     @else

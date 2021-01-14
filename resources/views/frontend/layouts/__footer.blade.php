@@ -259,6 +259,30 @@
             </div>
         </div>
     </footer>
+            <div class="giuseart-nav">
+        <ul>
+            <li><a href="https://www.google.com/maps?ll=20.84601,106.691826&z=16&t=m&hl=vi&gl=US&mapclient=embed&daddr=59+L%E1%BA%A1ch+Tray+Ng%C3%B4+Quy%E1%BB%81n+H%E1%BA%A3i+Ph%C3%B2ng@20.84601,106.691826" rel="nofollow" target="_blank"><i class="ticon-heart"></i>Tìm đường</a></li>
+            <li><a href="#" rel="nofollow" target="_blank"><i class="ticon-zalo-circle2"></i>Chat Zalo</a></li>
+                        <li class="phone-mobile">
+                            <a href="tel:19003052" rel="nofollow" class="button">
+                                <span class="phone_animation animation-shadow">
+                                    <i class="icon-phone-w" aria-hidden="true"></i>
+                                </span>
+                                <span class="btn_phone_txt">Gọi điện</span>
+                            </a>
+                        </li>
+                        <li><a href="http://facebook.com/demachau/" rel="nofollow" target="_blank"><i class="ticon-messenger"></i>Messenger</a></li>
+            <li><a href="sms:02253833383" class="chat_animation">
+            <i class="ticon-chat-sms" aria-hidden="true" title="Nhắn tin sms"></i>
+                Nhắn tin SMS</a>
+            </li>
+            <li class="to-top-pc">
+                <a href="#" rel="nofollow">
+                    <i class="ticon-angle-up" aria-hidden="true" title="Quay lên trên"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
     <!-- /End Footer Area -->
     
     <!-- Jquery -->

@@ -1676,4 +1676,22 @@ Version:1.0
 	font-size: 15px;
 	margin: 10px 0 10px;
 }
+
+/*Custom*/
+.hotline-phone-ring-wrap{
+display: none !important;
+}
+
+.hotline-phone-ring-wrap1{
+display: none !important;
+}
+
+.fa-messenger{
+	display: none !important;
+}
+
+.fa-zalo{
+	display: none !important;
+}
+
 }
