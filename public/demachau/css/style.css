@@ -137,6 +137,29 @@ img {
     z-index: 2;
     border: 2px solid #fff;
 }
+.ux-timer {
+	float: right;
+    width: 60%;
+    position: relative;
+    border-spacing: 5px;
+    margin: .3em 0 .2em;
+    font-size: 300%;
+    display: table;
+    table-layout: fixed;
+}
+.ux-timer span{
+    display: table-cell;
+    text-align: center;
+    color: #FFF;
+    line-height: 80%;
+    margin: 0 .05em .2em;
+    background-color: rgba(0,0,0,.85);
+}
+.ux-timer span strong{
+    font-size: 13px;
+    text-transform: uppercase;
+    display: block;
+}
 .animated.infinite {
     animation-iteration-count: infinite;
 }

@@ -29,6 +29,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::post('/coupon/update/{id}', ['as' => 'admin.coupon.update', 'uses' => 'Backend\CouponController@update']);
     Route::delete('/coupon/delete/{id}', ['as' => 'admin.coupon.destroy', 'uses' => 'Backend\CouponController@destroy']);
 
+    /* Quản lý flashsale */
+    Route::get('/flashsale', ['as' => 'admin.flashsale.index', 'uses' => 'Backend\FlashSaleController@index']);
+    Route::get('/flashsale/create', ['as' => 'admin.flashsale.create', 'uses' => 'Backend\FlashSaleController@create']);
+    Route::post('/flashsale/store', ['as' => 'admin.flashsale.store', 'uses' => 'Backend\FlashSaleController@store']);
+    Route::get('/flashsale/edit/{id}', ['as' => 'admin.flashsale.edit', 'uses' => 'Backend\FlashSaleController@edit']);
+    Route::post('/flashsale/update/{id}', ['as' => 'admin.flashsale.update', 'uses' => 'Backend\FlashSaleController@update']);
+    Route::delete('/flashsale/delete/{id}', ['as' => 'admin.flashsale.destroy', 'uses' => 'Backend\FlashSaleController@destroy']);
+
     // Giao diện: social
      Route::get('/social', ['as' => 'admin.social.index', 'uses' => 'Backend\SocialController@index']);
     Route::get('/social/create', ['as' => 'admin.social.create', 'uses' => 'Backend\SocialController@create']);
