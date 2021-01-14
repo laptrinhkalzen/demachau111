@@ -18,6 +18,7 @@ class ProductController extends Controller {
     public function addToCart(Request $request) {
         $id = $request->get('product_id');
         $quantity = $request->get('quantity');
+        $option_number=$request->get('option_number');
 
         $product = $this->productRepo->find($id);
         if (!$product) {
@@ -28,13 +29,15 @@ class ProductController extends Controller {
         $cart = session()->get('cart');
         if (is_null($cart)) {
             $cart = [
-                $id => [
+                $id.'_'.$option_number => [
+                    "product_id"=>$id,
                     "alias" =>$product->alias,
                     "title" => $product->title,
                     "quantity" => $quantity,
                     "price" => $product->sale_price == 0 ? $product->price : $product->sale_price,
                     "image" => $product->getImage(),
-                    "url" => $product->alias
+                    "url" => $product->alias,
+                    "option_number"=>$option_number
                 ]
             ];
             session()->put('cart', $cart);
@@ -47,8 +50,8 @@ class ProductController extends Controller {
                        'success' => true, 'count' => $count, 'total' => number_format($total),'cart'=>$cart
             ]);
         }
-        if (isset($cart[$id])) {
-            $cart[$id]['quantity'] += $quantity;
+        if (isset($cart[$id.'_'.$option_number]) &&  $cart[$id.'_'.$option_number]['option_number']==$option_number) {
+            $cart[$id.'_'.$option_number]['quantity'] += $quantity;
 
             session()->put('cart', $cart);
             foreach (session('cart') as $val) {
@@ -59,13 +62,15 @@ class ProductController extends Controller {
                        'success' => true, 'count' => $count, 'total' => number_format($total),'cart'=>$cart
             ]);
         } else {
-            $cart[$id] = [
+            $cart[$id.'_'.$option_number] = [
+                "product_id"=>$id,
                 "alias" =>$product->alias,
                 "title" => $product->title,
                 "quantity" => $quantity,
                 "price" => $product->sale_price == 0 ? $product->price : $product->sale_price,
                 "image" => $product->getImage(),
-                "url" => $product->alias
+                "url" => $product->alias,
+                "option_number"=>$option_number
             ];
             session()->put('cart', $cart);
         }

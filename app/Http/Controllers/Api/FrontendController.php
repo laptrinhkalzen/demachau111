@@ -38,6 +38,20 @@ class FrontendController extends Controller {
         $this->memberRepo = $memberRepo;
     }
 
+      public function auto_complete(Request $request) {
+        $data=$request->all();
+        if($data['query']){
+            $product=DB::table('product')->where('status',1)->where('alias','LIKE','%'.$data['query'].'%')->orWhere('meta_keywords','LIKE','%'.$data['query'].'%')->get();
+             $output = '';
+            foreach($product as $val){
+                $output .= '<li style="color:black; "  class="list-group-item" id="li_1"><a href="#" style="color:black;" value="{{$val->title}}">'.$val->title.'</a></li>';
+            }
+            $output .= '';
+            return $output;
+        }
+      
+    }
+
     public function select_address(Request $request){
         $data = $request->all();
         if($data['action']){

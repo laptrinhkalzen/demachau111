@@ -30,10 +30,10 @@
     <!-- Slider Area -->
     <aside class="left"><a href="{{$share_config->banner_left_link}}"><img style="width: 150px; height: 540px; " src="{{$share_config->banner_left}}"></img></a></aside>
 
-    <section class="hero-slider" style="margin: 0 auto;">
+    <section class="container hero-slider" >
 
         <!-- Single Slider -->
-        <div class=" single-slider" style="margin-left: 190px; margin-right: 190px;">
+        <div class=" single-slider">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="">
@@ -182,7 +182,7 @@
             <div class="nav-main">
                 <!-- Tab Nav -->
                 <ul style="border-bottom: solid 1px #FFA500;" class="nav nav-tabs" id="myTab" role="tablist">
-                    <li style="float: left; border-bottom: none; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
+                    <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
                     @foreach($danh_muc_con as $danh_muc_con1)
                     @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
                     <li style="float: left; border-bottom: solid 1px #FFA500;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
@@ -377,6 +377,7 @@
     <!-- End Shop Services Area -->
     
     <!-- Modal -->
+
    <!--  @foreach($product_danh_muc_cha as $product_modal)
     <form method="post" action="{{route('home.buy_now_alias',['alias'=>$product_modal->alias])}}">
         @csrf
@@ -559,6 +560,9 @@ var x = setInterval(function() {
 });
 </script>
 
+=======
+   
+>>>>>>> 4df9ece (dat 14/1)
     
     <aside class="right"><a href="{{$share_config->banner_right_link}}"><img style="width: 150px;  height: 540px;" src="{{$share_config->banner_right}}"></img></a></aside>
   

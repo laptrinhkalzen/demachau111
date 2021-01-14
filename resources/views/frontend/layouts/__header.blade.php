@@ -11,7 +11,7 @@
     <!-- Title Tag  -->
     <title>Đệm Á Châu</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{asset('public/demachau/images/favicon.png')}}">
+    <link rel="icon" type="image/png" href="{!!$share_config->favicon!!}">
     <!-- Web Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     
@@ -50,6 +50,7 @@
     
     
 </head>
+
 <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
 <body class="js" style="background-color: #f3f5f7">
     
@@ -148,11 +149,14 @@
                             <div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
                             <!-- Search Form -->
                             <div class="search-top">
-                                <form class="search-form">
-                                    <input type="text" placeholder="Search here..." name="search">
+                                <form class="search-form" action="{{route('product.search')}}" method="GET">
+                                    <input type="text" placeholder="Nhập từ khoá" id="search_key" autocomplete="off" name="search">
                                     <button value="search" type="submit"><i class="ti-search"></i></button>
+                                    <div class="search_result"></div>
                                 </form>
+                                
                             </div>
+                              
                             <!--/ End Search Form -->
                         </div>
                         <!--/ End Search Form -->
@@ -162,11 +166,14 @@
                         <div style="padding-top: 32px;" class="search-bar-top">
                             <div class="search-bar">
                                 
-                                <form>
-                                    <input name="search" placeholder="Search Products Here....." type="search">
+                                <form action="{{route('product.search')}}" method="GET">
+                                  
+                                    <input name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
                                     <button class="btnn"><i class="ti-search"></i></button>
                                 </form>
+
                             </div>
+                            <div  class="search_result"></div>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-3 col-12">
@@ -237,7 +244,7 @@
             </div>
         </div>
         <!-- Header Inner -->
-        <div class="header-inner" style="background-color: #283988;">
+        <div class="header-inner" style="background-color: #283988;height: 64px;">
             <div class="container">
                 <div class="cat-nav-head">
                     <div class="row" >
@@ -291,7 +298,7 @@
                                                     
                                                     @foreach ($menu_arr as $key=>$menu)
                                                     @if($key == 0)
-                                                    <li class="nav-item" style="background-color: #ea1621;">
+                                                    <li class="nav-item" style="background-color: #ea1621;height: 64px;">
                                                         <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
                                                     </li>
                                                     @else
@@ -318,6 +325,38 @@
         </div>
         <!--/ End Header Inner -->
     </header>
+     <script type="text/javascript">
+        $(document).ready(function(){
+            
+        $('input[name="search"]').keyup(function(){
+           
+            var query=$(this).val();
+            if(query!=''){
+                $.ajax({
+                    method:'GET',
+                    url:'{{route("api.auto_complete")}}',
+                    
+                    data:{query:query},
+                    success:function(res){
+                        $('div[class$=search_result]').fadeIn();
+                        $('div[class$=search_result]').html(res);
+                        
+                    }
+                });
+                
+              
+            }
+            else{
+                $('div[class$=search_result]').fadeOut();
+            }
+        });
+        $(document).on('click','li',function(){
+            $('input[name="search').val($(this).text());
+             $('div[class$=search_result]').fadeOut();
+        });
+        });
+   </script>
+
 <script type="text/javascript">
     $(document).ready(function(){
         $('#show-header').on('mouseover',function(){

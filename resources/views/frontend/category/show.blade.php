@@ -15,7 +15,55 @@
 			</div>
 		</div>
 		<!-- End Breadcrumbs -->
-		
+		<label>
+  <input type="radio" name="payment-option" value="paypal" checked>
+  <img src="paypal-mark.jpg" alt="Pay with PayPal">
+</label>
+
+<label>
+  <input type="radio" name="payment-option" value="alternate">
+  <div id="paypal-marks-container"></div>
+</label>
+
+<div id="paypal-buttons-container"></div>
+<div id="alternate-button-container">
+  <button>Pay with a different method</button>
+</div>
+
+<script>
+  // Render the PayPal marks
+  paypal.Marks().render('#paypal-marks-container');
+
+  // Render the PayPal buttons
+  paypal.Buttons().render('#paypal-buttons-container');
+
+  // Listen for changes to the radio buttons
+  document.querySelectorAll('input[name=payment-option]')
+    .forEach(function (el)  {
+      el.addEventListener('change', function (event)  {
+
+        // If PayPal is selected, show the PayPal button
+        if (event.target.value === 'paypal')  {
+          document.body.querySelector('#alternate-button-container')
+            .style.display = 'none';
+          document.body.querySelector('#paypal-button-container')
+            .style.display = 'block';
+         }
+
+        // If alternate funding is selected, show a different button
+        if (event.target.value === 'alternate')  {
+          document.body.querySelector('#alternate-button-container')
+            .style.display = 'block';
+          document.body.querySelector('#paypal-button-container')
+            .style.display = 'none';
+         }
+       });
+     });
+
+  // Hide non-PayPal button by default
+  document.body.querySelector('#alternate-button-container')
+    .style.display = 'none';
+</script>
 		<!-- Product Style -->
 		<section class="product-area shop-sidebar shop section">
 			<div class="container">
@@ -200,12 +248,16 @@
 								</div>
 							</div>
 							@endforeach
-							
+								
 						</div>
+						  <div style="text-align: center;">{!! $product_arr->links() !!}</div>
 					</div>
+                   
 				</div>
 			</div>
+
 		</section>
+
 		<!--/ End Product Style 1  -->	
 
 		<!-- Start Shop Newsletter  -->

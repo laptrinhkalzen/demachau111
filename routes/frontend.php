@@ -21,7 +21,7 @@ Route::group(['middleware' => 'frontend'], function() {
     /* Sản phẩm */
     Route::get('/san-pham', ['as' => 'product.index', 'uses' => 'Frontend\ProductController@index']);
     Route::get('/danh-muc/{alias}', ['as' => 'category.show', 'uses' => 'Frontend\ProductController@category']);
-    Route::get('/search-product', ['as' => 'product.search', 'uses' => 'Frontend\ProductController@search']);
+    Route::get('/search-product', ['as' => 'product.search', 'uses' => 'Frontend\ProductController@search_product']);
     Route::get('/filter-product', ['as' => 'product.filter', 'uses' => 'Frontend\ProductController@filter']);
     Route::get('/news', ['as' => 'news.index', 'uses' => 'Frontend\NewsController@index']);
     

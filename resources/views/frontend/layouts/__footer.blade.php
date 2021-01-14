@@ -259,6 +259,30 @@
             </div>
         </div>
     </footer>
+            <div class="giuseart-nav">
+        <ul>
+            <li><a href="https://www.google.com/maps?ll=20.84601,106.691826&z=16&t=m&hl=vi&gl=US&mapclient=embed&daddr=59+L%E1%BA%A1ch+Tray+Ng%C3%B4+Quy%E1%BB%81n+H%E1%BA%A3i+Ph%C3%B2ng@20.84601,106.691826" rel="nofollow" target="_blank"><i class="ticon-heart"></i>Tìm đường</a></li>
+            <li><a href="#" rel="nofollow" target="_blank"><i class="ticon-zalo-circle2"></i>Chat Zalo</a></li>
+                        <li class="phone-mobile">
+                            <a href="tel:19003052" rel="nofollow" class="button">
+                                <span class="phone_animation animation-shadow">
+                                    <i class="icon-phone-w" aria-hidden="true"></i>
+                                </span>
+                                <span class="btn_phone_txt">Gọi điện</span>
+                            </a>
+                        </li>
+                        <li><a href="http://facebook.com/demachau/" rel="nofollow" target="_blank"><i class="ticon-messenger"></i>Messenger</a></li>
+            <li><a href="sms:02253833383" class="chat_animation">
+            <i class="ticon-chat-sms" aria-hidden="true" title="Nhắn tin sms"></i>
+                Nhắn tin SMS</a>
+            </li>
+            <li class="to-top-pc">
+                <a href="#" rel="nofollow">
+                    <i class="ticon-angle-up" aria-hidden="true" title="Quay lên trên"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
     <!-- /End Footer Area -->
     
     <!-- Jquery -->
@@ -298,22 +322,25 @@
     <script type="text/javascript">
     $( document ).ready(function() {
     $('#add-to-cart').click(function( e ){
-      
+          var option_number=$('#option_number').val();
          var product_id=$(this).data('product_id');
          var quantity=$('#quantity').val();
+         alert(option_number);
         
          $.ajax({
                 url:'{{route("api.add_to_cart1")}}',
                 method:'POST',
-                data:{product_id : product_id,quantity:quantity,_token: $('#token').val()},
+                data:{option_number:option_number,product_id : product_id,quantity:quantity,_token: $('#token').val()},
                 success:function(resp){           
                    if(resp.success == true){
                      $('#cart-count').html(resp.count);
                      $('#total1').html(resp.total +' đ');
                      $('#count-sp').html(resp.count + ' Sản phẩm');
-                     $("#cart_items").load(" #cart_items > *");
-                     $("#cart").load(" #cart > *");
-                     $("#sub_total").load(" #sub_total > *");
+              
+                     $(".shopping-item").load(" .shopping-item > *");
+                     // $("#cart_items").load(" #cart_items > *");
+                     // $("#cart").load(" #cart > *");
+                     // $("#sub_total").load(" #sub_total > *");
                      alert('Thêm giỏ hàng thành công');
                    }else{
                      alert('Thêm giỏ hàng không thành công');
@@ -368,7 +395,7 @@
             $.ajax({
                 url : '{{route('api.select_address')}}',
                 method: 'POST',
-                data:{action:action,ma_id:ma_id,_token:_token},
+                data:{action:action,ma_id:ma_id,option_number:option_number,_token:_token},
                 success:function(data){
                   
                     $("#district1").html(data);
@@ -378,6 +405,8 @@
         }); 
     });
 </script>
+
+ 
 
 </body>
 </html>
