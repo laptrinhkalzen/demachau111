@@ -106,7 +106,7 @@ hr.ke_vach {
                        
                            <p>{{$detail_product->title}}</p>
                         </div>
-                        <div class="form-group">
+                        <div class="">
                              <div class="row">  
                         
                         @foreach($input as $inputt)

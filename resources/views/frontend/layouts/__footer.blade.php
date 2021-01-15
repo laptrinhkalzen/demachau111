@@ -373,16 +373,10 @@
           }
                 });
      });
-
-
-
-           
-
-
-    
     </script>
     <script type="text/javascript">
     $(document).ready(function(){
+          
             $('.option').on('change',function(){
             var action = $(this).attr('id');
             var ma_id = $(this).val();
@@ -390,16 +384,14 @@
             var result = '';
             if(action=='city'){
                 result = 'district';
-
             }
             $.ajax({
-                url : '{{route('api.select_address')}}',
+                url : '{{route("api.select_address")}}',
                 method: 'POST',
-                data:{action:action,ma_id:ma_id,option_number:option_number,_token:_token},
+                data:{action:action,ma_id:ma_id,_token:_token},
                 success:function(data){
-                  
-                    $("#district1").html(data);
-            
+                    
+                    $("#district").html(data);
                 }
             });
         }); 

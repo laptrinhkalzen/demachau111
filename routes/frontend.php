@@ -14,10 +14,11 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::post('/buy-now/{id}', ['as' => 'home.buy_now', 'uses' => 'Frontend\CheckoutOrderController@buy_now']);
     Route::post('/buy-now-alias/{alias}', ['as' => 'home.buy_now_alias', 'uses' => 'Frontend\CheckoutOrderController@buy_now_alias']);
     Route::get('/checkout-address', ['as' => 'home.checkout_address', 'uses' => 'Frontend\CheckoutAddressController@index']);
-    Route::get('/checkout-payment', ['as' => 'home.checkout_payment', 'uses' => 'Frontend\CheckoutPaymentController@index']);
+    Route::post('/checkout-payment', ['as' => 'home.checkout_payment', 'uses' => 'Frontend\CheckoutOrderController@checkout_payment']);
     Route::get('/marketing/activation/{key}', ['as' => 'marketing.activation', 'uses' => 'Frontend\MarketingController@activation']);
     Route::get('/construction/activation/{key}', ['as' => 'construction.activation', 'uses' => 'Frontend\ConstructionController@activation']);
     Route::get('/member/activation/{key}', ['as' => 'member.activation', 'uses' => 'Frontend\MemberController@activation']);
+    Route::get('/create-payment',['as'=>'checkout.payment','uses'=>'Frontend\CheckoutOrderController@create_payment']);
     /* Sản phẩm */
     Route::get('/san-pham', ['as' => 'product.index', 'uses' => 'Frontend\ProductController@index']);
     Route::get('/danh-muc/{alias}', ['as' => 'category.show', 'uses' => 'Frontend\ProductController@category']);
