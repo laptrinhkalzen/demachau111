@@ -38,7 +38,7 @@ class NewsController extends Controller {
      */
     public function create() {
         $options = $this->categoryRepo->readCategoryByType(\App\Category::TYPE_NEWS);
-        $category_html = \App\Helpers\StringHelper::getSelectOptions($options);
+        $category_html = \App\Helpers\StringHelper::getSelectRoleOptions($options);
         return view('backend/news/create', compact('category_html'));
     }
 
@@ -96,7 +96,7 @@ class NewsController extends Controller {
         $record = $this->newsRepo->find($id);
         $category_ids = $record->categories()->get()->pluck('id')->toArray();
         $options = $this->categoryRepo->readCategoryByType(\App\Category::TYPE_NEWS);
-        $category_html = \App\Helpers\StringHelper::getSelectOptions($options, $category_ids);
+        $category_html = \App\Helpers\StringHelper::getSelectRoleOptions($options, $category_ids);
         return view('backend/news/edit', compact('record', 'category_html'));
     }
 

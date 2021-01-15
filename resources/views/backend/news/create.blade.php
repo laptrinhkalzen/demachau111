@@ -205,5 +205,5 @@
     } );
 </script>-->
 <script src="{!! asset('assets/backend/js/custom.js') !!}"></script>
-@include('ckfinder::setup')
+
 @stop
