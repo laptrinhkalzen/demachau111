@@ -307,14 +307,14 @@ class ProductController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
-        $option_price=$request->option_price;
-        for($i=1;$i<=count($option_price);$i++){
-            DB::table('option_detail')->insert(['option_price'=>$option_price[$i-1],'product_id'=>$id,'option_id'=>$i]);
-        }
+        // $option_price=$request->option_price;
+        // for($i=1;$i<=count($option_price);$i++){
+        //     DB::table('option_detail')->insert(['option_price'=>$option_price[$i-1],'product_id'=>$id,'option_id'=>$i]);
+        // }
         
-        $variants=DB::table('variant_product')->where('product_id',64)->get();
-        $count=$variants->pluck('count')->first();
-        $parents=DB::table('variant_product')->where('product_id',64)->groupBy('parent_variant')->pluck('parent_variant');
+        // $variants=DB::table('variant_product')->where('product_id',64)->get();
+        // $count=$variants->pluck('count')->first();
+        // $parents=DB::table('variant_product')->where('product_id',64)->groupBy('parent_variant')->pluck('parent_variant');
         // dd($parents);
         // for($i=0;$i<$count;$i++){
         //     foreach ($variants as $key => $variant) {
