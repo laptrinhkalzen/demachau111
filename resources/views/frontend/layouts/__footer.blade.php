@@ -107,7 +107,7 @@
 
             <div  class="col-lg-3 col-md-6 col-12" >
                 <div class="single-footer links">
-                    <span class="title">CÔNG TY CỔ PHẦN THƯƠNG MẠI HÀ MINH GIANG</span>
+                    <span class="title">{{$share_config->company_name}}</span>
                       <div class="contact">
                         <ul>
                             <li>Trụ sở chính:&nbsp {{$share_config->address}}</li>
@@ -259,7 +259,7 @@
             </div>
         </div>
     </footer>
-            <div class="giuseart-nav">
+            <!-- <div class="giuseart-nav">
         <ul>
             <li><a href="https://www.google.com/maps?ll=20.84601,106.691826&z=16&t=m&hl=vi&gl=US&mapclient=embed&daddr=59+L%E1%BA%A1ch+Tray+Ng%C3%B4+Quy%E1%BB%81n+H%E1%BA%A3i+Ph%C3%B2ng@20.84601,106.691826" rel="nofollow" target="_blank"><i class="ticon-heart"></i>Tìm đường</a></li>
             <li><a href="#" rel="nofollow" target="_blank"><i class="ticon-zalo-circle2"></i>Chat Zalo</a></li>
@@ -282,7 +282,7 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div> -->
     <!-- /End Footer Area -->
     
     <!-- Jquery -->

@@ -335,8 +335,30 @@ Version:1.0
 	padding:20px 0;
 }
 
+/*Custom*/
+.hotline-phone-ring-wrap{
+display: none !important;
+}
 
+.hotline-phone-ring-wrap1{
+display: none !important;
+}
 
+.fa-messenger{
+	display: none !important;
+}
+
+.fa-zalo{
+	display: none !important;
+}
+
+.banner-slide{
+	display: none !important;
+}
+
+.shop-blog{
+	display: none !important;
+}
 
 
 }
@@ -1261,7 +1283,7 @@ Version:1.0
 	display:none !important;
 }
 .hero-slider {
-	height: 350px;
+	height: auto;
 }
 .hero-slider .hero-text {
 	margin-top: 60px;
@@ -1691,6 +1713,14 @@ display: none !important;
 }
 
 .fa-zalo{
+	display: none !important;
+}
+
+.banner-slide{
+	display: none !important;
+}
+
+.shop-blog{
 	display: none !important;
 }
 
