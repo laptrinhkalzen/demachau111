@@ -135,13 +135,13 @@ margin-top: 0px;
                             <div class="col-12">
                                 <div class="owl-carousel popular-slider">
                                     <!-- Start Single Product -->
-                                    @foreach($product_danh_muc_cha as $product_danh_muc_cha1)
-                                    @if($product_danh_muc_cha1->category_id == $danh_muc_deal->id)
+                                    @foreach($flashsale_products as $flashsale_product)
+                                    @if($flashsale_product->flash_sale_id == $flashsale->id)
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
-                                            <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
-                                                <img class="default-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}" style="padding-top: 10px; ">
-                                                <img class="hover-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}" style="padding-top: 10px; ">
+                                            <a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
+                                                <img class="default-img img-responsive img-rounded" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
+                                                <img class="hover-img img-responsive img-rounded" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
                                                 <!--  //<span class="out-of-stock">Hot</span> -->
                                             </a>
                                             <div class="button-head">
@@ -151,18 +151,18 @@ margin-top: 0px;
                                                     <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Yêu thích</span></a>
                                                 </div> -->
                                                 <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
-                                                    <a  data-toggle="modal" data-target="#exampleModal_{{$product_danh_muc_cha1->id}}" title="Mua hàng" href="#">Mua hàng</a>
+                                                    <a  data-toggle="modal" data-target="#exampleModal_{{$flashsale_product->product_id}}" title="Mua hàng" href="#">Mua hàng</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product-content">
-                                            <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
+                                            <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">{{$flashsale_product->title}}</a></h3>
                                             <div class="product-price" style="text-align: center;">
-                                                @if($product_danh_muc_cha1->sale_price>0)
-                                                <span class="old">{{$product_danh_muc_cha1->sale_price}}</span>
-                                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
+                                                @if($flashsale_product->discount_value>0)
+                                                <span class="old">{{$flashsale_product->price}}</span>
+                                                <span style="color:red;">{{$flashsale_product->price_decrease}} đ</span>
                                                 @else
-                                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
+                                                <span style="color:red;">{{$flashsale_product->price}} đ</span>
                                                 @endif
                                             </div>
                                         </div>
@@ -186,97 +186,7 @@ margin-top: 0px;
         </div>
     </div>
 </section>
-<!-- <section class="hot_deals">
-    <div class="row">
-        <div class="time_run col-12 col-lg-3 p-0 bg_theme time_deal">
-            <img src="/template/default/images/icon_deal.png" alt="deal">
-            <div id="time_down">
-            </div>
-            <a href="/deal">Xem tất cả</a>
-        </div>
-        <div class="col-12 col-lg-9 p-0">
-            <div class="product_list sales_list row m-0" id="deal_home">
-            </div>
-            <div class="template d-none" style="display:none;">
-                <div class="col-6 col-lg-3 p-3">
-                    <div class="p_item">
-                        <a href="productUrl" class="p-img">
-                            <img src="productImage" alt="name">
-                        </a>
-                        <a href="productUrl" class="p-name">name</a>
-                        <span class="p-price">deal_price</span>
-                        <span class="p-unprice">price</span>
-                        <span class="lable-sale">percent</span>
-                        <span class="p-counter">Còn lại: quantity</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- <div class="product-area most-popular section1" style>
-    <div class="container" style="background-color:white;">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-title">
-                    <h2>Hot Item</h2>
-                </div>
-            </div>
-        </div>
-        <div class="nav-main">  
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="nav nav-tabs" id="myTab" role="tablist">
-                        <img src="https://demachau.com/wp-content/uploads/2020/09/sale-bar-3.png">
-                        <h2 class="">
-                        <a href="">Săn Deal mỗi ngày</a>
-                        </h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="border: 3px solid #ed1c24;background-color: #fff;overflow: hidden;padding: 20px;">
-            <div class="col-12">
-                <div class="owl-carousel popular-slider">
-                    @foreach($product_danh_muc_cha as $product_danh_muc_cha1)
-                    @if($product_danh_muc_cha1->category_id == $danh_muc_deal->id)
-                    <div class="single-product">
-                        <div class="product-img">
-                            <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
-                                <img class="default-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}">
-                                <img class="hover-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}">
-                                //<span class="out-of-stock">Hot</span>
-                            </a>
-                            <div class="button-head">
-                                <div class="product-action">
-                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào giỏ hàng</span></a>
-                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm giỏ hàng</span></a>
-                                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Yêu thích</span></a>
-                                </div>
-                                <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
-                                    <a  data-toggle="modal" data-target="#exampleModal_{{$product_danh_muc_cha1->id}}" title="Mua hàng" href="#">Mua hàng</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
-                            <div class="product-price" style="text-align: center;">
-                                @if($product_danh_muc_cha1->sale_price>0)
-                                <span class="old">{{$product_danh_muc_cha1->sale_price}}</span>
-                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
-                                @else
-                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                    @endif
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
+
 <!-- Start Most Popular -->
 @foreach($danh_muc_cha as $danh_muc_cha)
 <div class="product-area most-popular section" style="padding: 20px !important;">
@@ -443,19 +353,17 @@ margin-top: 0px;
                             <div class="col-12">
                                 <div class="owl-carousel popular-slider">
                                     <!-- Start Single Product -->
-                                    @foreach($product_danh_muc_cha as $product_danh_muc_cha1)
-                                    @if($product_danh_muc_cha1->category_id == $danh_muc_deal->id)
+                                    
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
-                                            <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
-                                                <img class="default-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}" style="padding-top: 10px; ">
-                                                <img class="hover-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}" style="padding-top: 10px; ">
-                                                <!--  //<span class="out-of-stock">Hot</span> -->
+                                            <a href="">
+                                                <img class="default-img img-responsive img-rounded" src="" style="padding-top: 10px; ">
+                                                <img class="hover-img img-responsive img-rounded" src="" style="padding-top: 10px; ">
+                                                >
                                             </a>
                                         </div>
                                     </div>
-                                    @endif
-                                    @endforeach
+                                   
                                     
                                     <!-- End Single Product -->
                                     <!-- Start Single Product -->
@@ -740,13 +648,18 @@ checkOption();
 <script type="text/javascript">
 $(document).ready(function(){
 // Set the date we're counting down to
+var start = new Date("{{$flashsale->start}}").getTime();
+var end = new Date("{{$flashsale->end}}").getTime();
+//var end = {{$flashsale->end}};
+
 var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 // Update the count down every 1 second
 var x = setInterval(function() {
 // Get today's date and time
 var now = new Date().getTime();
+
 // Find the distance between now and the count down date
-var distance = countDownDate - now;
+var distance = end - now;
 // Time calculations for days, hours, minutes and seconds
 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

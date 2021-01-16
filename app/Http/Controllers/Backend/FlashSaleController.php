@@ -25,11 +25,36 @@ class FlashSaleController extends Controller {
 
    
     public function store(Request $request) {
+        $this->validate($request,
+        [
+
+            'start' => 'bail|required|after_or_equal:today',
+            'end' => 'bail|required||after_or_equal:start',
+
+        ],
+
+        [
+            'required' => ':attribute không được để trống',
+            'min' => ':attribute không được nhỏ hơn :min',
+            'max' => ':attribute không được lớn hơn :max',
+
+        ],
+
+        [
+
+            'start' => 'Thời gian bắt đầu',
+            'end' => 'Thời gian kết thúc',
+            'today' => 'hôm nay'
+
+        ]
+
+    );
         $product = $request->product;
         $discount_type = $request->discount_type;
         $discount_value = $request->discount_value;
         $price_decrease = $request->price_decrease;
         $quantity = $request->quantity;
+       
         $data = array();
         $data['name'] = $request->name;
         $data['note'] = $request->note;
@@ -73,6 +98,8 @@ class FlashSaleController extends Controller {
         $discount_value = $request->discount_value;
         $price_decrease = $request->price_decrease;
         $quantity = $request->quantity;
+        
+
            $data = array();
             $data['name'] = $request->name;
             $data['note'] = $request->note;
@@ -91,6 +118,7 @@ class FlashSaleController extends Controller {
                 'discount_value'=>$discount_value[$count],
                 'quantity'=>$quantity[$count],
                 'price_decrease'=>$price_decrease[$count]
+                
                 );
                 $insert_data[]=$import_product;   
             }
