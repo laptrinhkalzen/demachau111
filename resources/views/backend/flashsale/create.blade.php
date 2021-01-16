@@ -114,7 +114,7 @@ function showPreview(event){
 
                 <div class="tab-pane fade" id="left-icon-tab2">
                         <div class="row">
-                            <div class="col-md-10">
+                            <div class="col-md-12">
                                 <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
                            
                                 <fieldset>
@@ -124,8 +124,9 @@ function showPreview(event){
                                           <th style="width: 24%;">Sản phẩm</th>
                                           <th style="width: 17%;">Giá gốc</th>
                                           <th style="width: 17%;">Giảm theo</th>
-                                          <th style="width: 17%;">Số lượng giảm</th>
-                                          <th style="width: 17%;" >Tổng tiền giảm</th>
+                                          <th style="width: 8%;">Số tiền giảm</th>
+                                          <th style="width: 8%;">Số lượng</th>
+                                          <th style="width: 17%;" >Tiền sau giảm</th>
                                           <th scope="col"></th>
                                         </tr>
                                       </thead>
@@ -150,16 +151,19 @@ function showPreview(event){
                                      </div>
 
                                      <div class="form-group col-md-2" >
-                                      <select class="select2 form-control" name="discount_type[]">
-                                        <option value="">------Chọn------</option> 
-                                        <option  value="0">%</option>
-                                        <option  value="1">Tiền</option>
+                                      <select class="select2 form-control discount_type" name="discount_type[]">
+                                        <option data-type="0" value="0">%</option>
+                                        <option data-type="1" value="1">Tiền</option>
                                            
                                       </select>
                                   </div> 
 
-                                     <div id="discount_value" class="form-group col-md-2" >
+                                     <div id="discount_value" class="form-group col-md-1" >
                                      <input  type="text"  name="discount_value[]" min="1" class="form-control discount_value" required="">
+                                     </div>
+
+                                     <div id="quantity" class="form-group col-md-1" >
+                                     <input  type="number"  name="quantity[]" min="1" class="form-control quantity" required="">
                                      </div>
 
                                      <div class="form-group col-md-2" >
@@ -212,7 +216,7 @@ function showPreview(event){
                                 e.preventDefault();
                                 if(x < max_fields){ //max input box allowed
                                 x++; //text box increment
-                                $(wrapper).append('<div class="form-row" style="margin-left: 0px; margin-top: 10px;"><div class="form-group col-md-3" id="vehicle-type"><select id="select_product" class="select2 form-control" name="product[]"><option value="">------Chọn------</option>@foreach($products as $product)<option data-price="{{$product->price}}" value="{{$product->id}}">{{$product->title}}</option>@endforeach</select></div><div class="form-group col-md-2" ><input  readonly  type="number"  class="price_input form-control quantity-input" required=""></div><div class="form-group col-md-2" ><select class="select2 form-control" name="discount_type[]"><option value="">------Chọn------</option><option  value="0">%</option><option  value="1">Tiền</option></select></div><div id="discount_value" class="form-group col-md-2" ><input  type="text"   name="discount_value[]" min="1" class="form-control discount_value" required=""></div><div class="form-group col-md-2" ><input readonly type="text"   name="price_decrease[]" min="1" class="price_reduce form-control price price-input" required=""></div><div style="cursor:pointer; background-color:red; height:35px;" class="remove_field btn btn-info xoa">Xóa</div></div>'); 
+                                $(wrapper).append('<div class="form-row" style="margin-left: 0px; margin-top: 10px;"><div class="form-group col-md-3" id="vehicle-type"><select id="select_product" class="select2 form-control" name="product[]"><option value="">------Chọn------</option>@foreach($products as $product)<option data-price="{{$product->price}}" value="{{$product->id}}">{{$product->title}}</option>@endforeach</select></div><div class="form-group col-md-2" ><input  readonly  type="number"  class="price_input form-control quantity-input" required=""></div><div class="form-group col-md-2 discount_type" ><select class="select2 form-control" name="discount_type[]"><option data-type="0" value="0">%</option><option data-type="1" value="1">Tiền</option></select></div><div id="discount_value" class="form-group col-md-1" ><input  type="text"   name="discount_value[]" min="1" class="form-control discount_value" required=""></div><div id="quantity" class="form-group col-md-1" ><input  type="text"  name="quantity[]" min="1" class="form-control quantity" required=""></div><div class="form-group col-md-2" ><input readonly type="text"   name="price_decrease[]" min="1" class="price_reduce form-control price price-input" required=""></div><div style="cursor:pointer; background-color:red; height:35px;" class="remove_field btn btn-info xoa">Xóa</div></div>'); 
                                      $('.select2').select2({
      //configuration
                                      });
@@ -231,27 +235,44 @@ function showPreview(event){
                   $(document).ready(function () {
                                
                               $('body').delegate('#vehicle-type','change',function (){
-                        
                                  $(this).parents('.form-row').find('.price_input').val(
                                   $(this).find('.select2').find(":selected").data("price")
                                 );
-
-                                 $(this).parents('.form-row').find('.price_reduce').val(
-                                $(this).find('.select2').find(":selected").data("price")-$(this).parents('.form-row').find('.discount_value').val()
+                                 
+                                 var check = ($(this).parents('.form-row').find('.discount_type :selected').val());
+                                 var price = $(this).find('.select2').find(":selected").data("price");
+                                 var discount_value = $(this).parents('.form-row').find('.discount_value').val();
+                                 if (check == 0) {
+                                   $(this).parents('.form-row').find('.price_reduce').val(
+                                      price - (discount_value/100)*price
+                                      );
+                                  }
+                                  else{
+                                    $(this).parents('.form-row').find('.price_reduce').val(
+                                price - discount_value
                                 );
-                                  });
+                                }
+                                });
                                  
                             
 
                               $('body').delegate('#discount_value','change',function (){
-                                 $(this).parents('.form-row').find('.price_reduce').val(
-                                  $(this).parents('.form-row').find('.price_input').val()- $(this).parents('.form-row').find('.discount_value').val()
-                                  );
+                                 var check = ($(this).parents('.form-row').find('.discount_type :selected').val());
+                                 var price = $(this).parents('.form-row').find('.price_input').val()
+                                 var discount_value = $(this).parents('.form-row').find('.discount_value').val();
 
-                                
-
-                              }); 
-                                });
+                                    if (check == 0) {
+                                   $(this).parents('.form-row').find('.price_reduce').val(
+                                      price - (discount_value/100)*price
+                                      );
+                                  }
+                                  else{
+                                    $(this).parents('.form-row').find('.price_reduce').val(
+                                price - discount_value
+                                );
+                                }
+                                }); 
+                              });
                       
                         
                 </script>

@@ -37,6 +37,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::post('/flashsale/update/{id}', ['as' => 'admin.flashsale.update', 'uses' => 'Backend\FlashSaleController@update']);
     Route::delete('/flashsale/delete/{id}', ['as' => 'admin.flashsale.destroy', 'uses' => 'Backend\FlashSaleController@destroy']);
 
+    Route::get('/flashsale/remove', ['as' => 'admin.flashsale.remove', 'uses' => 'Backend\FlashSaleController@remove']);
+
     // Giao diện: social
      Route::get('/social', ['as' => 'admin.social.index', 'uses' => 'Backend\SocialController@index']);
     Route::get('/social/create', ['as' => 'admin.social.create', 'uses' => 'Backend\SocialController@create']);
@@ -231,5 +233,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('/template_setting', ['as' => 'admin.template_setting.index', 'uses' => 'Backend\TemplateSettingController@index']);
     Route::get('/template_setting/create', ['as' => 'admin.template_setting.create', 'uses' => 'Backend\TemplateSettingController@create']);
     Route::post('/template_setting/store', ['as' => 'admin.template_setting.store', 'uses' => 'Backend\TemplateSettingController@store']);
+
 
 });
