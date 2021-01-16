@@ -205,9 +205,9 @@
                                     </div>
                                     <ul class="shopping-list" id="cart_items">
                                          
-                                            @foreach(Session('cart') as $val)
-                                            <li>
-                                            <a href="#" class="remove" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
+                                            @foreach(Session('cart') as $key1=> $val)
+                                            <li class="each_cart_{{$key1}}">
+                                            <a href="#" class="delete_cart" data-id_option="{{$key1}}" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
                                             <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}"><img src="{{$val['image']}}" alt="#"></a>
                                             <h4><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h4>
                                             <p class="quantity">{{$val['quantity']}}x - <span style="color: red;" class="amount">{{number_format($val['price'])}} đ</span></p>
@@ -220,7 +220,7 @@
                                     <div class="bottom">
                                         <div class="total">
                                             <span>Tổng</span>
-                                            <span class="total-amount" id="total1" style="color: red;">{{number_format($count_total)}} đ</span>
+                                            <span class="total-amount" id="total1" style="color: red;">{{$count_total}} đ</span>
                                         </div>
                                         <a href="{{route('checkout_order.index')}}" class="btn animate">Xem giỏ hàng</a>
                                         <a href="{{route('checkout_order.index')}}" class="btn animate">Thanh toán</a>

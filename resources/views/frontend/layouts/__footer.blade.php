@@ -397,6 +397,27 @@
         }); 
     });
 </script>
+<script type="text/javascript">
+            $(document).ready(function(){
+                $('.delete_cart').on('click',function(){
+                     var id_option=$(this).data('id_option');
+   
+                      $.ajax({
+                        url: '/api/delete-cart',
+                        method: 'POST',
+                        data: {id_option: id_option},
+                        success: function (resp) {
+                            if (resp.success == true) {
+                                   $(".shopping-item").load(" .shopping-item > *");
+                                   $('.each_cart_' + id_option).fadeOut();
+                                   
+                            }
+                        }
+                    });
+                 
+                });
+            });
+        </script>
 
  
 

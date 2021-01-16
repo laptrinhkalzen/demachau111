@@ -8,14 +8,8 @@
 			<form class="form" method="post" action="{{route('home.checkout_payment')}}">
 				@csrf
 			<div class="container">
-				
-				
 				<div class="row"> 
-
-
 					<div class="col-lg-7 col-12" style="background-color:white;">
-
-			
 
 					<!-- 	<div class="form-group">
 					     <div class="col=md-12">
@@ -37,9 +31,6 @@
 						<div class="checkout-form">
 							<h5>Thông tin thanh toán</h5>
 							<!-- Form -->
-
-							
-
 								<div class="row">
 									<div class="col-lg-12 col-md-12 col-12">
 										<div class="form-group">
@@ -108,21 +99,23 @@
 						</div>
 					</div>
 
-					<div class="col-lg-5 col-12">
+
+						<div class="col-lg-5 col-12">
 						<div class="order-details">
 							<!-- Order Widget -->
 							<div class="single-widget">
-								<h2>CART  TOTALS</h2>
+								<h2>Chi tiết sản phẩm</h2>
 								<div class="content">
 									@php
-									  $dem=0;
+									    $dem=0;
 									@endphp
 									@if(Session('cart'))
 									@foreach(Session('cart') as $key1 => $val)
 									@php
-									  $dem++;
+									    $dem++;
 									@endphp
-									<div class="col-md-12">
+									<div class="each_cart_{{$key1}}">
+									<div class="col-md-12 col-lg-12 col-12">
                                          <h5>{{$dem}}. {{$val['title']}}</h5>
 								    </div>
 								    <div class="row form-group">
@@ -131,62 +124,118 @@
 								    	</div>
 								    	<div class="col-md-8">
 								    		@foreach($product_options as $product_option)
-								    		@if($product_option->product_id==$val['product_id'])
-								    		    <div class="col-lg-12">
+								    		@if($product_option->product_id==$val['product_id'] && $val['option_number']==$product_option->option_number)
+								    		    <div class="form-row">
+								    		    	<div class="col-md-6 col-lg-6 col-6">
+								    		          <span>{{$product_option->parent_name}}:</span>
+								    		        </div>
+								    		        <div class="col-md-6 col-lg-6 col-6">
 								    		          <span>{{$product_option->value}}</span>
+								    		      </div>
 								    		     </div>     
 								    		    
 								    		@endif
 								    		@endforeach
-								    	</div>
+								    		@foreach($option_details as $option_detail)
+								    		     @if($val['option_number']==$option_detail->option_id && $val['product_id']==$option_detail->product_id)
+								    		        <div class="form-row">
+								    		    	<div class="col-md-6 col-lg-6 col-6">
+								    		          <span>Giá:</span>
+								    		        </div>
+								    		        <div class="col-md-6 col-lg-6 col-6 " >
+								    		          <span><strong data-price="{{$option_detail->option_price}}" class="each_price">{{$option_detail->option_price}}</strong></span>
+								    		      </div>
+								    		     </div> 
+								    		     @endif
+								    		@endforeach
+								    		       
+								    		<div class="form-row">
+								    		    	<div class="col-md-6 col-lg-6 col-6">
+								    		          <span>Số lượng:</span>
+								    		        </div>
+								    		        <div class="col-md-4 col-lg-4 col-4">
+								    		           <input class="each_quantity" value="{{$val['option_number']}}" type="number" name="quantity"  min="1">
+								    		        </div> 
+								    	
+								    	    </div>
+								    	     <div class="form-row">
+								    		    	<div class="col-md-6 col-lg-6 col-6">
+								    		          <input type="button" data-id_option="{{$key1}}" class="delete_cart" name="" value="Xoá">
+								    		        </div>
+								    		 </div>
 								    </div>
-
+                                   </div>
+                                  </div>
 								    @endforeach
 								    @endif		
+								
 								</div>
 							</div>
 							<!--/ End Order Widget -->
 							<!-- Order Widget -->
-							<div class="single-widget">
-								<h2>HÌNH THỨC THANH TOÁN</h2>
-								<div class="content">
-							     <div class="col-md-12">
-								<label><input type="radio" name="colorRadio" value="0"> <strong>Trả tiền mặt khi nhận hàng</strong></label>
-								<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
-							   </div>
-							   <hr>
-							   <div class="col-md-12">
-								<label><input type="radio" name="colorRadio" value="1">  <strong>Chuyển khoản ngân hàng</strong></label>
-								<div class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
-													Số tài khoản: 0123456789
-													Chủ tài khoản: DANG DINH MINH
-													Chi nhánh …
-													Nội dung chuyển khoản: Họ tên + SĐT</div>
-							   </div> 
-							   <hr>
-								<div class="col-md-12">
-								<label><input type="radio" name="colorRadio" value="2"> <strong>Thanh toán qua VNPAY</strong></label>
-								<div class="2 box" ><a href="{{route('checkout.payment')}}">Thanh toán trực tuyến qua VNPAY</div>
-				
-								</div>
-								</div>
-									</div>
+							
+
+							
+                            <div class="content col-md-12 col-lg-12 col-12">
+							<table class="table">
+								  <thead>
+								    <tr>
+								      <th style="text-align: center;" scope="col">Sản phẩm</th>
+								      <th style="text-align: center;" scope="col">Tạm tính</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td style="text-align: center;">Tạm tính</td>
+								      <td style="text-align: center;">Larry</td>
+								      
+								    </tr>
+								    <tr>
+								      <td style="text-align: center;">Tổng</td>
+								      <td style="text-align: center;">Larry</td>
+								      
+								    </tr>
+								  </tbody>
+						    </table>
+							</div>	
+						
 							<!--/ End Order Widget -->
 							<!-- Payment Method Widget -->
-							
+							<div class="single-widget payement">
+								<div class="content">
+									    <div class="col-md-12">
+										<label><input type="radio" name="colorRadio" value="0"> <strong>Trả tiền mặt khi nhận hàng</strong></label>
+										<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
+									   </div>
+									    <hr>
+									    <div class="col-md-12">
+										<label><input type="radio" name="colorRadio" value="1">  <strong>Chuyển khoản ngân hàng</strong></label>
+										<div class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
+															Số tài khoản: 0123456789
+															Chủ tài khoản: DANG DINH MINH
+															Chi nhánh …
+															Nội dung chuyển khoản: Họ tên + SĐT</div>
+									    </div> 
+									    <hr>
+										<div class="col-md-12">
+										<label><input type="radio" name="colorRadio" value="2"> <strong>Thanh toán qua VNPAY</strong></label>
+										<div class="2 box" ><a href="{{route('checkout.payment')}}">Thanh toán trực tuyến qua VNPAY</div>
+										</div>
+								</div>
+							</div>
 							<!--/ End Payment Method Widget -->
 							<!-- Button Widget -->
 							<div class="single-widget get-button">
 								<div class="content">
 									<div class="button">
-										<button type="submit" class="btn">Mua hàng</button>
+										<a href="#" class="btn">proceed to checkout</a>
 									</div>
 								</div>
 							</div>
 							<!--/ End Button Widget -->
 						</div>
 					</div>
-				</div>
+			</div>
 			</div>
 			</form>
 		</section>
@@ -272,6 +321,25 @@
 		    });
 		});
 		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				 $('.order-details').delegate('.each_quantity','change keyup',function (){
+				 	if($(this).parents('.form-group').find('.each_quantity').val()<1){
+                        alert('Vui lòng nhập số lượng lờn hơn hoặc bằng 1');
+                        $(this).parents('.form-group').find('.each_quantity').val('1');
+
+				 	}else{
+                    //alert($(this).val());
+                    $(this).parents('.form-group').find('.each_price').html(
+                    $(this).parents('.form-group').find('.each_quantity').val()*$(this).parents('.form-group').find('.each_price').data('price')
+                    	);
+                    }
+            });
+			});
+		</script>
+
+		
 
 
 
