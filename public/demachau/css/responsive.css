@@ -1081,7 +1081,30 @@ display: none !important;
 	line-height: 41px;
 }
 
+/*Custom*/
+.hotline-phone-ring-wrap{
+display: none !important;
+}
 
+.hotline-phone-ring-wrap1{
+display: none !important;
+}
+
+.fa-messenger{
+	display: none !important;
+}
+
+.fa-zalo{
+	display: none !important;
+}
+
+.banner-slide{
+	display: none !important;
+}
+
+.shop-blog{
+	display: none !important;
+}
 
 
 }
@@ -1721,6 +1744,18 @@ display: none !important;
 }
 
 .shop-blog{
+	display: none !important;
+}
+
+.banner-flash-sale{
+	padding-left: 0px !important; 
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+.flash-sale-mobile{
 	display: none !important;
 }
 

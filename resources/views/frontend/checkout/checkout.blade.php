@@ -5,6 +5,8 @@
 	
 		<!-- Start Checkout -->
 		<section class="shop checkout section" style="background-color: #f3f5f7;">
+			<form class="form" method="post" action="{{route('home.checkout_payment')}}">
+				@csrf
 			<div class="container">
 				
 				
@@ -13,34 +15,30 @@
 
 					<div class="col-lg-7 col-12" style="background-color:white;">
 
-						<h5>Hình thức thanh toán</h5>
-					<!-- 	<div class="col-lg-12 col-md-12 col-12"> -->
-						<div class="form-group">
+			
+
+					<!-- 	<div class="form-group">
 					     <div class="col=md-12">
-						<label><input type="radio" name="colorRadio" value="red" checked=""> red</label>
+						<label><input type="radio" name="colorRadio" value="red" checked=""> Tiền mặt</label>
 						<div class="red box" >You have selected <strong>red radio button</strong> so i am here</div>
 					   </div>
 					   <hr>
 					   <div class="col=md-12">
-						<label><input type="radio" name="colorRadio" value="green"> green</label>
+						<label><input type="radio" name="colorRadio" value="green"> Chuyển khoản</label>
 						<div class="green box" >You have selected <strong>green radio button</strong> so i am here</div>
 					   </div> 
 					   <hr>
 						<div class="col=md-12">
-						<label><input type="radio" name="colorRadio" value="blue"> blue</label>
-						<div class="blue box" >You have selected <strong>blue radio button</strong> so i am here</div>
-					<!-- </div> -->
-                  
-    
-   
-   
-							</div>
+						<label><input type="radio" name="colorRadio" value="blue"> Ngân hàng</label>
+						<div class="blue box" ><a href="{{route('checkout.payment')}}">Ấn vào đây</a> <strong>để tiến hành thanh toán</strong></div>
+		
 						</div>
+						</div> -->
 						<div class="checkout-form">
 							<h5>Thông tin thanh toán</h5>
 							<!-- Form -->
 
-							<form class="form" method="post" action="#">
+							
 
 								<div class="row">
 									<div class="col-lg-12 col-md-12 col-12">
@@ -59,13 +57,14 @@
 									<div class="col-lg-6 col-md-6 col-12">
 										<div class="form-group">
 											<label>Số điện thoại<span>*</span></label>
-											<input type="number" name="number" placeholder="" required="required">
+											<input type="number" name="mobile" placeholder="" required="required">
 										</div>
 									</div>
 									<div class="col-lg-6 col-md-6 col-12">
 										<div class="form-group">
 											<label>Chọn thành phố<span>*</span></label>
-											 <select style="background-color: #f6f7fb;" id="city" class="option form-control select2" name="city">
+											 <select  style="background-color: #f6f7fb;" id="city" class="option form-control select2" name="city" required="">
+											 <option value="">Chọn thành phố</option>
                                               @foreach($city as $city)
                                                 <option value="{{$city->id_tp}}">{{$city->name_tp}} </option>
                                               @endforeach
@@ -75,7 +74,8 @@
 									<div class="col-lg-6 col-md-6 col-12">
 										<div class="form-group">
 											<label>Chọn quận huyện<span>*</span></label>
-											 <select style="background-color: #f6f7fb;" id="district1" class="form-control select2" name="district">
+											 <select style="background-color: #f6f7fb;" id="district" class="form-control district select2" name="district"required="">
+                                                 
                                                  @foreach($district as $district)
                                                     <option value="{{$district->id_qh}}">{{$district->name_qh}} </option>
                                                   @endforeach
@@ -86,7 +86,7 @@
 								
 									  
                                     
-									<div class="col-lg-6 col-md-6 col-12">
+									<div class="col-lg-12 col-md-12 col-12">
 										<div class="form-group">
 											<label>Địa chỉ cụ thể<span>*</span></label>
 											<input type="text" name="address" placeholder="" required="required">
@@ -103,7 +103,7 @@
 									
 									
 								</div>
-							</form>
+							
 							<!--/ End Form -->
 						</div>
 					</div>
@@ -114,10 +114,16 @@
 							<div class="single-widget">
 								<h2>CART  TOTALS</h2>
 								<div class="content">
+									@php
+									  $dem=0;
+									@endphp
 									@if(Session('cart'))
 									@foreach(Session('cart') as $key1 => $val)
+									@php
+									  $dem++;
+									@endphp
 									<div class="col-md-12">
-                                         <h5>{{$key1}}. {{$val['title']}}</h5>
+                                         <h5>{{$dem}}. {{$val['title']}}</h5>
 								    </div>
 								    <div class="row form-group">
 								    	<div  class="col-md-4">
@@ -142,28 +148,38 @@
 							<!--/ End Order Widget -->
 							<!-- Order Widget -->
 							<div class="single-widget">
-								<h2>Payments</h2>
+								<h2>HÌNH THỨC THANH TOÁN</h2>
 								<div class="content">
-									<div class="checkbox">
-										<label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label>
-										<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox"> Cash On Delivery</label>
-										<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox"> PayPal</label>
-									</div>
+							     <div class="col-md-12">
+								<label><input type="radio" name="colorRadio" value="0"> <strong>Trả tiền mặt khi nhận hàng</strong></label>
+								<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
+							   </div>
+							   <hr>
+							   <div class="col-md-12">
+								<label><input type="radio" name="colorRadio" value="1">  <strong>Chuyển khoản ngân hàng</strong></label>
+								<div class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
+													Số tài khoản: 0123456789
+													Chủ tài khoản: DANG DINH MINH
+													Chi nhánh …
+													Nội dung chuyển khoản: Họ tên + SĐT</div>
+							   </div> 
+							   <hr>
+								<div class="col-md-12">
+								<label><input type="radio" name="colorRadio" value="2"> <strong>Thanh toán qua VNPAY</strong></label>
+								<div class="2 box" ><a href="{{route('checkout.payment')}}">Thanh toán trực tuyến qua VNPAY</div>
+				
 								</div>
-							</div>
+								</div>
+									</div>
 							<!--/ End Order Widget -->
 							<!-- Payment Method Widget -->
-							<div class="single-widget payement">
-								<div class="content">
-									<img src="images\payment-method.png" alt="#">
-								</div>
-							</div>
+							
 							<!--/ End Payment Method Widget -->
 							<!-- Button Widget -->
 							<div class="single-widget get-button">
 								<div class="content">
 									<div class="button">
-										<a href="#" class="btn">proceed to checkout</a>
+										<button type="submit" class="btn">Mua hàng</button>
 									</div>
 								</div>
 							</div>
@@ -172,7 +188,9 @@
 					</div>
 				</div>
 			</div>
+			</form>
 		</section>
+
 		<!--/ End Checkout -->
 		
 		<!-- Start Shop Services Area  -->
@@ -245,6 +263,7 @@
         
 		<script>
 		$(document).ready(function(){
+			$('.box').hide();
 		    $('input[type="radio"]').click(function(){
 		        var inputValue = $(this).attr("value");
 		        var targetBox = $("." + inputValue);
@@ -253,5 +272,7 @@
 		    });
 		});
 		</script>
+
+
 
 		@stop
