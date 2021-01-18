@@ -235,11 +235,18 @@ function showPreview(event){
                 <script type="text/javascript">
                   $(document).ready(function () {
                               
-                              search = $('body').parents('form-row').find(".sp selected").map(function(){
+                              
+                               search = $( ".sp option:selected" ).map(function(){
                                 return $(this).val();
                                 }).get();
-                                  alert(search);
                               $('body').delegate('#vehicle-type','change',function (){
+                               
+                                var id=$(this).find('.sp').find(":selected").val();
+                                if(jQuery.inArray(id,search) !=-1){
+                                    alert("Đã tồn tại");
+                                    $(this).find('.sp').find(":selected").remove();
+                                    //$(this).find('.sp').find(":selected").val('').trigger('chosen:updated');
+                                }else{
                                 
                                  $(this).parents('.form-row').find('.price_input').val(
                                   $(this).find('.select2').find(":selected").data("price")
@@ -258,6 +265,10 @@ function showPreview(event){
                                 price - discount_value
                                 );
                                 }
+                                }
+                                 search = $( ".sp option:selected" ).map(function(){
+                                return $(this).val();
+                                }).get();
                                 });
                                  
                             

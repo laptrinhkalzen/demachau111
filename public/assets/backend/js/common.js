@@ -40,6 +40,7 @@ $('[name="title"]').blur(function () {
         });
     }
 });
+
 function BrowseServer(div,name_of_input) {
     curInputId = div;
     window.KCFinder = {

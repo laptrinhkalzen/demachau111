@@ -1,6 +1,7 @@
 
 @extends('backend.layouts.master')
 @section('content')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <div class="content">
     <div class="card">
         <div class="card-header header-elements-inline">
@@ -32,7 +33,7 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label text-right">Tiêu đề <span class="text-danger">*</span></label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" name="name" value="{!!$record->name!!}" required="">
+                                    <input type="text" class="form-control" id="get_url" name="name" value="{!!$record->name!!}" required="">
                                     {!! $errors->first('name', '<span class="text-danger">:message</span>') !!}
                                 </div>
                             </div>
@@ -106,6 +107,17 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#get_url').blur(function () {
+    if ($('[name="alias"]').length) {
+        getAjax('/api/slugify', {title: $(this).val()}).done(function (resp) {
+            $('[name="alias"]').val(resp.alias);
+        });
+    }
+});
+    });
+</script>
 @stop
 @section('script')
 @parent

@@ -17,6 +17,8 @@ class BackendController extends Controller {
         return response()->json(['alias' => StringHelper::slug($request->get('title'))]);
     }
 
+   
+
     public function changeStatus(Request $request) {
         $order_id = $request->get('order_id');
         $status = $request->get('status');
