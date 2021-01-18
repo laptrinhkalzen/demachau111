@@ -92,6 +92,14 @@
                         
                     </ul>
                 </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-newspaper2"></i> <span>Thương hiệu</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+                       
+                        <li class="nav-item"><a href="{{route('admin.brand.index')}}" class="nav-link">Thương hiệu</a></li>
+                        
+                    </ul>
+                </li>
                 
                 
                 <!-- <li class="nav-item nav-item-submenu">

@@ -6,7 +6,9 @@ if ($('.ckeditor').length) {
         CKEDITOR.replace('content_mac');
 }
 </script>
-       <script>          
+
+<script type="text/javascript">
+                
 function showPreview(event){
   if(event.target.files.length > 0){
     var src = URL.createObjectURL(event.target.files[0]);
@@ -16,15 +18,16 @@ function showPreview(event){
   }
 }
 </script>
+
 <div class="content">
    
 
 
 
-    <form action="{!!route('admin.social.update',['id'=>$social->id])!!}" method="POST" enctype="multipart/form-data">
+    <form action="{!!route('admin.brand.store')!!}" method="POST" enctype="multipart/form-data">
         <div class="card">
             <div class="card-header header-elements-inline">
-                <h6 class="card-title">Cập nhật</h6>
+                <h6 class="card-title">Tạo mới</h6>
                 <div class="header-elements">
                     <div class="list-icons">
                         <a class="list-icons-item" data-action="collapse"></a>
@@ -51,22 +54,20 @@ function showPreview(event){
                                     <div class="form-group row">
                                         <label class="col-md-2 col-form-label text-right">Tiêu đề: <span class="text-danger">*</span></label>
                                         <div class="col-md-10">
-                                            <input type="text" class="form-control" name="name" value="{!!is_null(old('name'))?$social->name:old('name')!!}" >
+                                            <input type="text" class="form-control" name="name" value="{!!old('name')!!}" >
                                             {!! $errors->first('name', '<span class="text-danger">:message</span>') !!}
                                         </div>
                                     </div>
       
                             </div>
-                           
-                           
-                             
-                               <div class="col-md-10">
+
+                            <div class="col-md-10">
                                 
                            
                                     <div class="form-group row">
                                         <label class="col-md-2 col-form-label text-right">Icon: <span class="text-danger">*</span></label>
                                         <div class="col-md-10">
-                                            <img src="{{url('upload/config/'.$social->image)}}" style="height: 170px; width: 200px;" class="img-thumbnail" id="image1">
+                                            <img style="height: 170px; width: 200px;" class="img-thumbnail" id="image1">
                                              <input name="image" type="file"  onchange="showPreview(event);">
                                             {!! $errors->first('image', '<span class="text-danger">:message</span>') !!}
                                         </div>
@@ -80,7 +81,7 @@ function showPreview(event){
                                     <div class="form-group row">
                                         <label class="col-md-2 col-form-label text-right">Link: <span class="text-danger">*</span></label>
                                         <div class="col-md-10">
-                                            <input type="text" class="form-control" name="link" value="{!!is_null(old('link'))?$social->link:old('link')!!}" >
+                                            <input type="text" class="form-control" name="link" value="{!!old('link')!!}" >
                                             {!! $errors->first('link', '<span class="text-danger">:message</span>') !!}
                                         </div>
                                     </div>
@@ -91,11 +92,13 @@ function showPreview(event){
                             <div class="form-group row">
                                      <label class="col-md-2 col-form-label text-right">Thứ tự: <span class="text-danger">*</span></label>
                                     <div class="col-md-3">
-                                        <input type="text" name="order" class="form-control touchspin text-center" value="{!!is_null(old('order'))?$social->order:old('order')!!}">
+                                        <input type="text" name="order" class="form-control touchspin text-center" value="0">
                                     </div>
                                 </div>
                             </div>
                            
+                           
+                            
                              
                    
                     </div>
@@ -104,7 +107,7 @@ function showPreview(event){
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-center">
-                            <a type="button" href="{{route('admin.social.index')}}" class="btn btn-secondary legitRipple">Hủy</a>
+                            <a type="button" href="{{route('admin.brand.index')}}" class="btn btn-secondary legitRipple">Hủy</a>
                             <button type="submit" class="btn btn-primary legitRipple">Lưu lại <i class="icon-arrow-right14 position-right"></i></button>
                         </div>
                     </div>

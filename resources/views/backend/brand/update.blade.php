@@ -21,7 +21,7 @@ function showPreview(event){
 
 
 
-    <form action="{!!route('admin.social.update',['id'=>$social->id])!!}" method="POST" enctype="multipart/form-data">
+    <form action="{!!route('admin.brand.update',['id'=>$brand->id])!!}" method="POST" enctype="multipart/form-data">
         <div class="card">
             <div class="card-header header-elements-inline">
                 <h6 class="card-title">Cập nhật</h6>
@@ -51,7 +51,7 @@ function showPreview(event){
                                     <div class="form-group row">
                                         <label class="col-md-2 col-form-label text-right">Tiêu đề: <span class="text-danger">*</span></label>
                                         <div class="col-md-10">
-                                            <input type="text" class="form-control" name="name" value="{!!is_null(old('name'))?$social->name:old('name')!!}" >
+                                            <input type="text" class="form-control" name="name" value="{!!is_null(old('name'))?$brand->name:old('name')!!}" >
                                             {!! $errors->first('name', '<span class="text-danger">:message</span>') !!}
                                         </div>
                                     </div>
@@ -66,7 +66,7 @@ function showPreview(event){
                                     <div class="form-group row">
                                         <label class="col-md-2 col-form-label text-right">Icon: <span class="text-danger">*</span></label>
                                         <div class="col-md-10">
-                                            <img src="{{url('upload/config/'.$social->image)}}" style="height: 170px; width: 200px;" class="img-thumbnail" id="image1">
+                                            <img src="{{url('upload/config/'.$brand->image)}}" style="height: 170px; width: 200px;" class="img-thumbnail" id="image1">
                                              <input name="image" type="file"  onchange="showPreview(event);">
                                             {!! $errors->first('image', '<span class="text-danger">:message</span>') !!}
                                         </div>
@@ -80,7 +80,7 @@ function showPreview(event){
                                     <div class="form-group row">
                                         <label class="col-md-2 col-form-label text-right">Link: <span class="text-danger">*</span></label>
                                         <div class="col-md-10">
-                                            <input type="text" class="form-control" name="link" value="{!!is_null(old('link'))?$social->link:old('link')!!}" >
+                                            <input type="text" class="form-control" name="link" value="{!!is_null(old('link'))?$brand->link:old('link')!!}" >
                                             {!! $errors->first('link', '<span class="text-danger">:message</span>') !!}
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@ function showPreview(event){
                             <div class="form-group row">
                                      <label class="col-md-2 col-form-label text-right">Thứ tự: <span class="text-danger">*</span></label>
                                     <div class="col-md-3">
-                                        <input type="text" name="order" class="form-control touchspin text-center" value="{!!is_null(old('order'))?$social->order:old('order')!!}">
+                                        <input type="text" name="order" class="form-control touchspin text-center" value="{!!is_null(old('order'))?$brand->order:old('order')!!}">
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@ function showPreview(event){
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-center">
-                            <a type="button" href="{{route('admin.social.index')}}" class="btn btn-secondary legitRipple">Hủy</a>
+                            <a type="button" href="{{route('admin.brand.index')}}" class="btn btn-secondary legitRipple">Hủy</a>
                             <button type="submit" class="btn btn-primary legitRipple">Lưu lại <i class="icon-arrow-right14 position-right"></i></button>
                         </div>
                     </div>

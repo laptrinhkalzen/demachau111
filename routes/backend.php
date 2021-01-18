@@ -47,6 +47,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::post('/social/update/{id}', ['as' => 'admin.social.update', 'uses' => 'Backend\SocialController@update']);
     Route::delete('/social/delete/{id}', ['as' => 'admin.social.destroy', 'uses' => 'Backend\SocialController@destroy']);
 
+    // Giao diện: brand
+     Route::get('/brand', ['as' => 'admin.brand.index', 'uses' => 'Backend\BrandController@index']);
+    Route::get('/brand/create', ['as' => 'admin.brand.create', 'uses' => 'Backend\BrandController@create']);
+    Route::get('/brand/edit/{id}', ['as' => 'admin.brand.edit', 'uses' => 'Backend\BrandController@edit']);
+    Route::post('/brand/store', ['as' => 'admin.brand.store', 'uses' => 'Backend\BrandController@store']);
+    Route::post('/brand/update/{id}', ['as' => 'admin.brand.update', 'uses' => 'Backend\BrandController@update']);
+    Route::delete('/brand/delete/{id}', ['as' => 'admin.brand.destroy', 'uses' => 'Backend\BrandController@destroy']);
+
     // Giao diện: company-infor
      Route::get('/company-infor', ['as' => 'admin.company_infor.index', 'uses' => 'Backend\CompanyInforController@index']);
     Route::get('/company-infor/create', ['as' => 'admin.company_infor.create', 'uses' => 'Backend\CompanyInforController@create']);

@@ -5,7 +5,7 @@
     <!-- Table header styling -->
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h5 class="card-title">Tiện ích</h5>
+            <h5 class="card-title">Thương hiệu</h5>
             <div class="header-elements">
                 <div class="list-icons">
                     <a class="list-icons-item" data-action="collapse"></a>
@@ -31,20 +31,22 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Tiêu đề</th>
-                    <th>Thứ tự</th>
+                    <th>Tên thương hiệu</th>
+                    <th>Icon</th>
+                    <th>Link</th>
                     <th>Thao tác</th>
                     
                 </tr>
             </thead>
-                 @foreach($benefit as $key => $benefits)
+                 @foreach($brands as $key => $brand)
                  <tr>
                     <th>{{$key+1}}</th>
-                    <th>{{$benefits->name}}</th>
-                    <th>{!!$benefits->content!!}</th>
+                    <th>{{$brand->name}}</th>
+                    <th>{!!$brand->image!!}</th>
+                    <th>{!!$brand->link!!}</th>
                     <td class="text-center">
-                        <a href="{{route('admin.benefit.edit', $benefits->id)}}" title="Chỉnh sửa" class="success"><i class="icon-pencil"></i></a>   
-                        <form action="{!! route('admin.benefit.destroy', $benefits->id) !!}" method="POST" style="display: inline-block">
+                        <a href="{{route('admin.brand.edit', $brand->id)}}" title="Chỉnh sửa" class="success"><i class="icon-pencil"></i></a>   
+                        <form action="{!! route('admin.brand.destroy', $brand->id) !!}" method="POST" style="display: inline-block">
                             {!! method_field('DELETE') !!}
                             {!! csrf_field() !!}
                             <a title="Xóa" class="delete text-danger" data-action="delete">

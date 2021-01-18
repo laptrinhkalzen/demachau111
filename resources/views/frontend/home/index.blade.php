@@ -353,16 +353,17 @@ margin-top: 0px;
                             <div class="col-12">
                                 <div class="owl-carousel popular-slider">
                                     <!-- Start Single Product -->
-                                    
+                                    @foreach($brands as $brand)
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
-                                            <a href="">
-                                                <img class="default-img img-responsive img-rounded" src="" style="padding-top: 10px; ">
-                                                <img class="hover-img img-responsive img-rounded" src="" style="padding-top: 10px; ">
-                                                >
+                                            <a href="{{$brand->link}}">
+                                                <img class="default-img img-responsive img-rounded" src="{!!url('upload/config/'.$brand->image)!!}" style="padding-top: 10px; ">
+                                                <img class="hover-img img-responsive img-rounded" src="{!!url('upload/config/'.$brand->image)!!}" style="padding-top: 10px; ">
+                                                
                                             </a>
                                         </div>
                                     </div>
+                                    @endforeach
                                    
                                     
                                     <!-- End Single Product -->
