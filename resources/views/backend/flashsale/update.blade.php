@@ -245,10 +245,10 @@ function showPreview(event){
                               $('body').delegate('#vehicle-type','change',function (){
                                
                                 var id=$(this).find('.sp').find(":selected").val();
-                                alert(search);
-                                alert(id);
-                                if(jQuery.inArray("60",search) !=-1){
+                                if(jQuery.inArray(id,search) !=-1){
                                     alert("Đã tồn tại");
+                                    $(this).find('.sp').find(":selected").remove();
+                                    //$(this).find('.sp').find(":selected").val('').trigger('chosen:updated');
                                 }else{
                                 
                                  $(this).parents('.form-row').find('.price_input').val(
