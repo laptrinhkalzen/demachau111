@@ -31,6 +31,12 @@ opacity: 0.75
 .carousel-item img {
 width: 80%
 }
+#add-to-cart:hover {
+background-color: #A91E23 !important;
+}
+.btn-buy:hover {
+background-color: #292BB7 !important;
+}
 </style>
 <div class="breadcrumbs">
     <div class="container">
@@ -47,12 +53,11 @@ width: 80%
     </div>
 </div>
 <!-- End Breadcrumbs -->
-
 <!-- Start Checkout -->
 <section class="shop checkout section" style="background-color: #f6f7fb;"  >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-12" style="background-color: #fff;">
+            <div class="col-lg-9 col-12" style="background-color: #fff;border: 1px solid #ebebeb; ">
                 <div class="checkout-form">
                     
                     <!-- Form -->
@@ -60,7 +65,7 @@ width: 80%
                         @csrf
                         <input type="hidden" id="option_number" name="option_number">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
+                            <div class="col-lg-5 col-12">
                                 <div class=" my-4">
                                     
                                     <!--Carousel Wrapper-->
@@ -88,17 +93,17 @@ width: 80%
                                     </div>
                                 </div>
                                 
-                                <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-7 col-12">
                                     <div class="form-group">
                                         
-                                        <p>{{$detail_product->title}}</p>
+                                        <p style="font-size: 22px;font-weight: 500;">{{$detail_product->title}}</p>
                                     </div>
                                     <div class="">
                                         <div class="row">
                                             
                                             @foreach($input as $inputt)
                                             <div class="col-lg-12">
-                                                <span>{{$inputt['name']}}</span>
+                                                <span style="font-size: 14px;font-weight: 600;">{{$inputt['name']}}</span>
                                             </div>
                                             @php
                                             $dem=0;
@@ -109,15 +114,17 @@ width: 80%
                                             $dem++;
                                             @endphp
                                             @if($dem==1)
-                                            <div class="col-lg-4 radio-check">
+                                            <!--                                             <div class="col-lg-4 radio-check">
                                                 <input type="radio" checked class="check-option" name="{{$inputt['name']}}" value="{{$attribute->title}}">
                                                 <label for="other">{{$attribute->title}}</label>
-                                            </div>
+                                            </div> -->
+                                            <div class="radio-check" style="padding-left: 15px;"><label class="radio"> <input type="radio" checked class="check-option"name="{{$inputt['name']}}" value="{{$attribute->title}}" > <span>{{$attribute->title}}</span></label></div>
                                             @else
-                                            <div class="col-lg-4 radio-check">
+                                            <!--                                             <div class="col-lg-4 radio-check">
                                                 <input type="radio" check class="check-option" name="{{$inputt['name']}}" value="{{$attribute->title}}">
                                                 <label for="other">{{$attribute->title}}</label>
-                                            </div>
+                                            </div> -->
+                                            <div class="radio-check" style="padding-left: 15px;"><label class="radio"> <input type="radio" checked class="check-option"name="{{$inputt['name']}}" value="{{$attribute->title}}" > <span>{{$attribute->title}}</span></label></div>
                                             @endif
                                             @endif
                                             @endforeach
@@ -127,8 +134,9 @@ width: 80%
                                             
                                             
                                         </div>
+                                        <hr class="ke_vach">
                                         <div class="row col-lg-6" >
-                                            <p id="option_price" style="color:red;">{{$detail_product->price}}</p>
+                                            <p id="option_price" style="color:red;font-size: 24px;">{{$detail_product->price}}</p>
                                         </div>
                                         
                                         
@@ -139,41 +147,40 @@ width: 80%
                                                 <input style="width:100%"  type="number" name="quantity" value="1" id="quantity" min="1">
                                             </div>
                                             <div class="col-md-8">
-                                                <button type="button" class="btn btn-danger" id="add-to-cart"  data-product_id="{{$detail_product->id}}">Thêm vào giỏ</button>
+                                                <button type="button" class="btn" id="add-to-cart"  data-product_id="{{$detail_product->id}}" style="background-color: #EA1621">Thêm vào giỏ hàng</button>
                                                 
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <button type="submit" style="width:100%"  class="btn btn-success">Mua ngay</button>
+                                            <div class="col-6 col-md-6" style="padding-right: 0px;">
+                                                <button type="submit" style="width:100%;border-radius: 10px;background-color: #292BB7;padding: 20px 10px;"  class="btn"><strong style="font-size: 18px;">Mua trả góp 0%</strong><br><span style="font-size: 13px;opacity: .8;">Trả góp qua thẻ tín dụng</span></button>
                                             </div>
-                                            <div class="col-md-6">
-                                                <button type="submit" style="width:100%"  class="btn btn-success">Mua ngay</button>
+                                            <div class="col-6 col-md-6" >
+                                                <button type="submit" style="width:100%;border-radius: 10px;background-color: #292BB7;padding: 20px 10px;"  class="btn"><strong style="font-size: 18px;">Thanh toán VNPAY</strong><br><span style="font-size: 13px;opacity: .8;">ATM nội địa | QRcode</span></button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit"  style="width:100%"  class="btn btn-success">Mua ngay</button>
+                                        <button type="submit"  style="width:100%;padding: 20px 10px;border-radius: 10px;background-color: #EA1621"  class="btn btn-buy"><strong style="font-size: 20px;margin-bottom: 13px;">Mua ngay</strong><br><span style="font-size:13px;">Gọi điện xác nhận và giao hàng tận nơi</span></button>
                                     </div>
-                                    <div class="form-group" style="background-color: #f5f5f5;">
+                                    <div class="form-group" style="background-color: #f5f5f5;padding: 10px  0 30px 15px; ">
                                         
                                         
                                         <div class="col-md-12">
-                                            <span> Gọi mua hàng (8:00 - 21:00): 1900 3052</span>
+                                            <span> Gọi mua hàng (8:00 - 21:00): <b>1900 3052</b></span>
                                         </div>
                                         
                                         <div class="row">
-                                            <div class="col-md-7">
-                                                <input style="background-color:#fff; margin-left:5px;" type="text" placeholder="Nhập số điện thoại"  id="contact-me">
+                                            <div class="col-7 col-md-7" style="padding: 0 0 0 10px;">
+                                                <input style="background-color:#fff;" type="text" placeholder="Nhập số điện thoại"  id="contact-me">
                                             </div>
-                                            <div class="col-md-5">
-                                                <button type="submit" class="btn btn-success">Gọi cho tôi</button>
+                                            <div class="col-5 col-md-5" style="padding: 0px">
+                                                <button type="submit" class="btn btn-contact" style="background-color: #292BB7;">Gọi cho tôi</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <hr class="ke_vach">
                                 </div>
                             </div>
                         </form>
@@ -181,7 +188,7 @@ width: 80%
                     </div>
                 </div>
                 <hr>
-                <div class="col-lg-3 col-12" style="border: 1px solid #ebebeb;background-color: white;margin-left: 20px;">
+                <div class="col-lg-3 col-12 benefit" style="border: 1px solid #ebebeb;background-color: white;">
                     
                     <!-- Order Widget -->
                     <div class="single-widget">
@@ -195,7 +202,7 @@ width: 80%
                                                 <a target="_blank" class="mr-2"><img style="width: 55px; border-radius: 100%;" src="{!!url('upload/config/'.$benefits->image)!!}" ></a>
                                             </div>
                                             <div class="col-md-9">
-                                                <div style="font-weight: bold;">{!!$benefits->name!!}</div>
+                                                <div style="font-weight: 500;">{!!$benefits->name!!}</div>
                                                 <p>{!!$benefits->content!!}</p>
                                                 
                                             </div>
@@ -215,73 +222,29 @@ width: 80%
         </div>
     </section>
     <!--/ End Checkout -->
-    
-    <!-- Start Shop Services Area  -->
-    <section class="shop-services section home">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Service -->
-                    <div class="single-service">
-                        <i class="ti-rocket"></i>
-                        <h4>Free shiping</h4>
-                        <p>Orders over $100</p>
-                    </div>
-                    <!-- End Single Service -->
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Service -->
-                    <div class="single-service">
-                        <i class="ti-reload"></i>
-                        <h4>Free Return</h4>
-                        <p>Within 30 days returns</p>
-                    </div>
-                    <!-- End Single Service -->
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Service -->
-                    <div class="single-service">
-                        <i class="ti-lock"></i>
-                        <h4>Sucure Payment</h4>
-                        <p>100% secure payment</p>
-                    </div>
-                    <!-- End Single Service -->
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Service -->
-                    <div class="single-service">
-                        <i class="ti-tag"></i>
-                        <h4>Best Peice</h4>
-                        <p>Guaranteed price</p>
-                    </div>
-                    <!-- End Single Service -->
-                </div>
-            </div>
+
+    <section style="padding-bottom: 50px;">
+        <div class="container" style="background-color: white;border: 1px solid #ebebeb; ">
+            <p class="m-2" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Mô tả</p>
+            <p class="m-2" style="color: black;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non nisi pharetra, accumsan lacus eu, ornare lacus. Etiam molestie pharetra urna ac tincidunt. Suspendisse vitae nisi sed leo facilisis consectetur eu a urna. Phasellus mi sapien, tristique quis dolor ut, malesuada viverra sem. Nam enim lacus, lobortis quis finibus vel, dapibus a lacus. Curabitur quis malesuada turpis. Sed consequat feugiat risus, sed cursus felis scelerisque efficitur. Mauris sagittis id leo a malesuada. Sed imperdiet interdum justo. Suspendisse potenti. Vestibulum ex lorem, pellentesque vitae tempus eu, euismod eleifend quam. Donec id nulla hendrerit, faucibus leo et, semper est. Duis lectus felis, tempus eget tempus eget, maximus vel nulla. Nam et malesuada sapien.</p>
         </div>
     </section>
-    <!-- End Shop Services -->
-    
-    <!-- Start Shop Newsletter  -->
-    <section class="shop-newsletter section">
-        <div class="container">
-            <div class="inner-top">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2 col-12">
-                        <!-- Start Newsletter Inner -->
-                        <div class="inner">
-                            <h4>Newsletter</h4>
-                            <p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
-                            <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-                                <input name="EMAIL" placeholder="Your email address" required="" type="email">
-                                <button class="btn">Subscribe</button>
-                            </form>
-                        </div>
-                        <!-- End Newsletter Inner -->
-                    </div>
+
+    <section style="padding-bottom: 50px;">
+        <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
+            <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Thông tin bổ sung</p>
+            <div class="row mt-4" style="font-size:14px;">
+                <div class="col-6 col-lg-6">
+                    <p style="color: black;font-weight: bold;">Chất liệu</p>
+                </div>
+                <div class="col-6 col-lg-6">
+                    <p>Cao su</p>
                 </div>
             </div>
+            <hr>
         </div>
     </section>
+    
     <script type="text/javascript">
     $(document).ready(function(){
     checkOption();
