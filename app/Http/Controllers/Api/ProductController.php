@@ -106,10 +106,11 @@ class ProductController extends Controller {
     public function deleteCart(Request $request) {
         $total = 0;
         $count = 0;
-        if ($request->product_id) {
+        $id_option=$request->id_option;
+        if ($id_option) {
             $cart = session()->get('cart');
-            if (isset($cart[$request->product_id])) {
-                unset($cart[$request->product_id]);
+            if (isset($cart[$id_option])) {
+                unset($cart[$id_option]);
                 session()->put('cart', $cart);
             }
             foreach (session('cart') as $val) {
@@ -117,7 +118,7 @@ class ProductController extends Controller {
                 $total += ($val['price'] * $val['quantity']);
             }
             return response()->json([
-                        'success' => true, 'count' => $count, 'total' => number_format($total)
+                        'success' => true, 'count' => $count, 'total' => $total
             ]);
         }
     }

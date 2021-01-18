@@ -1106,6 +1106,9 @@ display: none !important;
 	display: none !important;
 }
 
+.benefit{
+	display: none !important;
+}
 
 }
 /* Mobile Screen */
@@ -1749,6 +1752,10 @@ display: none !important;
 
 .banner-flash-sale{
 	padding-left: 0px !important; 
+}
+
+.benefit{
+	display: none !important;
 }
 
 }

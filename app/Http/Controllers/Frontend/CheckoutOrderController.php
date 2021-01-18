@@ -10,7 +10,7 @@ use App\Product;
 class CheckoutOrderController extends Controller {
 
     public function index() {
-       // dd(session('cart'));
+        //dd(Session('cart'));
         $district=DB::table('district')->get();
         $city=DB::table('city')->get();
     	$total = 0;
@@ -20,9 +20,9 @@ class CheckoutOrderController extends Controller {
             }
         }
         $product_options=DB::table('product_option')->get();
-        $option_details=DB::table('option_detail')->get()->groupBy('product_id');
-        dd($option_details);
-        return view('frontend/checkout/checkout',compact('total','city','district','product_options','$option_details'));
+        $option_details=DB::table('option_detail')->get();
+
+        return view('frontend/checkout/checkout',compact('total','city','district','product_options','option_details'));
         
     }
     

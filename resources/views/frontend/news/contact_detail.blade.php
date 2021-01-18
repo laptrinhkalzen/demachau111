@@ -6,14 +6,14 @@
                 <div class="contact-head">
                     <div class="row">
                         
-                        <div class="col-lg-6 col-12">
-                            <div class="single-head">
+                        <div class="col-lg-6 col-12" >
+                            <div class="single-head" style="background-color: white;">
                                 <div class="title">
                                     
                                     <h3>CÔNG TY CPTM HÀ MINH GIANG</h3>
                                 </div>
                                 <div class="single-info">
-                                    <i class="fa fa-phone"></i>
+                                    <i class="fa fa-phone" style="background:#283988;"></i>
                                     <h4 class="title">Hotline: </h4>
                                     <ul>
                                         <li>{{$share_config->hotline}}</li>
@@ -21,7 +21,7 @@
                                     </ul>
                                 </div>
                                 <div class="single-info">
-                                    <i class="fa fa-envelope-open"></i>
+                                    <i class="fa fa-envelope-open" style="background:#283988;"></i>
                                     <h4 class="title">Email:</h4>
                                     <ul>
                                         <li><a>{{$share_config->email}}</a></li>
@@ -29,7 +29,7 @@
                                     </ul>
                                 </div>
                                 <div class="single-info">
-                                    <i class="fa fa-location-arrow"></i>
+                                    <i class="fa fa-location-arrow" style="background:#283988;"></i>
                                     <h4 class="title">Showroom:</h4>
                                     <ul>
                                         <li>{{$share_config->address}}</li>
@@ -38,8 +38,8 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-12">
-                            <div class="form-main">
+                        <div class="col-lg-6 col-12" >
+                            <div class="form-main" style="background-color: white;">
                                 <div class="title">
                                     
                                     <h3>ĐỂ LẠI LỜI NHẮN CHO CHÚNG TÔI</h3>
@@ -90,9 +90,12 @@
     <!--/ End Contact -->
     
     <!-- Map Section -->
-    <div class="map-section">
-        <div id="myMap"></div>
-    </div>
+    <section>
+        <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.6455466017223!2d106.68963731457649!3d20.84601499936849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7b13dd35972d%3A0x284f477fbdddee0e!2zxJDhu4dtIMOBIENow6J1!5e0!3m2!1svi!2s!4v1610944019828!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+
     <!--/ End Map Section -->
  
    
