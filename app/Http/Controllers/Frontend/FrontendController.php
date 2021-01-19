@@ -27,7 +27,7 @@ class FrontendController extends Controller {
     public function index() {
         //cart
         $total = 0;
-        $brands = DB::table('brand')->orderBy('order','asc')->get();
+        //$brands = DB::table('brand')->orderBy('order','asc')->get();
         $flashsale=DB::table('flashsale')->where('order',1)->first();
         
         $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->get();
@@ -46,7 +46,7 @@ class FrontendController extends Controller {
          //dd($product_attrs);
       // dd($attributes);
      
-        return view('frontend/home/index', compact('danh_muc_cha','danh_muc_cha2','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','brands'));
+        return view('frontend/home/index', compact('danh_muc_cha','danh_muc_cha2','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products'));
     }
     
     public function event() {

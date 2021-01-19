@@ -227,8 +227,8 @@
 							<div class="single-widget payement">
 									<input type="text" id="coupon" name="coupon">
 									<input type="button" id="apply_coupon" autocomplete="off" value="Áp dụng" class="btn btn-success">
-									<div id="coupon-success" style="display: none;">Áp dụng mã giảm giá thành công</div>
-									<div id="coupon-fail" style="display: none;">Áp dụng mã giảm giá không đúng hoặc không tồn tại</div>
+									<div id="coupon-success" style="display: none; color:#3a559f;">Áp dụng mã giảm giá thành công</div>
+									<div id="coupon-fail" style="display: none; color: red;">Áp dụng mã giảm giá không đúng hoặc không tồn tại!</div>
 							</div>
 							<!--/ End Payment Method Widget -->
 							<!-- Button Widget -->
