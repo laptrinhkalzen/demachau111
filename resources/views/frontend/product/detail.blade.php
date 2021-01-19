@@ -253,6 +253,7 @@ background-color: #292BB7 !important;
     return $(this).val();
     }).get();
     
+    
     $.ajax({
     url:'{{route("api.check_option")}}',
     method:'POST',

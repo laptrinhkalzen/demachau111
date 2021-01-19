@@ -20,6 +20,7 @@ use App\Repositories\MemberRepository;
 use Mail;
 use Illuminate\Support\Facades\File; 
 use DB;
+use Carbon\Carbon;
 
 class FrontendController extends Controller {
 
@@ -50,6 +51,26 @@ class FrontendController extends Controller {
             return $output;
         }
       
+    }
+
+     public function apply_coupon(Request $request) {
+       $coupon_code=$request->coupon_code;
+            $query=DB::table('coupon')->where('coupon_code',$coupon_code)->first();
+
+            
+            if ($query){
+                if($query->coupon_number>0 && $query->coupon_end>Carbon::now('Asia/Ho_Chi_Minh')){
+          
+                return response()->json(array('statusCode' => 200,"statusCode"=>200,"value"=>$query->coupon_value,'condition'=>$query->coupon_condition,'type_coupon'=>$query->coupon_type));
+                }
+                else{
+                    return response()->json(array("statusCode"=>201));
+                }
+            }
+            else{
+                  return response()->json(array("statusCode"=>201));
+               
+            }
     }
 
     public function select_address(Request $request){

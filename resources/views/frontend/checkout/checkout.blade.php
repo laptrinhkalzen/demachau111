@@ -11,23 +11,23 @@
 				<div class="row"> 
 					<div class="col-lg-7 col-12" style="background-color:white;">
 
-					<!-- 	<div class="form-group">
+						<div class="form-group">
 					     <div class="col=md-12">
-						<label><input type="radio" name="colorRadio" value="red" checked=""> Tiền mặt</label>
-						<div class="red box" >You have selected <strong>red radio button</strong> so i am here</div>
+						<label><input type="radio" name="payment_method" value="0" checked=""> Tiền mặt</label>
+						<div class="0 box" >You have selected <strong>red radio button</strong> so i am here</div>
 					   </div>
 					   <hr>
 					   <div class="col=md-12">
-						<label><input type="radio" name="colorRadio" value="green"> Chuyển khoản</label>
-						<div class="green box" >You have selected <strong>green radio button</strong> so i am here</div>
+						<label><input type="radio" name="payment_method" value="1"> Chuyển khoản</label>
+						<div class="1 box" >You have selected <strong>green radio button</strong> so i am here</div>
 					   </div> 
 					   <hr>
 						<div class="col=md-12">
-						<label><input type="radio" name="colorRadio" value="blue"> Ngân hàng</label>
-						<div class="blue box" ><a href="{{route('checkout.payment')}}">Ấn vào đây</a> <strong>để tiến hành thanh toán</strong></div>
+						<label><input type="radio" name="payment_method" value="2"> Ngân hàng</label>
+						<div class="2 box" ><a href="{{route('checkout.payment')}}">Ấn vào đây</a> <strong>để tiến hành thanh toán</strong></div>
 		
 						</div>
-						</div> -->
+						</div>
 						<div class="checkout-form">
 							<h5>Thông tin thanh toán</h5>
 							<!-- Form -->
@@ -35,7 +35,7 @@
 									<div class="col-lg-12 col-md-12 col-12">
 										<div class="form-group">
 											<label>Họ và tên<span>*</span></label>
-											<input type="text" name="name" placeholder="" required="required">
+											<input type="text" name="member_name" placeholder="" required="required">
 										</div>
 									</div>
 									
@@ -54,7 +54,7 @@
 									<div class="col-lg-6 col-md-6 col-12">
 										<div class="form-group">
 											<label>Chọn thành phố<span>*</span></label>
-											 <select  style="background-color: #f6f7fb;" id="city" class="option form-control select2" name="city" required="">
+											 <select  style="background-color: #f6f7fb;" id="city" class="option form-control select2" name="id_tp" required="">
 											 <option value="">Chọn thành phố</option>
                                               @foreach($city as $city)
                                                 <option value="{{$city->id_tp}}">{{$city->name_tp}} </option>
@@ -65,7 +65,7 @@
 									<div class="col-lg-6 col-md-6 col-12">
 										<div class="form-group">
 											<label>Chọn quận huyện<span>*</span></label>
-											 <select style="background-color: #f6f7fb;" id="district" class="form-control district select2" name="district"required="">
+											 <select style="background-color: #f6f7fb;" id="district" class="form-control district select2" name="id_qh"required="">
                                                  
                                                  @foreach($district as $district)
                                                     <option value="{{$district->id_qh}}">{{$district->name_qh}} </option>
@@ -154,7 +154,7 @@
 								    		          <span>Số lượng:</span>
 								    		        </div>
 								    		        <div class="col-md-4 col-lg-4 col-4">
-								    		           <input class="each_quantity" value="{{$val['option_number']}}" type="number" name="quantity"  min="1">
+								    		           <input class="each_quantity" data-id_option="{{$key1}}"  value="{{$val['quantity']}}" type="number"   min="1">
 								    		        </div> 
 								    	
 								    	    </div>
@@ -187,12 +187,12 @@
 								  <tbody>
 								    <tr>
 								      <td style="text-align: center;">Tạm tính</td>
-								      <td style="text-align: center;">Larry</td>
+								      <td id="sub_total" style="text-align: center;">{{$total}}</td>
 								      
 								    </tr>
 								    <tr>
 								      <td style="text-align: center;">Tổng</td>
-								      <td style="text-align: center;">Larry</td>
+								      <td name="final_total" id="final_total" style="text-align: center;">{{$total}}</td>
 								      
 								    </tr>
 								  </tbody>
@@ -201,15 +201,15 @@
 						
 							<!--/ End Order Widget -->
 							<!-- Payment Method Widget -->
-							<div class="single-widget payement">
+						<!-- 	<div class="single-widget payement">
 								<div class="content">
 									    <div class="col-md-12">
-										<label><input type="radio" name="colorRadio" value="0"> <strong>Trả tiền mặt khi nhận hàng</strong></label>
+										<label><input type="radio" name="payment_method" value="0"> <strong>Trả tiền mặt khi nhận hàng</strong></label>
 										<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
 									   </div>
 									    <hr>
 									    <div class="col-md-12">
-										<label><input type="radio" name="colorRadio" value="1">  <strong>Chuyển khoản ngân hàng</strong></label>
+										<label><input type="radio" name="payment_method" value="1">  <strong>Chuyển khoản ngân hàng</strong></label>
 										<div class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
 															Số tài khoản: 0123456789
 															Chủ tài khoản: DANG DINH MINH
@@ -218,17 +218,24 @@
 									    </div> 
 									    <hr>
 										<div class="col-md-12">
-										<label><input type="radio" name="colorRadio" value="2"> <strong>Thanh toán qua VNPAY</strong></label>
+										<label><input type="radio" name="payment_method" value="2"> <strong>Thanh toán qua VNPAY</strong></label>
 										<div class="2 box" ><a href="{{route('checkout.payment')}}">Thanh toán trực tuyến qua VNPAY</div>
 										</div>
 								</div>
+							</div> -->
+
+							<div class="single-widget payement">
+									<input type="text" id="coupon" name="coupon">
+									<input type="button" id="apply_coupon" autocomplete="off" value="Áp dụng" class="btn btn-success">
+									<div id="coupon-success" style="display: none;">Áp dụng mã giảm giá thành công</div>
+									<div id="coupon-fail" style="display: none;">Áp dụng mã giảm giá không đúng hoặc không tồn tại</div>
 							</div>
 							<!--/ End Payment Method Widget -->
 							<!-- Button Widget -->
-							<div class="single-widget get-button">
+							<div class="single-widget">
 								<div class="content">
 									<div class="button">
-										<a href="#" class="btn">proceed to checkout</a>
+										<button type="submit" class="btn">Đặt hàng</button>
 									</div>
 								</div>
 							</div>
@@ -324,19 +331,100 @@
 
 		<script type="text/javascript">
 			$(document).ready(function(){
-				 $('.order-details').delegate('.each_quantity','change keyup',function (){
-				 	if($(this).parents('.form-group').find('.each_quantity').val()<1){
-                        alert('Vui lòng nhập số lượng lờn hơn hoặc bằng 1');
-                        $(this).parents('.form-group').find('.each_quantity').val('1');
+				 // $('.order-details').delegate('.each_quantity','change keyup',function (){
+				 // 	var sum=0;
+				 // 	if($(this).parents('.form-group').find('.each_quantity').val()<1){
+     //                    alert('Vui lòng nhập số lượng lờn hơn hoặc bằng 1');
+     //                    $(this).parents('.form-group').find('.each_quantity').val('1');
 
-				 	}else{
-                    //alert($(this).val());
-                    $(this).parents('.form-group').find('.each_price').html(
-                    $(this).parents('.form-group').find('.each_quantity').val()*$(this).parents('.form-group').find('.each_price').data('price')
-                    	);
-                    }
+				 // 	}else{
+     //                //alert($(this).val());
+     //                $(this).parents('.form-group').find('.each_price').html(
+     //                $(this).parents('.form-group').find('.each_quantity').val()*$(this).parents('.form-group').find('.each_price').data('price')
+     //                	);
+     //                }
+     //                $(".each_price").each(function(){
+     //                    if($(this).text() !== "")
+     //                      sum += parseFloat($(this).text(), 10);   
+     //                });
+     //                $("#sub_total").html(sum +'đ'); 
+     //            	  var coupon_code=$('#coupon').val();
+     //                $.ajax({
+     //                      url:'{{route("api.apply_coupon")}}',
+     //                      data:{coupon_code:coupon_code,_token:$('#token').val()},
+     //                      method: 'POST',
+     //                      success:function(res){
+     //                        if(res.statusCode==200){
+     //                           var discount= parseFloat($("#sub_total").text())-res.value;	
+     //                              $("#final_total").html(discount +"đ");
+     //                          }
+     //                         else{
+     //                             $("#final_total").html(sum +'đ'); 
+     //                         } 
+     //                      }
+     //                });
+     //        });
+
+				 $('.each_quantity').on('change',function(){
+                     var coupon_code=$('#coupon').val();
+                     var id_option=$(this).data('id_option');
+                     var quantity=$(this).val();
+                      $.ajax({
+                        url: '/api/update-cart',
+                        method: 'POST',
+                        data: {id_option: id_option,quantity:quantity},
+                        success: function (resp) {
+                            if (resp.success == true) {
+                                    $('#sub_total').html(resp.total);
+                                    $("#final_total").html(resp.total);     
+                            }
+                        }
+                    });
+                       
+                       if(coupon_code){
+	                    $.ajax({
+	                          url:'{{route("api.apply_coupon")}}',
+	                          data:{coupon_code:coupon_code,_token:$('#token').val()},
+	                          method: 'POST',
+	                          success:function(res){
+	                            if(res.statusCode==200){
+	                               var discount= parseFloat($("#sub_total").text())-res.value;	
+	                               $("#final_total").html(discount+"đ");
+	                               $('#coupon-success').show();
+	                               $('#coupon-fail').hide();
+	                              }
+	                             else{
+	                               $('#coupon-success').hide();
+	                               $('#coupon-fail').show();
+	                             } 
+	                          }
+	                    });
+	                    }
+                 
+                });
+
+				 //check-coupon
+			    $('#apply_coupon').click(function(){                
+                      var coupon_code=$('#coupon').val();
+	                    $.ajax({
+	                          url:'{{route("api.apply_coupon")}}',
+	                          data:{coupon_code:coupon_code,_token:$('#token').val()},
+	                          method: 'POST',
+	                          success:function(res){
+	                            if(res.statusCode==200){
+	                               var discount= parseFloat($("#sub_total").text())-res.value;	
+	                              $("#final_total").html(discount+"đ");
+	                               $('#coupon-success').show();
+	                               $('#coupon-fail').hide();
+	                              }
+	                             else{
+	                               $('#coupon-success').hide();
+	                               $('#coupon-fail').show();
+	                             } 
+	                          }
+	                    });
+	              });
             });
-			});
 		</script>
 
 		

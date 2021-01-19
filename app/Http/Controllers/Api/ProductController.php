@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Repositories\ProductRepository;
 use Repositories\AttributeRepository;
+use DB;
 
 class ProductController extends Controller {
 
@@ -19,7 +20,7 @@ class ProductController extends Controller {
         $id = $request->get('product_id');
         $quantity = $request->get('quantity');
         $option_number=$request->get('option_number');
-
+        $price=DB::table('option_detail')->where('product_id',$id)->where('option_id',$option_number)->pluck('option_price')->first();
         $product = $this->productRepo->find($id);
         if (!$product) {
             abort(404);
@@ -34,7 +35,7 @@ class ProductController extends Controller {
                     "alias" =>$product->alias,
                     "title" => $product->title,
                     "quantity" => $quantity,
-                    "price" => $product->sale_price == 0 ? $product->price : $product->sale_price,
+                    "price" => $price,
                     "image" => $product->getImage(),
                     "url" => $product->alias,
                     "option_number"=>$option_number
@@ -67,7 +68,7 @@ class ProductController extends Controller {
                 "alias" =>$product->alias,
                 "title" => $product->title,
                 "quantity" => $quantity,
-                "price" => $product->sale_price == 0 ? $product->price : $product->sale_price,
+                "price" => $price,
                 "image" => $product->getImage(),
                 "url" => $product->alias,
                 "option_number"=>$option_number
@@ -83,13 +84,13 @@ class ProductController extends Controller {
         ]);
     }
 
-    public function updateCart(Request $request) {
+    public function update_cart(Request $request) {
         $total = 0;
         $count = 0;
-        if ($request->product_id && $request->quantity) {
+        if ($request->id_option && $request->quantity) {
             $cart = session()->get('cart');
 
-            $cart[$request->product_id]["quantity"] = $request->quantity;
+            $cart[$request->id_option]["quantity"] = $request->quantity;
 
             session()->put('cart', $cart);
 
@@ -98,7 +99,7 @@ class ProductController extends Controller {
                 $total += ($val['price'] * $val['quantity']);
             }
             return response()->json([
-                        'success' => true, 'count' => $count, 'total' => number_format($total)
+                        'success' => true, 'count' => $count, 'total' => $total
             ]);
         }
     }

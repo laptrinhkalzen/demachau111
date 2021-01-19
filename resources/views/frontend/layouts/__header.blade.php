@@ -357,13 +357,13 @@
         });
    </script>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#show-header').on('mouseover',function(){
-            $('.hide-header').show();
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#show-header').on('mouseover',function(){
+                $('.hide-header').show();
+            });
+            $('#show-header').on('mouseout',function(){
+                $('.hide-header').hide();
+            });
         });
-        $('#show-header').on('mouseout',function(){
-            $('.hide-header').hide();
-        });
-    });
-</script>
+    </script>

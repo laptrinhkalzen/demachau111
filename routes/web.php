@@ -26,7 +26,7 @@ Route::group(['prefix' => 'api', 'middleware' => 'api'], function() {
     Route::post('/login-member', ['as' => 'api.login-member', 'uses' => 'Api\FrontendController@loginMember']);
     Route::get('/logout-member', ['as' => 'api.logout-member', 'uses' => 'Api\AuthController@logoutMember']);
     Route::post('/add-to-cart', ['as' => 'api.addtocart', 'uses' => 'Api\ProductController@addToCart']);
-    Route::post('/update-cart', ['as' => 'api.updatecart', 'uses' => 'Api\ProductController@updateCart']);
+   
     Route::post('/delete-cart', ['as' => 'api.deletecart', 'uses' => 'Api\ProductController@deleteCart']);
     Route::post('/login-with-fb-sdk', ['as' => 'api.login_with_fb', 'uses' => 'Api\FrontendController@checkUser']);
     Route::post('/edit_template_setting', ['as' => 'api.edit_template_setting', 'uses' => 'Api\TemplateSettingController@update']);

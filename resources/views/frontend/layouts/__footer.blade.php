@@ -322,10 +322,9 @@
     <script type="text/javascript">
     $( document ).ready(function() {
     $('#add-to-cart').click(function( e ){
-          var option_number=$('#option_number').val();
+         var option_number=$('#option_number').val();
          var product_id=$(this).data('product_id');
          var quantity=$('#quantity').val();
-         alert(option_number);
         
          $.ajax({
                 url:'{{route("api.add_to_cart1")}}',
@@ -410,6 +409,7 @@
                             if (resp.success == true) {
                                    $(".shopping-item").load(" .shopping-item > *");
                                    $('.each_cart_' + id_option).fadeOut();
+                                   $('#sub_total').html(resp.total);
                                    
                             }
                         }

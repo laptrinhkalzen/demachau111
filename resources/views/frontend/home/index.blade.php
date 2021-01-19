@@ -134,7 +134,6 @@ margin-top: 0px;
                         <div class="row">
                             <div class="col-12">
                                 <div class="owl-carousel popular-slider">
-                                    <!-- Start Single Product -->
                                     @foreach($flashsale_products as $flashsale_product)
                                     @if($flashsale_product->flash_sale_id == $flashsale->id)
                                     <div class="single-product" style="margin-top:0px;">
@@ -142,14 +141,9 @@ margin-top: 0px;
                                             <a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
                                                 <img class="default-img img-responsive img-rounded" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
                                                 <img class="hover-img img-responsive img-rounded" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
-                                                <!--  //<span class="out-of-stock">Hot</span> -->
                                             </a>
                                             <div class="button-head">
-                                                <!--   <div class="product-action">
-                                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào giỏ hàng</span></a>
-                                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm giỏ hàng</span></a>
-                                                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Yêu thích</span></a>
-                                                </div> -->
+                                               
                                                 <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
                                                     <a  data-toggle="modal" data-target="#exampleModal_{{$flashsale_product->product_id}}" title="Mua hàng" href="#">Mua hàng</a>
                                                 </div>
@@ -170,13 +164,6 @@ margin-top: 0px;
                                     @endif
                                     @endforeach
                                     
-                                    <!-- End Single Product -->
-                                    <!-- Start Single Product -->
-                                    
-                                    <!-- End Single Product -->
-                                    <!-- Start Single Product -->
-                                    
-                                    <!-- End Single Product -->
                                 </div>
                             </div>
                         </div>
