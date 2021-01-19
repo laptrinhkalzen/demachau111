@@ -66,7 +66,7 @@
     <!-- End Preloader -->
 
 
-    <div class="hotline-phone-ring-wrap">       
+<!--     <div class="hotline-phone-ring-wrap">       
             <div class="hotline-phone-ring">
             <div class="hotline-phone-ring-circle"></div>
             <div class="hotline-phone-ring-circle-fill"></div>
@@ -74,16 +74,16 @@
         </div>      
                  
         
-</div>
+</div> -->
 
 
 
-<div class="float-icon-hotline">            
+<!-- <div class="float-icon-hotline">            
         <ul class ="left-icon hotline">
             <li class="hotline_float_icon"><a target="_blank" rel="nofollow" id="messengerButton" href="{{$share_config->facebook}}"><i class="fa fa-zalo animated infinite tada"></i><span>Zalo</span></a></li>
             <li class="hotline_float_icon"><a target="_blank" rel="nofollow" id="messengerButton" href="{{$share_config->twitter}}"><i class="fa fa-messenger animated infinite tada"></i><span>Facebook</span></a></li>
         </ul>       
-</div>
+</div> -->
     
     <!-- Header -->
     <header class="header shop">

@@ -64,6 +64,13 @@ class ProductController extends Controller {
 
     public function category(Request $request, $alias) {
           $product_arr = $this->productRepo->getProductByAliasCategory($alias);
+          $category_id= $product_arr->groupBy('category_id');
+          foreach($category_id as $key => $product_arr)
+          {
+               
+            $danhmuc_arr[]=$key;
+          }
+          $danhmuc = $this->categoryRepo->getArrayCurrentCategory($danhmuc_arr);
           return view('frontend/category/show',compact('product_arr',$product_arr));
     }
 

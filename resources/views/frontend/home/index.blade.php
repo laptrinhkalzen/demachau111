@@ -191,7 +191,7 @@ margin-top: 0px;
                 <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
                 @foreach($danh_muc_con as $danh_muc_con1)
                 @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
-                <li style="float: left; border-bottom: solid 1px #FFA500;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
+                <li style="float: left; border-bottom: solid 1px #FFA500;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
                 @endif
                 @endforeach
             </ul>
@@ -560,7 +560,7 @@ margin-top: 0px;
                                         $dem=0;
                                         $index=0;
                                         @endphp
-                                        @foreach($product_attrs[64] as $product_attr)
+                                        @foreach($product_attrs as $product_attr)
                                         @php
                                         if($product_attr->parent_id!=$index){
                                         $dem++;
