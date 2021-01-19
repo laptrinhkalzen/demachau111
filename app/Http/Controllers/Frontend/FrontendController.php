@@ -27,7 +27,7 @@ class FrontendController extends Controller {
     public function index() {
         //cart
         $total = 0;
-        //$brands = DB::table('brand')->orderBy('order','asc')->get();
+      
         $flashsale=DB::table('flashsale')->where('order',1)->first();
         
         $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->get();

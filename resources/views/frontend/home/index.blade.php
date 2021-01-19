@@ -191,7 +191,7 @@ margin-top: 0px;
                 <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
                 @foreach($danh_muc_con as $danh_muc_con1)
                 @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
-                <li style="float: left; border-bottom: solid 1px #FFA500;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
+                <li style="float: left; border-bottom: solid 1px #FFA500;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
                 @endif
                 @endforeach
             </ul>
@@ -222,39 +222,15 @@ margin-top: 0px;
                             </div>
                         </div>
                         <div class="product-content">
-                            @php
-                                $dem=0;
-                            @endphp
+                            
                             <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
                             <div class="product-price" style="text-align: center;">
-                                @foreach($flashsale_products as $key => $flashsale_product)
-                                @php
-                                     $dem++;
-                                @endphp
-                                    @if($flashsale_product->flash_sale_id == $flashsale->id)
-                                        @if($product_danh_muc_cha1->product_id==$flashsale_product->product_id)
-                                            @if($flashsale_product->discount_value>0)
-                                            <span class="old">{{$product_danh_muc_cha1->price}}</span>
-                                            <span style="color:red;">{{$flashsale_product->price_decrease}} đ</span>
-                                            @else
-                                            <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
-                                            @endif
-                                            @if($dem>0)
-                                                @break;
-                                            @endif
-                                        @else
-                                            @if($product_danh_muc_cha1->sale_price>0)
-                                            <span class="old">{{$product_danh_muc_cha1->price}}</span>
-                                            <span style="color:red;">{{$product_danh_muc_cha1->sale_price}} đ</span>
-                                            @else
-                                            <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
-                                            @endif
-                                            @if($dem>0)
-                                                @break;
-                                            @endif
-                                        @endif
-                                    @endif
-                                @endforeach
+                                @if($product_danh_muc_cha1->sale_price>0)
+                                <span class="old">{{$product_danh_muc_cha1->sale_price}}</span>
+                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
+                                @else
+                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -364,7 +340,16 @@ margin-top: 0px;
                             <div class="col-12">
                                 <div class="owl-carousel popular-slider">
                                     <!-- Start Single Product -->
-                                    <!--  -->
+                                    
+                                    <div class="single-product" style="margin-top:0px;">
+                                        <div class="product-img">
+                                            <a href="">
+                                                <img class="default-img img-responsive img-rounded" src="" style="padding-top: 10px; ">
+                                                <img class="hover-img img-responsive img-rounded" src="" style="padding-top: 10px; ">
+                                                >
+                                            </a>
+                                        </div>
+                                    </div>
                                    
                                     
                                     <!-- End Single Product -->
@@ -550,7 +535,7 @@ margin-top: 0px;
                                         $dem=0;
                                         $index=0;
                                         @endphp
-                                        @foreach($product_attrs as $product_attr)
+                                        @foreach($product_attrs[64] as $product_attr)
                                         @php
                                         if($product_attr->parent_id!=$index){
                                         $dem++;
