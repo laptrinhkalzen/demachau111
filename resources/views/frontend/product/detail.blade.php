@@ -249,15 +249,14 @@ background-color: #292BB7 !important;
     $(document).ready(function(){
     checkOption();
     function checkOption(){
+    var alias='{{$detail_product->alias}}';
     search = $('div').find("input:radio:checked").map(function(){
     return $(this).val();
     }).get();
-    
-    
     $.ajax({
     url:'{{route("api.check_option")}}',
     method:'POST',
-    data:{search:search,_token: $('#token').val()},
+    data:{search:search,alias:alias,_token: $('#token').val()},
     success:function(resp){
     $('#option_price').html(resp.result['option_price'] + ' đ');
     $('#option_number').val(resp.option_number);
