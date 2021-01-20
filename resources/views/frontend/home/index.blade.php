@@ -64,7 +64,7 @@ margin-top: 0px;
         <div class="" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">
             <img src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="height: 100px;object-fit: cover;float: right;">
             <div class="">
-                <span style="font-size: 20px;">Còn lại
+                <span style="font-size: 20px;">Còn l?i
                     <strong id="day"></strong>&nbspngày
                 </span>
                 <div class="row container">
@@ -85,7 +85,7 @@ margin-top: 0px;
                     </div>
                 </div>
                 <div class="row container">
-                    <div class="col-3 col-lg-3" style="text-align: center;">Giờ</div>
+                    <div class="col-3 col-lg-3" style="text-align: center;">Gi?</div>
                     <div class="col-3 col-lg-3" style="text-align: center;">Phút</div>
                     <div class="col-3 col-lg-3" style="text-align: center;">Giây</div>
                 </div>
@@ -100,7 +100,7 @@ margin-top: 0px;
                 <div class="" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">
                     <img src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="height: 100px;object-fit: cover;float: right;">
                     <div class="">
-                        <span style="font-size: 20px;">Còn lại
+                        <span style="font-size: 20px;">Còn l?i
                             <strong id="day"></strong>&nbspngày
                         </span>
                         <div class="row container">
@@ -121,7 +121,7 @@ margin-top: 0px;
                             </div>
                         </div>
                         <div class="row container">
-                            <div class="col-3 col-lg-3" style="text-align: center;">Giờ</div>
+                            <div class="col-3 col-lg-3" style="text-align: center;">Gi?</div>
                             <div class="col-3 col-lg-3" style="text-align: center;">Phút</div>
                             <div class="col-3 col-lg-3" style="text-align: center;">Giây</div>
                         </div>
@@ -154,9 +154,9 @@ margin-top: 0px;
                                             <div class="product-price" style="text-align: center;">
                                                 @if($flashsale_product->discount_value>0)
                                                 <span class="old">{{$flashsale_product->price}}</span>
-                                                <span style="color:red;">{{$flashsale_product->price_decrease}} đ</span>
+                                                <span style="color:red;">{{$flashsale_product->price_decrease}} d</span>
                                                 @else
-                                                <span style="color:red;">{{$flashsale_product->price}} đ</span>
+                                                <span style="color:red;">{{$flashsale_product->price}} d</span>
                                                 @endif
                                             </div>
                                         </div>
@@ -173,7 +173,6 @@ margin-top: 0px;
         </div>
     </div>
 </section>
-
 
 <!-- Start Most Popular -->
 @foreach($danh_muc_cha as $danh_muc_cha)
@@ -213,8 +212,8 @@ margin-top: 0px;
                             </a>
                             <div class="button-head">
                                 <!--   <div class="product-action">
-                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào giỏ hàng</span></a>
-                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm giỏ hàng</span></a>
+                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào gi? hàng</span></a>
+                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm gi? hàng</span></a>
                                     <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Yêu thích</span></a>
                                 </div> -->
                                 <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
@@ -223,39 +222,15 @@ margin-top: 0px;
                             </div>
                         </div>
                         <div class="product-content">
-                            @php
-                                $dem=0;
-                            @endphp
+                            
                             <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
                             <div class="product-price" style="text-align: center;">
-                                @foreach($flashsale_products as $key => $flashsale_product)
-                                @php
-                                     $dem++;
-                                @endphp
-                                    @if($flashsale_product->flash_sale_id == $flashsale->id)
-                                        @if($product_danh_muc_cha1->product_id==$flashsale_product->product_id)
-                                            @if($flashsale_product->discount_value>0)
-                                            <span class="old">{{$product_danh_muc_cha1->price}}</span>
-                                            <span style="color:red;">{{$flashsale_product->price_decrease}} đ</span>
-                                            @else
-                                            <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
-                                            @endif
-                                            @if($dem>0)
-                                                @break;
-                                            @endif
-                                        @else
-                                            @if($product_danh_muc_cha1->sale_price>0)
-                                            <span class="old">{{$product_danh_muc_cha1->price}}</span>
-                                            <span style="color:red;">{{$product_danh_muc_cha1->sale_price}} đ</span>
-                                            @else
-                                            <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
-                                            @endif
-                                            @if($dem>0)
-                                                @break;
-                                            @endif
-                                        @endif
-                                    @endif
-                                @endforeach
+                                @if($product_danh_muc_cha1->sale_price>0)
+                                <span class="old">{{$product_danh_muc_cha1->sale_price}}</span>
+                                <span style="color:red;">{{$product_danh_muc_cha1->price}} d</span>
+                                @else
+                                <span style="color:red;">{{$product_danh_muc_cha1->price}} d</span>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -313,8 +288,8 @@ margin-top: 0px;
                             </a>
                             <div class="button-head">
                                 <!--   <div class="product-action">
-                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào giỏ hàng</span></a>
-                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm giỏ hàng</span></a>
+                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào gi? hàng</span></a>
+                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm gi? hàng</span></a>
                                     <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Yêu thích</span></a>
                                 </div> -->
                                 <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
@@ -328,9 +303,9 @@ margin-top: 0px;
                             <div class="product-price" style="text-align: center;">
                                 @if($product_danh_muc_cha1->sale_price>0)
                                 <span class="old">{{$product_danh_muc_cha1->sale_price}}</span>
-                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
+                                <span style="color:red;">{{$product_danh_muc_cha1->price}} d</span>
                                 @else
-                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
+                                <span style="color:red;">{{$product_danh_muc_cha1->price}} d</span>
                                 @endif
                             </div>
                         </div>
@@ -356,7 +331,7 @@ margin-top: 0px;
     <div class=" single-slider">
         <div class="row">
             <div class="banner-flash-sale col-lg-3" style="margin: auto;text-align: center;">
-                <p style="font-size: 20px;">CÁC THƯƠNG HIỆU LỚN</p>
+                <p style="font-size: 20px;">CÁC THUONG HI?U L?N</p>
             </div>
             <div class="carousel-flash-sale col-lg-9" style="">
                 <div class="product-area most-popular section" style="padding:0px;">
@@ -618,7 +593,7 @@ margin-top: 0px;
                                     
                                 </div>
                                 <div class="add-to-cart">
-                                    <button class="btn">Thêm vào giỏ hàng</button>
+                                    <button class="btn">Thêm vào gi? hàng</button>
                                     
                                 </div>
                                 
@@ -643,7 +618,7 @@ url:'{{route("api.check_option")}}',
 method:'POST',
 data:{search:search,_token: $('#token').val()},
 success:function(resp){
-$('.option_price1').html(resp.result['option_price'] + ' đ');
+$('.option_price1').html(resp.result['option_price'] + ' d');
 $('.option_number_'+ resp.result['product_id']).val(resp.option_number);
 }
 });
