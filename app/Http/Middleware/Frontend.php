@@ -6,6 +6,8 @@ use Closure;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use Repositories\CategoryRepository;
+use DB;
+use Carbon\Carbon;
 class Frontend {
     public function __construct( CategoryRepository $categoryRepo) {
         $this->categoryRepo = $categoryRepo;
@@ -13,6 +15,12 @@ class Frontend {
 
     public function handle($request, Closure $next){
         $config = \DB::table('config')->first();
+        $slide_chinh= DB::table('slide')->where('position',1)->where('status',1)->get();
+        $slide_phu= DB::table('slide')->where('position',3)->where('status',1)->first();
+        $anh_duoi_slide= DB::table('slide')->where('position',2)->where('status',1)->get();
+        $banner_left= DB::table('slide')->where('position',4)->where('status',1)->first();
+        $banner_right= DB::table('slide')->where('position',5)->where('status',1)->first();
+       // dd($silde_position1);  
         $menu_arr = \DB::table('menu')->where('parent_id',0)->where('status',1)->orderBy('ordering', 'asc')->get();
         $menu_cat = \DB::table('category')->where('status',1)->where('type', '4')->orderBy('ordering', 'asc')->get();
         $menu_cats = \DB::table('category')->where('status',1)->where('parent_id', 0)->where('type', '4')->orderBy('ordering', 'asc')->limit(10)->get();
@@ -70,6 +78,11 @@ class Frontend {
         \View::share(['news_footer1' => $news_footer1]);
         \View::share(['news_footer2' => $news_footer2]);
         \View::share(['template' => $template]);
+        \View::share(['slide_chinh' => $slide_chinh]);
+        \View::share(['slide_phu' => $slide_phu]);
+        \View::share(['anh_duoi_slide' => $anh_duoi_slide]);
+        \View::share(['banner_left' => $banner_left]);
+        \View::share(['banner_right' => $banner_right]);
         return $next($request);
     }
     

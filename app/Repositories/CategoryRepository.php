@@ -78,7 +78,18 @@ class CategoryRepository extends AbstractRepository {
         $data = $this->model->whereIn('id', $id)->where('parent_id',0)->get();
         return $data;
     }
+
+    public function getArrayCurrentCategory2($id) {
+        $data = $this->model->whereIn('id', $id)->where('parent_id','!=',0)->get();
+        return $data;
+    }
     
+    public function getParentArrayCurrentCategory($id) {
+        dd($id);
+        $data = $this->model->whereIn('id', $id)->where('parent_id',0)->get();
+        return $data;
+    }
+
     public function getParent($parent_id, $type = 'product') {
         $item = $this->model->where('id', $parent_id)->first();        
         $item->parent = $this->getParent($item->parent_id, $type);

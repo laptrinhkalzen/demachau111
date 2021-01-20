@@ -109,12 +109,11 @@ class ProductController extends Controller {
         return view('frontend/home/search',compact('search_product','count','slide1'));
     }
     public function detail(Request $request,$alias) {
-
+            $id=DB::table('product')->where('alias',$alias)->pluck('id')->first();
             $benefit = DB::table('benefit')->orderBy('order','asc')->get();
             $detail_product =  $this->productRepo->getDetailProduct($alias);
-            $detail_product =  $this->productRepo->getDetailProduct($alias);
-            $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',64)->where('attribute.parent_id','!=','0')->get();
-            $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',64)->where('attribute.parent_id','!=','0')->get()->pluck('parent_id')->unique();
+            $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->get();
+            $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->get()->pluck('parent_id')->unique();
             foreach ($parent_ids as $key => $value) {
                 $input[$key]['id']=$value;
                 $input[$key]['name']=DB::table('attribute')->where('id',$value)->pluck('title')->first();

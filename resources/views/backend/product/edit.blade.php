@@ -2,6 +2,7 @@
 @section('content')
 <div class="content">
     <form action="{!!route('admin.product.update', ['id' => $record->id])!!}" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="card">
             <div class="card-header header-elements-inline">
                 <h6 class="card-title">Cập nhật</h6>
@@ -193,9 +194,9 @@
                                     <b>GIÁ</b>
                             </div> 
                         </div>
-                            @foreach($options as $option)
+                            @foreach($options as $key_price => $option)
                                  <div class="form-group row">
-                                 @foreach($option as $option1)
+                                 @foreach($option as  $option1)
                                  <div class="col-md-2">
                                     
                                      <select class="form-control" name="value[]" aria-label="Default select example">
@@ -205,7 +206,7 @@
                                  </div>
                                  @endforeach
                                  <div class="col-md-2">
-                                   <input class="form-control" type="number" name="option_price[]" value="" placeholder="Điền giá bán">
+                                   <input class="form-control" type="number" name="option_price[]" value="{{$price_option[$key_price-1]->option_price}}" placeholder="Điền giá bán">
                                  </div> 
                                  </div>
                             @endforeach

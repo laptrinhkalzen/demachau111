@@ -51,13 +51,7 @@
                         </td>
                         <td class="text-center">
                             <a href="{{route('admin.slide.edit', $record->id)}}" title="{!! trans('base.edit') !!}" class="success"><i class="icon-pencil"></i></a>
-                            <form action="{!! route('admin.slide.destroy', ['id' => $record->id]) !!}" method="POST" style="display: inline-block">
-                                {!! method_field('DELETE') !!}
-                                {!! csrf_field() !!}
-                                <a title="{!! trans('base.delete') !!}" class="delete text-danger" data-action="delete">
-                                    <i class="icon-close2"></i>
-                                </a>
-                            </form>
+                            
                         </td>
                     </tr>
                 @endforeach

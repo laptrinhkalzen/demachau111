@@ -375,8 +375,10 @@
                         data: {id_option: id_option,quantity:quantity},
                         success: function (resp) {
                             if (resp.success == true) {
+                            	   $(".shopping-item").load(" .shopping-item > *");
                                     $('#sub_total').html(resp.total);
                                     $("#final_total").html(resp.total);     
+                                    $('#cart-count').html(resp.count);
                             }
                         }
                     });

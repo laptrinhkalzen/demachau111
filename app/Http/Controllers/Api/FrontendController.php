@@ -91,7 +91,8 @@ class FrontendController extends Controller {
     }
     public function check_option(Request $request){
         $test=[];
-        $result=DB::table('product_option')->where('product_id',64)->get();
+        $id=DB::table('product')->where('alias',$request->alias)->first();
+        $result=DB::table('product_option')->where('product_id',$id->id)->get();
         $search = $request->search;
         foreach($search as $search1){
             $option_number=$result->where('value',$search1)->pluck('option_number');
@@ -101,22 +102,24 @@ class FrontendController extends Controller {
         }
         $max=1;
         $count=1;
-        $number=0;
+        $number=$test[0];
         foreach ($test as $key => $value) {
             foreach ($test as $key1 => $value1) {
                if($key1>$key){
                   if($value==$value1){
                      
                      $count++;
-                     if($count>$max){
-                        $max=$count;
-                        $number=$value;
-                     }
+                     
                   }
-               }
+            }
+        } 
+               if($count>$max){
+                    $max=$count;
+                    $number=$value;
+                }
+                $count=1;
         }
-        }
-        $result_final=DB::table('option_detail')->where('option_id',$number)->first();
+        $result_final=DB::table('option_detail')->where('product_id',$id->id)->where('option_id',$number)->first();
         return response()->json(['result' => $result_final,'option_number'=>$number]);
     }
 
