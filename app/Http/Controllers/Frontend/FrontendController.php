@@ -32,8 +32,8 @@ class FrontendController extends Controller {
         
         $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->get();
         //dd($danh_muc_deal);
+        $news = DB::table('news')->orderBy('ordering','asc')->where('status',1)->get();
         $danh_muc_cha=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
-        $danh_muc_cha2=DB::table('category')->where('parent_id',0)->where('type',2)->where('status',1)->get();
         $product_danh_muc_cha=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->get();
         $danh_muc_con=DB::table('category')->where('parent_id','!=',0)->where('type',4)->where('status',1)->get();
         $show = 1;
@@ -46,7 +46,7 @@ class FrontendController extends Controller {
          //dd($product_attrs);
       // dd($attributes);
      
-        return view('frontend/home/index', compact('danh_muc_cha','danh_muc_cha2','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products'));
+        return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products'));
     }
     
     public function event() {

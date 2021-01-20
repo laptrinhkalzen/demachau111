@@ -275,7 +275,7 @@ margin-top: 0px;
 </div>
 @endforeach
 
-@foreach($danh_muc_cha2 as $danh_muc_cha)
+
 <div class="product-area most-popular section" style="padding: 20px !important;">
     <div class="container" style="background-color:white;">
         <!-- <div class="row">
@@ -288,54 +288,41 @@ margin-top: 0px;
         <div class="nav-main">
             <!-- Tab Nav -->
             <ul style="" class="nav nav-tabs" id="myTab" role="tablist">
-                <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
-                @foreach($danh_muc_con as $danh_muc_con1)
-                @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
-                <li style="float: left; border-bottom: solid 1px #FFA500;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
-                @endif
-                @endforeach
+                <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a class="nav-link active"  href="{{route('news.list')}}" >Kinh nghiệm hay</a></li>
             </ul>
             <!--/ End Tab Nav -->
         </div>
+        
         <div class="row">
             <div class="col-12">
                 <div class="owl-carousel popular-slider">
+                    @foreach($news as $key => $new)
                     <!-- Start Single Product -->
-                    @foreach($product_danh_muc_cha as $product_danh_muc_cha1)
-                    @if($product_danh_muc_cha1->category_id == $danh_muc_cha->id)
                     <div class="single-product">
                         <div class="product-img">
-                            <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
-                                <img class="default-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}">
-                                <img class="hover-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}">
-                                <!--  //<span class="out-of-stock">Hot</span> -->
+                            <a href="{{route('news.detail',['alias'=>$new->alias])}}">
+                                <img class="default-img img-responsive img-rounded" src="{{$new->images}}">
+                                <img class="hover-img img-responsive img-rounded" src="{{$new->images}}">
+                                <!--  <span class="out-of-stock">Hot</span> -->
                             </a>
-                            <div class="button-head">
-                                <!--   <div class="product-action">
+                            <!--<div class="button-head">
+                                   <div class="product-action">
                                     <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào giỏ hàng</span></a>
                                     <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm giỏ hàng</span></a>
                                     <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Yêu thích</span></a>
-                                </div> -->
-                                <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
-                                    <a  data-toggle="modal" data-target="#exampleModal_{{$product_danh_muc_cha1->id}}" title="Mua hàng" href="#">Mua hàng</a>
-                                </div>
-                            </div>
+                                </div> 
+                                
+                            </div>-->
                         </div>
-                        <div class="product-content">
+                        <div class="product-content1">
                             
-                            <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
-                            <div class="product-price" style="text-align: center;">
-                                @if($product_danh_muc_cha1->sale_price>0)
-                                <span class="old">{{$product_danh_muc_cha1->sale_price}}</span>
-                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
-                                @else
-                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
-                                @endif
-                            </div>
+                            <h3  style="text-align: center;"><a class="title" href="{{route('news.detail',['alias'=>$new->alias])}}">{{$new->title}}</a></h3>
+                            <div class="content">
+                            <a class="title">{!!substr($new->description,0,84)!!}...</a>
+                        </div>
                         </div>
                     </div>
-                    @endif
-                    @endforeach
+                   @endforeach
                     
                     <!-- End Single Product -->
                     <!-- Start Single Product -->
@@ -347,9 +334,11 @@ margin-top: 0px;
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
-@endforeach
+
+
 
 <section class="container" style="margin-top: 20px;background-color: white;">
     <div class=" single-slider">

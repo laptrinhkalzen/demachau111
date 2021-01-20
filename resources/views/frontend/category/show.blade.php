@@ -236,9 +236,7 @@ document.body.querySelector('#alternate-button-container')
 					
 				</div>
 				<div style="text-align: center;">
-					@if($product_arr!=null)
-					{!! $product_arr->links() !!}
-					@endif
+					
 				</div>
 			</div>
 			
@@ -247,12 +245,12 @@ document.body.querySelector('#alternate-button-container')
 </section>
 <!--/ End Product Style 1  -->
 <!-- Start Shop Newsletter  -->
-<section class="shop-newsletter section">
+<!-- <section class="shop-newsletter section">
 	<div class="container">
 		<div class="inner-top">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 col-12">
-					<!-- Start Newsletter Inner -->
+					
 					<div class="inner">
 						<h4>Newsletter</h4>
 						<p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
@@ -261,12 +259,12 @@ document.body.querySelector('#alternate-button-container')
 							<button class="btn">Subscribe</button>
 						</form>
 					</div>
-					<!-- End Newsletter Inner -->
+					
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <!-- End Shop Newsletter -->
 
 
