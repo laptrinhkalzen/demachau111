@@ -139,7 +139,7 @@
                     <div class="col-lg-2 col-md-2 col-12">
                         <!-- Logo -->
                         
-                        <div style="padding-top: 32px;" class="logo">
+                        <div style="padding-top: 20px;" class="logo">
                             <a href="{{route('home.index')}}"><img src="{{$share_config->image}}" alt="logo"></a>
                         </div>
                         
@@ -222,8 +222,8 @@
                                             <span>Tổng</span>
                                             <span class="total-amount" id="total1" style="color: red;">{{$count_total}} đ</span>
                                         </div>
-                                        <a href="{{route('checkout_order.index')}}" class="btn animate">Xem giỏ hàng</a>
-                                        <a href="{{route('checkout_order.index')}}" class="btn animate">Thanh toán</a>
+                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #283988;">Xem giỏ hàng</a>
+                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;">Thanh toán</a>
                                     </div>
                                           @else
                                         <div class="dropdown-cart-header">
