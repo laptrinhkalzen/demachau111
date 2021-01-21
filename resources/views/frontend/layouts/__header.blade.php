@@ -155,7 +155,7 @@
                             <div class="search-top">
                                 <form class="search-form" action="{{route('product.search')}}" method="GET">
                                     <input type="text" placeholder="Nhập từ khoá" id="search_key" autocomplete="off" name="search">
-                                    <button value="search" type="submit"><i class="ti-search"></i></button>
+                                    <button value="search" type="submit" style="background-color: #ea1621"><i class="ti-search" style="color: white;"></i></button>
                                     <div class="search_result"></div>
                                 </form>
                                 
