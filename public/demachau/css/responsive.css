@@ -1112,6 +1112,25 @@ display: none !important;
 .logo{
 	width: 80% !important;
 }
+.giuseart-nav{
+	display: none !important;
+}
+.btn-contact{
+	padding:13px 20px ;
+}
+.menu-filter{
+	display:none;
+	width:60%;
+	height: 100%;
+	background-color: white;
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	z-index: 1000;
+	overflow-y: auto;
+}
+
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
@@ -1766,5 +1785,8 @@ display: none !important;
 
 .flash-sale-mobile{
 	display: none !important;
+}
+.icon-filter{
+	display:none !important;
 }
 }

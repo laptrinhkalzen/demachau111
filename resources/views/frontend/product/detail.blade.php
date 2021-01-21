@@ -260,7 +260,7 @@ background-color: #292BB7 !important;
             <p class="mt-4" style="color: black;"><b>Email *</b></p>
             <input type="text" class="form-control form-control-lg mt-2" >
             <p class="mt-4 "><input class="mr-2" type="checkbox"><b>Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.</b></p>
-            <button type="submit" class="btn btn-contact mt-4 mb-4" style="background-color: #292BB7;">Gửi đi</button>
+            <button type="submit" class="btn mt-4 mb-4" style="background-color: #292BB7;">Gửi đi</button>
         </div>
         </div>
 

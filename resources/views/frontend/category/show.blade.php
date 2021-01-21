@@ -58,9 +58,19 @@ document.body.querySelector('#alternate-button-container')
 </script>
 <!-- Product Style -->
 <section class="product-area shop-sidebar shop section">
+	<div class="icon-filter container">
+		<div class="row"><i class="fa fa-filter fa-2x" aria-hidden="true" style="margin:auto;" onclick="w3_open()"><span style="font-size: 22px;">Lọc</span></i></div>
+	</div>
+
+	<div class="container" >
+		<div class="row">
+			<i class="fa fa-times fa-2x" onclick="w3_close()" style="display:none;position:fixed;top: 25px;right: 10px;z-index: 1000" id="closeFilter"></i>
+		</div>
+	</div>
+
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3 col-md-4 col-12">
+			<div class="menu-filter col-lg-3 col-md-4 col-12" id="mySidebar">
 				<div class="shop-sidebar">
 					<!-- Single Widget -->
 					<div class="single-widget range">
@@ -193,7 +203,7 @@ document.body.querySelector('#alternate-button-container')
 										<option value="2">Giá  thấp đến cao</option>
 									</select>
 								</div>
-								<input type="button" id="reset_filter" value="Làm mới">
+<!-- 								<input type="button" id="reset_filter" value="Làm mới"> -->
 							</div>
 							<!-- <ul class="view-mode">
 									<li class="active"><a href="shop-grid.html"><i class="fa fa-th-large"></i></a></li>
@@ -381,6 +391,16 @@ document.body.querySelector('#alternate-button-container')
 		</div>
 	</div>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 <script type="text/javascript">
 	$(document).ready(function(){
           $('.attribute_filter,#order_by').on('change',function(){
@@ -410,5 +430,17 @@ document.body.querySelector('#alternate-button-container')
           	  location.reload();
           });
 	});
+</script>
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("closeFilter").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("closeFilter").style.display = "none";
+}
+
 </script>
 @stop
