@@ -192,6 +192,9 @@ class ProductController extends Controller {
                     </div>';
            }
            } 
+           else{
+            $output.='<div class="container col-lg-12 col-md-12 col-12"><strong style="font-size:150%; background-color:#ccc;"><i class="fa fa-search" aria-hidden="true"></i> Không tìm thấy sản phẩm nào khớp với lựa chọn của bạn.</strong></div>';
+           }
          echo $output;
          }
          else{
