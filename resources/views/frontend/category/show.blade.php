@@ -390,7 +390,6 @@ document.body.querySelector('#alternate-button-container')
           	    attr =  $("input[name='attr']:checked").map(function(){
 				    return $(this).val();
 				    }).get();
-          	    alert(attr);
           	    $.ajax({
 				    url:'{{route("api.filter_product")}}',
 				    method:'POST',
