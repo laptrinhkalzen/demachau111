@@ -298,8 +298,6 @@ $('#add-to-cart').click(function( e ){
 var option_number=$('#option_number').val();
 var product_id=$(this).data('product_id');
 var quantity=$('#quantity').val();
-alert(option_number);
-
 $.ajax({
 url:'{{route("api.add_to_cart1")}}',
 method:'POST',
@@ -309,8 +307,8 @@ if(resp.success == true){
 $('#cart-count').html(resp.count);
 $('#total1').html(resp.total +' đ');
 $('#count-sp').html(resp.count + ' Sản phẩm');
-
 $(".shopping-item").load(" .shopping-item > *");
+alert(resp);
 // $("#cart_items").load(" #cart_items > *");
 // $("#cart").load(" #cart > *");
 // $("#sub_total").load(" #sub_total > *");

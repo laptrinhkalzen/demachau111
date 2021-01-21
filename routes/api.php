@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
   return $request->user();
   });
  */
+Route::post('/filter-product', ['as' => 'api.filter_product', 'uses' => 'Api\ProductController@filter_product']);  
 Route::get('/auto-complete', ['as' => 'api.auto_complete', 'uses' => 'Api\FrontendController@auto_complete']);
 Route::post('/select-address', ['as' => 'api.select_address', 'uses' => 'Api\FrontendController@select_address']);
 Route::post('/check-option', ['as' => 'api.check_option', 'uses' => 'Api\FrontendController@check_option']);  

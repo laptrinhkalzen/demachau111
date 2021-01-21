@@ -63,15 +63,28 @@ class ProductController extends Controller {
     }
 
     public function category(Request $request, $alias) {
-          $product_arr = $this->productRepo->getProductByAliasCategory($alias);
-          $category_id= $product_arr->groupBy('category_id');
-          foreach($category_id as $key => $product_arr)
-          {
-               
-            $danhmuc_arr[]=$key;
+          $category_id=DB::table('category')->where('alias',$alias)->first();
+          $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$category_id->id)->get();
+          //lấy mảng product_id
+          $product_ids=$product_cat->groupBy('id');
+          foreach($product_ids as $key => $product_id){
+              $pro_id[]=$key;
           }
-          $danhmuc = $this->categoryRepo->getArrayCurrentCategory($danhmuc_arr);
-          return view('frontend/category/show',compact('product_arr',$product_arr));
+          //lấy mảng attribute_id
+          $category_attr= $product_cat->groupBy('category_id');
+          foreach($category_attr as $key => $category_attr)
+          {
+             $attr[]= $key;
+          }
+
+          //lấy mảng attribute_id của tất cả sản phẩm
+            $attributes=DB::table('product_attribute')->whereIn('product_id',$pro_id)->get()->groupBy('attribute_id');
+            foreach ($attributes as $key => $attribute) {
+                $cat[]=$key;
+            }
+          $attributes=DB::table('attribute')->whereIn('id',$cat)->get()->groupBy('parent_id');
+          $parent_attributes=DB::table('attribute')->where('parent_id',0)->get();
+          return view('frontend/category/show',compact('product_cat','attributes','parent_attributes','category_id'));
     }
 
     public function search(Request $request) {

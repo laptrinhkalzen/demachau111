@@ -80,20 +80,22 @@ document.body.querySelector('#alternate-button-container')
 					</div>
 					<!--/ End Single Widget -->
 					<!-- Shop By Price -->
+					@foreach($attributes as $key => $attribute)
 					<div class="single-widget range">
-						<h3 class="title">Chủng loại</h3>
+						@foreach($parent_attributes as $parent_attribute)
+						@if($parent_attribute->id==$key)
+						<h3 class="title">{{$parent_attribute->title}}</h3>
+						@endif
+						@endforeach
 						<ul class="check-box-list">
+							@foreach($attribute as $attr)
 							<li>
-								<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">$20 - $50<span class="count">(3)</span></label>
+								<label class="checkbox-inline"  for="1"><input class="attribute_filter" name="attr" value="{{$attr->id}}" id="1" type="checkbox">{{$attr->title}}<span class="count"></span></label>
 							</li>
-							<li>
-								<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">$50 - $100<span class="count">(5)</span></label>
-							</li>
-							<li>
-								<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">$100 - $250<span class="count">(8)</span></label>
-							</li>
+							@endforeach
 						</ul>
 					</div>
+					@endforeach
 					<!--/ End Shop By Price -->
 					<!-- Single Widget -->
 					<!-- <div class="single-widget recent-post">
@@ -185,10 +187,10 @@ document.body.querySelector('#alternate-button-container')
 								</div> -->
 								<div class="single-shorter ">
 									<label>Sắp xếp theo :</label>
-									<select>
-										<option selected="selected">Name</option>
-										<option>Price</option>
-										<option>Size</option>
+									<select id="order_by">
+										<option value="0" selected="selected">Mới nhất</option>
+										<option value="1">Giá cao đến thấp</option>
+										<option value="2">Giá  thấp đến cao</option>
 									</select>
 								</div>
 							</div>
@@ -200,8 +202,8 @@ document.body.querySelector('#alternate-button-container')
 						<!--/ End Shop Top -->
 					</div>
 				</div>
-				<div class="row">
-					@foreach($product_arr as $product_arr1)
+				<div class="row show_filter">
+					@foreach($product_cat as $product_arr1)
 					<div  class="col-lg-4 col-md-6 col-12">
 						<div class="single-product">
 							<div class="product-img">
@@ -235,9 +237,7 @@ document.body.querySelector('#alternate-button-container')
 					@endforeach
 					
 				</div>
-				<div style="text-align: center;">
-					
-				</div>
+<!-- -->
 			</div>
 			
 		</div>
@@ -380,4 +380,26 @@ document.body.querySelector('#alternate-button-container')
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+          $('.attribute_filter').on('change',function(){
+          	    var attr=[];
+          	    var order_by=$('#order_by :selected').val();
+          	    var cat_id={{$category_id->id}};
+          	    attr =  $("input[name='attr']:checked").map(function(){
+				    return $(this).val();
+				    }).get();
+          	    alert(attr);
+          	    $.ajax({
+				    url:'{{route("api.filter_product")}}',
+				    method:'POST',
+				    data:{attr:attr,order_by:order_by,cat_id:cat_id,_token: $('#token').val()},
+				    success:function(resp){
+				        $('.show_filter').html(resp);
+				}
+				});
+
+          });
+	});
+</script>
 @stop
