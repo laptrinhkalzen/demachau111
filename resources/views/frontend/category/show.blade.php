@@ -404,6 +404,8 @@ function myFunction() {
 <script type="text/javascript">
 	$(document).ready(function(){
           $('.attribute_filter,#order_by').on('change',function(){
+          	    //var current_url = window.location.href;
+          	    //alert(current_url);
           	    var attr=[];
           	    var order_by=$('#order_by :selected').val();
           	    var cat_id={{$category_id->id}};
@@ -416,7 +418,9 @@ function myFunction() {
 				    data:{attr:attr,order_by:order_by,cat_id:cat_id,_token: $('#token').val()},
 				    success:function(resp){
 				    	if(resp!=1){
-				        $('.show_filter').html(resp);
+					        $('.show_filter').html(resp);
+					        //var pageUrl = '?attributes=' + attr;
+							//window.history.pushState('', '', pageUrl);
 				        }
 				        else{
 				        	location.reload();
@@ -425,7 +429,7 @@ function myFunction() {
 				});
 
           });
-
+          
           $('#reset_filter').on('click',function(){
           	  location.reload();
           });
