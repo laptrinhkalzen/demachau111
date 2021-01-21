@@ -353,7 +353,7 @@ margin-top: 0px;
     <div class=" single-slider">
         <div class="row">
             <div class="banner-flash-sale col-lg-3" style="margin: auto;text-align: center;">
-                <p style="font-size: 20px;">CÁC THUONG HI?U L?N</p>
+                <p style="font-size: 20px;">CÁC THƯƠNG HIỆU LỚN</p>
             </div>
             <div class="carousel-flash-sale col-lg-9" style="">
                 <div class="product-area most-popular section" style="padding:0px;">

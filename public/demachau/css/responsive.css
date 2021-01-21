@@ -1109,7 +1109,9 @@ display: none !important;
 .benefit{
 	display: none !important;
 }
-
+.logo{
+	width: 80% !important;
+}
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
@@ -1194,7 +1196,7 @@ display: none !important;
 	padding-bottom:0px;
 }
 .slicknav_menu .slicknav_icon-bar {
-	background-color: #F7941D;
+	background-color: #283988;
 	box-shadow: none;
 	text-shadow: none;
 }

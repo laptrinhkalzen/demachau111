@@ -95,7 +95,7 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="ti-headphone-alt"></i>  Hotline miễn phí: 1900 3052 (8:00 - 21:00)</li>
+                                <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span style="vertical-align: -webkit-baseline-middle"> Hotline miễn phí: 1900 3052 (8:00 - 21:00)</span></li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
@@ -104,7 +104,7 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="fa fa-calendar"></i> 30 Ngày đổi trả miễn phí</li>
+                                <li><i class="fa fa-calendar"></i> <span style="vertical-align: -webkit-baseline-middle">30 Ngày đổi trả miễn phí</span></li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
@@ -113,7 +113,7 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="fa fa-truck"></i> Miễn phí vận chuyển</li>
+                                <li><i class="fa fa-truck"></i><span style="vertical-align: -webkit-baseline-middle">Miễn phí vận chuyển</span></li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
@@ -122,12 +122,17 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="fas fa-pig"></i> Trả góp lãi xuất 0%</li>
+                                <li><i class="fa fa-credit-card-alt" aria-hidden="true"></i><span style="vertical-align: -webkit-baseline-middle">Trả góp lãi xuất 0%</span></li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
                     </div>
-                    
+                    <div class="col-lg-3 col-md-12 col-12">
+                        <form class="search-form" action="{{route('product.search')}}" method="GET">
+                        <input name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
+                        <button class="btnn"><i class="ti-search"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,15 +144,14 @@
                     <div class="col-lg-2 col-md-2 col-12">
                         <!-- Logo -->
                         
-                        <div style="padding-top: 20px;" class="logo">
-                            <a href="{{route('home.index')}}"><img src="{{$share_config->image}}" alt="logo"></a>
+                        <div class="logo">
+                            <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo"></a>
                         </div>
                         
                         <!--/ End Logo -->
                         <!-- Search Form -->
                         <div class="search-top">
-                            <div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
-                            <!-- Search Form -->
+                            <div class="top-search"><a href="#0"><i class="ti-search" style="vertical-align: super;"></i></a></div>
                             <div class="search-top">
                                 <form class="search-form" action="{{route('product.search')}}" method="GET">
                                     <input type="text" placeholder="Nhập từ khoá" id="search_key" autocomplete="off" name="search">
@@ -157,7 +161,7 @@
                                 
                             </div>
                               
-                            <!--/ End Search Form -->
+
                         </div>
                         <!--/ End Search Form -->
                         <div class="mobile-nav"></div>
@@ -169,7 +173,7 @@
                                 <form action="{{route('product.search')}}" method="GET">
                                   
                                     <input name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
-                                    <button class="btnn"><i class="ti-search"></i></button>
+                                    <button class="btnn" style="background-color: #283988;"><i class="ti-search"></i></button>
                                 </form>
 
                             </div>
@@ -325,7 +329,7 @@
         </div>
         <!--/ End Header Inner -->
     </header>
-     <script type="text/javascript">
+     <!-- <script type="text/javascript">
         $(document).ready(function(){
             
         $('input[name="search"]').keyup(function(){
@@ -355,7 +359,7 @@
              $('div[class$=search_result]').fadeOut();
         });
         });
-   </script>
+   </script> -->
 
     <script type="text/javascript">
         $(document).ready(function(){
