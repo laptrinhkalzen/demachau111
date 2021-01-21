@@ -178,7 +178,7 @@ class ProductController extends Controller {
           $output.='<div class="col-lg-4 col-md-6 col-12">
                         <div class="single-product">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'">
                                     <img class="default-img" src="'.$product_arr1->images.'" alt="#">
                                     <img class="hover-img"  src="'.$product_arr1->images.'" alt="#">
                                 </a>
@@ -194,7 +194,7 @@ class ProductController extends Controller {
                                 </div>
                             </div>
                             <div class="product-content">
-                                <h3 style="text-align: center;"><a href="" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
+                                <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
                                 <div class="product-price" style="text-align: center; color: red;">
                                  <span>'.$product_arr1->price.'</span>
                                 </div>
@@ -248,7 +248,7 @@ class ProductController extends Controller {
           $output.='<div class="col-lg-4 col-md-6 col-12">
                         <div class="single-product">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'">
                                     <img class="default-img" src="'.$product_arr1->images.'" alt="#">
                                     <img class="hover-img"  src="'.$product_arr1->images.'" alt="#">
                                 </a>
@@ -264,7 +264,7 @@ class ProductController extends Controller {
                                 </div>
                             </div>
                             <div class="product-content">
-                                <h3 style="text-align: center;"><a href="" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
+                                <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
                                 <div class="product-price" style="text-align: center; color: red;">
                                  <span>'.$product_arr1->price.'</span>
                                 </div>
