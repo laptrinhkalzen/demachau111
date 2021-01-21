@@ -225,7 +225,7 @@ background-color: #292BB7 !important;
 
     <section style="padding-bottom: 50px;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb; ">
-            <p class="m-2" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Mô tả</p>
+            <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Mô tả</p>
             <p class="m-2" style="color: black;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non nisi pharetra, accumsan lacus eu, ornare lacus. Etiam molestie pharetra urna ac tincidunt. Suspendisse vitae nisi sed leo facilisis consectetur eu a urna. Phasellus mi sapien, tristique quis dolor ut, malesuada viverra sem. Nam enim lacus, lobortis quis finibus vel, dapibus a lacus. Curabitur quis malesuada turpis. Sed consequat feugiat risus, sed cursus felis scelerisque efficitur. Mauris sagittis id leo a malesuada. Sed imperdiet interdum justo. Suspendisse potenti. Vestibulum ex lorem, pellentesque vitae tempus eu, euismod eleifend quam. Donec id nulla hendrerit, faucibus leo et, semper est. Duis lectus felis, tempus eget tempus eget, maximus vel nulla. Nam et malesuada sapien.</p>
         </div>
     </section>
@@ -244,7 +244,34 @@ background-color: #292BB7 !important;
             <hr>
         </div>
     </section>
-    
+
+    <section style="padding-bottom: 50px;">
+        <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
+            <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Đánh giá (0)</p>
+            <p class="mt-5" style="color: black;font-size: 18px;padding:10px;"><b>Đánh giá</b></p>
+            <p class="mt-2" style="color: black;padding:10px;">Chưa có đánh giá nào</p>
+        <div class="container" style="border: 3px solid #283988">
+            <p class="mt-4" style="font-size:18px;color: black;"><b>Hãy là người đầu tiên nhận xét ""</b></p>
+            <p class="mt-4" style="color: black;"><b>Đánh giá của bạn *</b></p>
+            <p class="mt-4" style="color: black;"><b>Nhận xét của bạn *</b></p>
+            <textarea class="form-control mt-2" rows="5"></textarea>
+            <p class="mt-4" style="color: black;"><b>Tên *</b></p>
+            <input type="text" class="form-control form-control-lg mt-2" >
+            <p class="mt-4" style="color: black;"><b>Email *</b></p>
+            <input type="text" class="form-control form-control-lg mt-2" >
+            <p class="mt-4 "><input class="mr-2" type="checkbox"><b>Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.</b></p>
+            <button type="submit" class="btn btn-contact mt-4 mb-4" style="background-color: #292BB7;">Gửi đi</button>
+        </div>
+        </div>
+
+    </section>
+
+    <section style="padding-bottom: 50px;">
+        <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
+            <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm tương tự</p>
+        </div>
+    </section>
+
     <script type="text/javascript">
     $(document).ready(function(){
     checkOption();
