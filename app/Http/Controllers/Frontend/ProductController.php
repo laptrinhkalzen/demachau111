@@ -92,7 +92,8 @@ class ProductController extends Controller {
             foreach ($attributes as $key => $attribute) {
                 $cat[]=$key;
             }
-          $attributes=DB::table('attribute')->where('type','select')->whereIn('id',$cat)->get()->groupBy('parent_id');
+          $attributes=DB::table('attribute')->where('parent_id','!=','0')->whereIn('id',$cat)->get()->groupBy('parent_id');
+   
           $parent_attributes=DB::table('attribute')->where('parent_id',0)->get();
           return view('frontend/category/show',compact('product_cat','attributes','parent_attributes','category_id'));
     }
