@@ -128,8 +128,19 @@ class ProductController extends Controller {
         $attr=$request->attr;
         $cat_id=$request->cat_id;
         $order_by=$request->order_by;
+        $category_id=DB::table('category')->where('id',$cat_id)->first();
         if($attr){
-        $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->get();
+          if($category_id->parent_id!=0){
+          $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->get();
+          }
+          else{
+             $children_ids=DB::table('category')->where('parent_id',$cat_id)->get();
+             $id_children[]=$cat_id;
+             foreach($children_ids as $children_id){
+                $id_children[]=$children_id->id;
+             }
+             $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->whereIn('product_category.category_id',$id_children)->get();
+          }
 
         $product_ids=$product_cat->groupBy('id');
           foreach($product_ids as $key => $product_id){
@@ -198,7 +209,9 @@ class ProductController extends Controller {
          echo $output;
          }
          else{
-             if($order_by==0){
+
+         if($category_id->parent_id!=0){
+               if($order_by==0){
            $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->orderBy('product.created_at','desc')->get();
            }
            elseif($order_by==1){
@@ -207,6 +220,28 @@ class ProductController extends Controller {
            else{
            $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->orderBy('product.price','asc')->get();
            }
+          }
+          else{
+             $children_ids=DB::table('category')->where('parent_id',$category_id->id)->get();
+             $id_children[]=$category_id->id;
+             foreach($children_ids as $children_id){
+                $id_children[]=$children_id->id;
+             }
+            if($order_by==0){
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->whereIn('product_category.category_id',$id_children)->orderBy('product.created_at','desc')->get();
+           }
+           elseif($order_by==1){
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->whereIn('product_category.category_id',$id_children)->orderBy('product.price','desc')->get();
+           }
+           else{
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->whereIn('product_category.category_id',$id_children)->orderBy('product.price','asc')->get();
+           }
+
+          }
+
+
+
+          
              
             $output='';
             foreach ($product_cat as $product_arr1) {

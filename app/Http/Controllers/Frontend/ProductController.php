@@ -64,7 +64,17 @@ class ProductController extends Controller {
 
     public function category(Request $request, $alias) {
           $category_id=DB::table('category')->where('alias',$alias)->first();
+          if($category_id->parent_id!=0){
           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$category_id->id)->get();
+          }
+          else{
+             $children_ids=DB::table('category')->where('parent_id',$category_id->id)->get();
+             $id_children[]=$category_id->id;
+             foreach($children_ids as $children_id){
+                $id_children[]=$children_id->id;
+             }
+             $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->whereIn('product_category.category_id',$id_children)->get();
+          }
           //lấy mảng product_id
           $product_ids=$product_cat->groupBy('id');
           foreach($product_ids as $key => $product_id){
