@@ -128,7 +128,7 @@ class ProductController extends Controller {
         $attr=$request->attr;
         $cat_id=$request->cat_id;
         $order_by=$request->order_by;
-
+        if($attr){
         $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->get();
 
         $product_ids=$product_cat->groupBy('id');
@@ -193,6 +193,49 @@ class ProductController extends Controller {
            }
            } 
          echo $output;
+         }
+         else{
+             if($order_by==0){
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->orderBy('product.created_at','desc')->get();
+           }
+           elseif($order_by==1){
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->orderBy('product.price','desc')->get();
+           }
+           else{
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->orderBy('product.price','asc')->get();
+           }
+             
+            $output='';
+            foreach ($product_cat as $product_arr1) {
+          $output.='<div class="col-lg-4 col-md-6 col-12">
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="'.$product_arr1->images.'" alt="#">
+                                    <img class="hover-img"  src="'.$product_arr1->images.'" alt="#">
+                                </a>
+                                <div class="button-head">
+                                    <div class="product-action">
+                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                        <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
+                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
+                                    </div>
+                                    <div class="product-action-2">
+                                        <a title="Add to cart" href="#">Thêm vào giỏ</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3 style="text-align: center;"><a href="" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
+                                <div class="product-price" style="text-align: center; color: red;">
+                                 <span>'.$product_arr1->price.'</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+           }
+            return $output;
+         }
         }
 
     public function getProductAttribute(Request $request) {

@@ -193,6 +193,7 @@ document.body.querySelector('#alternate-button-container')
 										<option value="2">Giá  thấp đến cao</option>
 									</select>
 								</div>
+								<input type="button" id="reset_filter" value="Làm mới">
 							</div>
 							<!-- <ul class="view-mode">
 									<li class="active"><a href="shop-grid.html"><i class="fa fa-th-large"></i></a></li>
@@ -382,7 +383,7 @@ document.body.querySelector('#alternate-button-container')
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
-          $('.attribute_filter').on('change',function(){
+          $('.attribute_filter,#order_by').on('change',function(){
           	    var attr=[];
           	    var order_by=$('#order_by :selected').val();
           	    var cat_id={{$category_id->id}};
@@ -395,10 +396,19 @@ document.body.querySelector('#alternate-button-container')
 				    method:'POST',
 				    data:{attr:attr,order_by:order_by,cat_id:cat_id,_token: $('#token').val()},
 				    success:function(resp){
+				    	if(resp!=1){
 				        $('.show_filter').html(resp);
+				        }
+				        else{
+				        	location.reload();
+				        }
 				}
 				});
 
+          });
+
+          $('#reset_filter').on('click',function(){
+          	  location.reload();
           });
 	});
 </script>
