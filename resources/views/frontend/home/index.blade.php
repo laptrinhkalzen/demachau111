@@ -241,7 +241,7 @@ margin-top: 0px;
                                     <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Yêu thích</span></a>
                                 </div> -->
                                 <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
-                                    <a  data-toggle="modal" data-target="#exampleModal_{{$product_danh_muc_cha1->id}}" title="Mua hàng" href="#">Mua hàng</a>
+                                    <a  data-toggle="modal" data-target="#exampleModal_{{$product_danh_muc_cha1->id}}" title="Mua hàng" href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">Mua hàng</a>
                                 </div>
                             </div>
                         </div>
