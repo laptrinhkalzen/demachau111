@@ -25,7 +25,7 @@
                     <div class="col-lg-3 col-md-4 col-12">
                         <div class="shop-sidebar">
                                 <!-- Single Widget -->
-                                <div class="single-widget category">
+                                <div class="single-widget category" style="background-color: white;">
                                     <h3 style="margin-bottom: 3px;" class="title">Danh mục tin tức</h3>
                                     <ul class="categor-list">
                                         @foreach($category as $key => $categories)
@@ -34,7 +34,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="single-widget category">
+                                <div class="single-widget category" style="background-color: white;">
                                     <h3 style="margin-bottom: 3px;" class="title">Tin tức mới nhất</h3>
                                     <ul class="categor-list">
                                         @foreach($some_news as $some_new)
@@ -45,7 +45,7 @@
                                 <!--/ End Single Widget -->
                         </div>
                     </div>
-                    <div class="col-lg-9 col-md-8 col-12">
+                    <div class="col-lg-9 col-md-8 col-12" style="background-color: white;">
                         <div class="row">
                             <div class="col-12">
                                     <div class="" style="padding-top: 22px; font-weight: bold; font-size: 22px;">Tin tức</div>
