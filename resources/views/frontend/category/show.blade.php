@@ -195,14 +195,21 @@ document.body.querySelector('#alternate-button-container')
 												<option>30</option>
 										</select>
 								</div> -->
-								<div class="single-shorter ">
+								<div class="row">
+	                    			<select class="form-control" id="order_by" >
+										<option value="0" selected="selected">Mới nhất</option>
+										<option value="1">Giá cao đến thấp</option>
+										<option value="2">Giá  thấp đến cao</option>
+	                                </select>
+                                </div>
+<!-- 								<div class="single-shorter ">
 									<label>Sắp xếp theo :</label>
 									<select id="order_by">
 										<option value="0" selected="selected">Mới nhất</option>
 										<option value="1">Giá cao đến thấp</option>
 										<option value="2">Giá  thấp đến cao</option>
 									</select>
-								</div>
+								</div> -->
 <!-- 								<input type="button" id="reset_filter" value="Làm mới"> -->
 							</div>
 							<!-- <ul class="view-mode">
@@ -219,19 +226,15 @@ document.body.querySelector('#alternate-button-container')
 						<div class="single-product">
 							<div class="product-img">
 								<a href="{{route('product.detail',['alias'=>$product_arr1->alias])}}">
-									<img class="default-img" src="{{$product_arr1->images}}" alt="#">
+									<img class="default-img" src="{{$product_arr1->images}}" alt="#" style="width: 100%; height: 255px;">
 									<img class="hover-img" src="{{$product_arr1->images}}" alt="#">
 								</a>
 								<div class="button-head">
-									<div class="product-action">
-										<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-										<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
-										<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
-									</div>
-									<div class="product-action-2">
-										<a title="Add to cart" href="#">Thêm vào giỏ</a>
-									</div>
-								</div>
+                                               
+                                    <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
+                                        <a  data-toggle="modal" data-target="#exampleModal_{{$product_arr1->product_id}}" title="Mua hàng" href="#">Mua hàng</a>
+                                    </div>
+                                </div>
 							</div>
 							<div class="product-content">
 								<h3 style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_arr1->alias])}}">{{$product_arr1->title}}</a></h3>
