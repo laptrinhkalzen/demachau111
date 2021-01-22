@@ -212,14 +212,16 @@ class ProductController extends Controller {
 
          //add giá cho từng option
         if($request->button_edit==0){
+         $option_price=$request->option_price;
+        if($option_price){
         DB::table('option_detail')->where('product_id',$id)->delete();
-        $option_price=$request->option_price;
         for($i=1;$i<=count($option_price);$i++){
             DB::table('option_detail')->insert(['option_price'=>$option_price[$i-1],'product_id'=>$id,'option_id'=>$i]);
         }
         $min_price=DB::table('option_detail')->where('product_id',$id)->min('option_price');
         $data['price']=$min_price;
         DB::table('product')->where('id',$id)->update(['price'=>$data['price']]);
+        }
         }
         else{
         DB::table('product_option')->where('product_id',$id)->delete();
