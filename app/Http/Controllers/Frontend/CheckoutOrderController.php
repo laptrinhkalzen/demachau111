@@ -123,11 +123,10 @@ class CheckoutOrderController extends Controller {
                             $insert_input[]=$input;
                     }
                 }
-            
                 $order_detail=DB::table('order_detail')->insert($insert_input);
-               
-                   $order=DB::table('order')->where('id',$order_id)->first();
-                   return redirect()->route('home.index');
+                $order=DB::table('order')->where('id',$order_id)->first();
+                session()->forget('cart');
+                return redirect()->route('home.index');
                     // session(['cost_id' => $order_id]);
                     // session(['url_prev' => url()->previous()]);
                     // $vnp_TmnCode = "UDOPNWS1"; //Mã website tại VNPAY 
