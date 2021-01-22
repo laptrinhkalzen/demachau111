@@ -358,8 +358,8 @@ input[type="number"] {
     method:'POST',
     data:{search:search,alias:alias,_token: $('#token').val()},
     success:function(resp){
-    $('#option_price').html(resp.result['option_price'] + ' đ');
-    $('#option_number').val(formatNumber(resp.option_number));
+    $('#option_price').html(formatNumber(resp.result['option_price']) + ' đ');
+    $('#option_number').val(resp.option_number);
     
     }
     });
