@@ -356,7 +356,7 @@ input[type="number"] {
     data:{search:search,alias:alias,_token: $('#token').val()},
     success:function(resp){
     $('#option_price').html(resp.result['option_price'] + ' đ');
-    $('#option_number').val(resp.option_number);
+    $('#option_number').number(resp.option_number);
     
     }
     });
