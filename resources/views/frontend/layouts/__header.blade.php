@@ -41,8 +41,9 @@
 <link rel="stylesheet" href="{{asset('public/demachau/css/style.css')}}">
 <link rel="stylesheet" href="{{asset('public/demachau/css/responsive.css')}}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    
+<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>    
     
 </head>
 
