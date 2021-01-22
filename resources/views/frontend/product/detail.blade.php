@@ -345,6 +345,9 @@ input[type="number"] {
     <script type="text/javascript">
     $(document).ready(function(){
     checkOption();
+    function formatNumber (num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    }
     function checkOption(){
     var alias='{{$detail_product->alias}}';
     search = $('div').find("input:radio:checked").map(function(){
@@ -356,7 +359,7 @@ input[type="number"] {
     data:{search:search,alias:alias,_token: $('#token').val()},
     success:function(resp){
     $('#option_price').html(resp.result['option_price'] + ' đ');
-    $('#option_number').number_format(resp.option_number);
+    $('#option_number').val(formatNumber(resp.option_number));
     
     }
     });
