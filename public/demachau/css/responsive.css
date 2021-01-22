@@ -1789,4 +1789,15 @@ display: none !important;
 .icon-filter{
 	display:none !important;
 }
+.default-img{
+	width: 255px !important;
+	height: 255px !important;
+	object-fit: cover !important;
+}
+.hover-img{
+	width: 255px !important;
+	height: 255px !important;
+	object-fit: cover !important;
+}
+
 }

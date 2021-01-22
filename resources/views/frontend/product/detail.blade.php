@@ -96,7 +96,7 @@ background-color: #292BB7 !important;
                                 <div class="col-lg-7 col-12">
                                     <div class="form-group">
                                         
-                                        <p style="font-size: 22px;font-weight: 500;">{{$detail_product->title}}</p>
+                                        <p style="font-size: 22px;font-weight: bold;">{{$detail_product->title}}</p>
                                     </div>
                                     <div class="">
                                         <div class="row">
