@@ -250,10 +250,10 @@ margin-top: 0px;
                             <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
                             <div class="product-price" style="text-align: center;">
                                 @if($product_danh_muc_cha1->sale_price>0)
-                                <span class="old">{{$product_danh_muc_cha1->sale_price}}</span>
-                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
+                                <span class="old">{{number_format($product_danh_muc_cha1->sale_price)}}</span>
+                                <span style="color:red;">{{number_format($product_danh_muc_cha1->price)}} đ</span>
                                 @else
-                                <span style="color:red;">{{$product_danh_muc_cha1->price}} đ</span>
+                                <span style="color:red;">{{number_format($product_danh_muc_cha1->price)}} đ</span>
                                 @endif
                             </div>
                         </div>

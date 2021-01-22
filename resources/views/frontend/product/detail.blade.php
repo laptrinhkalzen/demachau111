@@ -189,7 +189,7 @@ input[type="number"] {
                                                 <input type="radio" check class="check-option" name="{{$inputt['name']}}" value="{{$attribute->title}}">
                                                 <label for="other">{{$attribute->title}}</label>
                                             </div> -->
-                                            <div class="radio-check" style="padding-left: 15px;"><label class="radio"> <input type="radio" checked class="check-option"name="{{$inputt['name']}}" value="{{$attribute->title}}" > <span>{{$attribute->title}}</span></label></div>
+                                            <div class="radio-check" style="padding-left: 15px;"><label class="radio"> <input type="radio" check class="check-option"name="{{$inputt['name']}}" value="{{$attribute->title}}" > <span>{{$attribute->title}}</span></label></div>
                                             @endif
                                             @endif
                                             @endforeach
@@ -201,7 +201,7 @@ input[type="number"] {
                                         </div>
                                         <hr class="ke_vach">
                                         <div class="row col-lg-6" >
-                                            <p id="option_price" style="color:red;font-size: 24px;">{{$detail_product->getPrice()}}</p>
+                                            <p id="option_price" style="color:red;font-size: 24px;">{{number_format($detail_product->getPrice())}}</p>
                                         </div>
                                         
                                         
