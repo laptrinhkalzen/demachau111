@@ -8,7 +8,7 @@
 		@csrf
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-7 col-12" style="background-color:white;">
+				<div class="col-lg-7 col-12" style="background-color:white; height: 300px;">
 					<p class="mt-4" style="font-size:18px;"><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
 						<div class="col=md-12">
@@ -116,12 +116,12 @@
 								<tbody>
 									<tr>
 										<td style="text-align: center;">Tạm tính</td>
-										<td id="sub_total" style="text-align: center; color:red;">{{number_format($total)}}</td>
+										<td id="sub_total" style="text-align: center; color:red;">{{number_format($total)}} đ</td>
 										
 									</tr>
 									<tr>
 										<td style="text-align: center;">Tổng</td>
-										<td name="final_total" id="final_total" style="text-align: center; color:red;">{{number_format($total)}}</td>
+										<td name="final_total" id="final_total" style="text-align: center; color:red;">{{number_format($total)}} đ</td>
 										
 									</tr>
 								</tbody>
@@ -154,7 +154,7 @@
 						</div> -->
 						<div class="single-widget payement">
 							<input type="text" id="coupon" name="coupon">
-							<input type="button" id="apply_coupon" autocomplete="off" value="Áp dụng" class="btn btn-success mb-4">
+							<input type="button" id="apply_coupon" autocomplete="off" placeholder="Điền mã giảm giá" value="Áp dụng" class="btn btn-success mb-4">
 							<div id="coupon-success" style="display: none; color:#3a559f;">Áp dụng mã giảm giá thành công</div>
 							<div id="coupon-fail" style="display: none; color: red;">Áp dụng mã giảm giá không đúng hoặc không tồn tại!</div>
 						</div>
