@@ -82,6 +82,11 @@
 </div> -->
     
     <!-- Header -->
+
+<script type="text/javascript">
+Swal.fire('Any fool can use a computer')
+</script>
+
     <header class="header shop">
         <!-- Topbar -->
         <div class="topbar" style="background-color: #3a559f;" >

@@ -1,10 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-@if(Session('success'))
-<script type="text/javascript">
-Swal.fire('Any fool can use a computer')
-</script>
-@endif
+
 <script type="text/javascript">
 $(document).ready(function(){
 $('.hide-header').show();
