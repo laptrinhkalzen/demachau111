@@ -6,8 +6,8 @@
 			<div class="col-12">
 				<div class="bread-inner">
 					<ul class="bread-list">
-						<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-						<li class="active"><a href="blog-single.html">Shop Grid</a></li>
+						<li><a href="#">Home<i class="ti-arrow-right"></i></a></li>
+						<li class="active"><a href="#">Shop Grid</a></li>
 					</ul>
 				</div>
 			</div>
@@ -73,7 +73,7 @@ document.body.querySelector('#alternate-button-container')
 			<div class="menu-filter col-lg-3 col-md-4 col-12" id="mySidebar">
 				<div class="shop-sidebar">
 					<!-- Single Widget -->
-					<div class="single-widget range">
+<!-- 					<div class="single-widget range">
 						<h3 class="title">Danh mục</h3>
 						<ul class="check-box-list">
 							<li>
@@ -87,7 +87,7 @@ document.body.querySelector('#alternate-button-container')
 							</li>
 
 						</ul>
-					</div>
+					</div> -->
 					<!--/ End Single Widget -->
 					<!-- Shop By Price -->
 					@foreach($attributes as $key => $attribute)

@@ -40,6 +40,10 @@ class Product extends Model {
         return number_format($this->sale_price) . ' đ';
     }
 
+    public function getPriceDecrease() {
+        return number_format($this->price_decrease) . ' đ';
+    }
+
     public function createdBy() {
         return $this->belongsTo('App\User', 'created_by');
     }
