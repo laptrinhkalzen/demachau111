@@ -179,6 +179,7 @@
                                         @endif
                                     </div>
                                      <label class="col-md-2 col-form-label text-right">Tạo biến thể</label>
+                                     @if($count_parent_variant!=0)
                                         @foreach($parent_variant as $key_variant => $parent_variant1)
                                         @php
                                             $dem=0;
@@ -194,6 +195,7 @@
                                         <input type="checkbox" checked="" name="{{$val->id}}" value="1" class="form-check-input-styled"  data-fouc="">
                                         @else
                                         <input type="checkbox" name="{{$val->id}}" value="1" class="form-check-input-styled"  data-fouc="">
+                                        @endif
                                         @endif
                                 </div>
                                 @endforeach
