@@ -263,9 +263,9 @@
                                         @endphp
                                         @endforeach 
                                         @if($dem>0)  
-                                        <li><a href="#">{!!$cat->name!!}<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         @else
-                                        <li><a href="#">{!!$cat->name!!}</a>
+                                        <li><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a>
                                         @endif
                                         
                                         <ul class="sub-category">
@@ -273,7 +273,7 @@
                                             
                                             @foreach ($cat->children as $key=>$cat1)
                                             @if($cat1)
-                                            <li class=""><a  class="dropdown-item " href="" data-url="/san-tre-ali"> <img src="" class="img-fluid mr-2 "/>{!!$cat1->name!!}</a>
+                                            <li class=""><a  class="dropdown-item " href="{{route('category.show',['alias'=>$cat1->alias])}}" data-url="/san-tre-ali"> <img src="" class="img-fluid mr-2 "/>{!!$cat1->name!!}</a>
                                             
                                     </li>
                                     @endif
