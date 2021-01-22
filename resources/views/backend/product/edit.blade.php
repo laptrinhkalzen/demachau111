@@ -201,12 +201,15 @@
                                     
                                      <select class="form-control" name="value[]" aria-label="Default select example">
                                       <option selected>{{$option1->value}}</option>
-                                      <option value="" select>Không giá trị mặc định</option>
                                     </select>
                                  </div>
                                  @endforeach
                                  <div class="col-md-2">
+                                    @if($count>0)
                                    <input class="form-control" type="number" name="option_price[]" value="{{$price_option[$key_price-1]->option_price}}" placeholder="Điền giá bán">
+                                   @else
+                                    <input class="form-control" type="number" name="option_price[]"  placeholder="Điền giá bán">
+                                    @endif
                                  </div> 
                                  </div>
                             @endforeach
@@ -214,7 +217,7 @@
 
                             
                         </div>
-                    </div>
+                   
                     <div class="tab-pane fade" id="left-icon-tab4">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">

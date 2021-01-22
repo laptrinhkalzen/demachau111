@@ -54,6 +54,7 @@ class ProductController extends Controller {
      */
     public function store(Request $request) {
         $input = $request->all();
+        $attributes = $this->getProductAttributes($input);
         $validator = \Validator::make($input, $this->productRepo->validateCreate());
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
@@ -76,7 +77,7 @@ class ProductController extends Controller {
         //them bien the
         $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$product->id)->where('attribute.parent_id','!=','0')->get();
 
-        $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$product->id)->where('attribute.parent_id','!=','0')->groupBy('parent_id')->pluck('parent_id');
+        $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$product->id)->where('attribute.parent_id','!=','0')->where('is_variant',1)->groupBy('parent_id')->pluck('parent_id');
 
         $count=$parent_ids->count();
         $option_number=1;
@@ -108,26 +109,7 @@ class ProductController extends Controller {
                 $dem2*=$dem1;    //hàng n * (n+1);
                 $each=$option_number/$dem2;         //số lần hoán vị của 1 option 
       
-               
-           
-                // foreach ($attributes as $key => $attribute) {
-                //     if($attribute->parent_id==$parent_id){
-                //          for($i=1;$i<=$each;$i++){
-                //             $option++;
-                //             $data['option_number']=$option;
-                //             $data['parent_id']=$parent_id;
-                //             $data['attribute_id']=$attribute->id;
-                //             $data['value']=$attribute->title;
-                //             $data['product_id']=$product->id;
-                //             $data['parent_name']=DB::table('attribute')->where('id',$parent_id)->pluck('title')->first();
-                  
-                //             DB::table('product_option')->insert($data);
-                          
-                //          }
-                            
-                //      }
-
-                // }
+            
                 while($option<=$option_number){
                     foreach ($attributes as $key => $attribute) {
                     if($attribute->parent_id==$parent_id){
@@ -144,7 +126,6 @@ class ProductController extends Controller {
                          }
                          
                      }
-
                 }      
                 }
              }
@@ -196,8 +177,9 @@ class ProductController extends Controller {
         $options=$product_options->groupBy('option_number');
         $price_option=DB::table('option_detail')->where('product_id',$id)->get();
         $attribute_names=$product_options->unique('parent_name');
+        $count=count($price_option);
 
-        return view('backend/product/edit', compact('record', 'category_html', 'attributes', 'product_attribute', 'product_attribute_ids','options','attribute_names','price_option'));
+        return view('backend/product/edit', compact('record', 'category_html', 'attributes', 'product_attribute', 'product_attribute_ids','options','attribute_names','price_option','count'));
     }
 
     /**
@@ -257,11 +239,17 @@ class ProductController extends Controller {
         $attributes = array();
 
         foreach ($input['attribute'] as $key => $val) {
-            $attributes[$key] = ['value' => $val];
+            $attributes[$key] = ['value' => $val,'is_variant'=>null];
         }
         foreach ($input['attribute_select'] as $key => $val) {
             if ($val != null) {
-                $attributes[$val] = ['value' => null];
+                $parent_id=DB::table('attribute')->where('id',$val)->pluck('parent_id')->first();
+                if(isset($input[$parent_id])){
+                $attributes[$val] = ['value' => null,'is_variant'=>1];
+                }
+                else{
+                     $attributes[$val] = ['value' => null,'is_variant'=>null];
+                }
             }
         }
         return $attributes;

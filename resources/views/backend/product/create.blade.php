@@ -171,12 +171,8 @@
                                 @foreach ($attributes as $key => $val)
 
                                 <div class="form-group row">
-                                    @if($val->module!='brand')
                                     <label class="col-md-3 col-form-label text-right">{{$val->title}}</label>
-                                    @else
-                                    <label class="col-md-3 col-form-label text-right">{{$val->title}}(Variant)</label>
-                                    @endif
-                                    <div class="col-md-9">
+                                    <div class="col-md-5">
                                         @if ($val->type == \App\Attribute::TYPE_SELECT)
                                         <select name="attribute_select[]" class="select-search form-control" data-placeholder="Chọn"  multiple>
                                            
@@ -188,7 +184,9 @@
                                         <input type="text" class="form-control" name="attribute[{{$val->id}}]" value="">
                                         @endif
                                     </div>
-                                </div>
+                                      <label class="col-md-3 col-form-label text-right">Tạo biến thể</label>
+                                      <input type="checkbox" name="{{$val->id}}" value="1" class="form-check-input-styled"  data-fouc="">
+                                </div> 
                                 @endforeach
                             </div>
                         </div>
