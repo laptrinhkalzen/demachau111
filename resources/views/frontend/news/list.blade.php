@@ -38,7 +38,7 @@
                                     <h3 style="margin-bottom: 3px;" class="title">Tin tức mới nhất</h3>
                                     <ul class="categor-list">
                                         @foreach($some_news as $some_new)
-                                        <li style="border-bottom: 1px solid #d2d4d2;"><a style="font-size: 12px; line-height: 1.5;" href="#">{{$some_new->title}}</a></li>
+                                        <li style="border-bottom: 1px solid #d2d4d2;"><a style="font-size: 12px; line-height: 1.5;" href="{{route('news.detail',['alias'=>$some_new->alias])}}">{{$some_new->title}}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>

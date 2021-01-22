@@ -3,7 +3,7 @@
 <div class="content">
     <form action="{!!route('admin.news.store')!!}" method="POST" enctype="multipart/form-data">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-header header-elements-inline">
                         <h6 class="card-title">Tạo mới</h6>
@@ -120,7 +120,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group row">
