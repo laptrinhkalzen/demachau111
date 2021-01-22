@@ -3431,7 +3431,7 @@ padding-left: 0px;
 .shop.checkout {
 	padding: 0;
 	background: #fff;
-	padding-top: 20px;
+/*	padding-top: 20px;*/
 	padding-bottom: 50px;
 }
 .shop.checkout .checkout-form {
@@ -3447,12 +3447,12 @@ padding-left: 0px;
 	font-size: 16px;
 	color: #333;
 	font-weight: 400;
-	margin-top: 12px;
-	margin-bottom: 30px;
+/*	margin-top: 12px;
+	margin-bottom: 30px;*/
 }
 .shop.checkout .form{}
 .shop.checkout .form .form-group {
-	margin-bottom: 25px;
+/*	margin-bottom: 25px;*/
 }
 .shop.checkout .form .form-group label{
 	color:#333;

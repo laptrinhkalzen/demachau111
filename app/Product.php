@@ -33,11 +33,11 @@ class Product extends Model {
     }
 
     public function getPrice() {
-        return $this->price > 0 ? number_format($this->price) . ' đ/m2' : 'Liên hệ';
+        return $this->price > 0 ? number_format($this->price) . ' đ' : 'Liên hệ';
     }
 
     public function getSalePrice() {
-        return number_format($this->sale_price) . ' đ/m2';
+        return number_format($this->sale_price) . ' đ';
     }
 
     public function createdBy() {

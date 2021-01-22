@@ -37,6 +37,68 @@ background-color: #A91E23 !important;
 .btn-buy:hover {
 background-color: #292BB7 !important;
 }
+input,
+textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+}
+
+input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-group {
+  clear: both;
+  margin-top: 25px;
+  position: relative;
+}
+
+.input-group input[type='button'] {
+  background-color: #eeeeee;
+  min-width: 38px;
+  width: auto;
+  transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+  font-weight: bold;
+  height: 38px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+}
+
+.input-group .quantity-field {
+  position: relative;
+  height: 38px;
+  left: -6px;
+  text-align: center;
+  width: 62px;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0 5px;
+  resize: vertical;
+}
+
+.button-plus {
+  left: -13px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
 </style>
 <div class="breadcrumbs">
     <div class="container">
@@ -100,7 +162,16 @@ background-color: #292BB7 !important;
                                     </div>
                                     <div class="">
                                         <div class="row">
-                                            
+                                            <div class="col-lg-3 form-group">
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                            </select>
+                                          </div>
+
                                             @foreach($input as $inputt)
                                             <div class="col-lg-12">
                                                 <span style="font-size: 14px;font-weight: 600;">{{$inputt['name']}}</span>
@@ -136,20 +207,25 @@ background-color: #292BB7 !important;
                                         </div>
                                         <hr class="ke_vach">
                                         <div class="row col-lg-6" >
-                                            <p id="option_price" style="color:red;font-size: 24px;">{{$detail_product->price}}</p>
+                                            <p id="option_price" style="color:red;font-size: 24px;">{{$detail_product->getPrice()}}</p>
                                         </div>
                                         
                                         
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-4">
+<!--                                             <div class="col-md-4">
                                                 <input style="width:100%"  type="number" name="quantity" value="1" id="quantity" min="1">
+                                            </div> -->
+                                            <div class="col-md-4 input-group">
+                                              <input type="button" value="-" class="button-minus" data-field="quantity">
+                                              <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field" >
+                                              <input type="button" value="+" class="button-plus" data-field="quantity">
                                             </div>
-                                            <div class="col-md-8">
+<!--                                             <div class="col-md-8">
                                                 <button type="button" class="btn" id="add-to-cart"  data-product_id="{{$detail_product->id}}" style="background-color: #EA1621">Thêm vào giỏ hàng</button>
                                                 
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -301,4 +377,6 @@ background-color: #292BB7 !important;
     });
     });
     </script>
+
+    
     @stop
