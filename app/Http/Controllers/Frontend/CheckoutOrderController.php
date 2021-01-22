@@ -124,10 +124,18 @@ class CheckoutOrderController extends Controller {
                     }
                 }
                 $order_detail=DB::table('order_detail')->insert($insert_input);
+                dd($order_detail);
                 $order=DB::table('order')->where('id',$order_id)->first();
                 session()->forget('cart');
                 return redirect()->route('home.index')->with('order_success','Mua hàng thành công');
-                    // session(['cost_id' => $order_id]);
+                  
+                    
+
+
+}
+                           
+            
+  // session(['cost_id' => $order_id]);
                     // session(['url_prev' => url()->previous()]);
                     // $vnp_TmnCode = "UDOPNWS1"; //Mã website tại VNPAY 
                     // $vnp_HashSecret = "EBAHADUGCOEWYXCMYZRMTMLSHGKNRPBN"; //Chuỗi bí mật
@@ -179,13 +187,6 @@ class CheckoutOrderController extends Controller {
         //     $vnp_Url .= 'vnp_SecureHashType=SHA256&vnp_SecureHash=' . $vnpSecureHash;
         // }
         // return redirect($vnp_Url);
-                    
-
-
-}
-                           
-            
-
     
        
     
