@@ -81,10 +81,11 @@
 </div> -->
     
     <!-- Header -->
-
+@if(Session('order_success'))
 <script type="text/javascript">
-swal("Hello world!");
+swal("Đặt hàng thành công!");
 </script>
+@endif
 
     <header class="header shop">
         <!-- Topbar -->
