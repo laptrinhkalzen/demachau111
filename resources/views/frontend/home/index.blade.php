@@ -301,7 +301,7 @@ margin-top: 0px;
                     <div class="single-product">
                         <div class="product-img">
                             <a href="{{route('news.detail',['alias'=>$new->alias])}}">
-                                <img class="default-img img-responsive img-rounded custom-img" src="{{$new->images}}">
+                                <img class="default-img img-responsive img-rounded custom-img2" src="{{$new->images}}">
                                 <img class="hover-img img-responsive img-rounded" src="{{$new->images}}">
                                 <!--  <span class="out-of-stock">Hot</span> -->
                             </a>

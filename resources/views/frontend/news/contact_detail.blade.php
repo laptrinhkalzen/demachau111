@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
     <!-- Start Contact -->
-    <section id="contact-us" class="contact-us section">
+    <section id="contact-us" class="contact-us section mt-4">
         <div class="container">
                 <div class="contact-head">
                     <div class="row">
@@ -90,7 +90,7 @@
     <!--/ End Contact -->
     
     <!-- Map Section -->
-    <section>
+    <section class="mt-4">
         <div class="container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.6455466017223!2d106.68963731457649!3d20.84601499936849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7b13dd35972d%3A0x284f477fbdddee0e!2zxJDhu4dtIMOBIENow6J1!5e0!3m2!1svi!2s!4v1610944019828!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>

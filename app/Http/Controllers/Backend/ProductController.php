@@ -189,6 +189,7 @@ class ProductController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
+         
         $input = $request->all();
         $validator = \Validator::make($input, $this->productRepo->validateUpdate($id));
         if ($validator->fails()) {
@@ -215,6 +216,9 @@ class ProductController extends Controller {
         for($i=1;$i<=count($option_price);$i++){
             DB::table('option_detail')->insert(['option_price'=>$option_price[$i-1],'product_id'=>$id,'option_id'=>$i]);
         }
+        $min_price=DB::table('option_detail')->where('product_id',$id)->min('option_price');
+        $data['price']=$min_price;
+        DB::table('product')->update(['price'=>$data['price']]);
         }
         else{
         DB::table('product_option')->where('product_id',$id)->delete();
