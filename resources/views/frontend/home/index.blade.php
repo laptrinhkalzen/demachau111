@@ -178,10 +178,10 @@ margin-top: 0px;
                                             <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">{{$flashsale_product->title}}</a></h3>
                                             <div class="product-price" style="text-align: center;">
                                                 @if($flashsale_product->discount_value>0)
-                                                <span class="old">{{number_format($flashsale_product->price)}} đ</span>
-                                                <span style="color:red;">{{number_format($flashsale_product->price_decrease)}} đ</span>
+                                                <span class="old">{{number_format($flashsale_product->price)}}đ</span>
+                                                <span style="color:red;">{{number_format($flashsale_product->price_decrease)}}đ</span>
                                                 @else
-                                                <span style="color:red;">{{number_format($flashsale_product->price)}} đ</span>
+                                                <span style="color:red;">{{number_format($flashsale_product->price)}}đ</span>
                                                 @endif
                                             </div>
                                         </div>

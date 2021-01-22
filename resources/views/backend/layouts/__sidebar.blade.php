@@ -127,7 +127,7 @@
                     </ul>
                 </li>
                  <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Khách hàng</span></a>
+                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Đơn hàng</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Khách hàng">
                        
                         <li class="nav-item"><a href="{{route('admin.order.index')}}" class="nav-link">Đơn hàng</a></li>

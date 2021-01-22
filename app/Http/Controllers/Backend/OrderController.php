@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Repositories\OrderRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
 
 class OrderController extends Controller
 {
@@ -19,7 +20,8 @@ class OrderController extends Controller
     public function show($id)
     {
         $record = $this->orderRepo->find($id);
-        return view('backend/order/detail', compact('record'));
+        $order_detail=DB::table('order_detail')->where('id',$id)->get();
+        return view('backend/order/detail', compact('record','order_detail'));
     }
 
     public function destroy($id)

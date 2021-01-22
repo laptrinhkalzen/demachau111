@@ -39,7 +39,7 @@
                 @foreach($records as $key=>$record)
                     <tr>
                         <td>{{++$key}}</td>
-                        <td>{{$record->contact}}</td>
+                        <td>{{$record->member_name}}</td>
                         <td>{{$record->mobile}}</td>
                         <td>
                             @if($record->status==0)
@@ -50,6 +50,8 @@
                                 <span class="badge bg-success-400">Xác nhận</span>
                             @elseif($record->status==3)
                                 <span class="badge bg-danger-400">Từ chối</span>
+                            @elseif($record->status==3)
+                                <span class="badge bg-danger-400">Chưa thanh toán</span>
                             @endif
                         </td>
                         <td>{{$record->created_at()}}</td>

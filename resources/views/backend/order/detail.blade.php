@@ -37,6 +37,8 @@
                                     <span class="badge bg-success-400">Xác nhận</span>
                                 @elseif($record->status==3)
                                     <span class="badge bg-danger-400">Từ chối</span>
+                                @elseif($record->status==4)
+                                    <span class="badge bg-danger-400">Chưa thanh toán</span>
                                 @endif
                             </td>
                         </tr>
@@ -130,13 +132,13 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($record->products as $key=>$product)
+                        @foreach($order_detail as $key=>$product)
                             <tr>
                                 <td>{{++$key}}</td>
                                 <td>{{$product->title}}</td>
                                 <td class="text-right">{{number_format($product->price)}}</td>
-                                <td class="text-center">{{$product->pivot->quantity}}</td>
-                                <td class="text-right">{{number_format($product->pivot->sub_total)}}</td>
+                                <td class="text-center">{{$product->quantity}}</td>
+                                <td class="text-right">{{number_format($product->each_total)}}</td>
                             </tr>
                         @endforeach
                         </tbody>
