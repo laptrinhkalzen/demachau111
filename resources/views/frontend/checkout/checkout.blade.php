@@ -27,7 +27,7 @@
 						<hr>
 						<div class="col=md-12">
 							<input class="mr-2" type="radio" name="payment_method" value="2" style="width: auto;vertical-align: middle;"> <b>Ngân hàng</b>
-							<div class="2 box" ><a href="{{route('checkout.payment')}}">Ấn vào đây</a> để tiến hành thanh toán</div>
+							<div class="0 box" >Thanh toán qua VNPAY.</div>
 							
 						</div>
 					</div>
@@ -73,7 +73,7 @@
 													<span>Giá:</span>
 												</div>
 												<div class="col-md-6 col-lg-6 col-6 " >
-													<span><strong data-price="{{$option_detail->option_price}}" class="each_price">{{$option_detail->option_price}}</strong></span>
+													<span><strong data-price="{{$option_detail->option_price}}" class="each_price">{{number_format($option_detail->option_price)}}</strong></span>
 												</div>
 											</div>
 											@endif
@@ -362,6 +362,9 @@
 	//                      }
 	//                });
 	//        });
+	 function formatNumber (num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    }
 			$('.each_quantity').on('change',function(){
 	var coupon_code=$('#coupon').val();
 	var id_option=$(this).data('id_option');
@@ -373,9 +376,9 @@
 	success: function (resp) {
 	if (resp.success == true) {
 	$(".shopping-item").load(" .shopping-item > *");
-	$('#sub_total').html(resp.total);
-	$("#final_total").html(resp.total);
-	$('#cart-count').html(resp.count);
+	$('#sub_total').html(formatNumber(resp.total));
+	$("#final_total").html(formatNumber(resp.total));
+	$('#cart-count').html(formatNumber(resp.count));
 	}
 	}
 	});
@@ -388,7 +391,7 @@
 	success:function(res){
 	if(res.statusCode==200){
 	var discount= parseFloat($("#sub_total").text())-res.value;
-	$("#final_total").html(discount+"đ");
+	$("#final_total").html(formatNumber(discount)+"đ");
 	$('#coupon-success').show();
 	$('#coupon-fail').hide();
 	}
@@ -411,7 +414,7 @@
 	success:function(res){
 	if(res.statusCode==200){
 	var discount= parseFloat($("#sub_total").text())-res.value;
-	$("#final_total").html(discount+"đ");
+	$("#final_total").html(formatNumber(discount)+"đ");
 	$('#coupon-success').show();
 	$('#coupon-fail').hide();
 	}
