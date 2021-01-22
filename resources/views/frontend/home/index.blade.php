@@ -33,18 +33,19 @@ margin-top: 0px;
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
+    @foreach($slide_chinh as $main_slide)
+    @if($main_slide->ordering ==1)
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://demachau.com/wp-content/uploads/2020/10/slide-02.jpg" alt="First slide">
+      <img class="d-block w-100" src="{{$main_slide->image}}" alt="First slide">
     </div>
+    @else
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://demachau.com/wp-content/uploads/2020/10/slide-02.jpg" alt="Second slide">
+      <img class="d-block w-100" src="{{$main_slide->image}}" alt="First slide">
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://demachau.com/wp-content/uploads/2020/10/slide-02.jpg" alt="Third slide">
-    </div>
+    @endif
+    @endforeach
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -325,7 +326,7 @@ margin-top: 0px;
 
                             <h3  style="text-align: center;"><a class="title" href="{{route('news.detail',['alias'=>$new->alias])}}">{{$new->title}}</a></h3>
                             <div class="content">
-                                 <a class="title">{!!substr($new->description,0,84)!!}...</a>
+                                 <a class="title">{!!$new->description!!}</a>
                             </div>
 
                             
@@ -353,7 +354,7 @@ margin-top: 0px;
     <div class=" single-slider">
         <div class="row">
             <div class="banner-flash-sale col-lg-3" style="margin: auto;text-align: center;">
-                <p style="font-size: 20px;">CÁC THUONG HI?U L?N</p>
+                <p style="font-size: 20px;">CÁC THƯƠNG HIỆU LỚN</p>
             </div>
             <div class="carousel-flash-sale col-lg-9" style="">
                 <div class="product-area most-popular section" style="padding:0px;">
@@ -362,16 +363,16 @@ margin-top: 0px;
                             <div class="col-12">
                                 <div class="owl-carousel popular-slider">
                                     <!-- Start Single Product -->
-                                    
+                                    @foreach($brand as $brands)
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
-                                            <a href="">
-                                                <img class="default-img img-responsive img-rounded" src="" style="padding-top: 10px; ">
-                                                <img class="hover-img img-responsive img-rounded" src="" style="padding-top: 10px; ">
-                                                >
+                                            <a href="{{$brands->link}}">
+                                                <img class="default-img img-responsive img-rounded" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
+                                                <img class="hover-img img-responsive img-rounded" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
                                             </a>
                                         </div>
                                     </div>
+                                    @endforeach
                                    
                                     
                                     <!-- End Single Product -->

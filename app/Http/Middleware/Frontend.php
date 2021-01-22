@@ -15,6 +15,7 @@ class Frontend {
 
     public function handle($request, Closure $next){
         $config = \DB::table('config')->first();
+        $brand = \DB::table('brand')->orderBy('order','asc')->get();
         $slide_chinh= DB::table('slide')->where('position',1)->where('status',1)->get();
         $slide_phu= DB::table('slide')->where('position',3)->where('status',1)->first();
         $anh_duoi_slide= DB::table('slide')->where('position',2)->where('status',1)->get();
@@ -72,6 +73,7 @@ class Frontend {
         \View::share(['menu_arr' => $menu_arr]);
         \View::share(['category' => $category]);
         \View::share(['social' => $social]);
+        \View::share(['brand' => $brand]);
         \View::share(['company_infor' => $company_infor]);
         \View::share(['customer_support' => $customer_support]);
         \View::share(['payment' => $payment]);

@@ -43,7 +43,7 @@ function showPreview(event){
             <div class="card-body">
                 <ul class="nav nav-tabs nav-tabs-highlight">
                     <li class="nav-item"><a href="#left-icon-tab1" class="nav-link active" data-toggle="tab"><i class="icon-menu7 mr-2"></i> Facebook Url</a></li>
-                     <li class="nav-item"><a href="#left-icon-tab2" class="nav-link" data-toggle="tab"><i class="icon-stack2 mr-2"></i> Banner</a></li> 
+                     <!-- <li class="nav-item"><a href="#left-icon-tab2" class="nav-link" data-toggle="tab"><i class="icon-stack2 mr-2"></i> Banner</a></li>  -->
                     
 
                 </ul>
@@ -65,7 +65,7 @@ function showPreview(event){
                 </div>
             </div>
 
-                <div class="tab-pane fade" id="left-icon-tab2">
+                <!-- <div class="tab-pane fade" id="left-icon-tab2">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="form-group row">
@@ -98,7 +98,7 @@ function showPreview(event){
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
       
                 <div class="row">
