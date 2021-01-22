@@ -172,14 +172,13 @@ class ProductController extends Controller {
                 $product_attribute[$val->id] = $val->pivot->value;
             }
         }
-
+        $parent_variant=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('product_attribute.is_variant',1)->get()->groupBy('parent_id');
         $product_options=DB::table('product_option')->where('product_id',$id)->orderBy('option_number','asc')->get();
         $options=$product_options->groupBy('option_number');
         $price_option=DB::table('option_detail')->where('product_id',$id)->get();
         $attribute_names=$product_options->unique('parent_name');
         $count=count($price_option);
-
-        return view('backend/product/edit', compact('record', 'category_html', 'attributes', 'product_attribute', 'product_attribute_ids','options','attribute_names','price_option','count'));
+        return view('backend/product/edit', compact('record', 'category_html', 'attributes', 'product_attribute', 'product_attribute_ids','options','attribute_names','price_option','count','parent_variant'));
     }
 
     /**
@@ -190,11 +189,6 @@ class ProductController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
-        //add giá cho từng option
-        $option_price=$request->option_price;
-        for($i=1;$i<=count($option_price);$i++){
-            DB::table('option_detail')->insert(['option_price'=>$option_price[$i-1],'product_id'=>$id,'option_id'=>$i]);
-        }
         $input = $request->all();
         $validator = \Validator::make($input, $this->productRepo->validateUpdate($id));
         if ($validator->fails()) {
@@ -212,8 +206,76 @@ class ProductController extends Controller {
         $product->categories()->sync($input['category_id']);
         //Thêm thuộc tính sản phẩm
         $attributes = $this->getProductAttributes($input);
-        
         $product->attributes()->sync($attributes);
+
+         //add giá cho từng option
+        if($request->button_edit==0){
+        DB::table('option_detail')->where('product_id',$id)->delete();
+        $option_price=$request->option_price;
+        for($i=1;$i<=count($option_price);$i++){
+            DB::table('option_detail')->insert(['option_price'=>$option_price[$i-1],'product_id'=>$id,'option_id'=>$i]);
+        }
+        }
+        else{
+        DB::table('product_option')->where('product_id',$id)->delete();
+        DB::table('option_detail')->where('product_id',$id)->delete();
+        $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->get();
+
+        $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('is_variant',1)->groupBy('parent_id')->pluck('parent_id');
+
+        $count=$parent_ids->count();
+        $option_number=1;
+        $position=0;
+        foreach ($parent_ids as $key => $parent_id) {
+                 $dem=0; 
+                foreach ($attributes as $key => $attribute) {
+                    if($attribute->parent_id==$parent_id){
+                        $dem++;
+                    }
+                }
+                $option_number*=$dem;
+                }
+
+             
+         $each=1;
+         $dem2=1;
+         foreach ($parent_ids as $key => $parent_id) {
+                 
+                 $dem1=0;
+                 $option=1;
+                 $position=$key+1;
+                foreach ($attributes as $key => $attribute) {
+                    if($attribute->parent_id==$parent_id){
+                        $dem1++;  //đếm con mỗi cha
+                        
+                    }
+                }
+                $dem2*=$dem1;    //hàng n * (n+1);
+                $each=$option_number/$dem2;         //số lần hoán vị của 1 option 
+      
+            
+                while($option<=$option_number){
+                    foreach ($attributes as $key => $attribute) {
+                    if($attribute->parent_id==$parent_id){
+                         for($i=1;$i<=$each;$i++){
+                            $data['option_number']=$option;
+                            $data['parent_id']=$parent_id;
+                            $data['attribute_id']=$attribute->id;
+                            $data['value']=$attribute->title;
+                            $data['product_id']=$id;
+                            $data['parent_name']=DB::table('attribute')->where('id',$parent_id)->pluck('title')->first();
+                            DB::table('product_option')->insert($data);
+                            $option++;
+                          
+                         }
+                         
+                     }
+                }      
+                }
+             }
+
+        }
+
         if ($res) {
             return redirect()->route('admin.product.index')->with('success', 'Cập nhật thành công');
         } else {
