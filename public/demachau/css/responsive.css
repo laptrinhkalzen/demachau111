@@ -1789,20 +1789,24 @@ display: none !important;
 .icon-filter{
 	display:none !important;
 }
-.custom-img{
+.custom-product{
 	width: 255px !important;
 	height: 255px !important;
 	object-fit: cover !important;
 }
-.custom-img2{
+.custom-news{
 	width: 255px !important;
 	height: 150px !important;
-	object-fit: cover !important;
+	object-fit: contain !important;
 }
-.hover-img{
-	width: 255px !important;
-	height: 255px !important;
-	object-fit: cover !important;
+.hover-propduct{
+	object-fit: contain !important;
+}
+.hover-news{
+	object-fit: contain !important;
+}
+.hover-brand{
+	object-fit: contain !important;
 }
 
 }

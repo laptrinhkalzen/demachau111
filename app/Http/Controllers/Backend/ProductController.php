@@ -303,7 +303,7 @@ class ProductController extends Controller {
 
     public function getProductAttributes($input) {
         $attributes = array();
-        
+
         foreach ($input['attribute_select'] as $key => $val) {
             if ($val != null) {
                 $parent_id=DB::table('attribute')->where('id',$val)->pluck('parent_id')->first();

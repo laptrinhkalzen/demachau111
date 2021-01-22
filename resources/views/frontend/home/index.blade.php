@@ -163,8 +163,8 @@ margin-top: 0px;
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
                                             <a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
-                                                <img class="default-img img-responsive img-rounded custom-img" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
-                                                <img class="hover-img img-responsive img-rounded" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
+                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
+                                                <img class="hover-img img-responsive img-rounded hover-product" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
                                             </a>
                                             <div class="button-head">
                                                
@@ -230,8 +230,8 @@ margin-top: 0px;
                     <div class="single-product">
                         <div class="product-img">
                             <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
-                                <img class="default-img img-responsive img-rounded custom-img" src="{{$product_danh_muc_cha1->images}}">
-                                <img class="hover-img img-responsive img-rounded" src="{{$product_danh_muc_cha1->images}}">
+                                <img class="default-img img-responsive img-rounded custom-product" src="{{$product_danh_muc_cha1->images}}">
+                                <img class="hover-img img-responsive img-rounded hover-product" src="{{$product_danh_muc_cha1->images}}">
                                 <!--  //<span class="out-of-stock">Hot</span> -->
                             </a>
                             <div class="button-head">
@@ -301,8 +301,8 @@ margin-top: 0px;
                     <div class="single-product">
                         <div class="product-img">
                             <a href="{{route('news.detail',['alias'=>$new->alias])}}">
-                                <img class="default-img img-responsive img-rounded custom-img2" src="{{$new->images}}">
-                                <img class="hover-img img-responsive img-rounded" src="{{$new->images}}">
+                                <img class="default-img img-responsive img-rounded custom-news" src="{{$new->images}}">
+                                <img class="hover-img img-responsive img-rounded hover-news" src="{{$new->images}}">
                                 <!--  <span class="out-of-stock">Hot</span> -->
                             </a>
 
@@ -367,8 +367,8 @@ margin-top: 0px;
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
                                             <a href="{{$brands->link}}">
-                                                <img class="default-img img-responsive img-rounded" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
-                                                <img class="hover-img img-responsive img-rounded custom-img" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
+                                                <img class="default-img img-responsive img-rounded custom-brand" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
+                                                <img class="hover-img img-responsive img-rounded hover-brand" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
                                             </a>
                                         </div>
                                     </div>
