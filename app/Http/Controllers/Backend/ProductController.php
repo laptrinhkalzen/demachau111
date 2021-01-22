@@ -218,7 +218,7 @@ class ProductController extends Controller {
         }
         $min_price=DB::table('option_detail')->where('product_id',$id)->min('option_price');
         $data['price']=$min_price;
-        DB::table('product')->update(['price'=>$data['price']]);
+        DB::table('product')->where('id',$id)->update(['price'=>$data['price']]);
         }
         else{
         DB::table('product_option')->where('product_id',$id)->delete();
