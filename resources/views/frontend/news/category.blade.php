@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            @foreach($records as $key => $record)
+                            @foreach($news_category as $key => $record)
                             <div class=" col-12">
                                  <div class="row">
                                 <div class="single-product col-md-4" >

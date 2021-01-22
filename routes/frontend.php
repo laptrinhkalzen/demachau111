@@ -57,6 +57,7 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::get('/danh-muc-tin/{alias}', ['as' => 'news_category.index', 'uses' => 'Frontend\NewsController@index']);
     Route::get('/tin-tuc', ['as' => 'news.list', 'uses' => 'Frontend\NewsController@list']);
     Route::get('/tin-tuc/{alias}', ['as' => 'news.detail', 'uses' => 'Frontend\NewsController@detail']);
+    Route::get('/danh-muc-tin-tuc/{alias}', ['as' => 'news.category', 'uses' => 'Frontend\NewsController@category']);
     /* Video */
     Route::get('/video', ['as' => 'video.index', 'uses' => 'Frontend\VideoController@index']);
     Route::get('/video/{alias}', ['as' => 'video.detail', 'uses' => 'Frontend\VideoController@detail']);
