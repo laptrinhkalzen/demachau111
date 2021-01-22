@@ -166,7 +166,7 @@
                                 @foreach ($attributes as $key => $val)
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label text-right">{{$val->title}}</label>
-                                    <div class="col-md-9">
+                                    <div class="col-md-6">
                                         @if ($val->type == \App\Attribute::TYPE_SELECT)
                                         <select name="attribute_select[]" class="select-search" data-placeholder="Chọn" multiple="">
                                             <option></option>
@@ -178,6 +178,23 @@
                                         <input type="text" class="form-control" name="attribute[{{$val->id}}]" value="{!!(in_array($val->id, $product_attribute_ids))?$product_attribute[$val->id]:''!!}">
                                         @endif
                                     </div>
+                                     <label class="col-md-2 col-form-label text-right">Tạo biến thể</label>
+                                        @foreach($parent_variant as $key_variant => $parent_variant1)
+                                        @php
+                                            $dem=0;
+                                        @endphp
+                                        @if($key_variant == $val->id)
+                                            @php
+                                               $dem++;
+                                            @endphp   
+                                            @break;
+                                        @endif
+                                        @endforeach
+                                        @if($dem>0)
+                                        <input type="checkbox" checked="" name="{{$val->id}}" value="1" class="form-check-input-styled"  data-fouc="">
+                                        @else
+                                        <input type="checkbox" name="{{$val->id}}" value="1" class="form-check-input-styled"  data-fouc="">
+                                        @endif
                                 </div>
                                 @endforeach
                             </div>
@@ -249,7 +266,8 @@
                     <div class="col-md-12">
                         <div class="text-center">
                             <a type="button" href="{{route('admin.product.index')}}" class="btn btn-secondary legitRipple">Hủy</a>
-                            <button type="submit" class="btn btn-primary legitRipple">Lưu lại <i class="icon-arrow-right14 position-right"></i></button>
+                            <button type="submit" value="0" name="button_edit" class="btn btn-primary legitRipple">Lưu lại <i class="icon-arrow-right14 position-right"></i></button>
+                             <button type="submit" name="button_edit"  value="1" class="btn btn-success legitRipple">Lưu và tạo lại biến thể <i class="icon-arrow-right14 position-right"></i></button>
                         </div>
                     </div>
                 </div>

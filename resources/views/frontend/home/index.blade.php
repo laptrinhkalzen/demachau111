@@ -368,7 +368,7 @@ margin-top: 0px;
                                         <div class="product-img">
                                             <a href="{{$brands->link}}">
                                                 <img class="default-img img-responsive img-rounded" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
-                                                <img class="hover-img img-responsive img-rounded" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
+                                                <img class="hover-img img-responsive img-rounded custom-img" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
                                             </a>
                                         </div>
                                     </div>

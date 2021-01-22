@@ -172,7 +172,7 @@
 
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label text-right">{{$val->title}}</label>
-                                    <div class="col-md-5">
+                                    <div class="col-md-6">
                                         @if ($val->type == \App\Attribute::TYPE_SELECT)
                                         <select name="attribute_select[]" class="select-search form-control" data-placeholder="Chọn"  multiple>
                                            
@@ -184,7 +184,7 @@
                                         <input type="text" class="form-control" name="attribute[{{$val->id}}]" value="">
                                         @endif
                                     </div>
-                                      <label class="col-md-3 col-form-label text-right">Tạo biến thể</label>
+                                      <label class="col-md-2 col-form-label text-right">Tạo biến thể</label>
                                       <input type="checkbox" name="{{$val->id}}" value="1" class="form-check-input-styled"  data-fouc="">
                                 </div> 
                                 @endforeach
