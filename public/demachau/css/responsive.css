@@ -1794,6 +1794,11 @@ display: none !important;
 	height: 255px !important;
 	object-fit: cover !important;
 }
+.custom-img2{
+	width: 255px !important;
+	height: 150px !important;
+	object-fit: cover !important;
+}
 .hover-img{
 	width: 255px !important;
 	height: 255px !important;
