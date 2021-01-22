@@ -116,12 +116,12 @@
 								<tbody>
 									<tr>
 										<td style="text-align: center;">Tạm tính</td>
-										<td id="sub_total" style="text-align: center;">{{$total}}</td>
+										<td id="sub_total" style="text-align: center; color:red;">{{number_format($total)}}</td>
 										
 									</tr>
 									<tr>
 										<td style="text-align: center;">Tổng</td>
-										<td name="final_total" id="final_total" style="text-align: center;">{{$total}}</td>
+										<td name="final_total" id="final_total" style="text-align: center; color:red;">{{number_format$total)}}</td>
 										
 									</tr>
 								</tbody>
@@ -376,8 +376,8 @@
 	success: function (resp) {
 	if (resp.success == true) {
 	$(".shopping-item").load(" .shopping-item > *");
-	$('#sub_total').html(formatNumber(resp.total));
-	$("#final_total").html(formatNumber(resp.total));
+	$('#sub_total').html(formatNumber(resp.total)+" đ");
+	$("#final_total").html(formatNumber(resp.total)+" đ");
 	$('#cart-count').html(formatNumber(resp.count));
 	}
 	}
@@ -391,7 +391,7 @@
 	success:function(res){
 	if(res.statusCode==200){
 	var discount= parseFloat($("#sub_total").text())-res.value;
-	$("#final_total").html(formatNumber(discount)+"đ");
+	$("#final_total").html(formatNumber(discount)+" đ");
 	$('#coupon-success').show();
 	$('#coupon-fail').hide();
 	}
