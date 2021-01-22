@@ -27,7 +27,7 @@
 						<hr>
 						<div class="col=md-12">
 							<input class="mr-2" type="radio" name="payment_method" value="2" style="width: auto;vertical-align: middle;"> <b>Ngân hàng</b>
-							<div class="0 box" >Thanh toán qua VNPAY.</div>
+							<div class="2 box" >Thanh toán qua VNPAY.</div>
 							
 						</div>
 					</div>

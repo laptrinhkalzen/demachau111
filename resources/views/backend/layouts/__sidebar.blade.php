@@ -126,6 +126,11 @@
 
                     </ul>
                 </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Đơn hàng
+                        <li class="nav-item"><a href="{{route('admin.order.index')}}" class="nav-link">Đơn hàng</a></li>
+                    </ul>
+                </li>
                 <!--                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Mã giảm giá</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm">
@@ -170,15 +175,7 @@
                         <li class="nav-item"><a href="{{route('admin.review.index')}}" class="nav-link">Đánh giá</a></li>
                     </ul>
                 </li> -->
-                <!--                 <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Khách hàng</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Khách hàng">
-                        <li class="nav-item"><a href="{{route('admin.subscriber.index')}}" class="nav-link">Người đăng kí</a></li>
-                        <li class="nav-item"><a href="{{route('admin.contact.index')}}" class="nav-link">Liên hệ</a></li>
-                        <li class="nav-item"><a href="{{route('admin.member.index')}}" class="nav-link">Thành viên</a></li>
-                        <li class="nav-item"><a href="{{route('admin.order.index')}}" class="nav-link">Đơn hàng</a></li>
-                    </ul>
-                </li> -->
+                
                 <!--                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Tiếp thị liên kết</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Layouts">
