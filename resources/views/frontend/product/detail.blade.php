@@ -199,7 +199,7 @@ input[type="number"] {
                                             
                                             
                                         </div>
-                                        <hr class="ke_vach">
+                                
                                         <div class="row col-lg-6" >
                                             <p id="option_price" style="color:red;font-size: 24px;">{{$detail_product->getPrice()}}</p>
                                         </div>
@@ -211,7 +211,9 @@ input[type="number"] {
 <!--                                             <div class="col-md-4">
                                                 <input style="width:100%"  type="number" name="quantity" value="1" id="quantity" min="1">
                                             </div> -->
+            
                                             <div class="col-md-4 input-group">
+                                                
                                               <input type="button" value="-" class="button-minus" data-field="quantity">
                                               <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field" >
                                               <input type="button" value="+" class="button-plus" data-field="quantity">
