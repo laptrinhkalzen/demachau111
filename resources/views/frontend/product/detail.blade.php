@@ -201,7 +201,7 @@ input[type="number"] {
                                         </div>
                                         <hr class="ke_vach">
                                         <div class="row col-lg-6" >
-                                            <p id="option_price" style="color:red;font-size: 24px;">{{number_format($detail_product->getPrice())}}</p>
+                                            <p id="option_price" style="color:red;font-size: 24px;">{{$detail_product->getPrice()}}</p>
                                         </div>
                                         
                                         
