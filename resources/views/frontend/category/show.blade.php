@@ -58,9 +58,19 @@ document.body.querySelector('#alternate-button-container')
 </script>
 <!-- Product Style -->
 <section class="product-area shop-sidebar shop section">
+	<div class="icon-filter container">
+		<div class="row"><i class="fa fa-filter fa-2x" aria-hidden="true" style="margin:auto;" onclick="w3_open()"><span style="font-size: 22px;">Lọc</span></i></div>
+	</div>
+
+	<div class="container" >
+		<div class="row">
+			<i class="fa fa-times fa-2x" onclick="w3_close()" style="display:none;position:fixed;top: 25px;right: 10px;z-index: 1000" id="closeFilter"></i>
+		</div>
+	</div>
+
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3 col-md-4 col-12">
+			<div class="menu-filter col-lg-3 col-md-4 col-12" id="mySidebar">
 				<div class="shop-sidebar">
 					<!-- Single Widget -->
 					<div class="single-widget range">
@@ -80,20 +90,22 @@ document.body.querySelector('#alternate-button-container')
 					</div>
 					<!--/ End Single Widget -->
 					<!-- Shop By Price -->
+					@foreach($attributes as $key => $attribute)
 					<div class="single-widget range">
-						<h3 class="title">Chủng loại</h3>
+						@foreach($parent_attributes as $parent_attribute)
+						@if($parent_attribute->id==$key)
+						<h3 class="title">{{$parent_attribute->title}}</h3>
+						@endif
+						@endforeach
 						<ul class="check-box-list">
+							@foreach($attribute as $attr)
 							<li>
-								<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">$20 - $50<span class="count">(3)</span></label>
+								<label class="checkbox-inline"  for="1"><input class="attribute_filter" name="attr" value="{{$attr->id}}" id="1" type="checkbox">{{$attr->title}}<span class="count"></span></label>
 							</li>
-							<li>
-								<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">$50 - $100<span class="count">(5)</span></label>
-							</li>
-							<li>
-								<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">$100 - $250<span class="count">(8)</span></label>
-							</li>
+							@endforeach
 						</ul>
 					</div>
+					@endforeach
 					<!--/ End Shop By Price -->
 					<!-- Single Widget -->
 					<!-- <div class="single-widget recent-post">
@@ -185,12 +197,13 @@ document.body.querySelector('#alternate-button-container')
 								</div> -->
 								<div class="single-shorter ">
 									<label>Sắp xếp theo :</label>
-									<select>
-										<option selected="selected">Name</option>
-										<option>Price</option>
-										<option>Size</option>
+									<select id="order_by">
+										<option value="0" selected="selected">Mới nhất</option>
+										<option value="1">Giá cao đến thấp</option>
+										<option value="2">Giá  thấp đến cao</option>
 									</select>
 								</div>
+<!-- 								<input type="button" id="reset_filter" value="Làm mới"> -->
 							</div>
 							<!-- <ul class="view-mode">
 									<li class="active"><a href="shop-grid.html"><i class="fa fa-th-large"></i></a></li>
@@ -200,8 +213,8 @@ document.body.querySelector('#alternate-button-container')
 						<!--/ End Shop Top -->
 					</div>
 				</div>
-				<div class="row">
-					@foreach($product_arr as $product_arr1)
+				<div class="row show_filter">
+					@foreach($product_cat as $product_arr1)
 					<div  class="col-lg-4 col-md-6 col-12">
 						<div class="single-product">
 							<div class="product-img">
@@ -235,9 +248,7 @@ document.body.querySelector('#alternate-button-container')
 					@endforeach
 					
 				</div>
-				<div style="text-align: center;">
-					
-				</div>
+<!-- -->
 			</div>
 			
 		</div>
@@ -380,4 +391,60 @@ document.body.querySelector('#alternate-button-container')
 		</div>
 	</div>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+          $('.attribute_filter,#order_by').on('change',function(){
+          	    //var current_url = window.location.href;
+          	    //alert(current_url);
+          	    var attr=[];
+          	    var order_by=$('#order_by :selected').val();
+          	    var cat_id={{$category_id->id}};
+          	    attr =  $("input[name='attr']:checked").map(function(){
+				    return $(this).val();
+				    }).get();
+          	    $.ajax({
+				    url:'{{route("api.filter_product")}}',
+				    method:'POST',
+				    data:{attr:attr,order_by:order_by,cat_id:cat_id,_token: $('#token').val()},
+				    success:function(resp){
+				    	if(resp!=1){
+					        $('.show_filter').html(resp);
+					        //var pageUrl = '?attributes=' + attr;
+							//window.history.pushState('', '', pageUrl);
+				        }
+				        else{
+				        	location.reload();
+				        }
+				}
+				});
+
+          });
+          
+          $('#reset_filter').on('click',function(){
+          	  location.reload();
+          });
+	});
+</script>
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("closeFilter").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("closeFilter").style.display = "none";
+}
+
+</script>
 @stop

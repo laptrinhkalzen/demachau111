@@ -2,22 +2,7 @@
 <html lang="zxx">
 <head>
 
-    <!-- Meta Tag -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name='copyright' content=''>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Title Tag  -->
-    <title>Đệm Á Châu</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{!!$share_config->favicon!!}">
-    <!-- Web Font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-    
-    <!-- StyleSheet -->
-    <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=691807794780343&autoLogAppEvents=1" nonce="nOPTY4k6"></script>
+  
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -55,14 +40,14 @@
 <body class="js" style="background-color: #f3f5f7">
     
     <!-- Preloader -->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="preloader-inner">
             <div class="preloader-icon">
                 <span></span>
                 <span></span>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Preloader -->
 
 
@@ -95,7 +80,7 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="ti-headphone-alt"></i>  Hotline miễn phí: 1900 3052 (8:00 - 21:00)</li>
+                                <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span style="vertical-align: -webkit-baseline-middle"> Hotline miễn phí: 1900 3052 (8:00 - 21:00)</span></li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
@@ -104,7 +89,7 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="fa fa-calendar"></i> 30 Ngày đổi trả miễn phí</li>
+                                <li><i class="fa fa-calendar"></i> <span style="vertical-align: -webkit-baseline-middle">30 Ngày đổi trả miễn phí</span></li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
@@ -113,7 +98,7 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="fa fa-truck"></i> Miễn phí vận chuyển</li>
+                                <li><i class="fa fa-truck"></i><span style="vertical-align: -webkit-baseline-middle">Miễn phí vận chuyển</span></li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
@@ -122,12 +107,17 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="fas fa-pig"></i> Trả góp lãi xuất 0%</li>
+                                <li><i class="fa fa-credit-card-alt" aria-hidden="true"></i><span style="vertical-align: -webkit-baseline-middle">Trả góp lãi xuất 0%</span></li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
                     </div>
-                    
+                    <div class="col-lg-3 col-md-12 col-12">
+                        <form class="search-form" action="{{route('product.search')}}" method="GET">
+                        <input name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
+                        <button class="btnn"><i class="ti-search"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,25 +129,24 @@
                     <div class="col-lg-2 col-md-2 col-12">
                         <!-- Logo -->
                         
-                        <div style="padding-top: 20px;" class="logo">
-                            <a href="{{route('home.index')}}"><img src="{{$share_config->image}}" alt="logo"></a>
+                        <div class="logo">
+                            <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo"></a>
                         </div>
                         
                         <!--/ End Logo -->
                         <!-- Search Form -->
                         <div class="search-top">
-                            <div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
-                            <!-- Search Form -->
+                            <div class="top-search"><a href="#0"><i class="ti-search" style="vertical-align: super;"></i></a></div>
                             <div class="search-top">
                                 <form class="search-form" action="{{route('product.search')}}" method="GET">
                                     <input type="text" placeholder="Nhập từ khoá" id="search_key" autocomplete="off" name="search">
-                                    <button value="search" type="submit"><i class="ti-search"></i></button>
+                                    <button value="search" type="submit" style="background-color: #ea1621"><i class="ti-search" style="color: white;"></i></button>
                                     <div class="search_result"></div>
                                 </form>
                                 
                             </div>
                               
-                            <!--/ End Search Form -->
+
                         </div>
                         <!--/ End Search Form -->
                         <div class="mobile-nav"></div>
@@ -169,7 +158,7 @@
                                 <form action="{{route('product.search')}}" method="GET">
                                   
                                     <input name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
-                                    <button class="btnn"><i class="ti-search"></i></button>
+                                    <button class="btnn" style="background-color: #283988;"><i class="ti-search"></i></button>
                                 </form>
 
                             </div>
@@ -325,7 +314,7 @@
         </div>
         <!--/ End Header Inner -->
     </header>
-     <script type="text/javascript">
+     <!-- <script type="text/javascript">
         $(document).ready(function(){
             
         $('input[name="search"]').keyup(function(){
@@ -355,7 +344,7 @@
              $('div[class$=search_result]').fadeOut();
         });
         });
-   </script>
+   </script> -->
 
     <script type="text/javascript">
         $(document).ready(function(){

@@ -20,7 +20,7 @@ margin-top: 0px;
 </style>
 <!--/ End Header -->
 <!-- Slider Area -->
-<aside class="left"><a href="{{$banner_left->url}}"><img style="width: 150px; height: 540px; " src="{{$banner_left->image}}"></img></a></aside>
+<aside class="left"><a href="{{$banner_left->url}}"><img style="width: 150px; height: 540px;position: absolute;z-index: 99; " src="{{$banner_left->image}}"></img></a></aside>
 <section class="container hero-slider" style="background-color: transparent;">
     <!-- Single Slider -->
     <div class=" single-slider">
@@ -215,7 +215,7 @@ margin-top: 0px;
                 <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
                 @foreach($danh_muc_con as $danh_muc_con1)
                 @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
-                <li style="float: left; border-bottom: solid 1px #283988;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
+                <li style="float: left; border-bottom: solid 1px #283988;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
                 @endif
                 @endforeach
             </ul>

@@ -124,6 +124,158 @@ class ProductController extends Controller {
         }
     }
 
+    public function filter_product(Request $request){
+        $attr=$request->attr;
+        $cat_id=$request->cat_id;
+        $order_by=$request->order_by;
+        $category_id=DB::table('category')->where('id',$cat_id)->first();
+        if($attr){
+          if($category_id->parent_id!=0){
+          $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->get();
+          }
+          else{
+             $children_ids=DB::table('category')->where('parent_id',$cat_id)->get();
+             $id_children[]=$cat_id;
+             foreach($children_ids as $children_id){
+                $id_children[]=$children_id->id;
+             }
+             $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->whereIn('product_category.category_id',$id_children)->get();
+          }
+
+        $product_ids=$product_cat->groupBy('id');
+          foreach($product_ids as $key => $product_id){
+              $pro_id[]=$key;
+          }
+        $attributes=DB::table('product')->join('product_attribute','product_attribute.product_id','=','product.id')->whereIn('product_attribute.product_id',$pro_id)->whereIn('product_attribute.attribute_id',$attr)->get()->groupBy('id');
+        $dem_attr=0;
+        foreach ($attr as $key1 => $attr1) {
+               $dem_attr++;
+           }
+       $id_final=array();
+       foreach ($attributes as $key => $attribute) {
+            $dem_product_attr=0;
+            foreach ($attribute as $key1 => $value) {
+                $dem_product_attr++;
+            }
+            if($dem_product_attr==$dem_attr){
+                $id_final[]=$key;
+            }
+           
+       }
+       $output='';
+       if($id_final){
+           if($order_by==0){
+           $product_finals=DB::table('product')->whereIn('id',$id_final)->orderBy('created_at','desc')->get();
+           }
+           elseif($order_by==1){
+           $product_finals=DB::table('product')->whereIn('id',$id_final)->orderBy('price','desc')->get();
+           }
+           else{
+           $product_finals=DB::table('product')->whereIn('id',$id_final)->orderBy('price','asc')->get();
+           }
+       
+       foreach ($product_finals as $product_arr1) {
+          $output.='<div class="col-lg-4 col-md-6 col-12">
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'">
+                                    <img class="default-img" src="'.$product_arr1->images.'" alt="#">
+                                    <img class="hover-img"  src="'.$product_arr1->images.'" alt="#">
+                                </a>
+                                <div class="button-head">
+                                    <div class="product-action">
+                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                        <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
+                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
+                                    </div>
+                                    <div class="product-action-2">
+                                        <a title="Add to cart" href="#">Thêm vào giỏ</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
+                                <div class="product-price" style="text-align: center; color: red;">
+                                 <span>'.$product_arr1->price.'</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+           }
+           } 
+           else{
+            $output.='<div class="container col-lg-12 col-md-12 col-12"><strong style="font-size:150%; background-color:#ccc;"><i class="fa fa-search" aria-hidden="true"></i> Không tìm thấy sản phẩm nào khớp với lựa chọn của bạn.</strong></div>';
+           }
+         echo $output;
+         }
+         else{
+
+         if($category_id->parent_id!=0){
+               if($order_by==0){
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->orderBy('product.created_at','desc')->get();
+           }
+           elseif($order_by==1){
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->orderBy('product.price','desc')->get();
+           }
+           else{
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->orderBy('product.price','asc')->get();
+           }
+          }
+          else{
+             $children_ids=DB::table('category')->where('parent_id',$category_id->id)->get();
+             $id_children[]=$category_id->id;
+             foreach($children_ids as $children_id){
+                $id_children[]=$children_id->id;
+             }
+            if($order_by==0){
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->whereIn('product_category.category_id',$id_children)->orderBy('product.created_at','desc')->get();
+           }
+           elseif($order_by==1){
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->whereIn('product_category.category_id',$id_children)->orderBy('product.price','desc')->get();
+           }
+           else{
+           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->whereIn('product_category.category_id',$id_children)->orderBy('product.price','asc')->get();
+           }
+
+          }
+
+
+
+          
+             
+            $output='';
+            foreach ($product_cat as $product_arr1) {
+          $output.='<div class="col-lg-4 col-md-6 col-12">
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'">
+                                    <img class="default-img" src="'.$product_arr1->images.'" alt="#">
+                                    <img class="hover-img"  src="'.$product_arr1->images.'" alt="#">
+                                </a>
+                                <div class="button-head">
+                                    <div class="product-action">
+                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                        <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
+                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
+                                    </div>
+                                    <div class="product-action-2">
+                                        <a title="Add to cart" href="#">Thêm vào giỏ</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
+                                <div class="product-price" style="text-align: center; color: red;">
+                                 <span>'.$product_arr1->price.'</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+           }
+            return $output;
+         }
+        }
+
     public function getProductAttribute(Request $request) {
         session_start();
         ini_set('memory_limit', '2048M');
