@@ -240,9 +240,9 @@ document.body.querySelector('#alternate-button-container')
 								<h3 style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_arr1->alias])}}">{{$product_arr1->title}}</a></h3>
 								<div class="product-price" style="text-align: center; color: red;">
 									@if($product_arr1->sale_price!=null)
-									<span>${{number_format($product_arr1->sale_price)}}</span>
+									<span>{{number_format($product_arr1->sale_price)}} đ</span>
 									@else
-									<span>${{number_format($product_arr1->price)}}</span>
+									<span>{{number_format($product_arr1->price)}} đ</span>
 									@endif
 								</div>
 							</div>
