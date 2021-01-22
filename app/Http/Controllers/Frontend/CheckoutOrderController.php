@@ -120,11 +120,12 @@ class CheckoutOrderController extends Controller {
                             $input['price'] = $val['price'];
                             $input['each_total'] = $val['quantity'] * $val['price'];
                             $input['created_at'] =  Carbon::now('Asia/Ho_Chi_Minh');
-                            $insert_input[]=$input;
+
+                            DB::table('order_detail')->insert($input);
                     }
                 }
-                $order_detail=DB::table('order_detail')->insert($insert_input);
-                dd($order_detail);
+
+
                 $order=DB::table('order')->where('id',$order_id)->first();
                 session()->forget('cart');
                 return redirect()->route('home.index')->with('order_success','Mua hàng thành công');
