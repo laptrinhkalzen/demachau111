@@ -237,9 +237,10 @@ class ProductController extends Controller {
 
     public function getProductAttributes($input) {
         $attributes = array();
-
+        if($input['attribute']){
         foreach ($input['attribute'] as $key => $val) {
             $attributes[$key] = ['value' => $val,'is_variant'=>null];
+        }
         }
         foreach ($input['attribute_select'] as $key => $val) {
             if ($val != null) {
