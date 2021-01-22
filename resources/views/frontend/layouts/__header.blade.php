@@ -41,9 +41,8 @@
 <link rel="stylesheet" href="{{asset('public/demachau/css/style.css')}}">
 <link rel="stylesheet" href="{{asset('public/demachau/css/responsive.css')}}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="sweetalert2.all.min.js"></script>
-<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
-<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>    
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>   
     
 </head>
 
@@ -84,7 +83,7 @@
     <!-- Header -->
 
 <script type="text/javascript">
-Swal.fire('Any fool can use a computer')
+swal("Hello world!");
 </script>
 
     <header class="header shop">
