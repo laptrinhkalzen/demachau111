@@ -177,7 +177,8 @@
                                         <select name="attribute_select[]" class="select-search form-control" data-placeholder="Chọn"  multiple>
                                            
                                             @foreach ($val->children as $k => $v)
-                                            <option value="{{$v->id}}">{{$v->title}}</option>
+                   
+                                            <option value="{{$v->id}}" {{in_array($v->id, old("attribute_select") ?: []) ? "selected": ""}}>{{$v->title}}</option>
                                             @endforeach
                                         </select>
                                         @else
