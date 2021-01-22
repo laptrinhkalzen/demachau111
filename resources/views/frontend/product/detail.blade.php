@@ -127,8 +127,8 @@ input[type="number"] {
                         @csrf
                         <input type="hidden" id="option_number" name="option_number">
                         <div class="row">
-                            <div class="col-lg-5 col-12">
-                                <div class=" my-4">
+                            <div class="col-lg-5 col-12" style="">
+                                <div>
                                     
                                     <!--Carousel Wrapper-->
                                     
@@ -137,16 +137,10 @@ input[type="number"] {
                                             <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
                                                 <!-- slides -->
                                                 <div class="carousel-inner">
-                                                    <div class="carousel-item active"> <img src="https://i.imgur.com/weXVL8M.jpg" alt="Hills"> </div>
-                                                    <div class="carousel-item"> <img src="https://i.imgur.com/Rpxx6wU.jpg" alt="Hills"> </div>
-                                                    <div class="carousel-item"> <img src="https://i.imgur.com/83fandJ.jpg" alt="Hills"> </div>
-                                                    <div class="carousel-item"> <img src="https://i.imgur.com/JiQ9Ppv.jpg" alt="Hills"> </div>
+                                                    <div class="carousel-item active"> <img src="https://i.imgur.com/weXVL8M.jpg" alt="Hills" style="width: 100%;"> </div>
                                                     </div> <!-- Left right --> <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
                                                     <ol class="carousel-indicators list-inline">
                                                         <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="https://i.imgur.com/weXVL8M.jpg" class="img-fluid"> </a> </li>
-                                                        <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="https://i.imgur.com/Rpxx6wU.jpg" class="img-fluid"> </a> </li>
-                                                        <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="https://i.imgur.com/83fandJ.jpg" class="img-fluid"> </a> </li>
-                                                        <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel"> <img src="https://i.imgur.com/JiQ9Ppv.jpg" class="img-fluid"> </a> </li>
                                                     </ol>
                                                 </div>
                                             </div>
@@ -155,7 +149,7 @@ input[type="number"] {
                                     </div>
                                 </div>
                                 
-                                <div class="col-lg-7 col-12">
+                                <div class="col-lg-7 col-12" style="padding-left: 0px !important">
                                     <div class="form-group">
                                         
                                         <p style="font-size: 22px;font-weight: bold;">{{$detail_product->title}}</p>

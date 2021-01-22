@@ -1789,7 +1789,7 @@ display: none !important;
 .icon-filter{
 	display:none !important;
 }
-.default-img{
+.custom-img{
 	width: 255px !important;
 	height: 255px !important;
 	object-fit: cover !important;
