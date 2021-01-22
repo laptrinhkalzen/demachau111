@@ -121,7 +121,7 @@
 									</tr>
 									<tr>
 										<td style="text-align: center;">Tổng</td>
-										<td name="final_total" id="final_total" style="text-align: center; color:red;">{{number_format$total)}}</td>
+										<td name="final_total" id="final_total" style="text-align: center; color:red;">{{number_format($total)}}</td>
 										
 									</tr>
 								</tbody>
