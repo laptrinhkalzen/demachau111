@@ -252,30 +252,23 @@ margin-top: 0px;
                             
                             <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
                             <div class="product-price" style="text-align: center;">
-                                @foreach($product_sale as $pro_sale)
                                 @php 
                                    $dem=0;
                                 @endphp
+                                @foreach($product_sales as $pro_sale)
                                 @if($product_danh_muc_cha1->id==$pro_sale->product_id)
-                                @php
+                                @php 
                                    $dem++;
                                 @endphp
-                                @if($pro_sale->discount_type==0)
                                 <span class="old">{{number_format($product_danh_muc_cha1->price)}}đ</span>
-                                <span style="color:red;">{{number_format($product_danh_muc_cha1->price-($product_danh_muc_cha1->price/100*$pro_sale->discount_type))}}đ</span>
-                                @else
-                                <span class="old">{{number_format($product_danh_muc_cha1->price)}}đ</span>
-                                <span style="color:red;">{{number_format($product_danh_muc_cha1->price - $pro_sale->discount_value)}}đ</span>
-                                @endif
-
+                                <span style="color:red;">{{number_format($product_danh_muc_cha1->sale_price)}}đ</span>
                                 @endif
                                 @endforeach
-
                                 @if($dem==0)
                                 <span style="color:red;">{{number_format($product_danh_muc_cha1->price)}}đ</span>
                                 @endif
 
-
+                               
                                 
 
                             </div>
