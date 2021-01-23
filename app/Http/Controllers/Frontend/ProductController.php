@@ -147,7 +147,11 @@ class ProductController extends Controller {
             // dd($other_attributes);
             $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get()->pluck('parent_id')->unique();
 <<<<<<< HEAD
+<<<<<<< HEAD
         //dd($parent_ids);
+=======
+             $input=array();
+>>>>>>> origin/main
 =======
              $input=array();
 >>>>>>> origin/main
@@ -155,6 +159,7 @@ class ProductController extends Controller {
                 $input[$key]['id']=$value;
                 $input[$key]['name']=DB::table('attribute')->where('id',$value)->pluck('title')->first();
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             $category=DB::table('product_category')->where('product_id',$id)->pluck('category_id')->first();
@@ -173,12 +178,17 @@ class ProductController extends Controller {
 
             return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','other_attributes','similar_product_ids','products'));
 =======
+=======
+>>>>>>> origin/main
             if($input!=null){
             return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','count_input'));
             }
             else{
                 return redirect()->back()->with('out_stock','Sản phẩm tạm hết hàng');
             }
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 
         }      
