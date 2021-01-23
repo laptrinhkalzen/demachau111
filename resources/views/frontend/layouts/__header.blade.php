@@ -9,7 +9,7 @@
     <!-- Title Tag  -->
     <title>Đệm á châu.</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images\favicon.png">
+    <link rel="shortcut icon" type="image / png" href="{!!$share_config->favicon!!}"/>
     <!-- Web Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
   
@@ -85,6 +85,15 @@
 <script type="text/javascript">
 swal("Đặt hàng thành công!");
 </script>
+@endif
+
+@if(Session('out_stock'))
+
+<script type="text/javascript">
+swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
+
+</script>
+
 @endif
 
     <header class="header shop">

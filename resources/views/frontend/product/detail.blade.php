@@ -165,7 +165,7 @@ input[type="number"] {
                                               <option>5</option>
                                             </select> -->
                                           </div>
-
+                                            @if($input)
                                             @foreach($input as $inputt)
                                             <div class="col-lg-12">
                                                 <span style="font-size: 14px;font-weight: 600;">{{$inputt['name']}}</span>
@@ -195,13 +195,12 @@ input[type="number"] {
                                             @endforeach
                                             
                                             @endforeach
-                                            
-                                            
-                                            
+                                            @endif
                                         </div>
-                                
-                                        <div class="row col-lg-6" >
-                                            <p id="option_price" style="color:red;font-size: 24px;">{{$detail_product->getPrice()}}</p>
+
+                                        <div class="row col-lg-8" >
+                                            <div id="price_origin" style="text-decoration-line:line-through;" class="old"></div>&nbsp
+                                            <div id="option_price" style="color:red;font-size: 24px;"></div>
                                         </div>
                                         
                                         
@@ -304,16 +303,35 @@ input[type="number"] {
 
     <section style="padding-bottom: 50px;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
-            <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Thông tin bổ sung</p>
+            <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Đặc điểm</p>
             <div class="row mt-4" style="font-size:14px;">
-                <div class="col-6 col-lg-6">
-                    <p style="color: black;font-weight: bold;">Chất liệu</p>
+                   
+                    @foreach($other_attributes as $key => $other_attribute)
+                     
+                    <div  class="col-md-7 col-7 col-lg-7">
+                    <p style="color: black;font-weight: bold; padding: 10px;">{{$other_attribute->title}}</p>
+   
                 </div>
-                <div class="col-6 col-lg-6">
-                    <p>Cao su</p>
-                </div>
+                    <div class="col-md-5 col-5 col-lg-5">
+ 
+                          @foreach($other_attribute as $key1 => $other)
+                            @if($key1==0)
+                              <span>{{$other->title}}</span>
+                            @else
+                                <span>,{{$other->title}}</span>
+                            @endif
+                          @endforeach
+                            </div>
+                      @endforeach
+                    </div>
+                    
+                    
+
+              
+
+               
             </div>
-            <hr>
+            
         </div>
     </section>
 
@@ -341,6 +359,7 @@ input[type="number"] {
     <section style="padding-bottom: 50px;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm tương tự</p>
+            
         </div>
     </section>
 
@@ -360,7 +379,8 @@ input[type="number"] {
     method:'POST',
     data:{search:search,alias:alias,_token: $('#token').val()},
     success:function(resp){
-    $('#option_price').html(formatNumber(resp.result['option_price']) + ' đ');
+    $('#price_origin').html(formatNumber(resp.result['option_price']) + 'đ');
+    $('#option_price').html(formatNumber(resp.result_price) + 'đ');
     $('#option_number').val(resp.option_number);
     
     }

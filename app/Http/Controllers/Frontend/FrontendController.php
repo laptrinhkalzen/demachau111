@@ -13,6 +13,7 @@ use App\Repositories\ProductAttributeRepository;
 use App\Repositories\SlideRepository;
 use Repositories\AttributeRepository;
 use DB;
+use Carbon\Carbon;
 
 class FrontendController extends Controller {
 
@@ -42,11 +43,12 @@ class FrontendController extends Controller {
             foreach ($product_attributes as $key => $value) {
                 $value->parent_name=DB::table('attribute')->where('id',$value->parent_id)->pluck('title');
             }
+        $product_sale=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();  
+
           $product_attrs=$product_attributes->groupBy('product_id');
-         //dd($product_attrs);
-      // dd($attributes);
+       //dd($product_danh_muc_cha);
      
-        return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products'));
+        return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','product_sale'));
     }
     
     public function event() {

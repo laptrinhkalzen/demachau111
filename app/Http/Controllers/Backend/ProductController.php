@@ -220,7 +220,9 @@ class ProductController extends Controller {
         }
         $min_price=DB::table('option_detail')->where('product_id',$id)->min('option_price');
         $data['price']=$min_price;
+        if($data['price']){
         DB::table('product')->where('id',$id)->update(['price'=>$data['price']]);
+        }
         }
         }
         else{

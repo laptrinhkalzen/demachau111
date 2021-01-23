@@ -68,7 +68,7 @@
                                 <div class="single-product col-md-4" >
                                    
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="{{route('news.detail',['alias'=>$record->alias])}}">
                                             <img class="default-img" src="{{$record->images}}" alt="#">
                                             <img class="hover-img" src="{{$record->images}}" alt="#">
                                         </a>

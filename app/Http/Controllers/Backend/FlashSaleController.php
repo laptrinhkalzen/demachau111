@@ -76,8 +76,16 @@ class FlashSaleController extends Controller {
                 $insert_data[]=$import_product;
                 
             }
+
             $input=DB::table('flash_sale_product')->insert($insert_data);
-        
+            $this_flash_sale=DB::table('flashsale')->where('id',$input1)->first();
+            if($this_flash_sale->status==1 && $this_flash_sale->start<Carbon::now('Asia/Ho_Chi_Minh') && $this_flash_sale->end>Carbon::now('Asia/Ho_Chi_Minh')){
+             $product_sales=DB::table('flash_sale_product')->where('id',$input1)->get();
+             foreach ($product_sales as $key => $product_sale) {
+                  DB::table('product')->where('id',$product_sale->product_id)->update(['sale_prcie'=>$product_price->price_decrease]);
+                }
+            }
+            
              if ($input) {
             return redirect()->route('admin.flashsale.index')->with('success', 'Tạo thành công');
         } else {

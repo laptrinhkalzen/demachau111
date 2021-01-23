@@ -1011,10 +1011,10 @@ ul.left-icon.hotline {
 	border:none;
 }
 .header.shop .main-category li a {
-	font-size: 14px;
-	font-weight: 600;
+	font-size: 13px;
+	font-weight: bold !important;
 	color: #333;
-	padding: 13px 25px 13px 25px;
+	padding: 3px 5px 3px 5px;
 	display: block;
 	text-transform: uppercase;
 }

@@ -132,18 +132,38 @@ class ProductController extends Controller {
         $slide1 = $this->slideRepo->getSlide1();
         return view('frontend/home/search',compact('search_product','count','slide1'));
     }
+
     public function detail(Request $request,$alias) {
             $id=DB::table('product')->where('alias',$alias)->pluck('id')->first();
             $benefit = DB::table('benefit')->orderBy('order','asc')->get();
             $detail_product =  $this->productRepo->getDetailProduct($alias);
             $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get();
+            $other_attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',null)->get()->groupBy('parent_id');
+
+            foreach ($other_attributes as $key => $value) {
+                
+                $other_attributes[$key]->title = DB::table('attribute')->where('id',$key)->pluck('title')->first();
+            }
+            // dd($other_attributes);
             $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get()->pluck('parent_id')->unique();
+<<<<<<< HEAD
+        //dd($parent_ids);
+=======
+             $input=array();
+>>>>>>> origin/main
             foreach ($parent_ids as $key => $value) {
                 $input[$key]['id']=$value;
                 $input[$key]['name']=DB::table('attribute')->where('id',$value)->pluck('title')->first();
             }
+<<<<<<< HEAD
 
-
+            $category=DB::table('product_category')->where('product_id',$id)->pluck('category_id')->first();
+            $similar_product_ids=DB::table('product_category')->where('category_id',$category)->get();
+            foreach ($similar_product_ids as $key => $value) {
+                $product_ids[]=$value->product_id;
+            }
+            $products=DB::table('product')->orderBy('id','asc')->where('status',1)->get();
+            //dd($product_ids);
            
              
             // $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));
@@ -151,7 +171,15 @@ class ProductController extends Controller {
             // $news_arr = $this->newsRepo->getAllNews($limit = 7);
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
 
-            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit'));
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','other_attributes','similar_product_ids','products'));
+=======
+            if($input!=null){
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','count_input'));
+            }
+            else{
+                return redirect()->back()->with('out_stock','Sản phẩm tạm hết hàng');
+            }
+>>>>>>> origin/main
 
         }      
 
