@@ -137,7 +137,7 @@ class ProductController extends Controller {
             $benefit = DB::table('benefit')->orderBy('order','asc')->get();
             $detail_product =  $this->productRepo->getDetailProduct($alias);
             $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get();
-            $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->get()->pluck('parent_id')->unique();
+            $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get()->pluck('parent_id')->unique();
             foreach ($parent_ids as $key => $value) {
                 $input[$key]['id']=$value;
                 $input[$key]['name']=DB::table('attribute')->where('id',$value)->pluck('title')->first();
