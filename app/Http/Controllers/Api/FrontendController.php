@@ -120,7 +120,23 @@ class FrontendController extends Controller {
                 $count=1;
         }
         $result_final=DB::table('option_detail')->where('product_id',$id->id)->where('option_id',$number)->first();
-        return response()->json(['result' => $result_final,'option_number'=>$number]);
+        $product=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flash_sale_product.product_id',$result_final->product_id)->where('status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();
+        if($product){
+            if($product->discount_type==0){
+                $result_price=$result_final->option_price-($result_final->option_price/100*$product->discount_value);
+            }
+            elseif ($product->discount_type==1) {
+                $result_price=$result_final->option_price-$product->discount_value;
+            }
+            else{
+                $result_price=$result_final->option_price;
+            }
+            
+        }
+        else{
+            $result_price=$result_final->option_price;
+        }
+        return response()->json(['result' => $result_final,'option_number'=>$number,'result_price'=>$result_price]);
     }
 
     public function registerMarketing(Request $request) {

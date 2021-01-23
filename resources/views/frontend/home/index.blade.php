@@ -181,7 +181,8 @@ margin-top: 0px;
                                                 <span class="old">{{number_format($flashsale_product->price)}}đ</span>
                                                 <span style="color:red;">{{number_format($flashsale_product->price_decrease)}}đ</span>
                                                 @else
-                                                <span style="color:red;">{{number_format($flashsale_product->price)}}đ</span>
+                                                <span style="color:red;">{{number_format($flashsale_product->price)}}
+                                                đ</span>
                                                 @endif
                                             </div>
                                         </div>
@@ -219,6 +220,7 @@ margin-top: 0px;
                 <li style="float: left; border-bottom: solid 1px #283988;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
                 @endif
                 @endforeach
+                <!--  <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a style="color: orange;" class="nav-link"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >Xem tất cả >></a></li> -->
             </ul>
             <!--/ End Tab Nav -->
         </div>
@@ -250,12 +252,32 @@ margin-top: 0px;
                             
                             <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
                             <div class="product-price" style="text-align: center;">
-                                @if($product_danh_muc_cha1->sale_price>0)
-                                <span class="old">{{number_format($product_danh_muc_cha1->sale_price)}}</span>
-                                <span style="color:red;">{{number_format($product_danh_muc_cha1->price)}} đ</span>
+                                @foreach($product_sale as $pro_sale)
+                                @php 
+                                   $dem=0;
+                                @endphp
+                                @if($product_danh_muc_cha1->id==$pro_sale->product_id)
+                                @php
+                                   $dem++;
+                                @endphp
+                                @if($pro_sale->discount_type==0)
+                                <span class="old">{{number_format($product_danh_muc_cha1->price)}}đ</span>
+                                <span style="color:red;">{{number_format($product_danh_muc_cha1->price-($product_danh_muc_cha1->price/100*$pro_sale->discount_type))}}đ</span>
                                 @else
-                                <span style="color:red;">{{number_format($product_danh_muc_cha1->price)}} đ</span>
+                                <span class="old">{{number_format($product_danh_muc_cha1->price)}}đ</span>
+                                <span style="color:red;">{{number_format($product_danh_muc_cha1->price - $pro_sale->discount_value)}}đ</span>
                                 @endif
+
+                                @endif
+                                @endforeach
+
+                                @if($dem==0)
+                                <span style="color:red;">{{number_format($product_danh_muc_cha1->price)}}đ</span>
+                                @endif
+
+
+                                
+
                             </div>
                         </div>
                     </div>
@@ -519,7 +541,7 @@ margin-top: 0px;
 </section> -->
 <!-- End Shop Services Area -->
 <!-- Modal -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $(document).ready(function(){
 checkOption();
 function checkOption(){
@@ -544,7 +566,7 @@ checkOption();
 // });
 });
 });
-</script>
+</script> -->
 <script type="text/javascript">
 $(document).ready(function(){
 // Set the date we're counting down to

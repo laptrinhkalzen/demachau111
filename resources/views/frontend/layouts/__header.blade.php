@@ -87,6 +87,15 @@ swal("Đặt hàng thành công!");
 </script>
 @endif
 
+@if(Session('out_stock'))
+
+<script type="text/javascript">
+swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
+
+</script>
+
+@endif
+
     <header class="header shop">
         <!-- Topbar -->
         <div class="topbar" style="background-color: #3a559f;" >
