@@ -198,7 +198,7 @@ input[type="number"] {
                                             @endif
                                         </div>
 
-                                        <div class="row col-lg-8" >
+                                        <div class="row col-lg-10" >
                                             <div id="price_origin" style="text-decoration-line:line-through;" class="old"></div>&nbsp
                                             <div id="option_price" style="color:red;font-size: 24px;"></div>
                                         </div>
@@ -379,8 +379,26 @@ input[type="number"] {
     method:'POST',
     data:{search:search,alias:alias,_token: $('#token').val()},
     success:function(resp){
-    $('#price_origin').html(formatNumber(resp.result['option_price']) + 'đ');
-    $('#option_price').html(formatNumber(resp.result_price) + 'đ');
+    if(resp.result_price!=0 ){
+        if(resp.result['option_price']!=null || resp.result['option_price']>0){   
+            $('#price_origin').html(formatNumber(resp.result['option_price']) + 'đ');
+            $('#option_price').html(formatNumber(resp.result_price) + 'đ');
+        }
+        else{
+             $('#price_origin').hide();
+            $('#option_price').html('Loại sản phẩm này đã hết!');
+        }
+    }
+    else{
+        if(resp.result['option_price']!=null || resp.result['option_price']>0){   
+            $('#option_price').html(formatNumber(resp.result['option_price']) + 'đ');
+        }
+        else{
+            $('#price_origin').html('');
+            $('#option_price').html('Loại sản phẩm này đã hết!');
+        }
+       
+    }
     $('#option_number').val(resp.option_number);
     
     }

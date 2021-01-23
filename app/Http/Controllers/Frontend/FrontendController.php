@@ -50,8 +50,11 @@ class FrontendController extends Controller {
                      if($product_sale->discount_type==0){
                          $sale_price=$value->price-($value->price/100*$product_sale->discount_value);
                      }
-                     if($product_sale->discount_type==1){
+                     elseif($product_sale->discount_type==1){
                           $sale_price=$value->price-$product_sale->discount_value;
+                     }
+                     else{
+                         $sale_price=$product_sale->discount_value;
                      }
                      $product_danh_muc_cha[$key]->sale_price=$sale_price;
                  }

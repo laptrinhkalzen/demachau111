@@ -244,6 +244,8 @@ document.body.querySelector('#alternate-button-container')
 									@else
 									<span>{{number_format($product_arr1->price)}}đ</span>
 									@endif
+
+									
 								</div>
 							</div>
 						</div>

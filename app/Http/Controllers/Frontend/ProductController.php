@@ -146,21 +146,14 @@ class ProductController extends Controller {
             }
             // dd($other_attributes);
             $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get()->pluck('parent_id')->unique();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        //dd($parent_ids);
-=======
+
              $input=array();
->>>>>>> origin/main
-=======
-             $input=array();
->>>>>>> origin/main
+
             foreach ($parent_ids as $key => $value) {
                 $input[$key]['id']=$value;
                 $input[$key]['name']=DB::table('attribute')->where('id',$value)->pluck('title')->first();
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
             $category=DB::table('product_category')->where('product_id',$id)->pluck('category_id')->first();
             $similar_product_ids=DB::table('product_category')->where('category_id',$category)->get();
@@ -176,20 +169,13 @@ class ProductController extends Controller {
             // $news_arr = $this->newsRepo->getAllNews($limit = 7);
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
 
-            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','other_attributes','similar_product_ids','products'));
-=======
-=======
->>>>>>> origin/main
             if($input!=null){
-            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','count_input'));
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','count_input','similar_product_ids','products','other_attributes'));
             }
             else{
                 return redirect()->back()->with('out_stock','Sản phẩm tạm hết hàng');
             }
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/main
+
 
         }      
 
