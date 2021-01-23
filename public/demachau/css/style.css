@@ -1162,7 +1162,7 @@ ul.left-icon.hotline {
 	color: #fff;
 	text-transform: capitalize;
 	font-size: 15px;
-	padding: 20px 15px;
+	padding: 15px 10px;
 	font-weight: 500;
 	display: block;
 	position: relative;
@@ -1944,7 +1944,7 @@ padding-left: 0px;
 	display: inline-block;
 	position: relative;
 	margin-right: 5px;
-	font-weight: 500;
+	font-weight: bold;
 	background: #fff;
 	color: #333;
 	padding: 3px 14px;
