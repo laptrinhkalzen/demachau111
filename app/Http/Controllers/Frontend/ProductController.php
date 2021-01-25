@@ -18,6 +18,7 @@ use Repositories\GalleryRepository;
 use App\Product;
 use App\Repositories\SlideRepository;
 use DB;
+use Carbon\Carbon;
 
 class ProductController extends Controller {
 
@@ -69,7 +70,7 @@ class ProductController extends Controller {
           }
           else{
              $children_ids=DB::table('category')->where('parent_id',$category_id->id)->get();
-             $id_children[]=$category_id->id;
+             $id_children=array();
              foreach($children_ids as $children_id){
                 $id_children[]=$children_id->id;
              }
@@ -92,9 +93,27 @@ class ProductController extends Controller {
             foreach ($attributes as $key => $attribute) {
                 $cat[]=$key;
             }
-          $attributes=DB::table('attribute')->where('parent_id','!=','0')->whereIn('id',$cat)->get()->groupBy('parent_id');
+           $attributes=DB::table('attribute')->where('parent_id','!=','0')->whereIn('id',$cat)->get()->groupBy('parent_id');
    
-          $parent_attributes=DB::table('attribute')->where('parent_id',0)->get();
+           $parent_attributes=DB::table('attribute')->where('parent_id',0)->get();
+            $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();  
+            foreach ($product_cat as $key => $value) {
+                 foreach ($product_sales   as  $product_sale) {
+                     if($product_sale->product_id==$value->id){
+                         if($product_sale->discount_type==0){
+                             $sale_price=$value->price-($value->price/100*$product_sale->discount_value);
+                         }
+                         if($product_sale->discount_type==1){
+                              $sale_price=$value->price-$product_sale->discount_value;
+                         }
+                         if($product_sale->discount_type==2){
+                             $sale_price=$product_sale->discount_value;
+                         }
+                         $product_cat[$key]->sale_price=$sale_price;
+                     }
+            }
+            }
+            //dd($product_cat);
           return view('frontend/category/show',compact('product_cat','attributes','parent_attributes','category_id'));
     }
 

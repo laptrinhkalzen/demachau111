@@ -32,22 +32,38 @@ class CheckoutOrderController extends Controller {
            $cart = session()->get('cart');
            $product=Product::find($id);
            $price=DB::table('option_detail')->where('product_id',$id)->where('option_id',$option_number)->pluck('option_price')->first();
-         if (isset($cart[$id.'_'.$option_number]) && $cart[$id.'_'.$option_number]['option_number']==$request->option_number) {
-            $cart[$id.'_'.$option_number]['quantity'] += $request->quantity;
-            session()->put('cart', $cart);   
-        } else {
-            $cart[$id.'_'.$option_number] = [
-                "alias" =>$product->alias,
-                "product_id"=>$id,
-                "title" => $product->title,
-                "quantity" => $request->quantity,
-                "price" => $price,
-                "image" => $product->getImage(),
-                "url" => $product->alias,
-                "option_number"=>$request->option_number
-            ];
-            session()->put('cart', $cart);
-        }
+           $product_sale=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('product_id',$id)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();  
+           //dd($product_sale);
+            if($product_sale){
+                if($product_sale->discount_type==0){
+                    $price=$price-($price/100*$product_sale->discount_value);
+                }
+                if($product_sale->discount_type==1){
+                    $price=$price-$product_sale->discount_value;
+                }
+                if($product_sale->discount_type==2){
+                   $price=$product_sale->discount_value;
+                }
+            }
+          
+            
+            if (isset($cart[$id.'_'.$option_number]) && $cart[$id.'_'.$option_number]['option_number']==$request->option_number) {
+                $cart[$id.'_'.$option_number]['quantity'] += $request->quantity;
+                session()->put('cart', $cart);   
+            } else {
+                $cart[$id.'_'.$option_number] = [
+                    "alias" =>$product->alias,
+                    "product_id"=>$id,
+                    "title" => $product->title,
+                    "quantity" => $request->quantity,
+                    "price" => $price,
+                    "image" => $product->getImage(),
+                    "url" => $product->alias,
+                    "option_number"=>$request->option_number
+                ];
+                session()->put('cart', $cart);
+            }
+            //dd(Session('cart'));
        
            
         return Redirect()->route('checkout_order.index');
@@ -60,6 +76,18 @@ class CheckoutOrderController extends Controller {
            $product=Product::find($id);
            $option_number=$request->option_number;
             $price=DB::table('option_detail')->where('product_id',$id)->where('option_id',$option_number)->pluck('option_price')->first();
+             $product_sale=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('product_id',$id)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();  
+            if($product_sale){
+                if($product_sale->discount_type==0){
+                    $price=$price-($price/100*$product_sale->discount_value);
+                }
+                if($product_sale->discount_type==1){
+                    $price=$price-$product_sale->discount_value;
+                }
+                if($product_sale->discount_type==2){
+                   $price=$product_sale->discount_value;
+                }
+            }
          if (isset($cart[$id.'_'.$option_number]) && $cart[$id.'_'.$option_number]['option_number']==$request->option_number) {
             $cart[$id.'_'.$option_number]['quantity'] += $request->quantity;
             session()->put('cart', $cart);   

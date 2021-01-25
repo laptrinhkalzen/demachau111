@@ -126,13 +126,16 @@ class FrontendController extends Controller {
             if($product->discount_type==0){
                 $result_price=$result_final->option_price-($result_final->option_price/100*$product->discount_value);
             }
-            elseif ($product->discount_type==1) {
+            else if ($product->discount_type==1) {
                 $result_price=$result_final->option_price-$product->discount_value;
             }
+            else if ($product->discount_type==2) {
+                $result_price=$product->discount_value;
+            }
+
             else{
                 $result_price=0;
             }
-            
         }
         else{
             $result_price=0;
