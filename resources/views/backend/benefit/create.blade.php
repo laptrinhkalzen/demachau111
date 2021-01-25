@@ -79,12 +79,24 @@ function showPreview(event){
                             <div class="col-md-10">
 
                                 <div class="form-group row">
+                                    <label class="col-md-2 col-form-label text-right">Mô tả: </label>
+                                    <div class="col-md-10">
+                                        <textarea class="form-control ckeditor" id="description" name="description">{!!old('description')!!}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-10">
+
+                                <div class="form-group row">
                                     <label class="col-md-2 col-form-label text-right">Nội dung: </label>
                                     <div class="col-md-10">
                                         <textarea class="form-control ckeditor" id="content" name="content">{!!old('content')!!}</textarea>
                                     </div>
                                 </div>
                             </div>
+
+                            
                             
                             <div class="col-md-10">
                             <div class="form-group row">

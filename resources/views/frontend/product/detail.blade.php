@@ -274,7 +274,7 @@ input[type="number"] {
                                             </div>
                                             <div class="col-md-9">
                                                 <div style="font-weight: 500;">{!!$benefits->name!!}</div>
-                                                <p>{!!$benefits->content!!}</p>
+                                                <p>{!!$benefits->description!!}</p>
                                                 
                                             </div>
                                         </div>
