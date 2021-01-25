@@ -137,6 +137,15 @@ img {
     z-index: 2;
     border: 2px solid #fff;
 }
+
+.container .show_description{
+	overflow: hidden;
+	line-height: 24px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
 .ux-timer {
 	float: right;
     width: 60%;
