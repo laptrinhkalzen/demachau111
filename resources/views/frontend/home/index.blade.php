@@ -213,11 +213,11 @@ margin-top: 0px;
         </div> -->
         <div class="nav-main">
             <!-- Tab Nav -->
-            <ul style="" class="nav nav-tabs" id="myTab" role="tablist">
-                <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
+            <ul style=" border-bottom: solid 1px #283988;" class="nav nav-tabs" id="myTab" role="tablist">
+                <li style="float: left; border-bottom: none;height: 44px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
                 @foreach($danh_muc_con as $danh_muc_con1)
                 @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
-                <li style="float: left; border-bottom: solid 1px #283988;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
+                <li style="float: left;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
                 @endif
                 @endforeach
                 <!--  <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a style="color: orange;" class="nav-link"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >Xem tất cả >></a></li> -->

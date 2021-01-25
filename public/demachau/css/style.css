@@ -973,14 +973,19 @@ ul.left-icon.hotline {
 	background: transparent;
 	position: relative;
 	background: #283988;
-	height: auto;
+	/*height: auto;*/
 }
 .header.shop .all-category h3{
 	padding: 20px 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 10px;
+
 }
 .header.shop .cat-heading {
 
-	font-size: 20px;
+	font-size: 14px;
 	color: #fff;
 }
 .header.shop .cat-heading i {
@@ -988,12 +993,12 @@ ul.left-icon.hotline {
 	color: #fff;
 	display: inline-block;
 	margin-right: 15px;
-	font-size: 22px;
+	font-size: 16px;
 }
 .header.shop .main-category {
 	position: absolute;
 	left: 0;
-	top: 64px;
+	top: 44px;
 	background: #fff;
 	z-index: 1;
 	width: 100%;
@@ -1356,8 +1361,12 @@ ul.left-icon.hotline {
 	width:100%;
 	z-index:999;
 }
-.cat-nav-head .row .col-lg-3 .all-category{
-
+.cat-nav-head .row .col-lg-3 .all-category .cat-heading{
+	height: 44px;
+	text-align: center;
+}
+.cat-nav-head .row .col-lg-3 .all-category {
+	height: 44px;
 }
 .cat-nav-head .row .col-lg-9{
 padding-left: 0px;

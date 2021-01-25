@@ -258,7 +258,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
         <!-- Header Inner -->
-        <div class="header-inner" style="background-color: #283988;height: 64px;">
+        <div class="header-inner" style="background-color: #283988;height: 44px;">
             <div class="container">
                 <div class="cat-nav-head">
                     <div class="row" >
@@ -278,7 +278,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                         @endphp
                                         @endforeach 
                                         @if($dem>0)  
-                                        <li><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}<i style="padding-top: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         @else
                                         <li><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a>
                                         @endif
@@ -312,7 +312,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                                     
                                                     @foreach ($menu_arr as $key=>$menu)
                                                     @if($key == 0)
-                                                    <li class="nav-item" style="background-color: #ea1621;height: 64px;">
+                                                    <li class="nav-item" style="background-color: #ea1621;height: 44px;">
                                                         <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
                                                     </li>
                                                     @else
