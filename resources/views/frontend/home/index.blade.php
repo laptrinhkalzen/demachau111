@@ -158,7 +158,7 @@ margin-top: 0px;
                     <div class="container" style="background-color:white;">
                         <div class="row">
                             <div class="col-12">
-                                <div class="owl-carousel popular-slider">
+                                <div class="owl-carousel1 popular-slider">
                                     @foreach($flashsale_products as $flashsale_product)
                                     @if($flashsale_product->flash_sale_id == $flashsale->id)
                                     <div class="single-product" style="margin-top:0px;">
@@ -597,5 +597,22 @@ document.getElementById("countdown").innerHTML = "EXPIRED";
 <aside class="right"><a href="{{$banner_right->url}}"><img style="width: 150px;  height: 540px;position:absolute;right:0;" src="{{$banner_right->image}}"></img></a></aside>
 <!-- Modal end -->
 <!-- Start Footer Area -->
-
+<script>
+ $(document).ready(function() {
+$('.owl-carousel1').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    },
+    navText : ["<i class='ti-angle-left'></i>","<i class='ti-angle-right'></i>"]
+})
+         });
+</script>
 @stop

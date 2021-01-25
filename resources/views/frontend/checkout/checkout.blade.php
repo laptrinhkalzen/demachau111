@@ -32,6 +32,84 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-lg-7 col-12 mt-4" style="background-color:white;">
+					<div class="checkout-form">
+						<h5>Thông tin thanh toán</h5>
+						<!-- Form -->
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-12">
+								<div class="form-group">
+									<label>Họ và tên<span>*</span></label>
+									<input type="text" name="member_name" placeholder="" required="required">
+								</div>
+							</div>
+							
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<label>Địa chỉ email<span>*</span></label>
+									<input class="" type="email" name="email" placeholder="" required="required">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<label>Số điện thoại<span>*</span></label>
+									<input type="number" name="mobile" placeholder="" required="required">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<label>Chọn thành phố<span>*</span></label>
+									<select  style="background-color: #f6f7fb;" id="city" class="option form-control select2" name="id_tp" required="">
+										<option value="">Chọn thành phố</option>
+										@foreach($city as $city)
+										<option value="{{$city->id_tp}}">{{$city->name_tp}} </option>
+										@endforeach
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<label>Chọn quận huyện<span>*</span></label>
+									<select style="background-color: #f6f7fb;" id="district" class="form-control district select2" name="id_qh"required="">
+										
+										@foreach($district as $district)
+										<option value="{{$district->id_qh}}">{{$district->name_qh}} </option>
+										@endforeach
+									</select>
+								</div>
+							</div>
+							
+							
+							
+							<div class="col-lg-12 col-md-12 col-12">
+								<div class="form-group">
+									<label>Địa chỉ cụ thể<span>*</span></label>
+									<input type="text" name="address" placeholder="" required="required">
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-12 col-12">
+								<div class="form-group">
+									<label>THÔNG TIN BỔ SUNG</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." rows="3"></textarea>
+								</div>
+							</div>
+								<div class="col-lg-12 col-md-12 col-12">
+							<div class="single-widget">
+							<div class="content">
+								<div class="button">
+									<button type="submit" class="btn" style="width: 100%;">Đặt hàng</button>
+								</div>
+							</div>
+						</div>
+						</div>
+							
+							
+							
+						</div>
+						
+						<!--/ End Form -->
+					</div>
+				</div>
 				<div class="col-lg-5 col-12">
 					<div class="order-details" style="margin-top: 0px;padding-left: 15px;">
 						<!-- Order Widget -->
@@ -164,84 +242,7 @@
 						<!--/ End Button Widget -->
 					</div>
 				</div>
-				<div class="col-lg-7 col-12 mt-4" style="background-color:white;">
-					<div class="checkout-form">
-						<h5>Thông tin thanh toán</h5>
-						<!-- Form -->
-						<div class="row">
-							<div class="col-lg-12 col-md-12 col-12">
-								<div class="form-group">
-									<label>Họ và tên<span>*</span></label>
-									<input type="text" name="member_name" placeholder="" required="required">
-								</div>
-							</div>
-							
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="form-group">
-									<label>Địa chỉ email<span>*</span></label>
-									<input class="" type="email" name="email" placeholder="" required="required">
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="form-group">
-									<label>Số điện thoại<span>*</span></label>
-									<input type="number" name="mobile" placeholder="" required="required">
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="form-group">
-									<label>Chọn thành phố<span>*</span></label>
-									<select  style="background-color: #f6f7fb;" id="city" class="option form-control select2" name="id_tp" required="">
-										<option value="">Chọn thành phố</option>
-										@foreach($city as $city)
-										<option value="{{$city->id_tp}}">{{$city->name_tp}} </option>
-										@endforeach
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="form-group">
-									<label>Chọn quận huyện<span>*</span></label>
-									<select style="background-color: #f6f7fb;" id="district" class="form-control district select2" name="id_qh"required="">
-										
-										@foreach($district as $district)
-										<option value="{{$district->id_qh}}">{{$district->name_qh}} </option>
-										@endforeach
-									</select>
-								</div>
-							</div>
-							
-							
-							
-							<div class="col-lg-12 col-md-12 col-12">
-								<div class="form-group">
-									<label>Địa chỉ cụ thể<span>*</span></label>
-									<input type="text" name="address" placeholder="" required="required">
-								</div>
-							</div>
-							<div class="col-lg-12 col-md-12 col-12">
-								<div class="form-group">
-									<label>THÔNG TIN BỔ SUNG</label>
-									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." rows="3"></textarea>
-								</div>
-							</div>
-								<div class="col-lg-12 col-md-12 col-12">
-							<div class="single-widget">
-							<div class="content">
-								<div class="button">
-									<button type="submit" class="btn" style="width: 100%;">Đặt hàng</button>
-								</div>
-							</div>
-						</div>
-						</div>
-							
-							
-							
-						</div>
-						
-						<!--/ End Form -->
-					</div>
-				</div>
+
 
 			</div>
 		</div>
