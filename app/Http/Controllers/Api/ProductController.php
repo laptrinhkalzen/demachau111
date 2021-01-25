@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Session;
 use App\Repositories\ProductRepository;
 use Repositories\AttributeRepository;
 use DB;
+use Carbon\Carbon;
 
 class ProductController extends Controller {
 
@@ -28,6 +29,18 @@ class ProductController extends Controller {
         $count = 0;
         $total = 0;
         $cart = session()->get('cart');
+        $product_sale=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('product_id',$id)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();  
+            if($product_sale){
+                if($product_sale->discount_type==0){
+                    $price=$price-($price/100*$product_sale->discount_value);
+                }
+                if($product_sale->discount_type==1){
+                    $price=$price-$product_sale->discount_value;
+                }
+                if($product_sale->discount_type==2){
+                   $price=$product_sale->discount_value;
+                }
+            }
         if (is_null($cart)) {
             $cart = [
                 $id.'_'.$option_number => [

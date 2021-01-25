@@ -180,7 +180,7 @@ class ProductController extends Controller {
                 $product_ids[]=$value->product_id;
             }
             $products=DB::table('product')->orderBy('id','asc')->where('status',1)->get();
-            //dd($product_ids);
+            //dd($products);
            
              
             // $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));

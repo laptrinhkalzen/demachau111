@@ -151,7 +151,7 @@
 													<span>Giá:</span>
 												</div>
 												<div class="col-md-6 col-lg-6 col-6 " >
-													<span><strong data-price="{{$option_detail->option_price}}" class="each_price">{{number_format($option_detail->option_price)}}</strong></span>
+													<span><strong data-price="{{$option_detail->option_price}}" class="each_price">{{number_format($val['price'])}}</strong></span>
 												</div>
 											</div>
 											@endif
@@ -175,6 +175,8 @@
 									</div>
 								</div>
 								@endforeach
+								@else
+								<h3>Không có sản phẩm trong giỏ hàng</h3>
 								@endif
 								
 							</div>

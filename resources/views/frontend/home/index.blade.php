@@ -170,7 +170,7 @@ margin-top: 0px;
                                             <div class="button-head">
                                                
                                                 <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
-                                                    <a  data-toggle="modal" data-target="#exampleModal_{{$flashsale_product->product_id}}" title="Mua hàng" href="#">Mua hàng</a>
+                                                    <a title="Mua hàng" href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">Mua hàng</a>
                                                 </div>
                                             </div>
                                         </div>

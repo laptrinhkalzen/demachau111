@@ -274,7 +274,7 @@ input[type="number"] {
                                             </div>
                                             <div class="col-md-9">
                                                 <div style="font-weight: 500;">{!!$benefits->name!!}</div>
-                                                <p>{!!$benefits->content!!}</p>
+                                                <p>{!!$benefits->description!!}</p>
                                                 
                                             </div>
                                         </div>
@@ -294,12 +294,7 @@ input[type="number"] {
     </section>
     <!--/ End Checkout -->
 
-    <section style="padding-bottom: 50px;">
-        <div class="container" style="background-color: white;border: 1px solid #ebebeb; ">
-            <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Mô tả</p>
-            <p class="m-2" style="color: black;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non nisi pharetra, accumsan lacus eu, ornare lacus. Etiam molestie pharetra urna ac tincidunt. Suspendisse vitae nisi sed leo facilisis consectetur eu a urna. Phasellus mi sapien, tristique quis dolor ut, malesuada viverra sem. Nam enim lacus, lobortis quis finibus vel, dapibus a lacus. Curabitur quis malesuada turpis. Sed consequat feugiat risus, sed cursus felis scelerisque efficitur. Mauris sagittis id leo a malesuada. Sed imperdiet interdum justo. Suspendisse potenti. Vestibulum ex lorem, pellentesque vitae tempus eu, euismod eleifend quam. Donec id nulla hendrerit, faucibus leo et, semper est. Duis lectus felis, tempus eget tempus eget, maximus vel nulla. Nam et malesuada sapien.</p>
-        </div>
-    </section>
+    
 
     <section style="padding-bottom: 50px;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
@@ -325,12 +320,31 @@ input[type="number"] {
                       @endforeach
                     </div>
                     
-                    
+        </div>
+    </section>
+
+    <section style="padding-bottom: 50px;">
+        <div class="container" style="background-color: white;border: 1px solid #ebebeb; ">
+            <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Mô tả</p>
+            <span id="textarea" class="m-2 show_description" style="color: black;">{!!$detail_product->content!!} </span>
+            <!-- <a onclick="showtext('text')" href="javascript:void(0);">See More</a> -->
 
               
-
-               
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                {!!$detail_product->content!!}
+              </div>
             </div>
+            <div style="text-align: center;">
+            <a style=" color: #0BBFFF;" class=" test" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Xem thêm/ Thu gọn
+            </a>
+          </div>
+            
+          
+          
+           <!--  <input type="button" id="show_more" value="Xem thêm"> -->
+            <input type="button" id="show_less" value="Thu gọn" style="display: none;"> 
             
         </div>
     </section>
@@ -359,9 +373,74 @@ input[type="number"] {
     <section style="padding-bottom: 50px;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm tương tự</p>
-            
+            <div class="row">
+                            <div class="col-12">
+                                <div class="owl-carousel popular-slider">
+                                    @foreach($products as $product)
+                                      @foreach($similar_product_ids as $product_ids)
+                                        @if($product->id == $product_ids->product_id)
+                                    <div class="single-product" style="margin-top:0px;">
+                                        <div class="product-img">
+                                            <a href="{{route('product.detail',['alias'=>$product->alias])}}">
+                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$product->images}}" style="padding-top: 10px; ">
+                                            </a>
+                                            <div class="button-head">
+                                               
+                                                <div style="background-color: #283988; text-align: center; width: 90%;" class="product-action-2">
+                                                    <a title="Mua hàng" href="{{route('product.detail',['alias'=>$product->alias])}}">Mua hàng</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product->alias])}}">{{$product->title}}</a></h3>
+                                            <div class="product-price" style="text-align: center;">
+                                                @if($product->sale_price)
+                                                <span class="old">{{number_format($product->price)}}đ</span>
+                                                <span style="color:red;">{{number_format($product->sale_price)}}đ</span>
+                                                @else
+                                                <span style="color:red;">{{number_format($product->price)}}đ</span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                         @endif
+                                      @endforeach
+                                    @endforeach
+                                    
+                                </div>
+                            </div>
+                        </div>
         </div>
     </section>
+  
+   
+    <script type="text/javascript">
+      function showtext()
+          {
+          var text="{!!$detail_product->content!!}";
+          document.getElementById("textarea").innerHTML=text;
+          }
+    </script>
+    <script type="text/javascript">
+      
+        $(document).ready(function(){
+          var check=0;
+          $('.test').on('click',function(){
+            if(check==0){
+            $('.show_description').hide();
+            check=1;
+            }
+            else{
+              $('.show_description').show();
+              check=0;
+
+            }
+
+
+          });
+          
+          });
+    </script>
 
     <script type="text/javascript">
     $(document).ready(function(){

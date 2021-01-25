@@ -11,7 +11,7 @@ class Benefit extends Model
 {
 	
     protected $table = 'benefit';
-    protected $fillable = ['name','content','order'];
+    protected $fillable = ['name','content','order','description'];
     protected $primaryKey ='id';
     public function created_at() {
         return date("d/m/Y", strtotime($this->created_at));

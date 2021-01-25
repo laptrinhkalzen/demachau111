@@ -41,7 +41,7 @@
                  <tr>
                     <th>{{$key+1}}</th>
                     <th>{{$benefits->name}}</th>
-                    <th>{!!$benefits->content!!}</th>
+                    <th>{!!$benefits->order!!}</th>
                     <td class="text-center">
                         <a href="{{route('admin.benefit.edit', $benefits->id)}}" title="Chỉnh sửa" class="success"><i class="icon-pencil"></i></a>   
                         <form action="{!! route('admin.benefit.destroy', $benefits->id) !!}" method="POST" style="display: inline-block">

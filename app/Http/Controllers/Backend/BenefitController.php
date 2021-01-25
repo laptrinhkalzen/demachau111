@@ -28,6 +28,7 @@ class BenefitController extends Controller {
         $data = array();
         $data['name'] = $request->name;
         $data['content'] = $request->content;
+        $data['description'] = $request->description;
         $data['order'] = $request->order;
         $data['created_at'] = Carbon::now('Asia/Ho_Chi_Minh');
         $image = $request->file('image');
@@ -79,6 +80,7 @@ class BenefitController extends Controller {
         $data = array();
         $data['name'] = $request->name;
         $data['content'] = $request->content;
+        $data['description'] = $request->description;
         $data['order'] = $request->order;
         $data['updated_at'] = Carbon::now('Asia/Ho_Chi_Minh');
         $image = $request->file('image');
