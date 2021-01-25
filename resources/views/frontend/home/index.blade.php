@@ -164,7 +164,7 @@ margin-top: 0px;
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
                                             <a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
-                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
+                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$flashsale_product->images}}" style="padding-top: 10px;width:255px; ">
                                                 <img class="hover-img img-responsive img-rounded hover-product" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
                                             </a>
                                             <div class="button-head">
@@ -380,7 +380,7 @@ margin-top: 0px;
                                 <div class="owl-carousel popular-slider">
                                     <!-- Start Single Product -->
                                     @foreach($brand as $brands)
-                                    <div class="single-product" style="margin-top:0px;">
+                                    <div class="single-product" style="margin-top:20px;">
                                         <div class="product-img">
                                             <a href="{{$brands->link}}">
                                                 <img class="default-img img-responsive img-rounded custom-brand" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
@@ -594,7 +594,8 @@ document.getElementById("countdown").innerHTML = "EXPIRED";
 }, 1000);
 });
 </script>
-<aside class="right"><a href="{{$banner_right->url}}"><img style="width: 150px;  height: 540px;" src="{{$banner_right->image}}"></img></a></aside>
+<aside class="right"><a href="{{$banner_right->url}}"><img style="width: 150px;  height: 540px;position:absolute;right:0;" src="{{$banner_right->image}}"></img></a></aside>
 <!-- Modal end -->
 <!-- Start Footer Area -->
+
 @stop

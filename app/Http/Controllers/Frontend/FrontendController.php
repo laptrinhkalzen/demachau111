@@ -43,6 +43,7 @@ class FrontendController extends Controller {
             foreach ($product_attributes as $key => $value) {
                 $value->parent_name=DB::table('attribute')->where('id',$value->parent_id)->pluck('title');
             }
+   
         $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();  
         foreach ($product_danh_muc_cha as $key => $value) {
              foreach ($product_sales   as  $product_sale) {

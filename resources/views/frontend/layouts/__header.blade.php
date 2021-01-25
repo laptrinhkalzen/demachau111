@@ -264,7 +264,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     <div class="row" >
                         <div class="col-lg-3" id="show-header">
                             <div class="all-category" >
-                                <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>Danh mục</h3>
+                                <h3 class="cat-heading" style="padding: 15px 25px !important;"><i class="fa fa-bars" aria-hidden="true"></i>Danh mục</h3>
                                
                                 <ul class="main-category hide-header" style="display: none;" >
                                     @foreach($menu_cats as $key => $cat)
