@@ -170,7 +170,7 @@ class ProductController extends Controller {
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
 
             if($input!=null){
-            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','count_input','similar_product_ids','products','other_attributes'));
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes'));
             }
             else{
                 return redirect()->back()->with('out_stock','Sản phẩm tạm hết hàng');

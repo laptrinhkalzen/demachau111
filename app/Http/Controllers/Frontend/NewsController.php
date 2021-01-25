@@ -67,6 +67,7 @@ class NewsController extends Controller {
         foreach ($records as $key => $value) {
             $news_category[]=DB::table('news')->where('id',$value->news_id)->first();
         }
+        //dd($news_category);
         $some_news=  $this->newsRepo->getAllNews(5);
         $category = DB::table('category')->where('parent_id', 0)->where('type',2)->orderBy('ordering', 'asc')->get();
         //d($records);
