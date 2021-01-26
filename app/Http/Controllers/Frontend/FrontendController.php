@@ -31,8 +31,7 @@ class FrontendController extends Controller {
       
         $flashsale=DB::table('flashsale')->where('order',1)->first();
         
-        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('status',1)->where('flashsale.end','>=',Carbon::now('Asia/Ho_Chi_Minh'))->get();
-        dd($flashsale_products);
+        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->get();
 
         //dd($danh_muc_deal);
         $news = DB::table('news')->orderBy('ordering','asc')->where('status',1)->get();
