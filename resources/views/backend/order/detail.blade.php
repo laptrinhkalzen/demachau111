@@ -135,10 +135,10 @@
                         @foreach($order_detail as $key=>$product)
                             <tr>
                                 <td>{{++$key}}</td>
-                                <td>{{$product->title}}</td>
-                                <td class="text-right">{{number_format($product->price)}}</td>
-                                <td class="text-center">{{$product->quantity}}</td>
-                                <td class="text-right">{{number_format($product->each_total)}}</td>
+                                <td>{{$product->product_title}}</td>
+                                <td>{{number_format($product->price)}}</td>
+                                <td>{{$product->quantity}}</td>
+                                <td>{{number_format($product->each_total)}}</td>
                             </tr>
                         @endforeach
                         </tbody>

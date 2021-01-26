@@ -20,7 +20,7 @@ class OrderController extends Controller
     public function show($id)
     {
         $record = $this->orderRepo->find($id);
-        $order_detail=DB::table('order_detail')->where('id',$id)->get();
+        $order_detail=DB::table('order_detail')->where('order_id',$id)->get();
         return view('backend/order/detail', compact('record','order_detail'));
     }
 

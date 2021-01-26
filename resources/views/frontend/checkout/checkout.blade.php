@@ -8,7 +8,9 @@
 		@csrf
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-7 col-12" style="background-color:white;">
+				<div class="col-lg-7 col-12" >
+					<div class="row">
+					<div class="col-md-12 col-lg-12" style="background-color:white;">	
 					<p class="mt-4" style="font-size:18px;"><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
 						<div class="col=md-12">
@@ -29,10 +31,10 @@
 							<input class="mr-2" type="radio" name="payment_method" value="2" style="width: auto;vertical-align: middle;"> <b>Ngân hàng</b>
 							<div class="2 box" >Thanh toán qua VNPAY.</div>
 							
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-7 col-12 mt-4" style="background-color:white;">
+					<div class="col-lg-12 col-12 mt-4" style="background-color:white;">
 					<div class="checkout-form">
 						<h5>Thông tin thanh toán</h5>
 						<!-- Form -->
@@ -110,6 +112,9 @@
 						<!--/ End Form -->
 					</div>
 				</div>
+				</div>
+			</div>
+		
 				<div class="col-lg-5 col-12">
 					<div class="order-details" style="margin-top: 0px;padding-left: 15px;">
 						<!-- Order Widget -->
@@ -208,30 +213,7 @@
 							</table>
 						</div>
 						
-						<!--/ End Order Widget -->
-						<!-- Payment Method Widget -->
-						<!-- 	<div class="single-widget payement">
-								<div class="content">
-										<div class="col-md-12">
-												<label><input type="radio" name="payment_method" value="0"> <strong>Trả tiền mặt khi nhận hàng</strong></label>
-												<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
-										</div>
-										<hr>
-										<div class="col-md-12">
-												<label><input type="radio" name="payment_method" value="1">  <strong>Chuyển khoản ngân hàng</strong></label>
-												<div class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
-																		Số tài khoản: 0123456789
-																		Chủ tài khoản: DANG DINH MINH
-																		Chi nhánh …
-																	Nội dung chuyển khoản: Họ tên + SĐT</div>
-										</div>
-										<hr>
-											<div class="col-md-12">
-												<label><input type="radio" name="payment_method" value="2"> <strong>Thanh toán qua VNPAY</strong></label>
-												<div class="2 box" ><a href="{{route('checkout.payment')}}">Thanh toán trực tuyến qua VNPAY</div>
-											</div>
-								</div>
-						</div> -->
+					
 						<div class="single-widget payement">
 							<input placeholder="Điền mã giảm giá" type="text" id="coupon" name="coupon">
 							<input type="button" id="apply_coupon"  value="Áp dụng" class="btn btn-success mb-4">
