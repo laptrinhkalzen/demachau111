@@ -96,7 +96,7 @@ class ProductController extends Controller {
            $attributes=DB::table('attribute')->where('parent_id','!=','0')->whereIn('id',$cat)->get()->groupBy('parent_id');
    
            $parent_attributes=DB::table('attribute')->where('parent_id',0)->get();
-           dd($parent_attributes);
+ 
             $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();  
             foreach ($product_cat as $key => $value) {
                  foreach ($product_sales   as  $product_sale) {

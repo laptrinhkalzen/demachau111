@@ -205,7 +205,7 @@ class ProductController extends Controller {
                             <div class="product-content">
                                 <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
                                 <div class="product-price" style="text-align: center; color: red;">
-                                 <span>'.$product_arr1->price.'</span>
+                                 <span>'.number_format($product_arr1->price).'đ'.'</span>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +271,7 @@ class ProductController extends Controller {
                             <div class="product-content">
                                 <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
                                 <div class="product-price" style="text-align: center; color: red;">
-                                 <span>'.$product_arr1->price.'</span>
+                                 <span>'.number_format($product_arr1->price).'đ'.'</span>
                                 </div>
                             </div>
                         </div>
