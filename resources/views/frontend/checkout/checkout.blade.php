@@ -92,7 +92,7 @@
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>THÔNG TIN BỔ SUNG</label>
-									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." rows="3"></textarea>
+									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." name="note" rows="3"></textarea>
 								</div>
 							</div>
 								<div class="col-lg-12 col-md-12 col-12">

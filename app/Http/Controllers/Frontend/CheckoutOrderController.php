@@ -139,7 +139,7 @@ class CheckoutOrderController extends Controller {
         $data['total']=$total;
         $data['sub_total']=$sub_total;
         $order_id=DB::table('order')->insertGetId($data);
-      
+        
         foreach ($cart as $value) {
             $input['order_id'] = $order_id;
             $input['product_id'] = $value['product_id'];

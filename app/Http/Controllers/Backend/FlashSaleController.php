@@ -19,7 +19,9 @@ class FlashSaleController extends Controller {
 
    
     public function create() {
-         $products=DB::table('product')->orderBy('created_at', 'desc')->get();
+        $products=DB::table('product')->orderBy('created_at', 'desc')->get();
+        $list_flashsale=DB::table('flashsale')->where('status',1)->where('end','>=',Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('end','desc')->limit(1)->first();
+        //dd($list_flashsale);
         return view('backend/flashsale/create')->with('products',$products);
     }
 

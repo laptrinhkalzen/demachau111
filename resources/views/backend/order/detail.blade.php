@@ -37,23 +37,41 @@
                                     <span class="badge bg-success-400">Xác nhận</span>
                                 @elseif($record->status==3)
                                     <span class="badge bg-danger-400">Từ chối</span>
-                                @elseif($record->status==4)
-                                    <span class="badge bg-danger-400">Chưa thanh toán</span>
                                 @endif
                             </td>
                         </tr>
+                         <!--  <tr>
+                            <td>
+                                <h6 class="mb-0">Tình trạng thanh toán:</h6>
+                            </td>
+                            <td><span>{{$record->transport_method}}</span></td>
+                        </tr> -->
                         <tr>
                             <td>
                                 <h6 class="mb-0">Phương thức thanh toán:</h6>
                             </td>
-                            <td><span>{{$record->payment_method}}</span></td>
+                            @if($record->payment_method==0)
+                                <td><span>Tiền mặt</span></td>
+                            @elseif($record->payment_method==1)
+                                <td><span>Chuyển khoản</span></td>
+                            @else
+                                <td><span>Thanh toán VNPAY</span></td>
+                            @endif
+
                         </tr>
-                        <tr>
+                      <!--   <tr>
                             <td>
                                 <h6 class="mb-0">Phương thức vận chuyển:</h6>
                             </td>
                             <td><span>{{$record->transport_method}}</span></td>
+                        </tr> -->
+                         <tr>
+                            <td>
+                                <h6 class="mb-0">Địa chỉ giao hàng:</h6>
+                            </td>
+                            <td><span>{{$record->address}}</span></td>
                         </tr>
+
                         <tr>
                             <td>
                                 <h6 class="mb-0">Tổng đơn hàng:</h6>
@@ -76,7 +94,7 @@
                             <td>
                                 <h6 class="mb-0">Họ tên:</h6>
                             </td>
-                            <td><span>{{$record->contact}}</span></td>
+                            <td><span>{{$record->member_name}}</span></td>
                         </tr>
                         <tr>
                             <td>

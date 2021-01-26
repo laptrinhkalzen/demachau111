@@ -31,7 +31,9 @@ class FrontendController extends Controller {
       
         $flashsale=DB::table('flashsale')->where('order',1)->first();
         
-        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->get();
+        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('status',1)->where('flashsale.end','>=',Carbon::now('Asia/Ho_Chi_Minh'))->get();
+        dd($flashsale_products);
+
         //dd($danh_muc_deal);
         $news = DB::table('news')->orderBy('ordering','asc')->where('status',1)->get();
         $danh_muc_cha=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
@@ -44,7 +46,24 @@ class FrontendController extends Controller {
                 $value->parent_name=DB::table('attribute')->where('id',$value->parent_id)->pluck('title');
             }
    
-        $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();  
+        $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();
+         foreach ($flashsale_products as $key => $value) {
+             foreach ($product_sales   as  $product_sale) {
+                 if($product_sale->product_id==$value->id){
+                     if($product_sale->discount_type==0){
+                         $sale_price=$value->price-($value->price/100*$product_sale->discount_value);
+                     }
+                     elseif($product_sale->discount_type==1){
+                          $sale_price=$value->price-$product_sale->discount_value;
+                     }
+                     else{
+                         $sale_price=$product_sale->discount_value;
+                     }
+                     $flashsale_products[$key]->sale_price=$sale_price;
+                 }
+        }
+        }
+
         foreach ($product_danh_muc_cha as $key => $value) {
              foreach ($product_sales   as  $product_sale) {
                  if($product_sale->product_id==$value->id){
