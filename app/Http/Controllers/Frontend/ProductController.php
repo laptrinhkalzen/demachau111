@@ -96,6 +96,7 @@ class ProductController extends Controller {
            $attributes=DB::table('attribute')->where('parent_id','!=','0')->whereIn('id',$cat)->get()->groupBy('parent_id');
    
            $parent_attributes=DB::table('attribute')->where('parent_id',0)->get();
+           dd($parent_attributes);
             $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();  
             foreach ($product_cat as $key => $value) {
                  foreach ($product_sales   as  $product_sale) {
@@ -117,7 +118,20 @@ class ProductController extends Controller {
           return view('frontend/category/show',compact('product_cat','attributes','parent_attributes','category_id'));
     }
 
-    public function search(Request $request) {
+ 
+
+      public function search_product(Request $request) {
+         
+      
+        $product_cat=DB::table('product')->where('status',1)->where('alias','LIKE','%'.$request->search.'%')->orWhere('meta_keywords','LIKE','%'.$request->search.'%')->get();
+        $product_ids=$product_cat->pluck('id');
+        $attribute_id=DB::table('product_attribute')->whereIn('product_id',$product_ids)->get()->pluck('attribute_id')->unique();
+        dd($attributes);
+        
+       return view('frontend/category/show',compact('product_arr'));
+    } 
+   
+      public function search(Request $request) {
          ini_set('memory_limit', '2048M');
 
         $search_product = $this->productRepo->readFE($request);
@@ -135,14 +149,6 @@ class ProductController extends Controller {
         $sort_id = $request->get('sort');
        return view('frontend/home/search',compact('search_product','count','slide1','origin','category_filter','brand','color','cat_id','price_id','brand_id','color_id','sort_id'));
     } 
-
-      public function search_product(Request $request) {
-         
-     
-        $product_arr=DB::table('product')->where('status',1)->where('alias','LIKE','%'.$request->search.'%')->orWhere('meta_keywords','LIKE','%'.$request->search.'%')->paginate(12);
-       return view('frontend/category/show',compact('product_arr'));
-    } 
-
 
 
     public function filter(Request $request){
