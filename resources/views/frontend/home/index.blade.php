@@ -67,7 +67,7 @@ margin-top: 0px;
     <div class="container">
         <div class="row">
                  @foreach($anh_duoi_slide as $anh_slide)
-            <div class="col-lg-4 col-md-6 col-12" style="padding-right: 0px !important;">
+            <div class="col-lg-4 col-md-6 col-12" style="padding-right: 0px !important;padding-left: 0px !important;">
                 <div class="single-banner">
                     <img src="{{$anh_slide->image}}" alt="#">
                 </div>
@@ -123,7 +123,7 @@ margin-top: 0px;
         <div class="row">
             <div class="banner-flash-sale col-lg-3">
                 <div class="" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">
-                    <img src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="height: 100px;object-fit: cover;float: right;">
+                    <img src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 100%;object-fit: cover;float: right;">
                     <div class="">
                         <span style="font-size: 20px;">Còn lại
                             <strong id="day"></strong>&nbspngày
@@ -213,11 +213,11 @@ margin-top: 0px;
         </div> -->
         <div class="nav-main">
             <!-- Tab Nav -->
-            <ul style=" border-bottom: solid 1px #283988;" class="nav nav-tabs" id="myTab" role="tablist">
-                <li style="float: left; border-bottom: none;height: 44px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
+            <ul style="" class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="dmc" style="float: left; border-bottom: solid 1px #283988;height: 43px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
                 @foreach($danh_muc_con as $danh_muc_con1)
                 @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
-                <li style="float: left;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
+                <li style="float: left;border-bottom: solid 1px #283988;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
                 @endif
                 @endforeach
                 <!--  <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a style="color: orange;" class="nav-link"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >Xem tất cả >></a></li> -->
@@ -605,7 +605,7 @@ $('.owl-carousel1').owlCarousel({
     nav:true,
     responsive:{
         0:{
-            items:2
+            items:1
         },
         1000:{
             items:3
