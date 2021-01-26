@@ -234,7 +234,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                     <div class="bottom">
                                         <div class="total">
                                             <span>Tổng</span>
-                                            <span class="total-amount" id="total1" style="color: red;">{{$count_total}} đ</span>
+                                            <span class="total-amount" id="total1" style="color: red;">{{number_format($count_total)}} đ</span>
                                         </div>
                                         <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #283988;">Xem giỏ hàng</a>
                                         <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;">Thanh toán</a>

@@ -384,6 +384,9 @@ $('.each_cart_' + id_option).fadeOut();
 
     <script type="text/javascript">
     $( document ).ready(function() {
+    function formatNumber (num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+        }   
     $('#add-to-cart').click(function( e ){
          var option_number=$('#option_number').val();
          var product_id=$(this).data('product_id');
@@ -396,7 +399,7 @@ $('.each_cart_' + id_option).fadeOut();
                 success:function(resp){           
                    if(resp.success == true){
                      $('#cart-count').html(resp.count);
-                     $('#total1').html(resp.total +' đ');
+                     $('#total1').html(formatNumber(resp.total) +' đ');
                      $('#count-sp').html(resp.count + ' Sản phẩm');
               
                      $(".shopping-item").load(" .shopping-item > *");
@@ -437,6 +440,9 @@ $('.each_cart_' + id_option).fadeOut();
 </script>
 <script type="text/javascript">
             $(document).ready(function(){
+                function formatNumber (num) {
+                return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+                }
                 $('.delete_cart').on('click',function(){
                      var id_option=$(this).data('id_option');
    
