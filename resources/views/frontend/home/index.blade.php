@@ -164,16 +164,13 @@ margin-top: 0px;
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
                                             <a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
-<<<<<<< HEAD
-                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$flashsale_product->images}}" style="padding-top: 10px;width:100%; ">
-                                                <img class="hover-img img-responsive img-rounded hover-product" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
-=======
+
                                                 @foreach( explode(',',$flashsale_product->images) as $value)
                                                 <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:255px; ">
                                                 <img class="hover-img img-responsive img-rounded hover-product" src="{{$value}}" style="padding-top: 10px; ">
                                                 @break;
                                                 @endforeach
->>>>>>> luong 27 01 21
+
                                             </a>
                                             <div class="button-head">
                                                
