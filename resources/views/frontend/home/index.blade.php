@@ -164,8 +164,16 @@ margin-top: 0px;
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
                                             <a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
+<<<<<<< HEAD
                                                 <img class="default-img img-responsive img-rounded custom-product" src="{{$flashsale_product->images}}" style="padding-top: 10px;width:100%; ">
                                                 <img class="hover-img img-responsive img-rounded hover-product" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
+=======
+                                                @foreach( explode(',',$flashsale_product->images) as $value)
+                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:255px; ">
+                                                <img class="hover-img img-responsive img-rounded hover-product" src="{{$value}}" style="padding-top: 10px; ">
+                                                @break;
+                                                @endforeach
+>>>>>>> luong 27 01 21
                                             </a>
                                             <div class="button-head">
                                                
@@ -233,8 +241,11 @@ margin-top: 0px;
                     <div class="single-product">
                         <div class="product-img">
                             <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
-                                <img class="default-img img-responsive img-rounded custom-product" src="{{$product_danh_muc_cha1->images}}">
-                                <img class="hover-img img-responsive img-rounded hover-product" src="{{$product_danh_muc_cha1->images}}">
+                                @foreach( explode(',',$product_danh_muc_cha1->images) as $value)
+                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:255px; ">
+                                <img class="hover-img img-responsive img-rounded hover-product" src="{{$value}}" style="padding-top: 10px; ">
+                                @break;
+                                @endforeach
                                 <!--  //<span class="out-of-stock">Hot</span> -->
                             </a>
                             <div class="button-head">
@@ -317,11 +328,13 @@ margin-top: 0px;
                     <div class="single-product">
                         <div class="product-img">
                             <a href="{{route('news.detail',['alias'=>$new->alias])}}">
-                                <img class="default-img img-responsive img-rounded custom-news" src="{{$new->images}}">
-                                <img class="hover-img img-responsive img-rounded hover-news" src="{{$new->images}}">
+                                @foreach( explode(',',$new->images) as $value)
+                                <img class="default-img img-responsive img-rounded custom-news" src="{{$value}}">
+                                <img class="hover-img img-responsive img-rounded hover-news" src="{{$value}}">
+                                @break;
+                                @endforeach
                                 <!--  <span class="out-of-stock">Hot</span> -->
                             </a>
-
                             <!--<div class="button-head">
                                    <div class="product-action">
                                     <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào giỏ hàng</span></a>

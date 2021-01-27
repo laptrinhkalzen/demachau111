@@ -80,6 +80,8 @@ class FrontendController extends Controller {
         }
         }
           $product_attrs=$product_attributes->groupBy('product_id');
+
+            //foreach( explode(',',$flashsale_product->images) as $value)
        //dd($product_danh_muc_cha);
      //dd($product_danh_muc_cha);
         return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','product_sales'));

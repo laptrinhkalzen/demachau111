@@ -137,10 +137,36 @@ input[type="number"] {
                                             <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
                                                 <!-- slides -->
                                                 <div class="carousel-inner">
-                                                    <div class="carousel-item active"> <img src="https://i.imgur.com/weXVL8M.jpg" alt="Hills" style="width: 100%;"> </div>
-                                                    </div> <!-- Left right --> <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
+                                                  @foreach( explode(',',$detail_product->images) as $value)
+                                                  <div class="carousel-item active"> <img src="{{$value}}" alt="Hills" style="width: 100%;"> </div>
+                                                @break;
+                                                @endforeach
+                                                    
+                                                    </div> <!-- Left right --> 
+                                                    <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> 
+                                                      <span class="carousel-control-prev-icon"></span> 
+                                                    </a>
+                                                     <a class="carousel-control-next" href="#custCarousel" data-slide="next"> 
+                                                      <span class="carousel-control-next-icon"></span> 
+                                                     </a> <!-- Thumbnails -->
                                                     <ol class="carousel-indicators list-inline">
-                                                        <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="https://i.imgur.com/weXVL8M.jpg" class="img-fluid"> </a> </li>
+                                                        
+                                                          @foreach(explode(',',$detail_product->images) as $key => $image)
+                                                          @if($key==0)
+                                                        <li class="list-inline-item active"> 
+                                                          <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> 
+                                                            <img src="{{$image}}" class="img-fluid"> 
+                                                          </a>
+                                                        </li>
+                                                          @else
+                                                          <li>
+                                                          <a id="carousel-selector-{{$key}}" class="" data-slide-to="{{$key}}" data-target="#custCarousel1"> 
+                                                            <img src="{{$image}}" class="img-fluid"> 
+                                                          </a>
+                                                        </li>
+                                                          @endif
+                                                          @endforeach 
+                                                        
                                                     </ol>
                                                 </div>
                                             </div>
@@ -262,7 +288,9 @@ input[type="number"] {
                 <div class="col-lg-3 col-12 benefit" style="border: 1px solid #ebebeb;background-color: white;">
                     
                     <!-- Order Widget -->
-                    <div class="single-widget">
+                    <div class="row">
+                      <div class="col-12" style="border-bottom: 2px solid #ebebeb;">
+                        <div class="single-widget">
                         <div class="content">
                             <ul>
                                 @foreach($benefit as $key => $benefits)               
@@ -274,7 +302,7 @@ input[type="number"] {
                                             </div>
                                             <div class="col-md-9">
                                                 <div style="font-weight: 500;">{!!$benefits->name!!}</div>
-                                                <p>{!!$benefits->description!!}</p>
+                                                <p style="font-size: 12px;">{!!$benefits->description!!}</p>
                                                 
                                             </div>
                                         </div>
@@ -307,6 +335,48 @@ input[type="number"] {
                             </ul>
                         </div>
                     </div>
+                      </div>
+                    </hr>
+                      <div class="col-12">
+                        <div class="single-widget">
+                        <div class="content">
+                            <ul>
+                                       
+                                <div class="">
+                                    <div class="form-group">
+                                      <h3 style="font-weight: 500px; text-align: center; font-size: 14px ;margin-bottom: 10px;">SẢN PHẨM VỪA ĐƯỢC XEM</h3>
+                                        <div class="row">
+                                          
+                                           @if(Session('old_pro'))
+                                             @foreach(Session('old_pro') as $key => $val)    
+                                            <div class="col-md-4">
+                                                 @foreach( explode(',',$val['image']) as $value)
+                                                <a href="" target="_blank" class="mr-2"><img style="width: 75px; " src="{!!url($value)!!}" ></a>
+                                                @break
+                                                @endforeach
+                                            </div>
+                                            <div class="col-md-8">
+                                                <p>{!!$val['title']!!}</p>
+                                                
+                                            </div>
+                                            @endforeach
+                                           @endif
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                               
+                                
+                            </ul>
+                        </div>
+                    </div>
+                      </div>
+
+                    </div>
+                    
+
+
                     <!--/ End Order Widget -->
                     
                 </div>
@@ -405,7 +475,10 @@ input[type="number"] {
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
                                             <a href="{{route('product.detail',['alias'=>$product->alias])}}">
-                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$product->images}}" style="padding-top: 10px; ">
+                                              @foreach( explode(',',$product->images) as $value)
+                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px; ">
+                                                @break;
+                                                @endforeach
                                             </a>
                                             <div class="button-head">
                                                

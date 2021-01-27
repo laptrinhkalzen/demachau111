@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Repositories\ProductAttributeRepository;
 use App\Repositories\ProductCategoryRepository;
 use Illuminate\Http\Request;
-use Session;
+
 use App\Http\Controllers\Controller;
 use App\Repositories\ProductRepository;
 use Repositories\NewsRepository;
@@ -181,6 +181,7 @@ class ProductController extends Controller {
     }
 
     public function detail(Request $request,$alias) {
+
             $id=DB::table('product')->where('alias',$alias)->pluck('id')->first();
             $benefit = DB::table('benefit')->orderBy('order','asc')->get();
             $detail_product =  $this->productRepo->getDetailProduct($alias);
@@ -215,8 +216,20 @@ class ProductController extends Controller {
             // $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
             // $news_arr = $this->newsRepo->getAllNews($limit = 7);
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
+              
+            if($detail_product){
+              $old_pro[$detail_product->id] = [
+                "id"=> $detail_product->id,
+                "title"=> $detail_product->title,
+                "image"=> $detail_product->images,
+                
+                ];
+                session()->put('old_pro',$old_pro);
+                 //dd(session('old_pro'));
+                
 
-            if($input!=null){
+
+
             return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes'));
             }
             else{
