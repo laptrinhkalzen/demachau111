@@ -67,10 +67,7 @@ margin-top: 0px;
     <div class="container">
         <div class="row">
                  @foreach($anh_duoi_slide as $anh_slide)
-            <div class="col-lg-4 col-md-6 col-12" style="padding-right: 0px !important;padding-left: 0px !important;">
-                <div class="single-banner">
-                    <img src="{{$anh_slide->image}}" alt="#">
-                </div>
+            <div class="col-lg-4 col-md-6 col-12" style="padding-right: 5px !important;padding-left: 5px !important;background-image: url({{$anh_slide->image}}); ">    
             </div>
                 @endforeach
             
