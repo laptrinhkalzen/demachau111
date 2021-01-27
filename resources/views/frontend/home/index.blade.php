@@ -164,7 +164,7 @@ margin-top: 0px;
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
                                             <a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
-                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$flashsale_product->images}}" style="padding-top: 10px;width:255px; ">
+                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$flashsale_product->images}}" style="padding-top: 10px;width:100%; ">
                                                 <img class="hover-img img-responsive img-rounded hover-product" src="{{$flashsale_product->images}}" style="padding-top: 10px; ">
                                             </a>
                                             <div class="button-head">
@@ -217,7 +217,7 @@ margin-top: 0px;
                 <li class="dmc" style="float: left; border-bottom: solid 1px #283988;height: 43px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
                 @foreach($danh_muc_con as $danh_muc_con1)
                 @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
-                <li style="float: left;border-bottom: solid 1px #283988;"  class="nav-item"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
+                <li style="float: left;border-bottom: solid 1px #283988;"  class="nav-item danh-muc-con"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
                 @endif
                 @endforeach
                 <!--  <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a style="color: orange;" class="nav-link"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >Xem tất cả >></a></li> -->

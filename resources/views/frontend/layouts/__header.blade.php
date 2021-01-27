@@ -170,7 +170,47 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                 </form>
                                 
                             </div>
-                              
+                             <div class="sinlge-bar shopping">
+                                <a href="#" class="single-icon"><i class="ti-bag"></i><span class="total-count" id="cart-count">{{$count_cart}}</span></a>
+                                <!-- Shopping Item -->
+                                <div class="shopping-item">
+                                     @if(Session('cart'))
+                                    <div class="dropdown-cart-header">
+                                        <span id="count-sp">{{$count_cart}} Sản phẩm</span>
+                                        <a href="{{route('checkout_order.index')}}">Xem giỏ hàng</a>
+                                    </div>
+                                    <ul class="shopping-list" id="cart_items">
+                                         
+                                            @foreach(Session('cart') as $key1=> $val)
+                                            <li class="each_cart_{{$key1}}">
+                                            <a href="#" class="delete_cart" data-id_option="{{$key1}}" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
+                                            <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}"><img src="{{$val['image']}}" alt="#"></a>
+                                            <h4><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h4>
+                                            <p class="quantity">{{$val['quantity']}}x - <span style="color: red;" class="amount">{{number_format($val['price'])}} đ</span></p>
+                                          </li>
+                                            @endforeach
+                                      
+                                        
+                                        
+                                    </ul>
+                                    <div class="bottom">
+                                        <div class="total">
+                                            <span>Tổng</span>
+                                            <span class="total-amount" id="total1" style="color: red;">{{number_format($count_total)}} đ</span>
+                                        </div>
+                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #283988;">Xem giỏ hàng</a>
+                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;">Thanh toán</a>
+                                    </div>
+                                          @else
+                                        <div class="dropdown-cart-header">
+                                        <span id="count-sp">Chưa có sản phẩm trong giỏ hàng</span>
+                                      
+                                    </div>
+                                    @endif   
+
+                                </div>
+                                <!--/ End Shopping Item -->
+                            </div> 
 
                         </div>
                         <!--/ End Search Form -->

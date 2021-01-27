@@ -1133,6 +1133,13 @@ display: none !important;
 .dmc{
 	border:none !important;
 }
+.danh-muc-con{
+	display: none !important;
+}
+.bien-the{
+	padding-left: 15px !important;
+	margin-top:100px !important;
+}
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {

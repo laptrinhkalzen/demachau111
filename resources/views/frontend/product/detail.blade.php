@@ -149,7 +149,7 @@ input[type="number"] {
                                     </div>
                                 </div>
                                 
-                                <div class="col-lg-7 col-12" style="padding-left: 0px !important">
+                                <div class="col-lg-7 col-12 bien-the" style="padding-left: 0px;">
                                     <div class="form-group">
                                         
                                         <p style="font-size: 22px;font-weight: bold;">{{$detail_product->title}}</p>
