@@ -265,12 +265,12 @@ input[type="number"] {
                     <div class="single-widget">
                         <div class="content">
                             <ul>
-                                @foreach($benefit as $benefits)
+                                @foreach($benefit as $key => $benefits)               
                                 <div class="">
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a target="_blank" class="mr-2"><img style="width: 55px; border-radius: 100%;" src="{!!url('upload/config/'.$benefits->image)!!}" ></a>
+                                                <a href="" data-toggle="modal" data-target="#{{$key}}"  target="_blank" class="mr-2"><img style="width: 55px; border-radius: 100%;" src="{!!url('upload/config/'.$benefits->image)!!}" ></a>
                                             </div>
                                             <div class="col-md-9">
                                                 <div style="font-weight: 500;">{!!$benefits->name!!}</div>
@@ -282,6 +282,27 @@ input[type="number"] {
                                     
                                     
                                 </div>
+                               <div class="modal fade" id="{{$key}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">  
+                                        <h5 style="text-align: center; margin-bottom: 20px; margin-top: 20px;" class="modal-title" id="exampleModalLongTitle">{{$benefits->name}}</h5>
+                                        
+                                        <div style="margin-left: 50px; margin-right: 50px;">{!!$benefits->content!!}</div>
+                                      
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                                 @endforeach
                             </ul>
                         </div>
@@ -292,9 +313,11 @@ input[type="number"] {
             </div>
         </div>
     </section>
-    <!--/ End Checkout -->
 
-    
+
+
+ 
+    <!--/ End Checkout -->
 
     <section style="padding-bottom: 50px;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
