@@ -148,7 +148,7 @@ class ProductController extends Controller {
           }
           else{
              $children_ids=DB::table('category')->where('parent_id',$cat_id)->get();
-             $id_children[]=$cat_id;
+             $id_children=array();
              foreach($children_ids as $children_id){
                 $id_children[]=$children_id->id;
              }
@@ -232,7 +232,7 @@ class ProductController extends Controller {
           }
           else{
              $children_ids=DB::table('category')->where('parent_id',$category_id->id)->get();
-             $id_children[]=$category_id->id;
+             $id_children=array();
              foreach($children_ids as $children_id){
                 $id_children[]=$children_id->id;
              }

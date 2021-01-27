@@ -416,7 +416,7 @@ function myFunction() {
           	    //alert(current_url);
           	    var attr=[];
           	    var order_by=$('#order_by :selected').val();
-          	    var cat_id={{$category_id->id}};
+          	    var cat_id={{$category_id}};
           	    attr =  $("input[name='attr']:checked").map(function(){
 				    return $(this).val();
 				    }).get();

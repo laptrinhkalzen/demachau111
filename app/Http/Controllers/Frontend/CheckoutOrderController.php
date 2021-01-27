@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
 use App\Product;
+use Session; 
 use Carbon\Carbon;
 
 class CheckoutOrderController extends Controller {

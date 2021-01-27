@@ -114,6 +114,7 @@ class ProductController extends Controller {
                      }
             }
             }
+            $category_id=$category_id->id;
             //dd($product_cat);
           return view('frontend/category/show',compact('product_cat','attributes','parent_attributes','category_id'));
     }
@@ -125,10 +126,31 @@ class ProductController extends Controller {
       
         $product_cat=DB::table('product')->where('status',1)->where('alias','LIKE','%'.$request->search.'%')->orWhere('meta_keywords','LIKE','%'.$request->search.'%')->get();
         $product_ids=$product_cat->pluck('id');
+
+        $category_id=DB::table('product_category')->whereIn('product_id',$product_ids)->get()->pluck('category_id')->unique();
         $attribute_id=DB::table('product_attribute')->whereIn('product_id',$product_ids)->get()->pluck('attribute_id')->unique();
-        dd($attributes);
+        $attributes=DB::table('attribute')->where('parent_id','!=','0')->whereIn('id',$attribute_id)->get()->groupBy('parent_id');
+        $parent_attributes=DB::table('attribute')->where('parent_id',0)->get();
+        $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();  
+            foreach ($product_cat as $key => $value) {
+                 foreach ($product_sales   as  $product_sale) {
+                     if($product_sale->product_id==$value->id){
+                         if($product_sale->discount_type==0){
+                             $sale_price=$value->price-($value->price/100*$product_sale->discount_value);
+                         }
+                         if($product_sale->discount_type==1){
+                              $sale_price=$value->price-$product_sale->discount_value;
+                         }
+                         if($product_sale->discount_type==2){
+                             $sale_price=$product_sale->discount_value;
+                         }
+                         $product_cat[$key]->sale_price=$sale_price;
+                     }
+                }
+            }
         
-       return view('frontend/category/show',compact('product_arr'));
+        
+        return view('frontend/category/show',compact('product_cat','attributes','parent_attributes','category_id'));
     } 
    
       public function search(Request $request) {
