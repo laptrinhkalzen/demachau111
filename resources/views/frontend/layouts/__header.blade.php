@@ -232,7 +232,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     </div>
                     <div class="col-lg-2 col-md-3 col-12">
                          
-                       <div class="hotline-phone-ring-wrap1"> 
+                       <div class="hotline-phone-ring-wrap1" style="margin-left: 30px;"> 
 
                                 <div class="hotline-phone-ring">
                                 <div class="hotline-phone-ring-circle"></div>
