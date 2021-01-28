@@ -216,16 +216,21 @@ class ProductController extends Controller {
             // $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
             // $news_arr = $this->newsRepo->getAllNews($limit = 7);
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
-              
+            foreach(explode(',',$detail_product->images) as $key => $image){
+              $image_pro=$image;
+              break;
+            }
             if($detail_product){
-              $old_pro[$detail_product->id] = [
+              $old_pro = [
+                $detail_product->id=>[
                 "id"=> $detail_product->id,
+                "alias"=> $detail_product->alias,
                 "title"=> $detail_product->title,
-                "image"=> $detail_product->images,
-                
+                "image"=> $image_pro
+                ]
                 ];
                 session()->put('old_pro',$old_pro);
-                 //dd(session('old_pro'));
+           
                 
 
 

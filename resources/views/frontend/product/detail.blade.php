@@ -154,7 +154,7 @@ input[type="number"] {
                                                           @foreach(explode(',',$detail_product->images) as $key => $image)
                                                           @if($key==0)
                                                         <li class="list-inline-item active"> 
-                                                          <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> 
+                                                          <a id="carousel-selector-{{$key}}" class="selected" data-slide-to="{{$key}}" data-target="#custCarousel"> 
                                                             <img src="{{$image}}" class="img-fluid"> 
                                                           </a>
                                                         </li>
@@ -350,14 +350,14 @@ input[type="number"] {
                                            @if(Session('old_pro'))
                                              @foreach(Session('old_pro') as $key => $val)    
                                             <div class="col-md-4">
-                                                 @foreach( explode(',',$val['image']) as $value)
-                                                <a href="" target="_blank" class="mr-2"><img style="width: 75px; " src="{!!url($value)!!}" ></a>
-                                                @break
-                                                @endforeach
+                                                
+                                                <a href="{{route('product.detail',['alias'=>$val['alias']])}}" target="_blank" class="mr-2"><img style="width: 75px; " src="{!!$val['image']!!}" ></a>
+                                               
                                             </div>
                                             <div class="col-md-8">
+                                              <a href="{{route('product.detail',['alias'=>$val['alias']])}}">
                                                 <p>{!!$val['title']!!}</p>
-                                                
+                                                </a>
                                             </div>
                                             @endforeach
                                            @endif
