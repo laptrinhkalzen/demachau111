@@ -318,6 +318,7 @@ function myFunction() {
 				    success:function(resp){
 				    	if(resp!=1){
 					        $('.show_filter').html(resp);
+					        $(window).scrollTop(0);
 					        //var pageUrl = '?attributes=' + attr;
 							//window.history.pushState('', '', pageUrl);
 				        }
