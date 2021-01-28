@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Repositories\ProductAttributeRepository;
 use App\Repositories\ProductCategoryRepository;
 use Illuminate\Http\Request;
-
+use Session;
 use App\Http\Controllers\Controller;
 use App\Repositories\ProductRepository;
 use Repositories\NewsRepository;
@@ -220,22 +220,57 @@ class ProductController extends Controller {
               $image_pro=$image;
               break;
             }
-            if($detail_product){
-              $old_pro = [
-                $detail_product->id=>[
+            
+            session_start();
+            $check=0;
+            //check session[product] đã tồn tại chưa
+            if(Session('old_pro')){
+              $check=0;
+              foreach (Session('old_pro') as  $val) {
+                 if($val['id']==$detail_product->id){
+                  $check++;
+                 }
+              }
+            }
+             
+            //nếu chưa tồn tại add session
+            if($check==0){
+            $old_pro = [
                 "id"=> $detail_product->id,
                 "alias"=> $detail_product->alias,
                 "title"=> $detail_product->title,
                 "image"=> $image_pro
-                ]
-                ];
-                session()->put('old_pro',$old_pro);
+            ];
+            Session::push('old_pro',$old_pro);
+            }
+            
+            //nếu session lớn hơn 4 sp thì xoá 1 sp
+            $old_product=Session('old_pro');
+            $count_old_product = count($old_product);
+            // if($old_product){
+            //   foreach ($old_product as $key1 => $value) {
+            //      if($key1>2){
+            //       unset($old_product[0]);
+            //      }
+            //    }
+            // }
+
+
+            //dd(Session('old_pro'));
+              
+           
+               
+            if($detail_product){
+            
+                 //Session::save();
+
+
            
                 
 
 
 
-            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes'));
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes','count_old_product'));
             }
             else{
                 return redirect()->back()->with('out_stock','Sản phẩm tạm hết hàng');

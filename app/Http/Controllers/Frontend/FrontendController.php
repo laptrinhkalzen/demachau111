@@ -15,6 +15,7 @@ use Repositories\AttributeRepository;
 use DB;
 use Carbon\Carbon;
 
+
 class FrontendController extends Controller {
 
     public function __construct(ProductRepository $productRepo, NewsRepository $newsRepo, ProductAttributeRepository $productAttributeRepo, SlideRepository $slideRepo, CategoryRepository $categoryRepo, AttributeRepository $attributeRepo) {
@@ -26,6 +27,7 @@ class FrontendController extends Controller {
         $this->attributeRepo = $attributeRepo;
     }
     public function index() {
+                        //dd(Session('old_pro'));
         //cart
         $total = 0;
       

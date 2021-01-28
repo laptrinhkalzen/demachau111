@@ -357,17 +357,18 @@ input[type="number"] {
                                         <div class="row">
                                           
                                            @if(Session('old_pro'))
-                                             @foreach(Session('old_pro') as $key => $val)    
-                                            <div class="col-md-4">
-                                                
-                                                <a href="{{route('product.detail',['alias'=>$val['alias']])}}" target="_blank" class="mr-2"><img style="width: 75px; " src="{!!$val['image']!!}" ></a>
-                                               
-                                            </div>
-                                            <div class="col-md-8">
-                                              <a href="{{route('product.detail',['alias'=>$val['alias']])}}">
-                                                <p>{!!$val['title']!!}</p>
-                                                </a>
-                                            </div>
+                                             @foreach(Session('old_pro') as $key => $val)
+                                             @if($count_old_product - $key <= 3)
+                                                <div class="col-md-4">
+                                                    <a href="{{route('product.detail',['alias'=>$val['alias']])}}" target="_blank" class="mr-2"><img style="width: 75px; " src="{!!$val['image']!!}" ></a>
+                                                   
+                                                </div>
+                                                <div class="col-md-8">
+                                                  <a href="{{route('product.detail',['alias'=>$val['alias']])}}">
+                                                    <p>{!!$val['title']!!}</p>
+                                                    </a>
+                                                </div>
+                                            @endif 
                                             @endforeach
                                            @endif
                                         </div>
