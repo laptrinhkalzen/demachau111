@@ -134,41 +134,50 @@ input[type="number"] {
                                     
                                     <div class="row" >
                                         <div class="col-md-12">
-                                            <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
-                                                <!-- slides -->
-                                                <div class="carousel-inner">
-                                                  @foreach( explode(',',$detail_product->images) as $value)
-                                                  <div class="carousel-item active"> <img src="{{$value}}" alt="Hills" style="width: 100%;"> </div>
-                                                @break;
-                                                @endforeach
-                                                    
-                                                    </div> <!-- Left right --> 
-                                                    <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> 
-                                                      <span class="carousel-control-prev-icon"></span> 
-                                                    </a>
-                                                     <a class="carousel-control-next" href="#custCarousel" data-slide="next"> 
-                                                      <span class="carousel-control-next-icon"></span> 
-                                                     </a> <!-- Thumbnails -->
-                                                    <ol class="carousel-indicators list-inline">
-                                                        
-                                                          @foreach(explode(',',$detail_product->images) as $key => $image)
-                                                          @if($key==0)
-                                                        <li class="list-inline-item active"> 
-                                                          <a id="carousel-selector-{{$key}}" class="selected" data-slide-to="{{$key}}" data-target="#custCarousel"> 
-                                                            <img src="{{$image}}" class="img-fluid"> 
-                                                          </a>
-                                                        </li>
-                                                          @else
-                                                          <li>
-                                                          <a id="carousel-selector-{{$key}}" class="" data-slide-to="{{$key}}" data-target="#custCarousel1"> 
-                                                            <img src="{{$image}}" class="img-fluid"> 
-                                                          </a>
-                                                        </li>
-                                                          @endif
-                                                          @endforeach 
-                                                        
-                                                    </ol>
+                                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                              <div class="carousel-inner">
+                                                @foreach( explode(',',$detail_product->images) as $key => $value)
+                                                  @if($key ==0)
+                                                <div class="carousel-item active">
+                                                  <img style="width: 100%; height: 230px;background-size: cover;" class="d-block w-100" src="{{$value}}" alt="First slide">
                                                 </div>
+                                                @else
+                                                <div class="carousel-item">
+                                                  <img style="width: 100%; height: 230px;background-size: cover;" class="d-block w-100" src="{{$value}}" alt="Second slide">
+                                                </div>
+                                                @endif
+                                                @endforeach
+
+                                              </div>
+                                              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                              </a>
+                                              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                              </a>
+                                            <!--   <ol class="carousel-indicators">
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                                                  <img src="https://pbs.twimg.com/profile_images/905183271046193153/q_P1KBUJ_400x400.jpg" class="img-fluid"/>
+                                                </li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                                                  <img src="https://pbs.twimg.com/profile_images/905183271046193153/q_P1KBUJ_400x400.jpg" class="img-fluid"/>
+                                                </li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                                                  <img src="https://pbs.twimg.com/profile_images/905183271046193153/q_P1KBUJ_400x400.jpg" class="img-fluid"/>
+                                                </li>
+                                              </ol> -->
+                                              <div class="container pt-4 pb-5">
+                                                <div class="row carousel-indicators">
+                                                  @foreach( explode(',',$detail_product->images) as $key => $value)
+                                                  <div class="col-md-4 item">
+                                                    <img  src="{{$value}}" class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="{{$key}}"/>
+                                                  </div>
+                                                  @endforeach
+                                                </div>
+                                              </div>
+                                            </div>
                                             </div>
                                         </div>
                                         <!--/.Carousel Wrapper-->
