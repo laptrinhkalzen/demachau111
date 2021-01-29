@@ -238,11 +238,7 @@ class ProductController extends Controller {
              
             //nếu chưa tồn tại add session
             if($check==0){
-            $old_pro = [
-
-            //dd($dem);
-            //dd($image_pro);
-            if($detail_product){
+            
               $old_pro = [
                 $detail_product->id=>[
 
@@ -250,6 +246,7 @@ class ProductController extends Controller {
                 "alias"=> $detail_product->alias,
                 "title"=> $detail_product->title,
                 "image"=> $image_pro
+              ]
             ];
             Session::push('old_pro',$old_pro);
             }
