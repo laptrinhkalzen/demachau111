@@ -216,10 +216,13 @@ class ProductController extends Controller {
             // $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
             // $news_arr = $this->newsRepo->getAllNews($limit = 7);
             // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
+             $dem=0;
+            $images=explode(',',$detail_product->images);
+            $image_pro=$images[0];
             foreach(explode(',',$detail_product->images) as $key => $image){
-              $image_pro=$image;
-              break;
+                $dem++;
             }
+
             
             session_start();
             $check=0;
@@ -236,6 +239,13 @@ class ProductController extends Controller {
             //nếu chưa tồn tại add session
             if($check==0){
             $old_pro = [
+
+            //dd($dem);
+            //dd($image_pro);
+            if($detail_product){
+              $old_pro = [
+                $detail_product->id=>[
+
                 "id"=> $detail_product->id,
                 "alias"=> $detail_product->alias,
                 "title"=> $detail_product->title,
@@ -265,12 +275,9 @@ class ProductController extends Controller {
                  //Session::save();
 
 
-           
-                
 
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes','dem','images','count_old_product'));
 
-
-            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes','count_old_product'));
             }
             else{
                 return redirect()->back()->with('out_stock','Sản phẩm tạm hết hàng');

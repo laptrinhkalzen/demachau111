@@ -102,6 +102,63 @@ input[type="number"] {
 </style>
 
 
+
+
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////-->
+<style type="text/css">
+  .carousel {
+  position: relative;
+}
+.carousel-item img {
+  object-fit: cover;
+}
+#carousel-thumbs {
+  background: rgba(255,255,255,.3);
+  bottom: 0;
+  left: 0;
+  padding: 0 50px;
+  right: 0;
+  background-color: #e6ebe7;
+  top:10px;
+ 
+  opacity: 0.8;
+
+}
+#carousel-thumbs img {
+/*  border: 5px solid transparent;*/
+  cursor: pointer;
+}
+#carousel-thumbs img:hover {
+  border-color: rgba(255,255,255,.3);
+}
+#carousel-thumbs .selected img {
+  border-color: #fff;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  background-size:  50%;
+
+
+}
+@media all and (max-width: 767px) {
+  .carousel-container #carousel-thumbs img {
+    border-width: 3px;
+  }
+}
+@media all and (min-width: 576px) {
+  .carousel-container #carousel-thumbs {
+    /*position: absolute;*/
+  }
+}
+@media all and (max-width: 576px) {
+  .carousel-container #carousel-thumbs {
+    background: #ccccce;
+  }
+}
+</style>
+
 <div class="breadcrumbs">
     <div class="container">
         <div class="row">
@@ -136,50 +193,109 @@ input[type="number"] {
                                     
                                     <div class="row" >
                                         <div class="col-md-12">
-                                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                              <div class="carousel-inner">
-                                                @foreach( explode(',',$detail_product->images) as $key => $value)
-                                                  @if($key ==0)
-                                                <div class="carousel-item active">
-                                                  <img style="width: 100%; height: 230px;background-size: cover;" class="d-block w-100" src="{{$value}}" alt="First slide">
-                                                </div>
-                                                @else
-                                                <div class="carousel-item">
-                                                  <img style="width: 100%; height: 230px;background-size: cover;" class="d-block w-100" src="{{$value}}" alt="Second slide">
-                                                </div>
-                                                @endif
-                                                @endforeach
+                                            <div class="container">
+<div class="carousel-container position-relative row">
+  
+<!-- Sorry! Lightbox doesn't work - yet. -->
+  
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    @foreach($images as $key => $image)
+    @if($key==0)
+    <div class="carousel-item active" data-slide-number="{{$key}}">
+      <img style="object-fit: cover; height: 230px; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+    </div>
+    @else
+    <div class="carousel-item" data-slide-number="{{$key}}">
+      <img  style="object-fit: cover; height: 230px; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+    </div>
+    @endif
+    @endforeach
+  </div>
+</div>
 
-                                              </div>
-                                              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
-                                              </a>
-                                              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
-                                              </a>
-                                            <!--   <ol class="carousel-indicators">
-                                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
-                                                  <img src="https://pbs.twimg.com/profile_images/905183271046193153/q_P1KBUJ_400x400.jpg" class="img-fluid"/>
-                                                </li>
-                                                <li data-target="#carouselExampleIndicators" data-slide-to="1">
-                                                  <img src="https://pbs.twimg.com/profile_images/905183271046193153/q_P1KBUJ_400x400.jpg" class="img-fluid"/>
-                                                </li>
-                                                <li data-target="#carouselExampleIndicators" data-slide-to="2">
-                                                  <img src="https://pbs.twimg.com/profile_images/905183271046193153/q_P1KBUJ_400x400.jpg" class="img-fluid"/>
-                                                </li>
-                                              </ol> -->
-                                              <div class="container pt-4 pb-5">
-                                                <div class="row carousel-indicators">
-                                                  @foreach( explode(',',$detail_product->images) as $key => $value)
-                                                  <div class="col-md-4 item">
-                                                    <img  src="{{$value}}" class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="{{$key}}"/>
-                                                  </div>
-                                                  @endforeach
-                                                </div>
-                                              </div>
-                                            </div>
+<!-- Carousel Navigation -->
+<div id="carousel-thumbs" style="" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+        @php
+          $count_sl=0;
+        @endphp
+    @while($count_sl < $dem)
+    @if($count_sl < 3) 
+    <div class="carousel-item active">
+      <div class="row mx-0">
+         @foreach($images as $key => $image)
+        <div id="carousel-selector-{{$key}}" class="thumb col-4 col-sm-4 px-1 py-2 selected" data-target="#myCarousel" data-slide-to="{{$key}}">
+          <img style="object-fit: cover; height: 40px;" src="{{$image}}" class="img-fluid" alt="...">
+        </div>
+        @php
+            $count_sl++;
+            if($count_sl % 3==0){
+            break;
+          }
+
+        @endphp
+        @endforeach
+  
+        
+            
+      </div>
+    </div>
+    @else
+        <div class="carousel-item">
+      <div class="row mx-0">
+         @foreach($images as $key => $image)
+         @if($key>=$count_sl)
+        <div id="carousel-selector-{{$key}}" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="{{$key}}">
+          <img style="object-fit: cover; height: 40px;" src="{{$image}}" class="img-fluid" alt="...">
+        </div>
+        
+        
+        @php
+            $count_sl++;
+            if($count_sl % 3==0){
+            break;
+          }
+
+        @endphp
+        @endif
+        @endforeach
+  
+        
+            
+      </div>
+    </div>
+    @endif
+
+          @endwhile
+
+    <!-- <div class="carousel-item">
+      <div class="row mx-0">
+        <div id="carousel-selector-6" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="6">
+          <img src="https://source.unsplash.com/uanoYn1AmPs/600x400/" class="img-fluid" alt="...">
+        </div>
+        <div id="carousel-selector-7" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="7">
+          <img src="https://source.unsplash.com/_snqARKTgoc/600x400/" class="img-fluid" alt="...">
+        </div>
+        <div id="carousel-selector-8" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="8">
+          <img src="https://source.unsplash.com/M9F8VR0jEPM/600x400/" class="img-fluid" alt="...">
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+  <a class="carousel-control-prev" href="#carousel-thumbs" role="button" data-slide="prev">
+    <span style="color: black; font-size: 30px;" class="fa fa-angle-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a  class="carousel-control-next"  href="#carousel-thumbs" role="button" data-slide="next">
+    <span style="color: black; font-size: 30px;" class="fa fa-angle-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</div> <!-- /row -->
+</div> <!-- /container -->
                                             </div>
                                         </div>
                                         <!--/.Carousel Wrapper-->
@@ -521,6 +637,68 @@ input[type="number"] {
         </div>
     </section>
   
+  <script type="text/javascript">
+    $('#myCarousel').carousel({
+  interval: false
+});
+$('#carousel-thumbs').carousel({
+  interval: false
+});
+
+// handles the carousel thumbnails
+// https://stackoverflow.com/questions/25752187/bootstrap-carousel-with-thumbnails-multiple-carousel
+$('[id^=carousel-selector-]').click(function() {
+  var id_selector = $(this).attr('id');
+  var id = parseInt( id_selector.substr(id_selector.lastIndexOf('-') + 1) );
+  $('#myCarousel').carousel(id);
+});
+// Only display 3 items in nav on mobile.
+if ($(window).width() < 575) {
+  $('#carousel-thumbs .row div:nth-child(4)').each(function() {
+    var rowBoundary = $(this);
+    $('<div class="row mx-0">').insertAfter(rowBoundary.parent()).append(rowBoundary.nextAll().addBack());
+  });
+  $('#carousel-thumbs .carousel-item .row:nth-child(even)').each(function() {
+    var boundary = $(this);
+    $('<div class="carousel-item">').insertAfter(boundary.parent()).append(boundary.nextAll().addBack());
+  });
+}
+// Hide slide arrows if too few items.
+if ($('#carousel-thumbs .carousel-item').length < 2) {
+  $('#carousel-thumbs [class^=carousel-control-]').remove();
+  $('.machine-carousel-container #carousel-thumbs').css('padding','0 5px');
+}
+// when the carousel slides, auto update
+$('#myCarousel').on('slide.bs.carousel', function(e) {
+  var id = parseInt( $(e.relatedTarget).attr('data-slide-number') );
+  $('[id^=carousel-selector-]').removeClass('selected');
+  $('[id=carousel-selector-'+id+']').addClass('selected');
+});
+// when user swipes, go next or previous
+$('#myCarousel').swipe({
+  fallbackToMouseEvents: true,
+  swipeLeft: function(e) {
+    $('#myCarousel').carousel('next');
+  },
+  swipeRight: function(e) {
+    $('#myCarousel').carousel('prev');
+  },
+  allowPageScroll: 'vertical',
+  preventDefaultEvents: false,
+  threshold: 75
+});
+/*
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+*/
+
+$('#myCarousel .carousel-item img').on('click', function(e) {
+  var src = $(e.target).attr('data-remote');
+  if (src) $(this).ekkoLightbox();
+});
+  </script>
    
     <script type="text/javascript">
       function showtext()
