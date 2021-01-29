@@ -11,6 +11,9 @@
 	text-align: center;
 	-webkit-tap-highlight-color: transparent;
 }
+.owl-theme .owl-controls .owl-nav{
+  position: absolute;
+}
 .owl-theme .owl-nav [class*='owl-'] {
     color: #FFF;
     font-size: 14px;

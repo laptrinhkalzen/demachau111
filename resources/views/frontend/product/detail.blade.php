@@ -592,6 +592,7 @@ input[type="number"] {
     </section>
 
     <section style="padding-bottom: 50px;">
+      <div class="product-area most-popular section" style="padding: 20px !important;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm tương tự</p>
             <div class="row">
@@ -634,6 +635,7 @@ input[type="number"] {
                                 </div>
                             </div>
                         </div>
+                      </div>
         </div>
     </section>
   

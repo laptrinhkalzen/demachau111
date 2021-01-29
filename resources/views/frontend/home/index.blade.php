@@ -330,47 +330,21 @@ margin-top: 0px;
                                 <img class="hover-img img-responsive img-rounded hover-news" src="{{$value}}">
                                 @break;
                                 @endforeach
-                                <!--  <span class="out-of-stock">Hot</span> -->
-                            </a>
-                            <!--<div class="button-head">
-                                   <div class="product-action">
-                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào giỏ hàng</span></a>
-                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm giỏ hàng</span></a>
-
-                            <div class="button-head">
-                                   <div class="product-action">
-                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Thêm vào gi? hàng</span></a>
-                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Thêm gi? hàng</span></a>
-
-                                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Yêu thích</span></a>
-                                </div> 
                                 
-                            </div>-->
+                            </a>
+                            
                         </div>
                         <div class="product-content1">
-                            
-
                             <h3  style="text-align: center;"><a class="title" href="{{route('news.detail',['alias'=>$new->alias])}}">{{$new->title}}</a></h3>
                             <div class="content">
                                  <a class="title">{!!$new->description!!}</a>
                             </div>
-
-                            
                         </div>
                     </div>
                    @endforeach
-                    
-                    <!-- End Single Product -->
-                    <!-- Start Single Product -->
-                    
-                    <!-- End Single Product -->
-                    <!-- Start Single Product -->
-                    
-                    <!-- End Single Product -->
                 </div>
             </div>
         </div>
-        
     </div>
 </div>
 

@@ -58,12 +58,6 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-2 col-form-label text-right">Kích thước </label>
-                                        <div class="col-md-10">
-                                            <input type="text" class="form-control" name="size" value="{!!old('size')!!}">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
                                         <label class="col-md-2  control-label text-right text-semibold" for="images">Hình ảnh:</label>
                                         <div class="col-lg-10 div-image">
                                             <div class="file-input file-input-ajax-new">

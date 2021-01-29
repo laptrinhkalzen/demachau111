@@ -58,12 +58,7 @@
                                             <textarea class="form-control" name="description">{!!is_null(old('description'))?$record->description:old('description')!!}</textarea>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 col-form-label text-right">Kích thước</label>
-                                        <div class="col-md-10">
-                                            <input type="text" class="form-control" name="size" value="{!!is_null(old('size'))?$record->size:old('size')!!}">
-                                        </div>
-                                    </div>
+                                   
                                     <div class="form-group row">
                                         <label class="col-md-2 required control-label text-right text-semibold" for="images">Hình ảnh:</label>
                                         <div class="col-lg-10 div-image">

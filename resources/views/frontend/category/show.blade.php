@@ -226,8 +226,11 @@ document.body.querySelector('#alternate-button-container')
 						<div class="single-product">
 							<div class="product-img">
 								<a href="{{route('product.detail',['alias'=>$product_arr1->alias])}}">
-									<img class="default-img" src="{{$product_arr1->images}}" alt="#" style="width: 100%; height: 255px;">
-									<img class="hover-img" src="{{$product_arr1->images}}" alt="#">
+									@foreach( explode(',',$product_arr1->images) as $value)
+	                                <img class="default-img" src="{{$value}}" alt="#" style="width: 100%; height: 255px;">
+									<img class="hover-img" src="{{$value}}" alt="#">
+	                                @break;
+	                                @endforeach
 								</a>
 								<div class="button-head">
                                                
