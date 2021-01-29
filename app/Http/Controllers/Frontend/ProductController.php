@@ -229,6 +229,8 @@ class ProductController extends Controller {
             //check session[product] đã tồn tại chưa
             if(Session('old_pro')){
               $check=0;
+              //dd($detail_product);
+              //dd(Session('old_pro'));
               foreach (Session('old_pro') as  $val) {
                  if($val['id']==$detail_product->id){
                   $check++;
@@ -240,13 +242,13 @@ class ProductController extends Controller {
             if($check==0){
             
               $old_pro = [
-                $detail_product->id=>[
+                
 
                 "id"=> $detail_product->id,
                 "alias"=> $detail_product->alias,
                 "title"=> $detail_product->title,
                 "image"=> $image_pro
-              ]
+              
             ];
             Session::push('old_pro',$old_pro);
             }
