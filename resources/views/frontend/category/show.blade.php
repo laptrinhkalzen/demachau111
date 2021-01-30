@@ -91,7 +91,10 @@ document.body.querySelector('#alternate-button-container')
 					<!--/ End Single Widget -->
 					<!-- Shop By Price -->
 					@foreach($attributes as $key => $attribute)
-					<div class="single-widget range"  style="height:200px; overflow: scroll;">
+					<?php
+					$count = count($attribute);
+					?>
+					<div class="single-widget range"  style="height:200px; @if($count>2)overflow: scroll;@endif">
 						@foreach($parent_attributes as $parent_attribute)
 						@if($parent_attribute->id==$key)
 						<h3 class="title">{{$parent_attribute->title}}</h3>
