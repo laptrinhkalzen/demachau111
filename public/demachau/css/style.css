@@ -54,7 +54,7 @@ img {
 .hotline-phone-ring-wrap1 {
     position:relative !important;
     z-index: 1111111;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .hotline-phone-ring-wrap {
@@ -1977,8 +1977,8 @@ padding-left: 0px;
 }
 .product-area .nav-tabs li a.active,
 .product-area .nav-tabs li:hover a{
-	background:#283988;
-	color:#fff;
+	background:white;
+	color:#333;
 	border-color:transparent;
 }
 /* Sinlge Product */

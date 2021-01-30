@@ -318,12 +318,12 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                         @endphp
                                         @endforeach 
                                         @if($dem>0)  
-                                        <li><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}<i style="padding-top: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <li class="ml-3"><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}<i style="padding-top: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         @else
-                                        <li><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a>
+                                        <li class="ml-3"><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a>
                                         @endif
                                         
-                                        <ul class="sub-category">
+                                        <ul class="sub-category ml-4">
                                             @if(!is_null($cat->children))
                                             
                                             @foreach ($cat->children as $key=>$cat1)
