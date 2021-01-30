@@ -33,12 +33,12 @@ class FrontendController extends Controller {
       
         $flashsale=DB::table('flashsale')->where('order',1)->first();
         
-        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->get();
+        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('product.status',1)->get();
 
         //dd($danh_muc_deal);
         $news = DB::table('news')->orderBy('ordering','asc')->where('status',1)->get();
         $danh_muc_cha=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
-        $product_danh_muc_cha=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->get();
+        $product_danh_muc_cha=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->where('product.status',1)->get();
         $danh_muc_con=DB::table('category')->where('parent_id','!=',0)->where('type',4)->where('status',1)->get();
         $show = 1;
         $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('attribute.parent_id','!=','0')->get();
@@ -62,7 +62,7 @@ class FrontendController extends Controller {
                      }
                      $flashsale_products[$key]->sale_price=$sale_price;
                  }
-        }
+            }
         }
 
         foreach ($product_danh_muc_cha as $key => $value) {
@@ -79,7 +79,7 @@ class FrontendController extends Controller {
                      }
                      $product_danh_muc_cha[$key]->sale_price=$sale_price;
                  }
-        }
+            }
         }
           $product_attrs=$product_attributes->groupBy('product_id');
 

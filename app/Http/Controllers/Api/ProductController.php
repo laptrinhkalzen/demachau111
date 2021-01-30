@@ -144,7 +144,7 @@ class ProductController extends Controller {
         $category_id=DB::table('category')->where('id',$cat_id)->first();
         if($attr){
           if($category_id->parent_id!=0){
-          $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->get();
+          $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->where('product.status',1)->get();
           }
           else{
              $children_ids=DB::table('category')->where('parent_id',$cat_id)->get();
@@ -152,7 +152,7 @@ class ProductController extends Controller {
              foreach($children_ids as $children_id){
                 $id_children[]=$children_id->id;
              }
-             $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->whereIn('product_category.category_id',$id_children)->get();
+             $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product.status',1)->whereIn('product_category.category_id',$id_children)->get();
           }
 
         $product_ids=$product_cat->groupBy('id');
