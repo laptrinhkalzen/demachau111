@@ -150,6 +150,7 @@ margin-top: 0px;
                             <div class="col-3 col-lg-3" style="text-align: center;">Phút</div>
                             <div class="col-3 col-lg-3" style="text-align: center;">Giây</div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -219,7 +220,7 @@ margin-top: 0px;
         <div class="nav-main">
             <!-- Tab Nav -->
             <ul style="" class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="dmc" style="float: left;height: 43px; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
+                <li class="dmc" style="float: left; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >{{$danh_muc_cha->name}}</a></li>
                 @foreach($danh_muc_con as $danh_muc_con1)
                 @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
                 <li style="float: left;"  class="nav-item danh-muc-con"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
@@ -312,7 +313,7 @@ margin-top: 0px;
         <div class="nav-main">
             <!-- Tab Nav -->
             <ul style="" class="nav nav-tabs" id="myTab" role="tablist">
-                <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a class="nav-link active"  href="{{route('news.list')}}" >Kinh nghiệm hay</a></li>
+                <li style="float: left; border-bottom: none; " class="nav-item"><a class="nav-link active"  href="{{route('news.list')}}" >Kinh nghiệm hay</a></li>
             </ul>
             <!--/ End Tab Nav -->
         </div>
@@ -322,7 +323,7 @@ margin-top: 0px;
                 <div class="owl-carousel popular-slider">
                     @foreach($news as $key => $new)
                     <!-- Start Single Product -->
-                    <div class="single-product">
+                    <div class="single-product" style="margin-bottom: 12px;">
                         <div class="product-img">
                             <a href="{{route('news.detail',['alias'=>$new->alias])}}">
                                 @foreach( explode(',',$new->images) as $value)

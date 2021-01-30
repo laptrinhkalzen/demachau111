@@ -81,7 +81,6 @@ class ProductController extends Controller {
           foreach($product_ids as $key => $product_id){
               $pro_id[]=$key;
           }
-          
           //lấy mảng attribute_id
           $category_attr= $product_cat->groupBy('category_id');
           foreach($category_attr as $key => $category_attr)

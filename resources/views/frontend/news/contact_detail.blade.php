@@ -50,25 +50,25 @@
                                         <div class="col-lg-6 col-12">
                                             <div class="form-group">
                                                 <label>Tên của bạn<span>*</span></label>
-                                                <input name="name" type="text" placeholder="">
+                                                <input name="name" type="text" placeholder="" required="">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-12">
                                             <div class="form-group">
                                                 <label>Điện thoại<span>*</span></label>
-                                                <input name="mobile" type="text" placeholder="">
+                                                <input name="mobile" type="text" placeholder="" required="">
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-12">
                                             <div class="form-group">
                                                 <label>Email của bạn<span>*</span></label>
-                                                <input name="email" type="email" placeholder="">
+                                                <input name="email" type="email" placeholder="" required="">
                                             </div>  
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group message">
                                                 <label>Nội dung<span>*</span></label>
-                                                <textarea name="content" placeholder=""></textarea>
+                                                <textarea name="content" placeholder="" required=""></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">
