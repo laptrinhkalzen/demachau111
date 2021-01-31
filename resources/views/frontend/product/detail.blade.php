@@ -119,11 +119,8 @@ input[type="number"] {
   left: 0;
   padding: 0 50px;
   right: 0;
-  background-color: #e6ebe7;
   top:10px;
  
-  opacity: 0.8;
-
 }
 #carousel-thumbs img {
 /*  border: 5px solid transparent;*/
@@ -472,24 +469,24 @@ input[type="number"] {
                                 <div class="">
                                     <div class="form-group">
                                       <h3 style="font-weight: 500px; text-align: center; font-size: 14px ;margin-bottom: 10px;">SẢN PHẨM VỪA ĐƯỢC XEM</h3>
-                                        <div class="row">
-                                          
+                                             
                                            @if(Session('old_pro'))
                                              @foreach(Session('old_pro') as $key => $val)
                                              @if($count_old_product - $key <= 3)
+                                           <div class="form-row" style="margin-bottom: 10px;">  
                                                 <div class="col-md-4">
-                                                    <a href="{{route('product.detail',['alias'=>$val['alias']])}}" target="_blank" class="mr-2"><img style="width: 75px; " src="{!!$val['image']!!}" ></a>
-                                                   
+                                                    <a href="{{route('product.detail',['alias'=>$val['alias']])}}" target="_blank" class="mr-2"><img style="width: 75px; height: 75px;" src="{!!$val['image']!!}" ></a>
+                                                    
                                                 </div>
-                                                <div class="col-md-8">
-                                                  <a href="{{route('product.detail',['alias'=>$val['alias']])}}">
+                                                <div class="col-md-8" style="text-align: left; margin: auto;">
                                                     <p>{!!$val['title']!!}</p>
-                                                    </a>
                                                 </div>
+                                        
+                                            </div>
                                             @endif 
                                             @endforeach
                                            @endif
-                                        </div>
+                                    
                                     </div>
                                     
                                     
@@ -576,7 +573,7 @@ input[type="number"] {
             <p class="mt-5" style="color: black;font-size: 18px;padding:10px;"><b>Đánh giá</b></p>
             <p class="mt-2" style="color: black;padding:10px;">Chưa có đánh giá nào</p>
         <div class="container" style="border: 3px solid #283988">
-            <p class="mt-4" style="font-size:18px;color: black;"><b>Hãy là người đầu tiên nhận xét ""</b></p>
+            <p class="mt-4" style="font-size:18px;color: black;"><b>Hãy là người đầu tiên nhận xét</b></p>
             <p class="mt-4" style="color: black;"><b>Đánh giá của bạn *</b></p>
             <p class="mt-4" style="color: black;"><b>Nhận xét của bạn *</b></p>
             <textarea class="form-control mt-2" rows="5"></textarea>
