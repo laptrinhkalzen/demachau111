@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label text-right">Url:</label>
+                                <label class="col-md-3 col-form-label text-right">Từ khoá:</label>
                                 <div class="col-md-9">
                                     <input type="text" class="form-control" name="link" value="{!!old('link')!!}" required="">
                                     {!! $errors->first('link', '<span class="text-danger">:message</span>') !!}
