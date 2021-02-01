@@ -118,7 +118,7 @@ margin-top: 0px;
         </div>
 </section> -->
 
-<section class="container" style="margin-top: 20px;">
+<section class="container" style="margin-top: 10px;">
     <div class=" single-slider">
         <div class="row">
             <div class="banner-flash-sale col-lg-3">
