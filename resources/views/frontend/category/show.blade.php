@@ -6,8 +6,8 @@
 			<div class="col-12">
 				<div class="bread-inner">
 					<ul class="bread-list">
-						<li><a href="#">Home<i class="ti-arrow-right"></i></a></li>
-						<li class="active"><a href="#">Shop Grid</a></li>
+						<li><a href="{{route('home.index')}}">Trang chủ<i class="ti-arrow-right"></i></a></li>
+						<li class="active"><a href="#">Sản phẩm</a></li>
 					</ul>
 				</div>
 			</div>
@@ -350,11 +350,14 @@ function myFunction() {
 <section class="product-area shop-sidebar shop section">
 	
 
-	<div class="container" >
-		<div class="row">
-			<h3>Không có sản phẩm nào được tìm thấy.</h3>
+
+		<div class="row" style="height: 400px;">
+			
+			<div class="container" style="margin-top: auto; margin-bottom: auto;">
+			    <h3 style="text-align: center;">Không có sản phẩm nào được tìm thấy.</h3>
+			</div>
 		</div>
-	</div>
+
 </section>
 
 @endif

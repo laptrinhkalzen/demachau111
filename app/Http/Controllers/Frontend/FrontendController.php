@@ -30,7 +30,6 @@ class FrontendController extends Controller {
                         //dd(Session('old_pro'));
         //cart
         $total = 0;
-      
         $flashsale=DB::table('flashsale')->where('order',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();
         $count_flashsale =0;
         if($flashsale){

@@ -137,8 +137,6 @@ class ProductController extends Controller {
  
 
       public function search_product(Request $request) {
-         
-      
         $product_cat=DB::table('product')->where('status',1)->where('alias','LIKE','%'.$request->search.'%')->orWhere('meta_keywords','LIKE','%'.$request->search.'%')->where('product.status',1)->get();
         if(count($product_cat)>0){
         $have_product=1;
@@ -169,10 +167,7 @@ class ProductController extends Controller {
         }else{
            $have_product=2;
             return view('frontend/category/show',compact('have_product'));
-        }
-        
-        
-        
+        }  
     } 
    
       public function search(Request $request) {
@@ -203,8 +198,9 @@ class ProductController extends Controller {
     }
 
     public function detail(Request $request,$alias) {
-
+           
             $id=DB::table('product')->where('alias',$alias)->pluck('id')->first();
+
             $benefit = DB::table('benefit')->orderBy('order','asc')->get();
             $detail_product =  $this->productRepo->getDetailProduct($alias);
             $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get();
@@ -225,8 +221,19 @@ class ProductController extends Controller {
             }
 
 
-            $category=DB::table('product_category')->where('product_id',$id)->pluck('category_id')->first();
-            $similar_product_ids=DB::table('product_category')->where('category_id',$category)->get();
+            $product_category=DB::table('product_category')->where('product_id',$id)->first();
+              
+            $category=DB::table('category')->where('id',$product_category->category_id)->first();
+
+            if($category->parent_id!=0){
+                $parent_category=DB::table('category')->where('id',$category->parent_id)->first();
+            }
+            else{
+                $parent_category=0;
+            }
+            //dd($parent_category );
+            //dd($parent_category);
+            $similar_product_ids=DB::table('product_category')->where('category_id',$product_category->category_id)->get();
             foreach ($similar_product_ids as $key => $value) {
                 $product_ids[]=$value->product_id;
             }
@@ -297,7 +304,7 @@ class ProductController extends Controller {
 
 
 
-            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes','dem','images','count_old_product'));
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes','dem','images','count_old_product','category','parent_category'));
 
             }
             else{

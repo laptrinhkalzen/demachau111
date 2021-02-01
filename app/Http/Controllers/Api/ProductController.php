@@ -188,12 +188,14 @@ class ProductController extends Controller {
            }
        
        foreach ($product_finals as $product_arr1) {
+          $images=explode(",", $product_arr1->images);
+          $image=$images[0];
           $output.='<div class="col-lg-4 col-md-6 col-12">
                         <div class="single-product">
                             <div class="product-img">
                                 <a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'">
-                                    <img class="default-img" src="'.$product_arr1->images.'" alt="#" style="height:255px;width:100%;">
-                                    <img class="hover-img"  src="'.$product_arr1->images.'" alt="#">
+
+                                    <img class="default-img" src="'.$image.'" alt="#" style="height:255px;width:100%;">
                                 </a>
                                 <div class="button-head">
                                    
@@ -254,12 +256,13 @@ class ProductController extends Controller {
              
             $output='';
             foreach ($product_cat as $product_arr1) {
+                $images=explode(",", $product_arr1->images);
+               $image=$images[0];
           $output.='<div class="col-lg-4 col-md-6 col-12">
                         <div class="single-product">
                             <div class="product-img">
                                 <a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'">
-                                    <img class="default-img" src="'.$product_arr1->images.'" alt="#" style="height:255px;width:100%;">
-                                    <img class="hover-img"  src="'.$product_arr1->images.'" alt="#">
+                                    <img class="default-img" src="'.$image.'" alt="#" style="height:255px;width:100%;">
                                 </a>
                                 <div class="button-head">
                                    

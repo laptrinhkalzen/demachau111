@@ -162,8 +162,13 @@ input[type="number"] {
             <div class="col-12">
                 <div class="bread-inner">
                     <ul class="bread-list">
-                        <li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-                        <li class="active"><a href="blog-single.html">Checkout</a></li>
+                     <li><a href="{{route('home.index')}}">Trang chủ<i class="ti-arrow-right"></i></a></li>
+                     @if($parent_category!=0)
+                        <li class="active"><a href="{{route('category.show',['alias'=>$parent_category->alias])}}">{{$category->name}}</a></li>
+                        <li class="active"><a href="{{route('category.show',['alias'=>$category->alias])}}">{{$parent_category->name}}</a></li>
+                     @else
+                        <li class="active"><a href="{{route('category.show',['alias'=>$category->alias])}}">{{$category->name}}</a></li>
+                     @endif
                     </ul>
                 </div>
             </div>
