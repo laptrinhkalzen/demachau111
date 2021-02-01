@@ -93,9 +93,9 @@ document.body.querySelector('#alternate-button-container')
 					@foreach($attributes as $key => $attribute)
 
                     @if(count($attribute)>5)
-					<div class="single-widget range"  style="height:250px; overflow: scroll;">
+					<div class="single-widget range"  style="height:250px; overflow: scroll;overflow-x: hidden;background-color: white;">
 				    @else
-				    <div class="single-widget range"  style="">
+				    <div class="single-widget range"  style="background-color: white;">
 				    @endif		
 
 						@foreach($parent_attributes as $parent_attribute)
@@ -234,7 +234,7 @@ document.body.querySelector('#alternate-button-container')
 								<a href="{{route('product.detail',['alias'=>$product_arr1->alias])}}">
 									@foreach( explode(',',$product_arr1->images) as $value)
 	                                <img class="default-img" src="{{$value}}" alt="#" style="width: 100%; height: 255px;">
-									<img class="hover-img" src="{{$value}}" alt="#">
+<!-- 									<img class="hover-img" src="{{$value}}" alt="#"> -->
 	                                @break;
 	                                @endforeach
 								</a>
