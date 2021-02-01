@@ -72,6 +72,7 @@ class ProductController extends Controller {
 
           
           else{
+             $have_product=1;
              $children_ids=DB::table('category')->where('parent_id',$category_id->id)->get();
              $id_children=array();
              foreach($children_ids as $children_id){

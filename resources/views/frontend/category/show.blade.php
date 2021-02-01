@@ -347,6 +347,15 @@ function myFunction() {
 	});
 </script>
 @else
+<section class="product-area shop-sidebar shop section">
+	
+
+	<div class="container" >
+		<div class="row">
+			<h3>Không có sản phẩm nào được tìm thấy.</h3>
+		</div>
+	</div>
+</section>
 
 @endif
 <script>
