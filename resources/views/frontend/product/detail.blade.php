@@ -324,45 +324,41 @@ input[type="number"] {
                                     </div>
                                     <div class="">
                                         <div class="row">
-                                            <div class="col-lg-3 form-group">
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                              <option>1</option>
-                                              <option>2</option>
-                                              <option>3</option>
-                                              <option>4</option>
-                                              <option>5</option>
-                                            </select>
-                                          </div>
+                                            
+                                            
+                                  
                                             @if($input)
                                             @foreach($input as $inputt)
-                                            <div class="col-lg-12">
+                                    
+                                            <div class="col-md-6 col-lg-6">  
+                                            <div class="col-lg-12 col-md-12">
                                                 <span style="font-size: 14px;font-weight: 600;">{{$inputt['name']}}</span>
                                             </div>
                                             @php
                                             $dem=0;
                                             @endphp
+                                            <div class="col-lg-12 col-md-12 ">
+                                            <select class="form-control check-option" id="exampleFormControlSelect1">
                                             @foreach($attributes as $attribute)
                                             @if($attribute->parent_id==$inputt['id'])
                                             @php
                                             $dem++;
                                             @endphp
                                             @if($dem==1)
-                                            <!--                                             <div class="col-lg-4 radio-check">
-                                                <input type="radio" checked class="check-option" name="{{$inputt['name']}}" value="{{$attribute->title}}">
-                                                <label for="other">{{$attribute->title}}</label>
-                                            </div> -->
-                                            <div class="radio-check" style="padding-left: 15px;"><label class="radio"> <input type="radio" checked class="check-option"name="{{$inputt['name']}}" value="{{$attribute->title}}" > <span>{{$attribute->title}}</span></label></div>
+                                          
+                                            <option checked value="{{$attribute->title}}">{{$attribute->title}}</option>
                                             @else
-                                            <!--                                             <div class="col-lg-4 radio-check">
-                                                <input type="radio" check class="check-option" name="{{$inputt['name']}}" value="{{$attribute->title}}">
-                                                <label for="other">{{$attribute->title}}</label>
-                                            </div> -->
-                                            <div class="radio-check" style="padding-left: 15px;"><label class="radio"> <input type="radio" check class="check-option"name="{{$inputt['name']}}" value="{{$attribute->title}}" > <span>{{$attribute->title}}</span></label></div>
+                                            <option  value="{{$attribute->title}}">{{$attribute->title}}</option>
                                             @endif
                                             @endif
                                             @endforeach
+                                            </select>
+                                            </div>
+                                          
+                                         </div>
+                                              @endforeach
                                             
-                                            @endforeach
+                                     
                                             @endif
                                         </div>
 
@@ -761,9 +757,10 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
     }
     function checkOption(){
     var alias='{{$detail_product->alias}}';
-    search = $('div').find("input:radio:checked").map(function(){
+    search = $('div').find("option:selected").map(function(){
     return $(this).val();
     }).get();
+
     $.ajax({
     url:'{{route("api.check_option")}}',
     method:'POST',
@@ -794,7 +791,7 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
     }
     });
     }
-    $('.check-option').on('click',function(){
+    $('.check-option').on('change',function(){
     checkOption();
     // var list = [];
     // $('div').find("input:radio:checked").each(function () {
