@@ -12,29 +12,49 @@
                                     
                                     <h3>CÔNG TY CPTM HÀ MINH GIANG</h3>
                                 </div>
+                               
                                 <div class="single-info">
+                                     <div class="row">
+                                         <div class="col-md-2 col-2">
                                     <i class="fa fa-phone" style="background:#283988;"></i>
-                                    <h4 class="title">Hotline: </h4>
-                                    <ul>
-                                        <li>{{$share_config->hotline}}</li>
-                                        <li>{{$share_config->phone}}</li>
-                                    </ul>
+                                   </div>
+                                            <div class="col-md-10 col-10">
+                                                <h4 class="title">Hotline: </h4>
+                                            <ul>
+                                                <li>{{$share_config->hotline}}</li>
+                                                <li>{{$share_config->phone}}</li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="single-info">
+                                     <div class="row">
+                                         <div class="col-md-2 col-2">
                                     <i class="fa fa-envelope-open" style="background:#283988;"></i>
-                                    <h4 class="title">Email:</h4>
-                                    <ul>
-                                        <li><a>{{$share_config->email}}</a></li>
-                                        
-                                    </ul>
+                                   </div>
+                                            <div class="col-md-10 col-10">
+                                            <h4 class="title">Email:</h4>
+                                            <ul>
+                                                <li><a>{{$share_config->email}}</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="single-info">
+                                     <div class="row">
+                                         <div class="col-md-2 col-2">
                                     <i class="fa fa-location-arrow" style="background:#283988;"></i>
-                                    <h4 class="title">Showroom:</h4>
-                                    <ul>
-                                        <li>{{$share_config->address}}</li>
-                                    </ul>
+                                   </div>
+                                            <div class="col-md-10 col-10">
+                                            <h4 class="title">Showroom:</h4>
+                                            <ul>
+                                                <li>{{$share_config->address}}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
 

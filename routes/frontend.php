@@ -9,6 +9,8 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::get('/news', ['as' => 'home.news', 'uses' => 'Frontend\News2Controller@index']);
     Route::get('/flash-sale', ['as' => 'event.sale', 'uses' => 'Frontend\FrontendController@event']);
 
+    Route::get('/flash-sale/show', ['as' => 'flashsale.show', 'uses' => 'Frontend\FrontendController@flashsale_show']);
+
     Route::get('/about', ['as' => 'home.about', 'uses' => 'Frontend\AboutController@index']);
     Route::get('/checkout-order', ['as' => 'checkout_order.index', 'uses' => 'Frontend\CheckoutOrderController@index']);
     Route::post('/buy-now/{id}', ['as' => 'home.buy_now', 'uses' => 'Frontend\CheckoutOrderController@buy_now']);

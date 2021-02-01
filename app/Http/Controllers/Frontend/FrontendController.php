@@ -104,4 +104,26 @@ class FrontendController extends Controller {
     public function event() {
         return view('frontend/home/event');
     }
+    public function flashsale_show() {
+        $flashsale=DB::table('flashsale')->where('status',1)->where('flashsale.start','<=', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>=',Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('start','asc')->first();
+        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('product.status',1)->get();
+        foreach ($flashsale_products as $key => $value) {
+                 foreach ($flashsale_products   as  $product_sale) {
+                     if($product_sale->product_id==$value->id){
+                         if($product_sale->discount_type==0){
+                             $sale_price=$value->price-($value->price/100*$product_sale->discount_value);
+                         }
+                         if($product_sale->discount_type==1){
+                              $sale_price=$value->price-$product_sale->discount_value;
+                         }
+                         if($product_sale->discount_type==2){
+                             $sale_price=$product_sale->discount_value;
+                         }
+                         $flashsale_products[$key]->sale_price=$sale_price;
+                     }
+                     //dd($value);
+            }
+            }
+        return view('frontend/flashsale/show',compact('flashsale','flashsale_products'));
+    }
 }
