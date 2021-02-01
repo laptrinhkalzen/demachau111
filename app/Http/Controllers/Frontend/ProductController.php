@@ -140,7 +140,7 @@ class ProductController extends Controller {
          
       
         $product_cat=DB::table('product')->where('status',1)->where('alias','LIKE','%'.$request->search.'%')->orWhere('meta_keywords','LIKE','%'.$request->search.'%')->where('product.status',1)->get();
-        if($product_cat){
+        if(count($product_cat)>0){
         $have_product=1;
         $product_ids=$product_cat->pluck('id');
 
