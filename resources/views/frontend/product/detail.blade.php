@@ -175,7 +175,7 @@ input[type="number"] {
 <section class="shop checkout section" style="background-color: #f6f7fb;"  >
     <div class="container">
         <div class="row">
-            <div class="col-lg-9 col-12" style="background-color: #fff;border: 1px solid #ebebeb; ">
+            <div class="col-lg-9 col-12" style="background-color: #fff;border: 1px solid #ebebeb;border-right: none; ">
                 <div class="checkout-form">
                     
                     <!-- Form -->
@@ -307,13 +307,13 @@ input[type="number"] {
                                     <div class="">
                                         <div class="row">
                                             <div class="col-lg-3 form-group">
-<!--                                             <select class="form-control" id="exampleFormControlSelect1">
+                                            <select class="form-control" id="exampleFormControlSelect1">
                                               <option>1</option>
                                               <option>2</option>
                                               <option>3</option>
                                               <option>4</option>
                                               <option>5</option>
-                                            </select> -->
+                                            </select>
                                           </div>
                                             @if($input)
                                             @foreach($input as $inputt)
@@ -413,7 +413,7 @@ input[type="number"] {
                     
                     <!-- Order Widget -->
                     <div class="row">
-                      <div class="col-12" style="border-bottom: 2px solid #ebebeb;">
+                      <div class="col-12" style="border-bottom: 1px solid #ebebeb;">
                         <div class="single-widget">
                         <div class="content">
                             <ul>
@@ -608,7 +608,7 @@ input[type="number"] {
                                             </a>
                                             <div class="button-head">
                                                
-                                                <div style="background-color: #283988; text-align: center; width: 90%;" class="product-action-2">
+                                                <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
                                                     <a title="Mua hàng" href="{{route('product.detail',['alias'=>$product->alias])}}">Mua hàng</a>
                                                 </div>
                                             </div>
