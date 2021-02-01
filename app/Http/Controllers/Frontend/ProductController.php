@@ -66,8 +66,11 @@ class ProductController extends Controller {
     public function category(Request $request, $alias) {
           $category_id=DB::table('category')->where('alias',$alias)->first();
           if($category_id->parent_id!=0){
+            $have_product=1;
           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$category_id->id)->where('product.status',1)->get();
           }
+
+          
           else{
              $children_ids=DB::table('category')->where('parent_id',$category_id->id)->get();
              $id_children=array();
@@ -76,6 +79,8 @@ class ProductController extends Controller {
              }
              $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product.status',1)->whereIn('product_category.category_id',$id_children)->get();
           }
+          $is_product=count($product_cat);
+          if($is_product > 0){
           //lấy mảng product_id
           $product_ids=$product_cat->groupBy('id');
           foreach($product_ids as $key => $product_id){
@@ -115,8 +120,17 @@ class ProductController extends Controller {
             }
             }
             $category_id=$category_id->id;
+             return view('frontend/category/show',compact('product_cat','attributes','parent_attributes','category_id','have_product'));
             //dd($product_cat);
-          return view('frontend/category/show',compact('product_cat','attributes','parent_attributes','category_id'));
+         
+          }
+          else{
+            $have_product=2;
+            return view('frontend/category/show',compact('have_product'));
+
+          }
+
+          
     }
 
  

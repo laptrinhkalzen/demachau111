@@ -57,6 +57,7 @@ document.body.querySelector('#alternate-button-container')
 .style.display = 'none';
 </script>
 <!-- Product Style -->
+@if($have_product==1)
 <section class="product-area shop-sidebar shop section">
 	<div class="icon-filter container">
 		<div class="row"><i class="fa fa-filter fa-2x" aria-hidden="true" style="margin:auto;" onclick="w3_open()"><span style="font-size: 22px;">Lọc</span></i></div>
@@ -91,13 +92,11 @@ document.body.querySelector('#alternate-button-container')
 					<!--/ End Single Widget -->
 					<!-- Shop By Price -->
 					@foreach($attributes as $key => $attribute)
-
                     @if(count($attribute)>5)
 					<div class="single-widget range"  style="height:250px; overflow: scroll;overflow-x: hidden;background-color: white;">
 				    @else
 				    <div class="single-widget range"  style="background-color: white;">
 				    @endif		
-
 						@foreach($parent_attributes as $parent_attribute)
 						@if($parent_attribute->id==$key)
 						<h3 class="title">{{$parent_attribute->title}}</h3>
@@ -232,11 +231,13 @@ document.body.querySelector('#alternate-button-container')
 						<div class="single-product">
 							<div class="product-img">
 								<a href="{{route('product.detail',['alias'=>$product_arr1->alias])}}">
+
 									@foreach( explode(',',$product_arr1->images) as $value)
 	                                <img class="default-img" src="{{$value}}" alt="#" style="width: 100%; height: 255px;">
 <!-- 									<img class="hover-img" src="{{$value}}" alt="#"> -->
 	                                @break;
 	                                @endforeach
+
 								</a>
 								<div class="button-head">
                                                
@@ -271,6 +272,7 @@ document.body.querySelector('#alternate-button-container')
 		</div>
 	</div>
 </section>
+
 <!--/ End Product Style 1  -->
 <!-- Start Shop Newsletter  -->
 <!-- <section class="shop-newsletter section">
@@ -344,6 +346,9 @@ function myFunction() {
           });
 	});
 </script>
+@else
+
+@endif
 <script>
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
@@ -356,4 +361,5 @@ function w3_close() {
 }
 
 </script>
+
 @stop
