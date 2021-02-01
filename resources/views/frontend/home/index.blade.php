@@ -118,40 +118,48 @@ margin-top: 0px;
         </div>
 </section> -->
 
+
 @if($count_flashsale==1)
-<section class="container" style="margin-top: 10px;">
+<section class="container hotdeals" style="margin-top: 10px;">
     <div class=" single-slider">
         <div class="row">
             <div class="banner-flash-sale col-lg-3">
                 <div class="" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">
-                    <img src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 100%;object-fit: cover;float: right;">
-                    <div class="" >
-                        <span style="font-size: 20px;">Còn lại
+
+                    <img class="mb-3"src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 100%;object-fit: cover;float: right;">
+                    <div class="row" style="margin-right: 0px;">
+                        <span style="font-size: 20px;margin:auto;">Còn lại
                             <strong id="day"></strong>&nbspngày
                         </span>
                         <div class="row container">
-                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-right: 10px;font-size: 24px;">
+                            <div class="col-1 col-lg-1"></div>
+                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
                                 <span>
                                     <strong id="hour" ></strong>
                                 </span>
                             </div>
-                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-right: 10px;font-size: 24px;">
+                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
                                 <span>
                                     <strong id="minute"></strong>
                                 </span>
                             </div>
-                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;font-size: 24px;">
+                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
                                 <span>
                                     <strong id="second"></strong>
                                 </span>
                             </div>
+                            <div class="col-1 col-lg-1"></div>
                         </div>
                         <div class="row container">
-                            <div class="col-3 col-lg-3" style="text-align: center;">Giờ</div>
-                            <div class="col-3 col-lg-3" style="text-align: center;">Phút</div>
-                            <div class="col-3 col-lg-3" style="text-align: center;">Giây</div>
+                            <div class="col-1 col-lg-1"></div>
+                            <div class="col-3 col-lg-3" style="text-align: center;margin-left: 10px;">Giờ</div>
+                            <div class="col-3 col-lg-3" style="text-align: center;margin-left: 10px;">Phút</div>
+                            <div class="col-3 col-lg-3" style="text-align: center;margin-left: 10px;">Giây</div>
+                            <div class="col-1 col-lg-1"></div>
                         </div>
-
+                        <div class="row container mt-3 button-sale" style="padding-left: 50px;">
+                            <button type="button" class="btn" style="margin: auto;background-color: transparent;border-radius: 5px;border: 2px solid;">Xem tất cả</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -170,7 +178,7 @@ margin-top: 0px;
                                             <a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
 
                                                 @foreach( explode(',',$flashsale_product->images) as $value)
-                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:auto; ">
+                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:100%; ">
                                                 <!-- <img class="hover-img img-responsive img-rounded hover-product" src="{{$value}}" style="padding-top: 10px; "> -->
                                                 @break;
                                                 @endforeach
@@ -249,7 +257,7 @@ margin-top: 0px;
                         <div class="product-img">
                             <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
                                 @foreach( explode(',',$product_danh_muc_cha1->images) as $value)
-                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:255px; ">
+                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:100%; ">
 <!--                                 <img class="hover-img img-responsive img-rounded hover-product" src="{{$value}}" style="padding-top: 10px; "> -->
                                 @break;
                                 @endforeach
@@ -363,7 +371,7 @@ margin-top: 0px;
 <section class="container" style="margin-top: 20px;background-color: white;">
     <div class=" single-slider">
         <div class="row">
-            <div class="banner-flash-sale col-lg-3" style="margin: auto;text-align: center;">
+            <div class="banner-flash-sale col-lg-3 banner-brand" style="margin: auto;text-align: center;">
                 <p style="font-size: 20px;">CÁC THƯƠNG HIỆU LỚN</p>
             </div>
             <div class="carousel-flash-sale col-lg-9" style="">
@@ -378,7 +386,7 @@ margin-top: 0px;
                                         <div class="product-img">
                                             <a href="{{$brands->link}}">
                                                 <img class="default-img img-responsive img-rounded custom-brand" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
-                                                <img class="hover-img img-responsive img-rounded hover-brand" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
+<!--                                                 <img class="hover-img img-responsive img-rounded hover-brand" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; "> -->
                                             </a>
                                         </div>
                                     </div>

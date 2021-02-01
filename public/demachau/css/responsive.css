@@ -1140,6 +1140,19 @@ display: none !important;
 	padding-left: 15px !important;
 	margin-top:100px !important;
 }
+.hotdeals{
+	margin-top:0px !important;
+}
+.nav-item{
+	background-color: white !important;
+}
+.banner-brand{
+	margin-top: 20px !important;
+}
+.button-sale{
+	margin-bottom: 20px;
+}
+
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
@@ -1372,7 +1385,7 @@ display: none !important;
 	font-size: 12px;
 }
 .product-area .nav-tabs .nav-item {
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 .small-banner {
 	padding: 18px 0;
