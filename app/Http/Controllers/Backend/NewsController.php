@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Repositories\NewsRepository;
 use Repositories\CategoryRepository;
 use Repositories\PostHistoryRepository;
+use Carbon\Carbon;
 
 class NewsController extends Controller {
 
@@ -63,6 +64,7 @@ class NewsController extends Controller {
         $input['is_hot'] = isset($input['is_hot']) ? 1 : 0;
         $input['created_by'] = \Auth::user()->id;
         $input['view_count'] = 0;
+        $input['date']=Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
         if (isset($input['post_schedule'])) {
             $input['post_schedule'] = $input['post_schedule_submit'];
         }
