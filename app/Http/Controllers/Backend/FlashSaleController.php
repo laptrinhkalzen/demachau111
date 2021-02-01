@@ -46,7 +46,7 @@ class FlashSaleController extends Controller {
 
             'start' => 'Thời gian bắt đầu',
             'end' => 'Thời gian kết thúc',
-            'today' => 'hôm nay'
+            'today' => 'hôm nay',
 
         ]
 
@@ -60,8 +60,15 @@ class FlashSaleController extends Controller {
         $data = array();
         $data['name'] = $request->name;
         $data['note'] = $request->note;
-        $data['order'] = $request->order;
-        $data['start'] = $request->start;
+        //$data['order'] = $request->order;
+
+        if(isset($request->status)){
+            $data['status'] = 1;
+            }
+            else{
+            $data['status'] = null;  
+            }
+                    $data['start'] = $request->start;
         $data['end'] = $request->end;
        $input1 = DB::table('flashsale')->insertGetId($data);
 
@@ -103,6 +110,7 @@ class FlashSaleController extends Controller {
     }
 
     public function update(Request $request, $id){
+        
         $product = $request->product;
         $discount_type = $request->discount_type;
         $discount_value = $request->discount_value;
@@ -113,7 +121,13 @@ class FlashSaleController extends Controller {
            $data = array();
             $data['name'] = $request->name;
             $data['note'] = $request->note;
-            $data['order'] = $request->order;
+            //$data['order'] = $request->order;
+            if(isset($request->status)){
+            $data['status'] = 1;
+            }
+            else{
+            $data['status'] = null;  
+            }
             $data['start'] = $request->start;
             $data['end'] = $request->end;
             $input1 = DB::table('flashsale')->where('id',$id)->update($data);

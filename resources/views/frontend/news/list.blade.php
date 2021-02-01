@@ -70,7 +70,7 @@
                                     <div class="product-img">
                                         <a href="{{route('news.detail',['alias'=>$record->alias])}}">
                                             <img class="default-img" src="{{$record->images}}" alt="#">
-                                            <img class="hover-img" src="{{$record->images}}" alt="#">
+                                           <!--  <img class="hover-img" src="{{$record->images}}" alt="#"> -->
                                         </a>
                                     </div>
                                     

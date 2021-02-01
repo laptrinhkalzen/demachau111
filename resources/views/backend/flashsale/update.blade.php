@@ -95,7 +95,7 @@ function showPreview(event){
                             </div>
                             </div>
                             
-                            <div class="col-md-10">
+                            <!-- <div class="col-md-10">
                             <div class="form-group row">
                                      <label class="col-md-3 col-form-label text-right">Thứ tự: <span class="text-danger">*</span></label>
                                     <div class="col-md-3">
@@ -104,7 +104,17 @@ function showPreview(event){
                                     </div>
                                 </div>
                                 <span class="help-block">&nbsp;Flash sale có thứ tự "1" sẽ được hiển thị. Và chỉ <code>duy nhất</code> 1 flash sale được để thứ tự "1"&nbsp;</span>
-                            </div>
+                            </div> -->
+                            <div class="col-md-10">
+                              <div class="form-group row" style="float: right;"> 
+                                    <div class="form-check col-md-6 form-check-right">
+                                        <label class="form-check-label float-right">
+                                            Hiển thị
+                                            <input type="checkbox" class="form-check-input-styled" name="status" data-fouc="" @if($flashsales->status) checked @endif>
+                                        </label>
+                                    </div>
+                                </div>
+                              </div>
                            
                     </div>
                 </div>

@@ -156,6 +156,19 @@ input[type="number"] {
 }
 </style>
 
+<style type="text/css">
+  .content_product{
+    margin-left: 30px;
+    
+  }
+</style>
+
+
+
+
+
+</style>
+
 <div class="breadcrumbs">
     <div class="container">
         <div class="row">
@@ -519,6 +532,8 @@ input[type="number"] {
  
     <!--/ End Checkout -->
 
+
+
     <section style="padding-bottom: 50px;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Đặc điểm</p>
@@ -546,11 +561,12 @@ input[type="number"] {
         </div>
     </section>
 
+    @if($detail_product->content != null)
     <section style="padding-bottom: 50px;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb; ">
             <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Mô tả</p>
-            <span id="textarea" class="m-2 show_description" style="color: black;">{!!$detail_product->content!!} </span>
-            <!-- <a onclick="showtext('text')" href="javascript:void(0);">See More</a> -->
+            <!-- <span id="textarea" class="m-2 show_description" style="color: black;">{!!$detail_product->content!!} </span>
+            
 
               
             <div class="collapse" id="collapseExample">
@@ -562,15 +578,20 @@ input[type="number"] {
             <a style=" color: #0BBFFF;" class=" test" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
               Xem thêm/ Thu gọn
             </a>
+          </div> -->
+          <div class="content_product">
+          <p>{!!substr($detail_product->content,0,200)!!}}</p>
+            </div>
+            <div class="content_product" id="demo" class="collapse">
+              {!!substr($detail_product->content,200)!!}
+            </div>
+            <div style="text-align: center;">
+            <a href="" style="background-color:#FFFFFF;color: #42a1f5; " class="" data-toggle="collapse" data-target="#demo">Xem thêm/Ẩn bớt</a>
           </div>
-            
           
-          
-           <!--  <input type="button" id="show_more" value="Xem thêm"> -->
-            <input type="button" id="show_less" value="Thu gọn" style="display: none;"> 
-            
         </div>
     </section>
+    @endif
 
     <section style="padding-bottom: 50px;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
