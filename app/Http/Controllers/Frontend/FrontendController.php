@@ -31,7 +31,12 @@ class FrontendController extends Controller {
         //cart
         $total = 0;
       
-        $flashsale=DB::table('flashsale')->where('order',1)->first();
+        $flashsale=DB::table('flashsale')->where('order',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();
+        $count_flashsale =0;
+        if($flashsale){
+            $count_flashsale=1;
+        }
+        //dd($count_flashsale);
         
         $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('product.status',1)->get();
 
@@ -86,7 +91,7 @@ class FrontendController extends Controller {
             //foreach( explode(',',$flashsale_product->images) as $value)
        //dd($product_danh_muc_cha);
      //dd($product_danh_muc_cha);
-        return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','product_sales'));
+        return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','product_sales','count_flashsale'));
     }
     
     public function event() {

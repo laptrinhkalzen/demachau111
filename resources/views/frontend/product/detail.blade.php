@@ -479,7 +479,7 @@ input[type="number"] {
                                                     
                                                 </div>
                                                 <div class="col-md-8" style="text-align: left; margin: auto;">
-                                                    <p>{!!$val['title']!!}</p>
+                                                    <a href="{{route('product.detail',['alias'=>$val['alias']])}}" target="_blank" class="mr-2"><p>{!!$val['title']!!}</p></a>
                                                 </div>
                                         
                                             </div>

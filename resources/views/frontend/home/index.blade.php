@@ -118,13 +118,14 @@ margin-top: 0px;
         </div>
 </section> -->
 
+@if($count_flashsale==1)
 <section class="container" style="margin-top: 10px;">
     <div class=" single-slider">
         <div class="row">
             <div class="banner-flash-sale col-lg-3">
                 <div class="" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">
                     <img src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 100%;object-fit: cover;float: right;">
-                    <div class="">
+                    <div class="" >
                         <span style="font-size: 20px;">Còn lại
                             <strong id="day"></strong>&nbspngày
                         </span>
@@ -154,6 +155,7 @@ margin-top: 0px;
                     </div>
                 </div>
             </div>
+            
             <div class="carousel-flash-sale col-lg-9" style="border-style: solid;border-color: #c70000;">
                 <div class="product-area most-popular section" style="padding:0px;">
                     <div class="container" style="background-color:white;">
@@ -161,7 +163,8 @@ margin-top: 0px;
                             <div class="col-12">
                                 <div class="owl-carousel1 popular-slider">
                                     @foreach($flashsale_products as $flashsale_product)
-                                    @if($flashsale_product->flash_sale_id == $flashsale->id)
+                                        @if($flashsale)
+                                            @if($flashsale_product->flash_sale_id == $flashsale->id)
                                     <div class="single-product" style="margin-top:0px;">
                                         <div class="product-img">
                                             <a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
@@ -193,6 +196,10 @@ margin-top: 0px;
                                             </div>
                                         </div>
                                     </div>
+                                        
+                                        @endif
+                                    @else
+                                            @break
                                     @endif
                                     @endforeach
                                     
@@ -202,9 +209,11 @@ margin-top: 0px;
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
+@endif
 
 <!-- Start Most Popular -->
 @foreach($danh_muc_cha as $danh_muc_cha)
@@ -545,9 +554,13 @@ checkOption();
 });
 });
 </script> -->
+@if ($count_flashsale ==1) 
 <script type="text/javascript">
 $(document).ready(function(){
+    //var count_flashsale={{$count_flashsale}};
+
 // Set the date we're counting down to
+
 var start = new Date("{{$flashsale->start}}").getTime();
 var end = new Date("{{$flashsale->end}}").getTime();
 //var end = {{$flashsale->end}};
@@ -577,8 +590,11 @@ clearInterval(x);
 document.getElementById("countdown").innerHTML = "EXPIRED";
 }
 }, 1000);
+
 });
 </script>
+@endif
+
 <aside class="right"><a href="{{$banner_right->url}}"><img style="width: 150px;  height: 540px;position:absolute;right:0;" src="{{$banner_right->image}}"></img></a></aside>
 <!-- Modal end -->
 <!-- Start Footer Area -->
