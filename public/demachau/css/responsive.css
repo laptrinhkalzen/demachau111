@@ -1193,6 +1193,9 @@ display: none !important;
 .shopping-hidden{
 	display: none !important;
 }
+.flash-sale{
+	width: 30% !important;height:100%;object-fit: contain !important;
+}
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
