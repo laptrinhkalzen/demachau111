@@ -140,6 +140,8 @@ class ProductController extends Controller {
          
       
         $product_cat=DB::table('product')->where('status',1)->where('alias','LIKE','%'.$request->search.'%')->orWhere('meta_keywords','LIKE','%'.$request->search.'%')->where('product.status',1)->get();
+        if($product_cat){
+        $have_product=1;
         $product_ids=$product_cat->pluck('id');
 
         $category_id=DB::table('product_category')->whereIn('product_id',$product_ids)->get()->pluck('category_id');
@@ -163,9 +165,14 @@ class ProductController extends Controller {
                      }
                 }
             }
+        return view('frontend/category/show',compact('product_cat','attributes','parent_attributes','category_id','have_product'));
+        }else{
+           $have_product=2;
+            return view('frontend/category/show',compact('have_product'));
+        }
         
         
-        return view('frontend/category/show',compact('product_cat','attributes','parent_attributes','category_id'));
+        
     } 
    
       public function search(Request $request) {
