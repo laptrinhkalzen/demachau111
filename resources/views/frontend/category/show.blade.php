@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-<div class="breadcrumbs">
+<div class="breadcrumbs" style="background-color:#f3f5f7;">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -189,7 +189,7 @@ document.body.querySelector('#alternate-button-container')
 				<div class="row">
 					<div class="col-12">
 						<!-- Shop Top -->
-						<div class="shop-top">
+						<div class="shop-top" style="background-color: 	#FFFFFF;">
 							<div class="shop-shorter">
 								<!-- <div class="single-shorter">
 										<label>Show :</label>
@@ -201,11 +201,16 @@ document.body.querySelector('#alternate-button-container')
 										</select>
 								</div> -->
 								<div class="row">
+									<div class="col-lg-5 col-md-4">	
+										<strong>Sắp xếp theo: </strong>
+									</div>
+									<div class="col-lg-7 col-md-7">	
 	                    			<select class="form-control" id="order_by" >
 										<option value="0" selected="selected">Mới nhất</option>
 										<option value="1">Giá cao đến thấp</option>
 										<option value="2">Giá  thấp đến cao</option>
 	                                </select>
+	                                </div>
                                 </div>
 <!-- 								<div class="single-shorter ">
 									<label>Sắp xếp theo :</label>
