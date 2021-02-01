@@ -142,7 +142,7 @@ margin-top: 0px;
             <div class="banner-flash-sale col-lg-3">
                 <div class="" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">  
 
-                    <img class="flash-sale mb-3"src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 30%;object-fit: cover;float: right;">
+                    <img class="flash-sale mb-3"src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 100%;object-fit: cover;float: right;">
                     <div class="row" style="margin-right: 0px;">
                         <span style="font-size: 20px;margin:auto;">Còn lại
                             <strong id="day"></strong>&nbspngày
