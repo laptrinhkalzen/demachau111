@@ -90,7 +90,7 @@ background:#f7941d;
         <div class="container">
             <div class="row" >
                 
-                <div  class="col-lg-3 col-md-6 col-12" >
+                <div  class="col-lg-4 col-md-6 col-12" >
                     <div class="single-footer links">
                         <span class="title">{{$share_config->company_name}}</span>
                         <div class="contact">
@@ -136,7 +136,7 @@ background:#f7941d;
                     </div>
                     <!-- End Single Widget -->
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                <div class="col-lg-2 col-md-6 col-12">
                     <!-- Single Widget -->
                     <div class="single-footer links">
                         <span class="title">TỔNG ĐÀI HỖ TRỢ</span>
