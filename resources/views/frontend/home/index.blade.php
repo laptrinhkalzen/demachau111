@@ -371,7 +371,7 @@ margin-top: 0px;
                             
                         </div>
                         <div class="product-content1">
-                            <h3  style="text-align: center;"><a class="title" href="{{route('news.detail',['alias'=>$new->alias])}}">{{$new->title}}</a></h3>
+                            <h3  style="text-align: center;margin-bottom: 10px;"><a class="title" href="{{route('news.detail',['alias'=>$new->alias])}}">{{$new->title}}</a></h3>
                             <div class="content">
                                  <a class="title">{!!$new->description!!}</a>
                             </div>

@@ -1,5 +1,15 @@
 @extends('frontend.layouts.master')
 @section('content')
+<style type="text/css">
+	.single-product{
+		margin-top: 30px;
+	}
+	.nav-main ul #countdown{
+	text-align: right;
+	font-size: 14px;
+	margin-top: 0px;
+	}
+</style>
 <div class="breadcrumbs">
 	<div class="container">
 		<div class="row">
@@ -79,13 +89,46 @@ document.body.querySelector('#alternate-button-container')
 						<!-- Shop Top -->
 						<div class="">
 							<div class="">
-								<img style="width: 100%; height: 150px;" src="https://image.freepik.com/free-vector/flash-sale-banner-template-with-thunderbolt_1361-1658.jpg">
+								<img style="width: 100%; height: 150px;" src="https://media3.scdn.vn/img4/2021/01_27/HqlZVAwyKJDvB6cHAlkv.png">
 							</div>
 							
 						</div>
 						<!--/ End Shop Top -->
 					</div>
+					<div class="col-12">
+						<!-- Shop Top -->
+						<div class="">	
+							<div class="" style="width: 500px;padding-left: 15px;margin-top: 30px;background-color: #c70000;color: white;height:100px;">
+								<img class="flash-sale mb-3"src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 15%;object-fit: cover;float: right;">
+							<div class="row" style="margin-right: 0px;">
+									<span style="font-size: 20px;margin:auto;">Còn lại
+	                            <strong id="day"></strong>&nbspngày
+	                       			</span>
+								<div style="height: 30px;text-align: center; " class="row container">
+									<div class="col-3 col-lg-3"></div>	
+									<div class="col-2 col-lg-2" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px; ">
+		                                <span>
+		                                    <strong id="hour" ></strong>
+		                                </span>
+		                            </div>
+		                            <div class="col-2 col-lg-2" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
+		                                <span>
+		                                    <strong id="minute"></strong>
+		                                </span>
+		                            </div>
+		                            <div class="col-2 col-lg-2" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
+		                                <span>
+		                                    <strong id="second"></strong>
+		                                </span>
+		                            </div>
+		                            <div class="col-3 col-lg-3"></div>
+								</div>
+							</div>
+						</div>
+						<!--/ End Shop Top -->
+					</div>
 				</div>
+			<div class="col-12">
 				<div class="row show_filter">
 					@foreach($flashsale_products as $flashsale_product)
 					@if($flashsale_product->flash_sale_id==$flashsale->id)
@@ -129,11 +172,13 @@ document.body.querySelector('#alternate-button-container')
 					@endforeach
 					
 				</div>
-<!-- -->
+<!-- -->		</div>
 			</div>
 			
 		</div>
 	</div>
+</div>
+
 </section>
 
 <!--/ End Product Style 1  -->
