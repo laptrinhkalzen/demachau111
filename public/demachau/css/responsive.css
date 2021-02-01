@@ -1130,6 +1130,32 @@ display: none !important;
 	z-index: 1000;
 	overflow-y: auto;
 }
+
+.menu-1{
+	display:none;
+	width:60%;
+	height: 100%;
+	background-color: white;
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	z-index: 1000;
+	overflow-y: auto;
+}
+
+.menu-2{
+	display:none;
+	width:60%;
+	height: 100%;
+	background-color: white;
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	right:0px;
+	z-index: 1000;
+	overflow-y: auto;
+}
 .dmc{
 	border:none !important;
 }
@@ -1152,7 +1178,21 @@ display: none !important;
 .button-sale{
 	margin-bottom: 20px;
 }
-
+.topbar{
+	display: none !important;
+}
+.logo-pc{
+	display: none !important; 
+}
+.middle-inner{
+	display: none !important;
+}
+.hero-slider{
+/*	margin-top: 20px !important;*/
+}
+.shopping-hidden{
+	display: none !important;
+}
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
@@ -1830,5 +1870,10 @@ display: none !important;
 .hover-brand{
 	object-fit: contain !important;
 }
-
+.topbar-mobile{
+	display: none !important;
+}
+.navbar-mobile{
+	display: none !important;
+}
 }

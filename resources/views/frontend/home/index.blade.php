@@ -66,13 +66,29 @@ margin-top: 0px;
 <section class="shop-blog">
     <div class="container">
         <div class="row">
-                 @foreach($anh_duoi_slide as $anh_slide)
+            @foreach($anh_duoi_slide as $key =>$anh_slide)
+            @if($key==0)
+            <div class="col-lg-4 col-md-6 col-12" style="padding-right: 5px !important;padding-left: 0px !important;">
+                <div class="single-banner">
+                    <img src="{{$anh_slide->image}}" alt="#">
+                </div>
+            </div>
+            @endif
+            @if($key==1)
             <div class="col-lg-4 col-md-6 col-12" style="padding-right: 5px !important;padding-left: 5px !important;">
                 <div class="single-banner">
                     <img src="{{$anh_slide->image}}" alt="#">
                 </div>
             </div>
-                @endforeach
+            @endif
+            @if($key==2)
+            <div class="col-lg-4 col-md-6 col-12" style="padding-right: 0px !important;padding-left: 5px !important;">
+                <div class="single-banner">
+                    <img src="{{$anh_slide->image}}" alt="#">
+                </div>
+            </div>
+            @endif
+            @endforeach
             
             <!-- /End Single Banner  -->
             <!-- Single Banner  -->
@@ -128,7 +144,7 @@ margin-top: 0px;
 
                     <img class="mb-3"src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 100%;object-fit: cover;float: right;">
                     <div class="row" style="margin-right: 0px;">
-                        <span style="font-size: 20px;margin:auto;">Còn lại
+                        <span style="font-size: 20px;margin:auto;">Còn lại\ 
                             <strong id="day"></strong>&nbspngày
                         </span>
                         <div class="row container">

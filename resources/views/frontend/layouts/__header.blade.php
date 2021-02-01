@@ -97,45 +97,95 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 @endif
 
     <header class="header shop">
-        <!-- Topbar -->
+        <div class="topbar-mobile">
+            <div class="row">
+                <div class="col-4">
+                    <p style="text-align: center;color:#283988;font-size: 12px; ">
+                        Mua hàng, gọi ngay
+                        <br>
+                        <b style="font-size: 20px;">{{$share_config->hotline}}</b>
+                    </p>
+                </div>
+                <div class="col-5">
+                    <a href="{{route('home.index')}}"><img class="logo mt-2" src="{{$share_config->image}}" alt="logo"></a>
+                </div>
+                <div class="col-3" style="text-align: center;">
+<!--                     <div class="sinlge-bar shopping"> -->
+    <div>
+                                <a href="#" class="single-icon"><!-- <i class="fa fa-shopping-cart fa-2x" style="color: #283988;padding-top: 15px;"></i> --><img src="{{asset('public/icon/cart-svg.svg')}}" style="color: #283988;width: 30px;margin-top: 15px;" onclick="w3_open2()"><span class="total-count" id="cart-count" style="border: 1px solid #ea1621;background-color: #ea1621;color: white;border-radius: 50%;vertical-align: bottom;">{{$count_cart}}</span></a>
+                                <!-- Shopping Item -->
+                                <div class="shopping-item shopping-hidden">
+                                     @if(Session('cart'))
+                                    <div class="dropdown-cart-header">
+                                        <span id="count-sp">{{$count_cart}} Sản phẩm</span>
+                                        <a href="{{route('checkout_order.index')}}">Xem giỏ hàng</a>
+                                    </div>
+                                    <ul class="shopping-list" id="cart_items">
+                                         
+                                            @foreach(Session('cart') as $key1=> $val)
+                                            <li class="each_cart_{{$key1}}">
+                                            <a href="#" class="delete_cart" data-id_option="{{$key1}}" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
+                                            <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}"><img src="{{$val['image']}}" alt="#"></a>
+                                            <h4><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h4>
+                                            <p class="quantity">{{$val['quantity']}}x - <span style="color: #ea1621;" class="amount">{{number_format($val['price'])}} đ</span></p>
+                                          </li>
+                                            @endforeach
+                                      
+                                        
+                                        
+                                    </ul>
+                                    <div class="bottom">
+                                        <div class="total">
+                                            <span>Tổng</span>
+                                            <span class="total-amount" id="total1" style="color: #ea1621;">{{number_format($count_total)}} đ</span>
+                                        </div>
+                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #283988;">Xem giỏ hàng</a>
+                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;">Thanh toán</a>
+                                    </div>
+                                          @else
+                                        <div class="dropdown-cart-header">
+<!--                                         <span id="count-sp">Chưa có sản phẩm trong giỏ hàng</span> -->
+                                      
+                                    </div>
+                                    @endif   
+
+                                </div>
+                                <!--/ End Shopping Item -->
+                            </div> 
+                </div>
+            </div>
+        </div>
+                <!-- Topbar -->
         <div class="topbar" style="background-color: #3a559f;" >
-            <div class="container"  >
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-12 col-12">
-                        <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
                                 <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span style="vertical-align: -webkit-baseline-middle"> Hotline miễn phí: 1900 3052 (8:00 - 21:00)</span></li>
                             </ul>
                         </div>
-                        <!--/ End Top Left -->
                     </div>
                     <div class="col-lg-3 col-md-12 col-12">
-                        <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
                                 <li><i class="fa fa-calendar"></i> <span style="vertical-align: -webkit-baseline-middle">30 Ngày đổi trả miễn phí</span></li>
                             </ul>
                         </div>
-                        <!--/ End Top Left -->
                     </div>
                     <div class="col-lg-3 col-md-12 col-12">
-                        <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
                                 <li><i class="fa fa-truck"></i><span style="vertical-align: -webkit-baseline-middle">Miễn phí vận chuyển</span></li>
                             </ul>
                         </div>
-                        <!--/ End Top Left -->
                     </div>
                     <div class="col-lg-3 col-md-12 col-12">
-                        <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
                                 <li><i class="fa fa-credit-card-alt" aria-hidden="true"></i><span style="vertical-align: -webkit-baseline-middle">Trả góp lãi xuất 0%</span></li>
                             </ul>
                         </div>
-                        <!--/ End Top Left -->
                     </div>
                     <div class="col-lg-3 col-md-12 col-12">
                         <form class="search-form" action="{{route('product.search')}}" method="GET">
@@ -146,9 +196,90 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 </div>
             </div>
         </div>
-   
+        <div class="navbar-mobile container" style="background-color: #283988;padding: 10px;">
+            <div class="row">
+                <div class="col-2" style="text-align: center;">
+                    <i class="fa fa-bars fa-2x" aria-hidden="true" style="margin-top: 10px;color: white;"  onclick="w3_open()"></i>
+                </div>
+                <div class="col-9 search-bar">
+                    <form action="{{route('product.search')}}" method="GET" >
+                        <input class="input-sm" name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
+                        <button class="btnn" style="background-color: #ea1621;"><i class="ti-search"></i></button>
+                    </form>
+                </div>
+                <div class="menu-1 col-12" id="mySidebar" style="background-color: #283988;color: white;">
+                    <i class="fa fa-times fa-3x" onclick="w3_close()" style="display:none;float:right;" id="closeFilter"></i>
+                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: white;">MENU</p>
+                    <p class="mt-2" style="font-size: 14px;color: white;"><a href="{{route('home.index')}}">Trang chủ</a></p>
+                    <hr style="background-color: black;">
+                    @foreach($menu_cats as $key => $cat)
+                    
+                        @php
+                        $dem=0;
+                        @endphp
+                        @foreach($cat->children as $oke)
+                        @php
+                        $dem++;
+                        @endphp
+                        @endforeach 
+                        @if($dem>0)  
+                            <p class="mt-2" style="font-size: 14px;color: white;"><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
+                            <hr style="background-color: black;">
+                        @else
+                            <p class="mt-2" style="font-size: 14px;color: white;"><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
+                            <hr style="background-color: black;">
+                        @endif
+                        
+                    </li>
+                    
+                   @endforeach 
+                </div>
+                <div class="menu-2 col-12" id="mySidebar2" style="background-color: white;color: black;">
+                    <i class="fa fa-times fa-3x" onclick="w3_close2()" style="display:none;float:right;" id="closeFilter2"></i>
+                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;">GIỎ HÀNG</p>
+                                <!-- Shopping Item -->
+                                <div class="shopping-item">
+                                     @if(Session('cart'))
+                                    <div class="dropdown-cart-header">
+                                        <span id="count-sp">{{$count_cart}} Sản phẩm</span>
+                                        <a href="{{route('checkout_order.index')}}">Xem giỏ hàng</a>
+                                    </div>
+                                    <ul class="shopping-list" id="cart_items">
+                                         
+                                            @foreach(Session('cart') as $key1=> $val)
+                                            <li class="each_cart_{{$key1}}">
+                                            <a href="#" class="delete_cart" data-id_option="{{$key1}}" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
+                                            <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}"><img src="{{$val['image']}}" alt="#"></a>
+                                            <h4><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h4>
+                                            <p class="quantity">{{$val['quantity']}}x - <span style="color: #ea1621;" class="amount">{{number_format($val['price'])}} đ</span></p>
+                                          </li>
+                                            @endforeach
+                                      
+                                        
+                                        
+                                    </ul>
+                                    <div class="bottom">
+                                        <div class="total">
+                                            <span>Tổng</span>
+                                            <span class="total-amount" id="total1" style="color: #ea1621;">{{number_format($count_total)}} đ</span>
+                                        </div>
+                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #283988;">Xem giỏ hàng</a>
+                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;">Thanh toán</a>
+                                    </div>
+                                          @else
+                                        <div class="dropdown-cart-header">
+                                        <span id="count-sp">Chưa có sản phẩm trong giỏ hàng</span>
+                                      
+                                    </div>
+                                    @endif   
+
+                                </div>
+                                <!--/ End Shopping Item -->
+            </div>
+        </div>
+        </div>
         <!-- End Topbar -->
-        <div class="middle-inner">
+        <div class="middle-inner" >
             <div class="container">
                 <div class="row" >
                     <div class="col-lg-2 col-md-2 col-12">
@@ -186,7 +317,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                             <a href="#" class="delete_cart" data-id_option="{{$key1}}" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
                                             <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}"><img src="{{$val['image']}}" alt="#"></a>
                                             <h4><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h4>
-                                            <p class="quantity">{{$val['quantity']}}x - <span style="color: red;" class="amount">{{number_format($val['price'])}} đ</span></p>
+                                            <p class="quantity">{{$val['quantity']}}x - <span style="color: #ea1621;" class="amount">{{number_format($val['price'])}} đ</span></p>
                                           </li>
                                             @endforeach
                                       
@@ -196,7 +327,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                     <div class="bottom">
                                         <div class="total">
                                             <span>Tổng</span>
-                                            <span class="total-amount" id="total1" style="color: red;">{{number_format($count_total)}} đ</span>
+                                            <span class="total-amount" id="total1" style="color: #ea1621;">{{number_format($count_total)}} đ</span>
                                         </div>
                                         <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #283988;">Xem giỏ hàng</a>
                                         <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;">Thanh toán</a>
@@ -264,7 +395,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                             <a href="#" class="delete_cart" data-id_option="{{$key1}}" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
                                             <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}"><img src="{{$val['image']}}" alt="#"></a>
                                             <h4><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h4>
-                                            <p class="quantity">{{$val['quantity']}}x - <span style="color: red;" class="amount">{{number_format($val['price'])}} đ</span></p>
+                                            <p class="quantity">{{$val['quantity']}}x - <span style="color: #ea1621;" class="amount">{{number_format($val['price'])}} đ</span></p>
                                           </li>
                                             @endforeach
                                       
@@ -274,7 +405,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                     <div class="bottom">
                                         <div class="total">
                                             <span>Tổng</span>
-                                            <span class="total-amount" id="total1" style="color: red;">{{number_format($count_total)}} đ</span>
+                                            <span class="total-amount" id="total1" style="color: #ea1621;">{{number_format($count_total)}} đ</span>
                                         </div>
                                         <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #283988;">Xem giỏ hàng</a>
                                         <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;">Thanh toán</a>
@@ -421,3 +552,29 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             });
         });
     </script>
+    <script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("closeFilter").style.display = "block";
+    document.getElementById("mySidebar2").style.display = "none";
+  document.getElementById("closeFilter2").style.display = "none";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("closeFilter").style.display = "none";
+}
+
+function w3_open2() {
+  document.getElementById("mySidebar2").style.display = "block";
+  document.getElementById("closeFilter2").style.display = "block";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("closeFilter").style.display = "none";
+}
+
+function w3_close2() {
+  document.getElementById("mySidebar2").style.display = "none";
+  document.getElementById("closeFilter2").style.display = "none";
+}
+
+</script>
