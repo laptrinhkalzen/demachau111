@@ -362,7 +362,7 @@ margin-top: 0px;
 
 
 <div class="product-area most-popular section" style="padding: 20px !important;">
-    <div class="container" style="background-color:white;">
+    <div class="container" style="background-color:white;padding-left: 0px;padding-right: 0px;">
         <!-- <div class="row">
             <div class="col-12">
                 <div class="section-title">
