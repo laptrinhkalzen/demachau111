@@ -371,15 +371,43 @@ margin-top: 0px;
         
         <div class="row">
             <div class="col-12">
-                <div class="owl-carousel popular-slider">
+                <div class="carousel-flash-sale col-lg-12" style="padding-left: 0px ; padding-right: 0px; ">
+                <div class="product-area most-popular section" style="padding:0px;">
+                    <div class="container" style="background-color:white;">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="owl-carousel1 popular-slider">
+                                    @foreach($news as $new)
+                                    <div class="single-product" style="margin-right:5px;margin-left:5px !important;">
+                                        <div class="product-img">
+                                            <a href="{{route('news.detail',['alias'=>$new->alias])}}">
+                                                <img class="default-img img-responsive img-rounded custom-product1" src="{{$new->images}}" style="padding-top: 10px;width:100%; ">
+                                            </a>
+                                        </div>
+                                        <div class="product-content1">
+                                            <h3  style="text-align: center;margin-bottom: 10px;"><a class="title" href="{{route('news.detail',['alias'=>$new->alias])}}">{{$new->title}}</a></h3>
+                                            <div class="content">
+                                                 <a class="title">{!!$new->description!!}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- <div class="owl-carousel popular-slider">
                     @foreach($news as $key => $new)
-                    <!-- Start Single Product -->
+                   
                     <div class="single-product" style="margin-bottom: 12px;">
                         <div class="product-img">
                             <a href="{{route('news.detail',['alias'=>$new->alias])}}">
                                 @foreach( explode(',',$new->images) as $value)
                                 <img class="default-img img-responsive img-rounded custom-news" src="{{$value}}">
-<!--                                 <img class="hover-img img-responsive img-rounded hover-news" src="{{$value}}"> -->
+
                                 @break;
                                 @endforeach
                                 
@@ -394,7 +422,7 @@ margin-top: 0px;
                         </div>
                     </div>
                    @endforeach
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

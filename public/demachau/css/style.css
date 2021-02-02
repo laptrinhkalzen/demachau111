@@ -1905,6 +1905,7 @@ padding-left: 0px;
 .most-popular .single-product{
 	margin:5px 15px 0 15px;
 }
+
 /* Slider Nav */
 .most-popular .owl-nav{
 	margin: 0;
@@ -2247,7 +2248,7 @@ padding-left: 0px;
 	margin: 0;
 }
 .single-product .product-content h3 a:hover{
-	color:#283988;
+	color:#0b8dd9;
 }
 .single-product .product-content .product-price {
   margin: 6px 0 0 0;
