@@ -118,6 +118,11 @@ document.body.querySelector('#alternate-button-container')
 
 									@foreach( explode(',',$flashsale_product->images) as $value)
 	                                <img class="default-img" src="{{$value}}" alt="#" style="width: 100%; height: 255px; ">
+		                                 @php 
+		                                      $discount=($flashsale_product->price - $flashsale_product->sale_price) / ($flashsale_product->price/100);
+		                                 @endphp
+                                    <!-- //<span class="price-dec">Giảm {{number_format($discount)}}%</span> -->
+                                    <span class="out-of-stock">Giảm {{number_format($discount)}}%</span>
 <!-- 									<img class="hover-img" src="{{$value}}" alt="#"> -->
 	                                @break;
 	                                @endforeach
