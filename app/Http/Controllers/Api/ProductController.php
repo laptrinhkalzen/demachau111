@@ -216,6 +216,13 @@ class ProductController extends Controller {
                                     <img class="default-img" src="'.$image.'" alt="#" style="height:255px;width:100%;">';
                                     if($product_arr1->sale_price > 0){
                                         $discount=($product_arr1->price - $product_arr1->sale_price) / ($product_arr1->price/100);
+                                        if($discount<1){
+                                        $discount=1;
+                                        }
+                                         if($discount>=99){
+                                        $discount=99;
+                                        }
+                                 
                                            $output.='<span class="out-of-stock">Giảm '.number_format($discount).'%'.'</span>';  
                                           }
                                $output.='</a>
@@ -310,6 +317,12 @@ class ProductController extends Controller {
                                     <img class="default-img" src="'.$image.'" alt="#" style="height:255px;width:100%;">';
                                     if($product_arr1->sale_price > 0){
                                         $discount=($product_arr1->price - $product_arr1->sale_price) / ($product_arr1->price/100);
+                                         if($discount<1){
+                                        $discount=1;
+                                        }
+                                         if($discount>=99){
+                                        $discount=99;
+                                        }
                                           $output.='<span class="out-of-stock">Giảm '.number_format($discount).'%'.'</span>';
                                           }
                                 $output.='</a>
