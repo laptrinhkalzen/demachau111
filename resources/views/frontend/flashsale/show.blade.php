@@ -69,9 +69,9 @@ document.body.querySelector('#alternate-button-container')
 <!-- Product Style -->
 
 <section class="product-area shop-sidebar shop section">
-	<div class="icon-filter container">
+<!-- 	<div class="icon-filter container" >
 		<div class="row"><i class="fa fa-filter fa-2x" aria-hidden="true" style="margin:auto;" onclick="w3_open()"><span style="font-size: 22px;">Lọc</span></i></div>
-	</div>
+	</div> -->
 
 	<div class="container" >
 		<div class="row">
@@ -82,10 +82,21 @@ document.body.querySelector('#alternate-button-container')
 	<div class="container">
 		<div class="row">	
 			
-			
 			<div class="col-lg-12 col-md-12 col-12">
 				<div class="row">
-					<div class="col-12">
+					<div class="col-12 mb-2">
+						<!-- Shop Top -->
+							<div class="row">
+									<span style="font-size: 20px;margin:auto;">Còn lại
+	                            <strong id="day" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>&nbspngày
+                                    <strong id="hour" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>
+                                    <strong id="minute" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>
+                                    <strong id="second" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>
+	                       			</span>
+						<!--/ End Shop Top -->
+					</div>
+				</div>
+				<div class="col-12">
 						<!-- Shop Top -->
 						<div class="">
 							<div class="">
@@ -95,39 +106,6 @@ document.body.querySelector('#alternate-button-container')
 						</div>
 						<!--/ End Shop Top -->
 					</div>
-					<div class="col-12">
-						<!-- Shop Top -->
-						<div class="">	
-							<div class="" style="width: 500px;padding-left: 15px;margin-top: 30px;background-color: #c70000;color: white;height:100px;">
-								<img class="flash-sale mb-3"src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 15%;object-fit: cover;float: right;">
-							<div class="row" style="margin-right: 0px;">
-									<span style="font-size: 20px;margin:auto;">Còn lại
-	                            <strong id="day"></strong>&nbspngày
-	                       			</span>
-								<div style="height: 30px;text-align: center; " class="row container">
-									<div class="col-3 col-lg-3"></div>	
-									<div class="col-2 col-lg-2" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px; ">
-		                                <span>
-		                                    <strong id="hour" ></strong>
-		                                </span>
-		                            </div>
-		                            <div class="col-2 col-lg-2" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
-		                                <span>
-		                                    <strong id="minute"></strong>
-		                                </span>
-		                            </div>
-		                            <div class="col-2 col-lg-2" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
-		                                <span>
-		                                    <strong id="second"></strong>
-		                                </span>
-		                            </div>
-		                            <div class="col-3 col-lg-3"></div>
-								</div>
-							</div>
-						</div>
-						<!--/ End Shop Top -->
-					</div>
-				</div>
 			<div class="col-12">
 				<div class="row show_filter">
 					@foreach($flashsale_products as $flashsale_product)

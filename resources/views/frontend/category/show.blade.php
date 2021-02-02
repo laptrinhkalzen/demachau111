@@ -60,7 +60,7 @@ document.body.querySelector('#alternate-button-container')
 @if($have_product==1)
 <section class="product-area shop-sidebar shop section">
 	<div class="icon-filter container">
-		<div class="row"><i class="fa fa-filter fa-2x" aria-hidden="true" style="margin:auto;" onclick="w3_open()"><span style="font-size: 22px;">Lọc</span></i></div>
+		<div class="row mb-2"><i class="fa fa-filter fa-2x" aria-hidden="true" style="margin:auto;" onclick="w3_open()"><span style="font-size: 22px;">Lọc</span></i></div>
 	</div>
 
 	<div class="container" >
@@ -201,10 +201,10 @@ document.body.querySelector('#alternate-button-container')
 										</select>
 								</div> -->
 								<div class="row">
-									<div class="col-lg-5 col-md-4">	
+									<div class="col-lg-5 col-md-4 col-5">	
 										<strong>Sắp xếp theo: </strong>
 									</div>
-									<div class="col-lg-7 col-md-7">	
+									<div class="col-lg-7 col-md-7 col-7">	
 	                    			<select class="form-control" id="order_by" >
 										<option value="0" selected="selected">Mới nhất</option>
 										<option value="1">Giá cao đến thấp</option>
