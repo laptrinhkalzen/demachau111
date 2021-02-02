@@ -484,7 +484,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                     <div class="navbar-collapse">   
                                         <div class="nav-inner"> 
                                             <ul class="nav main-menu menu navbar-nav">
-                                                    
+                                                   <!--  
                                                     @foreach ($menu_arr as $key=>$menu)
                                                     @if($key == 0)
                                                     <li class="nav-item" style="background-color: #ea1621;height: 44px;">
@@ -492,14 +492,10 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                                     </li>
                                                     @else
                                                     <li class="nav-item">
-                                                        @if($menu->type==1)
-                                                        <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
-                                                        @elseif($menu->type==2)
-                                                        <a class="nav-link" href="{{url('search-product'.'?search='.$menu->keyword)}}">{{$menu->title}}</a>
-                                                        @endif
+                                                        <a class="nav-link" href="{{url('search-product'.'?search='.$menu->link)}}">{{$menu->title}}</a>
                                                     </li>
                                                     @endif
-                                                    @endforeach
+                                                    @endforeach -->
                                                      
                                                     
                                                 </ul>

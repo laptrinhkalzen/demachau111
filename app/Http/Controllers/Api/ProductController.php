@@ -213,8 +213,12 @@ class ProductController extends Controller {
                             <div class="product-img">
                                 <a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'">
 
-                                    <img class="default-img" src="'.$image.'" alt="#" style="height:255px;width:100%;">
-                                </a>
+                                    <img class="default-img" src="'.$image.'" alt="#" style="height:255px;width:100%;">';
+                                    if($product_arr1->sale_price > 0){
+                                        $discount=($product_arr1->price - $product_arr1->sale_price) / ($product_arr1->price/100);
+                                           $output.='<span class="out-of-stock">Giảm '.number_format($discount).'%'.'</span>';  
+                                          }
+                               $output.='</a>
                                 <div class="button-head">
                                    
                                     <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
@@ -225,7 +229,7 @@ class ProductController extends Controller {
                             <div class="product-content">
                                 <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
                                  <div class="product-price" style="text-align: center; color: red;">';
-                               if($product_arr1->sale_price>0){
+                                if($product_arr1->sale_price>0){
                                 $output.='<span class="old" style="color:#a0a0a0;">'.number_format($product_arr1->sale_price).'đ'.'</span>
                                  <span>'.number_format($product_arr1->price).'đ'.'</span>';
                                 }
@@ -303,8 +307,12 @@ class ProductController extends Controller {
                         <div class="single-product">
                             <div class="product-img">
                                 <a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'">
-                                    <img class="default-img" src="'.$image.'" alt="#" style="height:255px;width:100%;">
-                                </a>
+                                    <img class="default-img" src="'.$image.'" alt="#" style="height:255px;width:100%;">';
+                                    if($product_arr1->sale_price > 0){
+                                        $discount=($product_arr1->price - $product_arr1->sale_price) / ($product_arr1->price/100);
+                                          $output.='<span class="out-of-stock">Giảm '.number_format($discount).'%'.'</span>';
+                                          }
+                                $output.='</a>
                                 <div class="button-head">
                                    
                                     <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
