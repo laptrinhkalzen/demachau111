@@ -322,7 +322,11 @@ input[type="number"] {
                                         
                                         <p style="font-size: 22px;font-weight: bold;">{{$detail_product->title}}</p>
                                     </div>
-                                    <div class="">
+                                     <div class="col-lg-12 col-md-12 row" style="background-color:#f6f7fb;">
+
+                                            <div id="price_origin" style="text-decoration-line:line-through;" class="old"></div>&nbsp
+                                            <strong id="option_price" style="color:red;font-size: 24px;"></strong>
+                                     </div>
                                         <div class="row">
                                             
                                             
@@ -362,13 +366,10 @@ input[type="number"] {
                                             @endif
                                         </div>
 
-                                        <div class="row col-lg-10" >
-                                            <div id="price_origin" style="text-decoration-line:line-through;" class="old"></div>&nbsp
-                                            <div id="option_price" style="color:red;font-size: 24px;"></div>
-                                        </div>
+                                       
                                         
                                         
-                                    </div>
+                                   
                                     <div class="form-group">
                                         <div class="row">
 <!--                                             <div class="col-md-4">
