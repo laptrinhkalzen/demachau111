@@ -587,8 +587,8 @@ input[type="number"] {
           <p>{!!$detail_product->content!!}</p>
             </div>
           <div style="text-align: center;">
-            <button style="background-color:#FFFFFF;color: #42a1f5;margin:auto;padding: 5px; " id="show">Xem thêm</a>
-            <button style="background-color:#FFFFFF;color: #42a1f5;margin:auto;display: none;padding: 5px; " id="hide">Ẩn bớt</a>
+            <button style="background-color:#FFFFFF;color: #42a1f5;margin:auto;padding: 5px;border: solid 1px transparent; " id="show">Xem thêm</a>
+            <button style="background-color:#FFFFFF;color: #42a1f5;margin:auto;display: none;padding: 5px;border: solid 1px transparent; " id="hide">Ẩn bớt</a>
           </div>
 
           
