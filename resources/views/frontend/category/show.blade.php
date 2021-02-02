@@ -243,9 +243,13 @@ document.body.querySelector('#alternate-button-container')
                                      @php 
                                         $discount=($product_arr1->price - $product_arr1->sale_price) / ($product_arr1->price/100);
                                         @if($discount<1)
+                                        @php
                                            $discount=1;
+                                        @endphp  
                                          @elseif($discount>=99)
+                                         @php
                                            $discount=99;
+                                           @endphp
                                          @endif  
                                      @endphp
                                             <span class="out-of-stock">Giảm {{number_format($discount)}}%</span>
