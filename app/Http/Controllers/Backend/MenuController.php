@@ -43,7 +43,6 @@ class MenuController extends Controller {
      */
     public function store(Request $request) {
         $input = $request->all();
-        $input['link']=route('product.search').'?='.$request->link;
         $validator = \Validator::make($input, $this->menuRepo->validate());
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
@@ -97,7 +96,6 @@ class MenuController extends Controller {
     public function update(Request $request, $id) {
         //
         $input = $request->all();
-        $input['link']=route('product.search').'?='.$request->link;
         $validator = \Validator::make($input, $this->menuRepo->validate());
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();

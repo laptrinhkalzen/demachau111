@@ -159,9 +159,13 @@ input[type="number"] {
 @media all and (max-width: 576px) {
   .carousel-container #carousel-thumbs {
 
+
     background: white;
 
-    /*background: #ccccce;*/
+   
+
+
+
 
   }
 }
@@ -191,9 +195,10 @@ input[type="number"] {
                 <div class="bread-inner">
                     <ul class="bread-list">
                      <li><a href="{{route('home.index')}}">Trang chủ<i class="ti-arrow-right"></i></a></li>
-                     @if($parent_category!=0)
-                        <li class="active"><a href="{{route('category.show',['alias'=>$parent_category->alias])}}">{{$category->name}}</a></li>
-                        <li class="active"><a href="{{route('category.show',['alias'=>$category->alias])}}">{{$parent_category->name}}</a></li>
+                     @if($parent_category!=null)
+                        <li class="active"><a href="{{route('category.show',['alias'=>$parent_category->alias])}}" >{{$parent_category->name}}<i class="ti-arrow-right" ></i></a></li>
+                        <li class="active" ><a href="{{route('category.show',['alias'=>$category->alias])}}" >{{$category->name}}</a></li>
+                        
                      @else
                         <li class="active"><a href="{{route('category.show',['alias'=>$category->alias])}}">{{$category->name}}</a></li>
                      @endif
@@ -337,7 +342,7 @@ input[type="number"] {
                                         
                                         <p style="font-size: 22px;font-weight: bold;">{{$detail_product->title}}</p>
                                     </div>
-                                     <div class="col-lg-12 col-md-12 row" style="background-color:white;">
+                                     <div class="col-lg-12 col-md-12 row" style="background-color:#f6f7fb;">
 
                                             <div id="price_origin" style="text-decoration-line:line-through;" class="old"></div>&nbsp
                                             <strong id="option_price" style="color:red;font-size: 24px;"></strong>
@@ -391,11 +396,11 @@ input[type="number"] {
                                                 <input style="width:100%"  type="number" name="quantity" value="1" id="quantity" min="1">
                                             </div> -->
             
-                                            <div class="col-lg-5 col-6 input-group" style="padding-left: 30px;">
+                                            <div class="col-md-4 input-group">
+                                                
                                               <input type="button" value="-" class="button-minus" data-field="quantity">
                                               <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field" >
                                               <input type="button" value="+" class="button-plus" data-field="quantity">
-
                                             </div>
 <!--                                             <div class="col-md-8">
                                                 <button type="button" class="btn" id="add-to-cart"  data-product_id="{{$detail_product->id}}" style="background-color: #EA1621">Thêm vào giỏ hàng</button>

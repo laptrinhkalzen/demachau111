@@ -229,8 +229,9 @@ class ProductController extends Controller {
                 $parent_category=DB::table('category')->where('id',$category->parent_id)->first();
             }
             else{
-                $parent_category=0;
+                $parent_category='null';
             }
+            //dd($parent_category);
             //dd($parent_category );
             //dd($parent_category);
             $similar_product_ids=DB::table('product_category')->where('category_id',$product_category->category_id)->get();
@@ -297,7 +298,7 @@ class ProductController extends Controller {
             //dd(Session('old_pro'));
               
            
-               
+              
             if($detail_product){
             
                  //Session::save();
