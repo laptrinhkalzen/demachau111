@@ -441,6 +441,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                 <h3 class="cat-heading" style="padding: 15px 25px !important;"><i class="fa fa-bars" aria-hidden="true"></i>Danh mục</h3>
                                
                                 <ul class="main-category hide-header" style="display: none;" >
+
                                     @foreach($menu_cats as $key => $cat)
                                     
                                         @php
@@ -487,7 +488,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                                     @foreach ($menu_arr as $key=>$menu)
                                                     @if($key == 0)
                                                     <li class="nav-item" style="background-color: #ea1621;height: 44px;">
-                                                        <a class="nav-link" href="{{url('search-product'.'?search='.$menu->link)}}">{{$menu->title}}</a>
+                                                        <a class="nav-link" href="{{route('home.index')}}">{{$menu->title}}</a>
                                                     </li>
                                                     @else
                                                     <li class="nav-item">
