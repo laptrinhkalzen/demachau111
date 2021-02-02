@@ -36,12 +36,32 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label text-right">Từ khoá:</label>
+                                <label class="col-md-3 col-form-label text-right">Loại đường dẫn</label>
+                                <div class="col-md-9">
+                                     <select name="type" class="form-control ">
+                                             <option value="0">----Chọn-----</option>
+                                            <option value="1">Link</option>
+                                            <option value="2">Từ khóa</option>
+                                            
+                                 </select>
+                                  {!! $errors->first('type', '<span class="text-danger">:message</span>') !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label text-right">Link:</label>
                                 <div class="col-md-9">
                                     <input type="text" class="form-control" name="link" value="{!!old('link')!!}" required="">
                                     {!! $errors->first('link', '<span class="text-danger">:message</span>') !!}
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label text-right">Từ khoá:</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="keyword" value="{!!old('keyword')!!}" required="">
+                                    {!! $errors->first('keyword', '<span class="text-danger">:message</span>') !!}
+                                </div>
+                            </div>
+                            
                             
                             <div class="form-group row">
                                 <div class="form-check col-md-4 form-check-right">

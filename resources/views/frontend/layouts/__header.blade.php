@@ -492,7 +492,11 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                                     </li>
                                                     @else
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="{{url('search-product'.'?search='.$menu->link)}}">{{$menu->title}}</a>
+                                                        @if($menu->type==1)
+                                                        <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
+                                                        @elseif($menu->type==2)
+                                                        <a class="nav-link" href="{{url('search-product'.'?search='.$menu->keyword)}}">{{$menu->title}}</a>
+                                                        @endif
                                                     </li>
                                                     @endif
                                                     @endforeach
