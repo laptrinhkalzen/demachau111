@@ -197,15 +197,12 @@ margin-top: 0px;
                                                 <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:100%;height: 325px; ">
                                                  @php 
                                                   $discount=($flashsale_product->price - $flashsale_product->price_decrease) / ($flashsale_product->price/100);
-                                                     @if($discount<1)
-                                                    @php
+                                                     if($discount<1){
                                                        $discount=1;
-                                                    @endphp  
-                                                     @elseif($discount>=99)
-                                                     @php
+                                                       }
+                                                     if($discount>=99){                                    
                                                        $discount=99;
-                                                       @endphp
-                                                     @endif
+                                                       }
                                                @endphp
                                     <!-- //<span class="price-dec">Giảm {{number_format($discount)}}%</span> -->
                                     <span class="out-of-stock">Giảm {{number_format($discount)}}%</span>
@@ -294,15 +291,12 @@ margin-top: 0px;
                                @if($product_danh_muc_cha1->sale_price > 0)
                                @php 
                                   $discount=($product_danh_muc_cha1->price - $product_danh_muc_cha1->sale_price) / ($product_danh_muc_cha1->price/100);
-                                    @if($discount<1)
-                                        @php
+                                         if($discount<1){
                                            $discount=1;
-                                        @endphp  
-                                         @elseif($discount>=99)
-                                         @php
+                                           }
+                                         if($discount>=99){                                    
                                            $discount=99;
-                                           @endphp
-                                         @endif
+                                           }
                                @endphp
                                     <!-- //<span class="price-dec">Giảm {{number_format($discount)}}%</span> -->
                                     <span class="out-of-stock">Giảm {{number_format($discount)}}%</span>
