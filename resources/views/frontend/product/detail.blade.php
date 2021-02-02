@@ -322,7 +322,7 @@ input[type="number"] {
                                         
                                         <p style="font-size: 22px;font-weight: bold;">{{$detail_product->title}}</p>
                                     </div>
-                                     <div class="col-lg-12 col-md-12 row" style="background-color:#f6f7fb;">
+                                     <div class="col-lg-12 col-md-12 row" style="background-color:white;">
 
                                             <div id="price_origin" style="text-decoration-line:line-through;" class="old"></div>&nbsp
                                             <strong id="option_price" style="color:red;font-size: 24px;"></strong>
@@ -376,11 +376,11 @@ input[type="number"] {
                                                 <input style="width:100%"  type="number" name="quantity" value="1" id="quantity" min="1">
                                             </div> -->
             
-                                            <div class="col-md-4 input-group">
-                                                
+                                            <div class="col-lg-5 col-6 input-group" style="padding-left: 30px;">
                                               <input type="button" value="-" class="button-minus" data-field="quantity">
                                               <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field" >
                                               <input type="button" value="+" class="button-plus" data-field="quantity">
+
                                             </div>
 <!--                                             <div class="col-md-8">
                                                 <button type="button" class="btn" id="add-to-cart"  data-product_id="{{$detail_product->id}}" style="background-color: #EA1621">Thêm vào giỏ hàng</button>
