@@ -151,7 +151,7 @@ input[type="number"] {
 }
 @media all and (max-width: 576px) {
   .carousel-container #carousel-thumbs {
-    background: #ccccce;
+    background: white;
   }
 }
 </style>
