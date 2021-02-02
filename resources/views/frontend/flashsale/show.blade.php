@@ -87,11 +87,12 @@ document.body.querySelector('#alternate-button-container')
 					<div class="col-12 mb-2">
 						<!-- Shop Top -->
 							<div class="row">
-									<span style="font-size: 20px;margin:auto;">Còn lại
+									<span style="font-size: 20px;margin:auto;">___<img src="/icon/flashsale.png" style="width: 80px;">&nbspCòn lại
 	                            <strong id="day" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>&nbspngày
-                                    <strong id="hour" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>
-                                    <strong id="minute" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>
+                                    <strong id="hour" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong><img src="/icon/two-dots.svg" style="width: 10px;object-fit: cover;margin-left: 3px;">
+                                    <strong id="minute" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong><img src="/icon/two-dots.svg" style="width: 10px;object-fit: cover;margin-left: 3px;">
                                     <strong id="second" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>
+                                    &nbsp___
 	                       			</span>
 						<!--/ End Shop Top -->
 					</div>
@@ -100,7 +101,7 @@ document.body.querySelector('#alternate-button-container')
 						<!-- Shop Top -->
 						<div class="">
 							<div class="">
-								<img style="width: 100%; height: 150px;" src="https://media3.scdn.vn/img4/2021/01_27/HqlZVAwyKJDvB6cHAlkv.png">
+								<img style="width: 100%; height: 200px;object-fit: cover;" src="/icon/flashsale2.jpg">
 							</div>
 							
 						</div>
