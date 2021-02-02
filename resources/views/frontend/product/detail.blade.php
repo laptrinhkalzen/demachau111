@@ -1,6 +1,13 @@
 @extends('frontend.layouts.master')
 @section('content')
 <style type="text/css">
+  .content_product {
+  width: auto;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
 body {
 background-color: #7B1FA2
 }
@@ -577,14 +584,13 @@ input[type="number"] {
             </a>
           </div> -->
           <div class="content_product">
-          <p>{!!substr($detail_product->content,0,200)!!}}</p>
+          <p>{!!$detail_product->content!!}</p>
             </div>
-            <div class="content_product" id="demo" class="collapse">
-              {!!substr($detail_product->content,200)!!}
-            </div>
-            <div style="text-align: center;">
-            <a href="" style="background-color:#FFFFFF;color: #42a1f5; " class="" data-toggle="collapse" data-target="#demo">Xem thêm/Ẩn bớt</a>
+          <div style="text-align: center;">
+            <button style="background-color:#FFFFFF;color: #42a1f5;margin:auto;padding: 5px; " id="show">Xem thêm</a>
+            <button style="background-color:#FFFFFF;color: #42a1f5;margin:auto;display: none;padding: 5px; " id="hide">Ẩn bớt</a>
           </div>
+
           
         </div>
     </section>
@@ -802,6 +808,29 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
     });
     });
     </script>
-
+    <script type="text/javascript">
+      $("#show").click(function() {
+  $(".content_product").css({
+    "-webkit-line-clamp": "9999"
+  });
+  $("#show").css({
+    "display": "none"
+  });
+  $("#hide").css({
+    "display": "block"
+  });
+})
+            $("#hide").click(function() {
+  $(".content_product").css({
+    "-webkit-line-clamp": "5"
+  });
+  $("#hide").css({
+    "display": "none"
+  });
+    $("#show").css({
+    "display": "block"
+  });
+})
+    </script>
     
     @stop
