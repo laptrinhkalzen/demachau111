@@ -356,10 +356,13 @@ function myFunction() {
 	
 
 
-		<div class="row" style="height: 400px;">
+		<div class="row" style="height: auto;">
 			
 			<div class="container" style="margin-top: auto; margin-bottom: auto;">
-			    <h3 style="text-align: center;">Không có sản phẩm nào được tìm thấy.</h3>
+				<div class="row">
+				<img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/62d2399b89039bd1dc90ca2d50d3e802.png" style="margin:auto;width: 300px;object-fit: cover;">
+				</div>
+			    <h3 class="mb-5" style="text-align: center;">Không có sản phẩm nào được tìm thấy.</h3>
 			</div>
 		</div>
 
