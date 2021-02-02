@@ -194,13 +194,7 @@ margin-top: 0px;
                                             <a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
 
                                                 @foreach( explode(',',$flashsale_product->images) as $value)
-<<<<<<< HEAD
-                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:100%; ">
-
-=======
                                                 <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:100%;height: 325px; ">
-                                                
->>>>>>> 2306261... Minh 2/2
                                                  @php 
                                                   $discount=($flashsale_product->price - $flashsale_product->price_decrease) / ($flashsale_product->price/100);
                                                @endphp
@@ -386,7 +380,7 @@ margin-top: 0px;
                                     <div class="single-product" style="margin-right:5px;margin-left:5px !important;">
                                         <div class="product-img">
                                             <a href="{{route('news.detail',['alias'=>$new->alias])}}">
-                                                <img class="default-img img-responsive img-rounded custom-product1" src="{{$new->images}}" style="padding-top: 10px;width:100%; ">
+                                                <img class="default-img img-responsive img-rounded custom-product1" src="{{$new->images}}" style="padding-top: 10px;width:100%;height: 210px; ">
                                             </a>
                                         </div>
                                         <div class="product-content1">
