@@ -138,6 +138,7 @@ class ProductController extends Controller {
     }
 
     public function filter_product(Request $request){
+       $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get(); 
         $attr=$request->attr;
         $cat_id=$request->cat_id;
         $order_by=$request->order_by;
@@ -154,7 +155,8 @@ class ProductController extends Controller {
              }
              $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product.status',1)->whereIn('product_category.category_id',$id_children)->get();
           }
-
+         
+                
         $product_ids=$product_cat->groupBy('id');
           foreach($product_ids as $key => $product_id){
               $pro_id[]=$key;
@@ -186,6 +188,22 @@ class ProductController extends Controller {
            else{
            $product_finals=DB::table('product')->whereIn('id',$id_final)->orderBy('price','asc')->get();
            }
+           foreach ($product_finals as $key => $value) {
+                 foreach ($product_sales   as  $product_sale) {
+                     if($product_sale->product_id==$value->id){
+                         if($product_sale->discount_type==0){
+                             $sale_price=$value->price-($value->price/100*$product_sale->discount_value);
+                         }
+                         if($product_sale->discount_type==1){
+                              $sale_price=$value->price-$product_sale->discount_value;
+                         }
+                         if($product_sale->discount_type==2){
+                             $sale_price=$product_sale->discount_value;
+                         }
+                         $product_finals[$key]->sale_price=$sale_price;
+                     }
+                }
+            }        
        
        foreach ($product_finals as $product_arr1) {
           $images=explode(",", $product_arr1->images);
@@ -206,9 +224,17 @@ class ProductController extends Controller {
                             </div>
                             <div class="product-content">
                                 <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
-                                <div class="product-price" style="text-align: center; color: red;">
-                                 <span>'.number_format($product_arr1->price).'đ'.'</span>
-                                </div>
+                                 <div class="product-price" style="text-align: center; color: red;">';
+                               if($product_arr1->sale_price>0){
+                                $output.='<span class="old" style="color:#a0a0a0;">'.number_format($product_arr1->sale_price).'đ'.'</span>
+                                 <span>'.number_format($product_arr1->price).'đ'.'</span>';
+                                }
+                                else{
+                                $output.='<span>'.number_format($product_arr1->price).'đ'.'</span>';
+                                }
+                         
+
+                                $output.='</div>
                             </div>
                         </div>
                     </div>';
@@ -251,7 +277,22 @@ class ProductController extends Controller {
           }
 
 
-
+            foreach ($product_cat as $key => $value) {
+                 foreach ($product_sales   as  $product_sale) {
+                     if($product_sale->product_id==$value->id){
+                         if($product_sale->discount_type==0){
+                             $sale_price=$value->price-($value->price/100*$product_sale->discount_value);
+                         }
+                         if($product_sale->discount_type==1){
+                              $sale_price=$value->price-$product_sale->discount_value;
+                         }
+                         if($product_sale->discount_type==2){
+                             $sale_price=$product_sale->discount_value;
+                         }
+                         $product_cat[$key]->sale_price=$sale_price;
+                     }
+                }
+            }   
           
              
             $output='';
@@ -273,9 +314,17 @@ class ProductController extends Controller {
                             </div>
                             <div class="product-content">
                                 <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
-                                <div class="product-price" style="text-align: center; color: red;">
-                                 <span>'.number_format($product_arr1->price).'đ'.'</span>
-                                </div>
+                                <div class="product-price" style="text-align: center; color: red;">';
+                               if($product_arr1->sale_price>0){
+                                $output.='<span class="old" style="color:#a0a0a0;">'.number_format($product_arr1->sale_price).'đ'.'</span>
+                                 <span>'.number_format($product_arr1->price).'đ'.'</span>';
+                                }
+                                else{
+                                $output.='<span>'.number_format($product_arr1->price).'đ'.'</span>';
+                                }
+                         
+
+                                $output.='</div>
                             </div>
                         </div>
                     </div>';
@@ -283,6 +332,8 @@ class ProductController extends Controller {
             return $output;
          }
         }
+
+
 
     public function getProductAttribute(Request $request) {
         session_start();
