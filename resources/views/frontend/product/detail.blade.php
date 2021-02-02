@@ -195,8 +195,8 @@ input[type="number"] {
                 <div class="bread-inner">
                     <ul class="bread-list">
                      <li><a href="{{route('home.index')}}">Trang chủ<i class="ti-arrow-right"></i></a></li>
-                     @if($parent_category!=null)
-                        <li class="active"><a href="{{route('category.show',['alias'=>$parent_category->alias])}}" >{{$parent_category->name}}<i class="ti-arrow-right" ></i></a></li>
+                     @if($parent_category!='null')
+                        <li class="active"><a href="{{route('category.show',['alias'=>'$parent_category->alias'])}}" >{{$parent_category->name}}<i class="ti-arrow-right" ></i></a></li>
                         <li class="active" ><a href="{{route('category.show',['alias'=>$category->alias])}}" >{{$category->name}}</a></li>
                         
                      @else

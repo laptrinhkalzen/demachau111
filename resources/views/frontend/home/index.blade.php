@@ -195,7 +195,7 @@ margin-top: 0px;
 
                                                 @foreach( explode(',',$flashsale_product->images) as $value)
                                                 <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:100%; ">
-                                                
+
                                                  @php 
                                                   $discount=($flashsale_product->price - $flashsale_product->price_decrease) / ($flashsale_product->price/100);
                                                @endphp
