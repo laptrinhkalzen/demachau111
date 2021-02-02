@@ -249,7 +249,7 @@ margin-top: 0px;
 <!-- Start Most Popular -->
 @foreach($danh_muc_cha as $danh_muc_cha)
 <div class="product-area most-popular section" style="padding: 20px !important;">
-    <div class="container" style="background-color:white;">
+    <div class="container" style="background-color:white;padding-left: 0px;padding-right: 0px;">
         <!-- <div class="row">
             <div class="col-12">
                 <div class="section-title">
