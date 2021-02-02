@@ -195,6 +195,12 @@ margin-top: 0px;
 
                                                 @foreach( explode(',',$flashsale_product->images) as $value)
                                                 <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:100%; ">
+                                                
+                                                 @php 
+                                                  $discount=($flashsale_product->price - $flashsale_product->price_decrease) / ($flashsale_product->price/100);
+                                               @endphp
+                                    <!-- //<span class="price-dec">Giảm {{number_format($discount)}}%</span> -->
+                                    <span class="out-of-stock">Giảm {{number_format($discount)}}%</span>
                                                 <!-- <img class="hover-img img-responsive img-rounded hover-product" src="{{$value}}" style="padding-top: 10px; "> -->
                                                 @break;
                                                 @endforeach
@@ -276,6 +282,16 @@ margin-top: 0px;
                             <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
                                 @foreach( explode(',',$product_danh_muc_cha1->images) as $value)
                                 <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:100%; ">
+                                
+                               @if($product_danh_muc_cha1->sale_price > 0)
+                               @php 
+                                  $discount=($product_danh_muc_cha1->price - $product_danh_muc_cha1->sale_price) / ($product_danh_muc_cha1->price/100);
+                               @endphp
+                                    <!-- //<span class="price-dec">Giảm {{number_format($discount)}}%</span> -->
+                                    <span class="out-of-stock">Giảm {{number_format($discount)}}%</span>
+                               @endif
+
+                                
 <!--                                 <img class="hover-img img-responsive img-rounded hover-product" src="{{$value}}" style="padding-top: 10px; "> -->
                                 @break;
                                 @endforeach
