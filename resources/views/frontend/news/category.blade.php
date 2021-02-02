@@ -9,10 +9,18 @@
         -webkit-line-clamp: 2; /* number of lines to show */
         -webkit-box-orient: vertical;
     }
+    .breadcrumbs{
+        padding: 10px;
+    }
+    .single-product{
+        margin-top:20px;
+        margin-bottom: 10px;: 
+    }
+
 </style>
     <!-- Breadcrumbs -->
         <div class="breadcrumbs">
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="bread-inner">
@@ -23,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- End Breadcrumbs -->
         
@@ -70,16 +78,16 @@
                                     <div class="product-img">
                                         <a href="{{route('news.detail',['alias'=>$record->alias])}}">
                                             <img class="default-img" src="{{$record->images}}" alt="#">
-                                            <img class="hover-img" src="{{$record->images}}" alt="#">
+                                            <!-- <img class="hover-img" src="{{$record->images}}" alt="#"> -->
                                         </a>
-                                        <div class="button-head">
+                                        <!-- <div class="button-head">
                                             <div class="product-action">
                                                 <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
                                                 <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
                                                 <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
                                             </div>
                                             
-                                        </div>
+                                        </div> -->
                                     </div>
                                     
                                    

@@ -1,17 +1,20 @@
 @extends('frontend.layouts.master')
 @section('content')
+<style type="text/css">
+    #content_news{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+    .breadcrumbs{
+        padding: 10px;
+    }
+    </style>
 <div class="breadcrumbs">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="bread-inner">
-                            <ul class="bread-list">
-                                <li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-                                <li class="active"><a href="blog-single.html">Shop Grid</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
         <!-- End Breadcrumbs -->
@@ -55,10 +58,11 @@
                        <h6 class="entry-category is-xsmall mt-4">
                         <a href="{{route('news.list')}}" rel="category tag">Tin tức</a></h6>
 
-                    <h1 class="entry-title mt-4">{{$news->title}}</h1>
+                    <h1 style="font-size: 30px;" class="entry-title mt-4">{{$news->title}}</h1>
                     <div class="product-content">
-                                        <a href="">{{$news->date}}</a>
-                                        <div class="fb-like" data-href="{!!$news->url()!!}" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
+                                        <a style="color: lightgray;" >{!!date('d-m-Y', strtotime($news->date))!!}</a>
+                                        <div class="fb-like" data-href="{!!$news->url()!!}" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+
 
                                     </div>
                         <div class="row">
@@ -81,7 +85,7 @@
                         </div>
                     </div>
                     <h3>Bình luận</h3>
-                    <div class="fb-comments" data-href="{!!$news->url()!!}" data-width="" data-numposts="5"></div>
+                    <div style="margin-bottom: 10px;" class="fb-comments" data-href="{!!$news->url()!!}" data-width="" data-numposts="7"></div>
                             </div>
                         </div>
 

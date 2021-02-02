@@ -158,7 +158,11 @@ input[type="number"] {
 }
 @media all and (max-width: 576px) {
   .carousel-container #carousel-thumbs {
+
     background: white;
+
+    /*background: #ccccce;*/
+
   }
 }
 </style>
@@ -166,8 +170,12 @@ input[type="number"] {
 <style type="text/css">
   .content_product{
     margin-left: 30px;
-    
+    /*position: relative;
+    */
   }
+  .hide{
+   display:none;
+}
 </style>
 
 
@@ -225,7 +233,7 @@ input[type="number"] {
     @foreach($images as $key => $image)
     @if($key==0)
     <div class="carousel-item active" data-slide-number="{{$key}}">
-      <img style="object-fit: cover; height: 230px; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+      <img style="object-fit: cover; height: 230px; width: 387px !important; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
     </div>
     @else
     <div class="carousel-item" data-slide-number="{{$key}}">
@@ -583,12 +591,15 @@ input[type="number"] {
               Xem thêm/ Thu gọn
             </a>
           </div> -->
+
           <div class="content_product">
           <p>{!!$detail_product->content!!}</p>
             </div>
           <div style="text-align: center;">
             <button style="background-color:#FFFFFF;color: #42a1f5;margin:auto;padding: 5px;border: solid 1px transparent; " id="show">Xem thêm</a>
             <button style="background-color:#FFFFFF;color: #42a1f5;margin:auto;display: none;padding: 5px;border: solid 1px transparent; " id="hide">Ẩn bớt</a>
+
+          
           </div>
 
           

@@ -9,10 +9,17 @@
         -webkit-line-clamp: 2; /* number of lines to show */
         -webkit-box-orient: vertical;
     }
+    .breadcrumbs{
+        padding: 10px;
+    }
+    .single-product{
+        margin-top:20px;
+        margin-bottom: 10px;: 
+    }
 </style>
     <!-- Breadcrumbs -->
-        <div class="breadcrumbs">
-            <div class="container">
+        <div  class="breadcrumbs">
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="bread-inner">
@@ -23,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- End Breadcrumbs -->
         
