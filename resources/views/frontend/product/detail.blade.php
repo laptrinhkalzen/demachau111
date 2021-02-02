@@ -255,7 +255,9 @@ input[type="number"] {
         @php
           $count_sl=0;
         @endphp
+        @if($dem>1)
     @while($count_sl < $dem)
+    
     @if($count_sl < 3) 
     <div class="carousel-item active">
       <div class="row mx-0">
@@ -301,8 +303,9 @@ input[type="number"] {
       </div>
     </div>
     @endif
-
+      
           @endwhile
+            @endif
 
     <!-- <div class="carousel-item">
       <div class="row mx-0">
@@ -319,6 +322,7 @@ input[type="number"] {
     </div> -->
 
   </div>
+  @if($dem>1)
   <a class="carousel-control-prev" href="#carousel-thumbs" role="button" data-slide="prev">
     <span style="color: black; font-size: 30px;" class="fa fa-angle-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -327,6 +331,7 @@ input[type="number"] {
     <span style="color: black; font-size: 30px;" class="fa fa-angle-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+  @endif
 </div>
 
 </div> <!-- /row -->
