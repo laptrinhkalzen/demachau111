@@ -284,6 +284,8 @@ class ProductController extends Controller {
              }
 
         }
+            
+
 
         if ($res) {
             return redirect()->route('admin.product.index')->with('success', 'Cập nhật thành công');
@@ -303,6 +305,7 @@ class ProductController extends Controller {
         $product->categories()->detach();
         $product->attributes()->detach();
         $this->productRepo->delete($id);
+        $flash_sale_product=DB::table('flash_sale_product')->where('product_id',$id)->delete();
         return redirect()->back()->with('success', 'Xóa thành công');
     }
 

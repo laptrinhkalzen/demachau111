@@ -160,7 +160,7 @@ document.body.querySelector('#alternate-button-container')
 <!-- -->		</div>
 				 
 			</div>
-			<div class="text-xs-center"><ul>{!! $flashsale_products->links() !!}</ul></div>
+			<div  class="text-xs-center">{!! $flashsale_products->links() !!}</div>
 			
 		</div>
 	</div>
