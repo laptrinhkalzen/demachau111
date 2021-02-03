@@ -87,7 +87,7 @@ document.body.querySelector('#alternate-button-container')
 					<div class="col-12 mb-2">
 						<!-- Shop Top -->
 							<div class="row">
-									<span style="font-size: 20px;margin:auto;">___<img src="/icon/flashsale.png" style="width: 80px;">&nbspKết thúc trong
+									<span style="font-size: 20px;margin:auto;">___<img src="/icon/flashsale.png" style="width: 80px;">&nbspCòn lại
 	                            <strong id="day" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>&nbspngày
                                     <strong id="hour" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong><img src="/icon/two-dots.svg" style="width: 10px;object-fit: cover;margin-left: 3px;">
                                     <strong id="minute" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong><img src="/icon/two-dots.svg" style="width: 10px;object-fit: cover;margin-left: 3px;">
