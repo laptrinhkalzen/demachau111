@@ -15,12 +15,12 @@
 					<p class="mt-4" style="font-size:18px;"><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
 						<div class="col=md-12">
-							<input class="mr-2" type="radio" name="payment_method" value="0" checked="" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>
+							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked="" id="btn-tienmat" style="width: auto;vertical-align: middle; "><label for="btn-tienmat"><b>Tiền mặt</b></label>
 							<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
 						</div>
 						<hr>
 						<div class="col=md-12">
-							<input class="mr-2" type="radio" name="payment_method" value="1" style="width: auto;vertical-align: middle; "><b>Chuyển khoản qua ngân hàng</b>
+							<input class="mr-2" type="radio" name="payment_method" value="1" id="btn-chuyenkhoan" style="width: auto;vertical-align: middle; "><label for="btn-chuyenkhoan"><b>Chuyển khoản qua ngân hàng</b></label>
 							<div class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
 								<br>Số tài khoản: 0123456789
 								<br>Chủ tài khoản: DANG DINH MINH
@@ -29,7 +29,7 @@
 						</div>
 						<hr>
 						<div class="col=md-12">
-							<input class="mr-2" type="radio" name="payment_method" value="2" style="width: auto;vertical-align: middle;"> <b>Ngân hàng</b>
+							<input class="mr-2" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"> <label for="btn-nganhang"><b>Ngân hàng</b></label>
 							<div class="2 box" >Thanh toán qua VNPAY.</div>
 							
 							</div>

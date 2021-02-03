@@ -202,7 +202,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         <div class="navbar-mobile container" style="background-color: #283988;padding: 10px;">
             <div class="row">
                 <div class="col-2" style="text-align: center;">
-                    <i class="fa fa-bars fa-2x" aria-hidden="true" style="margin-top: 10px;color: white;"  onclick="w3_open()"></i>
+                    <i class="fa fa-bars fa-2x" aria-hidden="true" style="margin-top: 10px;color: white;"  onclick="open_danhmuc()"></i>
                 </div>
                 <div class="col-9 search-bar">
                     <form action="{{route('product.search')}}" method="GET" >
@@ -210,12 +210,12 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         <button class="btnn" style="background-color: #ea1621;"><i class="ti-search"></i></button>
                     </form>
                 </div>
-                <div class="menu-1 col-12" id="mySidebar" style="background-color: white;color: black;">
-                    <i class="fa fa-times fa-3x" onclick="w3_close()" style="display:none;float:right;" id="closeFilter"></i>
-                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;font-weight: bold;">DANH MỤC</p>
-                    <hr style="background-color: black;">
+                <div class="menu-1 col-12" id="danhmuc" style="background-color: white;color: black;height: 100%;width: 0px !important;position: fixed;z-index: 999;top:0;left: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+                    <i class="fa fa-times fa-3x" onclick="w3_close()" style="display:none;float:right;margin-right: 5px;" id="close-danhmuc"></i>
+                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;font-weight: bold;">Danh mục</p>
+                    <hr style="background-color: #283988;">
                     <p class="mt-2 ml-2" style="font-size: 14px;color: black;"><a href="{{route('home.index')}}" style="font-weight: bold;">Trang chủ</a></p>
-                    <hr style="background-color: black;">
+                    <hr style="background-color: #283988;">
                     @foreach($menu_cats as $key => $cat)
                     
                         @php
@@ -227,9 +227,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         @endphp
                         @endforeach 
                         @if($dem>0)
-                            <hr class="mt-3" style="background-color: black;">  
-                            <p class="mt-2 ml-2" style="font-size: 14px;color: black;font-weight: bold;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a><img class="arrow1" id="arrow1_{!!$key!!}" data-key="{{$key}}" src="public/icon/arrow-right.svg" style="width: 15px;float:right;"></p><img class="arrow2" id="arrow2_{!!$key!!}" data-key="{{$key}}" src="public/icon/arrow-down.svg" style="width: 15px;float:right;display: none;margin-top: -20px;"></p>
-                            <hr style="background-color: black;">
+                            <hr class="mt-3" style="background-color: #283988;">  
+                            <p class="mt-2 ml-2" style="font-size: 14px;color: black;font-weight: bold;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a><img class="arrow1" id="arrow1_{!!$key!!}" data-key="{{$key}}" src="{{asset('public/icon/arrow-right.svg')}}" style="width: 15px;float:right;margin-right: 10px;"></p><img class="arrow2" id="arrow2_{!!$key!!}" data-key="{{$key}}" src="{{asset('public/icon/arrow-down.svg')}}" style="width: 15px;float:right;display: none;margin-top: -20px;margin-right: 10px;"></p>
+                            <hr style="background-color: #283988;">
                             <div class="menu_con_{!!$key!!}" style="display: none;">
                                 @if(!is_null($cat->children))
                                 
@@ -243,9 +243,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                             </div>
 
                         @else
-                            <hr class="mt-3" style="background-color: black;">
+                            <hr class="mt-3" style="background-color: #283988;">
                             <p class="mt-2 ml-2" style="font-size: 14px;color: black;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
-                            <hr style="background-color: black;">
+                            <hr style="background-color: #283988;">
                         @endif
                         
                     </li>
@@ -598,23 +598,26 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         });
     </script>
     <script>
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("closeFilter").style.display = "block";
+function open_danhmuc() {
+  document.getElementById("danhmuc").style.width = "100%";
+  document.getElementById("close-danhmuc").style.display = "block";
     document.getElementById("mySidebar2").style.display = "none";
   document.getElementById("closeFilter2").style.display = "none";
+    document.header.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("closeFilter").style.display = "none";
+  document.getElementById("danhmuc").style.width= "0px";
+    document.getElementById("danhmuc").style.padding = "0px 0px";
+  document.getElementById("close-danhmuc").style.display = "none";
 }
 
 function w3_open2() {
   document.getElementById("mySidebar2").style.display = "block";
   document.getElementById("closeFilter2").style.display = "block";
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("closeFilter").style.display = "none";
+  document.getElementById("danhmuc").style.width= "0px";
+  document.getElementById("danhmuc").style.padding = "0px 0px";
+    document.getElementById("close-danhmuc").style.display = "none";
 }
 
 function w3_close2() {
