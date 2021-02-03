@@ -491,9 +491,15 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                                         <a class="nav-link" href="{{route('home.index')}}">{{$menu->title}}</a>
                                                     </li>
                                                     @else
+                                                        @if($menu->type==1)
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="{{url('search-product'.'?search='.$menu->link)}}">{{$menu->title}}</a>
+                                                        <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
                                                     </li>
+                                                        @else
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{url('search-product'.'?search='.$menu->keyword)}}">{{$menu->title}}</a>
+                                                    </li>
+                                                        @endif
                                                     @endif
                                                     @endforeach
                                                      

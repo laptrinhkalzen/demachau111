@@ -1910,7 +1910,7 @@ padding-left: 0px;
 .most-popular .owl-nav{
 	margin: 0;
     position: absolute;
-    top: 50%;
+    top: 38%;
     width: 100%;
 	margin-top:-25px;
 }
@@ -1939,6 +1939,20 @@ padding-left: 0px;
 }
 .most-popular .owl-carousel .owl-controls .owl-nav .owl-next{
 	right:0;
+}
+.owl-carousel1 .owl-controls .owl-nav{
+	margin: 0;
+    position: absolute;
+    top: 32%;
+    width: 100%;
+	margin-top:-25px
+}
+.brand-carousel .owl-controls .owl-nav{
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+	margin-top:-25px
 }
 /*======================================
    End Most Popular CSS
