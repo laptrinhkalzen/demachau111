@@ -211,7 +211,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     </form>
                 </div>
                 <div class="menu-1 col-12" id="mySidebar" style="background-color: white;color: black;">
-                    <i class="fa fa-times fa-3x" onclick="w3_close()" style="display:none;float:right;position: absolute;left: 230px;" id="closeFilter"></i>
+                    <i class="fa fa-times fa-3x" onclick="w3_close()" style="display:none;float:right;" id="closeFilter"></i>
                     <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;">MENU</p>
                     <p class="mt-2" style="font-size: 14px;color: black;text-align: center;"><a href="{{route('home.index')}}">Trang chủ</a></p>
                     <hr style="background-color: black;">
@@ -238,7 +238,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                    @endforeach 
                 </div>
                 <div class="menu-2 col-12" id="mySidebar2" style="background-color: white;color: black;">
-                    <i class="fa fa-times fa-3x" onclick="w3_close2()" style="display:none;float:right;" id="closeFilter2"></i>
+                    <i class="fa fa-times fa-3x" onclick="w3_close2()" style="display:none;float:right;margin-right: 5px;" id="closeFilter2"></i>
                     <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;">GIỎ HÀNG</p>
                                 <!-- Shopping Item -->
                                 <div class="shopping-item">
