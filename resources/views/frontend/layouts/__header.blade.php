@@ -212,8 +212,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 </div>
                 <div class="menu-1 col-12" id="mySidebar" style="background-color: white;color: black;">
                     <i class="fa fa-times fa-3x" onclick="w3_close()" style="display:none;float:right;" id="closeFilter"></i>
-                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;">MENU</p>
-                    <p class="mt-2" style="font-size: 14px;color: black;text-align: center;"><a href="{{route('home.index')}}">Trang chủ</a></p>
+                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;font-weight: bold;">DANH MỤC</p>
+                    <hr style="background-color: black;">
+                    <p class="mt-2 ml-2" style="font-size: 14px;color: black;"><a href="{{route('home.index')}}" style="font-weight: bold;">Trang chủ</a></p>
                     <hr style="background-color: black;">
                     @foreach($menu_cats as $key => $cat)
                     
@@ -225,11 +226,25 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         $dem++;
                         @endphp
                         @endforeach 
-                        @if($dem>0)  
-                            <p class="mt-2" style="font-size: 14px;color: black;text-align: center;"><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
+                        @if($dem>0)
+                            <hr class="mt-3" style="background-color: black;">  
+                            <p class="mt-2 ml-2" style="font-size: 14px;color: black;font-weight: bold;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a><img class="arrow1" id="arrow1_{!!$key!!}" data-key="{{$key}}" src="public/icon/arrow-right.svg" style="width: 15px;float:right;"></p><img class="arrow2" id="arrow2_{!!$key!!}" data-key="{{$key}}" src="public/icon/arrow-down.svg" style="width: 15px;float:right;display: none;margin-top: -20px;"></p>
                             <hr style="background-color: black;">
+                            <div class="menu_con_{!!$key!!}" style="display: none;">
+                                @if(!is_null($cat->children))
+                                
+                                @foreach ($cat->children as $key=>$cat1)
+                                @if($cat1)
+                                <p class="mt-2 ml-2" style="font-size: 14px;color: black;"><a style="" href="{{route('category.show',['alias'=>$cat1->alias])}}">{!!$cat1->name!!}</a></p>
+                                            
+                                @endif
+                                @endforeach
+                                @endif
+                            </div>
+
                         @else
-                            <p class="mt-2" style="font-size: 14px;color: black;text-align: center;"><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
+                            <hr class="mt-3" style="background-color: black;">
+                            <p class="mt-2 ml-2" style="font-size: 14px;color: black;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
                             <hr style="background-color: black;">
                         @endif
                         
@@ -239,7 +254,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 </div>
                 <div class="menu-2 col-12" id="mySidebar2" style="background-color: white;color: black;">
                     <i class="fa fa-times fa-3x" onclick="w3_close2()" style="display:none;float:right;margin-right: 5px;" id="closeFilter2"></i>
-                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;">GIỎ HÀNG</p>
+                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;font-weight: bold;">GIỎ HÀNG</p>
                                 <!-- Shopping Item -->
                                 <div class="shopping-item">
                                      @if(Session('cart'))
@@ -562,6 +577,26 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             });
         });
     </script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+            $('.arrow2').on('click',function(){
+                var cay=$(this).data('key');
+                $('.menu_con_'+cay).hide();
+                $('#arrow2_'+cay).hide();
+                $('#arrow1_'+cay).show();
+            });
+           
+        });
+        $(document).ready(function(){
+            $('.arrow1').on('click',function(){
+                var cay=$(this).data('key');
+                $('.menu_con_'+cay).show();
+                $('#arrow1_'+cay).hide();
+                $('#arrow2_'+cay).show();
+            });
+           
+        });
+    </script>
     <script>
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
@@ -583,6 +618,16 @@ function w3_open2() {
 }
 
 function w3_close2() {
+  document.getElementById("mySidebar2").style.display = "none";
+  document.getElementById("closeFilter2").style.display = "none";
+}
+
+function w3_open3() {
+  document.getElementById("mySidebar2").style.display = "block";
+  document.getElementById("closeFilter2").style.display = "block";
+}
+
+function w3_close3() {
   document.getElementById("mySidebar2").style.display = "none";
   document.getElementById("closeFilter2").style.display = "none";
 }
