@@ -456,7 +456,7 @@ margin-top: 0px;
                                     <!-- Start Single Product -->
                                     @foreach($brand as $brands)
                                     <div class="single-product" >
-                                        <div class="product-img">
+                                        <div class="product-img ">
                                             <a href="{{$brands->link}}">
                                                 <img class="default-img img-responsive img-rounded custom-brand" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; ">
 <!--                                                 <img class="hover-img img-responsive img-rounded hover-brand" src="{!!url('upload/config/'.$brands->image)!!}" style="padding-top: 10px; "> -->

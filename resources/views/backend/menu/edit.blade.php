@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                              <div class="form-group row">
-                                <label class="col-md-3 col-form-label text-right">Loại giảm</label>
+                                <label class="col-md-3 col-form-label text-right">Loại đường dẫn</label>
                                 <div class="col-md-9">
                                      <select name="type" class="form-control ">
                                              @if($record->type==1)

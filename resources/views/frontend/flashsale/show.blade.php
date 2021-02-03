@@ -110,7 +110,7 @@ document.body.querySelector('#alternate-button-container')
 			<div class="col-12">
 				<div class="row show_filter">
 					@foreach($flashsale_products as $flashsale_product)
-					@if($flashsale_product->flash_sale_id==$flashsale->id)
+					
 					<div  class="col-lg-3 col-md-6 col-6">
 						<div class="single-product">
 							<div class="product-img flashsale-img">
@@ -152,16 +152,20 @@ document.body.querySelector('#alternate-button-container')
 							</div>
 						</div>
 					</div>
-					@endif
+					
 					@endforeach
 					
 				</div>
+				
 <!-- -->		</div>
+				 
 			</div>
+			<div class="text-xs-center"><ul>{!! $flashsale_products->links() !!}</ul></div>
 			
 		</div>
 	</div>
 </div>
+
 
 </section>
 

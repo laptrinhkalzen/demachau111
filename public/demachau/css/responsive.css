@@ -367,6 +367,9 @@ display: none !important;
 .flashsale-img a img{
 	height: 200px !important;
 }
+.brand-carousel .single-product .product-img a img{
+	height: 50px !important;
+}
 .breadcrumbs {
 	padding: 90px 0 90px;
 }
@@ -1858,7 +1861,7 @@ display: none !important;
 	display:none !important;
 }
 .custom-product{
-	width: 255px !important;
+	
 	height: 255px !important;
 	object-fit: cover !important;
 }

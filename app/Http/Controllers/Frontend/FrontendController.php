@@ -106,7 +106,8 @@ class FrontendController extends Controller {
     }
     public function flashsale_show() {
         $flashsale=DB::table('flashsale')->where('status',1)->where('flashsale.start','<=', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>=',Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('start','asc')->first();
-        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('product.status',1)->get();
+        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('product.status',1)->where('flash_sale_id',$flashsale->id)->paginate(4);
+        //dd($flashsale_products);
         foreach ($flashsale_products as $key => $value) {
                  foreach ($flashsale_products   as  $product_sale) {
                      if($product_sale->product_id==$value->id){
