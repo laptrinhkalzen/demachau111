@@ -367,7 +367,7 @@ $("#district").html(data);
 });
 });
 </script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $(document).ready(function(){
 $('.delete_cart').on('click',function(){
 var id_option=$(this).data('id_option');
@@ -378,9 +378,9 @@ method: 'POST',
 data: {id_option: id_option},
 success: function (resp) {
 if (resp.success == true) {
-$(".shopping-item").load(" .shopping-item > *");
+//$(".shopping-item").load(" .shopping-item > *");
 $('.each_cart_' + id_option).fadeOut();
-</script>
+</script> -->
 
     <script type="text/javascript">
     $( document ).ready(function() {
@@ -452,7 +452,7 @@ $('.each_cart_' + id_option).fadeOut();
                         data: {id_option: id_option},
                         success: function (resp) {
                             if (resp.success == true) {
-                                   $(".shopping-item").load(" .shopping-item > *");
+                                   //$(".shopping-item").load(" .shopping-item > *");
                                    $('.each_cart_' + id_option).fadeOut();
                                    $('#sub_total').html(resp.total);
                                    

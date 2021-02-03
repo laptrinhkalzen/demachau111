@@ -172,11 +172,11 @@
 												</div>
 												
 											</div>
-											<div class="form-row">
+											<!-- <div class="form-row">
 												<div class="col-md-6 col-lg-6 col-6">
 													<input type="button" data-id_option="{{$key1}}" class="delete_cart" name="" value="Xoá">
 												</div>
-											</div>
+											</div> -->
 										</div>
 									</div>
 								</div>

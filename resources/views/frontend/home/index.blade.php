@@ -174,7 +174,7 @@ margin-top: 0px;
                             <div class="col-1 col-lg-1"></div>
                         </div>
                         <div class="row container mt-3 button-sale" style="padding-left: 50px;">
-                            <a href="{{route('flashsale.show')}}" style="margin: auto; background-color:white; color:black; border-radius: 5px; width:100px; text-align: center; ">Xem tất cả</a>
+                            <a href="{{route('flashsale.show')}}" style="margin: auto; background-color:white; color:black; border-radius: 5px  ; width:100px; text-align: center; ">Xem tất cả</a>
                         </div>
                     </div>
                 </div>
