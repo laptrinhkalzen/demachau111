@@ -113,7 +113,7 @@ document.body.querySelector('#alternate-button-container')
 					@if($flashsale_product->flash_sale_id==$flashsale->id)
 					<div  class="col-lg-3 col-md-6 col-6">
 						<div class="single-product">
-							<div class="product-img">
+							<div class="product-img flashsale-img">
 								<a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">
 
 									@foreach( explode(',',$flashsale_product->images) as $value)
