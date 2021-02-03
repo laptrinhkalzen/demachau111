@@ -347,9 +347,9 @@ input[type="number"] {
                                         
                                         <p style="font-size: 22px;font-weight: bold;">{{$detail_product->title}}</p>
                                     </div>
-                                     <div class="col-lg-12 col-md-12 row" style="background-color:#f6f7fb;">
+                                     <div class="col-lg-12 col-md-12 row" style="margin-bottom:15px;" >
 
-                                            <div id="price_origin" style="text-decoration-line:line-through;" class="old"></div>&nbsp
+                                            <div id="price_origin" style="text-decoration-line:line-through; color: gray;" class="old"></div>&nbsp
                                             <strong id="option_price" style="color:red;font-size: 24px;"></strong>
                                      </div>
                                         <div class="row">
@@ -359,7 +359,7 @@ input[type="number"] {
                                             @if($input)
                                             @foreach($input as $inputt)
                                     
-                                            <div class="col-md-6 col-lg-6">  
+                                            <div class="col-md-6 row" style="margin-bottom: 20px;">
                                             <div class="col-lg-12 col-md-12">
                                                 <span style="font-size: 14px;font-weight: 600;">{{$inputt['name']}}</span>
                                             </div>
@@ -367,24 +367,23 @@ input[type="number"] {
                                             $dem=0;
                                             @endphp
                                             <div class="col-lg-12 col-md-12 ">
-                                            <select class="form-control check-option" id="exampleFormControlSelect1">
-                                            @foreach($attributes as $attribute)
-                                            @if($attribute->parent_id==$inputt['id'])
-                                            @php
-                                            $dem++;
-                                            @endphp
-                                            @if($dem==1)
-                                          
-                                            <option checked value="{{$attribute->title}}">{{$attribute->title}}</option>
-                                            @else
-                                            <option  value="{{$attribute->title}}">{{$attribute->title}}</option>
-                                            @endif
-                                            @endif
-                                            @endforeach
-                                            </select>
+                                               <select class="form-control check-option" id="exampleFormControlSelect1">
+                                               @foreach($attributes as $attribute)
+                                                  @if($attribute->parent_id==$inputt['id'])
+                                               @php
+                                                  $dem++;
+                                               @endphp
+                                               @if($dem==1)
+                                                  <option checked value="{{$attribute->title}}">{{$attribute->title}}</option>
+                                               @else
+                                                  <option  value="{{$attribute->title}}">{{$attribute->title}}</option>
+                                               @endif
+                                               @endif
+                                               @endforeach
+                                               </select>
                                             </div>
                                           
-                                         </div>
+                                             </div>
                                               @endforeach
                                             
                                      
@@ -395,14 +394,16 @@ input[type="number"] {
                                         
                                         
                                    
-                                    <div class="form-group">
-                                        <div class="row">
+                                    <div class="form-group row">
+                               
 <!--                                             <div class="col-md-4">
                                                 <input style="width:100%"  type="number" name="quantity" value="1" id="quantity" min="1">
                                             </div> -->
-            
-                                            <div class="col-md-4 input-group">
-                                                
+                                            <div class="col-md-12">
+                                                 <strong>Số lượng:</strong>
+                                              </div>
+                                            <div style="margin-top: 0px;" class="col-md-4 input-group">
+                                             
                                               <input type="button" value="-" class="button-minus" data-field="quantity">
                                               <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field" >
                                               <input type="button" value="+" class="button-plus" data-field="quantity">
@@ -412,7 +413,7 @@ input[type="number"] {
                                                 
                                             </div> -->
                                         </div>
-                                    </div>
+                           
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-6 col-md-6" style="padding-right: 0px;">
