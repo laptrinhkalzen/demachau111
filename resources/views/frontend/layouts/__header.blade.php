@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title Tag  -->
-    <title>Đệm á châu.</title>
+    <title>Đệm á châu</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image / png" href="{!!$share_config->favicon!!}"/>
     <!-- Web Font -->
@@ -210,10 +210,10 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         <button class="btnn" style="background-color: #ea1621;"><i class="ti-search"></i></button>
                     </form>
                 </div>
-                <div class="menu-1 col-12" id="mySidebar" style="background-color: #283988;color: white;">
-                    <i class="fa fa-times fa-3x" onclick="w3_close()" style="display:none;float:right;" id="closeFilter"></i>
-                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: white;">MENU</p>
-                    <p class="mt-2" style="font-size: 14px;color: white;"><a href="{{route('home.index')}}">Trang chủ</a></p>
+                <div class="menu-1 col-12" id="mySidebar" style="background-color: white;color: black;">
+                    <i class="fa fa-times fa-3x" onclick="w3_close()" style="display:none;float:right;position: absolute;left: 230px;" id="closeFilter"></i>
+                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;">MENU</p>
+                    <p class="mt-2" style="font-size: 14px;color: black;text-align: center;"><a href="{{route('home.index')}}">Trang chủ</a></p>
                     <hr style="background-color: black;">
                     @foreach($menu_cats as $key => $cat)
                     
@@ -226,10 +226,10 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         @endphp
                         @endforeach 
                         @if($dem>0)  
-                            <p class="mt-2" style="font-size: 14px;color: white;"><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
+                            <p class="mt-2" style="font-size: 14px;color: black;text-align: center;"><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
                             <hr style="background-color: black;">
                         @else
-                            <p class="mt-2" style="font-size: 14px;color: white;"><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
+                            <p class="mt-2" style="font-size: 14px;color: black;text-align: center;"><a href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
                             <hr style="background-color: black;">
                         @endif
                         
