@@ -61,7 +61,7 @@
                                 <!--/ End Single Widget -->
                         </div>
                     </div>
-                    <div class="col-lg-9 col-md-8 col-12" style="background-color: white;">
+                    <div class="col-lg-9 col-md-8 col-12 news-list" style="background-color: white;">
                         <div class="row">
                             <div class="col-12">
                                     <div class="" style="padding-top: 22px; font-weight: bold; font-size: 22px;">Tin tức</div>

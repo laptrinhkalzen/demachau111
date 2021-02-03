@@ -97,7 +97,7 @@ class BrandController extends Controller {
         }
         //dd($image);
         $res=DB::table('brand')->where('id',$id)->update($input);
-dd($res);
+       
         if ($res) {
             return redirect()->route('admin.brand.index')->with('success', 'Cập nhật thành công');
         } else {
