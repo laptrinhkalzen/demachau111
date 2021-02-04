@@ -5379,6 +5379,9 @@ label.radio input:checked+span {
 .btn-apdung:hover{
 	background-color:#ea1621 !important; 
 }
+.del-checkout:hover{
+	background-color:#ea1621 !important; 
+}
 /*=============================
 	End Footer CSS
 ===============================*/

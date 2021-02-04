@@ -239,9 +239,10 @@
 												</div>
 												
 											</div>
+											
 											<div class="form-row">
 												<div class="col-md-6 col-lg-6 col-6">
-													<input type="button" data-id_option="{{$key1}}" class="delete_cart" name="" value="Xoá">
+													<input type="button" data-id_option="{{$key1}}" class="delete_cart del-checkout" name="" value="Xoá" style="background-color: black;color: white !important;">
 												</div>
 											</div>
 										</div>
