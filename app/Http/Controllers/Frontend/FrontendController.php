@@ -46,7 +46,10 @@ class FrontendController extends Controller {
         
         $news = DB::table('news')->orderBy('ordering','asc')->where('status',1)->get();
         $danh_muc_cha=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
-        $product_danh_muc_cha=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->where('product.status',1)->get();
+        //dd($danh_muc_cha);
+        $product_danh_muc_cha=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->join('category','category.id','=','product_category.category_id')->where('category.parent_id','!=',0)->where('product.status',1)->get();
+        //dd($product_danh_muc_cha);
+        
         $danh_muc_con=DB::table('category')->where('parent_id','!=',0)->where('type',4)->where('status',1)->get();
         // $danh_muc_con_pro=DB::table('category')->where('parent_id','!=',0)->where('type',4)->where('status',1)->get();
         // foreach($danh_muc_con as $danh_muc_con){
@@ -58,7 +61,7 @@ class FrontendController extends Controller {
             foreach ($product_attributes as $key => $value) {
                 $value->parent_name=DB::table('attribute')->where('id',$value->parent_id)->pluck('title');
             }
-   
+
         $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();
          foreach ($flashsale_products as $key => $value) {
              foreach ($product_sales   as  $product_sale) {
@@ -94,6 +97,7 @@ class FrontendController extends Controller {
             }
         }
           $product_attrs=$product_attributes->groupBy('product_id');
+
 
             //foreach( explode(',',$flashsale_product->images) as $value)
       

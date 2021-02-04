@@ -19,7 +19,6 @@ font-size: 14px;
 margin-top: 0px;
 }
 </style>
-
 <!--/ End Header -->
 <!-- Slider Area -->
 <aside class="left"><a href="{{$banner_left->url}}"><img style="width: 150px; height: 540px;position: absolute;z-index: 99; " src="{{$banner_left->image}}"></img></a></aside>
