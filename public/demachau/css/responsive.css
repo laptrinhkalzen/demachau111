@@ -368,7 +368,7 @@ display: none !important;
 	height: 200px !important;
 }
 .brand-carousel .single-product .product-img a img{
-	height: 50px !important;
+	height: 100% !important;
 }
 .breadcrumbs {
 	padding: 90px 0 90px;

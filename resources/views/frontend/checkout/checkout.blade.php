@@ -3,7 +3,70 @@
 <!-- End Breadcrumbs -->
 
 <!-- Start Checkout -->
+<style type="text/css">
+	/* The container */
+.container-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+/* Hide the browser's default radio button */
+.container-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-check input:checked ~ .checkmark {
+  background-color: #283988;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-check .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+</style>
 <section class="shop checkout section" style="background-color: #f3f5f7;">
 	<form class="form" method="post" action="{{route('home.checkout_payment')}}">
 		@csrf
@@ -14,25 +77,28 @@
 					<div class="col-md-12 col-lg-12" style="background-color:white;">	
 					<p class="mt-4" style="font-size:18px;"><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
-						<div class="col=md-12">
-							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked="" id="btn-tienmat" style="width: auto;vertical-align: middle; "><label for="btn-tienmat"><b>Tiền mặt</b></label>
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
+							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked="" id="btn-tienmat" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>
+							  <span class="checkmark"></span>
 							<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
-						</div>
+							</label>
 						<hr>
-						<div class="col=md-12">
-							<input class="mr-2" type="radio" name="payment_method" value="1" id="btn-chuyenkhoan" style="width: auto;vertical-align: middle; "><label for="btn-chuyenkhoan"><b>Chuyển khoản qua ngân hàng</b></label>
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
+							<input class="mr-2" type="radio" name="payment_method" value="1" id="btn-chuyenkhoan" style="width: auto;vertical-align: middle; "><b>Chuyển khoản qua ngân hàng</b>
+							  <span class="checkmark"></span>
 							<div class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
 								<br>Số tài khoản: 0123456789
 								<br>Chủ tài khoản: DANG DINH MINH
 								<br>Chi nhánh …
 							<br>Nội dung chuyển khoản: Họ tên + SĐT</div>
-						</div>
+							</label>
 						<hr>
-						<div class="col=md-12">
-							<input class="mr-2" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"> <label for="btn-nganhang"><b>Ngân hàng</b></label>
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
+							<input class="mr-2" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Ngân hàng</b>
+							  <span class="checkmark"></span>
 							<div class="2 box" >Thanh toán qua VNPAY.</div>
 							
-							</div>
+							</label>
 						</div>
 					</div>
 					<div class="col-lg-12 col-12 mt-4" style="background-color:white;">
@@ -43,26 +109,26 @@
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>Họ và tên<span>*</span></label>
-									<input type="text" name="member_name" placeholder="" required="required">
+									<input type="text" name="member_name" placeholder="" required="required" style="  cursor: pointer;">
 								</div>
 							</div>
 							
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Địa chỉ email<span>*</span></label>
-									<input class="" type="email" name="email" placeholder="" required="required">
+									<input class="" type="email" name="email" placeholder="" required="required" style="  cursor: pointer;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Số điện thoại<span>*</span></label>
-									<input type="number" name="mobile" placeholder="" required="required">
+									<input type="number" name="mobile" placeholder="" required="required" style="  cursor: pointer;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Chọn thành phố<span>*</span></label>
-									<select  style="background-color: #f6f7fb;" id="city" class="option form-control select2" name="id_tp" required="">
+									<select  style="background-color: #f6f7fb;cursor: pointer;" id="city" class="option form-control select2" name="id_tp" required="">
 										<option value="">Chọn thành phố</option>
 										@foreach($city as $city)
 										<option value="{{$city->id_tp}}">{{$city->name_tp}} </option>
@@ -73,7 +139,7 @@
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Chọn quận huyện<span>*</span></label>
-									<select style="background-color: #f6f7fb;" id="district" class="form-control district select2" name="id_qh"required="">
+									<select style="background-color: #f6f7fb;cursor: pointer;" id="district" class="form-control district select2" name="id_qh"required="">
 										
 										@foreach($district as $district)
 										<option value="{{$district->id_qh}}">{{$district->name_qh}} </option>
@@ -87,13 +153,13 @@
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>Địa chỉ cụ thể<span>*</span></label>
-									<input type="text" name="address" placeholder="" required="required">
+									<input type="text" name="address" placeholder="" required="required" style="cursor: pointer;">
 								</div>
 							</div>
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>THÔNG TIN BỔ SUNG</label>
-									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." name="note" rows="3"></textarea>
+									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." name="note" rows="3" style="cursor: pointer;"></textarea>
 								</div>
 							</div>
 								<div class="col-lg-12 col-md-12 col-12">
@@ -168,7 +234,7 @@
 													<span>Số lượng:</span>
 												</div>
 												<div class="col-md-4 col-lg-4 col-4">
-													<input class="each_quantity" data-id_option="{{$key1}}"  value="{{$val['quantity']}}" type="number"   min="1">
+													<input class="each_quantity" data-id_option="{{$key1}}"  value="{{$val['quantity']}}" type="number"   min="1" style="cursor: pointer;">
 												</div>
 												
 											</div>
