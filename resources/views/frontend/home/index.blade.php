@@ -19,6 +19,7 @@ font-size: 14px;
 margin-top: 0px;
 }
 </style>
+
 <!--/ End Header -->
 <!-- Slider Area -->
 <aside class="left"><a href="{{$banner_left->url}}"><img style="width: 150px; height: 540px;position: absolute;z-index: 99; " src="{{$banner_left->image}}"></img></a></aside>
@@ -281,7 +282,7 @@ margin-top: 0px;
                 <div class="owl-carousel popular-slider">
                     <!-- Start Single Product -->
                     @foreach($product_danh_muc_cha as $product_danh_muc_cha1)
-                    @if($product_danh_muc_cha1->category_id == $danh_muc_cha->id)
+                    @if($product_danh_muc_cha1->parent_id == $danh_muc_cha->id)
                     <div class="single-product">
                         <div class="product-img">
                             <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
