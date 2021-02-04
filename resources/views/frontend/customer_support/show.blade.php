@@ -8,7 +8,7 @@
 				<div class="bread-inner">
 					<ul class="bread-list">
 						<li><a href="{{route('home.index')}}">Trang chủ<i class="ti-arrow-right"></i></a></li>
-						<li class="active"><a href="">Sản phẩm khuyến mại</a></li>
+						<li class="active"><a href="">{{$customer_sp->name}}</a></li>
 					</ul>
 				</div>
 			</div>
