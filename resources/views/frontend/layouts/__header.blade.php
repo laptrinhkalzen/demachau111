@@ -116,7 +116,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-3" style="text-align: center;">
 <!--                     <div class="sinlge-bar shopping"> -->
     <div>
-                                <a href="#" class="single-icon"><!-- <i class="fa fa-shopping-cart fa-2x" style="color: #283988;padding-top: 15px;"></i> --><img src="{{asset('public/icon/cart-svg.svg')}}" style="color: #283988;width: 30px;margin-top: 15px;" onclick="w3_open2()"><span class="total-count" id="cart-count" style="border: 1px solid #ea1621;background-color: #ea1621;color: white;border-radius: 50%;vertical-align: bottom;">{{$count_cart}}</span></a>
+                                <a href="#" class="single-icon"><!-- <i class="fa fa-shopping-cart fa-2x" style="color: #283988;padding-top: 15px;"></i> --><img src="{{asset('public/icon/cart-svg.svg')}}" style="color: #283988;width: 30px;margin-top: 15px;" onclick="open_giohang()"><span class="total-count" id="cart-count" style="border: 1px solid #ea1621;background-color: #ea1621;color: white;border-radius: 50%;vertical-align: bottom;">{{$count_cart}}</span></a>
                                 <!-- Shopping Item -->
                                 <div class="shopping-item shopping-hidden">
                                      @if(Session('cart'))
@@ -202,6 +202,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
         <div class="navbar-mobile container" style="background-color: #283988;padding: 10px;">
+            <div class="container">
             <div class="row">
                 <div class="col-2" style="text-align: center;">
                     <i class="fa fa-bars fa-2x" aria-hidden="true" style="margin-top: 10px;color: white;"  onclick="open_danhmuc()"></i>
@@ -213,10 +214,10 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     </form>
                 </div>
                 <div class="menu-1 col-12" id="danhmuc" style="background-color: white;color: black;height: 100%;width: 0px !important;position: fixed;z-index: 999;top:0;left: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
-                    <i class="fa fa-times fa-3x" onclick="w3_close()" style="display:none;float:right;margin-right: 15px;" id="close-danhmuc"></i>
+                    <i class="fa fa-times fa-3x" onclick="close_danhmuc()" style="float:right;margin-right: 15px;" id="close-danhmuc"></i>
                     <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;font-weight: bold;">Danh mục</p>
                     <hr style="background-color: #283988;">
-                    <p class="mt-2 ml-2" style="font-size: 14px;color: black;"><a href="{{route('home.index')}}" style="font-weight: bold;">Trang chủ</a></p>
+                    <p class="ml-2" style="font-size: 14px;color: black;"><a href="{{route('home.index')}}" style="font-weight: bold;">Trang chủ</a></p>
                     <hr style="background-color: #283988;">
                     @foreach($menu_cats as $key => $cat)
                     
@@ -229,7 +230,6 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         @endphp
                         @endforeach 
                         @if($dem>0)
-                            <hr class="mt-3" style="background-color: #283988;">  
                             <p class="mt-2 ml-2" style="font-size: 14px;color: black;font-weight: bold;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a><img class="arrow1" id="arrow1_{!!$key!!}" data-key="{{$key}}" src="{{asset('public/icon/arrow-right.svg')}}" style="width: 15px;float:right;margin-right: 10px;"></p><img class="arrow2" id="arrow2_{!!$key!!}" data-key="{{$key}}" src="{{asset('public/icon/arrow-down.svg')}}" style="width: 15px;float:right;display: none;margin-top: -20px;margin-right: 10px;"></p>
                             <hr style="background-color: #283988;">
                             <div class="menu_con_{!!$key!!}" style="display: none;">
@@ -245,17 +245,15 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                             </div>
 
                         @else
-                            <hr class="mt-3" style="background-color: #283988;">
                             <p class="mt-2 ml-2" style="font-size: 14px;color: black;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
                             <hr style="background-color: #283988;">
                         @endif
                         
-                    </li>
                     
                    @endforeach 
                 </div>
-                <div class="menu-2 col-12" id="mySidebar2" style="background-color: white;color: black;">
-                    <i class="fa fa-times fa-3x" onclick="w3_close2()" style="display:none;float:right;margin-right: 5px;" id="closeFilter2"></i>
+                <div class="menu-2 col-12" id="giohang" style="background-color: white;color: black;width: 0px !important;position: fixed;z-index: 999;top:0;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+                    <i class="fa fa-times fa-3x" onclick="close_giohang()" style="float:right;" id="close-giohang"></i>
                     <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;font-weight: bold;">GIỎ HÀNG</p>
                                 <!-- Shopping Item -->
                                 <div class="shopping-item">
@@ -287,7 +285,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                         <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;">Thanh toán</a>
                                     </div>
                                           @else
-                                        <div class="dropdown-cart-header">
+                                        <div class="dropdown-cart-header" style="text-align: center;">
                                         <span id="count-sp">Chưa có sản phẩm trong giỏ hàng</span>
                                       
                                     </div>
@@ -295,6 +293,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 
                                 </div>
                                 <!--/ End Shopping Item -->
+            </div>
             </div>
         </div>
         </div>
@@ -602,39 +601,23 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
     <script>
 function open_danhmuc() {
   document.getElementById("danhmuc").style.width = "250px";
-  document.getElementById("close-danhmuc").style.display = "block";
-    document.getElementById("mySidebar2").style.display = "none";
-  document.getElementById("closeFilter2").style.display = "none";
-    document.header.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("giohang").style.padding = "0";
+    document.getElementById("giohang").style.width= "0px";
 }
 
-function w3_close() {
+function close_danhmuc() {
   document.getElementById("danhmuc").style.width= "0px";
-    document.getElementById("danhmuc").style.padding = "0px 0px";
-  document.getElementById("close-danhmuc").style.display = "none";
 }
 
-function w3_open2() {
-  document.getElementById("mySidebar2").style.display = "block";
-  document.getElementById("closeFilter2").style.display = "block";
+function open_giohang() {
+  document.getElementById("giohang").style.width = "250px";
+    document.getElementById("giohang").style.padding = "0 10px";
   document.getElementById("danhmuc").style.width= "0px";
-  document.getElementById("danhmuc").style.padding = "0px 0px";
-    document.getElementById("close-danhmuc").style.display = "none";
 }
 
-function w3_close2() {
-  document.getElementById("mySidebar2").style.display = "none";
-  document.getElementById("closeFilter2").style.display = "none";
-}
-
-function w3_open3() {
-  document.getElementById("mySidebar2").style.display = "block";
-  document.getElementById("closeFilter2").style.display = "block";
-}
-
-function w3_close3() {
-  document.getElementById("mySidebar2").style.display = "none";
-  document.getElementById("closeFilter2").style.display = "none";
+function close_giohang() {
+  document.getElementById("giohang").style.width= "0px";
+  document.getElementById("giohang").style.padding = "0";
 }
 
 </script>
