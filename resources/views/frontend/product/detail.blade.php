@@ -791,7 +791,8 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
     }
     function checkOption(){
-        $('div').find("select").prop('disabled', 'disabled');
+    $('div').find("select").prop('disabled', 'disabled');
+     $('div').find("button").prop('disabled', 'disabled');
     var alias='{{$detail_product->alias}}';
     search = $('div').find("option:selected").map(function(){
     return $(this).val();
@@ -804,6 +805,7 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
 
     success:function(resp){
        $('div').find("select").removeAttr('disabled');
+       $('div').find("button").removeAttr('disabled');
     if(resp.result_price!=0 ){
         if(resp.result['option_price']!=null || resp.result['option_price']>0){   
             $('#price_origin').html(formatNumber(resp.result['option_price']) + 'đ');
