@@ -47,7 +47,7 @@ class FrontendController extends Controller {
         $news = DB::table('news')->orderBy('ordering','asc')->where('status',1)->get();
         $danh_muc_cha=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
         //dd($danh_muc_cha);
-        $product_danh_muc_cha=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->join('category','category.id','=','product_category.category_id')->where('category.parent_id','!=',0)->where('product.status',1)->get();
+        $product_danh_muc_cha=DB::table('product_category')->join('category','category.id','=','product_category.category_id')->join('product','product_category.product_id','=','product.id')->where('category.parent_id','!=',0)->where('product.status',1)->get();
         //dd($product_danh_muc_cha);
         
         $danh_muc_con=DB::table('category')->where('parent_id','!=',0)->where('type',4)->where('status',1)->get();
