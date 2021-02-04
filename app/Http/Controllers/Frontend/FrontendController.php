@@ -39,11 +39,11 @@ class FrontendController extends Controller {
             $count_flashsale=1;
         }
         
-        //dd($count_flashsale);
+        
         
         $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('product.status',1)->get();
 
-        //dd($danh_muc_deal);
+        
         $news = DB::table('news')->orderBy('ordering','asc')->where('status',1)->get();
         $danh_muc_cha=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
         $product_danh_muc_cha=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->where('product.status',1)->get();
@@ -96,8 +96,7 @@ class FrontendController extends Controller {
           $product_attrs=$product_attributes->groupBy('product_id');
 
             //foreach( explode(',',$flashsale_product->images) as $value)
-       //dd($product_danh_muc_cha);
-     //dd($product_danh_muc_cha);
+      
         return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','product_sales','count_flashsale'));
     }
     
@@ -107,7 +106,7 @@ class FrontendController extends Controller {
     public function flashsale_show() {
         $flashsale=DB::table('flashsale')->where('status',1)->where('flashsale.start','<=', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>=',Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('start','asc')->first();
         $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('product.status',1)->where('flash_sale_id',$flashsale->id)->paginate(4);
-        //dd($flashsale_products);
+        
         foreach ($flashsale_products as $key => $value) {
                  foreach ($flashsale_products   as  $product_sale) {
                      if($product_sale->product_id==$value->id){
@@ -122,9 +121,15 @@ class FrontendController extends Controller {
                          }
                          $flashsale_products[$key]->sale_price=$sale_price;
                      }
-                     //dd($value);
+                     
             }
             }
         return view('frontend/flashsale/show',compact('flashsale','flashsale_products'));
+    }
+    public function customer_support_show($id){
+        $customer_sp=DB::table('customer_support')->where('id',$id)->first();
+        
+        //dd($customer_supports);
+        return view('frontend/customer_support/show',compact('customer_sp'));
     }
 }

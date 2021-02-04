@@ -10,6 +10,8 @@ Route::group(['middleware' => 'frontend'], function() {
     Route::get('/flash-sale', ['as' => 'event.sale', 'uses' => 'Frontend\FrontendController@event']);
 
     Route::get('/flash-sale/show', ['as' => 'flashsale.show', 'uses' => 'Frontend\FrontendController@flashsale_show']);
+    Route::get('/customer-support/show/{id}', ['as' => 'customer_support.show', 'uses' => 'Frontend\FrontendController@customer_support_show']);
+
 
     Route::get('/about', ['as' => 'home.about', 'uses' => 'Frontend\AboutController@index']);
     Route::get('/checkout-order', ['as' => 'checkout_order.index', 'uses' => 'Frontend\CheckoutOrderController@index']);

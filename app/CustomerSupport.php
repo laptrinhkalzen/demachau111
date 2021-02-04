@@ -11,7 +11,7 @@ class CustomerSupport extends Model
 {
 	
     protected $table = 'customer_support';
-    protected $fillable = ['name','link','order'];
+    protected $fillable = ['name','link','order','content'];
     protected $primaryKey ='id';
     public function created_at() {
         return date("d/m/Y", strtotime($this->created_at));

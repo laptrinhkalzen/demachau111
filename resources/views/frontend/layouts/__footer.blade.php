@@ -112,7 +112,7 @@ background:#f7941d;
                         <div class="contact">
                             @foreach($company_infor as $infor)
                             <ul>
-                                <a href="{{$infor->link}}"><li>{{$infor->name}}</li></a>
+                                <a href="#"><li>{{$infor->name}}</li></a>
                             </ul>
                             @endforeach
                         </div>
@@ -127,8 +127,8 @@ background:#f7941d;
                         <!-- Single Widget -->
                         <div class="contact">
                             @foreach($customer_support as $support)
-                            <ul>
-                                <a href="{{$support->link}}"><li>{{$support->name}}</li></a>
+                            <ul>    
+                                <a href="{{url('customer-support/show/'.$support->id)}}"><li>{{$support->name}}</li></a>        
                             </ul>
                             @endforeach
                         </div>
