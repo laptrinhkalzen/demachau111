@@ -75,7 +75,7 @@
 				<div class="col-lg-7 col-12" >
 					<div class="row">
 					<div class="col-md-12 col-lg-12" style="background-color:white;">	
-					<p class="mt-4" style="font-size:18px;"><b>Hình thức thanh toán</b></p>
+					<p class="mt-4" style="font-size:18px;"><span>1</span><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
 							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked="" id="btn-tienmat" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>

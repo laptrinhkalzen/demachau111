@@ -230,21 +230,26 @@ input[type="number"] {
                                         <div class="col-md-12">
                                             <div class="container">
 <div class="carousel-container position-relative row">
-  
-<!-- Sorry! Lightbox doesn't work - yet. -->
-  
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     @foreach($images as $key => $image)
     @if($key==0)
     <div class="carousel-item active" data-slide-number="{{$key}}">
-      <img style="object-fit: cover; height: 230px; width: 387px !important; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+      <a data-toggle="modal" data-target="#exampleModal{{$key}}"><img  style="object-fit: cover; height: 230px; width: 387px !important;cursor: pointer; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery" ></a>
     </div>
     @else
     <div class="carousel-item" data-slide-number="{{$key}}">
-      <img  style="object-fit: cover; height: 230px; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+      <a data-toggle="modal" data-target="#exampleModal{{$key}}"><img  style="object-fit: cover; height: 230px;cursor: pointer; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}" data-type="image" data-toggle="lightbox" data-gallery="example-gallery"></a>
     </div>
     @endif
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal{{$key}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog" >
+    <img  style="object-fit: cover; height: 768px; width: auto !important;margin: auto; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery" >
+  </div>
+</div>
     @endforeach
   </div>
 </div>
@@ -368,7 +373,7 @@ input[type="number"] {
                                             $dem=0;
                                             @endphp
                                             <div class="col-lg-12 col-md-12 ">
-                                               <select class="form-control check-option" id="exampleFormControlSelect1">
+                                               <select class="form-control check-option" id="exampleFormControlSelect1" style="cursor: pointer;">
                                                @foreach($attributes as $attribute)
                                                   @if($attribute->parent_id==$inputt['id'])
                                                @php
