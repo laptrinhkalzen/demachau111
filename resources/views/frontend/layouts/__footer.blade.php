@@ -452,9 +452,19 @@ $('.each_cart_' + id_option).fadeOut();
                         data: {id_option: id_option},
                         success: function (resp) {
                             if (resp.success == true) {
+                                if(resp.count >0){
                                    //$(".shopping-item").load(" .shopping-item > *");
                                    $('.each_cart_' + id_option).fadeOut();
-                                   $('#sub_total').html(resp.total);
+                                   $('#sub_total').html(formatNumber(resp.total)+' đ');
+                                   $('.total-amount').html(formatNumber(resp.total)+' đ');
+                                   $('.count-sp').html(resp.count + ' Sản phẩm');
+                                   $('.total-count').html(resp.count);
+                               }
+                            else{   
+                                   location.reload();
+                                   // $('.shopping-item').html('Không có sản phẩm nào trong giỏ hàng');
+                                   // $('.total-count').html(resp.count);
+                            }   
                                    
                             }
                         }

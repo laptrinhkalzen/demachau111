@@ -67,6 +67,7 @@
 	background: white;
 }
 </style>
+@if(Session('cart'))
 <section class="shop checkout section" style="background-color: #f3f5f7;">
 	<form class="form" method="post" action="{{route('home.checkout_payment')}}">
 		@csrf
@@ -191,7 +192,7 @@
 								@php
 								$dem=0;
 								@endphp
-								@if(Session('cart'))
+								
 								@foreach(Session('cart') as $key1 => $val)
 								@php
 								$dem++;
@@ -238,18 +239,16 @@
 												</div>
 												
 											</div>
-											<!-- <div class="form-row">
+											<div class="form-row">
 												<div class="col-md-6 col-lg-6 col-6">
 													<input type="button" data-id_option="{{$key1}}" class="delete_cart" name="" value="Xoá">
 												</div>
-											</div> -->
+											</div>
 										</div>
 									</div>
 								</div>
 								@endforeach
-								@else
-								<p style="text-align: center;">Không có sản phẩm trong giỏ hàng</p>
-								@endif
+							
 								
 							</div>
 						</div>
@@ -299,6 +298,23 @@
 		</div>
 	</form>
 </section>
+@else
+<section class="product-area shop-sidebar shop section">
+	
+
+
+		<div class="row" style="height: auto;">
+			
+			<div class="container" style="margin-top: auto; margin-bottom: auto;">
+				<div class="row">
+				<img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/62d2399b89039bd1dc90ca2d50d3e802.png" style="margin:auto;width: 300px;object-fit: cover;">
+				</div>
+			    <h3 class="mb-5" style="text-align: center;">Không có sản phẩm nào trong giỏ hàng.</h3>
+			</div>
+		</div>
+
+</section>
+@endif
 <!--/ End Checkout -->
 
 <!-- Start Shop Services Area  -->
@@ -353,7 +369,7 @@
 	 function formatNumber (num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
     }
-			$('.each_quantity').on('change',function(){
+	$('.each_quantity').on('change',function(){
 	var coupon_code=$('#coupon').val();
 	var id_option=$(this).data('id_option');
 	var quantity=$(this).val();
@@ -363,10 +379,12 @@
 	data: {id_option: id_option,quantity:quantity},
 	success: function (resp) {
 	if (resp.success == true) {
-	$(".shopping-item").load(" .shopping-item > *");
-	$('#sub_total').html(formatNumber(resp.total)+" đ");
-	$("#final_total").html(formatNumber(resp.total)+" đ");
-	$('#cart-count').html(formatNumber(resp.count));
+	    //$(".shopping-item").load(" .shopping-item > *");
+		$('#sub_total').html(formatNumber(resp.total)+" đ");
+		$("#final_total").html(formatNumber(resp.total)+" đ");
+		$('.total-amount').html(formatNumber(resp.total)+' đ');
+	    $('.count-sp').html(resp.count + ' Sản phẩm');
+	    $('.total-count').html(resp.count);
 	}
 	}
 	});
@@ -393,27 +411,27 @@
 	
 	});
 			//check-coupon
-		$('#apply_coupon').click(function(){
-	var coupon_code=$('#coupon').val();
-	$.ajax({
-	url:'{{route("api.apply_coupon")}}',
-	data:{coupon_code:coupon_code,_token:$('#token').val()},
-	method: 'POST',
-	success:function(res){
-	if(res.statusCode==200){
-	var discount= parseFloat($("#sub_total").text())-res.value;
-	$("#final_total").html(formatNumber(discount)+"đ");
-	$('#coupon-success').show();
-	$('#coupon-fail').hide();
-	}
-	else{
-	$('#coupon-success').hide();
-	$('#coupon-fail').show();
-	}
-	}
-	});
-	});
-	});
+	$('#apply_coupon').click(function(){
+		var coupon_code=$('#coupon').val();
+		$.ajax({
+		url:'{{route("api.apply_coupon")}}',
+		data:{coupon_code:coupon_code,_token:$('#token').val()},
+		method: 'POST',
+		success:function(res){
+		if(res.statusCode==200){
+		var discount= parseFloat($("#sub_total").text())-res.value;
+		$("#final_total").html(formatNumber(discount)+"đ");
+		$('#coupon-success').show();
+		$('#coupon-fail').hide();
+		}
+		else{
+		$('#coupon-success').hide();
+		$('#coupon-fail').show();
+		}
+		}
+		});
+		});
+		});
 	</script>
 	
 	@stop
