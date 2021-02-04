@@ -76,7 +76,7 @@
 				<div class="col-lg-7 col-12" >
 					<div class="row">
 					<div class="col-md-12 col-lg-12" style="background-color:white;">	
-					<p class="mt-4" style="font-size:18px;"><span>1</span><b>Hình thức thanh toán</b></p>
+					<p class="mt-4 mb-3" style="font-size:18px;"><span class="mr-2" style="border: solid 1px #283988; border-radius: 50%;padding: 0 10px;background-color: #283988;color: white;font-size: 32px;">1</span><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
 							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked="" id="btn-tienmat" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>
@@ -104,7 +104,7 @@
 					</div>
 					<div class="col-lg-12 col-12 mt-4" style="background-color:white;">
 					<div class="checkout-form">
-						<h5>Thông tin thanh toán</h5>
+						<p class="mt-4 mb-3" style="font-size:18px;"><span class="mr-2" style="border: solid 1px #283988; border-radius: 50%;padding: 0 10px;background-color: #283988;color: white;font-size: 32px;">2</span><b>Thông tin thanh toán</b></p>
 						<!-- Form -->
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-12">
@@ -187,7 +187,7 @@
 					<div class="order-details" style="margin-top: 0px;padding-left: 15px;">
 						<!-- Order Widget -->
 						<div class="single-widget">
-							<p class="mt-4" style="font-size:18px;"><b>Đơn hàng của bạn</b></p>
+							<p class="mt-4 mb-3" style="font-size:18px;"><span class="mr-2" style="border: solid 1px #283988; border-radius: 50%;padding: 0 10px;background-color: #283988;color: white;font-size: 32px;">3</span><b>Đơn hàng của bạn</b></p>
 							<div class="content">
 								@php
 								$dem=0;
@@ -257,7 +257,7 @@
 
 						<div class="single-widget payement">
 							<input placeholder="Điền mã giảm giá" type="text" id="coupon" name="coupon">
-							<input type="button" id="apply_coupon"  value="Áp dụng" class="btn  mb-4">
+							<input type="button" id="apply_coupon"  value="Áp dụng" class="btn  mb-4 btn-apdung">
 							<div id="coupon-success" style="display: none; color:#3a559f;">Áp dụng mã giảm giá thành công</div>
 							<div id="coupon-fail" style="display: none; color: red;">Áp dụng mã giảm giá không đúng hoặc không tồn tại!</div>
 						</div>

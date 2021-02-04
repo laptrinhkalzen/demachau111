@@ -5376,6 +5376,9 @@ label.radio input:checked+span {
 .btn-dathang:hover{
 	background-color:#283988 !important; 
 }
+.btn-apdung:hover{
+	background-color:#ea1621 !important; 
+}
 /*=============================
 	End Footer CSS
 ===============================*/
