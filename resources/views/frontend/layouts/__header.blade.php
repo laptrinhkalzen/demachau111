@@ -503,7 +503,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                                     
                                                     @foreach ($menu_arr as $key=>$menu)
                                                     @if($key == 0)
-                                                    <li class="nav-item" style="background-color: #ea1621;height: 44px;">
+                                                    <li class="nav-item" style="height: 44px;">
                                                         <a class="nav-link" href="{{route('home.index')}}">{{$menu->title}}</a>
                                                     </li>
                                                     @else

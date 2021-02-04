@@ -8,7 +8,7 @@
 	<form class="form" method="post" action="{{route('home.checkout_payment')}}">
 		@csrf
 		<div class="container">
-			<div class="row">
+			<div class="row mt-5">
 				<div class="col-lg-7 col-12" >
 					<div class="row">
 					<div class="col-md-12 col-lg-12" style="background-color:white;">	
@@ -100,7 +100,7 @@
 							<div class="single-widget">
 							<div class="content">
 								<div class="button">
-									<button type="submit" class="btn" style="width: 100%;">Đặt hàng</button>
+									<button type="submit" class="btn btn-dathang" style="width: 100%;background-color: #ea1621;">Đặt hàng</button>
 								</div>
 							</div>
 						</div>
@@ -182,14 +182,20 @@
 								</div>
 								@endforeach
 								@else
-								<h3>Không có sản phẩm trong giỏ hàng</h3>
+								<p style="text-align: center;">Không có sản phẩm trong giỏ hàng</p>
 								@endif
 								
 							</div>
 						</div>
 						<!--/ End Order Widget -->
 						<!-- Order Widget -->
-						
+
+						<div class="single-widget payement">
+							<input placeholder="Điền mã giảm giá" type="text" id="coupon" name="coupon">
+							<input type="button" id="apply_coupon"  value="Áp dụng" class="btn  mb-4">
+							<div id="coupon-success" style="display: none; color:#3a559f;">Áp dụng mã giảm giá thành công</div>
+							<div id="coupon-fail" style="display: none; color: red;">Áp dụng mã giảm giá không đúng hoặc không tồn tại!</div>
+						</div>
 						
 						<div class="content col-md-12 col-lg-12 col-12">
 							<table class="table">
@@ -215,12 +221,6 @@
 						</div>
 						
 					
-						<div class="single-widget payement">
-							<input placeholder="Điền mã giảm giá" type="text" id="coupon" name="coupon">
-							<input type="button" id="apply_coupon"  value="Áp dụng" class="btn btn-success mb-4">
-							<div id="coupon-success" style="display: none; color:#3a559f;">Áp dụng mã giảm giá thành công</div>
-							<div id="coupon-fail" style="display: none; color: red;">Áp dụng mã giảm giá không đúng hoặc không tồn tại!</div>
-						</div>
 						<!--/ End Payment Method Widget -->
 						<!-- Button Widget -->
 
