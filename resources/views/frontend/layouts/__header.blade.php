@@ -299,7 +299,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         </div>
         </div>
         <!-- End Topbar -->
-        <div class="middle-inner" style="opacity: 0.5;">
+        <div class="middle-inner" >
             <div class="container">
                 <div class="row" >
                     <div class="col-lg-2 col-md-2 col-12">
