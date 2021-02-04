@@ -214,9 +214,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     </form>
                 </div>
                 <div class="menu-1 col-12" id="danhmuc" style="background-color: white;color: black;height: 100%;width: 0px !important;position: fixed;z-index: 999;top:0;left: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
-                    <i class="fa fa-times fa-3x" onclick="close_danhmuc()" style="float:right;margin-right: 15px;" id="close-danhmuc"></i>
-                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;font-weight: bold;">Danh mục</p>
-                    <hr style="background-color: #283988;">
+                    <i class="fa fa-times fa-3x" onclick="close_danhmuc()" style="float:right;margin-right: 15px;color: white;" id="close-danhmuc"></i>
+                    <p style="font-size: 20px;text-align: center;color: white;font-weight: bold;padding: 14px 0;background-color: #283988;">Danh mục</p>
+                    <hr style="background-color: #283988;margin-top: 0px;">
                     <p class="ml-2" style="font-size: 14px;color: black;"><a href="{{route('home.index')}}" style="font-weight: bold;">Trang chủ</a></p>
                     <hr style="background-color: #283988;">
                     @foreach($menu_cats as $key => $cat)
@@ -253,10 +253,10 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                    @endforeach 
                 </div>
                 <div class="menu-2 col-12" id="giohang" style="background-color: white;color: black;width: 0px !important;position: fixed;z-index: 999;top:0;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
-                    <i class="fa fa-times fa-3x" onclick="close_giohang()" style="float:right;" id="close-giohang"></i>
-                    <p class="mt-2 mb-5" style="font-size: 20px;text-align: center;color: black;font-weight: bold;">GIỎ HÀNG</p>
+                    <i class="fa fa-times fa-3x" onclick="close_giohang()" style="float:right;margin-right: 5px;color: white;" id="close-giohang"></i>
+                    <p  style="font-size: 20px;text-align: center;color: white;font-weight: bold;padding: 14px 0;background-color: #283988;">GIỎ HÀNG</p>
                                 <!-- Shopping Item -->
-                                <div class="shopping-item">
+                                <div class="container shopping-item">
                                      @if(Session('cart'))
                                     <div class="dropdown-cart-header">
                                         <span id="count-sp">{{$count_cart}} Sản phẩm</span>
@@ -611,7 +611,6 @@ function close_danhmuc() {
 
 function open_giohang() {
   document.getElementById("giohang").style.width = "250px";
-    document.getElementById("giohang").style.padding = "0 10px";
   document.getElementById("danhmuc").style.width= "0px";
 }
 
