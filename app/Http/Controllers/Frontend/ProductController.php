@@ -249,7 +249,7 @@ class ProductController extends Controller {
             }
 
             
-            // session_start();
+            session_start();
             $check=0;
             //check session[product] đã tồn tại chưa
             if(Session('old_pro')){
