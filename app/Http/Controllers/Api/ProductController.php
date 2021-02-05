@@ -113,6 +113,7 @@ class ProductController extends Controller {
                 $total += ($val['price'] * $val['quantity']);
             }
             $each_count=$cart[$key]['quantity'];
+            //$each_count
             return response()->json([
                         'success' => true, 'count' => $count, 'total' => $total, 'each_count'=>$each_count
             ]);
