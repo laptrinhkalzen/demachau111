@@ -128,7 +128,7 @@
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Số điện thoại<span>*</span></label>
-									<input type="number" name="mobile" placeholder="" required="required" style="  cursor: pointer;">
+									<input type="text" name="mobile" placeholder="" required="required" style="  cursor: pointer;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">

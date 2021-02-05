@@ -457,7 +457,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         <div style="padding-top: 35px;" class="right-bar">
                             <!-- Search Form -->
 
-                            <div class="sinlge-bar shopping">
+                            <div class="sinlge-bar shopping cart">
                                 <a href="#" class="single-icon" onclick="open_giohangpc()"><i class="ti-bag" ></i><span class="total-count" id="cart-count" >{{$count_cart}}</span></a>
                             </div>
                            
