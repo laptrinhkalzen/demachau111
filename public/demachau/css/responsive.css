@@ -1138,7 +1138,7 @@ display: none !important;
 }
 
 .menu-1{
-	width:60%;
+/*	width:60%;
 	height: 100%;
 	background-color: white;
 	position:fixed;
@@ -1146,11 +1146,11 @@ display: none !important;
 	bottom:0px;
 	left:0px;
 	z-index: 1000;
-	overflow-y: auto;
+	overflow-y: auto;*/
 }
 
 .menu-2{
-	width:60%;
+/*	width:60%;
 	height: 100%;
 	background-color: white;
 	position:fixed;
@@ -1158,7 +1158,7 @@ display: none !important;
 	bottom:0px;
 	right:0px;
 	z-index: 1000;
-	overflow-y: auto;
+	overflow-y: auto;*/
 }
 .dmc{
 	border:none !important;

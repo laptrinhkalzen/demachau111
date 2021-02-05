@@ -216,9 +216,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="menu-1 col-12" id="danhmuc" style="background-color: white;color: black;height: 100%;width: 0px !important;position: fixed;z-index: 999;top:0;left: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
                     <i class="fa fa-times fa-3x" onclick="close_danhmuc()" style="float:right;margin-right: 15px;color: white;" id="close-danhmuc"></i>
                     <p style="font-size: 20px;text-align: center;color: white;font-weight: bold;padding: 14px 0;background-color: #283988;">Danh mục</p>
-                    <hr style="background-color: #283988;margin-top: 0px;">
+                    <hr style="margin-top: 0px;">
                     <p class="ml-2" style="font-size: 14px;color: black;"><a href="{{route('home.index')}}" style="font-weight: bold;">Trang chủ</a></p>
-                    <hr style="background-color: #283988;">
+                    <hr >
                     @foreach($menu_cats as $key => $cat)
                     
                         @php
@@ -231,7 +231,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         @endforeach 
                         @if($dem>0)
                             <p class="mt-2 ml-2" style="font-size: 14px;color: black;font-weight: bold;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a><img class="arrow1" id="arrow1_{!!$key!!}" data-key="{{$key}}" src="{{asset('public/icon/arrow-right.svg')}}" style="width: 15px;float:right;margin-right: 10px;"></p><img class="arrow2" id="arrow2_{!!$key!!}" data-key="{{$key}}" src="{{asset('public/icon/arrow-down.svg')}}" style="width: 15px;float:right;display: none;margin-top: -20px;margin-right: 10px;"></p>
-                            <hr style="background-color: #283988;">
+                            <hr style="">
                             <div class="menu_con_{!!$key!!}" style="display: none;">
                                 @if(!is_null($cat->children))
                                 
@@ -246,20 +246,20 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 
                         @else
                             <p class="mt-2 ml-2" style="font-size: 14px;color: black;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
-                            <hr style="background-color: #283988;">
+                            <hr style="">
                         @endif
                         
                     
                    @endforeach 
                 </div>
-                <div class="menu-2 col-12" id="giohang" style="background-color: white;color: black;width: 0px !important;position: fixed;z-index: 999;top:0;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+                <div class="menu-2 col-12" id="giohang" style="background-color: white;color: black;width: 0px !important;height:100%;position: fixed;z-index: 999;top:0;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
                     <i class="fa fa-times fa-3x" onclick="close_giohang()" style="float:right;margin-right: 5px;color: white;" id="close-giohang"></i>
                     <p  style="font-size: 20px;text-align: center;color: white;font-weight: bold;padding: 14px 0;background-color: #283988;">GIỎ HÀNG</p>
                                
                                 <div class="container shopping-item cart">
                                      @if(Session('cart'))
                                     <div class="dropdown-cart-header">
-                                        <span class="count-sp" id="count-sp">{{$count_cart}} Sản phẩm</span>
+                                        <span class="count-sp" id="count-sp">{{$count_cart}} Sản phẩm/</span>
                                         <a href="{{route('checkout_order.index')}}">Xem giỏ hàng</a>
                                     </div>
                                     <ul class="shopping-list" id="cart_items">
@@ -298,6 +298,65 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         </div>
         </div>
         <!-- End Topbar -->
+        <!-- Sidebar -->
+        <div id="giohangpc" style="width: 0px !important;height: 100%;background-color: white;position: fixed;z-index: 99999;top:0px;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+            
+            <div class="row" style="margin-top: 5px;">
+                <div class="container">
+                <img class="ml-2" src="{{asset('public/icon/cart-svg.svg')}}" style="color: #283988;width: 40px;" >
+                <span style="font-size: 20px;margin-left: 5px;color: #283988;">Giỏ hàng</span>
+                <i class="fa fa-times fa-3x" onclick="close_giohangpc()" style="float:right;margin-top:5px;margin-right: 10px;color: #283988;cursor: pointer;" id="close-danhmuc"></i>
+                                </div>
+                <div class="container shopping-item">
+                     <div class="container">
+                     @if(Session('cart'))
+
+                    <ul class="shopping-list" id="cart_items">
+                            <?php $i=0 ?>
+                            @foreach(Session('cart') as $key1=> $val)
+                            <?php $i++;?>
+                            <li class="each_cart_{{$key1}}">
+                            <h4 class="mb-2"><a href="{{route('product.detail',['alias'=>$val['alias']])}}" style="font-size: 16px;color: #283988;">{!!$i!!}.{{$val['title']}}</a></h4>
+                            <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}" style="float: left;"><img src="{{$val['image']}}" alt="#" style="width: 100px;height: 100px;object-fit: cover;"></a>
+                            <div class="form-row">
+                            <p class="quantity ml-2" style="padding: 0px;"><!-- {{$val['quantity']}}x -  -->Giá:<span style="color: #ea1621;" class="amount ml-2">{{number_format($val['price'])}} đ</span></p>
+                            </div>
+                            <div class="form-row">
+                                <span class="ml-2">Số lượng:</span>
+                                <input class="each_quantity ml-2" data-id_option="{{$key1}}"  value="{{$val['quantity']}}" type="number"   min="1" style="cursor: pointer;width: 50px;background-color: #F6F7FB;">
+                                
+                            </div>
+                            <div class="form-row">
+                                <div class="col-lg-6 offset-lg-6" style="text-align: right;">
+                                    <input type="button" data-id_option="{{$key1}}" class="delete_cart del-checkout" name="" value="Xoá" style="background-color: black;color: white !important;width: 50px;height:100%;border-radius: 5px;font-size: 14px; ">
+                                </div>
+                            </div>
+                          </li>
+                            @endforeach
+                      
+                        
+                        
+                    </ul>
+
+                    <div class="bottom">
+                        <div class="total">
+                            <span style="text-transform: none;">Tổng tiền</span>
+                            <span class="total-amount" id="total1" style="color: #ea1621;">{{number_format($count_total)}} đ</span>
+                        </div>
+                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;text-transform: none;">Thanh toán</a>
+                    </div>
+                          @else
+                        <div class="dropdown-cart-header" style="text-align: center;">
+                        <span id="count-sp" style="font-size: 20px;">Chưa có sản phẩm trong giỏ hàng</span>
+                      
+                    </div>
+                    @endif   
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- EndSidebar -->
         <div class="middle-inner" >
             <div class="container">
                 <div class="row" >
@@ -398,46 +457,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     <div class="col-lg-2 col-md-3 col-12">
                         <div style="padding-top: 35px;" class="right-bar">
                             <!-- Search Form -->
-                            <div class="sinlge-bar shopping cart">
-                                <a href="#" class="single-icon"><i class="ti-bag"></i><span class="total-count" id="cart-count">{{$count_cart}}</span></a>
-                                <!-- Shopping Item -->
-                                <div class="shopping-item">
-                                     @if(Session('cart'))
-                                    <div class="dropdown-cart-header">
-                                        <span class="count-sp" id="count-sp">{{$count_cart}} Sản phẩm</span>
-                                        <a href="{{route('checkout_order.index')}}">Xem giỏ hàng</a>
-                                    </div>
-                                    <ul class="shopping-list" id="cart_items">
-                                         
-                                            @foreach(Session('cart') as $key1=> $val)
-                                            <li class="each_cart_{{$key1}}">
-                                            <a href="#" class="delete_cart" data-id_option="{{$key1}}" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
-                                            <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}"><img src="{{$val['image']}}" alt="#"></a>
-                                            <h4><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h4>
-                                            <p class="quantity"><span class="amount_x_{{$key1}}">{{$val['quantity']}}</span>x - <span style="color: #ea1621;" class="amount">{{number_format($val['price'])}} đ</span></p>
-                                          </li>
-                                            @endforeach
-                                      
-                                        
-                                        
-                                    </ul>
-                                    <div class="bottom">
-                                        <div class="total">
-                                            <span>Tổng</span>
-                                            <span class="total-amount" id="total1" style="color: #ea1621;">{{number_format($count_total)}} đ</span>
-                                        </div>
-                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #283988;">Xem giỏ hàng</a>
-                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;">Thanh toán</a>
-                                    </div>
-                                          @else
-                                        <div class="dropdown-cart-header">
-                                        <span id="count-sp">Chưa có sản phẩm trong giỏ hàng</span>
-                                      
-                                    </div>
-                                    @endif   
 
-                                </div>
-                                <!--/ End Shopping Item -->
+                            <div class="sinlge-bar shopping">
+                                <a href="#" class="single-icon" onclick="open_giohangpc()"><i class="ti-bag" ></i><span class="total-count" id="cart-count" >{{$count_cart}}</span></a>
                             </div>
                            
                         
@@ -614,9 +636,17 @@ function open_giohang() {
   document.getElementById("danhmuc").style.width= "0px";
 }
 
+function open_giohangpc() {
+  document.getElementById("giohangpc").style.width = "450px";
+}
+
 function close_giohang() {
   document.getElementById("giohang").style.width= "0px";
   document.getElementById("giohang").style.padding = "0";
+}
+
+function close_giohangpc() {
+  document.getElementById("giohangpc").style.width= "0px";
 }
 
 </script>
