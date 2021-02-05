@@ -198,16 +198,17 @@ class ProductController extends Controller {
     }
 
     public function detail(Request $request,$alias) {
-           
+            $coupon=DB::table('coupon')->where('coupon_status',1)->where('coupon_end','>',Carbon::now('Asia/Ho_Chi_Minh'))->inRandomOrder()->first();
             $id=DB::table('product')->where('alias',$alias)->pluck('id')->first();
-
+            $flashsale=DB::table('flashsale')->where('status',1)->where('flashsale.start','<=', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>=',Carbon::now('Asia/Ho_Chi_Minh'))->orderBy('start','asc')->first();
+             $flashsale_product=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('flash_sale_id',$flashsale->id)->where('product_id',$id)->where('product.status',1)->get();
+            $is_flashsale=count($flashsale_product);
             $benefit = DB::table('benefit')->orderBy('order','asc')->get();
             $detail_product =  $this->productRepo->getDetailProduct($alias);
             $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get();
             $other_attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',null)->get()->groupBy('parent_id');
 
             foreach ($other_attributes as $key => $value) {
-                
                 $other_attributes[$key]->title = DB::table('attribute')->where('id',$key)->pluck('title')->first();
             }
             // dd($other_attributes);
@@ -240,12 +241,6 @@ class ProductController extends Controller {
             }
             $products=DB::table('product')->orderBy('id','asc')->where('status',1)->get();
             //dd($products);
-           
-             
-            // $tags = $this->categoryRepo->getCategoryByIdProduct($detail_products->pluck('id'));
-            // $similar_products=  $this->productRepo->getSimilarProduct(6,$id);
-            // $news_arr = $this->newsRepo->getAllNews($limit = 7);
-            // $hl_products=  $this->productRepo->getProductByAliasCategory2(5,'san-pham-ua-chuong');
              $dem=0;
             $images=explode(',',$detail_product->images);
             $image_pro=$images[0];
@@ -270,10 +265,7 @@ class ProductController extends Controller {
              
             //nếu chưa tồn tại add session
             if($check==0){
-            
               $old_pro = [
-                
-
                 "id"=> $detail_product->id,
                 "alias"=> $detail_product->alias,
                 "title"=> $detail_product->title,
@@ -286,26 +278,8 @@ class ProductController extends Controller {
             //nếu session lớn hơn 4 sp thì xoá 1 sp
             $old_product=Session('old_pro');
             $count_old_product = count($old_product);
-            // if($old_product){
-            //   foreach ($old_product as $key1 => $value) {
-            //      if($key1>2){
-            //       unset($old_product[0]);
-            //      }
-            //    }
-            // }
-
-
-            //dd(Session('old_pro'));
-              
-           
-              
             if($detail_product){
-            
-                 //Session::save();
-
-
-
-            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes','dem','images','count_old_product','category','parent_category'));
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes','dem','images','count_old_product','category','parent_category','is_flashsale','coupon'));
 
             }
             else{

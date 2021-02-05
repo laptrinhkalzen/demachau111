@@ -39,9 +39,7 @@ class FrontendController extends Controller {
             $count_flashsale=1;
         }
         
-        
-        
-        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('product.status',1)->get();
+        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('flash_sale_id',$flashsale->id)->where('product.status',1)->get();
 
         
         $news = DB::table('news')->orderBy('ordering','asc')->where('status',1)->get();

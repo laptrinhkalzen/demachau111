@@ -290,6 +290,7 @@ input[type="number"] {
          @if($key>=$count_sl)
         <div id="carousel-selector-{{$key}}" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="{{$key}}">
           <img style="object-fit: cover; height: 40px;" src="{{$image}}" class="img-fluid" alt="...">
+          <!-- <span class="out-of-stock">Flashsale</span> -->
         </div>
         
         
@@ -354,14 +355,18 @@ input[type="number"] {
                                         <p style="font-size: 22px;font-weight: bold;">{{$detail_product->title}}</p>
                                     </div>
                                     <div class="col-lg-12 col-md-12 row" style="margin-bottom:15px;" >
-
                                             <div id="price_origin" style="text-decoration-line:line-through; color: gray;" class="old"></div>&nbsp
                                             <strong id="option_price" style="color:red;font-size: 24px;"></strong>
                                      </div>
+
+                                     @if($coupon)
+                                       <div class="col-lg-12 col-md-12 row" style="" >
+                                            <div class="col-md-12" id="" style=" background-color:#d4f2d5; display: flex;" >Nhập &nbsp<span style="color:red;"><strong style="text-align: center;">{{$coupon->coupon_code}}</strong></span>&nbsp: {{$coupon->coupon_name}}</div>&nbsp
+                                           <!--  <strong id="option_price" style="color:red;font-size: 24px;"></strong> -->
+                                     </div>
+                                     @endif
+
                                         <div class="row">
-                                            
-                                            
-                                  
                                             @if($input)
                                             @foreach($input as $inputt)
                                     
@@ -663,6 +668,7 @@ input[type="number"] {
                                                 @break;
                                                 @endforeach
                                             </a>
+
                                             <div class="button-head">
                                                
                                                 <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">

@@ -118,7 +118,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
     <div>
                                 <a href="#" class="single-icon"><!-- <i class="fa fa-shopping-cart fa-2x" style="color: #283988;padding-top: 15px;"></i> --><img src="{{asset('public/icon/cart-svg.svg')}}" style="color: #283988;width: 30px;margin-top: 15px;" onclick="open_giohang()"><span class="total-count" id="cart-count" style="border: 1px solid #ea1621;background-color: #ea1621;color: white;border-radius: 50%;vertical-align: bottom;">{{$count_cart}}</span></a>
                                 <!-- Shopping Item -->
-                                <div class="shopping-item shopping-hidden">
+                                <div class="shopping-item shopping-hidden cart">
                                      @if(Session('cart'))
                                     <div class="dropdown-cart-header">
                                         <span class="count-sp" id="count-sp">{{$count_cart}} Sản phẩm</span>
@@ -256,7 +256,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     <i class="fa fa-times fa-3x" onclick="close_giohang()" style="float:right;margin-right: 5px;color: white;" id="close-giohang"></i>
                     <p  style="font-size: 20px;text-align: center;color: white;font-weight: bold;padding: 14px 0;background-color: #283988;">GIỎ HÀNG</p>
                                
-                                <div class="container shopping-item">
+                                <div class="container shopping-item cart">
                                      @if(Session('cart'))
                                     <div class="dropdown-cart-header">
                                         <span class="count-sp" id="count-sp">{{$count_cart}} Sản phẩm</span>
@@ -320,7 +320,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                 </form>
                                 
                             </div>
-                             <div class="sinlge-bar shopping">
+                             <div class="sinlge-bar shopping cart">
                                 <a href="#" class="single-icon"><i class="ti-bag"></i><span class="total-count" id="cart-count">{{$count_cart}}</span></a>
                                 <!-- Shopping Item -->
                                 <div class="shopping-item">
@@ -398,7 +398,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     <div class="col-lg-2 col-md-3 col-12">
                         <div style="padding-top: 35px;" class="right-bar">
                             <!-- Search Form -->
-                            <div class="sinlge-bar shopping">
+                            <div class="sinlge-bar shopping cart">
                                 <a href="#" class="single-icon"><i class="ti-bag"></i><span class="total-count" id="cart-count">{{$count_cart}}</span></a>
                                 <!-- Shopping Item -->
                                 <div class="shopping-item">

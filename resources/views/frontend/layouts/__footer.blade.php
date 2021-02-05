@@ -474,5 +474,118 @@ $('.each_cart_' + id_option).fadeOut();
             });
         </script>
 
+        <script>
+    $(document).ready(function(){
+        $('.box').hide();
+    $('input[type="radio"]').click(function(){
+    var inputValue = $(this).attr("value");
+    var targetBox = $("." + inputValue);
+    $(".box").not(targetBox).hide();
+    $(targetBox).show();
+    });
+    });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // $('.order-details').delegate('.each_quantity','change keyup',function (){
+                //  var sum=0;
+                //  if($(this).parents('.form-group').find('.each_quantity').val()<1){
+    //                    alert('Vui lòng nhập số lượng lờn hơn hoặc bằng 1');
+    //                    $(this).parents('.form-group').find('.each_quantity').val('1');
+                //  }else{
+    //                //alert($(this).val());
+    //                $(this).parents('.form-group').find('.each_price').html(
+    //                $(this).parents('.form-group').find('.each_quantity').val()*$(this).parents('.form-group').find('.each_price').data('price')
+    //                  );
+    //                }
+    //                $(".each_price").each(function(){
+    //                    if($(this).text() !== "")
+    //                      sum += parseFloat($(this).text(), 10);
+    //                });
+    //                $("#sub_total").html(sum +'đ');
+    //                var coupon_code=$('#coupon').val();
+    //                $.ajax({
+    //                      url:'{{route("api.apply_coupon")}}',
+    //                      data:{coupon_code:coupon_code,_token:$('#token').val()},
+    //                      method: 'POST',
+    //                      success:function(res){
+    //                        if(res.statusCode==200){
+    //                           var discount= parseFloat($("#sub_total").text())-res.value;
+    //                              $("#final_total").html(discount +"đ");
+    //                          }
+    //                         else{
+    //                             $("#final_total").html(sum +'đ');
+    //                         }
+    //                      }
+    //                });
+    //        });
+     function formatNumber (num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    }
+    $('.each_quantity').on('change',function(){
+    var coupon_code=$('#coupon').val();
+    var id_option=$(this).data('id_option');
+    var quantity=$(this).val();
+    $.ajax({
+    url: '/api/update-cart',
+    method: 'POST',
+    data: {id_option: id_option,quantity:quantity},
+    success: function (resp) {
+    if (resp.success == true) {
+        //$(".shopping-item").load(" .shopping-item > *");
+        $('#sub_total').html(formatNumber(resp.total)+" đ");
+        $("#final_total").html(formatNumber(resp.total)+" đ");
+        $('.total-amount').html(formatNumber(resp.total)+' đ');
+        $('.count-sp').html(resp.count + ' Sản phẩm');
+        $('.total-count').html(resp.count);
+    }
+    }
+    });
+    
+    if(coupon_code){
+    $.ajax({
+    url:'{{route("api.apply_coupon")}}',
+    data:{coupon_code:coupon_code,_token:$('#token').val()},
+    method: 'POST',
+    success:function(res){
+    if(res.statusCode==200){
+    var discount= parseFloat($("#sub_total").text())-res.value;
+    $("#final_total").html(formatNumber(discount)+" đ");
+    $('#coupon-success').show();
+    $('#coupon-fail').hide();
+    }
+    else{
+    $('#coupon-success').hide();
+    $('#coupon-fail').show();
+    }
+    }
+    });
+    }
+    
+    });
+            //check-coupon
+    $('#apply_coupon').click(function(){
+        var coupon_code=$('#coupon').val();
+        $.ajax({
+        url:'{{route("api.apply_coupon")}}',
+        data:{coupon_code:coupon_code,_token:$('#token').val()},
+        method: 'POST',
+        success:function(res){
+        if(res.statusCode==200){
+        var discount= parseFloat($("#sub_total").text())-res.value;
+        $("#final_total").html(formatNumber(discount)+"đ");
+        $('#coupon-success').show();
+        $('#coupon-fail').hide();
+        }
+        else{
+        $('#coupon-success').hide();
+        $('#coupon-fail').show();
+        }
+        }
+        });
+        });
+        });
+    </script>
+
 </body>
 </html>
