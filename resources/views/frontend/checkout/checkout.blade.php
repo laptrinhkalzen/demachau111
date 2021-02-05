@@ -123,7 +123,7 @@
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Số điện thoại<span>*</span></label>
-									<input type="number" name="mobile" placeholder="" required="required" style="  cursor: pointer;">
+									<input type="text" name="mobile" placeholder="" required="required" style="  cursor: pointer;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
@@ -165,9 +165,9 @@
 							</div>
 								<div class="col-lg-12 col-md-12 col-12">
 							<div class="single-widget">
-							<div class="content">
+							<div class="content mb-3">
 								<div class="button">
-									<button type="submit" class="btn btn-dathang" style="width: 100%;background-color: #ea1621;">Đặt hàng</button>
+									<button type="submit" class="btn btn-dathang" style="width: 100%;background-color: #ea1621;border-radius: 5px;">Đặt hàng</button>
 								</div>
 							</div>
 						</div>
@@ -242,7 +242,7 @@
 											
 											<div class="form-row">
 												<div class="col-md-6 col-lg-6 col-6">
-													<input type="button" data-id_option="{{$key1}}" class="delete_cart del-checkout" name="" value="Xoá" style="background-color: black;color: white !important;">
+													<input type="button" data-id_option="{{$key1}}" class="delete_cart del-checkout" name="" value="Xoá" style="background-color: black;color: white !important;width: 60%;border-radius: 5px; ">
 												</div>
 											</div>
 										</div>
