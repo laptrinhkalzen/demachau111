@@ -84,11 +84,36 @@
                         <li class="nav-item"><a href="{{route('admin.news.index')}}" class="nav-link">Bài viết</a></li>
                     </ul>
                 </li>
+                   <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Sản phẩm</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm">
+                        <li class="nav-item"><a href="{{route('admin.category.index', \App\Category::TYPE_PRODUCT)}}" class="nav-link">Danh mục</a></li>
+                        <li class="nav-item"><a href="{{route('admin.product.index')}}" class="nav-link">Sản phẩm</a></li>
+                        <li class="nav-item"><a href="{{route('admin.attribute.index')}}" class="nav-link">Thuộc tính</a></li>
+                        <li class="nav-item"><a href="{{route('admin.benefit.index')}}" class="nav-link">Tiện ích</a></li>
+
+                    </ul>
+                </li>
+                 <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Đơn hàng</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Khách hàng">
+                       
+                        <li class="nav-item"><a href="{{route('admin.order.index')}}" class="nav-link">Đơn hàng</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-newspaper2"></i> <span>Flashsale</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+                        
+                        <li class="nav-item"><a href="{{route('admin.flashsale.index')}}" class="nav-link">Flash sale</a></li>
+                        
+                    </ul>
+                </li>
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-newspaper2"></i> <span>Mã giảm giá</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Layouts">
                         <li class="nav-item"><a href="{{route('admin.coupon.index', \App\Category::TYPE_NEWS)}}" class="nav-link">Mã giảm giá</a></li>
-                        <li class="nav-item"><a href="{{route('admin.flashsale.index')}}" class="nav-link">Flash sale</a></li>
+                     
                         
                     </ul>
                 </li>
@@ -116,23 +141,7 @@
                         <li class="nav-item"><a href="{{route('admin.gallery.index')}}" class="nav-link">Hình ảnh</a></li>
                     </ul>
                 </li> -->
-                <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Sản phẩm</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm">
-                        <li class="nav-item"><a href="{{route('admin.category.index', \App\Category::TYPE_PRODUCT)}}" class="nav-link">Danh mục</a></li>
-                        <li class="nav-item"><a href="{{route('admin.product.index')}}" class="nav-link">Sản phẩm</a></li>
-                        <li class="nav-item"><a href="{{route('admin.attribute.index')}}" class="nav-link">Thuộc tính</a></li>
-                        <li class="nav-item"><a href="{{route('admin.benefit.index')}}" class="nav-link">Tiện ích</a></li>
-
-                    </ul>
-                </li>
-                 <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Đơn hàng</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Khách hàng">
-                       
-                        <li class="nav-item"><a href="{{route('admin.order.index')}}" class="nav-link">Đơn hàng</a></li>
-                    </ul>
-                </li>
+             
                 <!--                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Mã giảm giá</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Sản phẩm">

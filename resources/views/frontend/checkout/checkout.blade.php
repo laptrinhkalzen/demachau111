@@ -84,7 +84,7 @@
 					<p class="mt-4 mb-3" style="font-size:18px;"><span class="mr-2" style="border: solid 1px #283988; border-radius: 50%;padding: 0 10px;background-color: #283988;color: white;font-size: 32px;">1</span><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
-							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked="" id="btn-tienmat" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>
+							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked=""  id="btn-tienmat" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>
 							  <span class="checkmark"></span>
 							<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
 							</label>
@@ -92,7 +92,7 @@
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
 							<input class="mr-2" type="radio" name="payment_method" value="1" id="btn-chuyenkhoan" style="width: auto;vertical-align: middle; "><b>Chuyển khoản qua ngân hàng</b>
 							  <span class="checkmark"></span>
-							<div class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
+							<div style="display: none;" class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
 								<br>Số tài khoản: 0123456789
 								<br>Chủ tài khoản: DANG DINH MINH
 								<br>Chi nhánh …
@@ -102,7 +102,7 @@
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
 							<input class="mr-2" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Ngân hàng</b>
 							  <span class="checkmark"></span>
-							<div class="2 box" >Thanh toán qua VNPAY.</div>
+							<div style="display: none;" class="2 box" >Thanh toán qua VNPAY.</div>
 							
 							</label>
 						</div>
@@ -128,7 +128,7 @@
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Số điện thoại<span>*</span></label>
-									<input type="text" name="mobile" placeholder="" required="required" style="  cursor: pointer;">
+									<input type="number" name="mobile" placeholder="" required="required" style="  cursor: pointer;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
@@ -170,9 +170,9 @@
 							</div>
 								<div class="col-lg-12 col-md-12 col-12">
 							<div class="single-widget">
-							<div class="content mb-3">
+							<div class="content">
 								<div class="button">
-									<button type="submit" class="btn btn-dathang" style="width: 100%;background-color: #ea1621;border-radius: 5px;">Đặt hàng</button>
+									<button type="submit" class="btn btn-dathang" style="width: 100%;background-color: #ea1621;">Đặt hàng</button>
 								</div>
 							</div>
 						</div>
@@ -240,14 +240,13 @@
 													<span>Số lượng:</span>
 												</div>
 												<div class="col-md-4 col-lg-4 col-4">
-													<input class="each_quantity" data-id_option="{{$key1}}"  value="{{$val['quantity']}}" type="number"   min="1" style="cursor: pointer;">
+													<input class="each_quantity" data-key={{$key1}} data-id_option="{{$key1}}"  value="{{$val['quantity']}}" type="number"   min="1" style="cursor: pointer;">
 												</div>
 												
 											</div>
-											
 											<div class="form-row">
 												<div class="col-md-6 col-lg-6 col-6">
-													<input type="button" data-id_option="{{$key1}}" class="delete_cart del-checkout" name="" value="Xoá" style="background-color: black;color: white !important;width: 60%;border-radius: 5px; ">
+													<input type="button" data-id_option="{{$key1}}" class="delete_cart" name="" value="Xoá">
 												</div>
 											</div>
 										</div>
@@ -269,25 +268,19 @@
 						</div>
 						
 						<div class="content col-md-12 col-lg-12 col-12">
-							<table class="table">
-								<thead>
+							<table class="table" style="font-size: 120%">
+									<thead>
 									<tr>
-										<th style="text-align: center;" scope="col">Sản phẩm</th>
-										<th style="text-align: center;" scope="col">Tạm tính</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td style="text-align: center;">Tạm tính</td>
-										<td id="sub_total" style="text-align: center; color:red;">{{number_format($total)}} đ</td>
+										<td style="text-align: center;" scope="col">Giá tạm tính</td>
+										<td id="sub_total" style="text-align: center; color:red;" scope="col">{{number_format($total)}} đ</td>
 										
 									</tr>
 									<tr>
-										<td style="text-align: center;">Tổng</td>
+										<td style="text-align: center;">Thành  tiền</td>
 										<td name="final_total" id="final_total" style="text-align: center; color:red;">{{number_format($total)}} đ</td>
 										
 									</tr>
-								</tbody>
+								</thead>
 							</table>
 						</div>
 						
@@ -327,117 +320,23 @@
 
 <div>
 	
-	<script>
-	$(document).ready(function(){
-		$('.box').hide();
-	$('input[type="radio"]').click(function(){
-	var inputValue = $(this).attr("value");
-	var targetBox = $("." + inputValue);
-	$(".box").not(targetBox).hide();
-	$(targetBox).show();
-	});
-	});
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			// $('.order-details').delegate('.each_quantity','change keyup',function (){
-				// 	var sum=0;
-				// 	if($(this).parents('.form-group').find('.each_quantity').val()<1){
-	//                    alert('Vui lòng nhập số lượng lờn hơn hoặc bằng 1');
-	//                    $(this).parents('.form-group').find('.each_quantity').val('1');
-				// 	}else{
-	//                //alert($(this).val());
-	//                $(this).parents('.form-group').find('.each_price').html(
-	//                $(this).parents('.form-group').find('.each_quantity').val()*$(this).parents('.form-group').find('.each_price').data('price')
-	//                	);
-	//                }
-	//                $(".each_price").each(function(){
-	//                    if($(this).text() !== "")
-	//                      sum += parseFloat($(this).text(), 10);
-	//                });
-	//                $("#sub_total").html(sum +'đ');
-	//            	  var coupon_code=$('#coupon').val();
-	//                $.ajax({
-	//                      url:'{{route("api.apply_coupon")}}',
-	//                      data:{coupon_code:coupon_code,_token:$('#token').val()},
-	//                      method: 'POST',
-	//                      success:function(res){
-	//                        if(res.statusCode==200){
-	//                           var discount= parseFloat($("#sub_total").text())-res.value;
-	//                              $("#final_total").html(discount +"đ");
-	//                          }
-	//                         else{
-	//                             $("#final_total").html(sum +'đ');
-	//                         }
-	//                      }
-	//                });
-	//        });
-	 function formatNumber (num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
-    }
-	$('.each_quantity').on('change',function(){
-	var coupon_code=$('#coupon').val();
-	var id_option=$(this).data('id_option');
-	var quantity=$(this).val();
-	$.ajax({
-	url: '/api/update-cart',
-	method: 'POST',
-	data: {id_option: id_option,quantity:quantity},
-	success: function (resp) {
-	if (resp.success == true) {
-	    //$(".shopping-item").load(" .shopping-item > *");
-		$('#sub_total').html(formatNumber(resp.total)+" đ");
-		$("#final_total").html(formatNumber(resp.total)+" đ");
-		$('.total-amount').html(formatNumber(resp.total)+' đ');
-	    $('.count-sp').html(resp.count + ' Sản phẩm');
-	    $('.total-count').html(resp.count);
-	}
-	}
-	});
-	
-	if(coupon_code){
-	$.ajax({
-	url:'{{route("api.apply_coupon")}}',
-	data:{coupon_code:coupon_code,_token:$('#token').val()},
-	method: 'POST',
-	success:function(res){
-	if(res.statusCode==200){
-	var discount= parseFloat($("#sub_total").text())-res.value;
-	$("#final_total").html(formatNumber(discount)+" đ");
-	$('#coupon-success').show();
-	$('#coupon-fail').hide();
-	}
-	else{
-	$('#coupon-success').hide();
-	$('#coupon-fail').show();
-	}
-	}
-	});
-	}
-	
-	});
-			//check-coupon
-	$('#apply_coupon').click(function(){
-		var coupon_code=$('#coupon').val();
-		$.ajax({
-		url:'{{route("api.apply_coupon")}}',
-		data:{coupon_code:coupon_code,_token:$('#token').val()},
-		method: 'POST',
-		success:function(res){
-		if(res.statusCode==200){
-		var discount= parseFloat($("#sub_total").text())-res.value;
-		$("#final_total").html(formatNumber(discount)+"đ");
-		$('#coupon-success').show();
-		$('#coupon-fail').hide();
-		}
-		else{
-		$('#coupon-success').hide();
-		$('#coupon-fail').show();
-		}
-		}
-		});
-		});
-		});
-	</script>
+	  <script>
+    $(document).ready(function(){
+    	//$(".box").hide();
+  
+    		 var inputValue = $('input[type="radio"]:checked').val();
+		     var targetBox = $("." + inputValue);
+		     $(".box").not(targetBox).hide();
+		     $(targetBox).show();
+    	
+
+	    $('input[type="radio"]').click(function(){
+	    var inputValue = $(this).attr("value");
+	    var targetBox = $("." + inputValue);
+	    $(".box").not(targetBox).hide();
+	    $(targetBox).show();
+	    });
+	    });
+    </script>
 	
 	@stop

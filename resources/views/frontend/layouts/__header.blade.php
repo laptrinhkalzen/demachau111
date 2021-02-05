@@ -414,7 +414,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                             <a href="#" class="delete_cart" data-id_option="{{$key1}}" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
                                             <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}"><img src="{{$val['image']}}" alt="#"></a>
                                             <h4><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h4>
-                                            <p class="quantity">{{$val['quantity']}}x - <span style="color: #ea1621;" class="amount">{{number_format($val['price'])}} đ</span></p>
+                                            <p class="quantity"><span class="amount_x_{{$key1}}">{{$val['quantity']}}</span>x - <span style="color: #ea1621;" class="amount">{{number_format($val['price'])}} đ</span></p>
                                           </li>
                                             @endforeach
                                       

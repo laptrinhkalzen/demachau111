@@ -32,6 +32,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Tên flash sale</th>
+                    <th>Trạng thái</th>
                     <th>Thời gian bắt đầu</th>
                     <th>Thời gian kết thúc</th>
                     <th>Thao tác</th>
@@ -42,6 +43,11 @@
                 <tr>
                     <td>{{$flashsales->id}}</td>
                     <td>{{$flashsales->name}}</td>
+                    @if($flashsales->status==1)
+                    <td style="color: #00BFFF;">Hiển thị</td>
+                    @else
+                    <td>Ẩn</td>
+                    @endif
                     <td>{{$flashsales->start}}</td>
                     <td>{{$flashsales->end}}</td>
                     <td class="text-center">

@@ -100,6 +100,7 @@ class ProductController extends Controller {
     public function update_cart(Request $request) {
         $total = 0;
         $count = 0;
+        $key=$request->key;
         if ($request->id_option && $request->quantity) {
             $cart = session()->get('cart');
 
@@ -111,8 +112,9 @@ class ProductController extends Controller {
                 $count += $val['quantity'];
                 $total += ($val['price'] * $val['quantity']);
             }
+            $each_count=$cart[$key]['quantity'];
             return response()->json([
-                        'success' => true, 'count' => $count, 'total' => $total
+                        'success' => true, 'count' => $count, 'total' => $total, 'each_count'=>$each_count
             ]);
         }
     }

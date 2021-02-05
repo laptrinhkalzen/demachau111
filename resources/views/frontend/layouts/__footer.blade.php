@@ -292,152 +292,114 @@ background:#f7941d;
 <!-- Active JS -->
 <script src="{{asset('demachau/js/active.js')}}"></script>
 <script src="{{asset('demachau/js/custom.js')}}"></script>
-<script type="text/javascript">
-$( document ).ready(function() {
-$('#add-to-cart').click(function( e ){
-var option_number=$('#option_number').val();
-var product_id=$(this).data('product_id');
-var quantity=$('#quantity').val();
-$.ajax({
-url:'{{route("api.add_to_cart1")}}',
-method:'POST',
-data:{option_number:option_number,product_id : product_id,quantity:quantity,_token: $('#token').val()},
-success:function(resp){
-if(resp.success == true){
-$('#cart-count').html(resp.count);
-$('#total1').html(resp.total +' đ');
-$('#count-sp').html(resp.count + ' Sản phẩm');
-$(".shopping-item").load(" .shopping-item > *");
-alert(resp);
-// $("#cart_items").load(" #cart_items > *");
-// $("#cart").load(" #cart > *");
-// $("#sub_total").load(" #sub_total > *");
-alert('Thêm giỏ hàng thành công');
-}else{
-alert('Thêm giỏ hàng không thành công');
-}
-}
-});
-});
-$('#sendmail').click(function(e){
-var email = $('#email1').val();
-var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-if(email=='') {
-alert('Hãy nhập email của bạn');
-}
-else{
-if(regex.test(email)==false){
-alert('Vui lòng kiếm tra lại email của bạn');
-}
-else{
-$.ajax({
-url:'{{route("api.get_email11")}}',
-method:'POST',
-data:{email: email},
-success:function(data){
-$("#email1").val("");
-$(".success").show();
-}
-});
-}
-}
-});
-});
-</script>
-<script type="text/javascript">
-$(document).ready(function(){
-
-$('.option').on('change',function(){
-var action = $(this).attr('id');
-var ma_id = $(this).val();
-var _token = $('#token').val();
-var result = '';
-if(action=='city'){
-result = 'district';
-}
-$.ajax({
-url : '{{route("api.select_address")}}',
-method: 'POST',
-data:{action:action,ma_id:ma_id,_token:_token},
-success:function(data){
-
-$("#district").html(data);
-}
-});
-});
-});
-</script>
-<!-- <script type="text/javascript">
-$(document).ready(function(){
-$('.delete_cart').on('click',function(){
-var id_option=$(this).data('id_option');
-
-$.ajax({
-url: '/api/delete-cart',
-method: 'POST',
-data: {id_option: id_option},
-success: function (resp) {
-if (resp.success == true) {
-//$(".shopping-item").load(" .shopping-item > *");
-$('.each_cart_' + id_option).fadeOut();
-</script> -->
-
     <script type="text/javascript">
     $( document ).ready(function() {
-    function formatNumber (num) {
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
-        }   
-    $('#add-to-cart').click(function( e ){
-         var option_number=$('#option_number').val();
-         var product_id=$(this).data('product_id');
-         var quantity=$('#quantity').val();
-        
-         $.ajax({
-                url:'{{route("api.add_to_cart1")}}',
-                method:'POST',
-                data:{option_number:option_number,product_id : product_id,quantity:quantity,_token: $('#token').val()},
-                success:function(resp){           
-                   if(resp.success == true){
-                     $('#cart-count').html(resp.count);
-                     $('#total1').html(formatNumber(resp.total) +' đ');
-                     $('#count-sp').html(resp.count + ' Sản phẩm');
-              
-                     $(".shopping-item").load(" .shopping-item > *");
-                     // $("#cart_items").load(" #cart_items > *");
-                     // $("#cart").load(" #cart > *");
-                     // $("#sub_total").load(" #sub_total > *");
-                     alert('Thêm giỏ hàng thành công');
-                   }else{
-                     alert('Thêm giỏ hàng không thành công');
-                   }
-                }
-            });
-            });
-     $('#sendmail').click(function(e){
-                var email = $('#email1').val();
-                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                if(email=='') {
-                    alert('Hãy nhập email của bạn');   
-                }
-                else{
-                    if(regex.test(email)==false){
-                        alert('Vui lòng kiếm tra lại email của bạn');
-                    }
-                    else{
-                $.ajax({
-                    url:'{{route("api.get_email11")}}',
+        $('#sendmail').click(function(e){
+        var email = $('#email1').val();
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if(email=='') {
+        alert('Hãy nhập email của bạn');
+        }
+        else{
+        if(regex.test(email)==false){
+        alert('Vui lòng kiếm tra lại email của bạn');
+        }
+        else{
+        $.ajax({
+        url:'{{route("api.get_email11")}}',
+        method:'POST',
+        data:{email: email},
+        success:function(data){
+        $("#email1").val("");
+        $(".success").show();
+        }
+        });
+        }
+        }
+        });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+        $('.option').on('change',function(){
+        var action = $(this).attr('id');
+        var ma_id = $(this).val();
+        var _token = $('#token').val();
+        var result = '';
+        if(action=='city'){
+        result = 'district';
+        }
+        $.ajax({
+        url : '{{route("api.select_address")}}',
+        method: 'POST',
+        data:{action:action,ma_id:ma_id,_token:_token},
+        success:function(data){
+
+        $("#district").html(data);
+        }
+        });
+        });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        $( document ).ready(function() {
+        function formatNumber (num) {
+            return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+            }   
+        $('#add-to-cart').click(function( e ){
+             var option_number=$('#option_number').val();
+             var product_id=$(this).data('product_id');
+             var quantity=$('#quantity').val();
+             $.ajax({
+                    url:'{{route("api.add_to_cart1")}}',
                     method:'POST',
-                    data:{email: email},
-                    success:function(data){
-                        $("#email1").val("");
-                        $(".success").show();
-                    }
+                    data:{option_number:option_number,product_id : product_id,quantity:quantity,_token: $('#token').val()},
+                    success:function(resp){           
+                       if(resp.success == true){
+                         $('.each_cart_' + id_option).fadeOut();
+                           $('#sub_total').html(formatNumber(resp.total)+' đ');
+                           $('.total-amount').html(formatNumber(resp.total)+' đ');
+                           $('.count-sp').html(resp.count + ' Sản phẩm');
+                           $('.total-count').html(resp.count);
+                         alert('Thêm giỏ hàng thành công');
+                       }else{
+                         alert('Thêm giỏ hàng không thành công');
+                       }
                     }
                 });
-            }
+                });
+
+        ///
+
+        ///
+         $('#sendmail').click(function(e){
+                    var email = $('#email1').val();
+                    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    if(email=='') {
+                        alert('Hãy nhập email của bạn');   
+                    }
+                    else{
+                        if(regex.test(email)==false){
+                            alert('Vui lòng kiếm tra lại email của bạn');
+                        }
+                        else{
+                    $.ajax({
+                        url:'{{route("api.get_email11")}}',
+                        method:'POST',
+                        data:{email: email},
+                        success:function(data){
+                            $("#email1").val("");
+                            $(".success").show();
+                        }
+                        }
+                    });
+                }
+            });
         });
-    });
-</script>
+    </script>
 <script type="text/javascript">
             $(document).ready(function(){
                 function formatNumber (num) {
@@ -474,17 +436,7 @@ $('.each_cart_' + id_option).fadeOut();
             });
         </script>
 
-        <script>
-    $(document).ready(function(){
-        $('.box').hide();
-    $('input[type="radio"]').click(function(){
-    var inputValue = $(this).attr("value");
-    var targetBox = $("." + inputValue);
-    $(".box").not(targetBox).hide();
-    $(targetBox).show();
-    });
-    });
-    </script>
+      
     <script type="text/javascript">
         $(document).ready(function(){
             // $('.order-details').delegate('.each_quantity','change keyup',function (){
@@ -526,10 +478,11 @@ $('.each_cart_' + id_option).fadeOut();
     var coupon_code=$('#coupon').val();
     var id_option=$(this).data('id_option');
     var quantity=$(this).val();
+    var key=$(this).data('key');
     $.ajax({
     url: '/api/update-cart',
     method: 'POST',
-    data: {id_option: id_option,quantity:quantity},
+    data: {id_option: id_option,quantity:quantity,key:key},
     success: function (resp) {
     if (resp.success == true) {
         //$(".shopping-item").load(" .shopping-item > *");
@@ -538,6 +491,7 @@ $('.each_cart_' + id_option).fadeOut();
         $('.total-amount').html(formatNumber(resp.total)+' đ');
         $('.count-sp').html(resp.count + ' Sản phẩm');
         $('.total-count').html(resp.count);
+        $('.amount_x_'+key).html(resp.each_count);
     }
     }
     });
@@ -572,8 +526,15 @@ $('.each_cart_' + id_option).fadeOut();
         method: 'POST',
         success:function(res){
         if(res.statusCode==200){
-        var discount= parseFloat($("#sub_total").text())-res.value;
-        $("#final_total").html(formatNumber(discount)+"đ");
+        var discount=0;
+        var sub_total=parseFloat($("#sub_total").text().replace(/[^0-9]/gi, ''));
+        if(res.discount_type==0){    
+           discount= sub_total-res.value;
+        }
+        else{
+           discount= parseFloat($("#sub_total").text().replace(/[^0-9]/gi, ''))-res.value;
+        }
+        $("#final_total").html(formatNumber(discount)+" đ");
         $('#coupon-success').show();
         $('#coupon-fail').hide();
         }
