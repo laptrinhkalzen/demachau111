@@ -512,7 +512,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                                         <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
                                                     </li>
                                                         @else
-                                                    <li class="nav-item {{Request::path()===url('search-product'.'?search='.$menu->keyword) ? 'current-page':''}}">
+                                                    <li class="nav-item {{Request::path()==='search-product'.'?search='.$menu->keyword ? 'current-page':''}}">
                                                         <a class="nav-link" href="{{url('search-product'.'?search='.$menu->keyword)}}">{{$menu->title}}</a>
                                                     </li>
                                                         @endif
