@@ -528,11 +528,11 @@ background:#f7941d;
         if(res.statusCode==200){
         var discount=0;
         var sub_total=parseFloat($("#sub_total").text().replace(/[^0-9]/gi, ''));
-        if(res.discount_type==0){    
-           discount= sub_total-res.value;
+        if(res.discount_type==1){    
+           discount= sub_total - (sub_total / 100 * res.value);
         }
-        else{
-           discount= parseFloat($("#sub_total").text().replace(/[^0-9]/gi, ''))-res.value;
+        if(res.discount_type==2){
+           discount= sub_total-res.value;
         }
         $("#final_total").html(formatNumber(discount)+" đ");
         $('#coupon-success').show();
