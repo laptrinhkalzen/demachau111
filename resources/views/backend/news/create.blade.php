@@ -77,17 +77,9 @@
                                                     <span class="help-block">Chỉ cho phép các file ảnh có đuôi <code>jpg</code>, <code>gif</code> và <code>png</code>. File có dung lượng tối đa 20M.</span>
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <label class="col-md-3 col-form-label text-right">Nội dung: </label>
-                                                <div class="col-md-12">
-                                                    <textarea class="form-control ckeditor" id="content" name="content">{!!old('content')!!}</textarea>
-                                                </div>
-                                            </div>
+                                           
                                         </fieldset>
-                                        <div class="text-right">
-                                            <a type="button" href="{{route('admin.news.index')}}" class="btn btn-secondary legitRipple">Hủy</a>
-                                            <button type="submit" class="btn btn-primary legitRipple">Lưu lại <i class="icon-arrow-right14 position-right"></i></button>
-                                        </div>
+                                     
                                     </div>
                                 </div>
                             </div>
@@ -164,6 +156,19 @@
                 </div>
             </div>
         </div>
+        <div class="row" style="background-color: white;">
+             <div class="col-md-12">
+                <label for="content" class="col-md-3 col-form-label text-right">Nội dung: </label>
+                <div class="col-md-12">
+                    <textarea rows="14" cols="50" class="form-control ckeditor" id="content" name="content">{!!old('content')!!}</textarea>
+                    
+                </div>
+            </div>
+          <div class="col-md-12" style="text-align: center;">
+                <a type="button" href="{{route('admin.news.index')}}" class="btn btn-secondary legitRipple">Hủy</a>
+                <button type="submit" class="btn btn-primary legitRipple">Lưu lại <i class="icon-arrow-right14 position-right"></i></button>
+            </div>
+         </div>
     </form>
 </div>
 @stop
