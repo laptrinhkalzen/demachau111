@@ -69,7 +69,24 @@
                                
                             </div>
                         </div>
-                        <div class="row">
+                        
+                            @if($dem==0)
+                            <section class="product-area shop-sidebar shop section">
+    
+
+
+                        <div class="row" style="height: auto;">
+                            
+                            <div class="container" style="margin-top: auto; margin-bottom: auto;">
+                                <div class="row">
+                                <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/62d2399b89039bd1dc90ca2d50d3e802.png" style="margin:auto;width: 300px;object-fit: cover;">
+                                </div>
+                                <h3 class="mb-5" style="text-align: center;">Danh mục này chưa có bài viết.</h3>
+                            </div>
+                        </div>
+
+                            </section>
+                            @else
                             @foreach($news_category as $key => $record)
                             <div class=" col-12">
                                  <div class="row">
@@ -107,7 +124,8 @@
                                 
                             </div>
                              @endforeach
-                        </div>
+                             @endif
+                        
                     </div>
                 </div>
             </div>

@@ -64,14 +64,26 @@ class NewsController extends Controller {
 
     public function category(Request $request,$alias) {
         $records = DB::table('category')->join('news_category','news_category.category_id','=','category.id')->where('category.alias',$alias)->get();
+        $dem=0;
+        //dd($records);
+        if(is_null($records) ){
         foreach ($records as $key => $value) {
             $news_category[]=DB::table('news')->where('id',$value->news_id)->first();
-        }
-        //dd($news_category);
+            $dem++;
+            }
         $some_news=  $this->newsRepo->getAllNews(5);
         $category = DB::table('category')->where('parent_id', 0)->where('type',2)->orderBy('ordering', 'asc')->get();
         //d($records);
-        return view('frontend/news/category',compact('category','some_news','records','news_category'));
+        return view('frontend/news/category',compact('category','some_news','records','news_category','dem'));
+        }
+        else{
+        $some_news=  $this->newsRepo->getAllNews(5);
+        $category = DB::table('category')->where('parent_id', 0)->where('type',2)->orderBy('ordering', 'asc')->get();
+        //d($records);
+        return view('frontend/news/category',compact('category','some_news','records','dem'));
+        }
+        
+        
     }
 
     public function contact_detail(Request $request) {
