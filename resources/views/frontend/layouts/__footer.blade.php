@@ -503,10 +503,26 @@ background:#f7941d;
     method: 'POST',
     success:function(res){
     if(res.statusCode==200){
-    var discount= parseFloat($("#sub_total").text())-res.value;
-    $("#final_total").html(formatNumber(discount)+" đ");
-    $('#coupon-success').show();
-    $('#coupon-fail').hide();
+        var discount=0;
+         var sub_total=parseFloat($("#sub_total").text().replace(/[^0-9]/gi, ''));
+        if(res.condition <= sub_total){
+       
+        //alert(sub_total);
+        if(res.type_coupon==1){    
+           discount= sub_total - (sub_total / 100 * res.value);
+        }
+        if(res.type_coupon==2){
+           discount= sub_total-res.value;
+        }
+        $("#final_total").html(formatNumber(discount)+" đ");
+        $('#coupon-success').show();
+        $('#coupon-fail').hide();
+        }
+        else{
+              swal("Đơn hàng phải từ "+res.condition+" để áp dụng mã giảm giá này!");
+              $('#coupon-success').hide();
+              $('#coupon-fail').hide();
+        }
     }
     else{
     $('#coupon-success').hide();
@@ -528,15 +544,24 @@ background:#f7941d;
         if(res.statusCode==200){
         var discount=0;
         var sub_total=parseFloat($("#sub_total").text().replace(/[^0-9]/gi, ''));
-        if(res.discount_type==1){    
+        //alert(sub_total);
+        if(res.condition <= sub_total){
+        if(res.type_coupon==1){    
            discount= sub_total - (sub_total / 100 * res.value);
         }
-        if(res.discount_type==2){
+        if(res.type_coupon==2){
            discount= sub_total-res.value;
         }
         $("#final_total").html(formatNumber(discount)+" đ");
         $('#coupon-success').show();
         $('#coupon-fail').hide();
+        }
+        else{
+             swal("Đơn hàng phải từ "+res.condition+" để áp dụng mã giảm giá này!");
+             $('#coupon-success').hide();
+             $('#coupon-fail').hide();
+        }
+    
         }
         else{
         $('#coupon-success').hide();
