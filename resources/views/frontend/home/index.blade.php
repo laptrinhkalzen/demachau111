@@ -21,7 +21,7 @@ margin-top: 0px;
 </style>
 <!--/ End Header -->
 <!-- Slider Area -->
-<aside class="left"><a href="{{$banner_left->url}}"><img style="width: 150px; height: 540px;position: absolute;z-index: 99; " src="{{$banner_left->image}}"></img></a></aside>
+<aside class="left"><a href="{{$banner_left->url}}"><img style="width: 150px; height: 540px;position: absolute;z-index: 99; " src="{{$banner_left->image}}"></a></aside>
 <section class="container hero-slider" style="background-color: transparent;">
     <!-- Single Slider -->
     <div class=" single-slider">

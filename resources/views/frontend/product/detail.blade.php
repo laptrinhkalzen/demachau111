@@ -519,22 +519,24 @@ input[type="number"] {
                             <ul>
                                        
                                 <div class="">
-                                    <div class="form-group">
+                                    <div class="">
                                       <h3 style="font-weight: 500px; text-align: center; font-size: 14px ;margin-bottom: 10px;">SẢN PHẨM VỪA ĐƯỢC XEM</h3>
                                              
                                            @if(Session('old_pro'))
                                              @foreach(Session('old_pro') as $key => $val)
                                              @if($count_old_product - $key <= 3)
-                                           <div class="form-row" style="margin-bottom: 10px;">  
-                                                <div class="col-md-4">
+                                           <table class="" style=" border-top: 1px solid #e4e7ed; margin:0;">  
+                                                <tr style="" >
+                                                  <td style="width: 75px; padding-top: 10px; padding-bottom: 10px;">
                                                     <a href="{{route('product.detail',['alias'=>$val['alias']])}}" target="_blank" class="mr-2"><img style="width: 75px; height: 75px;" src="{!!$val['image']!!}" ></a>
-                                                    
-                                                </div>
-                                                <div class="col-md-8" style="text-align: left; margin: auto;">
+                                                    </td>
+                                                
+                                                  <td style="padding-left: 10px;">
                                                     <a href="{{route('product.detail',['alias'=>$val['alias']])}}" target="_blank" class="mr-2"><p>{!!$val['title']!!}</p></a>
-                                                </div>
+                                                  </td>
+                                                </tr>
                                         
-                                            </div>
+                                            </table>
                                             @endif 
                                             @endforeach
                                            @endif
@@ -862,7 +864,7 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
     "display": "block"
   });
 })
-            $("#hide").click(function() {
+      $("#hide").click(function() {
   $(".content_product").css({
     "-webkit-line-clamp": "5"
   });
