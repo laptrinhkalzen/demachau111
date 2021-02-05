@@ -240,7 +240,7 @@
 													<span>Số lượng:</span>
 												</div>
 												<div class="col-md-4 col-lg-4 col-4">
-													<input class="each_quantity" data-key={{$key1}} data-id_option="{{$key1}}"  value="{{$val['quantity']}}" type="number"   min="1" style="cursor: pointer;">
+													<input class="each_quantity amount_x_{{$key1}}"  data-key={{$key1}} data-id_option="{{$key1}}"  value="{{$val['quantity']}}" type="number"   min="1" style="cursor: pointer;">
 												</div>
 												
 											</div>

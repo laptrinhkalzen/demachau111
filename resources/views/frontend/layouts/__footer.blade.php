@@ -491,7 +491,7 @@ background:#f7941d;
         $('.total-amount').html(formatNumber(resp.total)+' đ');
         $('.count-sp').html(resp.count + ' Sản phẩm');
         $('.total-count').html(resp.count);
-        $('.amount_x_'+key).html(resp.each_count);
+        $('.amount_x_'+key).val(resp.each_count);
     }
     }
     });

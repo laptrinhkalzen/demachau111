@@ -220,7 +220,6 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     <p class="ml-2" style="font-size: 14px;color: black;"><a href="{{route('home.index')}}" style="font-weight: bold;">Trang chủ</a></p>
                     <hr >
                     @foreach($menu_cats as $key => $cat)
-                    
                         @php
                         $dem=0;
                         @endphp
@@ -323,7 +322,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                             </div>
                             <div class="form-row">
                                 <span class="ml-2">Số lượng:</span>
-                                <input class="each_quantity ml-2" data-id_option="{{$key1}}"  value="{{$val['quantity']}}" type="number"   min="1" style="cursor: pointer;width: 50px;background-color: #F6F7FB;">
+                                <input class="each_quantity ml-2 amount_x_{{$key1}}" data-key={{$key1}} data-id_option="{{$key1}}"  value="{{$val['quantity']}}" type="number"   min="1" style="cursor: pointer;width: 50px;background-color: #F6F7FB;">
                                 
                             </div>
                             <div class="form-row">
