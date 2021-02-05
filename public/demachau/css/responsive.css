@@ -1200,6 +1200,9 @@ display: none !important;
 .flash-sale{
 	width: 30% !important;height:100%;object-fit: contain !important;
 }
+#giohangpc{
+	display: none !important;
+}
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
