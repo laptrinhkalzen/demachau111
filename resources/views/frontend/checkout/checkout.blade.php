@@ -83,7 +83,7 @@
 					<div class="col-md-12 col-lg-12" style="background-color:white;">	
 					<p class="mt-4 mb-3" style="font-size:18px;"><span class="mr-2" style="border: solid 1px #283988; border-radius: 50%;padding: 0 10px;background-color: #283988;color: white;font-size: 32px;">1</span><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
-							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px;">
 							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked=""  id="btn-tienmat" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>
 							  <span class="checkmark"></span>
 							<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
@@ -204,11 +204,12 @@
 								@endphp
 								<div class="each_cart_{{$key1}}">
 									<a class="mt-4"><b>{{$dem}}. {{$val['title']}}</b></a>
+					                <img class="ml-2 delete_cart" data-id_option="{{$key1}}" src="{{asset('public/icon/trash.svg')}}" style="color: #283988;width: 30px;float: right;margin-right: 5px;cursor: pointer;" >
 									<div class="row form-group">
-										<div  class="col-md-4">
+										<div  class="col-lg-5">
 											<img class="form-control" src="{{$val['image']}}">
 										</div>
-										<div class="col-md-8">
+										<div class="col-lg-7">
 											@foreach($product_options as $product_option)
 											@if($product_option->product_id==$val['product_id'] && $val['option_number']==$product_option->option_number)
 											<div class="form-row">
@@ -244,14 +245,15 @@
 												</div>
 												
 											</div>
-											<div class="form-row">
+<!-- 											<div class="form-row">
 												<div class="col-md-6 col-lg-6 col-6">
 													<input type="button" data-id_option="{{$key1}}" class="delete_cart" name="" value="Xoá" style="background-color: black;color: white !important;width: 100px;text-align: center;border-radius: 5px;">
 												</div>
-											</div>
+											</div> -->
 										</div>
 									</div>
 								</div>
+								<hr>
 								@endforeach
 							
 								

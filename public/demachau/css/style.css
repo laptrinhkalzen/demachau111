@@ -1396,7 +1396,11 @@ padding-left: 0px;
 	-moz-transition:all 0.4s ease;
 	transition:all 0.4s ease;
 }
-.header.sticky .all-category:hover .main-category{
+/*.header.sticky .all-category:checked .main-category{
+	opacity:1;
+	visibility:visible;
+}*/
+#btn-danhmuc:checked .main-category{
 	opacity:1;
 	visibility:visible;
 }
