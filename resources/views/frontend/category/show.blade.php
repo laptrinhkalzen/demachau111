@@ -103,9 +103,9 @@ document.body.querySelector('#alternate-button-container')
 						@endif
 						@endforeach
 						<ul class="check-box-list">
-							@foreach($attribute as $attr)
+							@foreach($attribute as $for => $attr)
 							<li>
-								<label class="checkbox-inline"  for="1"><input class="attribute_filter" name="attr" value="{{$attr->id}}" id="1" type="checkbox">{{$attr->title}}<span class="count"></span></label>
+								<label class="checkbox-inline"  ><input class="attribute_filter" name="attr" value="{{$attr->id}}"  type="checkbox">{{$attr->title}}<span class="count"></span></label>
 							</li>
 							@endforeach
 						</ul>

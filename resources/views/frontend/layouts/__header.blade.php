@@ -525,7 +525,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                                     
                                                     @foreach ($menu_arr as $key=>$menu)
                                                     @if($key == 0)
-                                                    <li class="nav-item {{Request::is('/') ? 'current-page':''}}" style="height: 44px;">
+                                                    <li class="nav-item {{Request::is('/*') ? 'current-page':''}}" style="height: 44px;">
                                                         <a class="nav-link " href="{{route('home.index')}}">{{$menu->title}}</a>
                                                     </li>
                                                     @else
@@ -534,7 +534,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                                         <a class="nav-link" href="{{$menu->link}}">{{$menu->title}}</a>
                                                     </li>
                                                         @else
-                                                    <li class="nav-item {{Request::path()==='search-product'.'?search=dem' ? 'current-page':''}}">
+                                                    <li class="nav-item {{Request::path()==='search-product'.'?search='.'dem' ? 'current-page':''}}">
                                                         <a class="nav-link" href="{{url('search-product'.'?search='.$menu->keyword)}}">{{$menu->title}}</a>
                                                     </li>
                                                         @endif
