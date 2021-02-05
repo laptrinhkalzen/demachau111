@@ -65,8 +65,8 @@ class NewsController extends Controller {
     public function category(Request $request,$alias) {
         $records = DB::table('category')->join('news_category','news_category.category_id','=','category.id')->where('category.alias',$alias)->get();
         $dem=0;
-        //dd($records);
-        if(is_null($records) ){
+        $count_records=count($records);
+        if($count_records!=0){
         foreach ($records as $key => $value) {
             $news_category[]=DB::table('news')->where('id',$value->news_id)->first();
             $dem++;
@@ -79,7 +79,7 @@ class NewsController extends Controller {
         else{
         $some_news=  $this->newsRepo->getAllNews(5);
         $category = DB::table('category')->where('parent_id', 0)->where('type',2)->orderBy('ordering', 'asc')->get();
-        //d($records);
+        //dd($records);
         return view('frontend/news/category',compact('category','some_news','records','dem'));
         }
         
