@@ -170,7 +170,7 @@
 							</div>
 								<div class="col-lg-12 col-md-12 col-12">
 							<div class="single-widget">
-							<div class="content">
+							<div class="content mb-3">
 								<div class="button">
 									<button type="submit" class="btn btn-dathang" style="width: 100%;background-color: #ea1621;">Đặt hàng</button>
 								</div>
@@ -246,7 +246,7 @@
 											</div>
 											<div class="form-row">
 												<div class="col-md-6 col-lg-6 col-6">
-													<input type="button" data-id_option="{{$key1}}" class="delete_cart" name="" value="Xoá">
+													<input type="button" data-id_option="{{$key1}}" class="delete_cart" name="" value="Xoá" style="background-color: black;color: white !important;width: 100px;text-align: center;border-radius: 5px;">
 												</div>
 											</div>
 										</div>
