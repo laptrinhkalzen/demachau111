@@ -313,7 +313,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <i class="fa fa-times fa-3x" onclick="close_giohangpc()" style="float:right;margin-top:5px;margin-right: 10px;color: #283988;cursor: pointer;" id="close-danhmuc"></i>
                                 </div>
                 <div class="container shopping-item">
-                     <div class="container">
+                     <div class="container">    
                      @if(Session('cart'))
 
                     <ul class="shopping-list" id="cart_items">
@@ -362,11 +362,14 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
         <!-- EndSidebar -->
-        <style>   
+<!--         <style>
+        .menu-hover {
+          height: 150px;
+        }   
         .cat-hover:hover + .menu-hover {
-          display: block;
+            height: 300px;
         }
-        </style>
+        </style> -->
         <div class="container" style="height: 70px;">
             <div class="row">
                 <div class="col-lg-6" style="padding: 0px !important;">
@@ -378,8 +381,8 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                             <div class="col-lg-9" style="text-align: center;">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-lg-3 cat-hover">
-                                            <img src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;">
+                                        <div class="col-lg-3 ">
+                                            <img class="cat-hover" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;">
                                             <br>Nệm
                                         </div>
                                         <div class="col-lg-3">
@@ -436,7 +439,17 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         <div class="container menu-hover" style="height: 500px;display: none;">
             <div class="row"></div>
         </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+  $(".cat-hover").mouseover(function(){
+      $('.menu-hover').show(); 
+  });
+  $('.cat-hover').mouseout(function () {
+      $('.menu-hover').hide();      
+});
 
+});
+        </script>
 
         <!-- Header Inner -->
         <div class="header-inner" style="background-color: #283988;height: 44px;">
