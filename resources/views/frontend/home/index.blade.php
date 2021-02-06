@@ -18,6 +18,11 @@ text-align: right;
 font-size: 14px;
 margin-top: 0px;
 }
+.nav-main ul #countdown_mobile{
+text-align: right;
+font-size: 14px;
+margin-top: 0px;
+}
 </style>
 <!--/ End Header -->
 <!-- Slider Area -->
@@ -249,6 +254,60 @@ margin-top: 0px;
     </div>
 </section>
 @endif
+
+
+@if($count_flashsale==1)
+<section class="container hotdeals" style="margin-top: 10px;">
+    <div class=" single-slider">
+        <div class="row">
+            <div class="banner-flash-sale col-lg-3">
+                <div class="" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">  
+
+                    <img class="flash-sale mb-3"src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 100%;object-fit: cover;float: right;">
+                    <div class="row" style="margin-right: 0px;">
+                        <span style="font-size: 20px;margin:auto;">Còn lại
+                            <strong id="day_mb"></strong>&nbspngày
+                        </span>
+                        <div class="row container">
+                            <div class="col-1 col-lg-1"></div>
+                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
+                                <span>
+                                    <strong id="hour_mb" ></strong>
+                                </span>
+                            </div>
+                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
+                                <span>
+                                    <strong id="minute_mb"></strong>
+                                </span>
+                            </div>
+                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
+                                <span>
+                                    <strong id="second_mb"></strong>
+                                </span>
+                            </div>
+                            <div class="col-1 col-lg-1"></div>
+                        </div>
+                        <div class="row container">
+                            <div class="col-1 col-lg-1"></div>
+                            <div class="col-3 col-lg-3" style="text-align: center;margin-left: 10px;">Giờ</div>
+                            <div class="col-3 col-lg-3" style="text-align: center;margin-left: 10px;">Phút</div>
+                            <div class="col-3 col-lg-3" style="text-align: center;margin-left: 10px;">Giây</div>
+                            <div class="col-1 col-lg-1"></div>
+                        </div>
+                        <div class="row container mt-3 button-sale" style="padding-left: 50px;">
+                            <a href="{{route('flashsale.show')}}" style="margin: auto; background-color:white; color:black; border-radius: 5px  ; width:100px; text-align: center; ">Xem tất cả</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+
+        </div>
+    </div>
+</section>
+@endif
+
 
 
 
@@ -635,6 +694,7 @@ checkOption();
 });
 });
 </script> -->
+<!-- countdown_PC -->
 @if ($count_flashsale ==1) 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -669,6 +729,49 @@ document.getElementById("second").innerHTML = seconds ;
 if (distance < 0) {
 clearInterval(x);
 document.getElementById("countdown").innerHTML = "EXPIRED";
+}
+}, 1000);
+
+});
+</script>
+@endif
+
+
+ <!-- countdown_mobile -->
+@if ($count_flashsale ==1) 
+<script type="text/javascript">
+$(document).ready(function(){
+    //var count_flashsale={{$count_flashsale}};
+
+// Set the date we're counting down to
+
+var start = new Date("{{$flashsale->start}}").getTime();
+var end = new Date("{{$flashsale->end}}").getTime();
+//var end = {{$flashsale->end}};
+
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+// Get today's date and time
+var now = new Date().getTime();
+
+// Find the distance between now and the count down date
+var distance = end - now;
+// Time calculations for days, hours, minutes and seconds
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+// Output the result in an element with id="countdown"
+//document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+document.getElementById("day_mb").innerHTML = days ;
+document.getElementById("hour_mb").innerHTML =  hours ;
+document.getElementById("minute_mb").innerHTML = minutes ;
+document.getElementById("second_mb").innerHTML = seconds ;
+// If the count down is over, write some text
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("countdown_mobile").innerHTML = "EXPIRED";
 }
 }, 1000);
 
