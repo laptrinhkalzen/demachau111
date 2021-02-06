@@ -167,7 +167,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
                 <!-- Topbar -->
-        <div class="topbar" style="background-color: #3a559f;" >
+        <div class="topbar" style="background-color: #283988;" >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-12 col-12">
@@ -362,118 +362,82 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
         <!-- EndSidebar -->
-        <div class="middle-inner" >
-            <div class="container">
-                <div class="row" >
-                    <div class="col-lg-2 col-md-2 col-12">
-                        <!-- Logo -->
-                        
-                        <div class="logo">
-                            <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo"></a>
-                        </div>
-                        
-                        <!--/ End Logo -->
-                        <!-- Search Form -->
-                        <div class="search-top">
-                            <div class="top-search"><a href="#0"><i class="ti-search" style="vertical-align: super;"></i></a></div>
-                            <div class="search-top">
-                                <form class="search-form" action="{{route('product.search')}}" method="GET">
-                                    <input type="text" placeholder="Nhập từ khoá" id="search_key" autocomplete="off" name="search">
-                                    <button value="search" type="submit" style="background-color: #ea1621"><i class="ti-search" style="color: white;"></i></button>
-                                    <div class="search_result"></div>
-                                </form>
-                                
+        <style>   
+        .cat-hover:hover + .menu-hover {
+          display: block;
+        }
+        </style>
+        <div class="container" style="height: 70px;">
+            <div class="row">
+                <div class="col-lg-6" style="padding: 0px !important;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3" style="height: 100%;">
+                            <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo" style="margin-top:15px !important;"></a>
                             </div>
-                             <div class="sinlge-bar shopping cart">
-                                <a href="#" class="single-icon"><i class="ti-bag"></i><span class="total-count" id="cart-count">{{$count_cart}}</span></a>
-                                <!-- Shopping Item -->
-                                <div class="shopping-item">
-                                     @if(Session('cart'))
-                                    <div class="dropdown-cart-header">
-                                        <!-- <span class="count-sp" id="count-sp">{{$count_cart}} Sản phẩm</span> -->
-                                        <a href="{{route('checkout_order.index')}}">Xem giỏ hàng</a>
-                                    </div>
-                                    <ul class="shopping-list" id="cart_items">
-                                         
-                                            @foreach(Session('cart') as $key1=> $val)
-                                            <li class="each_cart_{{$key1}}">
-                                            <a href="#" class="delete_cart" data-id_option="{{$key1}}" title="Xoá Sản phẩm"><i class="fa fa-remove"></i></a>
-                                            <a class="cart-img" href="{{route('product.detail',['alias'=>$val['alias']])}}"><img src="{{$val['image']}}" alt="#"></a>
-                                            <h4><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h4>
-                                            <p class="quantity">{{$val['quantity']}}x - <span style="color: #ea1621;" class="amount">{{number_format($val['price'])}} đ</span></p>
-                                          </li>
-                                            @endforeach
-                                      
-                                        
-                                        
-                                    </ul>
-                                    <div class="bottom">
-                                        <div class="total">
-                                            <span>Tổng</span>
-                                            <span class="total-amount" id="total1" style="color: #ea1621;">{{number_format($count_total)}} đ</span>
+                            <div class="col-lg-9" style="text-align: center;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3 cat-hover">
+                                            <img src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;">
+                                            <br>Nệm
                                         </div>
-                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #283988;">Xem giỏ hàng</a>
-                                        <a href="{{route('checkout_order.index')}}" class="btn animate" style="background-color: #ec2029;">Thanh toán</a>
+                                        <div class="col-lg-3">
+                                            <img src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;">
+                                            <br>Chăn
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <img src="{{asset('public/icon/pillow.svg')}}" style="width: 60%;">
+                                            <br>Gối
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <img src="{{asset('public/icon/sale.svg')}}" style="width: 60%;">
+                                            <br>Hàng Sale
+                                        </div>
                                     </div>
-                                          @else
-                                        <div class="dropdown-cart-header">
-                                        <span id="count-sp">Chưa có sản phẩm trong giỏ hàng</span>
-                                      
-                                    </div>
-                                    @endif   
-
                                 </div>
-                                <!--/ End Shopping Item -->
-                            </div> 
+                            </div>
 
                         </div>
-                        <!--/ End Search Form -->
-                        <div class="mobile-nav"></div>
-                    </div>
-                    <div class="col-lg-6 col-md-7 col-12">
-                        <div style="padding-top: 32px;" class="search-bar-top">
-                            <div class="search-bar">
-                                
-                                <form action="{{route('product.search')}}" method="GET">
-                                  
-                                    <input name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
-                                    <button class="btnn" style="background-color: #283988;"><i class="ti-search"></i></button>
-                                </form>
-
+                    </div>                                                            
+                </div>
+                <div class="col-lg-6" style="padding: 0px !important;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5" style="padding: 0px !important;">
+                                <div class=" search-bar" style="width: 100%;margin-top: 10px;">
+                                    <form action="{{route('product.search')}}" method="GET" >
+                                        <input class="input-sm" name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
+                                        <button class="btnn" style="background-color: #283988;"><i class="ti-search"></i></button>
+                                    </form>
+                                </div>
                             </div>
-                            <div  class="search_result"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-12">
-                         
-                       <div class="hotline-phone-ring-wrap1" style="margin-left: 30px;"> 
-
-                                <div class="hotline-phone-ring">
-                                <div class="hotline-phone-ring-circle"></div>
-                                <div class="hotline-phone-ring-circle-fill"></div>
-                                <div class="hotline-phone-ring-img-circle"> <a href="tel:{{$share_config->hotline}}" class="pps-btn-img"> <img src="https://netweb.vn/img/hotline/icon.png" alt="so dien thoai" width="50"> </a></div>
-                            </div>      
-                            <div class="hotline-bar"> 
-                                <a href="tel:{{$share_config->hotline}}"> <span class="text-hotline">{{$share_config->hotline}}</span> </a>
-                            </div>           
+                            <div class="col-lg-7" style="padding: 0px !important;text-align: center;height: auto;">
+                                <div class="container" >
+                                    <div class="row">
+                                        <div class="col-lg-2" style="padding: 0px !important;">
+                                            <img src="{{asset('public/icon/map-svg.svg')}}" style="width: 80%;margin-top: 10px;margin-left: 20px;">
+                                        </div>
+                                        <div class="col-lg-4" style="padding: 0px !important;">
+                                            Tìm cửa hàng <b>quanh đây</b>
+                                        </div>
+                                        <div class="col-lg-6" style="background-color: yellow;padding: 0px !important;text-align: center;background-color: #283988;color: white;height: 71px;">
+                                            Mua hàng gọi ngay <br><b>1800 2092</b>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                    </div>
-                
-                    <div class="col-lg-2 col-md-3 col-12">
-                        <div style="padding-top: 35px;" class="right-bar">
-                            <!-- Search Form -->
-
-                            <div class="sinlge-bar shopping cart">
-                                <a href="#" class="single-icon" onclick="open_giohangpc()"><i class="ti-bag" ></i><span class="total-count" id="cart-count" >{{$count_cart}}</span></a>
-                            </div>
-                           
-                        
-                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="container menu-hover" style="height: 500px;display: none;">
+            <div class="row"></div>
+        </div>
+
+
         <!-- Header Inner -->
         <div class="header-inner" style="background-color: #283988;height: 44px;">
             <div class="container">

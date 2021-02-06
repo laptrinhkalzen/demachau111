@@ -188,7 +188,6 @@ margin-top: 0px;
             <div class="banner-flash-sale col-lg-3 flashsale-mobile">
                 <div class="container" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">  
 
-                    <img class=""src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 50%;object-fit: cover;">
                     <div class="row" style="margin-right: 0px;">
                         <span style="font-size: 20px;margin:auto;">Còn lại
 
