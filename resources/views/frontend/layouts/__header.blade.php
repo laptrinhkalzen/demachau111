@@ -475,7 +475,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     <div class="row" >
                         <div class="col-lg-3" id="show-header">
                             <label for="btn-danhmuc" style="width: 100%;"><div class="all-category" >
-                                <h3 class="cat-heading" style="padding: 15px 25px !important;"><i class="fa fa-bars" aria-hidden="true"></i>Danh mục1</h3>
+                                <h3 class="cat-heading" style="padding: 15px 25px !important;"><i class="fa fa-bars" aria-hidden="true"></i>Danh mục</h3>
                                 <input type="checkbox" id="btn-danhmuc" style="display: none;">
                                 <ul class="main-category hide-header" style="display: none;" >
 

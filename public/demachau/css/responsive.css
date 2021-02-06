@@ -1206,6 +1206,9 @@ display: none !important;
 .hotdeals{
 	margin-bottom: 10px;
 }
+.flashsale-pc{
+	display: none !important;
+}
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
@@ -1892,6 +1895,9 @@ display: none !important;
 	display: none !important;
 }
 .navbar-mobile{
+	display: none !important;
+}
+.flashsale-mobile{
 	display: none !important;
 }
 }

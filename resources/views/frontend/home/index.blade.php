@@ -144,7 +144,7 @@ margin-top: 0px;
 <section class="container hotdeals" style="margin-top: 10px;">
     <div class=" single-slider">
         <div class="row">
-            <div class="banner-flash-sale col-lg-3">
+            <div class="banner-flash-sale col-lg-3 flashsale-pc">
                 <div class="" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">  
 
                     <img class="flash-sale mb-3"src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 100%;object-fit: cover;float: right;">
@@ -184,7 +184,24 @@ margin-top: 0px;
                     </div>
                 </div>
             </div>
-            
+            <div class="banner-flash-sale col-lg-3 flashsale-mobile">
+                <div class="container" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">  
+
+                    <img class=""src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 50%;object-fit: cover;">
+                    <div class="row" style="margin-right: 0px;">
+                        <span style="font-size: 20px;margin:auto;">Còn lại
+
+                                    <strong id="day_mb" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>&nbspngày
+                                    <strong id="hour_mb" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong><img src="/icon/two-dots.svg" style="width: 10px;object-fit: cover;margin-left: 3px;">
+                                    <strong id="minute_mb" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong><img src="/icon/two-dots.svg" style="width: 10px;object-fit: cover;margin-left: 3px;">
+                                    <strong id="second_mb" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>
+                        </span>
+                        <div class="row container mt-3 button-sale" style="padding-left: 50px;">
+                            <a href="{{route('flashsale.show')}}" style="margin: auto; background-color:white; color:black; border-radius: 5px  ; width:100px; text-align: center; ">Xem tất cả</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="carousel-flash-sale col-lg-9" style="border-style: solid;border-color: #c70000;">
                 <div class="product-area most-popular section" style="padding:0px;">
                     <div class="container" style="background-color:white;">
@@ -249,59 +266,6 @@ margin-top: 0px;
                     </div>
                 </div>
             </div>
-
-        </div>
-    </div>
-</section>
-@endif
-
-
-@if($count_flashsale==1)
-<section class="container hotdeals" style="margin-top: 10px;">
-    <div class=" single-slider">
-        <div class="row">
-            <div class="banner-flash-sale col-lg-3">
-                <div class="" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">  
-
-                    <img class="flash-sale mb-3"src="https://demxanh.com/template/default/images/icon_deal.png" alt="#" style="width: 100%;object-fit: cover;float: right;">
-                    <div class="row" style="margin-right: 0px;">
-                        <span style="font-size: 20px;margin:auto;">Còn lại
-                            <strong id="day_mb"></strong>&nbspngày
-                        </span>
-                        <div class="row container">
-                            <div class="col-1 col-lg-1"></div>
-                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
-                                <span>
-                                    <strong id="hour_mb" ></strong>
-                                </span>
-                            </div>
-                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
-                                <span>
-                                    <strong id="minute_mb"></strong>
-                                </span>
-                            </div>
-                            <div class="col-3 col-lg-3" style="border-style: solid;border-color: white;padding: 10px;border-radius: 5px;border-width: 2px;text-align: center;margin-left: 10px;font-size: 24px;">
-                                <span>
-                                    <strong id="second_mb"></strong>
-                                </span>
-                            </div>
-                            <div class="col-1 col-lg-1"></div>
-                        </div>
-                        <div class="row container">
-                            <div class="col-1 col-lg-1"></div>
-                            <div class="col-3 col-lg-3" style="text-align: center;margin-left: 10px;">Giờ</div>
-                            <div class="col-3 col-lg-3" style="text-align: center;margin-left: 10px;">Phút</div>
-                            <div class="col-3 col-lg-3" style="text-align: center;margin-left: 10px;">Giây</div>
-                            <div class="col-1 col-lg-1"></div>
-                        </div>
-                        <div class="row container mt-3 button-sale" style="padding-left: 50px;">
-                            <a href="{{route('flashsale.show')}}" style="margin: auto; background-color:white; color:black; border-radius: 5px  ; width:100px; text-align: center; ">Xem tất cả</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        
 
         </div>
     </div>
