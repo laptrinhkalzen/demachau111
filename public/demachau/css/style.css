@@ -1983,6 +1983,7 @@ padding-left: 0px;
 	margin-bottom: -1px;
 	display: inline-block;
 }
+
 .product-area .nav-tabs li a {
 	color: #333;
 	text-transform: uppercase;
@@ -2005,7 +2006,7 @@ padding-left: 0px;
 .product-area .nav-tabs li a.active,
 .product-area .nav-tabs li:hover a{
 	background:white;
-	color:#333;
+	color:#0b8dd9;;
 	border-color:transparent;
 }
 /* Sinlge Product */
@@ -2276,6 +2277,7 @@ padding-left: 0px;
 .single-product .product-content h3 a:hover{
 	color:#0b8dd9;
 }
+
 .single-product .product-content .product-price {
   margin: 6px 0 0 0;
 }
@@ -2313,7 +2315,7 @@ padding-left: 0px;
     -webkit-box-orient: vertical;
 }
 .single-product .product-content1 h3 a:hover{
-	color:#F7941D;
+	color:#0b8dd9;
 }
 .single-product .product-content1 .product-price {
   margin: 6px 0 0 0;
