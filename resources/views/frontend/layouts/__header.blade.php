@@ -436,45 +436,45 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
 
-        <div class="container menu-hover" style="height: 100px;display: none;">
+        <div class="container menu-hover" style="height: 300px;display: none;">
             <div class="row">
                 <div class="col-2">
-                    <ul>
+                    <ul>123
   <li>Coffee</li>
   <li>Tea</li>
   <li>Milk</li>
 </ul>
                 </div>
                 <div class="col-2">
-                    <ul>
+                    <ul>123
   <li>Coffee</li>
   <li>Tea</li>
   <li>Milk</li>
 </ul>
                 </div>
                 <div class="col-2">
-                    <ul>
+                    <ul>123
   <li>Coffee</li>
   <li>Tea</li>
   <li>Milk</li>
 </ul>
                 </div>
                 <div class="col-2">
-                    <ul>
+                    <ul>123
   <li>Coffee</li>
   <li>Tea</li>
   <li>Milk</li>
 </ul>
                 </div>
                 <div class="col-2">
-                    <ul>
+                    <ul>123
   <li>Coffee</li>
   <li>Tea</li>
   <li>Milk</li>
 </ul>
                 </div>
                 <div class="col-2">
-                    <ul>
+                    <ul>123
   <li>Coffee</li>
   <li>Tea</li>
   <li>Milk</li>
