@@ -436,8 +436,51 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
 
-        <div class="container menu-hover" style="height: 500px;display: none;">
-            <div class="row"></div>
+        <div class="container menu-hover" style="height: 100px;display: none;">
+            <div class="row">
+                <div class="col-2">
+                    <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+                </div>
+                <div class="col-2">
+                    <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+                </div>
+                <div class="col-2">
+                    <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+                </div>
+                <div class="col-2">
+                    <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+                </div>
+                <div class="col-2">
+                    <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+                </div>
+                <div class="col-2">
+                    <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+                </div>
+            </div>
         </div>
         <script type="text/javascript">
             $(document).ready(function(){
