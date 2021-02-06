@@ -75,10 +75,17 @@ class ProductController extends Controller {
              $have_product=1;
              $children_ids=DB::table('category')->where('parent_id',$category_id->id)->get();
              $id_children=array();
+             $dem=0;
              foreach($children_ids as $children_id){
                 $id_children[]=$children_id->id;
+                $dem++;
              }
+             //dd($dem);
+             if($dem!=0){
              $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product.status',1)->whereIn('product_category.category_id',$id_children)->get();
+           }else{
+            $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product.status',1)->where('product_category.category_id',$category_id->id)->get();
+           }
           }
           $is_product=count($product_cat);
           if($is_product > 0){
