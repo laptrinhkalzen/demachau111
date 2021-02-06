@@ -309,11 +309,9 @@ margin-top: 0px;
 @endif
 
 
-
-
 <!-- Start Most Popular -->
 @foreach($danh_muc_cha as $danh_muc_cha)
-<div class="product-area most-popular section" style="padding: 20px !important;">
+<div class="product-area most-popular section" style="padding-top: 10px  !important;">
     <div class="container" style="background-color:white;padding-left: 0px;padding-right: 0px;">
         <!-- <div class="row">
             <div class="col-12">
@@ -335,6 +333,7 @@ margin-top: 0px;
             </ul>
             <!--/ End Tab Nav -->
         </div>
+        <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="owl-carousel popular-slider">
@@ -417,12 +416,15 @@ margin-top: 0px;
                 </div>
             </div>
         </div>
+        </div>
     </div>
 </div>
 @endforeach
 
 
-<div class="product-area most-popular section" style="padding: 20px !important;">
+
+
+<div class="product-area most-popular section" style="padding-top: 10px !important;">
     <div class="container" style="background-color:white;padding-left: 0px;padding-right: 0px;">
         <!-- <div class="row">
             <div class="col-12">
@@ -438,7 +440,7 @@ margin-top: 0px;
             </ul>
             <!--/ End Tab Nav -->
         </div>
-        
+        <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="carousel-flash-sale col-lg-12" style="padding-left: 0px ; padding-right: 0px; ">
@@ -494,13 +496,14 @@ margin-top: 0px;
                    @endforeach
                 </div> -->
             </div>
+            </div>
         </div>
     </div>
 </div>
 
 
 
-<section class="container" style="margin-top: 20px;background-color: white;">
+<section class="container" style="margin-top:10px;background-color: white;">
     <div class=" single-slider">
         <div class="row">
             <div class="banner-flash-sale col-lg-3 banner-brand" style="margin: auto;text-align: center;">

@@ -103,7 +103,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         <div class="topbar-mobile">
             <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-4" style="padding: 0px;">
                     <p style="text-align: center;color:#283988;font-size: 12px; ">
                         Mua hàng, gọi ngay
                         <br>
@@ -116,7 +116,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-3" style="text-align: center;">
 <!--                     <div class="sinlge-bar shopping"> -->
     <div>
-                                <a href="#" class="single-icon"><!-- <i class="fa fa-shopping-cart fa-2x" style="color: #283988;padding-top: 15px;"></i> --><img src="{{asset('public/icon/cart-svg.svg')}}" style="color: #283988;width: 30px;margin-top: 15px;" onclick="open_giohang()"><span class="total-count" id="cart-count" style="border: 1px solid #ea1621;background-color: #ea1621;color: white;border-radius: 50%;vertical-align: bottom;">{{$count_cart}}</span></a>
+                                <a href="#" class="single-icon"><!-- <i class="fa fa-shopping-cart fa-2x" style="color: #283988;padding-top: 15px;"></i> --><img src="{{asset('public/icon/cart-svg.svg')}}" style="color: #283988;width: 30px;margin-top: 15px;" onclick="open_giohang()"><span class="total-count" id="cart-count" style="border: 1px solid #ea1621;background-color: #ea1621;color: white;border-radius: 50%;vertical-align: bottom;padding: 0 3px;">{{$count_cart}}</span></a>
                                 <!-- Shopping Item -->
                                 <div class="shopping-item shopping-hidden cart">
                                      @if(Session('cart'))
