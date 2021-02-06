@@ -21,8 +21,8 @@
   background: #555; 
 }
 
-li{
-	display: none;
+li {
+    list-style: none;
 }
 </style>
 <div class="breadcrumbs" style="background-color:#f3f5f7;">
