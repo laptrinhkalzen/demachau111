@@ -133,9 +133,9 @@
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
-									<label>Chọn thành phố<span>*</span></label>
+									<label>Chọn tỉnh/ thành phố<span>*</span></label>
 									<select  style="background-color: #f6f7fb;cursor: pointer;" id="city" class="option form-control select2" name="id_tp" required="">
-										<option value="">Chọn thành phố</option>
+										<option value="">Chọn tỉnh/ thành phố</option>
 										@foreach($city as $city)
 										<option value="{{$city->id_tp}}">{{$city->name_tp}} </option>
 										@endforeach

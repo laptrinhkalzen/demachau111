@@ -4,8 +4,9 @@
 <script type="text/javascript">
 $(document).ready(function(){
 $('.hide-header').show();
-$('#show-header').on('mouseout',function(){
+$('#show-header,.hide-header').on('mouseout',function(){
 $('.hide-header').show();
+
 });
 });
 </script>

@@ -1,5 +1,10 @@
 @extends('backend.layouts.master')
 @section('content')
+<script>
+    CKEDITOR.replace( '#content', {
+        height: 2000    
+    } );
+    </script>
 <div class="content">
     <form action="{!!route('admin.product.store')!!}" method="POST" enctype="multipart/form-data">
         <div class="card">

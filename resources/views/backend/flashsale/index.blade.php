@@ -44,9 +44,9 @@
                     <td>{{$flashsales->id}}</td>
                     <td>{{$flashsales->name}}</td>
                     @if($flashsales->status==1)
-                    <td style="color: #00BFFF;">Hiển thị</td>
+                    <span class="badge bg-success-400">Hiển thị</span>
                     @else
-                    <td>Ẩn</td>
+                    <span class="badge bg-grey-400">Ẩn</span>
                     @endif
                     <td>{{$flashsales->start}}</td>
                     <td>{{$flashsales->end}}</td>

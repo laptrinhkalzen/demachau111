@@ -1,5 +1,30 @@
 @extends('frontend.layouts.master')
 @section('content')
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+li{
+	display: none;
+}
+</style>
 <div class="breadcrumbs" style="background-color:#f3f5f7;">
 	<div class="container">
 		<div class="row">

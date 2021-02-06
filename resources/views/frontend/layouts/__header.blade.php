@@ -90,6 +90,12 @@ swal("Đặt hàng thành công!");
 </script>
 @endif
 
+@if(Session('payment_success'))
+<script type="text/javascript">
+swal("Đặt hàng thành công!");
+</script>
+@endif
+
 @if(Session('out_stock'))
 
 <script type="text/javascript">

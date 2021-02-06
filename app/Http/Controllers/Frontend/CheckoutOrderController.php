@@ -164,7 +164,7 @@ class CheckoutOrderController extends Controller {
             $vnp_TmnCode = "UDOPNWS1"; //Mã website tại VNPAY 
             $vnp_HashSecret = "EBAHADUGCOEWYXCMYZRMTMLSHGKNRPBN"; //Chuỗi bí mật
             $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-            $vnp_Returnurl = "http://demachau.local";
+            $vnp_Returnurl = "http://demachau.local:8888";
             $vnp_TxnRef = date("YmdHis"); //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
             $vnp_OrderInfo = "Thanh toán hóa đơn phí dich vụ";
             $vnp_OrderType = 'billpayment';
@@ -210,7 +210,7 @@ class CheckoutOrderController extends Controller {
                 $vnpSecureHash = hash('sha256', $vnp_HashSecret . $hashdata);
                 $vnp_Url .= 'vnp_SecureHashType=SHA256&vnp_SecureHash=' . $vnpSecureHash;
             }
-            return redirect($vnp_Url);
+            return redirect($vnp_Url)->with('payment_success','Thanh toán thành công');
 
             }
         }
