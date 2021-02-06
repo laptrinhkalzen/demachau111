@@ -3,9 +3,9 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-$('.hide-header').show();
+$('.hide-header').hide();
 $('#show-header,.hide-header').on('mouseout',function(){
-$('.hide-header').show();
+$('.hide-header').hide();
 
 });
 });
@@ -32,16 +32,14 @@ margin-top: 0px;
     <!-- Single Slider -->
     <div class=" single-slider">
         <div class="row">
-            <div class="col-3 col-lg-3 banner-slide">
-                <img src="{{$slide_phu->image}}" alt="#" style="height: 100%;object-fit: cover;">
-            </div>
+            
             <div class="col-lg-9">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                       </ol>
-                      <div class="carousel-inner">
+                      <div style="width: 100%;" class="carousel-inner">
                         @foreach($slide_chinh as $main_slide)
                         @if($main_slide->ordering ==1)
                         <div class="carousel-item active">
@@ -63,6 +61,21 @@ margin-top: 0px;
                         <span class="sr-only">Next</span>
                       </a>
                     </div>
+            </div>
+            <div class="col-3 col-lg-3 banner-slide">
+                @foreach($anh_duoi_slide as $key =>$anh_slide)
+           
+          
+            <div class="col-lg-12 col-md-12 col-12" style="padding-right: 0px !important;padding-left: 5px !important;">
+                <div class="single-banner">
+                    <img src="{{$anh_slide->image}}" alt="#">
+                </div>
+            </div>
+          
+              @if($key==3)
+              @break;
+            @endif
+            @endforeach
             </div>
         </div>
     </div>
@@ -243,11 +256,16 @@ margin-top: 0px;
                                         <div class="product-content">
                                             <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">{{$flashsale_product->title}}</a></h3>
                                             <div class="product-price" style="text-align: center;">
+                                                @if($flashsale_product->price>0)
                                                 @if($flashsale_product->discount_value>0)
                                                 <span class="old">{{number_format($flashsale_product->price)}}đ</span>
                                                 <span style="color:red;">{{number_format($flashsale_product->price_decrease)}}đ</span>
                                                 @else
                                                 <span style="color:red;">{{number_format($flashsale_product->price)}}
+                                                đ</span>
+                                                @endif
+                                                @else
+                                                <span style="color:red;">Liên hệ
                                                 đ</span>
                                                 @endif
                                             </div>
@@ -348,6 +366,7 @@ margin-top: 0px;
                                 @php 
                                    $dem=0;
                                 @endphp
+                                @if($product_danh_muc_cha1->price>0)
                                 @foreach($product_sales as $pro_sale)
                                 @if($product_danh_muc_cha1->id==$pro_sale->product_id)
                                 @php 
@@ -359,6 +378,9 @@ margin-top: 0px;
                                 @endforeach
                                 @if($dem==0)
                                 <span style="color:red;">{{number_format($product_danh_muc_cha1->price)}}đ</span>
+                                @endif
+                                @else
+                                 <span style="color:red;">Liên hệ</span>
                                 @endif
 
                                

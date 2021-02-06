@@ -68,9 +68,9 @@
                     @endif
                     
                     @if($coupon->coupon_status==0)
-                    <span class="badge bg-success-400">Hiển thị</span>
+                    <td><span class="badge bg-success-400">Hiển thị</span></td>
                     @else
-                    <span class="badge bg-grey-400">Ẩn</span>
+                    <td><span class="badge bg-grey-400">Ẩn</span></td>
                     @endif
               
                     <td>{{$coupon->coupon_end}}</td>
