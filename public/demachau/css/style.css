@@ -1966,6 +1966,13 @@ padding-left: 0px;
 .news-list{
 	padding-bottom: 20px;
 }
+
+.row-filter{
+	background-color: #FFF;
+}
+.filter_category{
+	padding: 0px !important;
+}
 /*======================================
    End Most Popular CSS
 ========================================*/
@@ -2340,6 +2347,7 @@ padding-left: 0px;
 	margin-top: 30px;
 	background: #F6F7FB;
 	padding: 30px;
+	border-bottom: 1px solid #e4ebe5;
 }
 .shop-sidebar .single-widget:first-child {
 	margin-top: 0;
@@ -2353,6 +2361,17 @@ padding-left: 0px;
 	display: block;
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 15px;
+}
+.shop-sidebar .single-widget .title_h3 {
+	position: relative;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: capitalize;
+	margin-bottom: 25px;
+	display: block;
+	color: #2d2e7f;
+	/*border-bottom: 1px solid #ddd;
+	padding-bottom: 15px;*/
 }
 /* Shop Price */
 .shop .range .price-filter {
@@ -3576,6 +3595,7 @@ padding-left: 0px;
 }
 .shop.checkout .single-widget {
 	margin-bottom: 30px;
+
 }
 .shop.checkout .single-widget:last-child{
 	margin:0;

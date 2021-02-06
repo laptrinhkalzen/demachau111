@@ -105,6 +105,7 @@ document.body.querySelector('#alternate-button-container')
 	<div class="container">
 		<div class="row">
 			<div class="menu-filter col-lg-3 col-md-4 col-12" id="mySidebar">
+				@foreach($attributes as $key => $attribute)
 				<div class="shop-sidebar">
 					<!-- Single Widget -->
 <!-- 					<div class="single-widget range">
@@ -124,7 +125,7 @@ document.body.querySelector('#alternate-button-container')
 					</div> -->
 					<!--/ End Single Widget -->
 					<!-- Shop By Price -->
-					@foreach($attributes as $key => $attribute)
+					
                     @if(count($attribute)>5)
 					<div class="single-widget range"  style="height:250px; overflow: scroll;overflow-x: hidden;background-color: white;">
 				    @else
@@ -132,18 +133,18 @@ document.body.querySelector('#alternate-button-container')
 				    @endif		
 						@foreach($parent_attributes as $parent_attribute)
 						@if($parent_attribute->id==$key)
-						<h3 class="title">{{$parent_attribute->title}}</h3>
+						<h3 class="title_h3">{{$parent_attribute->title}}</h3>
 						@endif
 						@endforeach
 						<ul class="check-box-list">
 							@foreach($attribute as $for => $attr)
 							<li>
-								<label class="checkbox-inline"  ><input class="attribute_filter" name="attr" value="{{$attr->id}}"  type="checkbox">{{$attr->title}}<span class="count"></span></label>
+								<label class="checkbox-inline"  ><input  class="attribute_filter" name="attr" value="{{$attr->id}}"  type="checkbox">{{$attr->title}}<span class="count"></span></label>
 							</li>
 							@endforeach
 						</ul>
 					</div>
-					@endforeach
+					
 					<!--/ End Shop By Price -->
 					<!-- Single Widget -->
 					<!-- <div class="single-widget recent-post">
@@ -217,10 +218,11 @@ document.body.querySelector('#alternate-button-container')
 					</div> -->
 					<!--/ End Single Widget -->
 				</div>
+				@endforeach
 			</div>
 			<div class="col-lg-9 col-md-8 col-12">
 				<div class="row">
-					<div class="col-12">
+					<div class="col-12 filter_category">
 						<!-- Shop Top -->
 						<div class="shop-top" style="background-color: 	#FFFFFF;">
 							<div class="shop-shorter">
@@ -263,7 +265,7 @@ document.body.querySelector('#alternate-button-container')
 						<!--/ End Shop Top -->
 					</div>
 				</div>
-				<div class="row show_filter">
+				<div class="row show_filter row-filter">
 					@foreach($product_cat as $product_arr1)
 					<div  class="col-lg-4 col-md-6 col-12">
 						<div class="single-product">
