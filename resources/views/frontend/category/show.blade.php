@@ -2,18 +2,26 @@
 @section('content')
 <style>
 /* width */
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
+  border-radius: 20px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
+
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #888;
 }
 
 /* Handle on hover */
@@ -290,11 +298,15 @@ document.body.querySelector('#alternate-button-container')
 							<div class="product-content">
 								<h3 style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_arr1->alias])}}">{{$product_arr1->title}}</a></h3>
 								<div class="product-price" style="text-align: center; color: red;">
+									@if($product_arr1->price > 0)
 									@if($product_arr1->sale_price>0)
 									<span class="old" style="color:#a0a0a0;">{{number_format($product_arr1->price)}}đ</span>
 									<span>{{number_format($product_arr1->sale_price)}}đ</span>
 									@else
 									<span>{{number_format($product_arr1->price)}}đ</span>
+									@endif
+									@else
+									<span>Liên hệ</span>
 									@endif
 
 							

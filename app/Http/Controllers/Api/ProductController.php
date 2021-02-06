@@ -239,12 +239,17 @@ class ProductController extends Controller {
                             <div class="product-content">
                                 <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
                                  <div class="product-price" style="text-align: center; color: red;">';
+                                if($product_arr1->price > 0){
                                 if($product_arr1->sale_price>0){
                                 $output.='<span class="old" style="color:#a0a0a0;">'.number_format($product_arr1->sale_price).'đ'.'</span>
                                  <span>'.number_format($product_arr1->price).'đ'.'</span>';
                                 }
                                 else{
                                 $output.='<span>'.number_format($product_arr1->price).'đ'.'</span>';
+                                }
+                                }
+                                else{
+                                  $output.='<span>'.'Liên hệ'.'</span>';
                                 }
                          
 
@@ -339,14 +344,18 @@ class ProductController extends Controller {
                             <div class="product-content">
                                 <h3 style="text-align: center;"><a href="'.route('product.detail',['alias'=>$product_arr1->alias]).'" src="'.$product_arr1->images.'">'.$product_arr1->title.'</a></h3>
                                 <div class="product-price" style="text-align: center; color: red;">';
-                               if($product_arr1->sale_price>0){
+                                if($product_arr1->price > 0){
+                                if($product_arr1->sale_price>0){
                                 $output.='<span class="old" style="color:#a0a0a0;">'.number_format($product_arr1->sale_price).'đ'.'</span>
                                  <span>'.number_format($product_arr1->price).'đ'.'</span>';
                                 }
                                 else{
                                 $output.='<span>'.number_format($product_arr1->price).'đ'.'</span>';
                                 }
-                         
+                                }
+                                else{
+                                  $output.='<span>'.'Liên hệ'.'</span>';
+                                }
 
                                 $output.='</div>
                             </div>
