@@ -177,7 +177,7 @@
                                         @php
                                             $dem=0;
                                         @endphp
-                                     @if($count_parent_variant!=0)
+                                       @if($count_parent_variant!=0)
                                         @foreach($parent_variant as $key_variant => $parent_variant1)
                                         @php
                                             $dem=0;

@@ -174,7 +174,7 @@ class ProductController extends Controller {
         }
         $parent_variant=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('product_attribute.is_variant',1)->get()->groupBy('parent_id');
         $count_parent_variant=count($parent_variant);
-        $product_options=DB::table('product_option')->where('product_id',$id)->orderBy('option_number','asc')->get();
+        $product_options=DB::table('product_option')->where('product_id',$id)->get();
         $options=$product_options->groupBy('option_number');
         $price_option=DB::table('option_detail')->where('product_id',$id)->get();
         $attribute_names=$product_options->unique('parent_name');
