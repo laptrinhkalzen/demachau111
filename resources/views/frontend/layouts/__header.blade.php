@@ -167,12 +167,10 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
                 <!-- Topbar -->
-        <div class="topbar" style="background-color: white;color: #283988;" >
+        <div class="topbar" style="background-color: #283988;color: white;" >
             <div class="container">
-                <div class="row" style="text-align: right;">
-                    <a href="#" class="single-icon" onclick="open_giohangpc()" style="float: right;"><i class="ti-bag" ></i><span class="total-count" id="cart-count" style="float: right;">{{$count_cart}}</span></a>
-                    </div>
-<!--                     <div class="col-lg-3 col-md-12 col-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-12">
                         <div class="top-left">
                             <ul class="list-main">
                                 <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span style="vertical-align: -webkit-baseline-middle"> Hotline miễn phí: 1900 3052 (8:00 - 21:00)</span></li>
@@ -195,17 +193,10 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     </div>
                     <div class="col-lg-3 col-md-12 col-12">
                         <div class="top-left">
-                            <ul class="list-main">
-                                <li><i class="fa fa-credit-card-alt" aria-hidden="true"></i><span style="vertical-align: -webkit-baseline-middle">Trả góp lãi xuất 0%</span></li>
-                            </ul>
+                            <a href="#" class="single-icon" onclick="open_giohangpc()" style=""><img src="{{asset('public/icon/cart-svg-white.svg')}}" style="color: white;width: 15px;vertical-align: -webkit-baseline-middle;" ><span class="total-count" id="cart-count" style="color:white;border-radius: 50%;padding:0 3px;background-color: #ea1621">{{$count_cart}}</span><span class="pl-2" style="vertical-align: -webkit-baseline-middle;">Giỏ hàng<span></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-12 col-12">
-                        <form class="search-form" action="{{route('product.search')}}" method="GET">
-                        <input name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
-                        <button class="btnn"><i class="ti-search"></i></button>
-                        </form>
-                    </div> -->
+                </div>
             </div>
         </div>
         <div class="navbar-mobile container" style="background-color: #283988;padding: 10px;">
@@ -380,30 +371,27 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                             <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo" style="margin-top:15px !important;"></a>
                             </div>
                             <div class="col-lg-9" style="text-align: center;">
-                                <div class="container">
+                                <div class="container" style="padding-top: 5px;">
                                     <div class="row">
-                                        <div class="col-lg-3 ">
+                                        <div class="col-lg-3 dem-hover">
                                             <img class="dem-hover" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;cursor: pointer;">
                                             <br>Nệm
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-3 changoi-hover">
                                             <img class="changoi-hover" src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;cursor: pointer;">
-
-                                            <br>Chăn gối
-
+                                            <br>Chăn,gối
                                         </div>
-
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-3 news-hover">
                                             <a href="{{url('/tin-tuc')}}">
-                                            <img class="news-hover" src="{{asset('public/icon/sale.svg')}}" style="width: 60%;cursor: pointer;">
+                                            <img class="news-hover" src="{{asset('public/icon/news-2.svg')}}" style="width: 60%;cursor: pointer;">
                                             </a>
                                             <br>Tin tức
                                         </div>
                                            <div class="col-lg-3">
-                                             <a href="{{url('/lien-he')}}">
-                                            <img class="spks-hover" src="{{asset('public/icon/pillow.svg')}}" style="width: 60%;cursor: pointer;">
+                                            <a href="{{url('/lien-he')}}">
+                                            <img class="spks-hover" src="{{asset('public/icon/contact.svg')}}" style="width: 60%;cursor: pointer;">
+                                            </a>
                                             <br>Liên hệ
-                                        </a>
                                         </div>
                                     </div>
                                 </div>
@@ -452,11 +440,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                        @if($key_nem==$danh_muc_tra->id)
                 <div class="col-2">
                    
-                   
-
-
-                    <ul style="color: #283988;"><a href="{{route('category.show',['alias'=>$danh_muc_tra->alias])}}">{{$danh_muc_tra->name}}</a>
-
+                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra->alias])}}"><b>{{$danh_muc_tra->name}}</b></a><hr style="color: #283988;width: 100px;">
                         @foreach($product_nem1 as $product_nem2)
                             <li><a href="{{route('category.show',['alias'=>$product_nem2->alias])}}">{{$product_nem2->name}}</a></li>
                         @endforeach
@@ -477,7 +461,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-2">
                    
                    
-                    <ul style="color: #283988;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}">{{$danh_muc_tra2->name}}</a>
+                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a><hr style="color: #283988;width: 100px;">
                         @foreach($product_changoi1 as $product_changoi2)
                             <li><a href="{{route('category.show',['alias'=>$product_changoi2->alias])}}">{{$product_changoi2->name}}</a></li>
                         @endforeach

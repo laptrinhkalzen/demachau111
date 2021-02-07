@@ -69,7 +69,7 @@ margin-top: 0px;
                 @foreach($anh_duoi_slide as $key =>$anh_slide)
 
             <div class="col-lg-12 col-md-12 col-12" style=" margin-bottom:5px; padding-right: 0px !important;padding-left: 5px !important;">
-                <div class="single-banner">
+                <div class="single-banner banner-slide">
                     <img src="{{$anh_slide->image}}" alt="#">
                 </div>
             </div>
