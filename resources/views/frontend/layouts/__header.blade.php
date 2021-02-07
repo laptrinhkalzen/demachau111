@@ -369,7 +369,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-3" style="height: 100%;">
-                            <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo" style="margin-top:15px !important;"></a>
+                            <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo" style="margin-top:20px !important;"></a>
                             </div>
                             <div class="col-lg-9" style="text-align: center;">
                                 <div class="container">
@@ -389,16 +389,16 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                              </a>
                                         </div>
                                         <div class="col-lg-3" style="height: 80px;">
-                                            <a href="{{url('/tin-tuc')}}">
-                                            <img class="news-hover" src="{{asset('public/icon/news-2.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
+                                            <a href="">
+                                            <img class="news-hover" src="{{asset('public/icon/wedding.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
                                             </a>
-                                            <br>Tin tức
+                                            <br>Wedding
                                         </div>
                                            <div class="col-lg-3" style="height: 80px;">
-                                            <a href="{{url('/lien-he')}}">
-                                            <img class="spks-hover" src="{{asset('public/icon/contact.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
+                                            <a href="">
+                                            <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
                                             </a>
-                                            <br>Liên hệ
+                                            <br>Flashsale
                                         </div>
                                     </div>
                                 </div>
@@ -411,7 +411,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-5" style="border-left: solid 1px rgb(40, 57, 136,0.5);border-right: solid 1px rgb(40, 57, 136,0.5);">
-                                <div class=" search-bar" style="width: 100%;margin-top: 10px;">
+                                <div class=" search-bar" style="width: 100%;margin-top: 15px;">
                                     <form action="{{route('product.search')}}" method="GET" >
                                         <input class="input-sm" name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
                                         <button class="btnn" style="background-color: #283988;"><i class="ti-search"></i></button>
@@ -422,13 +422,13 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                 <div class="container" >
                                     <div class="row">
                                         <div class="col-lg-2" style="padding: 0px !important;">
-                                            <img src="{{asset('public/icon/map-svg.svg')}}" style="width: 80%;margin-top: 10px;margin-left: 20px;cursor: pointer;">
+                                            <img src="{{asset('public/icon/map-svg.svg')}}" style="width: 80%;margin-top: 15px;margin-left: 20px;cursor: pointer;">
                                         </div>
-                                        <div class="col-lg-4" style="padding: 0px !important;">
+                                        <div class="col-lg-4" style="padding: 10px !important;">
                                             Tìm cửa hàng <b>quanh đây</b>
                                         </div>
-                                        <div class="col-lg-6" style="background-color: yellow;padding: 0px !important;text-align: center;background-color: #283988;color: white;height: 80px;cursor: pointer;">
-                                            Mua hàng gọi ngay <br><b>1900 3052</b>
+                                        <div class="col-lg-6" style="background-color: yellow;padding: 10px !important;text-align: center;background-color: #283988;color: white;height: 80px;cursor: pointer;">
+                                            <a href='tel:1900 3052' class="pt-3" >Mua hàng gọi ngay <br><b>1900 3052</b></a>
                                         </div>
                                     </div>
                                 </div>
