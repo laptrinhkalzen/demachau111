@@ -7,7 +7,14 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
+
 }
+ul,ul li{
+  /*list-style:none;*/
+  padding:0;
+  margin:0;
+}
+
 body {
 background-color: #7B1FA2
 }
