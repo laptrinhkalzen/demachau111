@@ -105,7 +105,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 
 @endif
 
-    <header class="header shop" >
+    <header class="header shop" style="">
         <div class="topbar-mobile">
             <div class="container">
             <div class="row">
@@ -170,7 +170,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         <div class="topbar" style="background-color: #283988;color: white;" >
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-12 col-12">
+                    <div class="col-lg-4 col-md-12 col-12">
                         <div class="top-left">
                             <ul class="list-main">
                                 <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span style="vertical-align: -webkit-baseline-middle"> Hotline miễn phí: 1900 3052 (8:00 - 21:00)</span></li>
@@ -191,7 +191,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-12 col-12">
+                    <div class="col-lg-2 col-md-12 col-12">
                         <div class="top-left">
                             <a href="#" class="single-icon" onclick="open_giohangpc()" style=""><img src="{{asset('public/icon/cart-svg-white.svg')}}" style="color: white;width: 15px;vertical-align: -webkit-baseline-middle;" ><span class="total-count" id="cart-count" style="color:white;border-radius: 50%;padding:0 3px;background-color: #ea1621">{{$count_cart}}</span><span class="pl-2" style="vertical-align: -webkit-baseline-middle;">Giỏ hàng<span></a>
                         </div>
