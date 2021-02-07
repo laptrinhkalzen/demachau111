@@ -381,19 +381,19 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-3 ">
-                                            <img class="dem-hover" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;">
+                                            <img class="dem-hover" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;cursor: pointer;">
                                             <br>Nệm
                                         </div>
                                         <div class="col-lg-3">
-                                            <img class="changoi-hover" src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;">
+                                            <img class="changoi-hover" src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;cursor: pointer;">
                                             <br>Chăn
                                         </div>
                                         <div class="col-lg-3">
-                                            <img class="spks-hover" src="{{asset('public/icon/pillow.svg')}}" style="width: 60%;">
+                                            <img class="spks-hover" src="{{asset('public/icon/pillow.svg')}}" style="width: 60%;cursor: pointer;">
                                             <br>Gối
                                         </div>
                                         <div class="col-lg-3">
-                                            <img class="news-hover" src="{{asset('public/icon/sale.svg')}}" style="width: 60%;">
+                                            <img class="news-hover" src="{{asset('public/icon/sale.svg')}}" style="width: 60%;cursor: pointer;">
                                             <br>Hàng Sale
                                         </div>
                                     </div>
@@ -418,12 +418,12 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                 <div class="container" >
                                     <div class="row">
                                         <div class="col-lg-2" style="padding: 0px !important;">
-                                            <img src="{{asset('public/icon/map-svg.svg')}}" style="width: 80%;margin-top: 10px;margin-left: 20px;">
+                                            <img src="{{asset('public/icon/map-svg.svg')}}" style="width: 80%;margin-top: 10px;margin-left: 20px;cursor: pointer;">
                                         </div>
                                         <div class="col-lg-4" style="padding: 0px !important;">
                                             Tìm cửa hàng <b>quanh đây</b>
                                         </div>
-                                        <div class="col-lg-6" style="background-color: yellow;padding: 0px !important;text-align: center;background-color: #283988;color: white;height: 71px;">
+                                        <div class="col-lg-6" style="background-color: yellow;padding: 0px !important;text-align: center;background-color: #283988;color: white;height: 71px;cursor: pointer;">
                                             Mua hàng gọi ngay <br><b>1800 2092</b>
                                         </div>
                                     </div>
@@ -461,6 +461,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
   $(".dem-hover").mouseover(function(){
       $('.dem-hover1').show(); 
   });
+    $('.dem-hover1').mouseover(function () {
+      $('.dem-hover1').show();      
+    });
   $('.dem-hover1').mouseout(function () {
       $('.dem-hover1').hide();      
 });
