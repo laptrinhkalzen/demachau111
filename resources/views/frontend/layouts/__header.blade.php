@@ -375,14 +375,14 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                     <div class="row">
                                        
                                         <div class="col-lg-3 dem-hover">
-                                             <a href="{{route('product.search?search=dem')}}">
+                                             <a href="{{url('search-product?search=dem')}}">
                                             <img class="dem-hover" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;cursor: pointer;">
                                             <br>Đệm
                                             </a>
                                         </div>
 
                                         <div class="col-lg-3 changoi-hover">
-                                            <a href="{{route('product.search?search=chan goi')}}">
+                                            <a href="{{url('search-product?search=chan goi')}}">
                                             <img class="changoi-hover" src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;cursor: pointer;">
                                             <br>Chăn gối
                                              </a>
