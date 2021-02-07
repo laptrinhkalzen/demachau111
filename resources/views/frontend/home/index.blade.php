@@ -28,7 +28,7 @@ margin-top: 0px;
 <!--/ End Header -->
 <!-- Slider Area -->
 <aside class="left"><a href="{{$banner_left->url}}"><img style="width: 150px; height: 540px;position: absolute;z-index: 99; " src="{{$banner_left->image}}"></a></aside>
-<section class="container hero-slider" style="background-color: transparent; margin-top:10px;">
+<section class="container hero-slider" style="background-color: transparent; margin-top:15px;">
     <!-- Single Slider -->
     <div class=" single-slider">
         <div class="row">
@@ -70,7 +70,7 @@ margin-top: 0px;
 
             <div class="col-lg-12 col-md-12 col-12" style=" margin-bottom:5px; padding-right: 0px !important;padding-left: 5px !important;">
                 <div class="single-banner banner-slide">
-                    <img src="{{$anh_slide->image}}" alt="#">
+                    <img src="{{$anh_slide->image}}" alt="#" style="width: 100%;height: 119px;object-fit: cover;">
                 </div>
             </div>
               @if($key==3)
@@ -204,7 +204,7 @@ margin-top: 0px;
                 <div class="container" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">  
 
                     <div class="row" style="margin-right: 0px;">
-                        <span style="font-size: 20px;margin:auto;">Còn lại
+                        <span style="font-size: 20px;margin:auto;"><img src="/icon/coupon.svg" style="width: 20px;object-fit: cover;margin-right: 3px;">FLASH SALE:
 
                                     <strong id="day_mb" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>&nbspngày
                                     <strong id="hour_mb" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong><img src="/icon/two-dots.svg" style="width: 10px;object-fit: cover;margin-left: 3px;">
