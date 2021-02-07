@@ -362,7 +362,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             height: 300px;
         }
         </style> -->
-        <div class="container menu-pc-new" style="height: 70px;color: #283988;">
+        <div class="container menu-pc-new" style="height: 75px;color: #283988;">
             <div class="row">
                 <div class="col-lg-6" style="padding: 0px !important;">
                     <div class="container">
@@ -371,7 +371,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                             <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo" style="margin-top:15px !important;"></a>
                             </div>
                             <div class="col-lg-9" style="text-align: center;">
-                                <div class="container" style="padding-top: 5px;">
+                                <div class="container" style="padding: 5px;">
                                     <div class="row">
                                        
                                         <div class="col-lg-3 dem-hover">
@@ -426,7 +426,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                         <div class="col-lg-4" style="padding: 0px !important;">
                                             Tìm cửa hàng <b>quanh đây</b>
                                         </div>
-                                        <div class="col-lg-6" style="background-color: yellow;padding: 0px !important;text-align: center;background-color: #283988;color: white;height: 71px;cursor: pointer;">
+                                        <div class="col-lg-6" style="background-color: yellow;padding: 0px !important;text-align: center;background-color: #283988;color: white;height: 76px;cursor: pointer;">
                                             Mua hàng gọi ngay <br><b>1800 2092</b>
                                         </div>
                                     </div>
@@ -439,7 +439,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         </div>
 
         <!-- header của mean -->
-        <div class="container dem-hover1" style="height: 300px;display: none;">
+        <div class="container dem-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.5);">
             <div class="row">
                  @foreach($danh_muc_tra as $danh_muc_tra)
                      @foreach($product_nem as $key_nem => $product_nem1)
