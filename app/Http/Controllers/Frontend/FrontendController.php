@@ -55,8 +55,9 @@ class FrontendController extends Controller {
 
         // }
         
-        $product_changoi=DB::table('product')->where('status',1)->orWhere('meta_keywords','LIKE','%'.'chan'.'%')->get();
-        // dd($product_nem);
+        
+
+        
         $show = 1;
         $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('attribute.parent_id','!=','0')->get();
         $product_attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('attribute.parent_id','!=','0')->get();

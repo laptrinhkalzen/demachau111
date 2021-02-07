@@ -144,7 +144,7 @@ class ProductController extends Controller {
  
 
       public function search_product(Request $request) {
-        $product_cat=DB::table('product')->where('status',1)->where('alias','LIKE','%'.$request->search.'%')->orWhere('meta_keywords','LIKE','%'.$request->search.'%')->get();
+        $product_cat=DB::table('product')->where('status',1)->where('alias','LIKE','%'.$request->search.'%')->orWhere('keywords','LIKE','%'.$request->search.'%')->get();
         if(count($product_cat)>0){
         $have_product=1;
         $product_ids=$product_cat->pluck('id');
