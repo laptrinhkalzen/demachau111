@@ -64,7 +64,7 @@ margin-top: 0px;
                     </div>
                 </div>
             </div>
-            <div class="col-4 col-md-4">
+            <div class="col-4 col-md-4 responsive_3">
                <div class="row">
                 @foreach($anh_duoi_slide as $key =>$anh_slide)
 

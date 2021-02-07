@@ -14,6 +14,8 @@ class Frontend {
     }
 
     public function handle($request, Closure $next){
+        $danh_muc_tra=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
+        $product_nem=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->join('category','category.id','product_category.category_id')->where('product.status',1)->where('product.alias','LIKE','%'.'dem'.'%')->orWhere('product.meta_keywords','LIKE','%'.'dem'.'%')->get()->unique('category_id')->groupBy('parent_id');
         $config = \DB::table('config')->first();
         $brand = \DB::table('brand')->orderBy('order','asc')->get();
         $slide_chinh= DB::table('slide')->where('position',1)->where('status',1)->get();
@@ -64,6 +66,8 @@ class Frontend {
                     $total += $val['price']*$val['quantity'];
             }
         }
+        \View::share(['danh_muc_tra' => $danh_muc_tra]);
+        \View::share(['product_nem' => $product_nem]);
         \View::share(['share_config' => $config]);
         \View::share(['count_cart' => $count]);
         \View::share(['count_total' => $total]);

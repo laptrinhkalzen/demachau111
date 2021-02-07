@@ -44,6 +44,7 @@ class FrontendController extends Controller {
         
         $news = DB::table('news')->orderBy('ordering','asc')->where('status',1)->get();
         $danh_muc_cha=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
+
         //dd($danh_muc_cha);
         $product_danh_muc_cha=DB::table('product_category')->join('category','category.id','=','product_category.category_id')->join('product','product_category.product_id','=','product.id')->where('category.parent_id','!=',0)->where('product.status',1)->get();
         //dd($product_danh_muc_cha);
@@ -53,6 +54,9 @@ class FrontendController extends Controller {
         // foreach($danh_muc_con as $danh_muc_con){
 
         // }
+        
+        $product_changoi=DB::table('product')->where('status',1)->orWhere('meta_keywords','LIKE','%'.'chan'.'%')->get();
+        // dd($product_nem);
         $show = 1;
         $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('attribute.parent_id','!=','0')->get();
         $product_attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('attribute.parent_id','!=','0')->get();
@@ -99,7 +103,7 @@ class FrontendController extends Controller {
 
             //foreach( explode(',',$flashsale_product->images) as $value)
       
-        return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','product_sales','count_flashsale'));
+        return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','product_sales','count_flashsale','product_nem'));
     }
     
     public function event() {

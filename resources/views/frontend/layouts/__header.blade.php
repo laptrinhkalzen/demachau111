@@ -369,7 +369,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             height: 300px;
         }
         </style> -->
-        <div class="container" style="height: 70px;color: #283988;">
+        <div class="container " style="height: 70px;color: #283988;">
             <div class="row">
                 <div class="col-lg-6" style="padding: 0px !important;">
                     <div class="container">
@@ -381,19 +381,19 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-3 ">
-                                            <img class="cat-hover" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;">
+                                            <img class="dem-hover" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;">
                                             <br>Nệm
                                         </div>
                                         <div class="col-lg-3">
-                                            <img src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;">
+                                            <img class="changoi-hover" src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;">
                                             <br>Chăn
                                         </div>
                                         <div class="col-lg-3">
-                                            <img src="{{asset('public/icon/pillow.svg')}}" style="width: 60%;">
+                                            <img class="spks-hover" src="{{asset('public/icon/pillow.svg')}}" style="width: 60%;">
                                             <br>Gối
                                         </div>
                                         <div class="col-lg-3">
-                                            <img src="{{asset('public/icon/sale.svg')}}" style="width: 60%;">
+                                            <img class="news-hover" src="{{asset('public/icon/sale.svg')}}" style="width: 60%;">
                                             <br>Hàng Sale
                                         </div>
                                     </div>
@@ -435,26 +435,37 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
 
-        <div class="container menu-hover" style="height: 300px;display: none;">
+        <!-- header của mean -->
+        <div class="container dem-hover1" style="height: 300px;display: none;">
             <div class="row">
+                 @foreach($danh_muc_tra as $danh_muc_tra)
+                     @foreach($product_nem as $key_nem => $product_nem1)
+                       @if($key_nem==$danh_muc_tra->id)
                 <div class="col-2">
-                    <ul>123
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>
+                   
+                   
+                    <ul>{{$danh_muc_tra->name}}
+                        @foreach($product_nem1 as $product_nem2)
+                            <li>{{$product_nem2->name}}</li>
+                        @endforeach
+                    </ul>
                 </div>
-         
+                  @endif
+                @endforeach
+            @endforeach
             </div>
         </div>
+
         <script type="text/javascript">
             $(document).ready(function(){
-  $(".cat-hover").mouseover(function(){
-      $('.menu-hover').show(); 
+  $(".dem-hover").mouseover(function(){
+      $('.dem-hover1').show(); 
   });
-  $('.cat-hover').mouseout(function () {
-      $('.menu-hover').hide();      
+  $('.dem-hover1').mouseout(function () {
+      $('.dem-hover1').hide();      
 });
+
+
 
 });
         </script>

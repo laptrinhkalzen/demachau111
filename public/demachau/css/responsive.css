@@ -30,6 +30,11 @@ Version:1.0
 .breadcrumbs {
 	padding: 20px 0;
 }
+
+.responsive_3{
+	display: none;
+}
+
 .blog-single.grid .pagination{
 	float:none;
 	text-align:center;
