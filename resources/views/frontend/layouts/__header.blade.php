@@ -169,8 +169,8 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <!-- Topbar -->
         <div class="topbar" style="background-color: #283988;" >
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-12 col-12">
+                    <a href="#" class="single-icon" onclick="open_giohangpc()" style="float: right;"><i class="ti-bag" ></i><span class="total-count" id="cart-count" >{{$count_cart}}</span></a>
+<!--                     <div class="col-lg-3 col-md-12 col-12">
                         <div class="top-left">
                             <ul class="list-main">
                                 <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span style="vertical-align: -webkit-baseline-middle"> Hotline miễn phí: 1900 3052 (8:00 - 21:00)</span></li>
@@ -203,8 +203,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         <input name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
                         <button class="btnn"><i class="ti-search"></i></button>
                         </form>
-                    </div>
-                </div>
+                    </div> -->
             </div>
         </div>
         <div class="navbar-mobile container" style="background-color: #283988;padding: 10px;">
@@ -370,7 +369,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             height: 300px;
         }
         </style> -->
-        <div class="container" style="height: 70px;">
+        <div class="container" style="height: 70px;color: #283988;">
             <div class="row">
                 <div class="col-lg-6" style="padding: 0px !important;">
                     <div class="container">
