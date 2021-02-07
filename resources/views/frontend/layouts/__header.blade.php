@@ -444,41 +444,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
   <li>Milk</li>
 </ul>
                 </div>
-                <div class="col-2">
-                    <ul>123
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>
-                </div>
-                <div class="col-2">
-                    <ul>123
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>
-                </div>
-                <div class="col-2">
-                    <ul>123
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>
-                </div>
-                <div class="col-2">
-                    <ul>123
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>
-                </div>
-                <div class="col-2">
-                    <ul>123
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>
-                </div>
+         
             </div>
         </div>
         <script type="text/javascript">
@@ -494,7 +460,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         </script>
 
         <!-- Header Inner -->
-        <div class="header-inner" style="background-color: #283988;height: 44px;">
+      <!--   <div class="header-inner" style="background-color: #283988;height: 44px;">
             <div class="container">
                 <div class="cat-nav-head">
                     <div class="row" >
@@ -541,7 +507,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         </div>
                         <div class="col-lg-9 col-12">
                             <div class="menu-area">
-                                <!-- Main Menu -->
+                            
                                 <nav class="navbar navbar-expand-lg">
                                     <div class="navbar-collapse">   
                                         <div class="nav-inner"> 
@@ -571,7 +537,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                         </div>
                                     </div>
                                 </nav>
-                                <!--/ End Main Menu --> 
+          
                             </div>
                         </div>
 
@@ -579,7 +545,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--/ End Header Inner -->
     </header>
      <!-- <script type="text/javascript">

@@ -28,21 +28,22 @@ margin-top: 0px;
 <!--/ End Header -->
 <!-- Slider Area -->
 <aside class="left"><a href="{{$banner_left->url}}"><img style="width: 150px; height: 540px;position: absolute;z-index: 99; " src="{{$banner_left->image}}"></a></aside>
-<section class="container hero-slider" style="background-color: transparent;">
+<section class="container hero-slider" style="background-color: transparent; margin-top:10px;">
     <!-- Single Slider -->
     <div class=" single-slider">
         <div class="row">
             
-            <div class="col-lg-9">
+            <div class="col-md-8">
+                <div class="row">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                       </ol>
-                      <div style="width: 100%;" class="carousel-inner">
+                      <div class="carousel-inner">
                         @foreach($slide_chinh as $main_slide)
                         @if($main_slide->ordering ==1)
-                        <div class="carousel-item active">
+                        <div style="height: 100%;" class="carousel-item active">
                           <img class="d-block w-100" src="{{$main_slide->image}}" alt="First slide">
                         </div>
                         @else
@@ -57,32 +58,33 @@ margin-top: 0px;
                         <span class="sr-only">Previous</span>
                       </a>
                       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                       </a>
                     </div>
+                </div>
             </div>
-            <div class="col-3 col-lg-3 banner-slide">
+            <div class="col-4 col-md-4">
+               <div class="row">
                 @foreach($anh_duoi_slide as $key =>$anh_slide)
-           
-          
-            <div class="col-lg-12 col-md-12 col-12" style="padding-right: 0px !important;padding-left: 5px !important;">
+
+            <div class="col-lg-12 col-md-12 col-12" style=" margin-bottom:5px; padding-right: 0px !important;padding-left: 5px !important;">
                 <div class="single-banner">
                     <img src="{{$anh_slide->image}}" alt="#">
                 </div>
             </div>
-          
               @if($key==3)
               @break;
             @endif
             @endforeach
+            </div>
             </div>
         </div>
     </div>
     <!--/ End Single Slider -->
 </section>
 
-<section class="shop-blog">
+<!-- <section class="shop-blog">
     <div class="container">
         <div class="row">
             @foreach($anh_duoi_slide as $key =>$anh_slide)
@@ -116,9 +118,9 @@ margin-top: 0px;
                     <img src="https://demachau.com/wp-content/uploads/2020/11/banner-01.jpg" alt="#">
                 </div>
             </div> -->
-        </div>
+     <!--    </div>
     </div>
-</section>
+</section>  -->
 
 <!-- <section class="flash-sale-mobile">
         <div class="" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">
@@ -321,7 +323,7 @@ margin-top: 0px;
                 <div class="owl-carousel popular-slider">
                     <!-- Start Single Product -->
                     @foreach($product_danh_muc_cha as $product_danh_muc_cha1)
-                    @if($product_danh_muc_cha1->parent_id == $danh_muc_cha->id)
+                    @if($product_danh_muc_cha1->parent_id == $danh_muc_cha->id )
                     <div class="single-product">
                         <div class="product-img">
                             <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
