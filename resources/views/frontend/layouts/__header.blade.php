@@ -363,8 +363,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         }
         </style> -->
 
-        <div class="container menu-pc-new" style="height: 75px;color: #283988;">
-
+        <div class="container menu-pc-new" style="height: 80px;color: #283988;">
             <div class="row">
                 <div class="col-lg-6" style="padding: 0px !important;">
                     <div class="container">
@@ -378,14 +377,14 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                        
                                         <div class="col-lg-3 dem-hover">
                                              <a href="{{url('search-product?search=dem')}}">
-                                            <img class="dem-hover" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;cursor: pointer;">
+                                            <img class="hover-bg1" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;cursor: pointer;">
                                             <br>Đệm
                                             </a>
                                         </div>
 
                                         <div class="col-lg-3 changoi-hover">
                                             <a href="{{url('search-product?search=chan goi')}}">
-                                            <img class="changoi-hover" src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;cursor: pointer;">
+                                            <img class="hover-bg2" src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;cursor: pointer;">
                                             <br>Chăn gối
                                              </a>
                                         </div>
@@ -428,7 +427,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                         <div class="col-lg-4" style="padding: 0px !important;">
                                             Tìm cửa hàng <b>quanh đây</b>
                                         </div>
-                                        <div class="col-lg-6" style="background-color: yellow;padding: 0px !important;text-align: center;background-color: #283988;color: white;height: 76px;cursor: pointer;">
+                                        <div class="col-lg-6" style="background-color: yellow;padding: 0px !important;text-align: center;background-color: #283988;color: white;height: 81px;cursor: pointer;">
                                             Mua hàng gọi ngay <br><b>1800 2092</b>
                                         </div>
                                     </div>
@@ -462,7 +461,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
 
-           <div class="container changoi-hover1" style="height: 300px;display: none;">
+           <div class="container changoi-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.5);">
             <div class="row">
                  @foreach($danh_muc_tra_chan as  $danh_muc_tra2)
 
@@ -490,25 +489,31 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             $(document).ready(function(){
   $(".dem-hover").mouseover(function(){
       $('.dem-hover1').show();
-      $('.changoi-hover1').hide() 
+      $('.hover-bg1').css("border-bottom", "solid 3px #283988");
+      $('.changoi-hover1').hide(); 
+      $('.hover-bg2').css("border-bottom", "none");  
   });
     $('.dem-hover1').mouseover(function () {
       $('.dem-hover1').show();      
     });
   $('.dem-hover1').mouseout(function () {
-      $('.dem-hover1').hide();      
+      $('.dem-hover1').hide();
+        $('.hover-bg1').css("border-bottom", "none");      
 });
 
          
   $(".changoi-hover").mouseover(function(){
       $('.changoi-hover1').show(); 
       $('.dem-hover1').hide();
+      $('.hover-bg1').css("border-bottom", "none");
+        $('.hover-bg2').css("border-bottom", "solid 3px #283988"); 
   });
     $('.changoi-hover1').mouseover(function () {
       $('.changoi-hover1').show();      
     });
   $('.changoi-hover1').mouseout(function () {
-      $('.changoi-hover1').hide();      
+      $('.changoi-hover1').hide();  
+      $('.hover-bg2').css("border-bottom", "none");       
 });
 
 
