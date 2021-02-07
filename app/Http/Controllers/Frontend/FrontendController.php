@@ -51,7 +51,7 @@ class FrontendController extends Controller {
         
         $danh_muc_con=DB::table('category')->where('parent_id','!=',0)->where('type',4)->where('status',1)->get();
         // $danh_muc_con_pro=DB::table('category')->where('parent_id','!=',0)->where('type',4)->where('status',1)->get();
-        // foreach($danh_muc_con as $danh_muc_con){
+        // foreach($danh_muc_con as $danh_muc_con){ 
 
         // }
         
