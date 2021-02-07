@@ -105,7 +105,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 
 @endif
 
-    <header class="header shop">
+    <header class="header shop" >
         <div class="topbar-mobile">
             <div class="container">
             <div class="row">
@@ -362,7 +362,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             height: 300px;
         }
         </style> -->
+
         <div class="container menu-pc-new" style="height: 75px;color: #283988;">
+
             <div class="row">
                 <div class="col-lg-6" style="padding: 0px !important;">
                     <div class="container">
@@ -439,12 +441,14 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         </div>
 
         <!-- header của mean -->
+
         <div class="container dem-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.5);">
+
             <div class="row">
                  @foreach($danh_muc_tra as $danh_muc_tra)
                      @foreach($product_nem as $key_nem => $product_nem1)
                        @if($key_nem==$danh_muc_tra->id)
-                <div class="col-2">
+                <div class="col-2" >
                    
                     <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra->alias])}}"><b>{{$danh_muc_tra->name}}</b></a><hr style="color: #283988;width: 100px;">
                         @foreach($product_nem1 as $product_nem2)
