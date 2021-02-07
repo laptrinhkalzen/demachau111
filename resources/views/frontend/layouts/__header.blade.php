@@ -441,8 +441,8 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         </div>
 
         <!-- header của mean -->
-
-        <div class="container dem-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.5);">
+<!-- border-top: solid 1px rgb(40, 57, 136,0.5); -->
+        <div class="container dem-hover1" style="height: 300px;display: none;">
 
             <div class="row">
                  @foreach($danh_muc_tra as $danh_muc_tra)
