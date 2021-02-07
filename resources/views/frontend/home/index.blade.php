@@ -43,8 +43,9 @@ margin-top: 0px;
                       <div class="carousel-inner">
                         @foreach($slide_chinh as $main_slide)
                         @if($main_slide->ordering ==1)
-                        <div style="height: 100%;" class="carousel-item active">
-                          <img class="d-block w-100" src="{{$main_slide->image}}" alt="First slide">
+                        <div class="carousel-item active">
+                          <img style="height: 100%;
+  width: auto;" class="d-block w-100" src="{{$main_slide->image}}" alt="First slide">
                         </div>
                         @else
                         <div class="carousel-item">

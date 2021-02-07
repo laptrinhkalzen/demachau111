@@ -373,13 +373,19 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                             <div class="col-lg-9" style="text-align: center;">
                                 <div class="container" style="padding-top: 5px;">
                                     <div class="row">
+                                       
                                         <div class="col-lg-3 dem-hover">
+                                             <a href="{{route('product.search?search=dem')}}">
                                             <img class="dem-hover" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;cursor: pointer;">
-                                            <br>Nệm
+                                            <br>Đệm
+                                            </a>
                                         </div>
+
                                         <div class="col-lg-3 changoi-hover">
+                                            <a href="{{route('product.search?search=chan goi')}}">
                                             <img class="changoi-hover" src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;cursor: pointer;">
-                                            <br>Chăn,gối
+                                            <br>Chăn gối
+                                             </a>
                                         </div>
                                         <div class="col-lg-3 news-hover">
                                             <a href="{{url('/tin-tuc')}}">
