@@ -167,9 +167,11 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
                 <!-- Topbar -->
-        <div class="topbar" style="background-color: #283988;" >
+        <div class="topbar" style="background-color: white;color: #283988;" >
             <div class="container">
-                    <a href="#" class="single-icon" onclick="open_giohangpc()" style="float: right;"><i class="ti-bag" ></i><span class="total-count" id="cart-count" >{{$count_cart}}</span></a>
+                <div class="row" style="text-align: right;">
+                    <a href="#" class="single-icon" onclick="open_giohangpc()" style="float: right;"><i class="ti-bag" ></i><span class="total-count" id="cart-count" style="float: right;">{{$count_cart}}</span></a>
+                    </div>
 <!--                     <div class="col-lg-3 col-md-12 col-12">
                         <div class="top-left">
                             <ul class="list-main">
@@ -369,7 +371,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             height: 300px;
         }
         </style> -->
-        <div class="container " style="height: 70px;color: #283988;">
+        <div class="container menu-pc-new" style="height: 70px;color: #283988;">
             <div class="row">
                 <div class="col-lg-6" style="padding: 0px !important;">
                     <div class="container">
@@ -386,11 +388,11 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                         </div>
                                         <div class="col-lg-3">
                                             <img class="changoi-hover" src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;cursor: pointer;">
-                                            <br>Chăn
+                                            <br>Chăn,gối
                                         </div>
                                         <div class="col-lg-3">
-                                            <img class="spks-hover" src="{{asset('public/icon/pillow.svg')}}" style="width: 60%;cursor: pointer;">
-                                            <br>Gối
+                                            <img class="spks-hover" src="{{asset('public/icon/hotel-svg.svg')}}" style="width: 60%;cursor: pointer;">
+                                            <br>Khách sạn
                                         </div>
                                         <div class="col-lg-3">
                                             <img class="news-hover" src="{{asset('public/icon/sale.svg')}}" style="width: 60%;cursor: pointer;">
@@ -406,7 +408,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-lg-6" style="padding: 0px !important;">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-5" style="padding: 0px !important;">
+                            <div class="col-lg-5" style="border-left: solid 1px rgb(40, 57, 136,0.5);border-right: solid 1px rgb(40, 57, 136,0.5);">
                                 <div class=" search-bar" style="width: 100%;margin-top: 10px;">
                                     <form action="{{route('product.search')}}" method="GET" >
                                         <input class="input-sm" name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
@@ -444,7 +446,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-2">
                    
                    
-                    <ul>{{$danh_muc_tra->name}}
+                    <ul style="color: #283988;"><b>{{$danh_muc_tra->name}}</b>
                         @foreach($product_nem1 as $product_nem2)
                             <li>{{$product_nem2->name}}</li>
                         @endforeach

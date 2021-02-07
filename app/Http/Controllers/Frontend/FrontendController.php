@@ -103,7 +103,7 @@ class FrontendController extends Controller {
 
             //foreach( explode(',',$flashsale_product->images) as $value)
       
-        return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','product_sales','count_flashsale','product_nem'));
+        return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','product_sales','count_flashsale'));
     }
     
     public function event() {

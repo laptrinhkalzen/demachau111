@@ -1214,6 +1214,9 @@ display: none !important;
 .flashsale-pc{
 	display: none !important;
 }
+.menu-pc-new{
+	display: none !important;
+}
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
@@ -1905,4 +1908,5 @@ display: none !important;
 .flashsale-mobile{
 	display: none !important;
 }
+
 }
