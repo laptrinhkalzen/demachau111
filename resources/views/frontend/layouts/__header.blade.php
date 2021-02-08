@@ -388,11 +388,11 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                             <br>Chăn gối
                                              </a>
                                         </div>
-                                        <div class="col-lg-3" style="height: 80px;">
+                                        <div class="col-lg-3 hotel-hover" style="height: 80px;">
                                             <a href="{{url('search-product?search=khach san')}}">
                                             <img class="news-hover" src="{{asset('public/icon/wedding.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
                                             </a>
-                                            <br>Wedding
+                                            <br>Khách sạn
                                         </div>
                                            <div class="col-lg-3" style="height: 80px;">
                                             @if($count_fls==1)
@@ -488,6 +488,27 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
 
+           <div class="container hotel-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.5);">
+            <div class="row">
+                 @foreach($danh_muc_tra_chan as  $danh_muc_tra2)
+
+                     @foreach($product_khachsan as $key_changoi => $product_changoi1)
+                       @if($key_changoi==$danh_muc_tra2->id)
+                <div class="col-2">
+                   
+                   
+                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a><hr style="color: #283988;width: 100px;">
+                        @foreach($product_changoi1 as $product_changoi2)
+                            <li><a href="{{route('category.show',['alias'=>$product_changoi2->alias])}}">{{$product_changoi2->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+                  @endif
+                @endforeach
+            @endforeach
+            </div>
+        </div>
+
 
          
 
@@ -497,6 +518,8 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
       $('.dem-hover1').show();
       $('.dem-hover').css("border-bottom", "solid 3px #283988");
       $('.changoi-hover1').hide(); 
+      $('.hotel-hover1').hide();
+      $('.hotel-hover1').css("border-bottom", "none"); 
       $('.changoi-hover').css("border-bottom", "none");  
   });
     $('.dem-hover1').mouseover(function () {
@@ -511,7 +534,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
   $(".changoi-hover").mouseover(function(){
       $('.changoi-hover1').show(); 
       $('.dem-hover1').hide();
+      $('.hotel-hover1').hide(); 
       $('.dem-hover').css("border-bottom", "none");
+       $('.hotel-hover').css("border-bottom", "none");
         $('.changoi-hover').css("border-bottom", "solid 3px #283988"); 
   });
     $('.changoi-hover1').mouseover(function () {
@@ -521,6 +546,25 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
       $('.changoi-hover1').hide();  
       $('.changoi-hover').css("border-bottom", "none");       
 });
+
+   $(".hotel-hover").mouseover(function(){
+      $('.hotel-hover1').show(); 
+      $('.dem-hover1').hide();
+      $('.changoi-hover1').hide();
+      $('.dem-hover').css("border-bottom", "none");
+      $('.changoi-hover').css("border-bottom", "none");
+      $('.hotel-hover').css("border-bottom", "solid 3px #283988"); 
+  });
+    $('.hotel-hover1').mouseover(function () {
+      $('.hotel-hover1').show();      
+    });
+  $('.hotel-hover1').mouseout(function () {
+      $('.hotel-hover1').hide();  
+      $('.hotel-hover').css("border-bottom", "none");       
+});
+
+
+
 
 
 
