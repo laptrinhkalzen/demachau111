@@ -193,7 +193,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     </div>
                     <div class="col-lg-2 col-md-12 col-12">
                         <div class="top-left">
-                            <a href="#" class="single-icon " onclick="open_giohangpc()" style=""><img src="{{asset('public/icon/cart-svg-white.svg')}}" style="color: #283988;width: 15px;vertical-align: -webkit-baseline-middle;" ><span class="total-count" id="cart-count" style="color:white;border-radius: 50%;padding:0 3px;background-color: #ea1621">{{$count_cart}}</span><span class="pl-2" style="vertical-align: -webkit-baseline-middle;">Giỏ hàng<span></a>
+                            <a href="#" class="single-icon " onclick="open_giohangpc()" style=""><img src="{{asset('public/icon/cart-svg.svg')}}" style="color: #283988;width: 15px;vertical-align: -webkit-baseline-middle;" ><span class="total-count" id="cart-count" style="color:white;border-radius: 50%;padding:0 3px;background-color: #ea1621;font-size: 12px;">{{$count_cart}}</span><span class="pl-1" style="vertical-align: -webkit-baseline-middle;font-size: 12px;">Giỏ hàng<span></a>
                         </div>
                     </div>
                 </div>
