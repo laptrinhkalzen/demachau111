@@ -22,7 +22,7 @@ hr.ke_vach {
 border-top: 0.5px dashed grey;
 }
 .carousel-inner img {
-width: 100%;
+width: 100%;  
 height: 100%
 }
 #custCarousel .carousel-indicators {

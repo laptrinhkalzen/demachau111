@@ -167,7 +167,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
                 <!-- Topbar -->
-        <div class="topbar" style="background-color: #f5f8ff;color: #717d9b;" >
+        <div class="topbar" style="background-color: #f5f8ff;color: #2e3f67;" >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-12">
@@ -389,15 +389,21 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                              </a>
                                         </div>
                                         <div class="col-lg-3" style="height: 80px;">
-                                            <a href="">
+                                            <a href="{{url('search-product?search=khach san')}}">
                                             <img class="news-hover" src="{{asset('public/icon/wedding.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
                                             </a>
                                             <br>Wedding
                                         </div>
                                            <div class="col-lg-3" style="height: 80px;">
-                                            <a href="">
+                                            @if($count_fls==1)
+                                            <a href="{{route('flashsale.show')}}">
                                             <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
                                             </a>
+                                            @else
+                                            <a href="{{route('flashsale.show')}}">
+                                            <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
+                                            </a>
+                                            @endif
                                             <br>Flashsale
                                         </div>
                                     </div>
