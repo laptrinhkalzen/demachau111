@@ -8,6 +8,11 @@
         -webkit-line-clamp: 2; /* number of lines to show */
         -webkit-box-orient: vertical;
     }
+    ul,ul li{
+  list-style:square;
+  padding:0;
+  margin:0;
+}
     .breadcrumbs{
         padding: 10px;
     }
