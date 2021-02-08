@@ -10,7 +10,7 @@
 
 }
 ul,ul li{
-  /*list-style:none;*/
+  list-style:square;
   padding:0;
   margin:0;
 }
