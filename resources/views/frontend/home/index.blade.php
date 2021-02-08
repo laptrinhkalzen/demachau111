@@ -27,7 +27,7 @@ margin-top: 0px;
 </style>
 <!--/ End Header -->
 <!-- Slider Area -->
-<aside class="left"><a href="{{$banner_left->url}}"><img style="width: 150px; height: 540px;position: absolute;z-index: 99; " src="{{$banner_left->image}}"></a></aside>
+<!-- <aside class="left"><a href="{{$banner_left->url}}"><img style="width: 150px; height: 540px;position: absolute;z-index: 99; " src="{{$banner_left->image}}"></a></aside> -->
 <section class="container hero-slider" style="background-color: transparent; margin-top:15px;">
     <!-- Single Slider -->
     <div class=" single-slider">
@@ -771,7 +771,7 @@ document.getElementById("countdown_mobile").innerHTML = "EXPIRED";
 </script>
 @endif
 
-<aside class="right"><a href="{{$banner_right->url}}"><img style="width: 150px;  height: 540px;position:absolute;right:0;" src="{{$banner_right->image}}"></img></a></aside>
+<!-- <aside class="right"><a href="{{$banner_right->url}}"><img style="width: 150px;  height: 540px;position:absolute;right:0;" src="{{$banner_right->image}}"></img></a></aside> -->
 <!-- Modal end -->
 <!-- Start Footer Area -->
 <script>
