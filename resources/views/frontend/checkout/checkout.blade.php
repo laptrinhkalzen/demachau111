@@ -83,7 +83,7 @@
 					<div class="col-md-12 col-lg-12" style="background-color:white;">	
 					<p class="mt-4 mb-3" style="font-size:18px;"><span class="mr-2" style="border: solid 1px #283988; border-radius: 50%;padding: 0 10px;background-color: #283988;color: white;font-size: 32px;">1</span><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
-							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px;">
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
 							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked=""  id="btn-tienmat" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>
 							  <span class="checkmark"></span>
 							<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
