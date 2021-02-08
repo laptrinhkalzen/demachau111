@@ -605,13 +605,13 @@ ul.left-icon.hotline {
 .header.shop .top-left .list-main li:first-child{
 	padding-left:0;
 	font-size: 12px;
-	color: #fff;
+	color: #717d9b;
 }
 .header.shop .top-left .list-main li i{
 	display: inline-block;
 	margin-right: 4px;
 	font-size: 11px;
-	color: #fff;
+	color: #717d9b;
 	position: relative;
 	top: 3px;
 }
