@@ -930,7 +930,7 @@ ul.left-icon.hotline {
 }
 .header.shop .search-bar .btnn {
 	height: 50px;
-	line-height: 53px;
+/*	line-height: 53px;*/
 	width: 62px;
 	text-align: center;
 	font-size: 18px;

@@ -413,14 +413,14 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         </div>
                     </div>                                                            
                 </div>
-                <div class="col-lg-6" style="padding: 0px !important;">
+                <div class="col-lg-6" style="padding: 0px !important;"> 
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-5" style="border-left: solid 1px rgb(40, 57, 136,0.5);border-right: solid 1px rgb(40, 57, 136,0.5);">
-                                <div class=" search-bar" style="width: 100%;margin-top: 15px;">
+                                <div class=" search-bar" style="width: 100%;margin-top: 15px;height: 40px;">
                                     <form action="{{route('product.search')}}" method="GET" >
-                                        <input class="input-sm" name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search">
-                                        <button class="btnn" style="background-color: #283988;"><i class="ti-search"></i></button>
+                                        <input class="input-sm" name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search" style="position: absolute;height: 40px;">
+                                        <button class="btnn" style="background-color: #283988;height: 40px;width: 40px;"><i class="ti-search"></i></button>
                                     </form>
                                 </div>
                             </div>
