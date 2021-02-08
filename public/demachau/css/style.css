@@ -3529,7 +3529,8 @@ padding-left: 0px;
 	display: inline-block;
 	position: absolute;
 	right: -12px;
-	top: 4px;
+	left: 15px;
+	top: 10px;
 	font-size: 16px;
 }
 .shop.checkout .form .form-group input {

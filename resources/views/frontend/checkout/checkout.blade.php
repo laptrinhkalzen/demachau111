@@ -83,13 +83,13 @@
 					<div class="col-md-12 col-lg-12" style="background-color:white;">	
 					<p class="mt-4 mb-3" style="font-size:18px;"><span class="mr-2" style="border: solid 1px #283988; border-radius: 50%;padding: 0 10px;background-color: #283988;color: white;font-size: 32px;">1</span><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
-							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;">
 							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked=""  id="btn-tienmat" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>
 							  <span class="checkmark"></span>
 							<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
 							</label>
 						<hr>
-							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;">
 							<input class="mr-2" type="radio" name="payment_method" value="1" id="btn-chuyenkhoan" style="width: auto;vertical-align: middle; "><b>Chuyển khoản qua ngân hàng</b>
 							  <span class="checkmark"></span>
 							<div style="display: none;" class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
@@ -99,7 +99,7 @@
 							<br>Nội dung chuyển khoản: Họ tên + SĐT</div>
 							</label>
 						<hr>
-							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;">
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;">
 							<input class="mr-2" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Ngân hàng</b>
 							  <span class="checkmark"></span>
 							<div style="display: none;" class="2 box" >Thanh toán qua VNPAY.</div>
@@ -262,8 +262,8 @@
 						<!--/ End Order Widget -->
 						<!-- Order Widget -->
 
-						<div class="single-widget payement">
-							<input placeholder="Điền mã giảm giá" type="text" id="coupon" name="coupon">
+						<div class="single-widget payement" style="padding-left: 0px;padding-right: 15px;">
+							<input placeholder="Điền mã giảm giá" type="text" id="coupon" name="coupon" style="width: 65%;">
 							<input type="button" id="apply_coupon"  value="Áp dụng" class="btn  mb-4 btn-apdung">
 							<div id="coupon-success" style="display: none; color:#3a559f;">Áp dụng mã giảm giá thành công</div>
 							<div id="coupon-fail" style="display: none; color: red;">Áp dụng mã giảm giá không đúng hoặc không tồn tại!</div>
@@ -273,13 +273,13 @@
 							<table class="table" style="font-size: 120%">
 									<thead>
 									<tr>
-										<td style="text-align: center;" scope="col">Giá tạm tính</td>
-										<td id="sub_total" style="text-align: center; color:red;" scope="col">{{number_format($total)}} đ</td>
+										<td style="text-align: left;padding-left: 0px;" scope="col">Giá tạm tính</td>
+										<td id="sub_total" style="text-align: right; color:red;" scope="col">{{number_format($total)}} đ</td>
 										
 									</tr>
 									<tr>
-										<td style="text-align: center;">Thành  tiền</td>
-										<td name="final_total" id="final_total" style="text-align: center; color:red;">{{number_format($total)}} đ</td>
+										<td style="text-align: left;padding-left: 0px;">Thành  tiền</td>
+										<td name="final_total" id="final_total" style="text-align: right; color:red;">{{number_format($total)}} đ</td>
 										
 									</tr>
 								</thead>
