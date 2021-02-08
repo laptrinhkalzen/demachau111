@@ -453,7 +453,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                  @foreach($danh_muc_tra as $danh_muc_tra)
                      @foreach($product_nem as $key_nem => $product_nem1)
                        @if($key_nem==$danh_muc_tra->id)
-                <div class="col-2" >
+                <div class="col-3" >
                    
                     <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra->alias])}}"><b>{{$danh_muc_tra->name}}</b></a>
                         @foreach($product_nem1 as $product_nem2)
@@ -473,7 +473,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 
                      @foreach($product_changoi as $key_changoi => $product_changoi1)
                        @if($key_changoi==$danh_muc_tra2->id)
-                <div class="col-2">
+                <div class="col-3">
                    
                    
                     <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
@@ -494,7 +494,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 
                      @foreach($product_khachsan as $key_changoi => $product_changoi1)
                        @if($key_changoi==$danh_muc_tra2->id)
-                <div class="col-2">
+                <div class="col-3">
                    
                    
                     <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
