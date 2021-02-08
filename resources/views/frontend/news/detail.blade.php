@@ -9,7 +9,7 @@
         -webkit-box-orient: vertical;
     }
     ul,ul li{
-  list-style:square;
+  list-style:disc;
   padding:0;
   margin-left:7px;
 }
