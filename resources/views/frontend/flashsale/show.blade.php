@@ -78,6 +78,7 @@ document.body.querySelector('#alternate-button-container')
 			<i class="fa fa-times fa-2x" onclick="w3_close()" style="display:none;position:fixed;top: 25px;right: 10px;z-index: 1000" id="closeFilter"></i>
 		</div>
 	</div>
+	@if($count_flashsale==1)
 
 	<div class="container">
 		<div class="row">	
@@ -165,6 +166,19 @@ document.body.querySelector('#alternate-button-container')
 		</div>
 	</div>
 </div>
+@else
+<div class="container" >
+<div class="row" style="height: auto;">
+			
+			<div class="container" style="margin-top: auto; margin-bottom: auto;">
+				<div class="row">
+				<img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/62d2399b89039bd1dc90ca2d50d3e802.png" style="margin:auto;width: 300px;object-fit: cover;">
+				</div>
+			    <h3 class="mb-5" style="text-align: center;">Hiện tại chưa có chương trình Flashsale nào!</h3>
+			</div>
+		</div>
+	</div>
+@endif
 
 
 </section>
@@ -196,6 +210,7 @@ document.body.querySelector('#alternate-button-container')
 
 
 <!-- Modal -->
+@if($count_flashsale)
 <script type="text/javascript">
 $(document).ready(function(){
    
@@ -234,6 +249,7 @@ document.getElementById("countdown").innerHTML = "EXPIRED";
 
 });
 </script>
+@endif
 
 
 <script>

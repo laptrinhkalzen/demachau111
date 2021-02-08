@@ -362,6 +362,7 @@ margin-top: 0px;
                                 </div>
                             </div>
                         </div>
+                        @if($count_flashsale==1)
                         <div class="product-content">
                             
                             <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
@@ -386,11 +387,22 @@ margin-top: 0px;
                                  <span style="color:red;">Liên hệ</span>
                                 @endif
 
-                               
-                                
-
                             </div>
                         </div>
+                        @else
+                            <div class="product-content">
+                            
+                            <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">{{$product_danh_muc_cha1->title}}</a></h3>
+                            <div class="product-price" style="text-align: center;">
+                                
+                                @if($product_danh_muc_cha1->price>0)
+                                <span style="color:red;">{{number_format($product_danh_muc_cha1->price)}}đ</span>
+                                @else
+                                 <span style="color:red;">Liên hệ</span>
+                                @endif
+                            </div>
+                        </div>
+                        @endif
                     </div>
                     @endif
                     @endforeach
