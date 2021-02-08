@@ -152,7 +152,7 @@ class FrontendController extends Controller {
         if($flashsale){
             $count_flashsale=1;
         
-        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('product.status',1)->where('flash_sale_id',$flashsale->id)->paginate(4);
+        $flashsale_products=DB::table('flash_sale_product')->join('product','product.id','=','flash_sale_product.product_id')->where('product.status',1)->where('flash_sale_id',$flashsale->id)->paginate(16);
         
         
         foreach ($flashsale_products as $key => $value) {
