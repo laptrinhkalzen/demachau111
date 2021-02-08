@@ -455,9 +455,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                        @if($key_nem==$danh_muc_tra->id)
                 <div class="col-2" >
                    
-                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra->alias])}}"><b>{{$danh_muc_tra->name}}</b></a><hr style="color: #283988;width: 100px;">
+                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra->alias])}}"><b>{{$danh_muc_tra->name}}</b></a>
                         @foreach($product_nem1 as $product_nem2)
-                            <li><a href="{{route('category.show',['alias'=>$product_nem2->alias])}}">{{$product_nem2->name}}</a></li>
+                            <li class="show_li"><a href="{{route('category.show',['alias'=>$product_nem2->alias])}}">{{$product_nem2->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -476,9 +476,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-2">
                    
                    
-                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a><hr style="color: #283988;width: 100px;">
+                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
                         @foreach($product_changoi1 as $product_changoi2)
-                            <li><a href="{{route('category.show',['alias'=>$product_changoi2->alias])}}">{{$product_changoi2->name}}</a></li>
+                            <li class="show_li"><a href="{{route('category.show',['alias'=>$product_changoi2->alias])}}">{{$product_changoi2->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -497,9 +497,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-2">
                    
                    
-                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a><hr style="color: #283988;width: 100px;">
+                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
                         @foreach($product_changoi1 as $product_changoi2)
-                            <li><a href="{{route('category.show',['alias'=>$product_changoi2->alias])}}">{{$product_changoi2->name}}</a></li>
+                           <li class="show_li"><a href="{{route('category.show',['alias'=>$product_changoi2->alias])}}">{{$product_changoi2->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -691,6 +691,11 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         });
         });
    </script> -->
+   <style type="text/css">
+       .show_li{
+            list-style: square;
+       }
+   </style>
 
     <script type="text/javascript">
         $(document).ready(function(){
