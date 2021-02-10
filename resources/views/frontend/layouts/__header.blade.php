@@ -377,31 +377,31 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                        
                                         <div class="col-lg-3 dem-hover" style="height: 80px;">
                                              <a href="{{url('search-product?search=dem')}}">
-                                            <img class="hover-bg1" src="{{asset('public/icon/mattress.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
+                                            <img class="hover-bg1" src="{{asset('public/icon/mattress.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
                                             <br>Đệm
                                             </a>
                                         </div>
 
                                         <div class="col-lg-3 changoi-hover" style="height: 80px;">
                                             <a href="{{url('search-product?search=chan goi')}}">
-                                            <img class="hover-bg2" src="{{asset('public/icon/blanked.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
+                                            <img class="hover-bg2" src="{{asset('public/icon/blanked.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
                                             <br>Chăn gối
                                              </a>
                                         </div>
                                         <div class="col-lg-3 hotel-hover" style="height: 80px;">
                                             <a href="{{url('search-product?search=khach san')}}">
-                                            <img class="news-hover" src="{{asset('public/icon/wedding.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
+                                            <img class="news-hover" src="{{asset('public/icon/wedding.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
                                             </a>
                                             <br>Khách sạn
                                         </div>
                                            <div class="col-lg-3" style="height: 80px;">
                                             @if($count_fls==1)
                                             <a href="{{route('flashsale.show')}}">
-                                            <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
+                                            <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
                                             </a>
                                             @else
                                             <a href="{{route('flashsale.show')}}">
-                                            <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 60%;cursor: pointer;vertical-align: text-top;">
+                                            <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
                                             </a>
                                             @endif
                                             <br>Flashsale
@@ -416,7 +416,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-lg-6" style="padding: 0px !important;"> 
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-5" style="border-left: solid 1px rgb(40, 57, 136,0.5);border-right: solid 1px rgb(40, 57, 136,0.5);height: 80px;">
+                            <div class="col-lg-5" style="border-left: solid 1px rgb(40, 57, 136,0.2);border-right: solid 1px rgb(40, 57, 136,0.2);height: 80px;">
                                 <div class=" search-bar" style="width: 100%;margin-top: 20px;height: 40px;">
                                     <form action="{{route('product.search')}}" method="GET" >
                                         <input class="input-sm" name="search" placeholder="Nhập từ khoá" autocomplete="off" type="search" style="position: absolute;height: 40px;">
@@ -428,13 +428,13 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                 <div class="container" >
                                     <div class="row">
                                         <div class="col-lg-2" style="padding: 0px !important;">
-                                            <img src="{{asset('public/icon/map-svg.svg')}}" style="width: 80%;margin-top: 15px;margin-left: 20px;cursor: pointer;">
+                                            <img src="{{asset('public/icon/map-svg.svg')}}" style="width: 60%;margin-top: 20px;margin-left: 20px;cursor: pointer;">
                                         </div>
                                         <div class="col-lg-4" style="padding: 10px !important;">
-                                            Tìm cửa hàng <b>quanh đây</b>
+                                            Tìm cửa hàng <b style="font-size: 18px;">quanh đây</b>
                                         </div>
                                         <div class="col-lg-6" style="background-color: yellow;padding: 10px !important;text-align: center;background-color: #283988;color: white;height: 80px;cursor: pointer;">
-                                            <a href='tel:1900 3052' class="pt-3" >Mua hàng gọi ngay <br><b>1900 3052</b></a>
+                                            <a href='tel:1900 3052' class="pt-3" >Mua hàng gọi ngay <br><b style="font-size: 18px;">1900 3052</b></a>
                                         </div>
                                     </div>
                                 </div>
@@ -447,7 +447,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 
         <!-- header của mean -->
 <!-- border-top: solid 1px rgb(40, 57, 136,0.5); -->
-        <div class="container dem-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.5);">
+        <div class="container dem-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
 
             <div class="row">
                  @foreach($danh_muc_tra as $danh_muc_tra)
@@ -516,7 +516,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             $(document).ready(function(){
   $(".dem-hover").mouseover(function(){
       $('.dem-hover1').show();
-      $('.dem-hover').css("border-bottom", "solid 3px #283988");
+      $('.dem-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)");
       $('.changoi-hover1').hide(); 
       $('.hotel-hover1').hide();
       $('.hotel-hover1').css("border-bottom", "none"); 
@@ -537,7 +537,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
       $('.hotel-hover1').hide(); 
       $('.dem-hover').css("border-bottom", "none");
        $('.hotel-hover').css("border-bottom", "none");
-        $('.changoi-hover').css("border-bottom", "solid 3px #283988"); 
+        $('.changoi-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)"); 
   });
     $('.changoi-hover1').mouseover(function () {
       $('.changoi-hover1').show();      
@@ -553,7 +553,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
       $('.changoi-hover1').hide();
       $('.dem-hover').css("border-bottom", "none");
       $('.changoi-hover').css("border-bottom", "none");
-      $('.hotel-hover').css("border-bottom", "solid 3px #283988"); 
+      $('.hotel-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)"); 
   });
     $('.hotel-hover1').mouseover(function () {
       $('.hotel-hover1').show();      
