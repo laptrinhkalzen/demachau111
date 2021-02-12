@@ -431,10 +431,10 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                             <img src="{{asset('public/icon/map-svg.svg')}}" style="width: 60%;margin-top: 20px;margin-left: 20px;cursor: pointer;">
                                         </div>
                                         <div class="col-lg-4" style="padding: 10px !important;">
-                                            Tìm cửa hàng <b style="font-size: 18px;">quanh đây</b>
+                                            <p style="color: #283988;line-height: 25px;padding-top: 5px;">Tìm cửa hàng <b style="font-size: 18px;">quanh đây</b></p>
                                         </div>
                                         <div class="col-lg-6" style="background-color: yellow;padding: 10px !important;text-align: center;background-color: #283988;color: white;height: 80px;cursor: pointer;">
-                                            <a href='tel:1900 3052' class="pt-3" >Mua hàng gọi ngay <br><b style="font-size: 18px;">1900 3052</b></a>
+                                            <a href='tel:1900 3052' class="pt-3"><p style="padding-top: 5px;line-height: 25px;color: white;">Mua hàng gọi ngay <br><b style="font-size: 18px;">1900 3052</b></p></a>
                                         </div>
                                     </div>
                                 </div>
