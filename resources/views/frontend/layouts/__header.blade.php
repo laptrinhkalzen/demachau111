@@ -211,7 +211,8 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         <button class="btnn" style="background-color: #ea1621;"><i class="ti-search"></i></button>
                     </form>
                 </div>
-                <div class="menu-1 col-12" id="danhmuc" style="background-color: white;color: black;height: 100%;width: 0px !important;position: fixed;z-index: 999;top:0;left: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+                <div class="menu-1 col-12" id="danhmuc" style="background-color: rgba(29, 28, 31, 0.9);color: black;height: 100%;width: 0px !important;position: fixed;z-index: 999;top:0;left: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+                    <div style="height: 100%;width: 250px;background-color: white;">
                     <i class="fa fa-times fa-3x" onclick="close_danhmuc()" style="float:right;margin-right: 15px;color: white;" id="close-danhmuc"></i>
                     <p style="font-size: 20px;text-align: center;color: white;font-weight: bold;padding: 14px 0;background-color: #283988;">Danh mục</p>
                     <hr style="margin-top: 0px;">
@@ -247,9 +248,11 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         @endif
                         
                     
-                   @endforeach 
+                   @endforeach
+                   </div> 
                 </div>
-                <div class="menu-2 col-12" id="giohang" style="background-color: white;color: black;width: 0px !important;height:100%;position: fixed;z-index: 999;top:0;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+                <div class="menu-2 col-12" id="giohang" style="background-color: rgba(29, 28, 31, 0.9);color: black;width: 0px !important;height:100%;position: fixed;z-index: 999;top:0;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+                    <div style="height: 100%;width: 250px;float: right;background-color: white;">
                     <i class="fa fa-times fa-3x" onclick="close_giohang()" style="float:right;margin-right: 5px;color: white;" id="close-giohang"></i>
                     <p  style="font-size: 20px;text-align: center;color: white;font-weight: bold;padding: 14px 0;background-color: #283988;">GIỎ HÀNG</p>
                                
@@ -289,15 +292,15 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                     @endif   
 
                                 </div>
-                              
+                        </div>      
             </div>
             </div>
         </div>
         </div>
         <!-- End Topbar -->
         <!-- Sidebar -->
-        <div id="giohangpc" style="width: 0px !important;height: 100%;background-color: white;position: fixed;z-index: 99999;top:0px;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
-            
+        <div id="giohangpc" style="width: 0px !important;height: 100%;background-color: rgba(29, 28, 31, 0.9);position: fixed;z-index: 99999;top:0px;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+            <div style="height: 100%;width: 450px;float: right;background-color: white;">
             <div class="row" style="margin-top: 5px;">
                 <div class="container">
                 <img class="ml-2" src="{{asset('public/icon/cart-svg.svg')}}" style="color: #283988;width: 40px;" >
@@ -350,7 +353,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     @endif   
                     </div>
                 </div>
-
+            </div>
             </div>
         </div>
         <!-- EndSidebar -->
@@ -729,7 +732,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
     </script>
     <script>
 function open_danhmuc() {
-  document.getElementById("danhmuc").style.width = "250px";
+  document.getElementById("danhmuc").style.width = "100%";
     document.getElementById("giohang").style.padding = "0";
     document.getElementById("giohang").style.width= "0px";
 }
@@ -739,17 +742,17 @@ function close_danhmuc() {
 }
 
 function open_giohang() {
-  document.getElementById("giohang").style.width = "250px";
+  document.getElementById("giohang").style.width = "100%";
   document.getElementById("danhmuc").style.width= "0px";
 }
 
 function open_giohangpc() {
-  document.getElementById("giohangpc").style.width = "450px";
+  document.getElementById("giohangpc").style.width = "100%";
 }
 
 function close_giohang() {
   document.getElementById("giohang").style.width= "0px";
-  document.getElementById("giohang").style.padding = "0";
+  document.getElementById("giohang").style.padding = "0px";
 }
 
 function close_giohangpc() {
