@@ -3527,7 +3527,7 @@ padding-left: 0px;
 .shop.checkout .form .form-group label span {
 	color: #ff2c18;
 	display: inline-block;
-	position: absolute;
+	/*position: absolute;*/
 	right: -12px;
 	left: 15px;
 	top: 10px;
