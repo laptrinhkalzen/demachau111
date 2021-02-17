@@ -215,9 +215,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     <div style="height: 100%;width: 250px;background-color: white;">
                     <i class="fa fa-times fa-3x" onclick="close_danhmuc()" style="float:right;margin-right: 15px;color: white;" id="close-danhmuc"></i>
                     <p style="font-size: 20px;text-align: center;color: white;font-weight: bold;padding: 14px 0;background-color: #283988;">Danh mục</p>
-                    <hr style="margin-top: 0px;">
-                    <p class="ml-2" style="font-size: 14px;color: black;"><a href="{{route('home.index')}}" style="font-weight: bold;">Trang chủ</a></p>
-                    <hr >
+                    <p class="pl-2 pt-2 pb-2" style="font-size: 14px;color: black;border-bottom: solid 1px rgba(29, 28, 31, 0.9)"><a href="{{route('home.index')}}" style="font-weight: bold;">Trang chủ</a></p>
                     @foreach($menu_cats as $key => $cat)
                         @php
                         $dem=0;
@@ -228,14 +226,13 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                         @endphp
                         @endforeach 
                         @if($dem>0)
-                            <p class="mt-2 ml-2" style="font-size: 14px;color: black;font-weight: bold;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a><img class="arrow1" id="arrow1_{!!$key!!}" data-key="{{$key}}" src="{{asset('public/icon/arrow-right.svg')}}" style="width: 15px;float:right;margin-right: 10px;"></p><img class="arrow2" id="arrow2_{!!$key!!}" data-key="{{$key}}" src="{{asset('public/icon/arrow-down.svg')}}" style="width: 15px;float:right;display: none;margin-top: -20px;margin-right: 10px;"></p>
-                            <hr style="">
-                            <div class="menu_con_{!!$key!!}" style="display: none;">
+                            <p class="pl-2 pt-2 pb-2" style="font-size: 14px;color: black;font-weight: bold;background-color: white;border-bottom: solid 1px rgba(29, 28, 31, 0.9);"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a><img class="arrow1" id="arrow1_{!!$key!!}" data-key="{{$key}}" src="{{asset('public/icon/arrow-right.svg')}}" style="width: 15px;float:right;margin-right: 10px;"></p><img class="arrow2" id="arrow2_{!!$key!!}" data-key="{{$key}}" src="{{asset('public/icon/arrow-down.svg')}}" style="width: 15px;float:right;display: none;margin-top: -20px;margin-right: 10px;"></p>
+                            <div class="menu_con_{!!$key!!}" style="display: none;background-color: white;">
                                 @if(!is_null($cat->children))
                                 
                                 @foreach ($cat->children as $key=>$cat1)
                                 @if($cat1)
-                                <p class="mt-2 ml-2" style="font-size: 14px;color: black;"><a style="" href="{{route('category.show',['alias'=>$cat1->alias])}}">{!!$cat1->name!!}</a></p>
+                                <p class="pt-2 pl-2" style="font-size: 14px;color: black;"><a style="" href="{{route('category.show',['alias'=>$cat1->alias])}}">{!!$cat1->name!!}</a></p>
                                             
                                 @endif
                                 @endforeach
@@ -243,8 +240,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                             </div>
 
                         @else
-                            <p class="mt-2 ml-2" style="font-size: 14px;color: black;"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
-                            <hr style="">
+                            <p class="pl-2 pt-2 pb-2" style="font-size: 14px;color: black;background-color: white;border-bottom: solid 1px rgba(29, 28, 31, 0.9);"><a style="font-weight: bold;" href="{{route('category.show',['alias'=>$cat->alias])}}">{!!$cat->name!!}</a></p>
                         @endif
                         
                     
@@ -256,7 +252,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                     <i class="fa fa-times fa-3x" onclick="close_giohang()" style="float:right;margin-right: 5px;color: white;" id="close-giohang"></i>
                     <p  style="font-size: 20px;text-align: center;color: white;font-weight: bold;padding: 14px 0;background-color: #283988;">GIỎ HÀNG</p>
                                
-                                <div class="container shopping-item cart">
+                                <div class="container shopping-item cart" style="background-color: white;">
                                      @if(Session('cart'))
                                     <div class="dropdown-cart-header">
                                         <span class="count-sp" id="count-sp">{{$count_cart}} Sản phẩm/</span>
