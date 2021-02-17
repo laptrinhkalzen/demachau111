@@ -235,12 +235,10 @@ document.body.querySelector('#alternate-button-container')
 												<option>30</option>
 										</select>
 								</div> -->
-								<div class="row">
-									<div class="col-lg-5 col-md-4 col-5">	
-										<strong>Sắp xếp theo: </strong>
-									</div>
-									<div class="col-lg-7 col-md-7 col-7">	
-	                    			<select class="form-control" id="order_by" >
+								<div class="row" style="padding-left: 15px;">	
+									<strong >Sắp xếp theo: </strong>
+									<div class="col-lg-8 col-md-8 col-8" >	
+	                    			<select class="form-control" id="order_by" style="font-size: 14px;" >
 										<option value="0" selected="selected">Mới nhất</option>
 										<option value="1">Giá cao đến thấp</option>
 										<option value="2">Giá  thấp đến cao</option>
