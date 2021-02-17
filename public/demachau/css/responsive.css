@@ -368,7 +368,7 @@ display: none !important;
 
 }
 /* Mobile Screen */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1023px) {
 .flashsale-img a img{
 	height: 200px !important;
 }
@@ -1222,7 +1222,7 @@ display: none !important;
 }
 }
 /* Mobile Screen */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 1023px) {
 .site-header.sticky .header-bottom{
 	position:absolute;
 	z-index:999;
@@ -1870,7 +1870,7 @@ display: none !important;
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
 
 .flash-sale-mobile{
 	display: none !important;
