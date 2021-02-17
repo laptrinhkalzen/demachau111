@@ -249,7 +249,7 @@ document.body.querySelector('#alternate-button-container')
 										</select>
 								</div> -->
 								<div class="row" style="padding-left: 15px;">	
-									<strong >Sắp xếp theo: </strong>
+									<span >Sắp xếp theo: </span>
 									<div class="col-lg-8 col-md-8 col-8" >	
 	                    			<select class="form-control" id="order_by" style="font-size: 14px;cursor: pointer;" >
 										<option value="0" selected="selected">Mới nhất</option>
