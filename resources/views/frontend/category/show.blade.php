@@ -10,7 +10,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
   border-radius: 20px;
 }
 
@@ -127,7 +127,7 @@ document.body.querySelector('#alternate-button-container')
 					<!-- Shop By Price -->
 					
                     @if(count($attribute)>5)
-					<div class="single-widget range"  style="height:250px; overflow: scroll;overflow-x: hidden;background-color: white;">
+					<div class="single-widget range"  style="height:250px; overflow: scroll; overflow:auto; overflow-x: hidden; overflow-y:auto; background-color: white;">
 				    @else
 				    <div class="single-widget range"  style="background-color: white;">
 				    @endif		
