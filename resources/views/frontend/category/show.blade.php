@@ -29,6 +29,15 @@
   background: #555; 
 }
 
+.cuondoc{
+  overflow: hidden;
+}
+
+.cuondoc:hover {
+  overflow-y: scroll;
+
+}
+
 li {
     list-style: none;
 }
@@ -127,7 +136,7 @@ document.body.querySelector('#alternate-button-container')
 					<!-- Shop By Price -->
 					
                     @if(count($attribute)>5)
-					<div class="single-widget range"  style="height:250px; overflow: scroll; overflow:auto; overflow-x: hidden; overflow-y:auto; background-color: white;">
+					<div class="single-widget range cuondoc" id="" style="height:250px;  background-color: white;">
 				    @else
 				    <div class="single-widget range"  style="background-color: white;">
 				    @endif		
