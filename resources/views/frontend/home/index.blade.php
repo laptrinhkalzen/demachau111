@@ -429,7 +429,19 @@ margin-top: 0px;
                 </div>
             </div>
         </div> -->
-       
+        <div class="nav-main">
+            <!-- Tab Nav -->
+            <ul style="" class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="dmc" style="float: left; " class="nav-item"><a class="nav-link active"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" style="background-color: #283988;color:white;">{{$danh_muc_cha->name}}</a></li>
+                @foreach($danh_muc_con as $danh_muc_con1)
+                @if($danh_muc_con1->parent_id == $danh_muc_cha->id)
+                <li style="float: left;font-size: 12px;"  class="nav-item danh-muc-con"><a  href="{{route('category.show',['alias'=>$danh_muc_con1->alias])}}" class="nav-link">{{$danh_muc_con1->name}}</a></li>
+                @endif
+                @endforeach
+                <!--  <li style="float: left; border-bottom: none;height: 64px; " class="nav-item"><a style="color: orange;" class="nav-link"  href="{{route('category.show',['alias'=>$danh_muc_cha->alias])}}" >Xem tất cả >></a></li> -->
+            </ul>
+            <!--/ End Tab Nav -->
+        </div>
         <div class="container">
         <div class="row">
             <div class="col-12">
