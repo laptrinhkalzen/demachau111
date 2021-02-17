@@ -1867,7 +1867,9 @@ display: none !important;
 .benefit{
 	display: none !important;
 }
-
+.sendmail{
+	margin-left: 5px;
+}
 }
 
 @media only screen and (min-width: 1024px) {
