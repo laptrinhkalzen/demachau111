@@ -8,10 +8,15 @@
         -webkit-line-clamp: 2; /* number of lines to show */
         -webkit-box-orient: vertical;
     }
-    ul,ul li{
+.product-price  ul,ul li{
   list-style:disc;
   padding:0;
   margin-left:7px;
+}
+.category ul li{
+    list-style:none;
+    padding:0;
+    margin:0;
 }
     .breadcrumbs{
         padding: 10px;
