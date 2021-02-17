@@ -516,7 +516,7 @@ margin-top: 0px;
                     <div class="container" style="background-color:white;">
                         <div class="row">
                             <div class="col-12">
-                                <div class="owl-carousel popular-slider brand-carousel">
+                                <div class="owl-carousel1 popular-slider">
                                     <!-- Start Single Product -->
                                     @foreach($brand as $brands)
                                     <div class="single-product" >
