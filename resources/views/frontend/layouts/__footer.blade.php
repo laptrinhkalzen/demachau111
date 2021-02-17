@@ -128,7 +128,8 @@ background:#f7941d;
                         <div class="contact">
                             @foreach($customer_support as $support)
                             <ul>    
-                                <a href="{{url('customer-support/show/'.$support->id)}}"><li>{{$support->name}}</li></a>        
+                                <a href="#"><li>{{$support->name}}</li></a>
+                                <!-- <a href="{{url('customer-support/show/'.$support->id)}}"><li>{{$support->name}}</li></a> -->   
                             </ul>
                             @endforeach
                         </div>
