@@ -103,11 +103,12 @@ class FrontendController extends Controller {
 
 
             //foreach( explode(',',$flashsale_product->images) as $value)
-      
+       
         return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','flashsale_products','product_sales','count_flashsale'));
         }
 
     else{
+        
             $news = DB::table('news')->orderBy('ordering','asc')->where('status',1)->get();
         $danh_muc_cha=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
 
@@ -136,7 +137,7 @@ class FrontendController extends Controller {
         
           $product_attrs=$product_attributes->groupBy('product_id');
 
-
+dd($product_danh_muc_cha);
             //foreach( explode(',',$flashsale_product->images) as $value)
       
         return view('frontend/home/index', compact('danh_muc_cha','news','product_danh_muc_cha','danh_muc_con','total','show','attributes','product_attrs','flashsale','count_flashsale'));
