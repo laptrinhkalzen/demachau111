@@ -205,16 +205,17 @@ margin-top: 0px;
                 <div class="container" style="padding-left: 15px;background-color: #c70000;color: white;height: 100%;">  
 
                     <div class="row" style="margin-right: 0px;">
-                        <span style="font-size: 20px;margin:auto;"><img src="/icon/coupon.svg" style="width: 30px;object-fit: cover;margin-right: 3px;">FLASH SALE:
+                        <span style="font-size: 14px;padding-left: 5px;">FLASH SALE:
 
                                     <strong id="day_mb" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>&nbspngày
                                     <strong id="hour_mb" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong><img src="/icon/two-dots.svg" style="width: 10px;object-fit: cover;margin-left: 3px;">
                                     <strong id="minute_mb" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong><img src="/icon/two-dots.svg" style="width: 10px;object-fit: cover;margin-left: 3px;">
                                     <strong id="second_mb" style="background-color: black;color: white;border-radius: 5px;padding:3px;"></strong>
                         </span>
-                        <div class="row container mt-3 button-sale" style="padding-left: 50px;">
+                        <a href="{{route('flashsale.show')}}" style="margin: auto; background-color:white; color:black; border-radius: 5px  ; width:100px; text-align: center;margin-top: 3px; ">Xem tất cả</a>
+<!--                         <div class="row container mt-3 button-sale" style="padding-left: 50px;">
                             <a href="{{route('flashsale.show')}}" style="margin: auto; background-color:white; color:black; border-radius: 5px  ; width:100px; text-align: center; ">Xem tất cả</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
