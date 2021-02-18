@@ -342,12 +342,17 @@ class ProductController extends Controller {
           
             Session::push('old_pro',$old_pro);
             }
-
+            Session::flush('old_pro');
           
             //nếu session lớn hơn 4 sp thì xoá 1 sp
             $count_old_product=0;
-            $old_product=Session('old_pro');
-            $count_old_product = count($old_product);
+            if(Session('old_pro')){
+              $old_product=Session('old_pro');
+              $count_old_product = count($old_product);
+            }else{
+              $count_old_product=0;
+            }
+              
             if($detail_product){
             return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes','dem','images','count_old_product','category','parent_category','is_flashsale','coupon','product_sales'));
 
