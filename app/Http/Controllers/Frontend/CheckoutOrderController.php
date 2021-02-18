@@ -55,7 +55,7 @@ class CheckoutOrderController extends Controller {
                 }
             }
             else{
-                $option_number='null';
+                $option_number=0;
                 if($product_sale){
                     if($product_sale->discount_type==0){
                         $price=$product->price-($product->price/100*$product_sale->discount_value);
