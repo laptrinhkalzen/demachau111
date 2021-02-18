@@ -61,6 +61,14 @@
                                  
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                    <div class="form-check col-md-6 form-check-right">
+                                        <label class="form-check-label float-right">
+                                            Ẩn
+                                            <input type="checkbox" class="form-check-input-styled" name="status" data-fouc="">
+                                        </label>
+                                    </div>
+                                </div>
 
                         </fieldset>
                         <div class="text-right">

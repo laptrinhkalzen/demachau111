@@ -15,7 +15,7 @@ class Attribute extends Model {
     const MODULE_BRAND = 'brand';
 
     protected $fillable = [
-        'title', 'parent_id', 'type', 'module','order_by'
+        'title', 'parent_id', 'type', 'module','order_by','status'
     ];
     public $timestamps = false;
 
