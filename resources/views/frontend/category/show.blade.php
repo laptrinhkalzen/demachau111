@@ -119,6 +119,17 @@ document.body.querySelector('#alternate-button-container')
 		<div class="row">
 			<div class="menu-filter col-lg-3 col-md-4 col-12" id="mySidebar">
 				@foreach($attributes as $key => $attribute)
+				    @php 
+						$is_display=0;
+					@endphp	
+					@foreach($parent_attributes as $parent_attribute)
+					@if($parent_attribute->id==$key && $parent_attribute->status!=1)
+						@php 
+						    $is_display=1;
+					    @endphp
+					@endif		
+					@endforeach
+                @if($is_display==1)
 				<div class="shop-sidebar">
 					<!-- Single Widget -->
 <!-- 					<div class="single-widget range">
@@ -143,7 +154,7 @@ document.body.querySelector('#alternate-button-container')
 					<div class="single-widget range cuondoc" id="" style="height:250px;  background-color: white;">
 				    @else
 				    <div class="single-widget range"  style="background-color: white;">
-				    @endif		
+				    @endif	
 						@foreach($parent_attributes as $parent_attribute)
 						@if($parent_attribute->id==$key)
 						<h3 class="title_h3">{{$parent_attribute->title}}</h3>
@@ -151,88 +162,20 @@ document.body.querySelector('#alternate-button-container')
 						@endforeach
 						<ul class="check-box-list">
 							@foreach($attribute as $for => $attr)
+							@if($attr->status!=1)
 							<li>
 								<label class="checkbox-inline"  ><input  class="attribute_filter" name="attr" value="{{$attr->id}}"  type="checkbox">{{$attr->title}}<span class="count"></span></label>
 							</li>
+							@endif
 							@endforeach
 						</ul>
 					</div>
-					
-					<!--/ End Shop By Price -->
-					<!-- Single Widget -->
-					<!-- <div class="single-widget recent-post">
-						<h3 class="title">Recent post</h3> -->
-						<!-- Single Post -->
-						<!-- <div class="single-post first">
-							<div class="image">
-								<img src="https://via.placeholder.com/75x75" alt="#">
-							</div>
-							<div class="content">
-								<h5><a href="#">Girls Dress</a></h5>
-								<p class="price">$99.50</p>
-								<ul class="reviews">
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li><i class="ti-star"></i></li>
-									<li><i class="ti-star"></i></li>
-								</ul>
-							</div>
-						</div> -->
-						<!-- End Single Post -->
-						<!-- Single Post -->
-						<!-- <div class="single-post first">
-							<div class="image">
-								<img src="https://via.placeholder.com/75x75" alt="#">
-							</div>
-							<div class="content">
-								<h5><a href="#">Women Clothings</a></h5>
-								<p class="price">$99.50</p>
-								<ul class="reviews">
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li><i class="ti-star"></i></li>
-								</ul>
-							</div>
-						</div> -->
-						<!-- End Single Post -->
-						<!-- Single Post -->
-						<!-- <div class="single-post first">
-							<div class="image">
-								<img src="https://via.placeholder.com/75x75" alt="#">
-							</div>
-							<div class="content">
-								<h5><a href="#">Man Tshirt</a></h5>
-								<p class="price">$99.50</p>
-								<ul class="reviews">
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li class="yellow"><i class="ti-star"></i></li>
-									<li class="yellow"><i class="ti-star"></i></li>
-								</ul>
-							</div>
-						</div> -->
-						<!-- End Single Post -->
-					<!-- </div> -->
-					<!--/ End Single Widget -->
-					<!-- Single Widget -->
-<!-- 					<div class="single-widget category">
-						<h3 class="title">Manufacturers</h3>
-						<ul class="categor-list">
-							<li><a href="#">Forever</a></li>
-							<li><a href="#">giordano</a></li>
-							<li><a href="#">abercrombie</a></li>
-							<li><a href="#">ecko united</a></li>
-							<li><a href="#">zara</a></li>
-						</ul>
-					</div> -->
-					<!--/ End Single Widget -->
 				</div>
+				@endif
 				@endforeach
+				
 			</div>
+
 			<div class="col-lg-9 col-md-8 col-12">
 				<div class="row">
 					<div class="col-12 filter_category">

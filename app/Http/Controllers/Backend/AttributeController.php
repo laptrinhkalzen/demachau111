@@ -54,7 +54,7 @@ class AttributeController extends Controller
         if ($input['parent_id'] == null) {
             $input['parent_id'] = 0;
         }
-        $input['status'] = isset($input['status']) ? 0 : 1;
+         $input['status'] = isset($input['status']) ? 1 : 0;
         $attribute = $this->attributeRepo->create($input);
         if ($attribute->id){
             return redirect()->route('admin.attribute.index')->with('success', 'Tạo mới thành công');
@@ -105,6 +105,7 @@ class AttributeController extends Controller
         if ($input['parent_id'] == null) {
             $input['parent_id'] = 0;
         }
+        $input['status'] = isset($input['status']) ? 1 : 0;
         $res = $this->attributeRepo->update($input, $id);
         if ($res){
             return redirect()->route('admin.attribute.index')->with('success', 'Cập nhật thành công');
