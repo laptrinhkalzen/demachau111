@@ -261,6 +261,7 @@
 													<span><strong data-price="{{$option_detail->option_price}}" class="each_price">{{number_format($val['price'])}}</strong></span>
 												</div>
 											</div>
+											@break;
 											@elseif($val['option_number']==0)
 											<div class="form-row">
 												<div class="col-md-6 col-lg-6 col-6">
