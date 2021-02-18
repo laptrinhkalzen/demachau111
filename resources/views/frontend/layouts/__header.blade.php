@@ -295,7 +295,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         </div>
         <!-- End Topbar -->
         <!-- Sidebar -->
-        <div id="giohangpc" style="width: 0px !important;height: 100%;background-color: rgba(29, 28, 31, 0.9);position: fixed;z-index: 99999;top:0px;right: 0;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+        <div id="giohangpc" style="width: 0px !important;height: 100%;background-color: rgba(29, 28, 31, 0.9);position: fixed;z-index: 99999;top:0px;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
             <div style="height: 100%;width: 450px;float: right;background-color: white;">
             <div class="row" style="margin-top: 5px;">
                 <div class="container">
@@ -367,47 +367,47 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-lg-6" style="padding: 0px !important;">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-2" style="height: 100%;padding-left: 0px;">
+                            <div class="col-lg-3" style="height: 100%;">
                             <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo" style="margin-top:20px !important;"></a>
                             </div>
+                            <div class="col-lg-9" style="text-align: center;">
+                                <div class="container">
+                                    <div class="row">
                                        
-                                <div class="col-lg-2 dem-hover" style="height: 80px;text-align: center;">
-                                     <a href="{{url('search-product?search=dem')}}">
-                                    <img class="hover-bg1" src="{{asset('public/icon/mattress.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
-                                    <br>Đệm
-                                    </a>
-                                </div>
+                                        <div class="col-lg-3 dem-hover" style="height: 80px;">
+                                             <a href="{{url('search-product?search=dem')}}">
+                                            <img class="hover-bg1" src="{{asset('public/icon/mattress.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
+                                            <br>Đệm
+                                            </a>
+                                        </div>
 
-                                <div class="col-lg-2 changoi-hover" style="height: 80px;text-align: center;">
-                                    <a href="{{url('search-product?search=chan goi')}}">
-                                    <img class="hover-bg2" src="{{asset('public/icon/blanked.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
-                                    <br>Chăn gối
-                                     </a>
+                                        <div class="col-lg-3 changoi-hover" style="height: 80px;">
+                                            <a href="{{url('search-product?search=chan goi')}}">
+                                            <img class="hover-bg2" src="{{asset('public/icon/blanked.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
+                                            <br>Chăn gối
+                                             </a>
+                                        </div>
+                                        <div class="col-lg-3 hotel-hover" style="height: 80px;">
+                                            <a href="{{url('search-product?search=khach san')}}">
+                                            <img class="news-hover" src="{{asset('public/icon/wedding.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
+                                            </a>
+                                            <br>Khách sạn
+                                        </div>
+                                           <div class="col-lg-3" style="height: 80px;">
+                                            @if($count_fls==1)
+                                            <a href="{{route('flashsale.show')}}">
+                                            <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
+                                            </a>
+                                            @else
+                                            <a href="{{route('flashsale.show')}}">
+                                            <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
+                                            </a>
+                                            @endif
+                                            <br>Flashsale
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-lg-2 hotel-hover" style="height: 80px;text-align: center;">
-                                    <a href="{{url('search-product?search=khach san')}}">
-                                    <img class="news-hover" src="{{asset('public/icon/wedding.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
-                                    </a>
-                                    <br>Khách sạn
-                                </div>
-                                <div class="col-lg-2" style="height: 80px;text-align: center;">
-                                    <a href="">
-                                    <img class="hover-bg2" src="{{asset('public/icon/pillows.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
-                                    <br>Phụ kiện
-                                     </a>
-                                </div>
-                                   <div class="col-lg-2" style="height: 80px;text-align: center;">
-                                    @if($count_fls==1)
-                                    <a href="{{route('flashsale.show')}}">
-                                    <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
-                                    </a>
-                                    @else
-                                    <a href="{{route('flashsale.show')}}">
-                                    <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
-                                    </a>
-                                    @endif
-                                    <br>Flashsale
-                                </div>
+                            </div>
 
                         </div>
                     </div>                                                            
