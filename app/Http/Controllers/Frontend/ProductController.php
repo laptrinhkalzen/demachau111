@@ -342,7 +342,7 @@ class ProductController extends Controller {
           
             Session::push('old_pro',$old_pro);
             }
-            Session::flush('old_pro');
+            
           
             //nếu session lớn hơn 4 sp thì xoá 1 sp
             $count_old_product=0;
