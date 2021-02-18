@@ -598,6 +598,7 @@ input[type="number"] {
                             @endif
                           @endforeach
                             </div>
+                      
                       @endforeach
                     </div>
                     
@@ -659,6 +660,7 @@ input[type="number"] {
 
     </section>
 
+      @if(Session('old_pro'))
     <section style="padding-bottom: 50px;">
       <div class="product-area most-popular section" style="padding: 20px !important;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
@@ -666,7 +668,7 @@ input[type="number"] {
             <div class="row">
                             <div class="col-12">
                                 <div class="owl-carousel popular-slider">
-                                    @if(Session('old_pro'))
+                              
                                       @foreach(Session('old_pro') as $key => $val)
                                         
                                     <div class="single-product" style="margin-top:0px;">
@@ -750,7 +752,7 @@ input[type="number"] {
                                       </div>
                                          
                                       @endforeach
-                                   @endif
+                              
                                     
                                 </div>
                             </div>
@@ -758,6 +760,7 @@ input[type="number"] {
                       </div>
         </div>
     </section>
+         @endif
 
     <section style="padding-bottom: 50px;">
       <div class="product-area most-popular section" style="padding: 20px !important;">

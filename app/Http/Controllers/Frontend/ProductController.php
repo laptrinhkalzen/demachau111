@@ -230,6 +230,7 @@ class ProductController extends Controller {
              $input=array();
 
              $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();
+           if(count($product_sales)>0){
          foreach ($flashsale_product as $key => $value) {
              foreach ($product_sales   as  $product_sale) {
                  if($product_sale->product_id==$value->id){
@@ -242,10 +243,15 @@ class ProductController extends Controller {
                      else{
                          $sale_price=$product_sale->discount_value;
                      }
-                     $flashsale_product[$key]->sale_price=$sale_price;
+                     
                  }
+                 else{
+                       $sale_price=0;
+                 }
+                 $flashsale_product[$key]->sale_price=$sale_price;
             }
         }
+      }
 
             foreach ($parent_ids as $key => $value) {
                 $input[$key]['id']=$value;
