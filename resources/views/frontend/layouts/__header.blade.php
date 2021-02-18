@@ -295,8 +295,41 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         </div>
         <!-- End Topbar -->
         <!-- Sidebar -->
+        <style type="text/css">
+/* width */
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  color: #00BFFF;
+  border-radius: 20px;
+  
+}
+
+/* Track */
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #ababab;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+
+}
+        </style>
         <div id="giohangpc" style="width: 0px !important;height: 100%;background-color: rgba(29, 28, 31, 0.9);position: fixed;z-index: 99999;top:0px;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
-            <div style="height: 100%;width: 450px;float: right;background-color: white;">
+            <div style="height: 100%;width: 450px;float: right;background-color: white;overflow-x: hidden;">
             <div class="row" style="margin-top: 5px;">
                 <div class="container">
                 <img class="ml-2" src="{{asset('public/icon/cart-svg.svg')}}" style="color: #283988;width: 40px;" >
