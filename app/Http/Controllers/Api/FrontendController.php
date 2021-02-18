@@ -123,7 +123,6 @@ class FrontendController extends Controller {
         }
        
         $result_final=DB::table('option_detail')->where('product_id',$id->id)->where('option_id',$number)->first();
-
         $product=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flash_sale_product.product_id',$result_final->product_id)->where('status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();
         if($product){
             if($product->discount_type==0){

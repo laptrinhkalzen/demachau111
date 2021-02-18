@@ -829,6 +829,8 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
         else{
             $('#price_origin').hide();
             $('#option_price').html('Loại sản phẩm này đã hết!');
+            $('.btn-buy')..removeAttr('disabled');
+
         }
     }
     else{
@@ -838,6 +840,7 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
         else{
             $('#price_origin').html('');
             $('#option_price').html('Loại sản phẩm này đã hết!');
+            $('.btn-buy')..removeAttr('disabled');
         }
        
     }
