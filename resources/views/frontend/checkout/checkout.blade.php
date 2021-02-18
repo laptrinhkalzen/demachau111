@@ -224,7 +224,7 @@
 											@endif
 											@endforeach
 											@foreach($option_details as $option_detail)
-											@if($val['option_number']==$option_detail->option_id && $val['product_id']==$option_detail->product_id)
+											@if($val['product_id']==$option_detail->product_id)
 											<div class="form-row">
 												<div class="col-md-6 col-lg-6 col-6">
 													<span>Giá:</span>
