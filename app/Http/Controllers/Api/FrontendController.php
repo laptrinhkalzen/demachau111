@@ -93,6 +93,7 @@ class FrontendController extends Controller {
         $test=[];
         $id=DB::table('product')->where('alias',$request->alias)->first();
         $result=DB::table('product_option')->where('product_id',$id->id)->get();
+        if ($result) {
         $search = $request->search;
         foreach($search as $search1){
             $option_number=$result->where('value',$search1)->pluck('option_number');
@@ -141,6 +142,31 @@ class FrontendController extends Controller {
             $result_price=0;
         }
         return response()->json(['result' => $result_final,'option_number'=>$number,'result_price'=>$result_price]);
+        }
+        else{
+        $result_final=DB::table('product')->where('id',$id->id)->first();
+        $product=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flash_sale_product.product_id',$result_final->id)->where('status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();
+        if($product){
+                if($product->discount_type==0){
+                    $result_price=$result_final->price-($result_final->price/100*$product->discount_value);
+                }
+                else if ($product->discount_type==1) {
+                    $result_price=$result_final->price-$product->discount_value;
+                }
+                else if ($product->discount_type==2) {
+                    $result_price=$product->discount_value;
+                }
+
+                else{
+                    $result_price=0;
+                }
+            }
+        else{
+                $result_price=0;
+            }
+
+            return response()->json(['result' => $result_final,'option_number'=>$number,'result_price'=>$result_price]);
+                }
     }
 
     public function registerMarketing(Request $request) {
