@@ -100,10 +100,38 @@
 							</label>
 						<hr>
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;">
-							<input class="mr-2" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Ngân hàng</b>
+							<input class="mr-2" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Trả góp bằng PAYOO (Thẻ tín dụng)</b>
 							  <span class="checkmark"></span>
-							<div style="display: none;" class="2 box" >Thanh toán qua VNPAY.</div>
-							
+							<div style="display: none;" class="2 box" >
+								<div class="container">
+									<div class="row">
+									<div class="col-lg-3">
+								  <label for="sel1">Chọn ngân hàng:</label>
+								  </div>
+  									<div class="col-lg-6">
+								  <select class="form-control-sm" id="sel1" style="cursor: pointer;">
+								    <option>1</option>
+								    <option>2</option>
+								    <option>3</option>
+								    <option>4</option>
+								  </select>
+								  								  </div>
+									</div>
+																		<div class="row">
+									<div class="col-lg-3">
+								  <label for="sel1">Chọn số tháng:</label>
+								  </div>
+  									<div class="col-lg-6">
+								  <select class="form-control-sm" id="sel1" style="cursor: pointer;">
+								    <option>1</option>
+								    <option>2</option>
+								    <option>3</option>
+								    <option>4</option>
+								  </select>
+								  								  </div>
+									</div>
+									</div>
+								</div>
 							</label>
 						</div>
 					</div>

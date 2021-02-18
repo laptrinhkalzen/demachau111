@@ -85,6 +85,31 @@ background:#f7941d;
 }
 </style>
 <footer class="footer">
+    <a target="_blank" href="https://www.m.me/demachau"><img src="{{asset('public/icon/messenger.svg')}}" style="position: fixed;bottom:120px;right: 20px;width: 40px;border-radius: 50%;cursor: pointer;"></a>
+    <a href='tel:1900 3052'><img src="{{asset('public/icon/phone.svg')}}" style="position: fixed;bottom:70px;right: 20px;width: 40px;border-radius: 50%;cursor: pointer;"></a>
+    <a><img id="button-top" src="{{asset('public/icon/arrow-up.svg')}}" style="position: fixed;bottom:20px;right: 20px;width: 40px;border-radius: 50%;cursor: pointer;display: none;"></a>
+    <script type="text/javascript">
+        //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function() {scrollFunction()};
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("button-top").style.display = "block";
+        } else {
+             //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("button-top").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('button-top').addEventListener("click", function(){
+        //Nếu button được click thì nhảy về đầu trang
+        $('html,body').animate({
+            scrollTop: 0
+        }, 'fast');
+    });
+    </script>
     <!-- Footer Top -->
     <div class="footer-top ">
         <div class="container">
@@ -284,7 +309,7 @@ background:#f7941d;
 <!-- Flex Slider JS -->
 <script src="{{asset('demachau/js/flex-slider.js')}}"></script>
 <!-- ScrollUp JS -->
-<script src="{{asset('demachau/js/scrollup.js')}}"></script>
+<!-- <script src="{{asset('demachau/js/scrollup.js')}}"></script> -->
 <!-- Onepage Nav JS -->
 <script src="{{asset('demachau/js/onepage-nav.min.js')}}"></script>
 <!-- Easing JS -->
