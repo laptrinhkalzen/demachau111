@@ -23,7 +23,7 @@ class CheckoutOrderController extends Controller {
         }
         $product_options=DB::table('product_option')->get();
         $option_details=DB::table('option_detail')->get();
-        dd(Session('cart'));
+        //dd(Session('cart'));
 
         return view('frontend/checkout/checkout',compact('total','city','district','product_options','option_details'));
     }
