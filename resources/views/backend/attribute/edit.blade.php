@@ -58,8 +58,22 @@
                              <div class="form-group row">
                                     <div class="form-check col-md-6 form-check-right">
                                         <label class="form-check-label float-right">
-                                            Ẩn
+                                            Ẩn trong trang lọc
+                                            @if($record->status==1)
+                                            <input type="checkbox" checked="true" class="form-check-input-styled" name="status" data-fouc="">
+                                            @else
                                             <input type="checkbox" class="form-check-input-styled" name="status" data-fouc="">
+                                            @endif
+                                        </label>
+                                    </div>
+                                    <div class="form-check col-md-6 form-check-right">
+                                        <label class="form-check-label float-right">
+                                            Ẩn trong chi tiết sản phẩm
+                                            @if($record->status_detail==1)
+                                            <input type="checkbox" checked="true" class="form-check-input-styled" name="status_detail" data-fouc="">
+                                            @else
+                                            <input type="checkbox" class="form-check-input-styled" name="status_detail" data-fouc="">
+                                            @endif
                                         </label>
                                     </div>
                                 </div>

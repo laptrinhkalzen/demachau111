@@ -64,8 +64,14 @@
                             <div class="form-group row">
                                     <div class="form-check col-md-6 form-check-right">
                                         <label class="form-check-label float-right">
-                                            Ẩn
+                                            Ẩn trong lọc
                                             <input type="checkbox" class="form-check-input-styled" name="status" data-fouc="">
+                                        </label>
+                                    </div>
+                                    <div class="form-check col-md-6 form-check-right">
+                                        <label class="form-check-label float-right">
+                                            Ẩn trong chi tiết sản phẩm
+                                            <input type="checkbox" class="form-check-input-styled" name="status_detail" data-fouc="">
                                         </label>
                                     </div>
                                 </div>
