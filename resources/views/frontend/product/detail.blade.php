@@ -829,7 +829,7 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
         else{
             $('#price_origin').hide();
             $('#option_price').html('Loại sản phẩm này đã hết!');
-            $('.btn-buy').removeAttr('disabled');
+            $('.btn-buy').hide();
 
         }
     }
@@ -840,7 +840,7 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
         else{
             $('#price_origin').html('');
             $('#option_price').html('Loại sản phẩm này đã hết!');
-            $('.btn-buy').removeAttr('disabled');
+            $('.btn-buy').hide();
         }
        
     }
@@ -864,27 +864,27 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
     </script>
     <script type="text/javascript">
       $("#show").click(function() {
-  $(".content_product").css({
-    "-webkit-line-clamp": "9999"
-  });
-  $("#show").css({
-    "display": "none"
-  });
-  $("#hide").css({
-    "display": "block"
-  });
-})
-      $("#hide").click(function() {
-  $(".content_product").css({
-    "-webkit-line-clamp": "5"
-  });
-  $("#hide").css({
-    "display": "none"
-  });
-    $("#show").css({
-    "display": "block"
-  });
-})
+      $(".content_product").css({
+        "-webkit-line-clamp": "9999"
+      });
+      $("#show").css({
+        "display": "none"
+      });
+      $("#hide").css({
+        "display": "block"
+      });
+    })
+          $("#hide").click(function() {
+      $(".content_product").css({
+        "-webkit-line-clamp": "5"
+      });
+      $("#hide").css({
+        "display": "none"
+      });
+        $("#show").css({
+        "display": "block"
+      });
+    })
     </script>
     
     @stop
