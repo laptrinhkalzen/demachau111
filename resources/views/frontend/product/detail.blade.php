@@ -825,24 +825,23 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
         if(resp.result['option_price']!=null || resp.result['option_price']>0){   
             $('#price_origin').html(formatNumber(resp.result['option_price']) + 'đ');
             $('#option_price').html(formatNumber(resp.result_price) + 'đ');
-            $('.btn-buy').show();
+            
         }
         else{
             $('#price_origin').hide();
             $('#option_price').html('Loại sản phẩm này đã hết!');
-            $('.btn-buy').hide();
-
+            $('div').find("button").prop('disabled', 'disabled');
         }
     }
     else{
         if(resp.result['option_price']!=null || resp.result['option_price']>0){   
             $('#option_price').html(formatNumber(resp.result['option_price']) + 'đ');
-            $('.btn-buy').show();
+
         }
         else{
             $('#price_origin').html('');
             $('#option_price').html('Loại sản phẩm này đã hết!');
-            $('.btn-buy').hide();
+            $('div').find("button").prop('disabled', 'disabled');
         }
        
     }
