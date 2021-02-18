@@ -295,7 +295,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         </div>
         <!-- End Topbar -->
         <!-- Sidebar -->
-        <div id="giohangpc" style="width: 0px !important;height: 100%;background-color: rgba(29, 28, 31, 0.9);position: fixed;z-index: 99999;top:0px;right: 0;overflow-x: hidden;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
+        <div id="giohangpc" style="width: 0px !important;height: 100%;background-color: rgba(29, 28, 31, 0.9);position: fixed;z-index: 99999;top:0px;right: 0;  transition: 0.5s;padding-left: 0px;padding-right: 0px;">
             <div style="height: 100%;width: 450px;float: right;background-color: white;">
             <div class="row" style="margin-top: 5px;">
                 <div class="container">

@@ -252,7 +252,16 @@
 											@endif
 											@endforeach
 											@foreach($option_details as $option_detail)
-											@if($val['product_id']==$option_detail->product_id)
+											@if($val['option_number']==$option_detail->option_id && $val['product_id']==$option_detail->product_id)
+											<div class="form-row">
+												<div class="col-md-6 col-lg-6 col-6">
+													<span>Giá:</span>
+												</div>
+												<div class="col-md-6 col-lg-6 col-6 " >
+													<span><strong data-price="{{$option_detail->option_price}}" class="each_price">{{number_format($val['price'])}}</strong></span>
+												</div>
+											</div>
+											@elseif($val['option_number']=='null' && $val['product_id']==$option_detail->product_id)
 											<div class="form-row">
 												<div class="col-md-6 col-lg-6 col-6">
 													<span>Giá:</span>

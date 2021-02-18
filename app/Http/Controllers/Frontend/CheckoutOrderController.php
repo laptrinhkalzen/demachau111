@@ -38,6 +38,7 @@ class CheckoutOrderController extends Controller {
            $product_sale=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('product_id',$id)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();  
            //dd($product_sale);
            if($price){
+                 $option_number=$request->option_number;
                 if($product_sale){
                     if($product_sale->discount_type==0){
                         $price=$price-($price/100*$product_sale->discount_value);
@@ -54,6 +55,7 @@ class CheckoutOrderController extends Controller {
                 }
             }
             else{
+                $option_number='null';
                 if($product_sale){
                     if($product_sale->discount_type==0){
                         $price=$product->price-($product->price/100*$product_sale->discount_value);
@@ -83,7 +85,7 @@ class CheckoutOrderController extends Controller {
                     "price" => $price,
                     "image" => $product->getImage(),
                     "url" => $product->alias,
-                    "option_number"=>$request->option_number
+                    "option_number"=>$option_number
                 ];
                 session()->put('cart', $cart);
             }
