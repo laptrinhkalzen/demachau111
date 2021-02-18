@@ -270,6 +270,7 @@
 													<span><strong data-price="{{$option_detail->option_price}}" class="each_price">{{number_format($val['price'])}}</strong></span>
 												</div>
 											</div>
+											@break;
 											@endif
 											@endforeach
 											
