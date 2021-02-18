@@ -34,17 +34,33 @@ class CheckoutOrderController extends Controller {
            $cart = session()->get('cart');
            $product=Product::find($id);
            $price=DB::table('option_detail')->where('product_id',$id)->where('option_id',$option_number)->pluck('option_price')->first();
+           
            $product_sale=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('product_id',$id)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();  
            //dd($product_sale);
-            if($product_sale){
-                if($product_sale->discount_type==0){
-                    $price=$price-($price/100*$product_sale->discount_value);
+           if($price){
+                if($product_sale){
+                    if($product_sale->discount_type==0){
+                        $price=$price-($price/100*$product_sale->discount_value);
+                    }
+                    if($product_sale->discount_type==1){
+                        $price=$price-$product_sale->discount_value;
+                    }
+                    if($product_sale->discount_type==2){
+                       $price=$product_sale->discount_value;
+                    }
                 }
-                if($product_sale->discount_type==1){
-                    $price=$price-$product_sale->discount_value;
-                }
-                if($product_sale->discount_type==2){
-                   $price=$product_sale->discount_value;
+            }
+            else{
+                if($product_sale){
+                    if($product_sale->discount_type==0){
+                        $price=$product->price-($product->price/100*$product_sale->discount_value);
+                    }
+                    if($product_sale->discount_type==1){
+                        $price=$product->price-$product_sale->discount_value;
+                    }
+                    if($product_sale->discount_type==2){
+                       $price=$product_sale->discount_value;
+                    }
                 }
             }
           
