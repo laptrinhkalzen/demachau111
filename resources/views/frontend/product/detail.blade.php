@@ -594,7 +594,7 @@ input[type="number"] {
                             @if($key1==0)
                               <span>{{$other->title}}</span>
                             @else
-                                <span>,{{$other->title}}</span>
+                                <span>,&nbsp {{$other->title}}</span>
                             @endif
                           @endforeach
                             </div>
