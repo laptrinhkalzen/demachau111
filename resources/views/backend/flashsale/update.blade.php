@@ -347,7 +347,7 @@ $('.select2').select2();
           success:function(data){
             //alert(data.success);
             if (data.success==1) {
-              $('.form-row_'+ remove_key).fadeOut(200);
+              $('.form-row_'+ remove_key).remove();
             }
    
           }

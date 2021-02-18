@@ -116,9 +116,8 @@ class FlashSaleController extends Controller {
         $discount_value = $request->discount_value;
         $price_decrease = $request->price_decrease;
         $quantity = $request->quantity;
-        
 
-           $data = array();
+            $data = array();
             $data['name'] = $request->name;
             $data['note'] = $request->note;
             //$data['order'] = $request->order;
