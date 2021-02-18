@@ -93,7 +93,7 @@ class FrontendController extends Controller {
         $test=[];
         $id=DB::table('product')->where('alias',$request->alias)->first();
         $result=DB::table('product_option')->where('product_id',$id->id)->get();
-        dd($result);
+        
         if (count($result)>0) {
         $search = $request->search;
         foreach($search as $search1){
