@@ -93,7 +93,7 @@ class FrontendController extends Controller {
         $test=[];
         $id=DB::table('product')->where('alias',$request->alias)->first();
         $result=DB::table('product_option')->where('product_id',$id->id)->get();
-        if ($result) {
+        if (count($result)>0) {
         $search = $request->search;
         foreach($search as $search1){
             $option_number=$result->where('value',$search1)->pluck('option_number');
@@ -165,7 +165,7 @@ class FrontendController extends Controller {
                 $result_price=0;
             }
 
-            return response()->json(['result' => $result_final,'option_number'=>$number,'result_price'=>$result_price]);
+            return response()->json(['result' => $result_final,'option_number'=>"",'result_price'=>$result_price]);
                 }
     }
 
