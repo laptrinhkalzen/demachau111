@@ -49,6 +49,9 @@ class CheckoutOrderController extends Controller {
                        $price=$product_sale->discount_value;
                     }
                 }
+                else{
+                    $price=$product->price;
+                }
             }
             else{
                 if($product_sale){
@@ -61,6 +64,9 @@ class CheckoutOrderController extends Controller {
                     if($product_sale->discount_type==2){
                        $price=$product_sale->discount_value;
                     }
+                }
+                else{
+                    $price=$product->price;
                 }
             }
           
