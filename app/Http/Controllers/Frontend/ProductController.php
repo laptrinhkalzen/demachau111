@@ -229,6 +229,24 @@ class ProductController extends Controller {
 
              $input=array();
 
+             $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();
+         foreach ($flashsale_product as $key => $value) {
+             foreach ($product_sales   as  $product_sale) {
+                 if($product_sale->product_id==$value->id){
+                     if($product_sale->discount_type==0){
+                         $sale_price=$value->price-($value->price/100*$product_sale->discount_value);
+                     }
+                     elseif($product_sale->discount_type==1){
+                          $sale_price=$value->price-$product_sale->discount_value;
+                     }
+                     else{
+                         $sale_price=$product_sale->discount_value;
+                     }
+                     $flashsale_product[$key]->sale_price=$sale_price;
+                 }
+            }
+        }
+
             foreach ($parent_ids as $key => $value) {
                 $input[$key]['id']=$value;
                 $input[$key]['name']=DB::table('attribute')->where('id',$value)->pluck('title')->first();
@@ -253,8 +271,25 @@ class ProductController extends Controller {
                 $product_ids[]=$value->product_id;
             }
             $products=DB::table('product')->orderBy('id','asc')->where('status',1)->get();
+
+            foreach ($products as $key => $value) {
+             foreach ($product_sales   as  $product_sale) {
+                 if($product_sale->product_id==$value->id){
+                     if($product_sale->discount_type==0){
+                         $sale_price=$value->price-($value->price/100*$product_sale->discount_value);
+                     }
+                     elseif($product_sale->discount_type==1){
+                          $sale_price=$value->price-$product_sale->discount_value;
+                     }
+                     else{
+                         $sale_price=$product_sale->discount_value;
+                     }
+                     $products[$key]->sale_price=$sale_price;
+                 }
+            }
+        }
             //dd($products);
-             $dem=0;
+            $dem=0;
             $images=explode(',',$detail_product->images);
             $image_pro=$images[0];
             foreach(explode(',',$detail_product->images) as $key => $image){
@@ -277,22 +312,42 @@ class ProductController extends Controller {
             }
              
             //nếu chưa tồn tại add session
-            if($check==0){
+            
+        
+            $sale_price=0;
+          
+            foreach ($product_sales  as  $product_sale) {
+                 if($product_sale->product_id==$detail_product->id){
+                     if($product_sale->discount_type==0){
+                         $sale_price=$detail_product->price-($detail_product->price/100*$product_sale->discount_value);
+                     }
+                     elseif($product_sale->discount_type==1){
+                          $sale_price=$detail_product->price-$product_sale->discount_value;
+                     }
+                     else{
+                         $sale_price=$product_sale->discount_value;
+                     }
+                  
+                 }
+            }
+                if($check==0){
               $old_pro = [
                 "id"=> $detail_product->id,
                 "alias"=> $detail_product->alias,
                 "title"=> $detail_product->title,
-                "image"=> $image_pro
-              
+                "image"=> $image_pro,
+                "price"=> $detail_product->price,
+                "sale_price"=>$sale_price
             ];
+          
             Session::push('old_pro',$old_pro);
             }
-            
+          
             //nếu session lớn hơn 4 sp thì xoá 1 sp
             $old_product=Session('old_pro');
             $count_old_product = count($old_product);
             if($detail_product){
-            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes','dem','images','count_old_product','category','parent_category','is_flashsale','coupon'));
+            return view('frontend/product/detail',compact('detail_product','attributes','parent_ids','input','benefit','similar_product_ids','products','other_attributes','dem','images','count_old_product','category','parent_category','is_flashsale','coupon','product_sales'));
 
             }
             else{

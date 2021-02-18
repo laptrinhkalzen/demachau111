@@ -472,7 +472,7 @@ input[type="number"] {
                     
                     <!-- Order Widget -->
                     <div class="row">
-                      <div class="col-12" style="border-bottom: 1px solid #ebebeb;">
+                      <div class="col-12" >
                         <div class="single-widget">
                         <div class="content">
                             <ul>
@@ -519,8 +519,8 @@ input[type="number"] {
                         </div>
                     </div>
                       </div>
-                    </hr>
-                      <div class="col-12">
+                    <!--</hr>
+                       <div class="col-12">
                         <div class="single-widget">
                         <div class="content">
                             <ul>
@@ -557,7 +557,7 @@ input[type="number"] {
                             </ul>
                         </div>
                     </div>
-                      </div>
+                      </div> -->
 
                     </div>
                     
@@ -662,6 +662,106 @@ input[type="number"] {
     <section style="padding-bottom: 50px;">
       <div class="product-area most-popular section" style="padding: 20px !important;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
+            <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm đã xem</p>
+            <div class="row">
+                            <div class="col-12">
+                                <div class="owl-carousel popular-slider">
+                                    @if(Session('old_pro'))
+                                      @foreach(Session('old_pro') as $key => $val)
+                                        
+                                    <div class="single-product" style="margin-top:0px;">
+                                        <div class="product-img">
+                                            <a href="{{route('product.detail',['alias'=>$val['alias']])}}">
+                                              @foreach( explode(',',$val['image']) as $value)
+                                                <img class="default-img img-responsive img-rounded custom-product" src="{!!$value!!}" style="padding-top: 10px; ">
+                                                @php 
+                                                  $discount=($val['price'] - $val['sale_price']) / ($val['price']/100);
+                                                     if($discount<1){
+                                                       $discount=1;
+                                                       }
+                                                     if($discount>=99){                                    
+                                                       $discount=99;
+                                                       }
+                                                   @endphp
+                                                   @if($val['sale_price']>0)
+                                                   <span class="out-of-stock">Giảm {{number_format($discount)}}%</span>
+                                                   @endif
+                                                @break;
+                                                @endforeach
+                                            </a>
+
+                                            <div class="button-head">
+                                               
+                                                <div style="background-color: #283988; text-align: center; width: 100%;" class="product-action-2">
+                                                    <a title="Mua hàng" href="{{route('product.detail',['alias'=>$val['alias']])}}">Mua hàng</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      
+                                        @if($count_fls==1)
+                                        
+
+                                        <div class="product-content">
+                                            
+                                            <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h3>
+                                            <div class="product-price" style="text-align: center;">
+                                    
+                                                @php 
+                                                   $dem=0;
+                                                @endphp
+                                                @if($val['price']>0)
+                                                @foreach($product_sales as $pro_sale)
+                                                @if($val['id']==$pro_sale->product_id)
+                                                @php 
+                                                   $dem++;
+                                                @endphp
+                                                <span class="old">{{number_format($val['price'])}}đ</span>
+                                                <span style="color:red;">{{number_format($val['sale_price'])}}đ</span>
+                                                @endif
+                                                @endforeach
+                                                @if($dem==0)
+                                                <span style="color:red;">{{number_format($val['price'])}}đ</span>
+                                                @endif
+                                                @else
+                                                 <span style="color:red;">Liên hệ</span>
+                                                @endif
+                                              
+                                            </div>
+                                        </div>
+                                        
+                                        @else
+                                        
+                                            <div class="product-content">
+                                            
+                                            <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$val['alias']])}}">{{$val['title']}}</a></h3>
+                                            <div class="product-price" style="text-align: center;">
+                                
+                                              @if($val['price']>0)
+                                              <span style="color:red;">{{number_format($val['price'])}}đ</span>
+                                              @else
+                                               <span style="color:red;">Liên hệ</span>
+                                              @endif
+                                          </div>
+                                            
+                                        </div>
+                                        
+                                        @endif
+                                      
+                                      </div>
+                                         
+                                      @endforeach
+                                   @endif
+                                    
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+        </div>
+    </section>
+
+    <section style="padding-bottom: 50px;">
+      <div class="product-area most-popular section" style="padding: 20px !important;">
+        <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm tương tự</p>
             <div class="row">
                             <div class="col-12">
@@ -674,6 +774,19 @@ input[type="number"] {
                                             <a href="{{route('product.detail',['alias'=>$product->alias])}}">
                                               @foreach( explode(',',$product->images) as $value)
                                                 <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px; ">
+                                                @if($product->sale_price > 0)
+                                                   @php 
+                                                      $discount=($product->price - $product->sale_price) / ($product->price/100);
+                                                             if($discount<1){
+                                                               $discount=1;
+                                                               }
+                                                             if($discount>=99){                                    
+                                                               $discount=99;
+                                                               }
+                                                   @endphp
+                                                        <!-- //<span class="price-dec">Giảm {{number_format($discount)}}%</span> -->
+                                                        <span class="out-of-stock">Giảm {{number_format($discount)}}%</span>
+                                                   @endif
                                                 @break;
                                                 @endforeach
                                             </a>
@@ -685,17 +798,45 @@ input[type="number"] {
                                                 </div>
                                             </div>
                                         </div>
+                                        @if($count_fls==1)
+
                                         <div class="product-content">
                                             <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product->alias])}}">{{$product->title}}</a></h3>
                                             <div class="product-price" style="text-align: center;">
-                                                @if($product->sale_price)
+                                                @php 
+                                                   $dem=0;
+                                                @endphp
+                                                @if($product->price>0)
+                                                @foreach($product_sales as $pro_sale)
+                                                @if($product->id==$pro_sale->product_id)
+                                                @php 
+                                                   $dem++;
+                                                @endphp
                                                 <span class="old">{{number_format($product->price)}}đ</span>
                                                 <span style="color:red;">{{number_format($product->sale_price)}}đ</span>
-                                                @else
+                                                @endif
+                                                @endforeach
+                                                @if($dem==0)
                                                 <span style="color:red;">{{number_format($product->price)}}đ</span>
+                                                @endif
+                                                @else
+                                                 <span style="color:red;">Liên hệ</span>
                                                 @endif
                                             </div>
                                         </div>
+                                        @else
+                                        <div class="product-content">
+                                            <h3  style="text-align: center;"><a href="{{route('product.detail',['alias'=>$product->alias])}}">{{$product->title}}</a></h3>
+                                            <div class="product-price" style="text-align: center;">
+                                                @if($product->price>0)
+                                                <span style="color:red;">{{number_format($product->price)}}đ</span>
+                                                @else
+                                                 <span style="color:red;">Liên hệ</span>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        @endif
                                     </div>
                                          @endif
                                       @endforeach
