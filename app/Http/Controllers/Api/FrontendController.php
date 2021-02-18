@@ -93,6 +93,7 @@ class FrontendController extends Controller {
         $test=[];
         $id=DB::table('product')->where('alias',$request->alias)->first();
         $result=DB::table('product_option')->where('product_id',$id->id)->get();
+        dd($result);
         if (count($result)>0) {
         $search = $request->search;
         foreach($search as $search1){
@@ -122,7 +123,6 @@ class FrontendController extends Controller {
         }
        
         $result_final=DB::table('option_detail')->where('product_id',$id->id)->where('option_id',$number)->first();
-        dd($result_final);
 
         $product=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flash_sale_product.product_id',$result_final->product_id)->where('status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->first();
         if($product){
