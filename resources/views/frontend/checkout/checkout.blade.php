@@ -100,7 +100,7 @@
 							<div style="display: none;" class="1 box ngan-hang" >
 								@foreach($banks as $key => $bank)
 								  <input class="form-check-input" type="radio" name="nganhang" value="{{$key+1}}" id="input-nh{{$key+1}}">
-  									<label class="form-check-label" for="input-nh{{$key+1}}" style="cursor: pointer;"><img class ="img-nh img-nh{{$key+1}} " src="{!!url('upload/config/'.$bank->images)!!}" style="width: 100px;height: 50px;object-fit: contain;border: 1px solid #c7c0bf;"></label>
+  									<label class="form-check-label" for="input-nh{{$key+1}}" style="cursor: pointer;"><img class ="img-nh img-nh{{$key+1}} " src="{!!url('upload/config/'.$bank->images)!!}" style="width: 100px;height: 50px;object-fit: contain;border: 1px solid #c7c0bf;padding: 5px;  "></label>
   									
 								  @endforeach
   									<script type="text/javascript">
@@ -403,8 +403,8 @@
 	    var img_nh = $(".img-nh" + input_nh);
 	     $(".detail-nh").not(detail_nh).hide();
 	     $(detail_nh).show();
-		$(".img-nh"+input_nh).css({"border": "1px solid #283988", "border-radius": "5px","padding": "2px"});
-     	$(".img-nh").not(img_nh).css({"border": "none"});;
+		$(".img-nh"+input_nh).css({"border": "1px solid #283988", "border-radius": "5px","padding": "5px"});
+     	$(".img-nh").not(img_nh).css({"border": "1px solid #c7c0bf","padding": "5px"});;
 	    });
 
 
