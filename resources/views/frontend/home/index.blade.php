@@ -789,6 +789,7 @@ document.getElementById("countdown_mobile").innerHTML = "EXPIRED";
 <!-- Start Footer Area -->
 <script>
  $(document).ready(function() {
+
 $('.owl-carousel1').owlCarousel({
     loop:true,
     margin:10,
@@ -803,6 +804,22 @@ $('.owl-carousel1').owlCarousel({
     },
     navText : ["<i class='ti-angle-left'></i>","<i class='ti-angle-right'></i>"]
 })
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        1000:{
+            items:4
+        }
+    },
+    navText : ["<i class='ti-angle-left'></i>","<i class='ti-angle-right'></i>"]
+})
+
 $('#carouselExampleIndicators').carousel({
   interval: 2000
 })
