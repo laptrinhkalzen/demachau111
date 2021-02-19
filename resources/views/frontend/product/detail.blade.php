@@ -435,15 +435,15 @@ input[type="number"] {
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-6 col-md-6" style="padding-right: 0px;">
-                                                <button type="submit" style="width:100%;border-radius: 10px;background-color: #292BB7;padding: 20px 10px;"  class="btn"><strong style="font-size: 18px;">Mua trả góp 0%</strong><br><span style="font-size: 13px;opacity: .8;">Trả góp qua thẻ tín dụng</span></button>
+                                                <button type="submit" style="width:100%;border-radius: 5px;background-color: #292BB7;"  class="btn"><strong style="font-size: 16px; ">Mua trả góp 0%</strong><br><span style="font-size: 13px;opacity: .8;">Trả góp qua thẻ tín dụng</span></button>
                                             </div>
                                             <div class="col-6 col-md-6" >
-                                                <button type="submit" style="width:100%;border-radius: 10px;background-color: #292BB7;padding: 20px 10px;"  class="btn"><strong style="font-size: 18px;">Thanh toán VNPAY</strong><br><span style="font-size: 13px;opacity: .8;">ATM nội địa | QRcode</span></button>
+                                                <button type="submit" style="width:100%;border-radius: 5px;background-color: #292BB7;"  class="btn"><strong style="font-size: 16px;">Thanh toán VNPAY</strong><br><span style="font-size: 13px;opacity: .8;">ATM nội địa | QRcode</span></button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit"  style="width:100%;padding: 20px 10px;border-radius: 10px;background-color: #EA1621"  class="btn btn-buy"><strong style="font-size: 20px;margin-bottom: 13px;">Mua ngay</strong><br><span style="font-size:13px;">Gọi điện xác nhận và giao hàng tận nơi</span></button>
+                                        <button type="submit"  style="width:100%;border-radius: 5px;background-color: #EA1621"  class="btn btn-buy"><strong style="font-size: 16px;margin-bottom: 10px;">Mua ngay</strong><br><span style="font-size:13px;">Gọi điện xác nhận và giao hàng tận nơi</span></button>
                                     </div>
                                     <div class="form-group" style="background-color: #f5f5f5;padding: 10px  0 30px 15px; ">
                                         

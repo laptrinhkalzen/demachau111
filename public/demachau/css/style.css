@@ -392,7 +392,7 @@ ul.left-icon.hotline {
 	display: inline-block;
 	padding: 13px 32px;
 	border-radius: 0px;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 .btn:hover{
 	color:#fff;
