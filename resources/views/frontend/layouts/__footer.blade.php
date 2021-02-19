@@ -116,8 +116,8 @@ background:#f7941d;
     <div class="footer-top ">
         <div class="container">
             <div class="row" >
-                <div  class="col-lg-4 col-md-6 col-12" >
-                <img class="logo mt-2" src="{{$share_config->image}}" alt="logo" style="width: 80%;">
+                <div  class="col-lg-5 col-md-6 col-12" >
+                <img class="logo mt-2" src="{{$share_config->image}}" alt="logo" style="width:60%;">
                     <div class="single-footer links mt-5">
                         <span class="title">{{$share_config->company_name}}</span>
                         <div class="contact">
@@ -130,10 +130,10 @@ background:#f7941d;
                         
                     </div>
                 </div>
-                <div class="col-lg-8 detail-company">
+                <div class="col-lg-7 detail-company">
                     <div class="container">
                         <div class="row" >
-                            <div class="col-lg-6 col-md-6 col-12 mt-5">
+                            <div class="col-lg-7 col-md-6 col-12 mt-5">
                                 <!-- Single Widget -->
                                 <div class="single-footer links">
                                     <span class="title">THÔNG TIN CÔNG TY</span>
@@ -148,7 +148,7 @@ background:#f7941d;
                                 
                             </div>
                             
-                            <div class="col-lg-6 col-md-6 col-12 mt-5 support-users">
+                            <div class="col-lg-5 col-md-6 col-12 mt-5 support-users">
                                 <!-- Single Widget -->
                                 <div class="single-footer links">
                                     <span class="title">HỖ TRỢ KHÁCH HÀNG</span>
@@ -166,15 +166,15 @@ background:#f7941d;
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 mt-5 bo-cong-thuong">
+                <div class="col-lg-5 col-md-6 col-12 mt-5 bo-cong-thuong">
                     <div class="single-footer links">
                         <img src="{{asset('images/payments.png')}}" alt="#" style="width: 200px;">
                     </div>
                 </div>
-                <div class="col-lg-8 mt-5">
+                <div class="col-lg-7 mt-5">
                     <div class="container">
                         <div class="row" >
-                            <div class="col-lg-6 col-md-6 col-12 connect-me">
+                            <div class="col-lg-7 col-md-6 col-12 connect-me">
                                 <!-- Single Widget -->
                                 <div class="single-footer links">
                                 <span class="title">KẾT NỐI VỚI CHÚNG TÔI</span>
@@ -193,7 +193,7 @@ background:#f7941d;
                                 
                             </div>
                             
-                            <div class="col-lg-6 col-md-6 col-12  payments">
+                            <div class="col-lg-5 col-md-6 col-12  payments" style="padding: 0px;">
                                 <div class="single-footer links">
                                 <span class="title">PHƯƠNG THỨC THANH TOÁN</span>
                                 <li style="list-style:none; margin-bottom:15px;">
