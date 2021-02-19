@@ -54,5 +54,6 @@ return [
     'admin.coupon.index'=>'Mã giảm giá',
     'admin.flashsale.index'=>'Flash sale',
     'admin.brand.index'=>'Thương hiệu',
+    'admin.bank.index'=>'Thẻ ngân hàng',
 
 ];
