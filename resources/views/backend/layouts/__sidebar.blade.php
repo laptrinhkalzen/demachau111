@@ -102,6 +102,13 @@
                     </ul>
                 </li>
                 <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-users"></i> <span>Thanh toán</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Khách hàng">
+                       
+                        <li class="nav-item"><a href="{{route('admin.bank.index')}}" class="nav-link">Thẻ ngân hàng</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-newspaper2"></i> <span>Flashsale</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Layouts">
                         

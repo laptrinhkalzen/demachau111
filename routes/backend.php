@@ -78,6 +78,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::post('/benefit/store', ['as' => 'admin.benefit.store', 'uses' => 'Backend\BenefitController@store']);
     Route::post('/benefit/update/{id}', ['as' => 'admin.benefit.update', 'uses' => 'Backend\BenefitController@update']);
     Route::delete('/benefit/delete/{id}', ['as' => 'admin.benefit.destroy', 'uses' => 'Backend\BenefitController@destroy']);
+    // Quan ly thanh toan qua ngan hang
+     Route::get('/bank', ['as' => 'admin.bank.index', 'uses' => 'Backend\BankController@index']);
+    Route::get('/bank/create', ['as' => 'admin.bank.create', 'uses' => 'Backend\BankController@create']);
+    Route::get('/bank/edit/{id}', ['as' => 'admin.bank.edit', 'uses' => 'Backend\BankController@edit']);
+    Route::post('/bank/store', ['as' => 'admin.bank.store', 'uses' => 'Backend\BankController@store']);
+    Route::post('/bank/update/{id}', ['as' => 'admin.bank.update', 'uses' => 'Backend\BankController@update']);
+    Route::delete('/bank/delete/{id}', ['as' => 'admin.bank.destroy', 'uses' => 'Backend\BankController@destroy']);
 
     /* Phương thức thanh toán */
     Route::get('/payment-method', ['as' => 'admin.payment_method.index', 'uses' => 'Backend\PaymentMethodController@index']);
