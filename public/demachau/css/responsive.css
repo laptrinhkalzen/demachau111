@@ -366,6 +366,7 @@ display: none !important;
 }
 
 
+
 }
 /* Mobile Screen */
 @media only screen and (max-width: 1023px) {
@@ -1223,6 +1224,33 @@ display: none !important;
 .contact-right{
 	display: none !important;
 }
+
+.detail-company{
+	display: none !important;
+}
+
+.support-users{
+	display: none !important;
+}
+
+.payments{
+	display: none !important;
+}
+
+.bo-cong-thuong{
+	display: none !important;
+}
+
+.connect-me{
+	padding: 0px !important;
+	margin-top: -30px !important; 
+}
+
+.img-bct{
+	display: block !important;
+	margin-left: -10px;
+}
+
 }
 /* Mobile Screen */
 @media only screen and (max-width: 1023px) {

@@ -130,7 +130,7 @@ background:#f7941d;
                         
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8 detail-company">
                     <div class="container">
                         <div class="row" >
                             <div class="col-lg-6 col-md-6 col-12 mt-5">
@@ -148,7 +148,7 @@ background:#f7941d;
                                 
                             </div>
                             
-                            <div class="col-lg-6 col-md-6 col-12 mt-5">
+                            <div class="col-lg-6 col-md-6 col-12 mt-5 support-users">
                                 <!-- Single Widget -->
                                 <div class="single-footer links">
                                     <span class="title">HỖ TRỢ KHÁCH HÀNG</span>
@@ -166,15 +166,15 @@ background:#f7941d;
                         </div>
                     </div>
                 </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                <div class="single-footer links mt-5">
-                    <img src="{{asset('images/payments.png')}}" alt="#" style="width: 200px;">
+                <div class="col-lg-4 col-md-6 col-12 mt-5 bo-cong-thuong">
+                    <div class="single-footer links">
+                        <img src="{{asset('images/payments.png')}}" alt="#" style="width: 200px;">
+                    </div>
                 </div>
-            </div>
-                <div class="col-lg-8 ">
+                <div class="col-lg-8 mt-5">
                     <div class="container">
                         <div class="row" >
-                            <div class="col-lg-6 col-md-6 col-12 mt-5">
+                            <div class="col-lg-6 col-md-6 col-12 connect-me">
                                 <!-- Single Widget -->
                                 <div class="single-footer links">
                                 <span class="title">KẾT NỐI VỚI CHÚNG TÔI</span>
@@ -187,11 +187,13 @@ background:#f7941d;
                                     <!-- <a id="hover" href="{{$contact->link}}" target="_blank" style="margin-left: 5px;" class="fab-label abc">{!!$contact->name!!}</a> -->
                                     @endforeach
                                 </li>
+
+                                <img src="{{asset('images/payments.png')}}" class="img-bct" alt="#" style="width: 200px;display: none;">
                                 </div>
                                 
                             </div>
                             
-                            <div class="col-lg-6 col-md-6 col-12 mt-5">
+                            <div class="col-lg-6 col-md-6 col-12  payments">
                                 <div class="single-footer links">
                                 <span class="title">PHƯƠNG THỨC THANH TOÁN</span>
                                 <li style="list-style:none; margin-bottom:15px;">
