@@ -100,7 +100,7 @@
 							<div style="display: none;" class="1 box ngan-hang" >
 								@foreach($banks as $key => $bank)
 								  <input class="form-check-input" type="radio" name="nganhang" value="{{$key+1}}" id="input-nh{{$key+1}}">
-  									<label class="form-check-label" for="input-nh{{$key+1}}" style="cursor: pointer;"><img class ="img-nh img-nh{{$key+1}} " src="{!!url('upload/config/'.$bank->images)!!}" style="width: 100px;height: 50px;object-fit: contain;"></label>
+  									<label class="form-check-label" for="input-nh{{$key+1}}" style="cursor: pointer;"><img class ="img-nh img-nh{{$key+1}} " src="{!!url('upload/config/'.$bank->images)!!}" style="width: 100px;height: 50px;object-fit: contain;border: 1px solid #c7c0bf;"></label>
   									
 								  @endforeach
   									<script type="text/javascript">
