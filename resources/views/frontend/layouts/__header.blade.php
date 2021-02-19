@@ -423,7 +423,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                 <br>Khách sạn
                             </div>
                             <div class="col-lg-2" style="height: 80px;text-align: center;">
-                                <a href="">
+                                <a href="{{url('search-product?search=phu kien')}}">
                                 <img class="hover-bg2" src="{{asset('public/icon/pillows.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
                                 <br>Phụ kiện
                                  </a>
