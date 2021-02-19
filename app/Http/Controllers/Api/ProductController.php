@@ -149,7 +149,9 @@ class ProductController extends Controller {
         if($attr){
           if($category_id->parent_id!=0){
           $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product_category.category_id',$cat_id)->where('product.status',1)->get();
+          
           }
+
           else{
              $children_ids=DB::table('category')->where('parent_id',$cat_id)->get();
              $id_children=array();
@@ -158,13 +160,14 @@ class ProductController extends Controller {
              }
              $product_cat = DB::table('product')->join('product_category','product.id','=','product_category.product_id')->where('product.status',1)->whereIn('product_category.category_id',$id_children)->get();
           }
-         
-                
+           
         $product_ids=$product_cat->groupBy('id');
           foreach($product_ids as $key => $product_id){
               $pro_id[]=$key;
           }
-        $attributes=DB::table('product')->join('product_attribute','product_attribute.product_id','=','product.id')->whereIn('product_attribute.product_id',$pro_id)->whereIn('product_attribute.attribute_id',$attr)->get()->groupBy('id');
+
+        $attributes=DB::table('product')->join('product_attribute','product_attribute.product_id','=','product.id')->whereIn('product_attribute.attribute_id',$attr)->get()->groupBy('id');
+        
         $dem_attr=0;
         foreach ($attr as $key1 => $attr1) {
                $dem_attr++;
@@ -180,6 +183,7 @@ class ProductController extends Controller {
             }
            
        }
+       //dd($id_final);
        $output='';
        if($id_final){
            if($order_by==0){

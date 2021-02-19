@@ -148,10 +148,10 @@ class ProductController extends Controller {
         if(count($product_cat)>0){
         $have_product=1;
         $product_ids=$product_cat->pluck('id');
-
         $category_id=DB::table('product_category')->whereIn('product_id',$product_ids)->get()->pluck('category_id');
-        $attribute_id=DB::table('product_attribute')->whereIn('product_id',$product_ids)->get()->pluck('attribute_id')->unique();
+        $attribute_id=DB::table('product_attribute')->whereIn('product_id',$product_ids)->get()->pluck('attribute_id')->unique(); 
         $attributes=DB::table('attribute')->where('parent_id','!=','0')->whereIn('id',$attribute_id)->get()->groupBy('parent_id');
+        //dd($attributes);
         $parent_attributes=DB::table('attribute')->where('parent_id',0)->get();
         $product_sales=DB::table('flashsale')->join('flash_sale_product','flash_sale_product.flash_sale_id','=','flashsale.id')->where('flashsale.status',1)->where('flashsale.start','<', Carbon::now('Asia/Ho_Chi_Minh'))->where('flashsale.end','>',Carbon::now('Asia/Ho_Chi_Minh'))->get();  
             foreach ($product_cat as $key => $value) {
