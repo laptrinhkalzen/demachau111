@@ -84,23 +84,38 @@
 					<p class="mt-4 mb-3" style="font-size:18px;"><span class="mr-2" style="border: solid 1px #283988; border-radius: 50%;padding: 0 10px;background-color: #283988;color: white;font-size: 32px;">1</span><b>Hình thức thanh toán</b></p>
 					<div class="form-group">
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;">
-							<input class="mr-2 btn-tienmat" type="radio" name="payment_method" value="0" checked=""  id="btn-tienmat" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>
+							<input class="mr-2 btn-tienmat thanh-toan" type="radio" name="payment_method" value="0" checked=""  id="btn-tienmat" style="width: auto;vertical-align: middle; "><b>Tiền mặt</b>
 							  <span class="checkmark"></span>
 							<div class="0 box" >Chúng tôi sẽ gọi điện xác nhận và giao hàng tận nhà.</div>
 							</label>
 						<hr>
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;">
-							<input class="mr-2" type="radio" name="payment_method" value="1" id="btn-chuyenkhoan" style="width: auto;vertical-align: middle; "><b>Chuyển khoản qua ngân hàng</b>
+							<input class="mr-2 thanh-toan" type="radio" name="payment_method" value="1" id="btn-chuyenkhoan" style="width: auto;vertical-align: middle; "><b>Chuyển khoản qua ngân hàng</b>
 							  <span class="checkmark"></span>
-							<div style="display: none;" class="1 box" >Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
+							<div style="display: none;" class="1 box ngan-hang" >
+								  <input class="form-check-input" type="radio" name="nganhang" value="1" id="input-nh1">
+  									<label class="form-check-label" for="input-nh1" style="cursor: pointer;"><img class ="img-nh img-nh1 " src="{{asset('public/icon/vietcombank.jpg')}}" style="width: 100px;height: 50px;object-fit: cover;"></label>
+								  <input class="form-check-input" type="radio" name="nganhang" value="2" id="input-nh2">
+  									<label class="form-check-label" for="input-nh2" style="cursor: pointer;"><img class ="img-nh img-nh2" src="{{asset('public/icon/techcombank.png')}}" style="width: 100px;height: 50px;object-fit: cover;"></label>
+  									<script type="text/javascript">
+  										
+  									</script>
+								<div class="detail-nh nh1" style="background-color: #E5F6FF;padding-left: 10px;display: none;margin-top:10px;">Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
 								<br>Số tài khoản: 0123456789
 								<br>Chủ tài khoản: DANG DINH MINH
 								<br>Chi nhánh …
 							<br>Nội dung chuyển khoản: Họ tên + SĐT</div>
+
+								<div class="detail-nh nh2" style="background-color: #E5F6FF;padding-left: 10px;display: none;margin-top:10px;">Ngân hàng TMCP Kỹ thương Việt Nam (Techcombank)
+								<br>Số tài khoản: 0123456789
+								<br>Chủ tài khoản: DANG DINH MINH
+								<br>Chi nhánh …
+							<br>Nội dung chuyển khoản: Họ tên + SĐT</div>
+							</div>
 							</label>
 						<hr>
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;">
-							<input class="mr-2" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Trả góp bằng PAYOO (Thẻ tín dụng)</b>
+							<input class="mr-2 thanh-toan" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Trả góp bằng PAYOO (Thẻ tín dụng)</b>
 							  <span class="checkmark"></span>
 							<div style="display: none;" class="2 box" >
 								<div class="container">
@@ -143,20 +158,20 @@
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>Họ và tên<span>*</span></label>
-									<input type="text" name="member_name" placeholder="" required="required" style="  cursor: pointer;">
+									<input class="form-control" type="text" name="member_name" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
 								</div>
 							</div>
 							
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Địa chỉ email<span>*</span></label>
-									<input class="" type="email" name="email" placeholder="" required="required" style="  cursor: pointer;">
+									<input class="form-control" type="email" name="email" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Số điện thoại<span>*</span></label>
-									<input type="text" name="mobile" placeholder="" required="required" style="  cursor: pointer;">
+									<input class="form-control" type="text" name="mobile" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
@@ -187,13 +202,13 @@
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>Địa chỉ cụ thể<span>*</span></label>
-									<input type="text" name="address" placeholder="" required="required" style="cursor: pointer;">
+									<input class="form-control" type="text" name="address" placeholder="" required="required" style="cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
 								</div>
 							</div>
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>THÔNG TIN BỔ SUNG</label>
-									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." name="note" rows="3" style="cursor: pointer;"></textarea>
+									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." name="note" rows="3" style="cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;"></textarea>
 								</div>
 							</div>
 								<div class="col-lg-12 col-md-12 col-12">
@@ -365,19 +380,33 @@
     $(document).ready(function(){
     	//$(".box").hide();
   
-    		 var inputValue = $('input[type="radio"]:checked').val();
+    		 var inputValue = $('input[name="payment_method"]:checked').val();
 		     var targetBox = $("." + inputValue);
 		     $(".box").not(targetBox).hide();
 		     $(targetBox).show();
     	
 
-	    $('input[type="radio"]').click(function(){
+	    $('.thanh-toan').click(function(){
 	    var inputValue = $(this).attr("value");
 	    var targetBox = $("." + inputValue);
 	    $(".box").not(targetBox).hide();
 	    $(targetBox).show();
 	    });
+
+
+	    $('.form-check-input').click(function(){
+	    var input_nh = $(this).attr("value");
+	    var detail_nh = $(".nh" + input_nh);
+	    var img_nh = $(".img-nh" + input_nh);
+	     $(".detail-nh").not(detail_nh).hide();
+	     $(detail_nh).show();
+		$(".img-nh"+input_nh).css({"border": "1px solid #283988", "border-radius": "5px","padding": "2px"});
+     	$(".img-nh").not(img_nh).css({"border": "none"});;
 	    });
+
+
+	    });
+
     </script>
 	
 	@stop

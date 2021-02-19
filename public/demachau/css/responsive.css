@@ -1220,6 +1220,9 @@ display: none !important;
 .banner-slide{
 	display: none !important; 
 }
+.contact-right{
+	display: none !important;
+}
 }
 /* Mobile Screen */
 @media only screen and (max-width: 1023px) {
