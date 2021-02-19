@@ -130,12 +130,12 @@ background:#f7941d;
                         
                     </div>
                 </div>
-                <div class="col-lg-7 detail-company">
+                <div class="col-lg-7">
                     <div class="container">
                         <div class="row" >
-                            <div class="col-lg-7 col-md-6 col-12 mt-5">
+                            <div class="col-lg-7 col-md-6 col-12 mt-5 padding-none">
                                 <!-- Single Widget -->
-                                <div class="single-footer links">
+                                <div class="single-footer links detail-company">
                                     <span class="title">THÔNG TIN CÔNG TY</span>
                                     <div class="contact">
                                         @foreach($company_infor as $infor)
@@ -146,6 +146,20 @@ background:#f7941d;
                                     </div>
                                 </div>
                                 
+                                <div class="single-footer links mt-5 connect-me">
+                                <span class="title">KẾT NỐI VỚI CHÚNG TÔI</span>
+                                
+                                <li style="display:flex; margin-bottom:15px; ">
+                                    @foreach($social as $contact)
+                                    <div class="fab-icon-holder">
+                                        <a href="{{$contact->link}}" target="_blank" class="mr-2"><img style="width: 40px; border-radius: 50%;object-fit: cover;" src="{!!url('upload/config/'.$contact->image)!!}" ></a>
+                                    </div>
+                                    <!-- <a id="hover" href="{{$contact->link}}" target="_blank" style="margin-left: 5px;" class="fab-label abc">{!!$contact->name!!}</a> -->
+                                    @endforeach
+                                </li>
+
+                                <img src="{{asset('images/payments.png')}}" class="img-bct" alt="#" style="width: 200px;display: none;">
+                                </div>
                             </div>
                             
                             <div class="col-lg-5 col-md-6 col-12 mt-5 support-users">
@@ -166,35 +180,19 @@ background:#f7941d;
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-5 col-md-6 col-12 mt-5 bo-cong-thuong">
                     <div class="single-footer links">
                         <img src="{{asset('images/payments.png')}}" alt="#" style="width: 200px;">
                     </div>
                 </div>
-                <div class="col-lg-7 mt-5">
+
+                <div class="col-lg-7 mt-5 payments">
                     <div class="container">
                         <div class="row" >
-                            <div class="col-lg-7 col-md-6 col-12 connect-me">
-                                <!-- Single Widget -->
-                                <div class="single-footer links">
-                                <span class="title">KẾT NỐI VỚI CHÚNG TÔI</span>
-                                
-                                <li style="display:flex; margin-bottom:15px; ">
-                                    @foreach($social as $contact)
-                                    <div class="fab-icon-holder">
-                                        <a href="{{$contact->link}}" target="_blank" class="mr-2"><img style="width: 40px; border-radius: 50%;object-fit: cover;" src="{!!url('upload/config/'.$contact->image)!!}" ></a>
-                                    </div>
-                                    <!-- <a id="hover" href="{{$contact->link}}" target="_blank" style="margin-left: 5px;" class="fab-label abc">{!!$contact->name!!}</a> -->
-                                    @endforeach
-                                </li>
-
-                                <img src="{{asset('images/payments.png')}}" class="img-bct" alt="#" style="width: 200px;display: none;">
-                                </div>
-                                
-                            </div>
-                            
-                            <div class="col-lg-5 col-md-6 col-12  payments" style="padding: 0px;">
-                                <div class="single-footer links">
+                            <div class="col-lg-12">
+                    <!-- Single Widget -->
+                            <div class="single-footer links">
                                 <span class="title">PHƯƠNG THỨC THANH TOÁN</span>
                                 <li style="list-style:none; margin-bottom:15px;">
                                     @foreach($payment as $payments)
@@ -204,7 +202,7 @@ background:#f7941d;
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                       
                 </div>
 
                     <!-- End Single Widget -->
