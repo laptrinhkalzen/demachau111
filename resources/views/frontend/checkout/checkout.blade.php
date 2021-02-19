@@ -117,10 +117,17 @@
 							</div>
 							</label>
 						<hr>
-							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;width: 100%;">
-							<input class="mr-2 thanh-toan" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Trả góp bằng PAYOO (Thẻ tín dụng)</b>
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;">
+							<input class="mr-2 thanh-toan" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Thanh toán qua VNPAY</b>
 							  <span class="checkmark"></span>
-							<div style="display: none;" class="2 box" >
+							<div style="display: none;" class="2 box" >123456</div>
+							
+							</label>
+							<hr>
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;width: 100%;">
+							<input class="mr-2 thanh-toan" type="radio" name="payment_method" value="3" id="btn-tragop" style="width: auto;vertical-align: middle;"><b>Trả góp bằng PAYOO (Thẻ tín dụng)</b>
+							  <span class="checkmark"></span>
+							<div style="display: none;" class="3 box" >
 								<div class="container">
 									<div class="row">
 									<div class="col-lg-3">
