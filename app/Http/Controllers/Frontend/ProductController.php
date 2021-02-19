@@ -228,7 +228,7 @@ class ProductController extends Controller {
                 $other_attributes[$key]->status_detail =$this_attr->status_detail;
             }
          
-            dd($other_attributes);
+            //dd($other_attributes);
             $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get()->pluck('parent_id')->unique();
 
              $input=array();
