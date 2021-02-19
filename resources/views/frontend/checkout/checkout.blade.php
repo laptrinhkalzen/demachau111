@@ -4,7 +4,12 @@
 
 <!-- Start Checkout -->
 <style type="text/css">
+.detail-nh strong{
+	color: #f55a42;
+}
+
 	/* The container */
+}
 .container-check {
   display: block;
   position: relative;
@@ -93,24 +98,22 @@
 							<input class="mr-2 thanh-toan" type="radio" name="payment_method" value="1" id="btn-chuyenkhoan" style="width: auto;vertical-align: middle; "><b>Chuyển khoản qua ngân hàng</b>
 							  <span class="checkmark"></span>
 							<div style="display: none;" class="1 box ngan-hang" >
-								  <input class="form-check-input" type="radio" name="nganhang" value="1" id="input-nh1">
-  									<label class="form-check-label" for="input-nh1" style="cursor: pointer;"><img class ="img-nh img-nh1 " src="{{asset('public/icon/vietcombank.jpg')}}" style="width: 100px;height: 50px;object-fit: cover;"></label>
-								  <input class="form-check-input" type="radio" name="nganhang" value="2" id="input-nh2">
-  									<label class="form-check-label" for="input-nh2" style="cursor: pointer;"><img class ="img-nh img-nh2" src="{{asset('public/icon/techcombank.png')}}" style="width: 100px;height: 50px;object-fit: cover;"></label>
+								@foreach($banks as $key => $bank)
+								  <input class="form-check-input" type="radio" name="nganhang" value="{{$key+1}}" id="input-nh{{$key+1}}">
+  									<label class="form-check-label" for="input-nh{{$key+1}}" style="cursor: pointer;"><img class ="img-nh img-nh{{$key+1}} " src="{!!url('upload/config/'.$bank->images)!!}" style="width: 100px;height: 50px;object-fit: contain;"></label>
+  									
+								  @endforeach
   									<script type="text/javascript">
-  										
   									</script>
-								<div class="detail-nh nh1" style="background-color: #E5F6FF;padding-left: 10px;display: none;margin-top:10px;">Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)
-								<br>Số tài khoản: 0123456789
-								<br>Chủ tài khoản: DANG DINH MINH
-								<br>Chi nhánh …
-							<br>Nội dung chuyển khoản: Họ tên + SĐT</div>
+  								@foreach($banks as $key => $bank)
+									<div class="detail-nh nh{{$key+1}}" style="background-color: #E5F6FF;padding-left: 10px;display: none;margin-top:10px; line-height: 20px;padding-right: 50px;" >{{$bank->title}}
+									<br>Số tài khoản: {{$bank->number}}
+									<br>Chủ tài khoản: {{$bank->host_name}}
+									<br>Chi nhánh {{$bank->branch}}
+									<br>Nội dung chuyển khoản:<strong> {{$bank->content}}</strong></div>
 
-								<div class="detail-nh nh2" style="background-color: #E5F6FF;padding-left: 10px;display: none;margin-top:10px;">Ngân hàng TMCP Kỹ thương Việt Nam (Techcombank)
-								<br>Số tài khoản: 0123456789
-								<br>Chủ tài khoản: DANG DINH MINH
-								<br>Chi nhánh …
-							<br>Nội dung chuyển khoản: Họ tên + SĐT</div>
+									
+								@endforeach
 							</div>
 							</label>
 						<hr>

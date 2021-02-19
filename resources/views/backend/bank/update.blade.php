@@ -72,7 +72,7 @@ function showPreview(event){
 
                             
                             <div class="col-md-10">
-                                <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
+                                
                            
                             <div class="form-group row">
                                 <label class="col-md-2 col-form-label text-right">Số tài khoản: <span class="text-danger">*</span></label>
@@ -83,7 +83,7 @@ function showPreview(event){
                             </div>
                         </div>
                         <div class="col-md-10">
-                                <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
+                                
                            
                             <div class="form-group row">
                                 <label class="col-md-2 col-form-label text-right">Chủ tài khoản: <span class="text-danger">*</span></label>
@@ -94,7 +94,7 @@ function showPreview(event){
                             </div>
                         </div>
                         <div class="col-md-10">
-                                <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
+                                
                            
                             <div class="form-group row">
                                 <label class="col-md-2 col-form-label text-right">Chi nhánh: <span class="text-danger">*</span></label>
@@ -107,14 +107,16 @@ function showPreview(event){
 
 
                             <div class="col-md-10">
-
-                                <div class="form-group row">
-                                    <label class="col-md-2 col-form-label text-right">Nội dung: </label>
-                                    <div class="col-md-10">
-                                        <textarea class="form-control ckeditor" id="content" name="content">{!!is_null(old('content'))?$bank->content:old('content')!!}</textarea>
-                                    </div>
+                                
+                           
+                            <div class="form-group row">
+                                <label class="col-md-2 col-form-label text-right">Nội dung chuyển khoản: <span class="text-danger">*</span></label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="content" required="" value="{!!is_null(old('content'))?$bank->content:old('content')!!}" >
+                                    {!! $errors->first('content', '<span class="text-danger">:message</span>') !!}
                                 </div>
                             </div>
+                        </div>
                             
                             <div class="col-md-10">
                             <div class="form-group row">
