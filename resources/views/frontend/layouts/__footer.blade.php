@@ -116,106 +116,108 @@ background:#f7941d;
     <div class="footer-top ">
         <div class="container">
             <div class="row" >
-                
                 <div  class="col-lg-4 col-md-6 col-12" >
-                    <div class="single-footer links">
+                <img class="logo mt-2" src="{{$share_config->image}}" alt="logo" style="width: 80%;">
+                    <div class="single-footer links mt-5">
                         <span class="title">{{$share_config->company_name}}</span>
                         <div class="contact">
                             <ul>
-                                <li>Trụ sở chính:&nbsp {{$share_config->address}}</li>
-                                <li>Showroom 2:&nbsp {{$share_config->address}}</li>
-                                <li>Hotline:&nbsp {{$share_config->hotline}}</li>
-                                <li>Email:&nbsp {{$share_config->email}}</li>
-                                <li>Website:&nbsp {{$share_config->address}}</li>
+                                <li>Địa chỉ:&nbsp <b>{{$share_config->address}}</b></li>
+                                <li>Hotline:&nbsp <b>{{$share_config->hotline}}</b></li>
+                                <li>Email:&nbsp <b>{{$share_config->email}}</b></li>
                             </ul>
                         </div>
                         
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Single Widget -->
-                    <div class="single-footer links">
-                        <span class="title">THÔNG TIN CÔNG TY</span>
-                        <div class="contact">
-                            @foreach($company_infor as $infor)
-                            <ul>
-                                <a href="#"><li>{{$infor->name}}</li></a>
-                            </ul>
-                            @endforeach
+                <div class="col-lg-8">
+                    <div class="container">
+                        <div class="row" >
+                            <div class="col-lg-6 col-md-6 col-12 mt-5">
+                                <!-- Single Widget -->
+                                <div class="single-footer links">
+                                    <span class="title">THÔNG TIN CÔNG TY</span>
+                                    <div class="contact">
+                                        @foreach($company_infor as $infor)
+                                        <ul>
+                                            <a href="#"><li>{{$infor->name}}</li></a>
+                                        </ul>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-6 col-12 mt-5">
+                                <!-- Single Widget -->
+                                <div class="single-footer links">
+                                    <span class="title">HỖ TRỢ KHÁCH HÀNG</span>
+                                    <!-- Single Widget -->
+                                    <div class="contact">
+                                        @foreach($customer_support as $support)
+                                        <ul>    
+                                            <a href="{{url('customer-support/show/'.$support->id)}}"><li>{{$support->name}}</li></a>        
+                                        </ul>
+                                        @endforeach
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
                 </div>
-                
-                <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Single Widget -->
-                    <div class="single-footer links">
-                        <span class="title">HỖ TRỢ KHÁCH HÀNG</span>
-                        <!-- Single Widget -->
-                        <div class="contact">
-                            @foreach($customer_support as $support)
-                            <ul>    
-                                <a href="{{url('customer-support/show/'.$support->id)}}"><li>{{$support->name}}</li></a>        
-                            </ul>
-                            @endforeach
+                            <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-footer links mt-5">
+                    <img src="{{asset('images/payments.png')}}" alt="#" style="width: 200px;">
+                </div>
+            </div>
+                <div class="col-lg-8 ">
+                    <div class="container">
+                        <div class="row" >
+                            <div class="col-lg-6 col-md-6 col-12 mt-5">
+                                <!-- Single Widget -->
+                                <div class="single-footer links">
+                                <span class="title">KẾT NỐI VỚI CHÚNG TÔI</span>
+                                
+                                <li style="display:flex; margin-bottom:15px; ">
+                                    @foreach($social as $contact)
+                                    <div class="fab-icon-holder">
+                                        <a href="{{$contact->link}}" target="_blank" class="mr-2"><img style="width: 40px; border-radius: 50%;object-fit: cover;" src="{!!url('upload/config/'.$contact->image)!!}" ></a>
+                                    </div>
+                                    <!-- <a id="hover" href="{{$contact->link}}" target="_blank" style="margin-left: 5px;" class="fab-label abc">{!!$contact->name!!}</a> -->
+                                    @endforeach
+                                </li>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-6 col-12 mt-5">
+                                <div class="single-footer links">
+                                <span class="title">PHƯƠNG THỨC THANH TOÁN</span>
+                                <li style="list-style:none; margin-bottom:15px;">
+                                    @foreach($payment as $payments)
+                                    <a href="{{$payments->link}}" target="_blank" class="mr-2"><img style="width:77px; height:26px; background:none;" src="{!!url('upload/config/'.$payments->image)!!}" ></a>
+                                    @endforeach
+                                </li>
+                                </div>
+                            </div>
                         </div>
-                        
                     </div>
+                </div>
+
                     <!-- End Single Widget -->
                 </div>
-                <div class="col-lg-2 col-md-6 col-12">
-                    <!-- Single Widget -->
-                    <div class="single-footer links">
-                        <span class="title">TỔNG ĐÀI HỖ TRỢ</span>
-                        <!-- Single Widget -->
-                        <div class="contact">
-                            <ul>
-                                <li>Hotline: {{$share_config->hotline}}</li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                    <!-- End Single Widget -->
-                </div>
+
             </div>
         </div>
     </div>
     <!--////////////////////////////////////////////////////////////////////////-->
-    <div class="container" style="border-top: 1px solid #ebedeb; margin-top: 20px;">
+<!--     <div class="container" style="border-top: 1px solid #ebedeb; margin-top: 20px;">
         <div class="row" style="margin-top: 20px;">
             
-            <div  class="col-lg-4 col-md-6 col-12" >
-                <div class="single-footer links">
-                    <span class="title">PHƯƠNG THỨC THANH TOÁN</span>
-                    <li style="list-style:none; margin-bottom:15px;">
-                        @foreach($payment as $payments)
-                        <a href="{{$payments->link}}" target="_blank" class="mr-2"><img style="width:77px; height:26px; background:none;" src="{!!url('upload/config/'.$payments->image)!!}" ></a>
-                        @endforeach
-                    </li>
-                    
-                </div>
-            </div>
             <div class="col-lg-4 col-md-6 col-12">
-                <!-- Single Widget -->
-                <div class="single-footer links">
-                    <span class="title">KẾT NỐI VỚI CHÚNG TÔI</span>
-                    
-                    <li style="display:flex; margin-bottom:15px; ">
-                        @foreach($social as $contact)
-                        <div class="fab-icon-holder">
-                            <a href="{{$contact->link}}" target="_blank" class="mr-2"><img style="width: 40px; border-radius: 100%;" src="{!!url('upload/config/'.$contact->image)!!}" ></a>
-                        </div>
-                        <!-- <a id="hover" href="{{$contact->link}}" target="_blank" style="margin-left: 5px;" class="fab-label abc">{!!$contact->name!!}</a> -->
-                        @endforeach
-                    </li>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Single Widget -->
                 <div class="single-footer links">
                     <span class="title">ĐĂNG KÝ NHẬN TIN</span>
-                    <!-- Single Widget -->
                     <div class="contact">
                         <ul>
                             <li>{{$share_config->mes_register}}</li>
@@ -233,22 +235,16 @@ background:#f7941d;
                     </div>
                     
                 </div>
-                <!-- End Single Widget -->
             </div>
         </div>
-    </div>
+    </div> -->
     
 </div>
 <!-- End Footer Top -->
-<div class="copyright">
+<!-- <div class="copyright">
     <div class="container">
         <div class="inner">
             <div class="row">
-                <!-- <div class="col-lg-6 col-12">
-                    <div class="left">
-                        <p>Copyright © 2020 <a href="http://www.wpthemesgrid.com" target="_blank">Wpthemesgrid</a>  -  All Rights Reserved.</p>
-                    </div>
-                </div> -->
                 <div class="col-lg-6 col-12">
                     <div class="left">
                         <img src="{{asset('images/payments.png')}}" alt="#">
@@ -257,7 +253,7 @@ background:#f7941d;
             </div>
         </div>
     </div>
-</div>
+</div> -->
 </footer>
 <!-- <div class="giuseart-nav" style="position:absolute;z-index: 0;">
 <ul>
