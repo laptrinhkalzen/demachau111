@@ -721,11 +721,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         });
         });
    </script> -->
-   <style type="text/css">
-       .show_li{
-            list-style: square;
-       }
-   </style>
+
 
     <script type="text/javascript">
         $(document).ready(function(){
