@@ -254,7 +254,7 @@ input[type="number"] {
 <!-- Modal -->
 <div class="modal fade" id="exampleModal{{$key}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
   <div class="modal-dialog" >
-    <img  style="object-fit: cover; height: 768px; width: auto !important;margin: auto; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery" >
+    <img  style="object-fit: cover; height: 600px; width: auto !important;margin: auto; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery" >
   </div>
 </div>
     @endforeach
@@ -481,7 +481,7 @@ input[type="number"] {
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="" data-toggle="modal" data-target="#{{$key}}"  target="_blank" class="mr-2"><img style="width: 55px; border-radius: 100%;" src="{!!url('upload/config/'.$benefits->image)!!}" ></a>
+                                                <a target="_blank" class="mr-2"><img style="width: 55px; border-radius: 100%;" src="{!!url('upload/config/'.$benefits->image)!!}" ></a>
                                             </div>
                                             <div class="col-md-9">
                                                 <div style="font-weight: 500;">{!!$benefits->name!!}</div>
