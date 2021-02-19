@@ -221,10 +221,14 @@ class ProductController extends Controller {
             $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get();
             $other_attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',null)->get()->groupBy('parent_id');
 
+
             foreach ($other_attributes as $key => $value) {
-                $other_attributes[$key]->title = DB::table('attribute')->where('id',$key)->pluck('title')->first();
+                $this_attr=DB::table('attribute')->where('id',$key)->first();
+                $other_attributes[$key]->title =$this_attr->title;
+                $other_attributes[$key]->status_detail =$this_attr->status_detail;
             }
-            // dd($other_attributes);
+         
+            dd($other_attributes);
             $parent_ids=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get()->pluck('parent_id')->unique();
 
              $input=array();
@@ -249,9 +253,9 @@ class ProductController extends Controller {
                        $sale_price=0;
                  }
                  $flashsale_product[$key]->sale_price=$sale_price;
+                }
             }
-        }
-      }
+          }
 
             foreach ($parent_ids as $key => $value) {
                 $input[$key]['id']=$value;

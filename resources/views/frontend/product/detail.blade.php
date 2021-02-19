@@ -583,7 +583,7 @@ input[type="number"] {
             <div class="row mt-4" style="font-size:14px;">
                    
                     @foreach($other_attributes as $key => $other_attribute)
-                     
+                     @if($other_attribute->status_detail!=1)
                     <div  class="col-md-7 col-7 col-lg-7">
                     <p style="color: black;font-weight: bold; padding: 10px;">{{$other_attribute->title}}</p>
    
@@ -598,7 +598,7 @@ input[type="number"] {
                             @endif
                           @endforeach
                             </div>
-                      
+                      @endif
                       @endforeach
                     </div>
                     
