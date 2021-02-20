@@ -422,13 +422,13 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                                 </a>
                                 <br>Khách sạn
                             </div>
-                            <div class="col-lg-2" style="height: 80px;text-align: center;">
+                            <div class="col-lg-2 phukien-hover" style="height: 80px;text-align: center;">
                                 <a href="{{url('search-product?search=phu kien')}}">
                                 <img class="hover-bg2" src="{{asset('public/icon/pillows.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
                                 <br>Phụ kiện
                                  </a>
                             </div>
-                               <div class="col-lg-2" style="height: 80px;text-align: center;">
+                               <div class="col-lg-2 flashsale-hover" style="height: 80px;text-align: center;">
                                 @if($count_fls==1)
                                 <a href="{{route('flashsale.show')}}">
                                 <img class="spks-hover" src="{{asset('public/icon/sale-red.svg')}}" style="width: 50%;cursor: pointer;vertical-align: text-top;">
@@ -549,7 +549,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
       $('.dem-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)");
       $('.changoi-hover1').hide(); 
       $('.hotel-hover1').hide();
-      $('.hotel-hover1').css("border-bottom", "none"); 
+      $('.hotel-hover').css("border-bottom", "none"); 
       $('.changoi-hover').css("border-bottom", "none");  
   });
     $('.dem-hover1').mouseover(function () {
@@ -591,6 +591,33 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
   $('.hotel-hover1').mouseout(function () {
       $('.hotel-hover1').hide();  
       $('.hotel-hover').css("border-bottom", "none");       
+});
+    $('.phukien-hover').mouseover(function () {
+        $('.phukien-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)");  
+              $('.hotel-hover').css("border-bottom", "none");   
+      $('.dem-hover1').hide();
+      $('.hotel-hover1').hide();
+            $('.hotel-hover1').hide();
+            $('.dem-hover').css("border-bottom", "none");
+            $('.changoi-hover').css("border-bottom", "none");
+            $('.hotel-hover').css("border-bottom", "none");    
+            $('.flashsale-hover').css("border-bottom", "none");     
+    });
+      $('.phukien-hover').mouseout(function () {
+      $('.phukien-hover').css("border-bottom", "none");       
+});
+          $('.flashsale-hover').mouseover(function () {
+        $('.flashsale-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)");  
+            $('.dem-hover').css("border-bottom", "none");
+            $('.changoi-hover').css("border-bottom", "none");   
+            $('.hotel-hover').css("border-bottom", "none");   
+
+      $('.dem-hover1').hide();
+      $('.changoi-hover1').hide();
+            $('.hotel-hover1').hide();  
+    });
+      $('.flashsale-hover').mouseout(function () {
+      $('.flashsale-hover').css("border-bottom", "none");       
 });
 
 

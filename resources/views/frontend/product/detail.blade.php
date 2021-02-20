@@ -195,6 +195,52 @@ input[type="number"] {
 
 </style>
 
+<style type="text/css">
+.rating {
+    border: none;
+}
+
+.rating>[id^="star"] {
+    display: none
+}
+
+.rating>label:before {
+    margin: 5px;
+    font-size: 2.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+
+.rating>.half:before {
+    content: "\f089";
+    position: absolute
+}
+
+.rating>label {
+    color: #ddd;
+    float: right
+}
+
+.rating>[id^="star"]:checked~label,
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: #FFD700
+}
+
+.rating>[id^="star"]:checked+label:hover,
+.rating>[id^="star"]:checked~label:hover,
+.rating>label:hover~[id^="star"]:checked~label,
+.rating>[id^="star"]:checked~label:hover~label {
+    color: #FFED85
+}
+
+.reset-option {
+    display: none
+}
+
+</style>
+
 <div class="breadcrumbs">
     <div class="container">
         <div class="row">
@@ -639,22 +685,34 @@ input[type="number"] {
     </section>
     @endif
 
+
     <section style="padding-bottom: 50px;">
         <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
             <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Đánh giá (0)</p>
-            <p class="mt-5" style="color: black;font-size: 18px;padding:10px;"><b>Đánh giá</b></p>
             <p class="mt-2" style="color: black;padding:10px;">Chưa có đánh giá nào</p>
         <div class="container" style="border: 3px solid #283988">
-            <p class="mt-4" style="font-size:18px;color: black;"><b>Hãy là người đầu tiên nhận xét</b></p>
-            <p class="mt-4" style="color: black;"><b>Đánh giá của bạn *</b></p>
-            <p class="mt-4" style="color: black;"><b>Nhận xét của bạn *</b></p>
-            <textarea class="form-control mt-2" rows="5"></textarea>
+          <div class="row">
+            <div class="col-lg-6" style="padding: 20px;">
+              <div style="background-color: #EBEBEB;height: 100%;">
+                @foreach($images as $img)
+                <div class="row"><img src="{!!$img!!}" class="mt-4" style="width: 40%;margin: auto;"></div>
+                <p class="mt-3" style="text-align: center;"><b>{!!$detail_product->title!!}</b></p>
+                <div class="mt-3 row" style="text-align: center;">
+                  <fieldset class="rating" style="margin: auto;"> <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label> <input type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label> <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label> <input type="radio" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label> <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label> <input type="radio" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label> <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label> <input type="radio" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label> <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label> <input type="radio" id="starhalf" name="rating" value="0.5" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label> <input type="radio" class="reset-option" name="rating" value="reset" /> </fieldset>
+                </div>
+                @endforeach
+              </div>
+            </div>
+            <div class="col-lg-6">
             <p class="mt-4" style="color: black;"><b>Tên *</b></p>
             <input type="text" class="form-control form-control-lg mt-2" >
             <p class="mt-4" style="color: black;"><b>Email *</b></p>
             <input type="text" class="form-control form-control-lg mt-2" >
-            <p class="mt-4 "><input class="mr-2" type="checkbox"><b>Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.</b></p>
+            <p class="mt-4" style="color: black;"><b>Nhận xét của bạn *</b></p>
+            <textarea class="form-control mt-2" rows="3"></textarea>
             <button type="submit" class="btn mt-4 mb-4" style="background-color: #292BB7;">Gửi đi</button>
+            </div>
+          </div>
         </div>
         </div>
 
