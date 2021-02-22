@@ -190,7 +190,7 @@ background:#f7941d;
                                 <img src="{{asset('images/payments.png')}}" class="img-bct" alt="#" style="width: 200px;display: none;">
                         </div>
                         <div class="single-footer links">
-                                     <img src="{{asset('images/payments.png')}}" alt="#" style="width: 200px;">
+                                     <img src="{{asset('images/payments.png')}}" alt="#" style="width: 160px;">
                                 </div>
 
                     </div>
