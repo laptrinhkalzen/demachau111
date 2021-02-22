@@ -219,7 +219,7 @@ class ProductController extends Controller {
             $benefit = DB::table('benefit')->orderBy('order','asc')->get();
             $detail_product =  $this->productRepo->getDetailProduct($alias);
             $attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',1)->get();
-            $other_attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',null)->get()->groupBy('parent_id');
+            $other_attributes=DB::table('product_attribute')->join('attribute','attribute.id','=','product_attribute.attribute_id')->where('product_id',$id)->where('attribute.parent_id','!=','0')->where('product_attribute.is_variant',null)->orderBy('order_by')->get()->groupBy('parent_id');
 
 
             foreach ($other_attributes as $key => $value) {
