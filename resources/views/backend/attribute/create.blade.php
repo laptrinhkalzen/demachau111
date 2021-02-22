@@ -61,6 +61,14 @@
                                  
                                 </div>
                             </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label text-right">Thứ tự danh mục cha<span class="text-danger">*</span></label>
+                                <div class="col-md-9">
+                                    <input type="number" class="form-control" name="order_by_parent" value="{!!old('order_by_parent')!!}" required="">
+                                 
+                                </div>
+                            </div>
                             <div class="form-group row">
                                     <div class="form-check col-md-6 form-check-right">
                                         <label class="form-check-label float-right">

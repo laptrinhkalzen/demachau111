@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Repositories\AttributeRepository;
+use DB;
 
 class AttributeController extends Controller
 {
@@ -57,6 +58,7 @@ class AttributeController extends Controller
          $input['status'] = isset($input['status']) ? 1 : 0;
          $input['status_detail'] = isset($input['status_detail']) ? 1 : 0;
         $attribute = $this->attributeRepo->create($input);
+        //DB::table('attribute')->where('parent_id',$attribute->id)->update('order_by_parent'=>$attribute->order_by_parent);
         if ($attribute->id){
             return redirect()->route('admin.attribute.index')->with('success', 'Tạo mới thành công');
         } else {
@@ -108,7 +110,12 @@ class AttributeController extends Controller
         }
         $input['status'] = isset($input['status']) ? 1 : 0;
         $input['status_detail'] = isset($input['status_detail']) ? 1 : 0;
+
         $res = $this->attributeRepo->update($input, $id);
+        $res=DB::table('attribute')->where('id',$id)->first();
+        if($res->parent_id == 0){
+        DB::table('attribute')->where('parent_id',$res->id)->update(['order_by_parent'=>$res->order_by_parent]);
+        }
         if ($res){
             return redirect()->route('admin.attribute.index')->with('success', 'Cập nhật thành công');
         } else {

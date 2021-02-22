@@ -484,7 +484,7 @@ input[type="number"] {
                                                 <button type="submit" style="width:100%;border-radius: 5px;background-color: #292BB7;"  class="btn"><strong style="font-size: 16px; ">Mua trả góp 0%</strong><br><span style="font-size: 13px;opacity: .8;">Trả góp qua thẻ tín dụng</span></button>
                                             </div>
                                             <div class="col-6 col-md-6" >
-                                                <button type="submit" style="width:100%;border-radius: 5px;background-color: #292BB7;"  class="btn"><strong style="font-size: 16px;">Thanh toán VNPAY</strong><br><span style="font-size: 13px;opacity: .8;">ATM nội địa | QRcode</span></button>
+                                                <button type="submit" style="width:100%;border-radius: 5px;background-color: #292BB7;"  class="btn"><strong style="font-size: 16px;">VNPAY</strong><br><span style="font-size: 13px;opacity: .8;">ATM nội địa | QRcode</span></button>
                                             </div>
                                         </div>
                                     </div>
