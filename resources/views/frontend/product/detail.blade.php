@@ -274,7 +274,7 @@ input[type="number"] {
                         @csrf
                         <input type="hidden" id="option_number" name="option_number">
                         <div class="row">
-                            <div class="col-lg-5 col-12" style="">
+                            <div class="col-lg-6 col-12" style="">
                                 <div>
                                     
                                     <!--Carousel Wrapper-->
@@ -401,7 +401,7 @@ input[type="number"] {
                                     </div>
                                 </div>
                                 
-                                <div class="col-lg-7 col-12 bien-the" style="padding-left: 0px;">
+                                <div class="col-lg-6 col-12 bien-the" style="padding-left: 0px;">
 
                                     <div class="form-group">
                                         
@@ -514,7 +514,7 @@ input[type="number"] {
                     </div>
                 </div>
                 <hr>
-                <div class="col-lg-3 col-12 benefit" style="border: 1px solid #ebebeb;background-color: white;">
+                <div class="col-lg-3 col-12 benefit" style="border: 1px solid #ebebeb; height:460px; background-color: white;">
                     
                     <!-- Order Widget -->
                     <div class="row">
@@ -535,6 +535,7 @@ input[type="number"] {
                                                 
                                             </div>
                                         </div>
+
                                     </div>
                                     
                                     
@@ -562,6 +563,7 @@ input[type="number"] {
                                 </div>
                                 @endforeach
                             </ul>
+                            
                         </div>
                     </div>
                       </div>
