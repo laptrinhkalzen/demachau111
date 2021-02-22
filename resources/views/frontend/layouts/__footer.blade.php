@@ -1,4 +1,8 @@
 <style type="text/css">
+#sendmail{
+    /*margin-left: 20px;*/
+}
+
 .fab-container {
 position: fixed;
 bottom: 27px;
@@ -27,6 +31,7 @@ background:none;
 .single-footer .title{
 font-size: 16px;
 font-weight: bold;
+color: #283988;
 }
 .fab-icon-holder:hover {
 opacity: 0.8;
@@ -120,13 +125,13 @@ background:#f7941d;
 
                 <a href="/"><img class="logo mt-2" src="{{$share_config->image}}" alt="logo" style="width:60%;"></a>
 
-                    <div class="single-footer links mt-5">
+                    <div class="single-footer links mt-5" style=" margin-top: 2rem!important;">
                         <span class="title">{{$share_config->company_name}}</span>
                         <div class="contact">
                             <ul>
-                                <li>Địa chỉ:&nbsp <b>{{$share_config->address}}</b></li>
-                                <li>Hotline:&nbsp <b>{{$share_config->hotline}}</b></li>
-                                <li>Email:&nbsp <b>{{$share_config->email}}</b></li>
+                                <li><b>Địa chỉ:</b>&nbsp {{$share_config->address}}</li>
+                                <li><b>Hotline:</b>&nbsp {{$share_config->hotline}}</li>
+                                <li><b>Email:</b>&nbsp {{$share_config->email}}</li>
                             </ul>
                         </div>
                         
@@ -142,26 +147,13 @@ background:#f7941d;
                                     <div class="contact">
                                         @foreach($company_infor as $infor)
                                         <ul>
-                                            <a href="#"><li>{{$infor->name}}</li></a>
+                                            <a href="/"><li>{{$infor->name}}</li></a>
                                         </ul>
                                         @endforeach
                                     </div>
                                 </div>
                                 
-                                <div class="single-footer links mt-5 connect-me">
-                                <span class="title">KẾT NỐI VỚI CHÚNG TÔI</span>
                                 
-                                <li style="display:flex; margin-bottom:15px; ">
-                                    @foreach($social as $contact)
-                                    <div class="fab-icon-holder">
-                                        <a href="{{$contact->link}}" target="_blank" class="mr-2"><img style="width: 40px; border-radius: 50%;object-fit: cover;" src="{!!url('upload/config/'.$contact->image)!!}" ></a>
-                                    </div>
-                                    <!-- <a id="hover" href="{{$contact->link}}" target="_blank" style="margin-left: 5px;" class="fab-label abc">{!!$contact->name!!}</a> -->
-                                    @endforeach
-                                </li>
-
-                                <img src="{{asset('images/payments.png')}}" class="img-bct" alt="#" style="width: 200px;display: none;">
-                                </div>
                             </div>
                             
                             <div class="col-lg-5 col-md-6 col-12 mt-5 support-users">
@@ -182,13 +174,26 @@ background:#f7941d;
                         </div>
                     </div>
                 </div>
+                <div  class="col-lg-5 col-md-6 col-12" >
+                    <div class="single-footer links mt-5 connect-me">
+                                <span class="title">KẾT NỐI VỚI CHÚNG TÔI</span>
+                                
+                                <li style="display:flex; margin-bottom:15px; ">
+                                    @foreach($social as $contact)
+                                    <div class="fab-icon-holder">
+                                        <a href="{{$contact->link}}" target="_blank" class="mr-2"><img style="width: 40px; border-radius: 50%;object-fit: cover;" src="{!!url('upload/config/'.$contact->image)!!}" ></a>
+                                    </div>
+                                    <!-- <a id="hover" href="{{$contact->link}}" target="_blank" style="margin-left: 5px;" class="fab-label abc">{!!$contact->name!!}</a> -->
+                                    @endforeach
+                                </li>
 
-                <div class="col-lg-5 col-md-6 col-12 mt-5 bo-cong-thuong">
-                    <div class="single-footer links">
-                        <img src="{{asset('images/payments.png')}}" alt="#" style="width: 200px;">
+                                <img src="{{asset('images/payments.png')}}" class="img-bct" alt="#" style="width: 200px;display: none;">
+                        </div>
+                        <div class="single-footer links">
+                                     <img src="{{asset('images/payments.png')}}" alt="#" style="width: 200px;">
+                                </div>
+
                     </div>
-                </div>
-
                 <div class="col-lg-7 mt-5 payments">
                     <div class="container">
                         <div class="row" >
@@ -207,14 +212,47 @@ background:#f7941d;
                     </div>                       
                 </div>
 
+
+                <!-- <div class="col-lg-5 col-md-6 col-12 mt-5 bo-cong-thuong">
+                    <div class="single-footer links">
+                        <img src="{{asset('images/payments.png')}}" alt="#" style="width: 200px;">
+                    </div>
+                </div>
+                
+                    
+                <div class="col-lg-7 col-md-6 col-12 mt-5 padding-none" style="margin-bottom: 20px;">
+                        <div class="single-footer links"> 
+                            <span class="title">ĐĂNG KÝ NHẬN TIN</span>
+                            <div class="contact">
+                                <ul>
+                                    <li>{{$share_config->mes_register}}</li>
+                                </ul>
+                            </div>
+                            <div class="inner">
+                                
+                                <form  method="post" target="_blank" class="newsletter-inner">
+                                    @csrf
+                                    
+                                    <input name="email1" id="email1" placeholder="Email của bạn"  type="text">
+                                    <button type="button" id="sendmail" class="btn sendmail">Đăng ký</button>
+                                    <div  aria-hidden="true" class="success"><span style="margin-left:14px;">Đăng ký thành công</span></div>
+                                </form>
+                            </div>
+                    </div>
+                </div> -->
+                    
+               
+
+                
+
                     <!-- End Single Widget -->
                 </div>
 
             </div>
         </div>
-    </div>
+    
     <!--////////////////////////////////////////////////////////////////////////-->
-<!--     <div class="container" style="border-top: 1px solid #ebedeb; margin-top: 20px;">
+    <!-- <div class="container" style="border-top: 1px solid #ebedeb; margin-top: 20px;">
         <div class="row" style="margin-top: 20px;">
             
             <div class="col-lg-4 col-md-6 col-12">
@@ -241,7 +279,7 @@ background:#f7941d;
         </div>
     </div> -->
     
-</div>
+
 <!-- End Footer Top -->
 <!-- <div class="copyright">
     <div class="container">
