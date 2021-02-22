@@ -118,7 +118,7 @@ background:#f7941d;
             <div class="row" >
                 <div  class="col-lg-5 col-md-6 col-12" >
 
-                <img class="logo mt-2" src="{{$share_config->image}}" alt="logo" style="width:60%;">
+                <a href="/"><img class="logo mt-2" src="{{$share_config->image}}" alt="logo" style="width:60%;"></a>
 
                     <div class="single-footer links mt-5">
                         <span class="title">{{$share_config->company_name}}</span>
