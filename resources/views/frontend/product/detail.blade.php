@@ -266,7 +266,7 @@ input[type="number"] {
 <section class="shop checkout section" style="background-color: #f6f7fb;"  >
     <div class="container">
         <div class="row">
-            <div class="col-lg-9 col-12" style="background-color: #fff;border: 1px solid #ebebeb;border-right: none; ">
+            <div class="col-lg-9 col-12" style="background-color: #fff;border: 1px solid #ebebeb;">
                 <div class="checkout-form">
                     
                     <!-- Form -->
@@ -466,7 +466,7 @@ input[type="number"] {
                                             <div class="col-md-12">
                                                  <strong>Số lượng:</strong>
                                               </div>
-                                            <div style="margin-top: 0px;" class="col-md-4 input-group">
+                                            <div style="margin-top: 0px;" class="col-md-5 input-group">
                                              
                                               <input type="button" value="-" class="button-minus" data-field="quantity">
                                               <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field" >
@@ -514,7 +514,7 @@ input[type="number"] {
                     </div>
                 </div>
                 <hr>
-                <div class="col-lg-3 col-12 benefit" style="border: 1px solid #ebebeb; height:460px; background-color: white;">
+                <div class="col-lg-3 col-12 benefit" style="border: 1px solid #ebebeb; height:460px; background-color: white;border-left: none;">
                     
                     <!-- Order Widget -->
                     <div class="row">
