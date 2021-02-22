@@ -783,8 +783,7 @@ input[type="number"] {
                                                 @endif
                                                 @endforeach
                                                 @if($dem==0)
-                                                <!-- <span style="color:red;">{{number_format($val['price'])}}đ</span> -->
-                                                <span style="color:red;">Liên hệ</span>
+                                                <span style="color:red;">{{number_format($val['price'])}}đ</span>
                                                 @endif
                                                 @else
                                                  <span style="color:red;">Liên hệ</span>
