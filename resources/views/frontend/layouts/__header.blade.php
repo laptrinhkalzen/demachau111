@@ -539,6 +539,27 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
 
+        <div class="container phukien-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
+            <div class="row">
+                 @foreach($danh_muc_tra_phukien as $danh_muc_tra2)
+
+                     @foreach($product_phukien as $key_phukien => $product_phukien1)
+                       @if($key_phukien==$danh_muc_tra2->id)
+                <div class="col-3" style="margin-top: 10px;">
+                   
+                   
+                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
+                        @foreach($product_phukien1 as $product_phukien2)
+                           <li class="show_li"><a href="{{route('category.show',['alias'=>$product_phukien2->alias])}}">{{$product_phukien2->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+                  @endif
+                @endforeach
+            @endforeach
+            </div>
+        </div>
+
 
          
 
@@ -549,6 +570,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
       $('.dem-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)");
       $('.changoi-hover1').hide(); 
       $('.hotel-hover1').hide();
+      $('.phukien-hover1').hide();
       $('.hotel-hover').css("border-bottom", "none"); 
       $('.changoi-hover').css("border-bottom", "none");  
   });
@@ -556,7 +578,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
       $('.dem-hover1').show();      
     });
   $('.dem-hover1').mouseout(function () {
-      $('.dem-hover1').hide();
+        $('.dem-hover1').hide();
         $('.dem-hover').css("border-bottom", "none");      
 });
 
@@ -565,6 +587,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
       $('.changoi-hover1').show(); 
       $('.dem-hover1').hide();
       $('.hotel-hover1').hide(); 
+      $('.phukien-hover1').hide();
       $('.dem-hover').css("border-bottom", "none");
        $('.hotel-hover').css("border-bottom", "none");
         $('.changoi-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)"); 
@@ -581,6 +604,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
       $('.hotel-hover1').show(); 
       $('.dem-hover1').hide();
       $('.changoi-hover1').hide();
+      $('.phukien-hover1').hide();
       $('.dem-hover').css("border-bottom", "none");
       $('.changoi-hover').css("border-bottom", "none");
       $('.hotel-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)"); 
@@ -596,6 +620,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         $('.phukien-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)");  
               $('.hotel-hover').css("border-bottom", "none");   
       $('.dem-hover1').hide();
+      $('.phukien-hover1').show();
       $('.hotel-hover1').hide();
             $('.hotel-hover1').hide();
             $('.dem-hover').css("border-bottom", "none");

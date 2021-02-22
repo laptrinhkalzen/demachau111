@@ -16,11 +16,14 @@ class Frontend {
     public function handle($request, Closure $next){
         $danh_muc_tra=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
         $danh_muc_tra_chan=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
+        $danh_muc_tra_phukien=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
         $danh_muc_tra_khachsan=DB::table('category')->where('parent_id',0)->where('type',4)->where('status',1)->get();
         $product_nem=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->join('category','category.id','product_category.category_id')->where('product.status',1)->where('product.alias','LIKE','%'.'dem'.'%')->orWhere('product.meta_keywords','LIKE','%'.'dem'.'%')->get()->unique('category_id')->groupBy('parent_id');
         $product_changoi=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->join('category','category.id','product_category.category_id')->where('product.status',1)->where('keywords','like','%'.'chan'.'%')->orWhere('keywords','like','%'.'goi'.'%')->orWhere('product.meta_keywords','LIKE','%'.'dem'.'%')->get()->unique('category_id')->groupBy('parent_id');
 
          $product_khachsan=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->join('category','category.id','product_category.category_id')->where('product.status',1)->where('title','like','%'.'khach san'.'%')->orWhere('keywords','like','%'.'khach san'.'%')->get()->unique('category_id')->groupBy('parent_id');
+
+         $product_phukien=DB::table('product')->join('product_category','product_category.product_id','=','product.id')->join('category','category.id','product_category.category_id')->where('product.status',1)->where('keywords','like','%'.'phu kien'.'%')->orWhere('keywords','like','%'.'phu kien'.'%')->orWhere('product.meta_keywords','LIKE','%'.'phu kien'.'%')->get()->unique('category_id')->groupBy('parent_id');
       
         $config = \DB::table('config')->first();
         $brand = \DB::table('brand')->orderBy('order','asc')->get();
@@ -81,8 +84,10 @@ class Frontend {
         }
         \View::share(['danh_muc_tra_khachsan' => $danh_muc_tra_khachsan]);
         \View::share(['product_khachsan' => $product_khachsan]);
+         \View::share(['product_phukien' => $product_phukien]);
         \View::share(['danh_muc_tra_chan' => $danh_muc_tra_chan]);
         \View::share(['danh_muc_tra' => $danh_muc_tra]);
+        \View::share(['danh_muc_tra_phukien' => $danh_muc_tra_phukien]);
         \View::share(['product_nem' => $product_nem]);
         \View::share(['product_changoi' => $product_changoi]);
         \View::share(['share_config' => $config]);
