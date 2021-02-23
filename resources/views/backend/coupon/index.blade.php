@@ -46,7 +46,7 @@
             <tbody>
                 @foreach($coupons as $key=>$coupon)
                 <tr>
-                    <td>{{$coupon->id}}</td>
+                    <td>{{$key+1}}</td>
                     <td>{{$coupon->coupon_name}}</td>
                     <td>{{$coupon->coupon_code}}</td>
                     <td>{{$coupon->coupon_number}}</td>
