@@ -629,7 +629,8 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             $('.flashsale-hover').css("border-bottom", "none");     
     });
       $('.phukien-hover').mouseout(function () {
-      $('.phukien-hover').css("border-bottom", "none");       
+      $('.phukien-hover').css("border-bottom", "none");  
+      $('.phukien-hover1').hide();        
 });
           $('.flashsale-hover').mouseover(function () {
         $('.flashsale-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)");  
