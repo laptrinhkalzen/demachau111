@@ -400,8 +400,8 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-lg-6" style="padding: 0px !important;">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-2" style="height: 100%;padding-left: 0px;">
-                            <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo" style="margin-top:20px !important;"></a>
+                            <div class="col-lg-2" style="height: 100%;padding: 0px;">
+                            <a href="{{route('home.index')}}"><img class="logo" src="{{$share_config->image}}" alt="logo" style="margin-top:20px !important;object-fit: cover;"></a>
                             </div>
                             <div class="col-lg-2 dem-hover" style="height: 80px;text-align: center;">
                                  <a href="{{url('search-product?search=dem')}}">

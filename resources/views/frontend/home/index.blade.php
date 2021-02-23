@@ -790,6 +790,7 @@ document.getElementById("countdown_mobile").innerHTML = "EXPIRED";
 <script>
  $(document).ready(function() {
 
+
 $('.owl-carousel1').owlCarousel({
     loop:true,
     margin:10,
