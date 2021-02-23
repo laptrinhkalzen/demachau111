@@ -59,7 +59,7 @@
                     @if($coupon->coupon_type==1)
                     <td>{{$coupon->coupon_value}}%</td>
                     @else
-                    <td>{{$coupon->coupon_value}}$</td>
+                    <td>{{$coupon->coupon_value}}đ</td>
                     @endif
                     @if($coupon->coupon_condition>0)
                     <td>Đơn hàng từ {{$coupon->coupon_condition}}$</td>
