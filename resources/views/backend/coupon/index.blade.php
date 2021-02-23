@@ -62,7 +62,7 @@
                     <td>{{$coupon->coupon_value}}đ</td>
                     @endif
                     @if($coupon->coupon_condition>0)
-                    <td>Đơn hàng từ {{$coupon->coupon_condition}}$</td>
+                    <td>Đơn hàng từ {{$coupon->coupon_condition}}đ</td>
                     @else
                     <td></td>
                     @endif
