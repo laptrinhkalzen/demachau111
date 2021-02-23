@@ -408,7 +408,7 @@ input[type="number"] {
                                         <p style="font-size: 22px;font-weight: bold;">{{$detail_product->title}}</p>
                                     </div>
                                     <div class="col-lg-12 col-md-12 row" style="margin-bottom:15px;" >
-                                            <div id="price_origin" style="text-decoration-line:line-through; color: gray;" class="old"></div>&nbsp
+                                            <div id="price_origin" style="text-decoration-line:line-through; color: #808080; font-size: 130%;" class="old"></div>&nbsp
                                             <strong id="option_price" style="color:red;font-size: 24px;"></strong>
                                      </div>
 
@@ -778,7 +778,7 @@ input[type="number"] {
                                                 @php 
                                                    $dem++;
                                                 @endphp
-                                                <span class="old">{{number_format($val['price'])}}đ</span>
+                                                <span style="" class="old">{{number_format($val['price'])}}đ</span>
                                                 <span style="color:red;">{{number_format($val['sale_price'])}}đ</span>
                                                 @endif
                                                 @endforeach
@@ -876,7 +876,7 @@ input[type="number"] {
                                                 @php 
                                                    $dem++;
                                                 @endphp
-                                                <span class="old">{{number_format($product->price)}}đ</span>
+                                                <span style="" class="old">{{number_format($product->price)}}đ</span>
                                                 <span style="color:red;">{{number_format($product->sale_price)}}đ</span>
                                                 @endif
                                                 @endforeach

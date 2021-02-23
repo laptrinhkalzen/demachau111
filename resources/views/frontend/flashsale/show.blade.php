@@ -140,7 +140,7 @@ document.body.querySelector('#alternate-button-container')
 								<h3 style="text-align: center;"><a href="{{route('product.detail',['alias'=>$flashsale_product->alias])}}">{{$flashsale_product->title}}</a></h3>
 								<div class="product-price" style="text-align: center; color: red;">
 									@if($flashsale_product->sale_price>0)
-									<span class="old" style="color:#a0a0a0;">{{number_format($flashsale_product->price)}}đ</span>
+									<span class="old" style="">{{number_format($flashsale_product->price)}}đ</span>
 									<span>{{number_format($flashsale_product->sale_price)}}đ</span>
 									@else
 									<span>{{number_format($flashsale_products->price)}}đ</span>

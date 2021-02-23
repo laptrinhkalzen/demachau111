@@ -2295,7 +2295,8 @@ padding-left: 0px;
 }
 .single-product .product-content .product-price span.old {
   text-decoration: line-through;
-  opacity: .6;
+  opacity: 1;
+  color:#808080;
   margin-right: 2px;
 }
 .single-product .product-content1 h3 {

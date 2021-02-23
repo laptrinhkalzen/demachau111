@@ -256,7 +256,7 @@ document.body.querySelector('#alternate-button-container')
 								<div class="product-price" style="text-align: center; color: red;">
 									@if($product_arr1->price > 0)
 									@if($product_arr1->sale_price>0)
-									<span class="old" style="color:#a0a0a0;">{{number_format($product_arr1->price)}}đ</span>
+									<span class="old" style="color:#808080;">{{number_format($product_arr1->price)}}đ</span>
 									<span>{{number_format($product_arr1->sale_price)}}đ</span>
 									@else
 									<span>{{number_format($product_arr1->price)}}đ</span>
