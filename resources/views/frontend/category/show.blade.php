@@ -323,8 +323,8 @@ function myFunction() {
 <script type="text/javascript">
 	$(document).ready(function(){
           $('.attribute_filter,#order_by').on('change',function(){
-          	    //var current_url = window.location.href;
-          	    //alert(current_url);
+
+                $('input[name=attr]').prop('disabled', 'disabled');
           	    var attr=[];
           	    var order_by=$('#order_by :selected').val();
           	    var cat_id={{$category_id}};	
@@ -336,6 +336,7 @@ function myFunction() {
 				    method:'POST',
 				    data:{attr:attr,order_by:order_by,cat_id:cat_id,_token: $('#token').val()},
 				    success:function(resp){
+				    	$('input[name=attr]').removeAttr('disabled');
 				    	if(resp!=1){
 					        $('.show_filter').html(resp);
 					        $(window).scrollTop(0);
