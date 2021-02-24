@@ -187,11 +187,11 @@ background:#f7941d;
                                     @endforeach
                                 </li>
 
-                                <img src="{{asset('images/payments.png')}}" class="img-bct" alt="#" style="width: 200px;display: none;">
+                                <img src="{{asset('images/payments.png')}}" class="img-bct" alt="#" style="width: 200px;">
                         </div>
-                        <div class="single-footer links">
+<!--                         <div class="single-footer links">
                                      <img src="{{asset('images/payments.png')}}" alt="#" style="width: 160px;">
-                                </div>
+                                </div> -->
 
                     </div>
                 <div class="col-lg-7 mt-5 payments">

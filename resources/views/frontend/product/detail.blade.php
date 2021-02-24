@@ -736,7 +736,7 @@ input[type="number"] {
                                         <div class="product-img">
                                             <a href="{{route('product.detail',['alias'=>$val['alias']])}}">
                                               @foreach( explode(',',$val['image']) as $value)
-                                                <img class="default-img img-responsive img-rounded custom-product" src="{!!$value!!}" style="padding-top: 10px; ">
+                                                <img class="default-img img-responsive img-rounded custom-product" src="{!!$value!!}" style="padding-top: 10px;height: 323px; ">
                                                 @php 
                                                   $discount=($val['price'] - $val['sale_price']) / ($val['price']/100);
                                                      if($discount<1){
@@ -837,7 +837,7 @@ input[type="number"] {
                                         <div class="product-img">
                                             <a href="{{route('product.detail',['alias'=>$product->alias])}}">
                                               @foreach( explode(',',$product->images) as $value)
-                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px; ">
+                                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;height: 323px; ">
                                                 @if($product->sale_price > 0)
                                                    @php 
                                                       $discount=($product->price - $product->sale_price) / ($product->price/100);
