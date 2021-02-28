@@ -548,10 +548,11 @@ background:#f7941d;
     data: {id_option: id_option,quantity:quantity,key:key},
     success: function (resp) {
     if (resp.success == true) {
+        $('#final_total_hidden').val(resp.total);
         //$(".shopping-item").load(" .shopping-item > *");
         $('#sub_total').html(formatNumber(resp.total)+" đ");
         $("#final_total").html(formatNumber(resp.total)+" đ");
-        $('#final_total_hidden').val(resp.total);
+        
         $('.total-amount').html(formatNumber(resp.total)+' đ');
         $('.count-sp').html(resp.count + ' Sản phẩm');
         $('.total-count').html(resp.count);

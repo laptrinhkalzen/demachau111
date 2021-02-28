@@ -135,7 +135,7 @@
 								  </div>
   									<div class="col-lg-7"  >
 								  <select class="form-control-sm pick_bank" id="sel1 " style="cursor: pointer; width: 100%;">
-								  	<option default>Chọn ngân hàng trả góp</option>
+								  	<option value="0" default>Chọn ngân hàng trả góp</option>
 								    @foreach($bank_name as $key => $bank_name)
 								        <option value="{{$bank_name}}">{{$bank_name}}</option>
 								    @endforeach
@@ -460,8 +460,9 @@
 		    }
             $('.pick_bank ,.pick_month, .each_quantity').on('change',function(){
                 var bank_name = $('.pick_bank').val();
+                //alert(bank_name);
                 var month=$('.pick_month').val();
-                if(bank_name != null){
+                if(bank_name !=0 ){
                 	 $.ajax({
 				        url:'{{route("api.tra_gop")}}',
 				        data:{bank_name:bank_name,month:month,_token:$('#token').val()},
