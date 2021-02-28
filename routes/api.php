@@ -51,3 +51,4 @@ Route::post('/get-email11', ['as' => 'api.get_email11', 'uses' => 'Api\FrontendC
 Route::post('/delete-cart', ['as' => 'api.delete_cart', 'uses' => 'Api\ProductController@delete_cart']);
 Route::post('/update-cart', ['as' => 'api.update_cart', 'uses' => 'Api\ProductController@update_cart']);
 Route::post('/apply_coupon', ['as' => 'api.apply_coupon', 'uses' => 'Api\FrontendController@apply_coupon']);
+Route::post('/tra_gop', ['as' => 'api.tra_gop', 'uses' => 'Api\FrontendController@tra_gop']);

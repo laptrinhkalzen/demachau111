@@ -52,7 +52,13 @@ class FrontendController extends Controller {
         }
       
     }
-
+      public function tra_gop(Request $request) {
+          $month=$request->month;
+          $bank_name=$request->bank_name;
+          $result= DB::table('phi_tra_gop')->where('bank_name',$bank_name)->where('month',$month)->first();
+          //dd($result);
+           return response()->json(['result' => $result]);
+      }
      public function apply_coupon(Request $request) {
        $coupon_code=$request->coupon_code;
             $query=DB::table('coupon')->where('coupon_code',$coupon_code)->first();

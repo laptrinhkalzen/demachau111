@@ -11,7 +11,15 @@ use Carbon\Carbon;
 
 class CheckoutOrderController extends Controller {
 
-    public function index() {
+    public function index(Request $request) {
+        
+        $url=$request->query();
+        if($url!=null){
+        $returnData = array();
+        $returnData['RspCode'] = '00';
+        $returnData['Message'] = 'Confirm Success';     
+        echo json_encode($returnData);
+         }
         //dd(Session('cart'));
         $district=DB::table('district')->get();
         $city=DB::table('city')->get();
@@ -21,13 +29,15 @@ class CheckoutOrderController extends Controller {
                 $total += ($val['price'] * $val['quantity']);
             }
         }
+        $bank_name=DB::table('phi_tra_gop')->pluck('bank_name')->unique();
+        $month_tra_gop = DB::table('phi_tra_gop')->pluck('month')->unique();
         $product_options=DB::table('product_option')->get();
         $option_details=DB::table('option_detail')->get();
         $banks=DB::table('bank')->orderBy('order','asc')->get();
         //dd(Session('cart'));
         //dd($option_details);
 
-        return view('frontend/checkout/checkout',compact('total','city','district','product_options','option_details','banks'));
+        return view('frontend/checkout/checkout',compact('total','city','district','product_options','option_details','banks','month_tra_gop','bank_name'));
     }
     
      public function buy_now($id,Request $request) {
@@ -191,7 +201,7 @@ class CheckoutOrderController extends Controller {
             $vnp_TmnCode = "HMGIANG1"; //Mã website tại VNPAY 
             $vnp_HashSecret = "VEBOPFGAZXBGKVYYUHTXVURZMUVBMAKZ"; //Chuỗi bí mật
             $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-            $vnp_Returnurl = "http://demachau.com";
+            $vnp_Returnurl = "http://demachau.local:8888/checkout-order";
             $vnp_TxnRef = $order->id; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
             $vnp_OrderInfo = "Thanh toán đơn hàng #".$order->id;
             $vnp_OrderType = 'billpayment';

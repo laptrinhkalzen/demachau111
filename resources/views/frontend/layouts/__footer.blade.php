@@ -551,6 +551,7 @@ background:#f7941d;
         //$(".shopping-item").load(" .shopping-item > *");
         $('#sub_total').html(formatNumber(resp.total)+" đ");
         $("#final_total").html(formatNumber(resp.total)+" đ");
+        $('#final_total_hidden').val(resp.total);
         $('.total-amount').html(formatNumber(resp.total)+' đ');
         $('.count-sp').html(resp.count + ' Sản phẩm');
         $('.total-count').html(resp.count);
@@ -578,6 +579,7 @@ background:#f7941d;
            discount= sub_total-res.value;
         }
         $("#final_total").html(formatNumber(discount)+" đ");
+        $('#final_total_hidden').val(resp.total);
         $('#coupon-success').show();
         $('#coupon-fail').hide();
         }
@@ -616,6 +618,7 @@ background:#f7941d;
            discount= sub_total-res.value;
         }
         $("#final_total").html(formatNumber(discount)+" đ");
+        $('#final_total_hidden').val(resp.total);
         $('#coupon-success').show();
         $('#coupon-fail').hide();
         }

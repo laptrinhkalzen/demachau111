@@ -117,7 +117,7 @@
 							</div>
 							</label>
 						<hr>
-							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;">
+							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px; width: 100%;">
 							<input class="mr-2 thanh-toan" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Thanh toán qua VNPAY</b>
 							  <span class="checkmark"></span>
 							<div style="display: none;" class="2 box" >123456</div>
@@ -130,34 +130,67 @@
 							<div style="display: none;" class="3 box" >
 								<div class="container">
 									<div class="row">
-									<div class="col-lg-3">
+									<div class="col-lg-4" >
 								  <label for="sel1">Chọn ngân hàng:</label>
 								  </div>
-  									<div class="col-lg-6">
-								  <select class="form-control-sm" id="sel1" style="cursor: pointer;">
-								    <option>1</option>
-								    <option>2</option>
-								    <option>3</option>
-								    <option>4</option>
+  									<div class="col-lg-7"  >
+								  <select class="form-control-sm pick_bank" id="sel1 " style="cursor: pointer; width: 100%;">
+								  	<option default>Chọn ngân hàng trả góp</option>
+								    @foreach($bank_name as $key => $bank_name)
+								        <option value="{{$bank_name}}">{{$bank_name}}</option>
+								    @endforeach
 								  </select>
-								  								  </div>
+								  	</div>
 									</div>
-																		<div class="row">
-									<div class="col-lg-3">
-								  <label for="sel1">Chọn số tháng:</label>
+									<div class="row">
+									<div class="col-lg-4">
+								  <label for="sel1">Chọn kì hạn trả góp:</label>
 								  </div>
-  									<div class="col-lg-6">
-								  <select class="form-control-sm" id="sel1" style="cursor: pointer;">
-								    <option>1</option>
-								    <option>2</option>
-								    <option>3</option>
-								    <option>4</option>
+  									<div class="col-lg-7">
+								  <select class="form-control-sm pick_month" id="sel1 " style="cursor: pointer; width: 100%;">
+								  	@foreach($month_tra_gop as $key => $month_tra_gop)
+								        <option value="{{$month_tra_gop}}">Trả góp trong {{$month_tra_gop}} tháng</option>
+								    @endforeach
+								    
 								  </select>
-								  								  </div>
+								  	</div>
 									</div>
+									<div class="col-lg-10" id="table_tra_gop" style=" display: none; margin-left: 58px; ">
+									<table class="table table-striped" style="border: solid #283988; font-size: 105%;">
+									
+									  <tbody>
+									    <tr>
+									      <th>Số tháng trả góp</th>
+									      <td style="float:right;" id="month_tra_gop">0</td>
+									    </tr>
+									    <tr>
+									      <th>Giá trị đơn hàng</th>
+									      <td style="float:right;" id="price_tra_gop">0</td>
+									    </tr>
+									    <tr>
+									      <th>Góp mỗi tháng</th>
+									      <td style="float:right;" id="each_thang">0</td>
+									    </tr>
+									    <tr>
+									      <th>Phí chuyển đổi</th>
+									      <td style="float:right;" id="fee_tra_gop">0</td>
+									    </tr>
+									    <tr>
+									      <th>Tổng tiền phải trả</th>
+									      <td style="float:right;" id="tong_tra_gop">0</td>
+									    </tr>
+									   <!--  <tr>
+									      <th>Chênh lệch với mua trả thẳng</th>
+									      <td id="chenh_lech">Larry</td>
+									    </tr> -->
+									  </tbody>
+									</table>
+								    </div>
 									</div>
 								</div>
+							
 							</label>
+
 						</div>
 					</div>
 					<div class="col-lg-12 col-12 mt-4" style="background-color:white;">
@@ -342,13 +375,14 @@
 										
 									</tr>
 									<tr>
-										<td style="text-align: left;padding-left: 0px;">Thành  tiền</td>
+										<td style="text-align: left;padding-left: 0px;">Thành tiền</td>
 										<td name="final_total" id="final_total" style="text-align: right; color:red;">{{number_format($total)}} đ</td>
 										
 									</tr>
 								</thead>
 							</table>
 						</div>
+						<input type="hidden" id="final_total_hidden" value="{{$total}}" name="">
 						
 					
 						<!--/ End Payment Method Widget -->
@@ -417,6 +451,39 @@
 
 	    });
 
+    </script>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		function formatNumber (num) {
+		    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+		    }
+            $('.pick_bank ,.pick_month, .each_quantity').on('change',function(){
+                var bank_name = $('.pick_bank').val();
+                var month=$('.pick_month').val();
+                if(bank_name != null){
+                	 $.ajax({
+				        url:'{{route("api.tra_gop")}}',
+				        data:{bank_name:bank_name,month:month,_token:$('#token').val()},
+				        method: 'POST',
+				        success:function(res){
+                           $('#table_tra_gop').show();
+				           var tong_tien=parseFloat($('#final_total_hidden').val());
+				           var tong_tra_gop= (tong_tien / 100 * res.result['fee'] + tong_tien);
+				           var chenh_lech=tong_tra_gop-tong_tien;
+				           //alert(chenh_lech);
+                           $('#month_tra_gop').html(month +" tháng");
+                           $('#price_tra_gop').html(formatNumber(Math.round(tong_tien)) +" đ");
+                           $('#each_thang').html(formatNumber(Math.round(tong_tra_gop/month)) +" đ");
+                           $('#fee_tra_gop').html(formatNumber(Math.round(tong_tien/100*res.result['fee'])) +" đ");
+                           $('#tong_tra_gop').html(formatNumber(Math.round(tong_tra_gop)) +" đ");
+                           // $('#chenh_lech').html(formatNumber(parseFloat(tong_tra_gop)-tong_tien) +" đ");
+				           }
+				        });
+                	}
+
+            });
+    	});
     </script>
 	
 	@stop
