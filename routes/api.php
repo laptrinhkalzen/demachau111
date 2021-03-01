@@ -52,4 +52,4 @@ Route::post('/delete-cart', ['as' => 'api.delete_cart', 'uses' => 'Api\ProductCo
 Route::post('/update-cart', ['as' => 'api.update_cart', 'uses' => 'Api\ProductController@update_cart']);
 Route::post('/apply_coupon', ['as' => 'api.apply_coupon', 'uses' => 'Api\FrontendController@apply_coupon']);
 Route::post('/tra_gop', ['as' => 'api.tra_gop', 'uses' => 'Api\FrontendController@tra_gop']);
-Route::get('/ipn_url', ['as' => 'api.ipn_url', 'uses' => 'Api\FrontendController@ipn_url']);
+Route::get('/api/ipn_url', ['as' => 'api.ipn_url', 'uses' => 'Api\FrontendController@ipn_url']);
