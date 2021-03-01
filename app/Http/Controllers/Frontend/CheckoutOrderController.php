@@ -14,6 +14,7 @@ class CheckoutOrderController extends Controller {
     public function index(Request $request) {
         
         $url=$request->query();
+        //dd($url);
         
         //dd(Session('cart'));
         $district=DB::table('district')->get();
@@ -29,10 +30,11 @@ class CheckoutOrderController extends Controller {
         $product_options=DB::table('product_option')->get();
         $option_details=DB::table('option_detail')->get();
         $banks=DB::table('bank')->orderBy('order','asc')->get();
+        //$url=$request->query();
         //dd(Session('cart'));
         //dd($option_details);
 
-        return view('frontend/checkout/checkout',compact('total','city','district','product_options','option_details','banks','month_tra_gop','bank_name'));
+        return view('frontend/checkout/checkout',compact('total','city','district','product_options','option_details','banks','month_tra_gop','bank_name','url'));
     }
     
      public function buy_now($id,Request $request) {

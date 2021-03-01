@@ -398,6 +398,52 @@
 	</form>
 </section>
 @else
+@if($url != null)
+<div class="col-md-6">
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			Mã đơn hàng
+		</div>
+		<div class="col-md-6">
+			{{$url['vnp_TxnRef']}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			Mã thanh toán
+		</div>
+		<div class="col-md-6">
+			{{$url['vnp_TransactionNo']}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			Số tiền
+		</div>
+		<div class="col-md-6">
+			{{number_format($url['vnp_Amount']/100)}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			Thời gian
+		</div>
+		<div class="col-md-6">
+			{{date("d-m-Y H:i:s", strtotime($url['vnp_PayDate']))}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			Trạng thái
+		</div>
+		<div class="col-md-6">
+			Thành công
+		</div>
+	</div>
+</div>
+</div>
+@else
 <section class="product-area shop-sidebar shop section">
 	
 
@@ -413,6 +459,7 @@
 		</div>
 
 </section>
+@endif
 @endif
 <!--/ End Checkout -->
 
