@@ -14,12 +14,7 @@ class CheckoutOrderController extends Controller {
     public function index(Request $request) {
         
         $url=$request->query();
-        if($url!=null){
-        $returnData = array();
-        $returnData['RspCode'] = '00';
-        $returnData['Message'] = 'Confirm Success';     
-        echo json_encode($returnData);
-         }
+        
         //dd(Session('cart'));
         $district=DB::table('district')->get();
         $city=DB::table('city')->get();

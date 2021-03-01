@@ -419,17 +419,35 @@
 <!-- Start Shop Services Area  -->
 
 <div>
-	
-	  <script>
+
+	<script type="text/javascript">
+    	$(document).ready(function(){
+    		var params={};
+			window.location.search
+			  .replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
+			    params[key] = value;
+			  }
+			);
+    		 $.ajax({
+				        url:'{{route("api.ipn_url")}}',
+				        data:{url:params},
+				        method: 'GET',
+				        success:function(res){
+                             
+				        }
+				    });
+    	});
+    </script>
+
+	<script>
     $(document).ready(function(){
     	//$(".box").hide();
   
-    		 var inputValue = $('input[name="payment_method"]:checked').val();
-		     var targetBox = $("." + inputValue);
-		     $(".box").not(targetBox).hide();
-		     $(targetBox).show();
+		var inputValue = $('input[name="payment_method"]:checked').val();
+	    var targetBox = $("." + inputValue);
+	    $(".box").not(targetBox).hide();
+	    $(targetBox).show();
     	
-
 	    $('.thanh-toan').click(function(){
 	    var inputValue = $(this).attr("value");
 	    var targetBox = $("." + inputValue);
@@ -486,5 +504,7 @@
             });
     	});
     </script>
+
+    
 	
 	@stop
