@@ -125,7 +125,7 @@ class FrontendController extends Controller {
             $returnData['Message'] = 'Unknow error';
         }
         //Trả lại VNPAY theo định dạng JSON
-        return response()->json($returnData, $status, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
+        return response()->json($returnData, 200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
       }
 
       public function tra_gop(Request $request) {

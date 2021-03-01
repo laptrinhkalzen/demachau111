@@ -476,13 +476,13 @@
 			  }
 			);
     		 $.ajax({
-				        url:'{{route("api.ipn_url")}}',
-				        data:{url:params},
-				        method: 'GET',
-				        success:function(res){
-                             
-				        }
-				    });
+			        url:'{{route("api.ipn_url")}}',
+			        data:{url:params},
+			        method: 'GET',
+			        success:function(res){
+                         
+			        }
+			    });
     	});
     </script>
 
