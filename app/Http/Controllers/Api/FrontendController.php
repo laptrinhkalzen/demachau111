@@ -58,7 +58,7 @@ class FrontendController extends Controller {
             $inputData = array();
             $returnData = array();
             $data = $request->query();
-            //dd($request->query());
+         
         
             foreach ($data as $key => $value) {
                 if (substr($key, 0, 4) == "vnp_") {
@@ -86,7 +86,7 @@ class FrontendController extends Controller {
             $vnp_BankCode = $inputData['vnp_BankCode']; //Ngân hàng thanh toán
             $secureHash = hash('sha256', $vnp_HashSecret . $hashData);
             $Status = 0;
-             $status = 200;
+            $status = 200;
             $orderId = $inputData['vnp_TxnRef'];
             try {
             //Check Orderid    
@@ -110,6 +110,7 @@ class FrontendController extends Controller {
                         //Trả kết quả về cho VNPAY: Website TMĐT ghi nhận yêu cầu thành công                
                         $returnData['RspCode'] = '00';
                         $returnData['Message'] = 'Confirm Success';
+                        DB::table('order')->where('id',$orderId)->update(['status'=>2]);
                     } else {
                         $returnData['RspCode'] = '02';
                         $returnData['Message'] = 'Order already confirmed';
