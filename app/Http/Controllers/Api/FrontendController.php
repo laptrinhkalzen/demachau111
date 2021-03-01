@@ -56,13 +56,21 @@ class FrontendController extends Controller {
      public function ipn_url(Request $request) {
             $vnp_HashSecret = "EBAHADUGCOEWYXCMYZRMTMLSHGKNRPBN";
             $inputData = array();
-            $inputData = $request->url;
-            $returnData = array();        
+            $returnData = array();
+            $data = $request->query();
+            //dd($request->query());
+        
+            foreach ($data as $key => $value) {
+                if (substr($key, 0, 4) == "vnp_") {
+                    $inputData[$key] = $value;
+                }
+            }      
+            //dd($inputData);  
 
             $vnp_SecureHash = $inputData['vnp_SecureHash'];
             unset($inputData['vnp_SecureHashType']);
             unset($inputData['vnp_SecureHash']);
-            ksort($inputData);
+           // ksort($inputData);
             $i = 0;
             $hashData = "";
             foreach ($inputData as $key => $value) {
