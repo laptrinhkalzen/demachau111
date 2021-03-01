@@ -57,14 +57,13 @@ class FrontendController extends Controller {
             $vnp_HashSecret = "EBAHADUGCOEWYXCMYZRMTMLSHGKNRPBN";
             $inputData = array();
             $returnData = array();
-            $data = $request->query();
-         
-        
-            foreach ($data as $key => $value) {
-                if (substr($key, 0, 4) == "vnp_") {
-                    $inputData[$key] = $value;
+           $data = $request->query();
+           //dd($data);
+                foreach ($data as $key => $value) {
+                    if (substr($key, 0, 4) == "vnp_") {
+                        $inputData[$key] = $value;
+                    }
                 }
-            }      
             //dd($inputData);  
 
             $vnp_SecureHash = $inputData['vnp_SecureHash'];

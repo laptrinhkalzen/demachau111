@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 <!-- End Breadcrumbs -->
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Start Checkout -->
 <style type="text/css">
 .detail-nh strong{
@@ -399,50 +399,7 @@
 </section>
 @else
 @if($url != null)
-<div class="col-md-6">
-<div class="container">
-	<div class="row">
-		<div class="col-md-6">
-			Mã đơn hàng
-		</div>
-		<div class="col-md-6">
-			{{$url['vnp_TxnRef']}}
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-6">
-			Mã thanh toán
-		</div>
-		<div class="col-md-6">
-			{{$url['vnp_TransactionNo']}}
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-6">
-			Số tiền
-		</div>
-		<div class="col-md-6">
-			{{number_format($url['vnp_Amount']/100)}}
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-6">
-			Thời gian
-		</div>
-		<div class="col-md-6">
-			{{date("d-m-Y H:i:s", strtotime($url['vnp_PayDate']))}}
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-6">
-			Trạng thái
-		</div>
-		<div class="col-md-6">
-			Thành công
-		</div>
-	</div>
-</div>
-</div>
+
 @else
 <section class="product-area shop-sidebar shop section">
 	
@@ -475,9 +432,15 @@
 			    params[key] = value;
 			  }
 			);
+			//alert(main);
+			  var main= window.location.origin;
+              var pathArray = window.location.href.split("?").pop();;
+	          var url = '{{url("api/ipn_url?")}}' + pathArray;
+
+			  //	alert(pathArray);
     		 $.ajax({
-			        url:'{{route("api.ipn_url")}}',
-			        data:{url:params},
+			        url:url,
+			        data:{url:pathArray},
 			        method: 'GET',
 			        success:function(res){
                          
