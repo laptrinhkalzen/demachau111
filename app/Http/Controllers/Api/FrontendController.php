@@ -78,7 +78,7 @@ class FrontendController extends Controller {
             $vnp_BankCode = $inputData['vnp_BankCode']; //Ngân hàng thanh toán
             $secureHash = hash('sha256', $vnp_HashSecret . $hashData);
             $Status = 0;
-             $status = 200
+             $status = 200;
             $orderId = $inputData['vnp_TxnRef'];
             try {
             //Check Orderid    
