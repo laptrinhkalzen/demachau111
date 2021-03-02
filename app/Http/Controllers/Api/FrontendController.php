@@ -106,7 +106,7 @@ class FrontendController extends Controller {
                         }                                      
                         $returnData['RspCode'] = '00';
                         $returnData['Message'] = 'Confirm Success';
-                        
+                        return response()->json($returnData, 200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
                     } else {
                         $returnData['RspCode'] = '02';
                         $returnData['Message'] = 'Order already confirmed';
