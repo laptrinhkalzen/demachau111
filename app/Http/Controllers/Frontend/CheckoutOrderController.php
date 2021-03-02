@@ -174,11 +174,11 @@ class CheckoutOrderController extends Controller {
         }
         $data['total']=$total;
         $data['sub_total']=$sub_total;
+               $data['status'] = '3';
         $order_id=DB::table('order')->insertGetId($data);
         
         foreach ($cart as $value) {
             $input['order_id'] = $order_id;
-            $input['status'] = 3;
             $input['product_id'] = $value['product_id'];
             $input['product_title'] = $value['title'];
             $input['option_id'] = $value['option_number'];
@@ -201,7 +201,7 @@ class CheckoutOrderController extends Controller {
             $vnp_TmnCode = "HMGIANG1"; //Mã website tại VNPAY 
             $vnp_HashSecret = "VEBOPFGAZXBGKVYYUHTXVURZMUVBMAKZ"; //Chuỗi bí mật
             $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-            $vnp_Returnurl = "http://demachau.com/checkout-order";
+            $vnp_Returnurl = "http://demachau.local:8888/checkout-order";
             $vnp_TxnRef = $order->id; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
             $vnp_OrderInfo = "Thanh toan don hang #".$order->id;
             $vnp_OrderType = 'billpayment';
