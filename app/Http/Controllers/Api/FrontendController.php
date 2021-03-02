@@ -97,6 +97,7 @@ class FrontendController extends Controller {
                 //Việc kiểm tra trạng thái của đơn hàng giúp hệ thống không xử lý trùng lặp, xử lý nhiều lần một giao dịch
                 //Giả sử: $order = mysqli_fetch_assoc($result);   
                 $order = DB::table('order')->where('id',$orderId)->first();
+                dd($order);
                 if ($order != NULL) {
                     if ($order->status == 0) {
                         if ($inputData['vnp_ResponseCode'] == '00') {
