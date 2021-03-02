@@ -97,7 +97,7 @@ class FrontendController extends Controller {
                 //Việc kiểm tra trạng thái của đơn hàng giúp hệ thống không xử lý trùng lặp, xử lý nhiều lần một giao dịch
                 //Giả sử: $order = mysqli_fetch_assoc($result);   
                 $order = DB::table('order')->where('id',$orderId)->first();
-                dd($order);
+                //dd($order);
                 if ($order != NULL) {
                     if ($order->status == 0) {
                         if ($inputData['vnp_ResponseCode'] == '00') {
@@ -109,10 +109,11 @@ class FrontendController extends Controller {
                         //
                         //
                         //
-                        //Trả kết quả về cho VNPAY: Website TMĐT ghi nhận yêu cầu thành công                
+                        //Trả kết quả về cho VNPAY: Website TMĐT ghi nhận yêu cầu thành công 
+                        DB::table('order')->where('id',$orderId)->update(['status'=>2]);               
                         $returnData['RspCode'] = '00';
                         $returnData['Message'] = 'Confirm Success';
-                        DB::table('order')->where('id',$orderId)->update(['status'=>2]);
+                        
                     } else {
                         $returnData['RspCode'] = '02';
                         $returnData['Message'] = 'Order already confirmed';
