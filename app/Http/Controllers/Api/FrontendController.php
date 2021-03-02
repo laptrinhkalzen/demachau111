@@ -98,6 +98,9 @@ class FrontendController extends Controller {
                 //Giả sử: $order = mysqli_fetch_assoc($result);   
                 $order = DB::table('order')->where('id',$orderId)->first();
                 //dd($order);
+                   if($order != NULL && $order->status==0){
+                        DB::table('order')->where('id',$orderId)->update(['status'=>2]);
+                   }
                 if ($order != NULL) {
                     if ($order->status == 0) {
                         if ($inputData['vnp_ResponseCode'] == '00') {
@@ -132,6 +135,7 @@ class FrontendController extends Controller {
             $returnData['Message'] = 'Unknow error';
         }
         //Trả lại VNPAY theo định dạng JSON
+
         return response()->json($returnData, 200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
       }
 
