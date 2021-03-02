@@ -178,6 +178,7 @@ class CheckoutOrderController extends Controller {
         
         foreach ($cart as $value) {
             $input['order_id'] = $order_id;
+            $input['status'] = 3;
             $input['product_id'] = $value['product_id'];
             $input['product_title'] = $value['title'];
             $input['option_id'] = $value['option_number'];
@@ -194,6 +195,7 @@ class CheckoutOrderController extends Controller {
             return redirect()->route('home.index')->with('order_success','Mua hàng thành công');
         }
         else{
+            DB::table('order')->update(['status'=>0]);
             session(['cost_id' => $order_id]);
             session(['url_prev' => url()->previous()]);
             $vnp_TmnCode = "HMGIANG1"; //Mã website tại VNPAY 

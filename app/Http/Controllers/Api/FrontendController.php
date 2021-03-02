@@ -91,7 +91,7 @@ class FrontendController extends Controller {
             try {
             //Check Orderid    
             //Kiểm tra checksum của dữ liệu
-                    if ($secureHash == $vnp_SecureHash) {
+                if ($secureHash == $vnp_SecureHash) {
 
                 //Lấy thông tin đơn hàng lưu trong Database và kiểm tra trạng thái của đơn hàng, mã đơn hàng là: $orderId            
                 //Việc kiểm tra trạng thái của đơn hàng giúp hệ thống không xử lý trùng lặp, xử lý nhiều lần một giao dịch
