@@ -12,10 +12,44 @@ use Carbon\Carbon;
 class CheckoutOrderController extends Controller {
 
     public function index(Request $request) {
-        
+         $vnp_HashSecret = "VEBOPFGAZXBGKVYYUHTXVURZMUVBMAKZ";
         $url1=$request->getRequestUri();
         $url=substr($url1, 15);
+         
+         $url_return= $request->query();
 
+         if($url_return){
+             $vnp_SecureHash = $url_return['vnp_SecureHash'];
+            $inputData = array();
+            foreach ($url_return as $key => $value) {
+                $inputData[$key] = $value;
+            }
+            unset($inputData['vnp_SecureHashType']);
+            unset($inputData['vnp_SecureHash']);
+            ksort($inputData);
+            $i = 0;
+            $hashData = "";
+            foreach ($inputData as $key => $value) {
+                if ($i == 1) {
+                    $hashData = $hashData . '&' . $key . "=" . $value;
+                } else {
+                    $hashData = $hashData . $key . "=" . $value;
+                    $i = 1;
+                }
+            }
+
+            $secureHash = hash('sha256',$vnp_HashSecret . $hashData);
+           
+            if ($secureHash == $vnp_SecureHash) {
+                if ($_GET['vnp_ResponseCode'] == '00') {
+                    echo "GD Thanh cong";
+                } else {
+                    echo "GD Khong thanh cong";
+                }
+            } else {
+                echo "Chu ky khong hop le";
+            }
+         }
         //dd($url);
         //dd(Session('cart'));
         $district=DB::table('district')->get();
@@ -201,7 +235,7 @@ class CheckoutOrderController extends Controller {
             $vnp_TmnCode = "HMGIANG1"; //Mã website tại VNPAY 
             $vnp_HashSecret = "VEBOPFGAZXBGKVYYUHTXVURZMUVBMAKZ"; //Chuỗi bí mật
             $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-            $vnp_Returnurl = "http://demachau.com/checkout-order";
+            $vnp_Returnurl = "http://demachau.local:8888/checkout-order";
             $vnp_TxnRef = $order->id; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
             $vnp_OrderInfo = "Thanh toan don hang #".$order->id;
             $vnp_OrderType = 'billpayment';
