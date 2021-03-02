@@ -52,13 +52,14 @@
                             </td>
                             @if($record->payment_method==0)
                                 <td><span>Tiền mặt</span></td>
-                            @elseif($payment_method==1)
+                            @elseif($record->payment_method==1)
                                 <td><span>Chuyển khoản</span></td>
-                            @else
+                            @elseif($record->payment_method==2)
                                 <td><span>Thanh toán VNPAY</span></td>
                             @endif
 
                         </tr>
+                        @if($record->payment_method==2)
                         <tr>
                             @if($record->vnpay_status==1)
                              <td><span>Thành công</span></td>
@@ -66,6 +67,7 @@
                             <td><span>Không thành công</span></td>
                             @endif
                         </tr>
+                        @endif
                       <!--   <tr>
                             <td>
                                 <h6 class="mb-0">Phương thức vận chuyển:</h6>
