@@ -103,10 +103,12 @@ class FrontendController extends Controller {
                     if ($order->status == 0) {
                         if ($inputData['vnp_ResponseCode'] == '00') {
                              DB::table('order')->where('id',$orderId)->update(['status'=>'2']); 
-                        }                                      
+                                                             
                         $returnData['RspCode'] = '00';
                         $returnData['Message'] = 'Confirm Success';
+
                         return response()->json($returnData, 200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
+                         }
                     } else {
                         $returnData['RspCode'] = '02';
                         $returnData['Message'] = 'Order already confirmed';
