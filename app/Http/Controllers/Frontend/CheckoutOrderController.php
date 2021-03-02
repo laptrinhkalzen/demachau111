@@ -17,7 +17,7 @@ class CheckoutOrderController extends Controller {
         $url=substr($url1, 15);
          
          $url_return= $request->query();
-
+         $is_success=0;
          if($url_return){
              $vnp_SecureHash = $url_return['vnp_SecureHash'];
             $inputData = array();
@@ -42,14 +42,15 @@ class CheckoutOrderController extends Controller {
            
             if ($secureHash == $vnp_SecureHash) {
                 if ($_GET['vnp_ResponseCode'] == '00') {
-                    echo "GD Thanh cong";
+                    $is_success=1;
                 } else {
-                    echo "GD Khong thanh cong";
+                    $is_success=2;
                 }
             } else {
-                echo "Chu ky khong hop le";
+                $is_success=3;
             }
          }
+         //dd($url_return);
         //dd($url);
         //dd(Session('cart'));
         $district=DB::table('district')->get();
@@ -69,7 +70,7 @@ class CheckoutOrderController extends Controller {
         //dd(Session('cart'));
         //dd($option_details);
 
-        return view('frontend/checkout/checkout',compact('total','city','district','product_options','option_details','banks','month_tra_gop','bank_name','url'));
+        return view('frontend/checkout/checkout',compact('total','city','district','product_options','option_details','banks','month_tra_gop','bank_name','url','is_success','url_return'));
     }
     
      public function buy_now($id,Request $request) {
