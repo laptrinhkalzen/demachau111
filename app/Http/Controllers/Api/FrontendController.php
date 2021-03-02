@@ -54,7 +54,7 @@ class FrontendController extends Controller {
     }
 
      public function ipn_url(Request $request) {
-            $vnp_HashSecret = "VEBOPFGAZXBGKVYYUHTXVURZMUVBMAKZ";
+            $vnp_HashSecret = "EBAHADUGCOEWYXCMYZRMTMLSHGKNRPBN";
             $inputData = array();
             $returnData = array();
            $data = $request->query();
@@ -69,7 +69,7 @@ class FrontendController extends Controller {
             $vnp_SecureHash = $inputData['vnp_SecureHash'];
             unset($inputData['vnp_SecureHashType']);
             unset($inputData['vnp_SecureHash']);
-            ksort($inputData);
+           // ksort($inputData);
             $i = 0;
             $hashData = "";
             foreach ($inputData as $key => $value) {
@@ -84,23 +84,17 @@ class FrontendController extends Controller {
             $vnpTranId = $inputData['vnp_TransactionNo']; //Mã giao dịch tại VNPAY
             $vnp_BankCode = $inputData['vnp_BankCode']; //Ngân hàng thanh toán
             $secureHash = hash('sha256', $vnp_HashSecret . $hashData);
-            //dd($secureHash);
             $Status = 0;
             $status = 200;
             $orderId = $inputData['vnp_TxnRef'];
             try {
             //Check Orderid    
             //Kiểm tra checksum của dữ liệu
-                if ($secureHash == $vnp_SecureHash) {
-
+                
                 //Lấy thông tin đơn hàng lưu trong Database và kiểm tra trạng thái của đơn hàng, mã đơn hàng là: $orderId            
                 //Việc kiểm tra trạng thái của đơn hàng giúp hệ thống không xử lý trùng lặp, xử lý nhiều lần một giao dịch
                 //Giả sử: $order = mysqli_fetch_assoc($result);   
                 $order = DB::table('order')->where('id',$orderId)->first();
-                //dd($order);
-                   if($order != NULL && $order->status==0){
-                        DB::table('order')->where('id',$orderId)->update(['status'=>2]);
-                   }
                 if ($order != NULL) {
                     if ($order->status == 0) {
                         if ($inputData['vnp_ResponseCode'] == '00') {
@@ -112,11 +106,10 @@ class FrontendController extends Controller {
                         //
                         //
                         //
-                        //Trả kết quả về cho VNPAY: Website TMĐT ghi nhận yêu cầu thành công 
-                        //DB::table('order')->where('id',$orderId)->update(['status'=>2]);               
+                        //Trả kết quả về cho VNPAY: Website TMĐT ghi nhận yêu cầu thành công                
                         $returnData['RspCode'] = '00';
                         $returnData['Message'] = 'Confirm Success';
-                        
+                        DB::table('order')->where('id',$orderId)->update(['status'=>2]);
                     } else {
                         $returnData['RspCode'] = '02';
                         $returnData['Message'] = 'Order already confirmed';
@@ -125,17 +118,12 @@ class FrontendController extends Controller {
                     $returnData['RspCode'] = '01';
                     $returnData['Message'] = 'Order not found';
                 }
-                 } else {
-                        $returnData['RspCode'] = '97';
-                        $returnData['Message'] = 'Chu ky khong hop le';
-                    }
             
         } catch (Exception $e) {
             $returnData['RspCode'] = '99';
             $returnData['Message'] = 'Unknow error';
         }
         //Trả lại VNPAY theo định dạng JSON
-
         return response()->json($returnData, 200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
       }
 
