@@ -52,7 +52,7 @@
                             </td>
                             @if($record->payment_method==0)
                                 <td><span>Tiền mặt</span></td>
-                            @elseif($ <td><span>Thanh toán VNPAY</span></td>->payment_method==1)
+                            @elseif($payment_method==1)
                                 <td><span>Chuyển khoản</span></td>
                             @else
                                 <td><span>Thanh toán VNPAY</span></td>
