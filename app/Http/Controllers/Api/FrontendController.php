@@ -88,27 +88,21 @@ class FrontendController extends Controller {
             $Status = 0;
             $status = 200;
             $orderId = $inputData['vnp_TxnRef'];
+
+
             try {
-            //Check Orderid    
-            //Kiểm tra checksum của dữ liệu
                 if ($secureHash == $vnp_SecureHash) {
 
-                //Lấy thông tin đơn hàng lưu trong Database và kiểm tra trạng thái của đơn hàng, mã đơn hàng là: $orderId            
-                //Việc kiểm tra trạng thái của đơn hàng giúp hệ thống không xử lý trùng lặp, xử lý nhiều lần một giao dịch
-                //Giả sử: $order = mysqli_fetch_assoc($result);   
-                $order = DB::table('order')->where('id',$orderId)->first();
-                //dd($order);
-
+                 $order = DB::table('order')->where('id',$orderId)->first();
                 if ($order != NULL) {
-                    if ($order->status == 0) {
+                    if ($order["Status"] != NULL && $order["Status"] == 0) {
                         if ($inputData['vnp_ResponseCode'] == '00') {
-                             DB::table('order')->where('id',$orderId)->update(['status'=>'2']); 
-                                                             
-                        $returnData['RspCode'] = '00';
-                        $returnData['Message'] = 'Confirm Success';
-
-                        return response()->json($returnData, 200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
-                         }
+                            $Status = 1;
+                        } else {
+                            $Status = 2;
+                        }
+                         DB::table('order')->where('id',$orderId)->update(['status'=>2]);                
+                     
                     } else {
                         $returnData['RspCode'] = '02';
                         $returnData['Message'] = 'Order already confirmed';
@@ -117,10 +111,10 @@ class FrontendController extends Controller {
                     $returnData['RspCode'] = '01';
                     $returnData['Message'] = 'Order not found';
                 }
-                 } else {
-                        $returnData['RspCode'] = '97';
-                        $returnData['Message'] = 'Chu ky khong hop le';
-                    }
+            } else {
+                $returnData['RspCode'] = '97';
+                $returnData['Message'] = 'Chu ky khong hop le';
+            }
             
         } catch (Exception $e) {
             $returnData['RspCode'] = '99';
