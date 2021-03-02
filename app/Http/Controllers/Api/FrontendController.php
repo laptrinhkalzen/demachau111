@@ -95,12 +95,14 @@ class FrontendController extends Controller {
 
                  $order = DB::table('order')->where('id',$orderId)->first();
                 if ($order != NULL) {
-                    if ($order->status != NULL && $order->status == 0) {
+                    if ($order->status == 0) {
                         if ($inputData['vnp_ResponseCode'] == '00') {
                             $Status = 1;
                         } else {
                             $Status = 2;
                         }
+                          $returnData['RspCode'] = '00';
+                           $returnData['Message'] = 'Confirm Success';
                          DB::table('order')->where('id',$orderId)->update(['status'=>2]);                
                      
                     } else {
