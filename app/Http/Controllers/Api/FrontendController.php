@@ -95,7 +95,7 @@ class FrontendController extends Controller {
 
                  $order = DB::table('order')->where('id',$orderId)->first();
                 if ($order != NULL) {
-                    if ($order["Status"] != NULL && $order["Status"] == 0) {
+                    if ($order->status != NULL && $order->status == 0) {
                         if ($inputData['vnp_ResponseCode'] == '00') {
                             $Status = 1;
                         } else {
