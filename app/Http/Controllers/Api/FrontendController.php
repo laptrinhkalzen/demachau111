@@ -110,7 +110,7 @@ class FrontendController extends Controller {
                         //
                         //
                         //Trả kết quả về cho VNPAY: Website TMĐT ghi nhận yêu cầu thành công 
-                        DB::table('order')->where('id',$orderId)->update(['status'=>2]);               
+                        //DB::table('order')->where('id',$orderId)->update(['status'=>2]);               
                         $returnData['RspCode'] = '00';
                         $returnData['Message'] = 'Confirm Success';
                         
