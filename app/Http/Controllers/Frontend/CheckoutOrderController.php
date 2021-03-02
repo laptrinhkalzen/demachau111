@@ -43,11 +43,14 @@ class CheckoutOrderController extends Controller {
             if ($secureHash == $vnp_SecureHash) {
                 if ($_GET['vnp_ResponseCode'] == '00') {
                     $is_success=1;
+                    DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>1]);
                 } else {
                     $is_success=2;
+                    DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>2]);
                 }
             } else {
                 $is_success=3;
+                DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>3]);
             }
          }
          //dd($url_return);
@@ -223,7 +226,7 @@ class CheckoutOrderController extends Controller {
             $input['created_at'] =  Carbon::now('Asia/Ho_Chi_Minh');
             DB::table('order_detail')->insert($input);
         }
-           
+              
         $order=DB::table('order')->where('id',$order_id)->first();
         session()->forget('cart');
         if($data['payment_method']==0 || $data['payment_method']==1){

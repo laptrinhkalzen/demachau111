@@ -442,7 +442,7 @@
 				Thời điểm giao dịch
 			</div>
 			<div class="col-md-6">
-				{{date("Y-m-d", strtotime($url_return['vnp_PayDate']))}}
+				{{date("d-m-Y H:i:s", strtotime($url_return['vnp_PayDate']))}}
 			</div>
 		</div>
 		<div class="row">
