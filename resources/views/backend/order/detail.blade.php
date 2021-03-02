@@ -61,6 +61,9 @@
                         </tr>
                         @if($record->payment_method==2)
                         <tr>
+                            <td>
+                                <h6 class="mb-0">Trạng thái thanh toán</h6>
+                            </td>
                             @if($record->vnpay_status==1)
                              <td><span>Thành công</span></td>
                             @elseif($record->vnpay_status==2)
