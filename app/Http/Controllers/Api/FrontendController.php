@@ -88,35 +88,54 @@ class FrontendController extends Controller {
             $Status = 0;
             $status = 200;
             $orderId = $inputData['vnp_TxnRef'];
-
+            $vnp_Amount = $inputData['vnp_Amount']; 
+            $vnp_Amount = (int)$vnp_Amount / 100;
 
             try {
-                if ($secureHash == $vnp_SecureHash) {
-
-                 $order = DB::table('order')->where('id',$orderId)->first();
-                if ($order != NULL) {
-                    if ($order->status == 0) {
+                  if ($secureHash == $vnp_SecureHash) {
+         $order = DB::table('order')->where('id',$orderId)->first();
+        if ($order != NULL) {
+            // check amount
+            if($order->total > 0 && $order->total == $vnp_Amount ){
+                // check Status
+                if ($order->status == 0) {
+                    
                         if ($inputData['vnp_ResponseCode'] == '00') {
-                            $Status = 1;
+                            $Status = 1; // Payment status success
+                            // Here code update payment status success into your database
+                            // ex:
+                            // $update = "UPDATE `orders` SET `Status`='".sql_escape($Status)."' WHERE `OrderId`=" . sql_escape($Id);
+                            $returnData['RspCode'] = '00';
+                            $returnData['Message'] = 'Confirm Success';
                         } else {
-                            $Status = 2;
+                            $Status = 2; // Payment status fail
+                            // Here code update payment status fail into your database
+                            // ex:
+                            // $update = "UPDATE `orders` SET `Status`='".sql_escape($Status)."' WHERE `OrderId`=" . sql_escape($Id);
+                            $returnData['RspCode'] = '00';
+                            $returnData['Message'] = 'Confirm Success';
                         }
-                          $returnData['RspCode'] = '00';
-                           $returnData['Message'] = 'Confirm Success';
-                         DB::table('order')->where('id',$orderId)->update(['status'=>2]);                
-                     
-                    } else {
-                        $returnData['RspCode'] = '02';
-                        $returnData['Message'] = 'Order already confirmed';
-                    }
+
+                      DB::table('order')->where('id',$orderId)->update(['status'=>2]);     
                 } else {
-                    $returnData['RspCode'] = '01';
-                    $returnData['Message'] = 'Order not found';
+                    $returnData['RspCode'] = '02';
+                    $returnData['Message'] = 'Order already confirmed';
                 }
-            } else {
-                $returnData['RspCode'] = '97';
-                $returnData['Message'] = 'Chu ky khong hop le';
             }
+            else
+            {
+                $returnData['RspCode'] = '04';
+                $returnData['Message'] = 'Invalid Amount';
+            }
+        } else {
+            $returnData['RspCode'] = '01';
+            $returnData['Message'] = 'Order not found';
+        }
+    } else {
+        $returnData['RspCode'] = '97';
+        $returnData['Message'] = 'Chu ky khong hop le';
+    }
+      
             
         } catch (Exception $e) {
             $returnData['RspCode'] = '99';
