@@ -54,7 +54,7 @@ class FrontendController extends Controller {
     }
 
      public function ipn_url(Request $request) {
-            $vnp_HashSecret = "EBAHADUGCOEWYXCMYZRMTMLSHGKNRPBN";
+            $vnp_HashSecret = "VEBOPFGAZXBGKVYYUHTXVURZMUVBMAKZ";
             $inputData = array();
             $returnData = array();
            $data = $request->query();
@@ -69,7 +69,7 @@ class FrontendController extends Controller {
             $vnp_SecureHash = $inputData['vnp_SecureHash'];
             unset($inputData['vnp_SecureHashType']);
             unset($inputData['vnp_SecureHash']);
-           // ksort($inputData);
+            ksort($inputData);
             $i = 0;
             $hashData = "";
             foreach ($inputData as $key => $value) {
@@ -80,10 +80,11 @@ class FrontendController extends Controller {
                     $i = 1;
                 }
             }
-            dd($hashData);
+            //dd($hashData);
             $vnpTranId = $inputData['vnp_TransactionNo']; //Mã giao dịch tại VNPAY
             $vnp_BankCode = $inputData['vnp_BankCode']; //Ngân hàng thanh toán
             $secureHash = hash('sha256', $vnp_HashSecret . $hashData);
+            //dd($secureHash);
             $Status = 0;
             $status = 200;
             $orderId = $inputData['vnp_TxnRef'];
