@@ -440,7 +440,7 @@
 			  //	alert(pathArray);
     		 $.ajax({
 			        url:url,
-			        data:{url:pathArray},
+			        data:{},
 			        method: 'GET',
 			        success:function(res){
                          
