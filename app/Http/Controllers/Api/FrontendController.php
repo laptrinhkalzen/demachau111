@@ -80,7 +80,7 @@ class FrontendController extends Controller {
                     $i = 1;
                 }
             }
-            //dd($hashData);
+            dd($hashData);
             $vnpTranId = $inputData['vnp_TransactionNo']; //Mã giao dịch tại VNPAY
             $vnp_BankCode = $inputData['vnp_BankCode']; //Ngân hàng thanh toán
             $secureHash = hash('sha256', $vnp_HashSecret . $hashData);
@@ -90,7 +90,8 @@ class FrontendController extends Controller {
             try {
             //Check Orderid    
             //Kiểm tra checksum của dữ liệu
- 
+                    if ($secureHash == $vnp_SecureHash) {
+
                 //Lấy thông tin đơn hàng lưu trong Database và kiểm tra trạng thái của đơn hàng, mã đơn hàng là: $orderId            
                 //Việc kiểm tra trạng thái của đơn hàng giúp hệ thống không xử lý trùng lặp, xử lý nhiều lần một giao dịch
                 //Giả sử: $order = mysqli_fetch_assoc($result);   
@@ -118,6 +119,10 @@ class FrontendController extends Controller {
                     $returnData['RspCode'] = '01';
                     $returnData['Message'] = 'Order not found';
                 }
+                 } else {
+                        $returnData['RspCode'] = '97';
+                        $returnData['Message'] = 'Chu ky khong hop le';
+                    }
             
         } catch (Exception $e) {
             $returnData['RspCode'] = '99';
