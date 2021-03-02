@@ -195,7 +195,7 @@ class CheckoutOrderController extends Controller {
             return redirect()->route('home.index')->with('order_success','Mua hàng thành công');
         }
         else{
-            // DB::table('order')->update(['status'=>0]);
+           DB::table('order')->where('id',$order_id)->update(['status'=>0]);
             session(['cost_id' => $order_id]);
             session(['url_prev' => url()->previous()]);
             $vnp_TmnCode = "HMGIANG1"; //Mã website tại VNPAY 
