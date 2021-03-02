@@ -63,7 +63,8 @@
                             @if($record->vnpay_status==1)
                              <td><span>Thành công</span></td>
                             @elseif($record->vnpay_status==2)
-                            td><span>Không thành công</span></td>
+                            <td><span>Không thành công</span></td>
+                            @endif
                         </tr>
                       <!--   <tr>
                             <td>
