@@ -423,7 +423,7 @@
 			</div>
 			<div class="col-md-6">
 				@if($is_success==1)
-				   Thành công
+				   Giao dịch thành công
 				@else
 				   Giao dịch không thành công
 				@endif
@@ -456,6 +456,126 @@
 
 	</div>
 </section>
+
+
+    <style type="text/css">
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        @media screen and (max-width: 480px) {
+            .mobile-hide {
+                display: none !important;
+            }
+
+            .mobile-center {
+                text-align: center !important;
+            }
+        }
+
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+    </style>
+
+    <section class="product-area shop-sidebar shop section">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center" style="background-color: #eeeeee;" bgcolor="#eeeeee">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                   
+                    <tr>
+                        <td align="center" style="padding: 35px 35px 20px 35px; background-color: #ffffff;" bgcolor="#ffffff">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                                <!-- <tr>
+                                    <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;"> <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="125" height="120" style="display: block; border: 0px;" /><br>
+                                        <h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;"> Cám ơn bạn đã mua hàng! </h2>
+                                    </td>
+                                </tr> -->
+                               <!--  <tr>
+                                    <td align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 10px;">
+                                        <p style="font-size: 16px; font-weight: 400; line-height: 24px; color: #777777;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium iste ipsa numquam odio dolores, nam. </p>
+                                    </td>
+                                </tr> -->
+                                <tr>
+                                    <td align="left" style="padding-top: 20px;">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="75%" align="left" bgcolor="#eeeeee" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;"> Đơn hàng # </td>
+                                                <td width="25%" align="left" bgcolor="#eeeeee" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;"> 2345678 </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> Cổng thanh toán </td>
+                                                <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> VNPay </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> Shipping + Handling </td>
+                                                <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> $10.00 </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> Sales Tax </td>
+                                                <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> $5.00 </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            
+                            </table>
+                        </td>
+                    </tr>
+                
+                  
+             
+                </table>
+            </td>
+        </tr>
+    </table>
+</section>
+
+
+
 @else
 <section class="product-area shop-sidebar shop section">
 	

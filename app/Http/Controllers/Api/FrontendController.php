@@ -119,25 +119,61 @@ class FrontendController extends Controller {
             $secureHash = hash('sha256', $vnp_HashSecret . $hashData);
             //dd($secureHash);
             $Status = 0;
-            $status = 200;
+            $status = 0;
             $orderId = $inputData['vnp_TxnRef'];
             $vnp_Amount = $inputData['vnp_Amount']; 
             $vnp_Amount = (int)$vnp_Amount / 100;
+            $order = DB::table('order')->where('id',$orderId)->first();
+            try {
+        if ($secureHash == $vnp_SecureHash) {
+        if ($order != NULL ) {
+            // check amount
+            if($order->total > 0 && $order->total == $vnp_Amount ){
+                // check Status
+                if ($order->status == 0) {
+                    
+                        if ($inputData['vnp_ResponseCode'] == '00') {
+                            $status=1;  //GD thành công
+                        } else {
+                            $status=2;  //GD không thành công
+                        }
+                        DB::table('order')->where('id',$orderId)->update(['status'=>2]); //chuyển tt từ confirm_success->already confirmed
+                        $returnData['RspCode'] = '00';
+                        $returnData['Message'] = 'Confirm Success';
 
-            try {   
-              1=1;
+                           
+                } else {
+                    $returnData['RspCode'] = '02';
+                    $returnData['Message'] = 'Order already confirmed';
+                }
+            }
+            else
+            {
+                $status=3; //Sai giá trị đơn hàng
+                $returnData['RspCode'] = '04';
+                $returnData['Message'] = 'Invalid Amount';
+            }
+        } else {
+            $status=4; //k tìm thấy đơn hàng
+            $returnData['RspCode'] = '01';
+            $returnData['Message'] = 'Order not found';
+        }
     } else {
+        $status=5; //sai chữ kí
         $returnData['RspCode'] = '97';
         $returnData['Message'] = 'Chu ky khong hop le';
     }
-      
+  
             
-        } catch (Exception $e) {
+        } catch (Exception $e) {    
+            $status=6; //Lỗi khác  
             $returnData['RspCode'] = '99';
             $returnData['Message'] = 'Unknow error';
         }
         //Trả lại VNPAY theo định dạng JSON
-
+        if($order->vnpay_status==null){
+        DB::table('order')->where('id',$orderId)->update(['vnpay_status'=>$status]);
+        }
         return response()->json($returnData, 200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
       }
 
