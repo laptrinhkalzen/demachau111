@@ -6,7 +6,7 @@
             <div class="col-md-6 col-sm-12">
                 <div class="card">
                     <div class="card-header header-elements-inline">
-                        <h5 class="card-title">Đơn hàng</h5>
+                        <h5 class="card-title">Đơn hàng #{{$record->id}}</h5>
                         <div class="btn-group justify-content-center">
                             <a href="#" class="btn bg-indigo-400 dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Tác vụ</a>
                             <div class="dropdown-menu" x-placement="top-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, -183px, 0px);">
