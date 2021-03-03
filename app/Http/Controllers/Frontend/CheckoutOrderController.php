@@ -40,11 +40,13 @@ class CheckoutOrderController extends Controller {
             $orderId = $inputData['vnp_TxnRef'];
             $order = DB::table('order')->where('id',$orderId)->first();
             $secureHash = hash('sha256',$vnp_HashSecret . $hashData);
+
+            //check tiền
            if($inputData['vnp_Amount']/100 != $order->total){
-              dd("sai số tiền giao dịch");
+              //dd("sai số tiền giao dịch");
            }
            else{
-             dd("đúng số tiền gd");
+             //dd("đúng số tiền gd");
            }
 
             if ($secureHash == $vnp_SecureHash) {
