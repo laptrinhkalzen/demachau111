@@ -625,8 +625,10 @@ input[type="number"] {
 
 
 
-    <section style="padding-bottom: 50px;">
-        <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
+    <section style="padding-bottom: 50px;background-color: #f6f7fb;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Đặc điểm</p>
             <div class="row mt-4" style="font-size:14px;">
                    
@@ -649,7 +651,8 @@ input[type="number"] {
                       @endif
                       @endforeach
                     </div>
-                    
+                </div>
+            </div>        
         </div>
     </section>
 
@@ -688,8 +691,10 @@ input[type="number"] {
     @endif
 
 
-    <section style="padding-bottom: 50px;">
-        <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
+    <section style="padding-bottom: 50px;background-color: #f6f7fb;">
+        <div class="container" >
+          <div class="row">
+            <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
             <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Đánh giá (0)</p>
             <p class="mt-2" style="color: black;padding:10px;">Chưa có đánh giá nào</p>
         <div class="container" style="border: 3px solid #283988">
@@ -718,13 +723,17 @@ input[type="number"] {
           </div>
         </div>
         </div>
+        </div>
+        </div>
 
     </section>
 
       @if(Session('old_pro'))
-    <section style="padding-bottom: 50px;">
+    <section style="padding-bottom: 50px;background-color: #f6f7fb;">
       <div class="product-area most-popular section" style="padding: 20px !important;">
-        <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
+        <div class="container" >
+          <div class="row">
+          <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm đã xem</p>
             <div class="row">
                             <div class="col-12">
@@ -818,14 +827,18 @@ input[type="number"] {
                                 </div>
                             </div>
                         </div>
+                        </div>
+                        </div>
                       </div>
         </div>
     </section>
          @endif
 
-    <section style="padding-bottom: 50px;">
+    <section style="padding-bottom: 50px;background-color: #f6f7fb;">
       <div class="product-area most-popular section" style="padding: 20px !important;">
-        <div class="container" style="background-color: white;border: 1px solid #ebebeb;">
+        <div class="container" >
+            <div class="row">
+                  <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm tương tự</p>
             <div class="row">
                             <div class="col-12">
@@ -1092,5 +1105,29 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
       });
     })
     </script>
+
+    <script>
+ $(document).ready(function() {
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        1000:{
+            items:3
+        }
+    },
+    navText : ["<i class='ti-angle-left'></i>","<i class='ti-angle-right'></i>"]
+})
+
+$('#carouselExampleIndicators').carousel({
+  interval: 2000
+})
+         });
+</script>
     
     @stop
