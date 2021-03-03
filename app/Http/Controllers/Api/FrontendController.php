@@ -135,12 +135,7 @@ class FrontendController extends Controller {
                 if ($order->status == 0) {
                     
                         if ($inputData['vnp_ResponseCode'] == '00') {
-                            $Status = 1; // Payment status success
-                            // Here code update payment status success into your database
-                            // ex:
-                            // $update = "UPDATE `orders` SET `Status`='".sql_escape($Status)."' WHERE `OrderId`=" . sql_escape($Id);
-                            $returnData['RspCode'] = '00';
-                            $returnData['Message'] = 'Confirm Success';
+                            DB::table('order')->where('id',$orderId)->update(['status'=>2]);   
                         } else {
                             $Status = 2; // Payment status fail
                             // Here code update payment status fail into your database
@@ -149,8 +144,8 @@ class FrontendController extends Controller {
                             $returnData['RspCode'] = '00';
                             $returnData['Message'] = 'Confirm Success';
                         }
-
-                      DB::table('order')->where('id',$orderId)->update(['status'=>2]);     
+              
+                        
                 } else {
                     $returnData['RspCode'] = '02';
                     $returnData['Message'] = 'Order already confirmed';
