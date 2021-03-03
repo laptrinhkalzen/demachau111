@@ -18,53 +18,7 @@ class CheckoutOrderController extends Controller {
          
          $url_return= $request->query();
          $is_success=0;
-         if($url_return){
-            $vnp_SecureHash = $url_return['vnp_SecureHash'];
-            $inputData = array();
-            foreach ($url_return as $key => $value) {
-                $inputData[$key] = $value;
-            }
-            unset($inputData['vnp_SecureHashType']);
-            unset($inputData['vnp_SecureHash']);
-            ksort($inputData);
-            $i = 0;
-            $hashData = "";
-            foreach ($inputData as $key => $value) {
-                if ($i == 1) {
-                    $hashData = $hashData . '&' . $key . "=" . $value;
-                } else {
-                    $hashData = $hashData . $key . "=" . $value;
-                    $i = 1;
-                }
-            }
-            $orderId = $inputData['vnp_TxnRef'];
-            $order = DB::table('order')->where('id',$orderId)->first();
-            $secureHash = hash('sha256',$vnp_HashSecret . $hashData);
-
-            //check tiền
-           if($inputData['vnp_Amount']/100 != $order->total){
-              //dd("sai số tiền giao dịch");
-           }
-           else{
-             //dd("đúng số tiền gd");
-           }
-
-            if ($secureHash == $vnp_SecureHash) {
-                if ($_GET['vnp_ResponseCode'] == '00') {
-                      echo "GD Thanh cong";
-                    // $is_success=1;
-                    // DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>1]);
-                } else {
-                      echo "GD Khong Thanh cong";
-                    // $is_success=2;
-                    // DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>2]);
-                }
-            } else {
-                  echo "Chu ky khong hop le";
-                // $is_success=3;
-                // DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>3]);
-            }
-         }
+       
         $district=DB::table('district')->get();
         $city=DB::table('city')->get();
     	$total = 0;

@@ -124,40 +124,8 @@ class FrontendController extends Controller {
             $vnp_Amount = $inputData['vnp_Amount']; 
             $vnp_Amount = (int)$vnp_Amount / 100;
 
-            try {
-                  if ($secureHash == $vnp_SecureHash) {
-         $order = DB::table('order')->where('id',$orderId)->first();
-        
-        if ($order != NULL ) {
-            // check amount
-            if($order->total > 0 && $order->total == $vnp_Amount ){
-                // check Status
-                if ($order->status == 0) {
-                        DB::table('order')->where('id',$orderId)->update(['status'=>2]); 
-                        if ($inputData['vnp_ResponseCode'] == '00') {
-                          
-                        } else {
-                            $Status = 2; // Payment status fail
-                         
-                            $returnData['RspCode'] = '00';
-                            $returnData['Message'] = 'Confirm Success';
-                        }
-              
-                        
-                } else {
-                    $returnData['RspCode'] = '02';
-                    $returnData['Message'] = 'Order already confirmed';
-                }
-            }
-            else
-            {
-                $returnData['RspCode'] = '04';
-                $returnData['Message'] = 'Invalid Amount';
-            }
-        } else {
-            $returnData['RspCode'] = '01';
-            $returnData['Message'] = 'Order not found';
-        }
+            try {   
+              1=1;
     } else {
         $returnData['RspCode'] = '97';
         $returnData['Message'] = 'Chu ky khong hop le';
