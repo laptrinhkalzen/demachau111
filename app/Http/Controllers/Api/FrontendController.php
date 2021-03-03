@@ -128,7 +128,7 @@ class FrontendController extends Controller {
                   if ($secureHash == $vnp_SecureHash) {
          $order = DB::table('order')->where('id',$orderId)->first();
         
-        if ($order != NULL && $inputData['vnp_ResponseCode']==0) {
+        if ($order != NULL ) {
             // check amount
             if($order->total > 0 && $order->total == $vnp_Amount ){
                 // check Status
