@@ -126,7 +126,7 @@
 							</label>
 							<hr>
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px;width: 100%;">
-							<input class="mr-2 thanh-toan" type="radio" name="payment_method" value="3" id="btn-tragop" style="width: auto;vertical-align: middle;"><b>Trả góp bằng PAYOO (Thẻ tín dụng)</b>
+							<input class="mr-2 thanh-toan" type="radio" name="payment_method" value="3" id="btn-tragop" style="width: auto;vertical-align: middle;"><b>Trả góp (Thẻ tín dụng)</b>
 							  <span class="checkmark"></span>
 							<div style="display: none;" class="3 box" >
 								<div class="container">
@@ -179,6 +179,10 @@
 									    <tr>
 									      <th>Tổng tiền phải trả</th>
 									      <td style="float:right;" id="tong_tra_gop">0</td>
+									    </tr>
+									     <tr>
+									      <th>Chênh lệch</th>
+									      <td style="float:right;" id="chenh_tra_gop">0</td>
 									    </tr>
 									   <!--  <tr>
 									      <th>Chênh lệch với mua trả thẳng</th>
@@ -638,12 +642,13 @@
 				           var tong_tien=parseFloat($('#final_total_hidden').val());
 				           var tong_tra_gop= (tong_tien / 100 * res.result['fee'] + tong_tien);
 				           var chenh_lech=tong_tra_gop-tong_tien;
-				           //alert(chenh_lech);
+				     
                            $('#month_tra_gop').html(month +" tháng");
-                           $('#price_tra_gop').html(formatNumber(Math.round(tong_tien)) +" đ");
-                           $('#each_thang').html(formatNumber(Math.round(tong_tra_gop/month)) +" đ");
-                           $('#fee_tra_gop').html(formatNumber(Math.round(tong_tien/100*res.result['fee'])) +" đ");
-                           $('#tong_tra_gop').html(formatNumber(Math.round(tong_tra_gop)) +" đ");
+                           $('#price_tra_gop').html(formatNumber(Math.round(tong_tien)) +" VNĐ");
+                           $('#each_thang').html(formatNumber(Math.round(tong_tra_gop/month)) +" VNĐ");
+                           $('#fee_tra_gop').html(formatNumber(Math.round(tong_tien/100*res.result['fee'])) +" VNĐ");
+                           $('#tong_tra_gop').html(formatNumber(Math.round(tong_tra_gop)) +" VNĐ");
+                           $('#chenh_tra_gop').html(formatNumber(Math.round(chenh_lech)) +" VNĐ");
                            // $('#chenh_lech').html(formatNumber(parseFloat(tong_tra_gop)-tong_tien) +" đ");
 				           }
 				        });
