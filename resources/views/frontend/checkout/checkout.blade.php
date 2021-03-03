@@ -121,7 +121,7 @@
 							<label class="container-check" style="border: solid 1px #283988;border-radius: 5px;padding: 10px 50px; width: 100%;">
 							<input class="mr-2 thanh-toan" type="radio" name="payment_method" value="2" id="btn-nganhang" style="width: auto;vertical-align: middle;"><b>Thanh toán qua VNPAY</b>
 							  <span class="checkmark"></span>
-							<div style="display: none;" class="2 box" >123456</div>
+							<div style="display: none;" class="2 box" >Thanh toán điện tử VNPay</div>
 							
 							</label>
 							<hr>
