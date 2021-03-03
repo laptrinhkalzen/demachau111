@@ -37,9 +37,16 @@ class CheckoutOrderController extends Controller {
                     $i = 1;
                 }
             }
-
+            $orderId = $inputData['vnp_TxnRef'];
+            $order = DB::table('order')->where('id',$orderId)->first();
             $secureHash = hash('sha256',$vnp_HashSecret . $hashData);
-           
+           if($inputData['vnp_Amount'] != $order->total){
+              echo "sai số tiền giao dịch";
+           }
+           else{
+             echo "đúng số tiền gd";
+           }
+
             if ($secureHash == $vnp_SecureHash) {
                 if ($_GET['vnp_ResponseCode'] == '00') {
                       echo "GD Thanh cong";
