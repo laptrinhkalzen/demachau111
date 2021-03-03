@@ -12,14 +12,14 @@ use Carbon\Carbon;
 class CheckoutOrderController extends Controller {
 
     public function index(Request $request) {
-         $vnp_HashSecret = "VEBOPFGAZXBGKVYYUHTXVURZMUVBMAKZ";
+        $vnp_HashSecret = "VEBOPFGAZXBGKVYYUHTXVURZMUVBMAKZ";
         $url1=$request->getRequestUri();
         $url=substr($url1, 15);
          
          $url_return= $request->query();
          $is_success=0;
          if($url_return){
-             $vnp_SecureHash = $url_return['vnp_SecureHash'];
+            $vnp_SecureHash = $url_return['vnp_SecureHash'];
             $inputData = array();
             foreach ($url_return as $key => $value) {
                 $inputData[$key] = $value;
@@ -53,9 +53,6 @@ class CheckoutOrderController extends Controller {
                 DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>3]);
             }
          }
-         //dd($url_return);
-        //dd($url);
-        //dd(Session('cart'));
         $district=DB::table('district')->get();
         $city=DB::table('city')->get();
     	$total = 0;
@@ -69,10 +66,6 @@ class CheckoutOrderController extends Controller {
         $product_options=DB::table('product_option')->get();
         $option_details=DB::table('option_detail')->get();
         $banks=DB::table('bank')->orderBy('order','asc')->get();
-        //$url=$request->query();
-        //dd(Session('cart'));
-        //dd($option_details);
-
         return view('frontend/checkout/checkout',compact('total','city','district','product_options','option_details','banks','month_tra_gop','bank_name','url','is_success','url_return'));
     }
     

@@ -127,7 +127,8 @@ class FrontendController extends Controller {
             try {
                   if ($secureHash == $vnp_SecureHash) {
          $order = DB::table('order')->where('id',$orderId)->first();
-        if ($order != NULL) {
+        
+        if ($order != NULL && $inputData['vnp_ResponseCode']==0) {
             // check amount
             if($order->total > 0 && $order->total == $vnp_Amount ){
                 // check Status
@@ -149,7 +150,7 @@ class FrontendController extends Controller {
                             $returnData['Message'] = 'Confirm Success';
                         }
 
-                      //DB::table('order')->where('id',$orderId)->update(['status'=>2]);     
+                      DB::table('order')->where('id',$orderId)->update(['status'=>2]);     
                 } else {
                     $returnData['RspCode'] = '02';
                     $returnData['Message'] = 'Order already confirmed';
