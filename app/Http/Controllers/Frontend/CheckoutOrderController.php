@@ -42,15 +42,18 @@ class CheckoutOrderController extends Controller {
            
             if ($secureHash == $vnp_SecureHash) {
                 if ($_GET['vnp_ResponseCode'] == '00') {
-                    $is_success=1;
-                    DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>1]);
+                      echo "GD Thanh cong";
+                    // $is_success=1;
+                    // DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>1]);
                 } else {
-                    $is_success=2;
-                    DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>2]);
+                      echo "GD Khong Thanh cong";
+                    // $is_success=2;
+                    // DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>2]);
                 }
             } else {
-                $is_success=3;
-                DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>3]);
+                  echo "Chu ky khong hop le";
+                // $is_success=3;
+                // DB::table('order')->where('id',$inputData['vnp_TxnRef'])->update(['vnpay_status'=>3]);
             }
          }
         $district=DB::table('district')->get();

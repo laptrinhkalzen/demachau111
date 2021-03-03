@@ -135,7 +135,7 @@ class FrontendController extends Controller {
                 if ($order->status == 0) {
                     
                         if ($inputData['vnp_ResponseCode'] == '00') {
-                            DB::table('order')->where('id',$orderId)->update(['status'=>2]);   
+                         DB::table('order')->where('id',$orderId)->update(['status'=>2]);   
                         } else {
                             $Status = 2; // Payment status fail
                             // Here code update payment status fail into your database
