@@ -2,6 +2,7 @@
 @section('content')
 <!-- End Breadcrumbs -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <!-- Start Checkout -->
 <style type="text/css">
 .detail-nh strong{
@@ -34,8 +35,8 @@
   position: absolute;
   top: 0;
   left: 5px;
-  height: 25px;
-  width: 25px;
+  height: 50%px;
+  width: 50%px;
   background-color: #eee;
   border-radius: 50%;
 }
@@ -201,20 +202,20 @@
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>Họ và tên<span>*</span></label>
-									<input class="form-control" type="text" name="member_name" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
+									<input class="form-control" type="text" name="member_name" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .50%rem;">
 								</div>
 							</div>
 							
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Địa chỉ email<span>*</span></label>
-									<input class="form-control" type="email" name="email" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
+									<input class="form-control" type="email" name="email" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .50%rem;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Số điện thoại<span>*</span></label>
-									<input class="form-control" type="text" name="mobile" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
+									<input class="form-control" type="text" name="mobile" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .50%rem;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
@@ -245,13 +246,13 @@
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>Địa chỉ cụ thể<span>*</span></label>
-									<input class="form-control" type="text" name="address" placeholder="" required="required" style="cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
+									<input class="form-control" type="text" name="address" placeholder="" required="required" style="cursor: pointer;border: 1px solid #ced4da; border-radius: .50%rem;">
 								</div>
 							</div>
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>THÔNG TIN BỔ SUNG</label>
-									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." name="note" rows="3" style="cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;"></textarea>
+									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." name="note" rows="3" style="cursor: pointer;border: 1px solid #ced4da; border-radius: .50%rem;"></textarea>
 								</div>
 							</div>
 								<div class="col-lg-12 col-md-12 col-12">
@@ -399,63 +400,7 @@
 </section>
 @else
 @if($is_success>0)
-<section class="product-area shop-sidebar shop section">
-	<div class="container" style="margin-top: auto; margin-bottom: auto;">
-		<div class="row">
-			<div class="col-md-6">
-				Cổng thanh toán
-			</div>
-			<div class="col-md-6">
-				VNPay
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				Mã giao dịch
-			</div>
-			<div class="col-md-6">
-				{{$url_return['vnp_TransactionNo']}}
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				Trạng thái
-			</div>
-			<div class="col-md-6">
-				@if($is_success==1)
-				   Giao dịch thành công
-				@else
-				   Giao dịch không thành công
-				@endif
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				Số tiền
-			</div>
-			<div class="col-md-6">
-				{{number_format($url_return['vnp_Amount']/100)}}
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				Thời điểm giao dịch
-			</div>
-			<div class="col-md-6">
-				{{date("d-m-Y H:i:s", strtotime($url_return['vnp_PayDate']))}}
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				Thông tin giao dịch
-			</div>
-			<div class="col-md-6">
-				{{$url_return['vnp_OrderInfo']}}
-			</div>
-		</div>
 
-	</div>
-</section>
 
 
     <style type="text/css">
@@ -520,43 +465,60 @@
         }
     </style>
 
-    <section class="product-area shop-sidebar shop section">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 30px;">
         <tr>
-            <td align="center" style="background-color: #eeeeee;" bgcolor="#eeeeee">
+            <td align="center">
                 <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
                    
                     <tr>
                         <td align="center" style="padding: 35px 35px 20px 35px; background-color: #ffffff;" bgcolor="#ffffff">
                             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
                                 <!-- <tr>
-                                    <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;"> <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="125" height="120" style="display: block; border: 0px;" /><br>
+                                    <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 50%px;"> <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="150%" height="120" style="display: block; border: 0px;" /><br>
                                         <h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;"> Cám ơn bạn đã mua hàng! </h2>
                                     </td>
                                 </tr> -->
-                               <!--  <tr>
+                                <tr>
                                     <td align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 10px;">
-                                        <p style="font-size: 16px; font-weight: 400; line-height: 24px; color: #777777;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium iste ipsa numquam odio dolores, nam. </p>
+                                        <p style="font-size: 16px; font-weight: 400; line-height: 24px; color: #777777;"> Cám ơn bạn đã đặt hàng! Chúng tôi đã nhận được đơn đặt hàng của bạn và sẽ sớm liên hệ với bạn. </p>
                                     </td>
-                                </tr> -->
+                                </tr>
+                                <tr><i style="font-size: 250%;" class="fas fa-check-circle"></i></tr>
                                 <tr>
                                     <td align="left" style="padding-top: 20px;">
                                         <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <!-- <tr>
+                                                <td width="50%" align="left" bgcolor="#eeeeee" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;"> Đơn hàng # </td>
+                                                <td width="50%" align="left" bgcolor="#eeeeee" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;"> 2345678 </td>
+                                            </tr> -->
                                             <tr>
-                                                <td width="75%" align="left" bgcolor="#eeeeee" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;"> Đơn hàng # </td>
-                                                <td width="25%" align="left" bgcolor="#eeeeee" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;"> 2345678 </td>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> <b> Cổng thanh toán </b></td>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> VNPay </td>
                                             </tr>
                                             <tr>
-                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> Cổng thanh toán </td>
-                                                <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> VNPay </td>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"><b> Mã giao dịch</b> </td>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> {{$url_return['vnp_TransactionNo']}} </td>
                                             </tr>
                                             <tr>
-                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> Shipping + Handling </td>
-                                                <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> $10.00 </td>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> <b>Trạng thái</b> </td>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> @if($is_success==1)
+																												   Giao dịch thành công
+																												@else
+																												   Giao dịch không thành công
+																												@endif </td>
                                             </tr>
                                             <tr>
-                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> Sales Tax </td>
-                                                <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> $5.00 </td>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"><b>Số tiền </b> </td>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">{{number_format($url_return['vnp_Amount']/100)}} đ</td>
+                                            </tr>
+                                             <tr>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"><b> Thời điểm giao dịch </b></td>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> {{date("d-m-Y H:i:s", strtotime($url_return['vnp_PayDate']))}} </td>
+                                            </tr>
+                                             <tr>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"><b> Thông tin giao dịch </b></td>
+                                                <td width="50%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> {{$url_return['vnp_OrderInfo']}} </td>
                                             </tr>
                                         </table>
                                     </td>
@@ -572,7 +534,7 @@
             </td>
         </tr>
     </table>
-</section>
+
 
 
 

@@ -239,7 +239,7 @@ class CheckoutOrderController extends Controller {
             $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
             $vnp_Returnurl = "http://demachau.com/checkout-order";
             $vnp_TxnRef = $order->id; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
-            $vnp_OrderInfo = "Thanh toan don hang #".$order->id;
+            $vnp_OrderInfo = "Thanh toán đơn hàng #".$order->id;
             $vnp_OrderType = 'billpayment';
             $vnp_Amount = $order->total * 100;
             $vnp_Locale = 'vn';
