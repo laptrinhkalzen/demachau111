@@ -657,8 +657,10 @@ input[type="number"] {
     </section>
 
     @if($detail_product->content != null)
-    <section style="padding-bottom: 50px;">
-        <div class="container" style="background-color: white;border: 1px solid #ebebeb; ">
+    <section style="padding-bottom: 50px;background-color: #f6f7fb;">
+        <div class="container" >
+          <div class="row">
+          <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb; ">
             <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Mô tả</p>
             <!-- <span id="textarea" class="m-2 show_description" style="color: black;">{!!$detail_product->content!!} </span>
             
@@ -684,8 +686,8 @@ input[type="number"] {
 
           
           </div>
-
-          
+            </div>
+          </div>
         </div>
     </section>
     @endif
