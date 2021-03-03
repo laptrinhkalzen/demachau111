@@ -149,7 +149,7 @@ class FrontendController extends Controller {
                             $returnData['Message'] = 'Confirm Success';
                         }
 
-                      DB::table('order')->where('id',$orderId)->update(['status'=>2]);     
+                      //DB::table('order')->where('id',$orderId)->update(['status'=>2]);     
                 } else {
                     $returnData['RspCode'] = '02';
                     $returnData['Message'] = 'Order already confirmed';
