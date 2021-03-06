@@ -89,7 +89,7 @@ background:#f7941d;
 
 }
 </style>
-<footer class="footer">
+<footer class="footer" style="margin-top: 10px;">
     <div class="contact-right">
     <a target="_blank" href="https://www.m.me/demachau"><img src="{{asset('public/icon/messenger.svg')}}" style="position: fixed;bottom:120px;right: 20px;width: 40px;border-radius: 50%;cursor: pointer;"></a>
     <a href='tel:1900 3052'><img src="{{asset('public/icon/phone.svg')}}" style="position: fixed;bottom:70px;right: 20px;width: 40px;border-radius: 50%;cursor: pointer;"></a>
