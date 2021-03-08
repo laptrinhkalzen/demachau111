@@ -79,7 +79,7 @@
 	 });
 </script>
 @if(Session('cart'))
-<section class="shop checkout section" style="background-color: #f3f5f7;">
+<section class="shop checkout mg-header section" style="background-color: #f3f5f7;">
 	<form class="form" method="post" action="{{route('home.checkout_payment')}}">
 		@csrf
 		<div class="container">
