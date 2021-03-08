@@ -105,7 +105,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 
 @endif
 
-    <header class="header shop" style="">
+    <header id="header" class="header shop" style="position: fixed;top: 0;z-index: 99;width: 100%;">
         <div class="topbar-mobile">
             <div class="container">
             <div class="row">
@@ -836,3 +836,4 @@ function close_giohangpc() {
 }
 
 </script>
+
