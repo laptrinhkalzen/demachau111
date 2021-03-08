@@ -488,7 +488,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 
         <!-- header của mean -->
 <!-- border-top: solid 1px rgb(40, 57, 136,0.5); -->
-        <div class="container dem-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
+        <div class="container dem-hover1" style="height: 100%;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
 
             <div class="row">
                  @foreach($danh_muc_tra as $danh_muc_tra)
@@ -508,7 +508,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
 
-           <div class="container changoi-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
+           <div class="container changoi-hover1" style="height: 100%;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
             <div class="row">
                  @foreach($danh_muc_tra_chan as  $danh_muc_tra2)
 
@@ -529,7 +529,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
 
-           <div class="container hotel-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
+           <div class="container hotel-hover1" style="height: 100%;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
             <div class="row">
                  @foreach($danh_muc_tra_chan as  $danh_muc_tra2)
 
@@ -550,7 +550,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
 
-        <div class="container phukien-hover1" style="height: 300px;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
+        <div class="container phukien-hover1" style="height: 100%;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
             <div class="row">
                  @foreach($danh_muc_tra_phukien as $danh_muc_tra2)
 
