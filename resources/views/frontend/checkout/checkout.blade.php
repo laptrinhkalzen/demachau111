@@ -35,8 +35,8 @@
   position: absolute;
   top: 0;
   left: 5px;
-  height: 50%px;
-  width: 50%px;
+  height: 25px;
+  width: 25px;
   background-color: #eee;
   border-radius: 50%;
 }
@@ -206,20 +206,20 @@
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>Họ và tên<span>*</span></label>
-									<input class="form-control" type="text" name="member_name" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .50%rem;">
+									<input class="form-control" type="text" name="member_name" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
 								</div>
 							</div>
 							
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Địa chỉ email<span>*</span></label>
-									<input class="form-control" type="email" name="email" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .50%rem;">
+									<input class="form-control" type="email" name="email" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="form-group">
 									<label>Số điện thoại<span>*</span></label>
-									<input class="form-control" type="text" name="mobile" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .50%rem;">
+									<input class="form-control" type="text" name="mobile" placeholder="" required="required" style="  cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12">
@@ -250,13 +250,13 @@
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>Địa chỉ cụ thể<span>*</span></label>
-									<input class="form-control" type="text" name="address" placeholder="" required="required" style="cursor: pointer;border: 1px solid #ced4da; border-radius: .50%rem;">
+									<input class="form-control" type="text" name="address" placeholder="" required="required" style="cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;">
 								</div>
 							</div>
 							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<label>THÔNG TIN BỔ SUNG</label>
-									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." name="note" rows="3" style="cursor: pointer;border: 1px solid #ced4da; border-radius: .50%rem;"></textarea>
+									<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn." name="note" rows="3" style="cursor: pointer;border: 1px solid #ced4da; border-radius: .25rem;"></textarea>
 								</div>
 							</div>
 								<div class="col-lg-12 col-md-12 col-12">
