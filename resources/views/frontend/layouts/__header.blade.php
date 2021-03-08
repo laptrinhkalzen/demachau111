@@ -167,7 +167,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
             </div>
         </div>
                 <!-- Topbar -->
-        <div class="topbar" style="background-color: #f5f8ff;color: #2e3f67;" >
+        <div id="top-bar" class="topbar" style="background-color: #f5f8ff;color: #2e3f67;" >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-12">
@@ -199,6 +199,16 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+        $(document).scroll(function() {
+          var y = $(this).scrollTop();
+          if (y > 100) {
+            $('#top-bar').fadeOut();
+          } else {
+            $('#top-bar').fadeIn();
+          }
+        });
+        </script>
         <div class="navbar-mobile container" style="background-color: #283988;padding: 10px;">
             <div class="container">
             <div class="row">
@@ -294,6 +304,7 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
         </div>
         </div>
         <!-- End Topbar -->
+
         <!-- Sidebar -->
         <style type="text/css">
 /* width */
