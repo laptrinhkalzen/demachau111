@@ -628,7 +628,7 @@ input[type="number"] {
     <section style="padding-bottom: 50px;background-color: #f6f7fb;">
         <div class="container">
           <div class="row">
-            <div class="col-lg-10" style="background-color: white;border: 1px solid #ebebeb;">
+            <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Đặc điểm</p>
             <div class="row mt-4" style="font-size:14px;">
                    
@@ -660,7 +660,7 @@ input[type="number"] {
     <section style="padding-bottom: 50px;background-color: #f6f7fb;">
         <div class="container" >
           <div class="row">
-          <div class="col-lg-10" style="background-color: white;border: 1px solid #ebebeb; ">
+          <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb; ">
             <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Mô tả</p>
             <!-- <span id="textarea" class="m-2 show_description" style="color: black;">{!!$detail_product->content!!} </span>
             
@@ -696,7 +696,7 @@ input[type="number"] {
     <section style="padding-bottom: 50px;background-color: #f6f7fb;">
         <div class="container" >
           <div class="row">
-            <div class="col-lg-10" style="background-color: white;border: 1px solid #ebebeb;">
+            <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
             <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Đánh giá (0)</p>
             <p class="mt-2" style="color: black;padding:10px;">Chưa có đánh giá nào</p>
         <div class="container" style="border: 3px solid #283988">
@@ -734,7 +734,7 @@ input[type="number"] {
       <div class="product-area most-popular section" style="padding: 20px !important;">
         <div class="container" >
             <div class="row">
-                  <div class="col-lg-10" style="background-color: white;border: 1px solid #ebebeb;">
+                  <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm tương tự</p>
             <div class="row">
                             <div class="col-12">
@@ -826,7 +826,7 @@ input[type="number"] {
       <div class="product-area most-popular section" style="padding: 20px !important;">
         <div class="container" >
           <div class="row">
-          <div class="col-lg-10" style="background-color: white;border: 1px solid #ebebeb;">
+          <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm đã xem</p>
             <div class="row">
                             <div class="col-12">
