@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title Tag  -->
-    <title>Đệm á châu</title>
+    <title>Đệm á châu - Hệ Thống Bán Lẻ Đệm & Chăn Ga Gối</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image / png" href="{!!$share_config->favicon!!}"/>
     <!-- Web Font -->
