@@ -488,17 +488,28 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
 
         <!-- header của mean -->
 <!-- border-top: solid 1px rgb(40, 57, 136,0.5); -->
+        <style type="text/css">
+            .hover-menu-ul :hover{
+                color:red;
+                margin-left: 5px;
+            }
+            .hover-menu-li :hover{
+                color:red;
+                margin-left: 5px;
+            }
+        </style>
         <div class="container dem-hover1" style="height: 100%;display: none;border-top: solid 1px rgb(40, 57, 136,0.2);">
 
             <div class="row">
-                 @foreach($danh_muc_tra as $danh_muc_tra)
+                
+                 @foreach($danh_muc_tra as $key1 =>$danh_muc_tra)
                      @foreach($product_nem as $key_nem => $product_nem1)
                        @if($key_nem==$danh_muc_tra->id)
                 <div class="col-3" style="margin-top: 10px;">
                    
-                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra->alias])}}"><b>{{$danh_muc_tra->name}}</b></a>
-                        @foreach($product_nem1 as $product_nem2)
-                            <li class="show_li"><a href="{{route('category.show',['alias'=>$product_nem2->alias])}}">{{$product_nem2->name}}</a></li>
+                    <ul class="hover-menu-ul" style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra->alias])}}"><b>{{$danh_muc_tra->name}}</b></a>
+                        @foreach($product_nem1 as $key2 =>$product_nem2)
+                            <li class="show_li hover-menu-li"><a href="{{route('category.show',['alias'=>$product_nem2->alias])}}">{{$product_nem2->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -517,9 +528,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-3" style="margin-top: 10px;">
                    
                    
-                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
+                    <ul class="hover-menu-ul" style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
                         @foreach($product_changoi1 as $product_changoi2)
-                            <li class="show_li"><a href="{{route('category.show',['alias'=>$product_changoi2->alias])}}">{{$product_changoi2->name}}</a></li>
+                            <li class="show_li hover-menu-li"><a href="{{route('category.show',['alias'=>$product_changoi2->alias])}}">{{$product_changoi2->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -538,9 +549,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-3" style="margin-top: 10px;">
                    
                    
-                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
+                    <ul class="hover-menu-ul" style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
                         @foreach($product_changoi1 as $product_changoi2)
-                           <li class="show_li"><a href="{{route('category.show',['alias'=>$product_changoi2->alias])}}">{{$product_changoi2->name}}</a></li>
+                           <li class="show_li hover-menu-li"><a href="{{route('category.show',['alias'=>$product_changoi2->alias])}}">{{$product_changoi2->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -559,9 +570,9 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
                 <div class="col-3" style="margin-top: 10px;">
                    
                    
-                    <ul style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
+                    <ul class="hover-menu-ul" style="color: #283988;list-style-type:none;"><a href="{{route('category.show',['alias'=>$danh_muc_tra2->alias])}}"><b>{{$danh_muc_tra2->name}}</b></a>
                         @foreach($product_phukien1 as $product_phukien2)
-                           <li class="show_li"><a href="{{route('category.show',['alias'=>$product_phukien2->alias])}}">{{$product_phukien2->name}}</a></li>
+                           <li class="show_li hover-menu-li"><a href="{{route('category.show',['alias'=>$product_phukien2->alias])}}">{{$product_phukien2->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -575,6 +586,8 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
          
 
         <script type="text/javascript">
+
+
             $(document).ready(function(){
   $(".dem-hover").mouseover(function(){
       $('.dem-hover1').show();
