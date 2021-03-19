@@ -321,7 +321,7 @@ input[type="number"] {
       <div class="row mx-0">
          @foreach($images as $key => $image)
         <div id="carousel-selector-{{$key}}" class="thumb col-4 col-sm-4 px-1 py-2 selected" data-target="#myCarousel" data-slide-to="{{$key}}">
-          <img style="object-fit: cover; height: 40px;" src="{{$image}}" class="img-fluid" alt="...">
+          <img style="object-fit: cover; height: 60px;" src="{{$image}}" class="img-fluid" alt="...">
         </div>
         @php
             $count_sl++;
