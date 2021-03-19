@@ -342,7 +342,7 @@ input[type="number"] {
          @foreach($images as $key => $image)
          @if($key>=$count_sl)
         <div id="carousel-selector-{{$key}}" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="{{$key}}">
-          <img style="object-fit: cover; height: 40px;" src="{{$image}}" class="img-fluid" alt="...">
+          <img style="object-fit: cover; height: 60px;" src="{{$image}}" class="img-fluid" alt="...">
           <!-- <span class="out-of-stock">Flashsale</span> -->
         </div>
         
