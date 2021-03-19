@@ -266,7 +266,7 @@ input[type="number"] {
 <section class="shop checkout section" style="background-color: #f6f7fb;"  >
     <div class="container">
         <div class="row">
-            <div class="col-lg-10 col-12" style="background-color: #fff;border: 1px solid #ebebeb;">
+            <div class="col-lg-9 col-12" style="background-color: #fff;border: 1px solid #ebebeb;">
                 <div class="checkout-form">
                     
                     <!-- Form -->
@@ -514,7 +514,7 @@ input[type="number"] {
                     </div>
                 </div>
                 <hr>
-                <div class="col-lg-2 col-12 benefit" style="border: 1px solid #ebebeb; height:auto; background-color: white;border-left: none;">
+                <div class="col-lg-3 col-12 benefit" style="border: 1px solid #ebebeb; height:100%; background-color: white;border-left: none;">
                     
                     <!-- Order Widget -->
                     <div class="row">
@@ -526,10 +526,10 @@ input[type="number"] {
                                 <div class="">
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <a target="_blank" class="mr-2"><img style="width: 55px; border-radius: 100%;" src="{!!url('upload/config/'.$benefits->image)!!}" ></a>
                                             </div>
-                                            <div class="col-md-8">
+                                            <div class="col-md-9">
                                                 <div style="font-weight: 500;">{!!$benefits->name!!}</div>
                                                 <p style="font-size: 12px;">{!!$benefits->description!!}</p>
                                                 
