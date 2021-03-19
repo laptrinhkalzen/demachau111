@@ -266,7 +266,7 @@ input[type="number"] {
 <section class="shop checkout section" style="background-color: #f6f7fb;"  >
     <div class="container">
         <div class="row">
-            <div class="col-lg-9 col-12" style="background-color: #fff;border: 1px solid #ebebeb;">
+            <div class="col-lg-10 col-12" style="background-color: #fff;border: 1px solid #ebebeb;">
                 <div class="checkout-form">
                     
                     <!-- Form -->
@@ -283,16 +283,16 @@ input[type="number"] {
                                         <div class="col-md-12">
                                             <div class="container">
 <div class="carousel-container position-relative row">
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 100%;">
   <div class="carousel-inner">
     @foreach($images as $key => $image)
     @if($key==0)
     <div class="carousel-item active" data-slide-number="{{$key}}">
-      <a data-toggle="modal" data-target="#exampleModal{{$key}}"><img  style="object-fit: cover; height: 230px; width: 387px !important;cursor: pointer; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery" ></a>
+      <a data-toggle="modal" data-target="#exampleModal{{$key}}"><img  style="object-fit: cover; height: 300px; width: 100%;cursor: pointer; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery" ></a>
     </div>
     @else
     <div class="carousel-item" data-slide-number="{{$key}}">
-      <a data-toggle="modal" data-target="#exampleModal{{$key}}"><img  style="object-fit: cover; height: 230px;cursor: pointer; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}" data-type="image" data-toggle="lightbox" data-gallery="example-gallery"></a>
+      <a data-toggle="modal" data-target="#exampleModal{{$key}}"><img  style="object-fit: cover; height: 300px;width: 400px !important;cursor: pointer; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}" data-type="image" data-toggle="lightbox" data-gallery="example-gallery"></a>
     </div>
     @endif
 <!-- Button trigger modal -->
@@ -514,7 +514,7 @@ input[type="number"] {
                     </div>
                 </div>
                 <hr>
-                <div class="col-lg-3 col-12 benefit" style="border: 1px solid #ebebeb; height:460px; background-color: white;border-left: none;">
+                <div class="col-lg-2 col-12 benefit" style="border: 1px solid #ebebeb; height:auto; background-color: white;border-left: none;">
                     
                     <!-- Order Widget -->
                     <div class="row">
@@ -526,10 +526,10 @@ input[type="number"] {
                                 <div class="">
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <a target="_blank" class="mr-2"><img style="width: 55px; border-radius: 100%;" src="{!!url('upload/config/'.$benefits->image)!!}" ></a>
                                             </div>
-                                            <div class="col-md-9">
+                                            <div class="col-md-8">
                                                 <div style="font-weight: 500;">{!!$benefits->name!!}</div>
                                                 <p style="font-size: 12px;">{!!$benefits->description!!}</p>
                                                 
@@ -628,7 +628,7 @@ input[type="number"] {
     <section style="padding-bottom: 50px;background-color: #f6f7fb;">
         <div class="container">
           <div class="row">
-            <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
+            <div class="col-lg-10" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Đặc điểm</p>
             <div class="row mt-4" style="font-size:14px;">
                    
@@ -660,7 +660,7 @@ input[type="number"] {
     <section style="padding-bottom: 50px;background-color: #f6f7fb;">
         <div class="container" >
           <div class="row">
-          <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb; ">
+          <div class="col-lg-10" style="background-color: white;border: 1px solid #ebebeb; ">
             <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Mô tả</p>
             <!-- <span id="textarea" class="m-2 show_description" style="color: black;">{!!$detail_product->content!!} </span>
             
@@ -696,7 +696,7 @@ input[type="number"] {
     <section style="padding-bottom: 50px;background-color: #f6f7fb;">
         <div class="container" >
           <div class="row">
-            <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
+            <div class="col-lg-10" style="background-color: white;border: 1px solid #ebebeb;">
             <p style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Đánh giá (0)</p>
             <p class="mt-2" style="color: black;padding:10px;">Chưa có đánh giá nào</p>
         <div class="container" style="border: 3px solid #283988">
@@ -734,7 +734,7 @@ input[type="number"] {
       <div class="product-area most-popular section" style="padding: 20px !important;">
         <div class="container" >
             <div class="row">
-                  <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
+                  <div class="col-lg-10" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm tương tự</p>
             <div class="row">
                             <div class="col-12">
@@ -826,7 +826,7 @@ input[type="number"] {
       <div class="product-area most-popular section" style="padding: 20px !important;">
         <div class="container" >
           <div class="row">
-          <div class="col-lg-9" style="background-color: white;border: 1px solid #ebebeb;">
+          <div class="col-lg-10" style="background-color: white;border: 1px solid #ebebeb;">
             <p class="" style="font-size:22px;color: black;background-color:  #ebebeb;padding:10px;">Sản phẩm đã xem</p>
             <div class="row">
                             <div class="col-12">
