@@ -292,7 +292,7 @@ input[type="number"] {
     </div>
     @else
     <div class="carousel-item" data-slide-number="{{$key}}">
-      <a data-toggle="modal" data-target="#exampleModal{{$key}}"><img  style="object-fit: cover; height: 300px;width: 400px !important;cursor: pointer; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}" data-type="image" data-toggle="lightbox" data-gallery="example-gallery"></a>
+      <a data-toggle="modal" data-target="#exampleModal{{$key}}"><img  style="object-fit: cover; height: 300px;width: 100%;cursor: pointer; " src="{{$image}}" class="d-block w-100" alt="..." data-remote="{{$image}}" data-type="image" data-toggle="lightbox" data-gallery="example-gallery"></a>
     </div>
     @endif
 <!-- Button trigger modal -->
