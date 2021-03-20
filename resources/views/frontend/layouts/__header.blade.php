@@ -654,8 +654,14 @@ swal("Sản phẩm tạm hết. Vui lòng thử lại sau!");
     });
       $('.phukien-hover').mouseout(function () {
       $('.phukien-hover').css("border-bottom", "none");  
-      $('.phukien-hover1').hide();        
-});
+      $('.phukien-hover1').hide();    
+    });
+        $('.phukien-hover1').mouseover(function () {
+        $('.phukien-hover1').show();      
+    }); 
+        $('.phukien-hover1').mouseout(function () {
+      $('.phukien-hover1').hide();      
+    });   
           $('.flashsale-hover').mouseover(function () {
         $('.flashsale-hover').css("border-bottom", "solid 2px rgb(40, 57, 136, 0.2)");  
             $('.dem-hover').css("border-bottom", "none");
