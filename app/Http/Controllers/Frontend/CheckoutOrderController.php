@@ -12,7 +12,7 @@ use Carbon\Carbon;
 class CheckoutOrderController extends Controller {
 
     public function index(Request $request) {
-        $vnp_HashSecret = "VEBOPFGAZXBGKVYYUHTXVURZMUVBMAKZ";
+        $vnp_HashSecret = "YDJGVXNXGKQVJVOYBIHPJAZKVSXDDJBR";
         $url1=$request->getRequestUri();
         $url=substr($url1, 15);
          
@@ -235,7 +235,7 @@ class CheckoutOrderController extends Controller {
             session(['cost_id' => $order_id]);
             session(['url_prev' => url()->previous()]);
             $vnp_TmnCode = "HMGIANG1"; //Mã website tại VNPAY 
-            $vnp_HashSecret = "VEBOPFGAZXBGKVYYUHTXVURZMUVBMAKZ"; //Chuỗi bí mật
+            $vnp_HashSecret = "YDJGVXNXGKQVJVOYBIHPJAZKVSXDDJBR"; //Chuỗi bí mật
             $vnp_Url = "https://pay.vnpay.vn/vpcpay.html";
             $vnp_Returnurl = "http://demachau.com/checkout-order";
             $vnp_TxnRef = $order->id; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
