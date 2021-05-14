@@ -330,7 +330,7 @@ margin-top: 0px;
                         <div class="product-img">
                             <a href="{{route('product.detail',['alias'=>$product_danh_muc_cha1->alias])}}">
                                 @foreach( explode(',',$product_danh_muc_cha1->images) as $value)
-                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:100%;height: 325px; ">
+                                <img class="default-img img-responsive img-rounded custom-product" src="{{$value}}" style="padding-top: 10px;width:100%;height: 100%; ">
                                 
                                @if($product_danh_muc_cha1->sale_price > 0)
                                @php 
@@ -812,7 +812,7 @@ $('.owl-carousel').owlCarousel({
     nav:true,
     responsive:{
         0:{
-            items:1
+            items:2
         },
         1000:{
             items:4
